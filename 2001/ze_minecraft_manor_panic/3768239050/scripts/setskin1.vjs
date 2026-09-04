@@ -4,5 +4,5 @@
 import { Instance, CSInputs } from "cs_script/point_script";
 
 Instance.OnScriptInput("SetSkin", ({ caller, activator }) => {
-    activator.SetModel("models/cheerhibiki/cheerhibiki_temp.vmdl");
+    activator.SetModel("models/normalhibiki/normalhibiki_temp.vmdl");
 });
