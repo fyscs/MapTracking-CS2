@@ -731,7 +731,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]behemoth_HP_Add",
     "classname": "trigger_multiple",
-    "compile_source_id": "3342",
+    "compile_source_id": "3329",
     "origin": "-475.931152 -329.797607 216.000000",
     "angles": "-0.000000 45.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -743,7 +743,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Behemoth_HP_attack",
         "input": "Add",
-        "param": "3.7",
+        "param": "6",
         "delay": 0,
         "limit": -1
       },
@@ -751,7 +751,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Behemoth_HP_int",
         "input": "Add",
-        "param": "3.7",
+        "param": "6",
         "delay": 0,
         "limit": -1
       }
@@ -849,7 +849,7 @@
     "targetname": "[PR#]Behemoth_HP_Breakable_Case_2",
     "classname": "logic_case",
     "compile_source_id": "418",
-    "origin": "112.000000 0.000000 0.000000",
+    "origin": "183.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2054",
@@ -898,7 +898,7 @@
     "targetname": "[PR#]Behemoth_HP_Breakable_Case_1",
     "classname": "logic_case",
     "compile_source_id": "417",
-    "origin": "96.000000 0.000000 0.000000",
+    "origin": "167.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2053",
@@ -1419,282 +1419,18 @@
     "_template_lump_ent_index": "25"
   },
   {
-    "max": "100",
-    "min": "0",
-    "startvalue": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]Behemoth_HP_Counter",
-    "classname": "math_counter",
-    "compile_source_id": "3334",
-    "origin": "86.000000 0.000000 0.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "13107",
-    "_template_lump_ent_index": "26",
-    "connections": [
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "SetMoveDistanceFromStart",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "Open",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Server",
-        "input": "Command",
-        "param": "say \u003C Behemoth finally fell down... - Retreat! \u003E",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Behemoth_Dynamic",
-        "input": "FireUser3",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Behemoth_Breakable",
-        "input": "Break",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Behemoth_Hurt_Heave",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]TP_AFK_Entrance_2",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Button1",
-        "input": "Unlock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Item_Poison_HPCase",
-        "input": "InValue",
-        "param": "[PR#]Kill",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Behemoth_Wall_Entrance_Push",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Behemoth_Particle_Howl",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]TP_Behemoth_zm_jail1",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]TP_Behemoth_zm_jail2",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Boss_Detect_Rotating",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]FFXIV_Boss_Item",
-        "input": "FireUser2",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Self_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Damage",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Attack_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Relay_*",
-        "input": "CancelPending",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Relay_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Skill_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Particle_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Hurt*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Push_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Meteor_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_Template_Meteor",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Behemoth_HP_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Behemoth_HP_Breakable_Case_1",
-        "input": "InValue",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_behemoth",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 4,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 4.5,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "max": "82",
     "min": "0",
-    "startvalue": "2",
+    "startvalue": "4",
     "StartDisabled": "0",
     "targetname": "[PR#]Behemoth_HP_int",
     "classname": "math_counter",
-    "compile_source_id": "3343",
+    "compile_source_id": "3330",
     "origin": "68.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13105",
-    "_template_lump_ent_index": "27",
+    "_template_lump_ent_index": "26",
     "connections": [
       {
         "output": "OnGetValue",
@@ -1709,16 +1445,16 @@
   {
     "max": "82",
     "min": "0",
-    "startvalue": "2",
+    "startvalue": "4",
     "StartDisabled": "0",
     "targetname": "[PR#]Behemoth_HP_attack",
     "classname": "math_counter",
-    "compile_source_id": "3333",
+    "compile_source_id": "3323",
     "origin": "49.514160 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13106",
-    "_template_lump_ent_index": "28",
+    "_template_lump_ent_index": "27",
     "connections": [
       {
         "output": "OnHitMin",
@@ -1730,9 +1466,33 @@
       },
       {
         "output": "OnHitMin",
-        "target": "[PR#]Behemoth_HP_Counter",
+        "target": "[PR#]Behemoth_HP_Counter_1",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Behemoth_HP_Counter_2",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Behemoth_HP_Counter_3",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Behemoth_HP_Breakable_Case_1_addmathcounter",
         "input": "Add",
-        "param": "0.5",
+        "param": "1",
         "delay": 0,
         "limit": -1
       }
@@ -1749,7 +1509,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1067",
-    "_template_lump_ent_index": "29",
+    "_template_lump_ent_index": "28",
     "connections": [
       {
         "output": "OnCase01",
@@ -1781,7 +1541,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2469",
-    "_template_lump_ent_index": "30",
+    "_template_lump_ent_index": "29",
     "connections": [
       {
         "output": "OnHitMax",
@@ -1831,7 +1591,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2595",
-    "_template_lump_ent_index": "31",
+    "_template_lump_ent_index": "30",
     "connections": [
       {
         "output": "OnTimer",
@@ -1873,7 +1633,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1794",
-    "_template_lump_ent_index": "32",
+    "_template_lump_ent_index": "31",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1915,7 +1675,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1792",
-    "_template_lump_ent_index": "33",
+    "_template_lump_ent_index": "32",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1965,7 +1725,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1761",
-    "_template_lump_ent_index": "34",
+    "_template_lump_ent_index": "33",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2007,7 +1767,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1796",
-    "_template_lump_ent_index": "35",
+    "_template_lump_ent_index": "34",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2057,7 +1817,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1793",
-    "_template_lump_ent_index": "36",
+    "_template_lump_ent_index": "35",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2099,7 +1859,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1299",
-    "_template_lump_ent_index": "37",
+    "_template_lump_ent_index": "36",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2149,7 +1909,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1795",
-    "_template_lump_ent_index": "38",
+    "_template_lump_ent_index": "37",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2187,7 +1947,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2239",
-    "_template_lump_ent_index": "39",
+    "_template_lump_ent_index": "38",
     "connections": [
       {
         "output": "OnEqualTo",
@@ -2320,7 +2080,7 @@
     "angles": "-0.000000 -90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1300",
-    "_template_lump_ent_index": "40",
+    "_template_lump_ent_index": "39",
     "connections": [
       {
         "output": "OnUser1",
@@ -2365,7 +2125,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1781",
-    "_template_lump_ent_index": "41",
+    "_template_lump_ent_index": "40",
     "connections": [
       {
         "output": "OnUser1",
@@ -2410,7 +2170,7 @@
     "angles": "-0.000000 -135.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1936",
-    "_template_lump_ent_index": "42",
+    "_template_lump_ent_index": "41",
     "connections": [
       {
         "output": "OnUser1",
@@ -2455,7 +2215,7 @@
     "angles": "-0.000000 -90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1787",
-    "_template_lump_ent_index": "43",
+    "_template_lump_ent_index": "42",
     "connections": [
       {
         "output": "OnUser1",
@@ -2501,7 +2261,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1946",
-    "_template_lump_ent_index": "44"
+    "_template_lump_ent_index": "43"
   },
   {
     "cpoint7_parent": "0",
@@ -2528,7 +2288,7 @@
     "angles": "-0.000000 -135.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1902",
-    "_template_lump_ent_index": "45"
+    "_template_lump_ent_index": "44"
   },
   {
     "thinkalways": "0",
@@ -2550,7 +2310,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1282",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/behemoth_hurt_mega_fire_1282.vmdl",
-    "_template_lump_ent_index": "46",
+    "_template_lump_ent_index": "45",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -2598,7 +2358,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2241",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/behemoth_hurt_thunder_2241.vmdl",
-    "_template_lump_ent_index": "47",
+    "_template_lump_ent_index": "46",
     "connections": [
       {
         "output": "OnUser1",
@@ -2636,7 +2396,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2243",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/behemoth_push_shock_wave_2243.vmdl",
-    "_template_lump_ent_index": "48",
+    "_template_lump_ent_index": "47",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -2698,7 +2458,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2057",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/tp_behemoth_afk_2057.vmdl",
-    "_template_lump_ent_index": "49",
+    "_template_lump_ent_index": "48",
     "connections": [
       {
         "output": "OnUser1",

@@ -11,7 +11,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Item_LalaFell_health_relay",
     "classname": "logic_relay",
-    "compile_source_id": "3347",
+    "compile_source_id": "3334",
     "origin": "0.000000 -20.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",

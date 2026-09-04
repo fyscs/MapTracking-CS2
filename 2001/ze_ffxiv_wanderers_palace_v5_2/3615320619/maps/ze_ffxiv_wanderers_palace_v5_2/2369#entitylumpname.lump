@@ -149,7 +149,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Lv3_Music_lyric_xunjue_gamezone",
     "classname": "game_zone_player",
-    "compile_source_id": "3400",
+    "compile_source_id": "3387",
     "origin": "-1.000000 -149.000000 8.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -171,7 +171,7 @@
     "message": "-- \u5BFB\u8BC0 -- \n-- Guided by Echoes --",
     "targetname": "[PR#]Lv3_Music_lyric_xunjue_hudhint",
     "classname": "env_hudhint",
-    "compile_source_id": "3401",
+    "compile_source_id": "3388",
     "origin": "-0.794922 -153.026367 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -814,7 +814,7 @@
     "message": "sounds/dakotec/map/music/ffxiv/ultimate_ref_rain.vsnd",
     "targetname": "[PR#]Pick_End_Music_Lv3",
     "classname": "logic_case",
-    "compile_source_id": "3379",
+    "compile_source_id": "3366",
     "origin": "-1.000000 -100.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -840,22 +840,6 @@
       {
         "output": "OnCase03",
         "target": "[PR#]Music_Lv3_Gundam_Unicorn",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 1.0099999904632568,
-        "limit": 1
-      },
-      {
-        "output": "OnCase06",
-        "target": "[PR#]Music_Lv3_xunjue",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 1.0099999904632568,
-        "limit": 1
-      },
-      {
-        "output": "OnCase06",
-        "target": "[PR#]Lv3_Music_lyric_xunjue_hudhint",
         "input": "FireUser1",
         "param": "",
         "delay": 1.0099999904632568,
@@ -908,6 +892,14 @@
         "param": "",
         "delay": 1.0099999904632568,
         "limit": 1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]Music_Lv3_Gundam_Unicorn",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 1.0099999904632568,
+        "limit": 1
       }
     ]
   },
@@ -915,7 +907,7 @@
     "InitialValue": "0",
     "targetname": "[PR#]Pick_End_Music_Lv3_branch",
     "classname": "logic_branch",
-    "compile_source_id": "3378",
+    "compile_source_id": "3365",
     "origin": "-1.000000 -116.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -949,7 +941,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Pick_End_Music_Lv3_new",
     "classname": "logic_relay",
-    "compile_source_id": "3381",
+    "compile_source_id": "3368",
     "origin": "-1.000000 -84.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -958,15 +950,7 @@
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]Music_Lv3_xunjue",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 1.0099999904632568,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Lv3_Music_lyric_xunjue_hudhint",
+        "target": "[PR#]Music_Lv3_Gundam_Unicorn",
         "input": "FireUser1",
         "param": "",
         "delay": 1.0099999904632568,
@@ -983,7 +967,7 @@
     "StartDisabled": "1",
     "targetname": "[PR#]Music_Lv3_xunjue_timer",
     "classname": "logic_timer",
-    "compile_source_id": "3402",
+    "compile_source_id": "3389",
     "origin": "-1.000000 -133.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -1068,7 +1052,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Music_Lv3_xunjue",
     "classname": "point_soundevent",
-    "compile_source_id": "3399",
+    "compile_source_id": "3386",
     "origin": "0.000000 -65.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -1142,7 +1126,7 @@
     "damagefilter": "[PR#]Special_filter",
     "targetname": "[PR#]music_lv3_end_breakable",
     "classname": "func_breakable",
-    "compile_source_id": "3380",
+    "compile_source_id": "3367",
     "origin": "-4293.000000 23764.000000 7182.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",

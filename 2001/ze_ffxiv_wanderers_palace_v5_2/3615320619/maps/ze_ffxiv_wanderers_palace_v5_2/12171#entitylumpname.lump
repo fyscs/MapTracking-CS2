@@ -264,270 +264,6 @@
     ]
   },
   {
-    "max": "100",
-    "min": "0",
-    "startvalue": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]Seymour_Natus_HP_Counter",
-    "classname": "math_counter",
-    "compile_source_id": "3337",
-    "origin": "23927.000000 2047.526855 6789.750000",
-    "angles": "-0.000000 -89.999962 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "13110",
-    "_template_lump_ent_index": "3",
-    "connections": [
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Server",
-        "input": "Command",
-        "param": "say \u003C Seymour Natus is hurted... - Let\u0027s go \u003E",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Pick_End_Music_Lv3_branch",
-        "input": "Test",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Seymour_Natus_Dynamic",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Seymour_Natus_Breakable",
-        "input": "Break",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Mortibody_HP_Counter",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Seymour_Natus_Blizzard_Hurt*",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Seymour_Natus_Water_Hurt",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Item_Poison_HPCase",
-        "input": "InValue",
-        "param": "[PR#]Kill",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Boss_Detect_Rotating",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]FFXIV_Boss_Item",
-        "input": "FireUser2",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Damage",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Hurt*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Attack_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Relay_*",
-        "input": "CancelPending",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Relay_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Template_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Banish_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Blizzard_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Fire_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Protect_Particle",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Water_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Wind_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Thunder_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Branch_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Seymour_Natus_Lure_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "SetMoveDistanceFromStart",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "Open",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_seymour",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 4,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 4.5,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "FallingSpeedThreshold": "-150",
     "alternateticksfix": "0",
     "triggeronstarttouch": "0",
@@ -545,7 +281,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2019",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/seymour_natus_hp_push_2019.vmdl",
-    "_template_lump_ent_index": "4"
+    "_template_lump_ent_index": "3"
   },
   {
     "filtername": "[PR#]Filter_Team_Human",
@@ -560,7 +296,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2585",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/seymour_natus_trigger_2585.vmdl",
-    "_template_lump_ent_index": "5",
+    "_template_lump_ent_index": "4",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -613,7 +349,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12874",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/tp_spawn_savage_12874.vmdl",
-    "_template_lump_ent_index": "6",
+    "_template_lump_ent_index": "5",
     "connections": [
       {
         "output": "OnUser1",
@@ -639,13 +375,13 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1966",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/seymour_natus_hp_add_1966.vmdl",
-    "_template_lump_ent_index": "7",
+    "_template_lump_ent_index": "6",
     "connections": [
       {
         "output": "OnStartTouch",
         "target": "[PR#]Seymour_Natus_HP_attack",
         "input": "Add",
-        "param": "2.7",
+        "param": "5",
         "delay": 0,
         "limit": -1
       },
@@ -653,7 +389,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Seymour_Natus_HP_int",
         "input": "Add",
-        "param": "2.7",
+        "param": "5",
         "delay": 0,
         "limit": -1
       }
@@ -714,7 +450,7 @@
     "angles": "-0.000000 90.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2588",
-    "_template_lump_ent_index": "8",
+    "_template_lump_ent_index": "7",
     "connections": [
       {
         "output": "OnAnimationDone",
@@ -883,7 +619,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12248",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/star_4_trigger_12248.vmdl",
-    "_template_lump_ent_index": "9",
+    "_template_lump_ent_index": "8",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -941,7 +677,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1984",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/savage_boss_hp_add_1984.vmdl",
-    "_template_lump_ent_index": "10",
+    "_template_lump_ent_index": "9",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -997,7 +733,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2292",
-    "_template_lump_ent_index": "11",
+    "_template_lump_ent_index": "10",
     "connections": [
       {
         "output": "OnHitMin",
@@ -1141,7 +877,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2290",
-    "_template_lump_ent_index": "12",
+    "_template_lump_ent_index": "11",
     "connections": [
       {
         "output": "OnHitMin",
@@ -1256,7 +992,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2679",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/savage_end_wall_2679.vmdl",
-    "_template_lump_ent_index": "13"
+    "_template_lump_ent_index": "12"
   },
   {
     "thinkalways": "0",
@@ -1278,7 +1014,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2717",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/stage_detect_savage_2717.vmdl",
-    "_template_lump_ent_index": "14",
+    "_template_lump_ent_index": "13",
     "connections": [
       {
         "output": "OnHurtPlayer",
@@ -1343,7 +1079,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2715",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/stage_ending_savage_2715.vmdl",
-    "_template_lump_ent_index": "15",
+    "_template_lump_ent_index": "14",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1482,7 +1218,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2613",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/star_4_wall_2613.vmdl",
-    "_template_lump_ent_index": "16"
+    "_template_lump_ent_index": "15"
   },
   {
     "cpoint7_parent": "0",
@@ -1510,7 +1246,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1602",
-    "_template_lump_ent_index": "17"
+    "_template_lump_ent_index": "16"
   },
   {
     "FallingSpeedThreshold": "-150",
@@ -1530,7 +1266,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2112",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/savage_boss_hp_push_2112.vmdl",
-    "_template_lump_ent_index": "18",
+    "_template_lump_ent_index": "17",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1572,7 +1308,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3097",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3097.vmdl",
-    "_template_lump_ent_index": "19",
+    "_template_lump_ent_index": "18",
     "connections": [
       {
         "output": "OnPressed",
@@ -1638,7 +1374,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3099",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3099.vmdl",
-    "_template_lump_ent_index": "20",
+    "_template_lump_ent_index": "19",
     "connections": [
       {
         "output": "OnPressed",
@@ -1704,7 +1440,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3101",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3101.vmdl",
-    "_template_lump_ent_index": "21",
+    "_template_lump_ent_index": "20",
     "connections": [
       {
         "output": "OnPressed",
@@ -1770,7 +1506,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3103",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3103.vmdl",
-    "_template_lump_ent_index": "22",
+    "_template_lump_ent_index": "21",
     "connections": [
       {
         "output": "OnPressed",
@@ -1838,27 +1574,27 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Sanctuary_Keeper_wall",
     "classname": "func_breakable",
-    "compile_source_id": "3341",
+    "compile_source_id": "3328",
     "origin": "20766.003906 -4429.988281 7822.750000",
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13114",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/sanctuary_keeper_wall_13114.vmdl",
-    "_template_lump_ent_index": "23"
+    "_template_lump_ent_index": "22"
   },
   {
     "max": "332",
     "min": "0",
-    "startvalue": "5",
+    "startvalue": "8",
     "StartDisabled": "0",
     "targetname": "[PR#]Seymour_Natus_HP_attack",
     "classname": "math_counter",
-    "compile_source_id": "3335",
+    "compile_source_id": "3324",
     "origin": "23927.000000 2084.013184 6789.750000",
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13108",
-    "_template_lump_ent_index": "24",
+    "_template_lump_ent_index": "23",
     "connections": [
       {
         "output": "OnHitMin",
@@ -1870,9 +1606,25 @@
       },
       {
         "output": "OnHitMin",
-        "target": "[PR#]Seymour_Natus_HP_Counter",
-        "input": "Add",
-        "param": "0.5",
+        "target": "[PR#]Seymour_Natus_HP_Counter_1",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Seymour_Natus_HP_Counter_2",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Seymour_Natus_HP_Counter_3",
+        "input": "Subtract",
+        "param": "1",
         "delay": 0,
         "limit": -1
       }
@@ -1881,16 +1633,16 @@
   {
     "max": "332",
     "min": "0",
-    "startvalue": "5",
+    "startvalue": "8",
     "StartDisabled": "0",
     "targetname": "[PR#]Seymour_Natus_HP_int",
     "classname": "math_counter",
-    "compile_source_id": "3336",
+    "compile_source_id": "3325",
     "origin": "23927.000000 2065.526855 6789.750000",
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13109",
-    "_template_lump_ent_index": "25",
+    "_template_lump_ent_index": "24",
     "connections": [
       {
         "output": "OnGetValue",
@@ -1935,13 +1687,13 @@
     "damagefilter": "[PR#]Special_filter",
     "targetname": "[PR#]music_lv3_end_breakable",
     "classname": "func_breakable",
-    "compile_source_id": "3380",
+    "compile_source_id": "3367",
     "origin": "24361.998047 5110.013184 7182.750000",
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13170",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/music_lv3_end_breakable_13170.vmdl",
-    "_template_lump_ent_index": "26",
+    "_template_lump_ent_index": "25",
     "connections": [
       {
         "output": "OnBreak",

@@ -29,7 +29,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Garland_Lazer_Movelinear\u00260000",
     "classname": "func_movelinear",
-    "compile_source_id": "3393",
+    "compile_source_id": "3380",
     "origin": "-60.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",

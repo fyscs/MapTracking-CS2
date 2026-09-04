@@ -17,7 +17,7 @@
     "parentname": "[PR#]Item_Thunder_Part_3\u00260000",
     "targetname": "[PR#]Item_Thunder_Trigger_3\u00260000",
     "classname": "trigger_hurt",
-    "compile_source_id": "3354",
+    "compile_source_id": "3341",
     "origin": "0.000000 0.000000 56.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",

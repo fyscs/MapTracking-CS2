@@ -298,374 +298,6 @@
     ]
   },
   {
-    "max": "100",
-    "min": "0",
-    "startvalue": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]Ultima_Weapon_HP_Counter",
-    "classname": "math_counter",
-    "compile_source_id": "3340",
-    "origin": "20894.519531 -10373.988281 7126.750000",
-    "angles": "-0.000000 -179.999954 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "13113",
-    "_template_lump_ent_index": "4",
-    "connections": [
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "SetMoveDistanceFromStart",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "Open",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Music_Lv4_StaringChild",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Dynamic",
-        "input": "FireUser2",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Breakable",
-        "input": "Break",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Nade_Trigger",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Hurt_Storm",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Nade_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Star_5_Wall",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]TP_AFK_Entrance",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]TP_Entance_Water",
-        "input": "SetRemoteDestination",
-        "param": "[PR#]TD_Ultimate_End",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Wall",
-        "input": "Kill",
-        "param": "",
-        "delay": 5,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Teleport_Ultimate_End_Particle",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 35,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Hurt_Vulcan_Burst",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Star_5_Particle",
-        "input": "Stop",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]KOH_HP_Push",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]TP_AFK_Entrance_1",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]layerfix_1",
-        "input": "hideworldlayeranddestroyentities",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Dark_Shockwave_choose",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_Dark_Shockwave_choose_Rotating",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Boss_Detect_Rotating",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]FFXIV_Boss_Item",
-        "input": "FireUser2",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Attack_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Relay_*",
-        "input": "CancelPending",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Relay_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Particle_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Hurt_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Push_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Case_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Template_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Meteor_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Geocrush_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Poison_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Laser*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.10000000149011612,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Rocket*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Eruption_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_LaserHand_Beam",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 4.5,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_ultima",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 4,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Dark_Shockwave_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Ultima_Weapon_Particle_Dark_Shockwave_relay",
-        "input": "CancelPending",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Ultima_Weapon_FadeEnd",
-        "input": "Fade",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "FallingSpeedThreshold": "-150",
     "alternateticksfix": "0",
     "triggeronstarttouch": "0",
@@ -683,7 +315,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1223",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultima_weapon_hp_push_1223.vmdl",
-    "_template_lump_ent_index": "5"
+    "_template_lump_ent_index": "4"
   },
   {
     "RandomAnimation": "0",
@@ -740,7 +372,7 @@
     "angles": "-0.000000 90.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2339",
-    "_template_lump_ent_index": "6",
+    "_template_lump_ent_index": "5",
     "connections": [
       {
         "output": "OnUser1",
@@ -1065,7 +697,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2381",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/tp_spawn_ultima_2381.vmdl",
-    "_template_lump_ent_index": "7",
+    "_template_lump_ent_index": "6",
     "connections": [
       {
         "output": "OnUser1",
@@ -1080,16 +712,16 @@
   {
     "max": "424",
     "min": "0",
-    "startvalue": "6",
+    "startvalue": "10",
     "StartDisabled": "0",
     "targetname": "[PR#]Ultima_Weapon_HP_attack",
     "classname": "math_counter",
-    "compile_source_id": "3338",
+    "compile_source_id": "3326",
     "origin": "20931.005859 -10373.988281 7126.750000",
     "angles": "-0.000000 -179.999954 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13111",
-    "_template_lump_ent_index": "8",
+    "_template_lump_ent_index": "7",
     "connections": [
       {
         "output": "OnHitMin",
@@ -1101,9 +733,25 @@
       },
       {
         "output": "OnHitMin",
-        "target": "[PR#]Ultima_Weapon_HP_Counter",
-        "input": "Add",
-        "param": "0.5",
+        "target": "[PR#]Ultima_Weapon_HP_Counter_3",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Ultima_Weapon_HP_Counter_2",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Ultima_Weapon_HP_Counter_1",
+        "input": "Subtract",
+        "param": "1",
         "delay": 0,
         "limit": -1
       }
@@ -1135,7 +783,7 @@
     "angles": "-0.000000 90.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1636",
-    "_template_lump_ent_index": "9",
+    "_template_lump_ent_index": "8",
     "connections": [
       {
         "output": "OnUser1",
@@ -1181,7 +829,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1718",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/tp_ultimate_end_1718.vmdl",
-    "_template_lump_ent_index": "10",
+    "_template_lump_ent_index": "9",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1202,7 +850,7 @@
     "angles": "-0.000000 90.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2636",
-    "_template_lump_ent_index": "11"
+    "_template_lump_ent_index": "10"
   },
   {
     "max": "2226",
@@ -1216,7 +864,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1644",
-    "_template_lump_ent_index": "12",
+    "_template_lump_ent_index": "11",
     "connections": [
       {
         "output": "OnHitMin",
@@ -1273,7 +921,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2661",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/garland_trigger_2661.vmdl",
-    "_template_lump_ent_index": "13",
+    "_template_lump_ent_index": "12",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1346,7 +994,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2776",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/garland_trigger_2776.vmdl",
-    "_template_lump_ent_index": "14",
+    "_template_lump_ent_index": "13",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1395,7 +1043,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2764",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/stage_detect_ultimate_2764.vmdl",
-    "_template_lump_ent_index": "15",
+    "_template_lump_ent_index": "14",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1460,7 +1108,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3177",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/stage_ending_ultimate_3177.vmdl",
-    "_template_lump_ent_index": "16",
+    "_template_lump_ent_index": "15",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1575,7 +1223,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2625",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultimate_end_wall_2625.vmdl",
-    "_template_lump_ent_index": "17"
+    "_template_lump_ent_index": "16"
   },
   {
     "s1 env_sprite material": "sprites/glow04.vmt",
@@ -1608,7 +1256,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12257",
-    "_template_lump_ent_index": "18"
+    "_template_lump_ent_index": "17"
   },
   {
     "effect_textureOverride": "materials/sprites/glow04.vtex",
@@ -1641,7 +1289,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12258",
-    "_template_lump_ent_index": "19"
+    "_template_lump_ent_index": "18"
   },
   {
     "s1 env_sprite material": "sprites/glow04.vmt",
@@ -1674,7 +1322,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12259",
-    "_template_lump_ent_index": "20"
+    "_template_lump_ent_index": "19"
   },
   {
     "effect_textureOverride": "materials/sprites/glow04.vtex",
@@ -1707,7 +1355,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12260",
-    "_template_lump_ent_index": "21"
+    "_template_lump_ent_index": "20"
   },
   {
     "s1 env_sprite material": "sprites/glow04.vmt",
@@ -1741,7 +1389,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12261",
-    "_template_lump_ent_index": "22"
+    "_template_lump_ent_index": "21"
   },
   {
     "effect_textureOverride": "materials/sprites/glow04.vtex",
@@ -1774,7 +1422,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12263",
-    "_template_lump_ent_index": "23"
+    "_template_lump_ent_index": "22"
   },
   {
     "effect_textureOverride": "materials/sprites/glow04.vtex",
@@ -1807,7 +1455,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12267",
-    "_template_lump_ent_index": "24"
+    "_template_lump_ent_index": "23"
   },
   {
     "cpoint7_parent": "0",
@@ -1840,7 +1488,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1513",
-    "_template_lump_ent_index": "25"
+    "_template_lump_ent_index": "24"
   },
   {
     "cpoint7_parent": "0",
@@ -1873,7 +1521,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1514",
-    "_template_lump_ent_index": "26"
+    "_template_lump_ent_index": "25"
   },
   {
     "s1 env_sprite material": "sprites/glow04.vmt",
@@ -1906,7 +1554,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12268",
-    "_template_lump_ent_index": "27"
+    "_template_lump_ent_index": "26"
   },
   {
     "effect_textureOverride": "materials/sprites/glow04.vtex",
@@ -1939,7 +1587,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12269",
-    "_template_lump_ent_index": "28"
+    "_template_lump_ent_index": "27"
   },
   {
     "s1 env_sprite material": "sprites/glow04.vmt",
@@ -1972,7 +1620,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12270",
-    "_template_lump_ent_index": "29"
+    "_template_lump_ent_index": "28"
   },
   {
     "effect_textureOverride": "materials/sprites/glow04.vtex",
@@ -2005,7 +1653,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12271",
-    "_template_lump_ent_index": "30"
+    "_template_lump_ent_index": "29"
   },
   {
     "cpoint7_parent": "0",
@@ -2032,21 +1680,21 @@
     "angles": "-0.000000 0.000034 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1496",
-    "_template_lump_ent_index": "31"
+    "_template_lump_ent_index": "30"
   },
   {
     "max": "424",
     "min": "0",
-    "startvalue": "6",
+    "startvalue": "10",
     "StartDisabled": "0",
     "targetname": "[PR#]Ultima_Weapon_HP_int",
     "classname": "math_counter",
-    "compile_source_id": "3339",
+    "compile_source_id": "3327",
     "origin": "20912.519531 -10373.988281 7126.750000",
     "angles": "-0.000000 -179.999954 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13112",
-    "_template_lump_ent_index": "32",
+    "_template_lump_ent_index": "31",
     "connections": [
       {
         "output": "OnGetValue",
@@ -2071,7 +1719,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2675",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultimate_trigger_begin_2675.vmdl",
-    "_template_lump_ent_index": "33",
+    "_template_lump_ent_index": "32",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -2146,7 +1794,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2625",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultimate_end_wall_2625.vmdl",
-    "_template_lump_ent_index": "34"
+    "_template_lump_ent_index": "33"
   },
   {
     "filtername": "[PR#]Filter_Team_Human",
@@ -2161,7 +1809,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2669",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultimate_trigger_end_2669.vmdl",
-    "_template_lump_ent_index": "35",
+    "_template_lump_ent_index": "34",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -2227,13 +1875,13 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1220",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultima_weapon_hp_add_1220.vmdl",
-    "_template_lump_ent_index": "36",
+    "_template_lump_ent_index": "35",
     "connections": [
       {
         "output": "OnStartTouch",
         "target": "[PR#]Ultima_Weapon_HP_attack",
         "input": "Add",
-        "param": "4",
+        "param": "7",
         "delay": 0,
         "limit": -1
       },
@@ -2241,7 +1889,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Ultima_Weapon_HP_int",
         "input": "Add",
-        "param": "4",
+        "param": "7",
         "delay": 0,
         "limit": -1
       }
@@ -2273,7 +1921,7 @@
     "angles": "-0.000000 90.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1271",
-    "_template_lump_ent_index": "37",
+    "_template_lump_ent_index": "36",
     "connections": [
       {
         "output": "OnUser1",
@@ -2335,7 +1983,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12275",
-    "_template_lump_ent_index": "38"
+    "_template_lump_ent_index": "37"
   },
   {
     "entityIndexSelection": "0",
@@ -2355,7 +2003,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1265",
-    "_template_lump_ent_index": "39"
+    "_template_lump_ent_index": "38"
   },
   {
     "fluiddragscale": "1.000000",
@@ -2412,7 +2060,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1266",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultima_weapon_laserhand_target_1266.vmdl",
-    "_template_lump_ent_index": "40"
+    "_template_lump_ent_index": "39"
   },
   {
     "fireballsprite": "sprites/zerogxplode.spr",
@@ -2430,7 +2078,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1272",
-    "_template_lump_ent_index": "41"
+    "_template_lump_ent_index": "40"
   },
   {
     "cpoint7_parent": "0",
@@ -2458,7 +2106,7 @@
     "angles": "-0.000000 90.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1349",
-    "_template_lump_ent_index": "42"
+    "_template_lump_ent_index": "41"
   },
   {
     "cpoint7_parent": "0",
@@ -2488,7 +2136,7 @@
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12276",
-    "_template_lump_ent_index": "43"
+    "_template_lump_ent_index": "42"
   },
   {
     "health": "0",
@@ -2520,7 +2168,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3097",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3097.vmdl",
-    "_template_lump_ent_index": "44",
+    "_template_lump_ent_index": "43",
     "connections": [
       {
         "output": "OnPressed",
@@ -2586,7 +2234,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3099",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3099.vmdl",
-    "_template_lump_ent_index": "45",
+    "_template_lump_ent_index": "44",
     "connections": [
       {
         "output": "OnPressed",
@@ -2652,7 +2300,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3101",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3101.vmdl",
-    "_template_lump_ent_index": "46",
+    "_template_lump_ent_index": "45",
     "connections": [
       {
         "output": "OnPressed",
@@ -2718,7 +2366,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3103",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/button3_3103.vmdl",
-    "_template_lump_ent_index": "47",
+    "_template_lump_ent_index": "46",
     "connections": [
       {
         "output": "OnPressed",
@@ -2793,7 +2441,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1648",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultimate_last_wall_1648.vmdl",
-    "_template_lump_ent_index": "48"
+    "_template_lump_ent_index": "47"
   },
   {
     "filtername": "[PR#]Filter_Team_Human",
@@ -2808,7 +2456,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1650",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/ultimate_trigger_last_1650.vmdl",
-    "_template_lump_ent_index": "49",
+    "_template_lump_ent_index": "48",
     "connections": [
       {
         "output": "OnStartTouch",

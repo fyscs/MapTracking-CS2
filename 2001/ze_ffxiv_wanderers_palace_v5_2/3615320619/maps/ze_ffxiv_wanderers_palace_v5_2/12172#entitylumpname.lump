@@ -501,222 +501,6 @@
     "_template_lump_ent_index": "10"
   },
   {
-    "max": "100",
-    "min": "0",
-    "startvalue": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]KOH_HP_Counter",
-    "classname": "math_counter",
-    "compile_source_id": "3328",
-    "origin": "11957.005859 -9974.478516 5950.750000",
-    "angles": "-0.000000 -89.999962 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "13098",
-    "_template_lump_ent_index": "11",
-    "connections": [
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "SetMoveDistanceFromStart",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Boss_HPBar_MOVE",
-        "input": "Open",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Server",
-        "input": "Command",
-        "param": "say \u003C Boss has been defeated! \u003E",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Nade_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]KOH_Dynamic",
-        "input": "FireUser2",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]KOH_Breakable",
-        "input": "Break",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]KOH_Hurt",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]KOH_Nade_Trigger",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]KOH_Wall_Boss",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Boss_Detect_Rotating",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]FFXIV_Boss_Item",
-        "input": "FireUser2",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Attack_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Relay_*",
-        "input": "CancelPending",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Relay_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Physical_Hurt",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Goobbue_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Push_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Moldy_Particle",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_Template_Goobbue",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_HP_int",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]KOH_HP_attack",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_koh",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 4,
-        "limit": 1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]Boss_HPBar_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 4.5,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "physdamagescale": "1.000000",
     "overrideBlockLOS": "0",
     "gamemass": "0",
@@ -755,7 +539,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2152",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/normal_end_wall_2152.vmdl",
-    "_template_lump_ent_index": "12"
+    "_template_lump_ent_index": "11"
   },
   {
     "thinkalways": "0",
@@ -777,7 +561,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3136",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/stage_detect_normal_3136.vmdl",
-    "_template_lump_ent_index": "13",
+    "_template_lump_ent_index": "12",
     "connections": [
       {
         "output": "OnHurtPlayer",
@@ -842,7 +626,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3138",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/stage_ending_normal_3138.vmdl",
-    "_template_lump_ent_index": "14",
+    "_template_lump_ent_index": "13",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -940,13 +724,13 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3126",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/koh_hp_add_3126.vmdl",
-    "_template_lump_ent_index": "15",
+    "_template_lump_ent_index": "14",
     "connections": [
       {
         "output": "OnStartTouch",
         "target": "[PR#]KOH_HP_int",
         "input": "Add",
-        "param": "1.9",
+        "param": "3.5",
         "delay": 0,
         "limit": -1
       },
@@ -970,7 +754,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]KOH_HP_attack",
         "input": "Add",
-        "param": "1.9",
+        "param": "3.5",
         "delay": 0,
         "limit": -1
       }
@@ -996,7 +780,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1797",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/koh_wall_boss_hurt_1797.vmdl",
-    "_template_lump_ent_index": "16"
+    "_template_lump_ent_index": "15"
   },
   {
     "cpoint7_parent": "0",
@@ -1023,7 +807,7 @@
     "angles": "-0.000000 90.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1755",
-    "_template_lump_ent_index": "17"
+    "_template_lump_ent_index": "16"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -1042,7 +826,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12870",
     "model": "maps/ze_ffxiv_wanderers_palace_v5_2/entities/tp_spawn_normal_12870.vmdl",
-    "_template_lump_ent_index": "18",
+    "_template_lump_ent_index": "17",
     "connections": [
       {
         "output": "OnUser1",
@@ -1057,16 +841,16 @@
   {
     "max": "10000",
     "min": "0",
-    "startvalue": "2",
+    "startvalue": "4",
     "StartDisabled": "0",
     "targetname": "[PR#]KOH_HP_attack",
     "classname": "math_counter",
-    "compile_source_id": "3326",
+    "compile_source_id": "3320",
     "origin": "11957.005859 -9937.993164 5950.750000",
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13096",
-    "_template_lump_ent_index": "19",
+    "_template_lump_ent_index": "18",
     "connections": [
       {
         "output": "OnHitMin",
@@ -1078,9 +862,25 @@
       },
       {
         "output": "OnHitMin",
-        "target": "[PR#]KOH_HP_Counter",
-        "input": "Add",
-        "param": "0.5",
+        "target": "[PR#]KOH_HP_Counter_3",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]KOH_HP_Counter_2",
+        "input": "Subtract",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]KOH_HP_Counter_1",
+        "input": "Subtract",
+        "param": "1",
         "delay": 0,
         "limit": -1
       }
@@ -1089,16 +889,16 @@
   {
     "max": "10000",
     "min": "0",
-    "startvalue": "2",
+    "startvalue": "4",
     "StartDisabled": "0",
     "targetname": "[PR#]KOH_HP_int",
     "classname": "math_counter",
-    "compile_source_id": "3327",
+    "compile_source_id": "3321",
     "origin": "11957.005859 -9956.478516 5950.750000",
     "angles": "-0.000000 -89.999962 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13097",
-    "_template_lump_ent_index": "20",
+    "_template_lump_ent_index": "19",
     "connections": [
       {
         "output": "OnGetValue",

@@ -523,7 +523,7 @@
     "parentname": "[PR#]Knife_Garuda_Weapon",
     "targetname": "[PR#]Knife_Garuda_Push",
     "classname": "trigger_push",
-    "compile_source_id": "3368",
+    "compile_source_id": "3355",
     "origin": "8.000000 -95.566406 -8.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
