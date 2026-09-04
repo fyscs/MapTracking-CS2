@@ -68,7 +68,7 @@ function triggerStage1(){
 		item_book_tem.ForceSpawn({x:-12481 ,y:-11539 ,z:4290})
 	
 	}
-	LowPlayersMode()
+	Instance.EntFireAtTarget({ target: self, input: "runscriptinput", value: "LowPlayersMode",delay:10});
 }
 
 function triggerStage2(){
@@ -79,8 +79,7 @@ function triggerStage2(){
 		item_book_tem.ForceSpawn({x:-7210 ,y:-5862 ,z:1010})
 	
 	}
-	LowPlayersMode()
-	
+	Instance.EntFireAtTarget({ target: self, input: "runscriptinput", value: "LowPlayersMode",delay:10});
 }
 
 function triggerStageZM(){
@@ -188,16 +187,16 @@ let WarmupLandsPos = []
 let WarmupUnderPos = []
 
 
-function LowPlayersMode(){
+Instance.OnScriptInput("LowPlayersMode", (_input) => {
 
 	let human_num = GetHumans().length
 	if(human_num<30 || failNum > 7){
 		ForceZomibeHp =500 + human_num*300;
 		ForceZomibeHpAdd = (-1-human_num/30)*failNum;
-		Instance.EntFireAtTarget({ target: self, input: "runscriptinput", value: "ForceHPLoop",delay:15});	
+		Instance.EntFireAtTarget({ target: self, input: "runscriptinput", value: "ForceHPLoop",delay:1});	
 	
 	}
-}
+});
 
 function GetHumans(){
 	
