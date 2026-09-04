@@ -45,7 +45,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]WorldLayer_Debugger_c3",
     "classname": "prop_dynamic",
-    "compile_source_id": "2621",
+    "compile_source_id": "2614",
     "origin": "13648.000000 -14260.000000 0.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
