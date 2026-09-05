@@ -31,7 +31,7 @@ Instance.OnScriptInput("SetLeaderContext", (_input) => {
             Instance.EntFireAtTarget({ 
                 target: "!Activator", 
                 input: "AddContext", 
-                value: "leader:1", 
+                value: "leader:1"
             });
         }
 
@@ -42,8 +42,8 @@ Instance.OnScriptInput("SetLeaderContext", (_input) => {
         });
         Instance.EntFireAtName({ 
             name: "axe_ui", 
-            input: "ACtivate", 
-            activator: topPlayer.GetPlayerPawn() 
+            input: "Activate", 
+            activator: topPlayer
         });
     }
 });
