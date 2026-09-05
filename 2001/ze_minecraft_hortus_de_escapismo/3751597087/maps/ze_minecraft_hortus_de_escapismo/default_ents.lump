@@ -10456,7 +10456,7 @@
     "model": "maps/ze_minecraft_hortus_de_escapismo/entities/trigger_hibiki_5411.vmdl",
     "connections": [
       {
-        "output": "OnStartTouch",
+        "output": "OnStartTouch1",
         "target": "[PR#]script_setskin",
         "input": "RunScriptInput",
         "param": "SetSkin",
@@ -10472,7 +10472,7 @@
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnStartTouch1",
         "target": "[PR#]script_setskin",
         "input": "RunScriptInput",
         "param": "SetSkinForFys",
@@ -10483,16 +10483,16 @@
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "SetModel",
-        "param": "!setmodel @all models\\cheerhibiki\\cheerhibiki_temp.vmdl",
-        "delay": 0,
+        "param": "models\\cheerhibiki\\cheerhibiki_temp.vmdl",
+        "delay": 0.5,
         "limit": -1
       },
       {
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "SetModel",
-        "param": "!setmodel @all models\\cheerhibiki\\cheerhibiki_fys.vmdl",
-        "delay": 0.019999999552965164,
+        "param": "models\\cheerhibiki\\cheerhibiki_fys.vmdl",
+        "delay": 0,
         "limit": -1
       },
       {
