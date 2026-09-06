@@ -12,7 +12,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]typ_pushme",
     "classname": "trigger_push",
-    "compile_source_id": "4173",
+    "compile_source_id": "4171",
     "origin": "0.000000 0.000244 0.000000",
     "angles": "0.000000 0.000041 0.000001",
     "scales": "1.000000 1.000000 1.000000",
