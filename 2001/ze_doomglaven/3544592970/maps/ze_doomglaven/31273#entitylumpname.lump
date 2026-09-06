@@ -51,7 +51,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]effect_lightningstrike_sound\u00260000",
     "classname": "point_soundevent",
-    "compile_source_id": "4086",
+    "compile_source_id": "4085",
     "origin": "0.000000 0.000000 184.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
