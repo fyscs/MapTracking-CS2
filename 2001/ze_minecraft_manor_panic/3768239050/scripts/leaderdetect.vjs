@@ -41,5 +41,10 @@ Instance.OnScriptInput("SetLeaderContext", (_input) => {
             input: "FireUser1", 
             activator: topPlayer.GetPlayerPawn() 
         });
+        Instance.EntFireAtName({ 
+            name: "axe_ui", 
+            input: "Activate", 
+            activator: topPlayer.GetPlayerPawn() 
+        });
     }
 });
