@@ -27,12 +27,12 @@
     "parentname": "[PR#]item_fireworld_knife",
     "targetname": "[PR#]item_fireworld_button",
     "classname": "func_button",
-    "compile_source_id": "1387",
+    "compile_source_id": "55",
     "origin": "33.000000 0.000000 44.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3321",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/item_fireworld_button_3321.vmdl",
+    "hammerUniqueId": "231",
+    "model": "maps/zeroport_testmap/entities/item_fireworld_button_231.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -92,12 +92,12 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]item_fireworld_strip",
     "classname": "trigger_once",
-    "compile_source_id": "1392",
+    "compile_source_id": "60",
     "origin": "5.000000 0.000000 1.700195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3327",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/item_fireworld_strip_3327.vmdl",
+    "hammerUniqueId": "237",
+    "model": "maps/zeroport_testmap/entities/item_fireworld_strip_237.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -125,11 +125,11 @@
     "StartDisabled": "0",
     "targetname": "[PR#]item_fireworld_relay",
     "classname": "logic_relay",
-    "compile_source_id": "1393",
+    "compile_source_id": "61",
     "origin": "0.000000 29.000000 -30.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3329",
+    "hammerUniqueId": "239",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -198,7 +198,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Server",
+        "target": "[PR#]sever",
         "input": "Command",
         "param": "say \u003C\u003C\u003C The fire is burning the world \u003E\u003E\u003E",
         "delay": 0,
@@ -215,11 +215,11 @@
     "spawnflags": "0",
     "targetname": "[PR#]item_fireworld_fade",
     "classname": "env_fade",
-    "compile_source_id": "1394",
+    "compile_source_id": "62",
     "origin": "-16.000000 29.000000 -30.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3330",
+    "hammerUniqueId": "240",
     "_template_lump_ent_index": "3"
   },
   {
@@ -228,11 +228,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]item_fireworld_filter",
     "classname": "filter_activator_name",
-    "compile_source_id": "1388",
+    "compile_source_id": "56",
     "origin": "0.000000 13.000000 -30.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3323",
+    "hammerUniqueId": "233",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -261,11 +261,11 @@
     "renderfx": "kRenderFxNone",
     "targetname": "[PR#]item_fireworld_knife",
     "classname": "weapon_knife",
-    "compile_source_id": "1391",
+    "compile_source_id": "59",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3326",
+    "hammerUniqueId": "236",
     "_template_lump_ent_index": "5",
     "connections": [
       {
@@ -278,7 +278,7 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]Server",
+        "target": "[PR#]sever",
         "input": "Command",
         "param": "say \u003C\u003C\u003C Fireworld was picked up \u003E\u003E\u003E",
         "delay": 0,
@@ -346,7 +346,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_fireworld_0.vpcf",
@@ -355,11 +355,11 @@
     "parentname": "[PR#]item_fireworld_knife",
     "targetname": "[PR#]item_fireworld_p",
     "classname": "info_particle_system",
-    "compile_source_id": "1389",
+    "compile_source_id": "57",
     "origin": "0.000000 0.000000 -1.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3324",
+    "hammerUniqueId": "234",
     "_template_lump_ent_index": "6"
   }
 ]

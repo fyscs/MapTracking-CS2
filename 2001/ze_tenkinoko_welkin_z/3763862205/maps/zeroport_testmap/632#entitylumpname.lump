@@ -17,11 +17,11 @@
     "renderfx": "kRenderFxNone",
     "targetname": "[PR#]Human_Item_ScorchingSun_Weapon",
     "classname": "weapon_elite",
-    "compile_source_id": "1563",
+    "compile_source_id": "247",
     "origin": "0.000000 -1.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3561",
+    "hammerUniqueId": "628",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -87,6 +87,14 @@
         "param": "say \u003C\u003C Cold Down: 5 Second \u003E\u003E",
         "delay": 3,
         "limit": 1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]Server",
+        "input": "Command",
+        "param": "say \u003C\u003C Tips: Effect Of ScorchingSun Will Be Cleared By Iceworld \u003E\u003E",
+        "delay": 4,
+        "limit": 1
       }
     ]
   },
@@ -111,12 +119,12 @@
     "parentname": "[PR#]Human_Item_ScorchingSun_Weapon",
     "targetname": "[PR#]Human_Item_ScorchingSun_Button",
     "classname": "func_button",
-    "compile_source_id": "1570",
+    "compile_source_id": "254",
     "origin": "24.000000 -1.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3568",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_scorchingsun_button_3568.vmdl",
+    "hammerUniqueId": "635",
+    "model": "maps/zeroport_testmap/entities/human_item_scorchingsun_button_635.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -135,11 +143,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Human_Item_ScorchingSun_Filter",
     "classname": "filter_activator_attribute_int",
-    "compile_source_id": "1566",
+    "compile_source_id": "250",
     "origin": "0.000000 -33.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3564",
+    "hammerUniqueId": "631",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -156,11 +164,11 @@
     "InitialValue": "0",
     "targetname": "[PR#]Human_Item_ScorchingSun_Branch",
     "classname": "logic_branch",
-    "compile_source_id": "1569",
+    "compile_source_id": "253",
     "origin": "0.000000 -49.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3567",
+    "hammerUniqueId": "634",
     "_template_lump_ent_index": "3",
     "connections": [
       {
@@ -324,11 +332,11 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Human_Item_ScorchingSun_Energy_Counter",
     "classname": "math_counter",
-    "compile_source_id": "1568",
+    "compile_source_id": "252",
     "origin": "-16.000000 -33.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3566",
+    "hammerUniqueId": "633",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -358,11 +366,11 @@
     "StartDisabled": "1",
     "targetname": "[PR#]Human_Item_ScorchingSun_Energy_Add_Timer",
     "classname": "logic_timer",
-    "compile_source_id": "1565",
+    "compile_source_id": "249",
     "origin": "-16.000000 -49.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3563",
+    "hammerUniqueId": "630",
     "_template_lump_ent_index": "5",
     "connections": [
       {
@@ -384,11 +392,11 @@
     "StartDisabled": "1",
     "targetname": "[PR#]Human_Item_ScorchingSun_Energy_Subtract_Timer",
     "classname": "logic_timer",
-    "compile_source_id": "1571",
+    "compile_source_id": "255",
     "origin": "-16.000000 -65.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3570",
+    "hammerUniqueId": "637",
     "_template_lump_ent_index": "6",
     "connections": [
       {
@@ -401,7 +409,7 @@
       },
       {
         "output": "OnTimer",
-        "target": "[PR#]Item_Attack_BossHP_Relay",
+        "target": "[PR#]item_boss_heal_relay",
         "input": "Trigger",
         "param": "",
         "delay": 0,
@@ -420,11 +428,11 @@
     "parentname": "[PR#]Human_Item_ScorchingSun_Weapon",
     "targetname": "[PR#]Human_Item_ScorchingSun_Trigger_Maker",
     "classname": "env_entity_maker",
-    "compile_source_id": "1573",
+    "compile_source_id": "257",
     "origin": "40.000000 -1.500000 -40.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3573",
+    "hammerUniqueId": "641",
     "_template_lump_ent_index": "7",
     "connections": [
       {
@@ -446,11 +454,11 @@
     "MeasureTarget": "[PR#]Human_Item_ScorchingSun_Model_Move",
     "targetname": "[PR#]Human_Item_ScorchingSun_Model_Measure",
     "classname": "logic_measure_movement",
-    "compile_source_id": "1564",
+    "compile_source_id": "248",
     "origin": "0.000000 -65.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3562",
+    "hammerUniqueId": "629",
     "_template_lump_ent_index": "8"
   },
   {
@@ -496,11 +504,11 @@
     "parentname": "[PR#]Human_Item_ScorchingSun_Weapon",
     "targetname": "[PR#]Human_Item_ScorchingSun_Model_Move",
     "classname": "prop_dynamic",
-    "compile_source_id": "1572",
+    "compile_source_id": "256",
     "origin": "56.000000 -33.500000 0.000000",
     "angles": "-0.000000 135.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3571",
+    "hammerUniqueId": "638",
     "_template_lump_ent_index": "9"
   },
   {
@@ -541,7 +549,7 @@
     "pressuredelay": "0.000000",
     "spawnflags": "0",
     "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
+    "PerformanceMode": "0",
     "ExplodeRadius": "0.000000",
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
@@ -549,13 +557,14 @@
     "model": "models/props/sunnydoll2.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
+    "parentname": "[PR#]item_scorchingsun_gun",
     "targetname": "[PR#]Human_Item_ScorchingSun_Model",
     "classname": "prop_dynamic",
-    "compile_source_id": "1383",
+    "compile_source_id": "44",
     "origin": "56.000000 -33.500000 0.000000",
     "angles": "-0.000000 135.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3308",
+    "hammerUniqueId": "202",
     "_template_lump_ent_index": "10"
   },
   {
@@ -570,7 +579,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_scorchingsun_3.vpcf",
@@ -579,11 +588,11 @@
     "parentname": "[PR#]Human_Item_ScorchingSun_Model",
     "targetname": "[PR#]Human_Item_ScorchingSun_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1487",
+    "compile_source_id": "158",
     "origin": "56.000000 -33.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3469",
+    "hammerUniqueId": "443",
     "_template_lump_ent_index": "11"
   }
 ]

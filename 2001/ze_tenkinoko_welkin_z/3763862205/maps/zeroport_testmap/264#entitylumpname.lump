@@ -33,12 +33,12 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_FrozenTomb_TrackMove",
     "classname": "func_tracktrain",
-    "compile_source_id": "1402",
+    "compile_source_id": "70",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3340",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_frozentomb_trackmove_3340.vmdl",
+    "hammerUniqueId": "262",
+    "model": "maps/zeroport_testmap/entities/human_item_frozentomb_trackmove_262.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -50,11 +50,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_FrozenTomb_TrackMove_Path_1",
     "classname": "path_track",
-    "compile_source_id": "1395",
+    "compile_source_id": "63",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3331",
+    "hammerUniqueId": "251",
     "_template_lump_ent_index": "1"
   },
   {
@@ -65,11 +65,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_FrozenTomb_TrackMove_Path_2",
     "classname": "path_track",
-    "compile_source_id": "1396",
+    "compile_source_id": "64",
     "origin": "2061.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3332",
+    "hammerUniqueId": "252",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -157,11 +157,11 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_TrackMove",
     "targetname": "[PR#]Human_Item_FrozenTomb_TrackMove_Trigger_Maker",
     "classname": "env_entity_maker",
-    "compile_source_id": "1404",
+    "compile_source_id": "72",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3343",
+    "hammerUniqueId": "265",
     "_template_lump_ent_index": "3",
     "connections": [
       {
@@ -230,12 +230,12 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_TrackMove",
     "targetname": "[PR#]Human_Item_FrozenTomb_TrackMove_Trigger",
     "classname": "trigger_once",
-    "compile_source_id": "1405",
+    "compile_source_id": "73",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3344",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_frozentomb_trackmove_trigger_3344.vmdl",
+    "hammerUniqueId": "266",
+    "model": "maps/zeroport_testmap/entities/human_item_frozentomb_trackmove_trigger_266.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -268,7 +268,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_frozentomb_2.vpcf",
@@ -277,11 +277,11 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_TrackMove",
     "targetname": "[PR#]Human_Item_FrozenTomb_TrackMove_Trigger_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1401",
+    "compile_source_id": "69",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3339",
+    "hammerUniqueId": "261",
     "_template_lump_ent_index": "5"
   }
 ]

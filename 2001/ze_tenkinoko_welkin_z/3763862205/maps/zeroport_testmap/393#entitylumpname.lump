@@ -17,11 +17,11 @@
     "renderfx": "kRenderFxNone",
     "targetname": "[PR#]Zombie_Item_Doomsday_Weapon",
     "classname": "weapon_knife",
-    "compile_source_id": "1516",
+    "compile_source_id": "196",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3506",
+    "hammerUniqueId": "537",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -119,12 +119,12 @@
     "parentname": "[PR#]Zombie_Item_Doomsday_Weapon",
     "targetname": "[PR#]Zombie_Item_Doomsday_Button",
     "classname": "func_button",
-    "compile_source_id": "1517",
+    "compile_source_id": "197",
     "origin": "24.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3507",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/zombie_item_doomsday_button_3507.vmdl",
+    "hammerUniqueId": "538",
+    "model": "maps/zeroport_testmap/entities/zombie_item_doomsday_button_538.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -143,11 +143,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Zombie_Item_Doomsday_Filter",
     "classname": "filter_activator_attribute_int",
-    "compile_source_id": "1468",
+    "compile_source_id": "139",
     "origin": "0.000000 -64.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3439",
+    "hammerUniqueId": "395",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -335,12 +335,12 @@
     "parentname": "[PR#]Zombie_Item_Doomsday_Weapon",
     "targetname": "[PR#]Zombie_Item_Doomsday_Hurt",
     "classname": "trigger_hurt",
-    "compile_source_id": "1470",
+    "compile_source_id": "141",
     "origin": "5.000000 0.000000 29.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3441",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/zombie_item_doomsday_hurt_3441.vmdl",
+    "hammerUniqueId": "397",
+    "model": "maps/zeroport_testmap/entities/zombie_item_doomsday_hurt_397.vmdl",
     "_template_lump_ent_index": "3",
     "connections": [
       {
@@ -372,12 +372,12 @@
     "parentname": "[PR#]Zombie_Item_Doomsday_Weapon",
     "targetname": "[PR#]Zombie_Item_Doomsday_Push",
     "classname": "trigger_push",
-    "compile_source_id": "1471",
+    "compile_source_id": "142",
     "origin": "0.000000 0.000000 -1.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3443",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/zombie_item_doomsday_push_3443.vmdl",
+    "hammerUniqueId": "399",
+    "model": "maps/zeroport_testmap/entities/zombie_item_doomsday_push_399.vmdl",
     "_template_lump_ent_index": "4"
   },
   {
@@ -392,7 +392,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_doomsday_5.vpcf",
@@ -401,11 +401,11 @@
     "parentname": "[PR#]Zombie_Item_Doomsday_Weapon",
     "targetname": "[PR#]Zombie_Item_Doomsday_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1466",
+    "compile_source_id": "137",
     "origin": "40.000000 0.000000 -8.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3437",
+    "hammerUniqueId": "392",
     "_template_lump_ent_index": "5"
   },
   {
@@ -420,7 +420,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "0",
     "effect_name": "particles/tenkinoko_welkin/item_doomsday_2.vpcf",
@@ -429,11 +429,11 @@
     "parentname": "[PR#]Zombie_Item_Doomsday_Weapon",
     "targetname": "[PR#]Zombie_Item_Doomsday_Hurt_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1469",
+    "compile_source_id": "140",
     "origin": "0.000000 0.000000 -40.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3440",
+    "hammerUniqueId": "396",
     "_template_lump_ent_index": "6"
   },
   {
@@ -444,12 +444,12 @@
     "parentname": "[PR#]Zombie_Item_Doomsday_Weapon",
     "targetname": "[PR#]Zombie_Item_Doomsday_Weapon_Strip",
     "classname": "trigger_once",
-    "compile_source_id": "1514",
+    "compile_source_id": "194",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3503",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/zombie_item_doomsday_weapon_strip_3503.vmdl",
+    "hammerUniqueId": "534",
+    "model": "maps/zeroport_testmap/entities/zombie_item_doomsday_weapon_strip_534.vmdl",
     "_template_lump_ent_index": "7",
     "connections": [
       {
@@ -467,11 +467,11 @@
     "filtername": "[PR#]Zombie_Item_Doomsday_Weapon_Finder_Filter",
     "targetname": "[PR#]Zombie_Item_Doomsday_Weapon_Finder",
     "classname": "point_entity_finder",
-    "compile_source_id": "1515",
+    "compile_source_id": "195",
     "origin": "0.000000 0.000000 -16.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3505",
+    "hammerUniqueId": "536",
     "_template_lump_ent_index": "8",
     "connections": [
       {
@@ -492,11 +492,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Zombie_Item_Doomsday_Weapon_Finder_Filter",
     "classname": "filter_multi",
-    "compile_source_id": "1519",
+    "compile_source_id": "199",
     "origin": "0.000000 64.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3510",
+    "hammerUniqueId": "541",
     "_template_lump_ent_index": "9"
   },
   {
@@ -505,11 +505,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Zombie_Item_Doomsday_Weapon_Filter",
     "classname": "filter_activator_name",
-    "compile_source_id": "1518",
+    "compile_source_id": "198",
     "origin": "-16.000000 64.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3509",
+    "hammerUniqueId": "540",
     "_template_lump_ent_index": "10"
   }
 ]

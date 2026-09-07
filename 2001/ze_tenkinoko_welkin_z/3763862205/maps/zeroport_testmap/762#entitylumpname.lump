@@ -17,11 +17,11 @@
     "renderfx": "kRenderFxNone",
     "targetname": "[PR#]Human_Item_ThunderBolt_Weapon",
     "classname": "weapon_elite",
-    "compile_source_id": "1604",
+    "compile_source_id": "297",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3608",
+    "hammerUniqueId": "750",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -103,12 +103,12 @@
     "parentname": "[PR#]Human_Item_ThunderBolt_Weapon",
     "targetname": "[PR#]Human_Item_ThunderBolt_Button",
     "classname": "func_button",
-    "compile_source_id": "1605",
+    "compile_source_id": "298",
     "origin": "24.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3609",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_thunderbolt_button_3609.vmdl",
+    "hammerUniqueId": "752",
+    "model": "maps/zeroport_testmap/entities/human_item_thunderbolt_button_752.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -127,11 +127,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Human_Item_ThunderBolt_Filter",
     "classname": "filter_activator_attribute_int",
-    "compile_source_id": "1606",
+    "compile_source_id": "299",
     "origin": "0.000000 -32.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3611",
+    "hammerUniqueId": "754",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -168,11 +168,11 @@
     "spawnflags": "1",
     "targetname": "[PR#]Human_Item_ThunderBolt_Fade",
     "classname": "env_fade",
-    "compile_source_id": "1607",
+    "compile_source_id": "300",
     "origin": "-16.000000 -32.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3612",
+    "hammerUniqueId": "758",
     "_template_lump_ent_index": "3"
   },
   {
@@ -186,11 +186,11 @@
     "parentname": "[PR#]Human_Item_ThunderBolt_Weapon",
     "targetname": "[PR#]Human_Item_ThunderBolt_Hurt_Maker",
     "classname": "env_entity_maker",
-    "compile_source_id": "1474",
+    "compile_source_id": "145",
     "origin": "40.000000 0.000000 -40.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3447",
+    "hammerUniqueId": "416",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -288,14 +288,6 @@
         "param": "",
         "delay": 30,
         "limit": -1
-      },
-      {
-        "output": "OnEntitySpawned",
-        "target": "[PR#]Item_ThunderBolt_Attack_BossHP_Relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 20,
-        "limit": -1
       }
     ]
   },
@@ -311,7 +303,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_thunderbolt_7.vpcf",
@@ -320,11 +312,11 @@
     "parentname": "[PR#]Human_Item_ThunderBolt_Weapon",
     "targetname": "[PR#]Human_Item_ThunderBolt_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1475",
+    "compile_source_id": "146",
     "origin": "40.000000 0.000000 -8.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3448",
+    "hammerUniqueId": "417",
     "_template_lump_ent_index": "5"
   }
 ]

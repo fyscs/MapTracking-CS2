@@ -17,11 +17,11 @@
     "renderfx": "kRenderFxNone",
     "targetname": "[PR#]Human_Item_FrozenTomb_Weapon",
     "classname": "weapon_elite",
-    "compile_source_id": "1596",
+    "compile_source_id": "288",
     "origin": "0.000000 -1.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3598",
+    "hammerUniqueId": "720",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -84,7 +84,7 @@
         "output": "OnPlayerPickup",
         "target": "[PR#]Server",
         "input": "Command",
-        "param": "say \u003C\u003C Tips: Use Top Button To Trigger From Itself, Freezing Surrounding Zombies For 9 Second, Only User Can Break Crystal \u003E\u003E",
+        "param": "say \u003C\u003C Tips: Use Upper To Trigger From Itself, Freezing Surrounding Zombies For 9 Second, Only User Can Break Crystal \u003E\u003E",
         "delay": 4,
         "limit": 1
       },
@@ -119,12 +119,12 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_Weapon",
     "targetname": "[PR#]Human_Item_FrozenTomb_Button",
     "classname": "func_button",
-    "compile_source_id": "1598",
+    "compile_source_id": "290",
     "origin": "24.000000 -1.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3600",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_frozentomb_button_3600.vmdl",
+    "hammerUniqueId": "722",
+    "model": "maps/zeroport_testmap/entities/human_item_frozentomb_button_722.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -158,12 +158,12 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_Weapon",
     "targetname": "[PR#]Human_Item_FrozenTomb_Button_Top",
     "classname": "func_button",
-    "compile_source_id": "1600",
+    "compile_source_id": "292",
     "origin": "0.000000 -1.500000 40.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3603",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_frozentomb_button_top_3603.vmdl",
+    "hammerUniqueId": "732",
+    "model": "maps/zeroport_testmap/entities/human_item_frozentomb_button_top_732.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -182,11 +182,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Human_Item_FrozenTomb_Filter",
     "classname": "filter_activator_attribute_int",
-    "compile_source_id": "1599",
+    "compile_source_id": "291",
     "origin": "0.000000 -33.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3602",
+    "hammerUniqueId": "724",
     "_template_lump_ent_index": "3",
     "connections": [
       {
@@ -229,11 +229,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Human_Item_FrozenTomb_Filter_Top",
     "classname": "filter_activator_attribute_int",
-    "compile_source_id": "1601",
+    "compile_source_id": "293",
     "origin": "0.000000 -49.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3605",
+    "hammerUniqueId": "735",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -305,11 +305,11 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_Weapon",
     "targetname": "[PR#]Human_Item_FrozenTomb_TrackMove_Maker",
     "classname": "env_entity_maker",
-    "compile_source_id": "1595",
+    "compile_source_id": "287",
     "origin": "40.000000 -1.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3597",
+    "hammerUniqueId": "714",
     "_template_lump_ent_index": "5"
   },
   {
@@ -323,11 +323,11 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_Weapon",
     "targetname": "[PR#]Human_Item_FrozenTomb_Trigger_Maker",
     "classname": "env_entity_maker",
-    "compile_source_id": "1602",
+    "compile_source_id": "294",
     "origin": "0.000000 -1.500000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3606",
+    "hammerUniqueId": "736",
     "_template_lump_ent_index": "6",
     "connections": [
       {
@@ -342,7 +342,7 @@
         "output": "OnEntitySpawned",
         "target": "[PR#]Human_Item_FrozenTomb_Trigger_Breakable",
         "input": "SetDamageFilter",
-        "param": "[PR#]Human_Item_FrozenTomb_Filter",
+        "param": "item_FrozenTomb_filter1",
         "delay": 0.009999999776482582,
         "limit": -1
       },
@@ -408,7 +408,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_frozentomb_2.vpcf",
@@ -417,11 +417,11 @@
     "parentname": "[PR#]Human_Item_FrozenTomb_Weapon",
     "targetname": "[PR#]Human_Item_FrozenTomb_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1594",
+    "compile_source_id": "286",
     "origin": "40.000000 -1.500000 -8.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3596",
+    "hammerUniqueId": "713",
     "_template_lump_ent_index": "7"
   }
 ]

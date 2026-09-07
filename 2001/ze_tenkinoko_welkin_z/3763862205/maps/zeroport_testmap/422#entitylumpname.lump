@@ -16,12 +16,12 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_ThunderBolt_Hurt",
     "classname": "trigger_hurt",
-    "compile_source_id": "1478",
+    "compile_source_id": "149",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3451",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_thunderbolt_hurt_3451.vmdl",
+    "hammerUniqueId": "423",
+    "model": "maps/zeroport_testmap/entities/human_item_thunderbolt_hurt_423.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -36,7 +36,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_thunderbolt_0.vpcf",
@@ -44,11 +44,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_ThunderBolt_Hurt_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1476",
+    "compile_source_id": "147",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3449",
+    "hammerUniqueId": "421",
     "_template_lump_ent_index": "1"
   },
   {
@@ -62,11 +62,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_ThunderBolt_SFX",
     "classname": "point_soundevent",
-    "compile_source_id": "1608",
+    "compile_source_id": "301",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3613",
+    "hammerUniqueId": "760",
     "_template_lump_ent_index": "2"
   }
 ]

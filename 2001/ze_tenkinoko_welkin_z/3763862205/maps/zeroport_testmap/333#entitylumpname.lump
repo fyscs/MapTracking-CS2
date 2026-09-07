@@ -16,12 +16,12 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Zombie_Item_Mist_Hurt",
     "classname": "trigger_hurt",
-    "compile_source_id": "1440",
+    "compile_source_id": "110",
     "origin": "0.000000 0.000000 48.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3394",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/zombie_item_mist_hurt_3394.vmdl",
+    "hammerUniqueId": "331",
+    "model": "maps/zeroport_testmap/entities/zombie_item_mist_hurt_331.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -36,7 +36,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_mist_0.vpcf",
@@ -44,11 +44,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Zombie_Item_Mist_Hurt_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1439",
+    "compile_source_id": "109",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3393",
+    "hammerUniqueId": "328",
     "_template_lump_ent_index": "1"
   }
 ]

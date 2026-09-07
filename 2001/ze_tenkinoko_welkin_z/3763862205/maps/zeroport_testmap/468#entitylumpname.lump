@@ -16,12 +16,12 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_RainBow_Trigger",
     "classname": "trigger_hurt",
-    "compile_source_id": "1490",
+    "compile_source_id": "161",
     "origin": "0.000000 0.000000 128.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3473",
-    "model": "maps/ze_tenkinoko_welkin_z/entities/human_item_rainbow_trigger_3473.vmdl",
+    "hammerUniqueId": "464",
+    "model": "maps/zeroport_testmap/entities/human_item_rainbow_trigger_464.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -29,30 +29,6 @@
         "target": "!activator",
         "input": "keyvalue",
         "param": "max_health 200",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "SetDamageFilter",
-        "param": "[PR#]NoZombie_Filter",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "SetDamageFilter",
-        "param": "",
-        "delay": 8,
-        "limit": -1
-      },
-      {
-        "output": "OnEndTouch",
-        "target": "!activator",
-        "input": "SetDamageFilter",
-        "param": "",
         "delay": 0,
         "limit": -1
       }
@@ -70,7 +46,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "1",
     "effect_name": "particles/tenkinoko_welkin/item_rainbow_2.vpcf",
@@ -78,11 +54,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_RainBow_Trigger_Particle",
     "classname": "info_particle_system",
-    "compile_source_id": "1492",
+    "compile_source_id": "163",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3476",
+    "hammerUniqueId": "469",
     "_template_lump_ent_index": "1"
   },
   {
@@ -91,16 +67,16 @@
     "stopOnNew": "1",
     "toLocalPlayer": "0",
     "startOnSpawn": "0",
-    "sourceEntityName": "[PR#]Human_Item_RainBow_Trigger_Particle",
     "soundName": "Human.Item_RainBow.SFX",
+    "SourceEntityName": "[PR#]Human_Item_RainBow_Trigger_Particle",
     "useLocalOffset": "0",
     "targetname": "[PR#]Human_Item_RainBow_SFX",
     "classname": "point_soundevent",
-    "compile_source_id": "1494",
+    "compile_source_id": "165",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3478",
+    "hammerUniqueId": "471",
     "_template_lump_ent_index": "2"
   },
   {
@@ -109,11 +85,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Human_Item_RainBow_Ammo_Proximity_Filter",
     "classname": "filter_proximity",
-    "compile_source_id": "1580",
+    "compile_source_id": "265",
     "origin": "0.000000 0.000000 128.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3581",
+    "hammerUniqueId": "677",
     "_template_lump_ent_index": "3"
   },
   {
@@ -121,11 +97,11 @@
     "filtername": "[PR#]Human_Item_RainBow_Ammo_Gun_Filter_Multi",
     "targetname": "[PR#]Human_Item_RainBow_Ammo_Gun_Finder",
     "classname": "point_entity_finder",
-    "compile_source_id": "1584",
+    "compile_source_id": "269",
     "origin": "0.000000 -16.000000 128.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3585",
+    "hammerUniqueId": "686",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -166,11 +142,11 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Human_Item_RainBow_Ammo_Gun_Filter_Multi",
     "classname": "filter_multi",
-    "compile_source_id": "1585",
+    "compile_source_id": "270",
     "origin": "-16.000000 -16.000000 128.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3586",
+    "hammerUniqueId": "688",
     "_template_lump_ent_index": "5"
   },
   {
@@ -182,11 +158,11 @@
     "StartDisabled": "1",
     "targetname": "[PR#]Human_Item_RainBow_Ammo_Timer",
     "classname": "logic_timer",
-    "compile_source_id": "1581",
+    "compile_source_id": "266",
     "origin": "0.000000 -32.000000 128.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3582",
+    "hammerUniqueId": "679",
     "_template_lump_ent_index": "6",
     "connections": [
       {
@@ -206,11 +182,11 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Human_Item_RainBow_Ammo_Give",
     "classname": "logic_relay",
-    "compile_source_id": "1582",
+    "compile_source_id": "267",
     "origin": "-16.000000 -32.000000 128.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3583",
+    "hammerUniqueId": "680",
     "_template_lump_ent_index": "7",
     "connections": [
       {
@@ -230,11 +206,11 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Human_Item_RainBow_Ammo_Counter",
     "classname": "math_counter",
-    "compile_source_id": "1583",
+    "compile_source_id": "268",
     "origin": "-32.000000 -32.000000 128.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3584",
+    "hammerUniqueId": "681",
     "_template_lump_ent_index": "8",
     "connections": [
       {
