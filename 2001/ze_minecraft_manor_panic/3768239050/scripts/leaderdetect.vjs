@@ -8,11 +8,14 @@ Instance.OnScriptInput("SetLeaderContext", (_input) => {
     if (!players || players.length === 0) {
         return;
     }
-
     for (let p of players) {
         let pawn = p.GetPlayerPawn();
         if (pawn) {
-            Instance.EntFireAtTarget({ target: "!Activator", input: "RemoveContext", value: "leader" });
+            Instance.EntFireAtTarget({ 
+                target: pawn, 
+                input: "RemoveContext", 
+                value: "leader" 
+            });
         }
     }
     let topPlayer = null;
@@ -24,17 +27,15 @@ Instance.OnScriptInput("SetLeaderContext", (_input) => {
             topPlayer = p;
         }
     }
-
     if (topPlayer) {
         let pawn = topPlayer.GetPlayerPawn();
         if (pawn) {
             Instance.EntFireAtTarget({ 
-                target: "!Activator", 
+                target: pawn, 
                 input: "AddContext", 
                 value: "leader:1"
             });
         }
-
         Instance.EntFireAtName({ 
             name: "axe_weapon", 
             input: "FireUser1", 
