@@ -200,12 +200,44 @@
         "param": "",
         "delay": 4.019999980926514,
         "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]tnt_explosion3_snd\u00260000",
+        "input": "ClearParent",
+        "param": "",
+        "delay": 3.9800000190734863,
+        "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]tnt_explosion2_snd\u00260000",
+        "input": "ClearParent",
+        "param": "",
+        "delay": 3.9800000190734863,
+        "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]tnt_explosion1_snd\u00260000",
+        "input": "ClearParent",
+        "param": "",
+        "delay": 3.9800000190734863,
+        "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]tnt_explosion_snd\u00260000",
+        "input": "ClearParent",
+        "param": "",
+        "delay": 3.9800000190734863,
+        "limit": 1
       }
     ]
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "80",
+    "speed": "120",
     "pushdir": "-90.000000 0.000000 0.000000",
     "spawnflags": "4097",
     "StartDisabled": "1",
