@@ -1455,14 +1455,6 @@
         "param": "",
         "delay": 25,
         "limit": 1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]b_tele_part2",
-        "input": "Start",
-        "param": "",
-        "delay": 25,
-        "limit": 1
       }
     ]
   },

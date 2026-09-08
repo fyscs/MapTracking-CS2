@@ -3,16 +3,16 @@
 
 [
   {
-    "AlwaysSolidIgnoreNav": "0",
-    "NoInterpolate": "0",
     "ScriptedMovement": "0",
     "solidbsp": "0",
+    "AlwaysSolidIgnoreNav": "0",
     "invert_exclusion": "0",
-    "Solidity": "0",
-    "spawnflags": "2",
     "disableshadows": "0",
     "StartDisabled": "0",
     "InputFilter": "0",
+    "NoInterpolate": "0",
+    "Solidity": "0",
+    "spawnflags": "2",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
