@@ -3286,7 +3286,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#][TELE]_START_DES",
     "classname": "info_teleport_destination",
-    "origin": "-7331.375000 247.500000 364.250000",
+    "origin": "-7366.500000 247.500000 364.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2860"
@@ -52832,7 +52832,7 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_physics_multiplayer",
-    "origin": "4009.998779 4869.998047 89.359390",
+    "origin": "4010.001709 4870.000000 89.359375",
     "angles": "0.000000 34.000004 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "238"
@@ -52989,8 +52989,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_physics_multiplayer",
-    "origin": "4031.993652 4831.999512 89.359367",
-    "angles": "0.000000 296.499939 0.000000",
+    "origin": "4031.989014 4831.999023 89.359329",
+    "angles": "0.000000 296.499908 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "237"
   },
@@ -80977,8 +80977,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_physics_multiplayer",
-    "origin": "4021.985840 4851.980957 129.090195",
-    "angles": "0.000000 300.004852 0.000000",
+    "origin": "4021.985840 4851.984863 129.090134",
+    "angles": "0.000000 300.008026 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "239"
   },
@@ -127674,31 +127674,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase01",
-        "target": "!activator",
-        "input": "keyvalue",
-        "param": "Color 255 255 255",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnCase02",
-        "target": "!activator",
-        "input": "keyvalue",
-        "param": "Alpha 255",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase02",
-        "target": "!activator",
-        "input": "keyvalue",
-        "param": "Color 255 255 255",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase03",
         "target": "!activator",
         "input": "keyvalue",
         "param": "Alpha 255",
@@ -127709,7 +127685,7 @@
         "output": "OnCase03",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "Color 255 255 255",
+        "param": "Alpha 255",
         "delay": 0,
         "limit": -1
       },
@@ -131314,14 +131290,6 @@
       {
         "output": "OnTrigger",
         "target": "!activator",
-        "input": "keyvalue",
-        "param": "Color 255 255 255",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!activator",
         "input": "setmodel",
         "param": "models/wuthering_waves/chisa_e.vmdl",
         "delay": 1.0499999523162842,
@@ -131332,14 +131300,6 @@
         "target": "!activator",
         "input": "setmodel",
         "param": "models/wuthering_waves/chisa_e_fys.vmdl",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]chisa_counter",
-        "input": "Add",
-        "param": "1",
         "delay": 0.05000000074505806,
         "limit": -1
       }
@@ -133166,28 +133126,6 @@
         "output": "OnStartTouch",
         "target": "[PR#]zombie_model_case",
         "input": "PickRandomShuffle",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "max": "3",
-    "min": "0",
-    "startvalue": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]chisa_counter",
-    "classname": "math_counter",
-    "origin": "-3690.250000 -180.347656 1140.999756",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4096",
-    "connections": [
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]chisa",
-        "input": "Kill",
         "param": "",
         "delay": 0.05000000074505806,
         "limit": -1
