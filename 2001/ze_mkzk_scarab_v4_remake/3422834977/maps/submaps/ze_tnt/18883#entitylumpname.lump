@@ -43,7 +43,7 @@
         "target": "!self",
         "input": "Color",
         "param": "255 0 0",
-        "delay": 1,
+        "delay": 0.6000000238418579,
         "limit": 1
       },
       {
@@ -51,7 +51,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 1.5,
+        "delay": 1,
         "limit": 1
       }
     ]
@@ -97,7 +97,7 @@
         "target": "!self",
         "input": "Color",
         "param": "255 0 0",
-        "delay": 1,
+        "delay": 0.6000000238418579,
         "limit": 1
       },
       {
@@ -105,7 +105,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 1.5,
+        "delay": 1,
         "limit": 1
       }
     ]
@@ -232,7 +232,7 @@
         "target": "!self",
         "input": "Color",
         "param": "255 0 0",
-        "delay": 1,
+        "delay": 0.6000000238418579,
         "limit": 1
       },
       {
@@ -240,7 +240,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 1.5,
+        "delay": 1,
         "limit": 1
       }
     ]
@@ -286,7 +286,7 @@
         "target": "!self",
         "input": "Color",
         "param": "255 0 0",
-        "delay": 1,
+        "delay": 0.6000000238418579,
         "limit": 1
       },
       {
@@ -294,7 +294,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 1.5,
+        "delay": 1,
         "limit": 1
       }
     ]
@@ -340,7 +340,7 @@
         "target": "!self",
         "input": "Color",
         "param": "255 0 0",
-        "delay": 1,
+        "delay": 0.6000000238418579,
         "limit": 1
       },
       {
@@ -348,7 +348,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 1.5,
+        "delay": 1,
         "limit": 1
       }
     ]
@@ -394,7 +394,7 @@
         "target": "!self",
         "input": "Color",
         "param": "255 0 0",
-        "delay": 1,
+        "delay": 0.6000000238418579,
         "limit": 1
       },
       {
@@ -402,7 +402,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 1.5,
+        "delay": 1,
         "limit": 1
       }
     ]
@@ -448,7 +448,7 @@
         "target": "!self",
         "input": "Color",
         "param": "255 0 0",
-        "delay": 1,
+        "delay": 0.6000000238418579,
         "limit": 1
       },
       {
@@ -456,7 +456,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 1.5,
+        "delay": 1,
         "limit": 1
       }
     ]

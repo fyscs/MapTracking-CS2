@@ -11814,6 +11814,14 @@
         "param": "",
         "delay": 0.10000000149011612,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]snd_fail1",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -12045,9 +12053,9 @@
     ]
   },
   {
-    "max": "100",
+    "max": "50",
     "min": "0",
-    "startvalue": "30",
+    "startvalue": "18",
     "StartDisabled": "0",
     "targetname": "[PR#]sm_luffzmyw",
     "classname": "math_counter",
@@ -12405,6 +12413,14 @@
         "output": "OnTrigger",
         "target": "[PR#]sm_luffmoret",
         "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]snd_fail2",
+        "input": "StartSound",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -99015,6 +99031,14 @@
         "param": "",
         "delay": 28,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]snd_dl2",
+        "input": "StartSound",
+        "param": "",
+        "delay": 62.5,
+        "limit": -1
       }
     ]
   },
@@ -108758,6 +108782,14 @@
         "param": "reward:1",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]snd_star1",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -108826,6 +108858,14 @@
         "param": "reward:1",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]snd_star2",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -108864,6 +108904,14 @@
         "target": "!activator",
         "input": "AddContext",
         "param": "reward:1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]snd_star3",
+        "input": "StartSound",
+        "param": "",
         "delay": 0,
         "limit": 1
       }
@@ -108945,6 +108993,14 @@
         "target": "!activator",
         "input": "AddContext",
         "param": "reward:1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]snd_star4",
+        "input": "StartSound",
+        "param": "",
         "delay": 0,
         "limit": 1
       }
@@ -109281,7 +109337,7 @@
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "runspeed 1.00",
+        "param": "speed 1.00",
         "delay": 0,
         "limit": -1
       }
@@ -110362,7 +110418,7 @@
     "parentname": "[PR#]tnttp7",
     "targetname": "[PR#]tnttp7b",
     "classname": "point_teleport",
-    "origin": "640.000000 2144.000000 464.000000",
+    "origin": "640.000000 2304.000000 464.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18902"
@@ -111121,5 +111177,162 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18967"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "0",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_finishgame",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]sm_sfx",
+    "classname": "snd_event_point",
+    "origin": "0.000000 -7552.000000 -960.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18968"
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "classname": "trigger_multiple",
+    "origin": "0.000000 -7504.000000 -976.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18969",
+    "model": "maps/submaps/ze_tnt/entities/unnamed_18969.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]sm_sfx",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_kqs",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_dl",
+    "classname": "snd_event_point",
+    "origin": "-192.000000 2512.000000 0.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18971"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_tick",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_dl2",
+    "classname": "snd_event_point",
+    "origin": "-160.000000 2512.000000 0.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18972"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_fail_big",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_fail2",
+    "classname": "snd_event_point",
+    "origin": "-12064.000000 -6880.000000 -480.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18973"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_fail_small",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_fail1",
+    "classname": "snd_event_point",
+    "origin": "-12064.000000 -6912.000000 -480.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18974"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_getbuff",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_star1",
+    "classname": "snd_event_point",
+    "origin": "-12224.000000 -6912.000000 -464.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18975"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_getbuff",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_star2",
+    "classname": "snd_event_point",
+    "origin": "0.000000 -7424.000000 -992.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18976"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_getbuff",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_star3",
+    "classname": "snd_event_point",
+    "origin": "0.000000 -9344.000000 -1344.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18977"
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "_getbuff",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]snd_star4",
+    "classname": "snd_event_point",
+    "origin": "0.000000 1776.000000 688.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "18979"
   }
 ]
