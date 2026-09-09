@@ -131,6 +131,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]ex_escape_ball_move1",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   }

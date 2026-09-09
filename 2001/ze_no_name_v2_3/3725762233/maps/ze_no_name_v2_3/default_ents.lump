@@ -122,7 +122,7 @@
     "targetname": "[PR#]st2_des6_hm",
     "classname": "info_teleport_destination",
     "origin": "6208.000000 -6144.000000 6720.000000",
-    "angles": "0.000000 0.000000 0.000000",
+    "angles": "0.000000 179.999939 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17"
   },
@@ -257,7 +257,7 @@
         "target": "[PR#]st2_escape_field_part",
         "input": "Stop",
         "param": "",
-        "delay": 84,
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -2762,7 +2762,7 @@
         "target": "[PR#]st2_escape_ball_field",
         "input": "Kill",
         "param": "",
-        "delay": 120,
+        "delay": 119,
         "limit": -1
       },
       {
@@ -2842,7 +2842,7 @@
         "target": "[PR#]field_beam_main",
         "input": "Kill",
         "param": "",
-        "delay": 120,
+        "delay": 119,
         "limit": -1
       },
       {
@@ -2924,6 +2924,30 @@
         "param": "",
         "delay": 127,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]practice_wintest_check",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_wintest_tri",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_wintest_tri",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -5325,6 +5349,7 @@
     ]
   },
   {
+    "Case06": "6",
     "Case05": "5",
     "Case04": "4",
     "Case03": "3",
@@ -5372,6 +5397,14 @@
       {
         "output": "OnCase05",
         "target": "[PR#]practice_start_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]extreme_start_relay",
         "input": "Trigger",
         "param": "",
         "delay": 0,
@@ -15349,6 +15382,591 @@
         "input": "ForceSpawn",
         "param": "",
         "delay": 0.05000000074505806,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "InitialDelay": "0.000000",
+    "RefireTime": "1.000000",
+    "PauseAfterFiring": "0",
+    "UseRandomTime": "0",
+    "spawnflags": "0",
+    "StartDisabled": "1",
+    "targetname": "[PR#]ex_escape_ball_reverse_timer",
+    "classname": "logic_timer",
+    "origin": "6224.000000 -6144.000000 3504.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2780",
+    "connections": [
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ex_escape_ball_rot",
+        "input": "Reverse",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "InitialDelay": "0.000000",
+    "UpperRandomBound": "0.300000",
+    "LowerRandomBound": "0.300000",
+    "PauseAfterFiring": "0",
+    "UseRandomTime": "1",
+    "spawnflags": "0",
+    "StartDisabled": "1",
+    "targetname": "[PR#]ex_escape_laser_timer",
+    "classname": "logic_timer",
+    "origin": "6192.000000 -6144.000000 3504.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2781",
+    "connections": [
+      {
+        "output": "OnTimer",
+        "target": "[PR#]st2_escape_laser_maker",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "Template04": "[PR#]st2_escape_laser_relay",
+    "Template03": "[PR#]st2_escape_laser_hurt",
+    "Template02": "[PR#]st2_escape_laser_part",
+    "Template01": "[PR#]ex_escape_laser_move",
+    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
+    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
+    "timeoutInterval": "0.000000",
+    "asynchronous": "0",
+    "spawnflags": "0",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]ex_escape_laser_temp",
+    "classname": "point_template",
+    "origin": "6208.000000 -6144.000000 3380.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2788",
+    "worldName": "maps\\ze_no_name_v2_3",
+    "entityLumpName": "2788#entityLumpName",
+    "TemplateFixup": "1"
+  },
+  {
+    "Template04": "[PR#]st2_escape_ball_relay",
+    "Template03": "[PR#]st2_escape_ball_hurt",
+    "Template02": "[PR#]st2_escape_ball_part",
+    "Template01": "[PR#]ex_escape_ball_move1",
+    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
+    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
+    "timeoutInterval": "0.000000",
+    "asynchronous": "0",
+    "spawnflags": "0",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]ex_escape_ball_temp",
+    "classname": "point_template",
+    "origin": "6480.000000 -6096.000000 3536.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2791",
+    "worldName": "maps\\ze_no_name_v2_3",
+    "entityLumpName": "2791#entityLumpName",
+    "TemplateFixup": "1"
+  },
+  {
+    "InitialDelay": "0.000000",
+    "RefireTime": "0.070000",
+    "PauseAfterFiring": "0",
+    "UseRandomTime": "0",
+    "spawnflags": "0",
+    "StartDisabled": "1",
+    "targetname": "[PR#]ex_escape_ball_timer",
+    "classname": "logic_timer",
+    "origin": "6208.000000 -6144.000000 3504.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2792",
+    "connections": [
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ex_escape_ball_maker1",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ex_escape_ball_maker2",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ex_escape_ball_maker3",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ex_escape_ball_maker4",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PostSpawnInheritAngles": "0",
+    "PostSpawnDirectionVariance": "0.150000",
+    "PostSpawnDirection": "0.000000 0.000000 0.000000",
+    "PostSpawnSpeed": "0.000000",
+    "EntityTemplate": "[PR#]st2_escape_ball_temp",
+    "spawnflags": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_maker_move1",
+    "targetname": "[PR#]ex_escape_ball_maker1",
+    "classname": "env_entity_maker",
+    "origin": "6272.000000 -6144.000000 3469.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2793"
+  },
+  {
+    "fadescale": "1",
+    "CreateNavObstacle": "1",
+    "movedir": "0.000000 0.000000 0.000000",
+    "loopmovesound": "0",
+    "spawnflags": "4108",
+    "spawnpos": "0",
+    "health": "0",
+    "ignoredebris": "0",
+    "forceclosed": "1",
+    "dmg": "0",
+    "lip": "-450",
+    "wait": "-1",
+    "speed": "650.000000",
+    "disableshadows": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_rot",
+    "targetname": "[PR#]ex_escape_ball_maker_move1",
+    "classname": "func_door",
+    "origin": "6272.000000 -6144.000000 3481.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2794",
+    "model": "maps/ze_no_name_v2_3/entities/ex_escape_ball_maker_move1_2794.vmdl",
+    "connections": [
+      {
+        "output": "OnFullyOpen",
+        "target": "!self",
+        "input": "Close",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFullyClosed",
+        "target": "!self",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "fadescale": "1",
+    "CreateNavObstacle": "1",
+    "movedir": "0.000000 90.000000 0.000000",
+    "loopmovesound": "0",
+    "spawnflags": "4108",
+    "spawnpos": "0",
+    "health": "0",
+    "ignoredebris": "0",
+    "forceclosed": "1",
+    "dmg": "0",
+    "lip": "-450",
+    "wait": "-1",
+    "speed": "650.000000",
+    "disableshadows": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_rot",
+    "targetname": "[PR#]ex_escape_ball_maker_move4",
+    "classname": "func_door",
+    "origin": "6208.000000 -6080.000000 3481.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2799",
+    "model": "maps/ze_no_name_v2_3/entities/ex_escape_ball_maker_move4_2799.vmdl",
+    "connections": [
+      {
+        "output": "OnFullyOpen",
+        "target": "!self",
+        "input": "Close",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFullyClosed",
+        "target": "!self",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PostSpawnInheritAngles": "0",
+    "PostSpawnDirectionVariance": "0.150000",
+    "PostSpawnDirection": "0.000000 0.000000 0.000000",
+    "PostSpawnSpeed": "0.000000",
+    "EntityTemplate": "[PR#]st2_escape_ball_temp",
+    "spawnflags": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_maker_move4",
+    "targetname": "[PR#]ex_escape_ball_maker4",
+    "classname": "env_entity_maker",
+    "origin": "6208.000000 -6080.000000 3469.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2801"
+  },
+  {
+    "fadescale": "1",
+    "CreateNavObstacle": "1",
+    "movedir": "0.000000 180.000000 0.000000",
+    "loopmovesound": "0",
+    "spawnflags": "4108",
+    "spawnpos": "0",
+    "health": "0",
+    "ignoredebris": "0",
+    "forceclosed": "1",
+    "dmg": "0",
+    "lip": "-450",
+    "wait": "-1",
+    "speed": "650.000000",
+    "disableshadows": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_rot",
+    "targetname": "[PR#]ex_escape_ball_maker_move2",
+    "classname": "func_door",
+    "origin": "6144.000000 -6144.000000 3481.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2802",
+    "model": "maps/ze_no_name_v2_3/entities/ex_escape_ball_maker_move2_2802.vmdl",
+    "connections": [
+      {
+        "output": "OnFullyOpen",
+        "target": "!self",
+        "input": "Close",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFullyClosed",
+        "target": "!self",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PostSpawnInheritAngles": "0",
+    "PostSpawnDirectionVariance": "0.150000",
+    "PostSpawnDirection": "0.000000 0.000000 0.000000",
+    "PostSpawnSpeed": "0.000000",
+    "EntityTemplate": "[PR#]st2_escape_ball_temp",
+    "spawnflags": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_maker_move2",
+    "targetname": "[PR#]ex_escape_ball_maker2",
+    "classname": "env_entity_maker",
+    "origin": "6144.000000 -6144.000000 3469.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2804"
+  },
+  {
+    "fadescale": "1",
+    "CreateNavObstacle": "1",
+    "movedir": "0.000000 270.000000 0.000000",
+    "loopmovesound": "0",
+    "spawnflags": "4108",
+    "spawnpos": "0",
+    "health": "0",
+    "ignoredebris": "0",
+    "forceclosed": "1",
+    "dmg": "0",
+    "lip": "-450",
+    "wait": "-1",
+    "speed": "650.000000",
+    "disableshadows": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_rot",
+    "targetname": "[PR#]ex_escape_ball_maker_move3",
+    "classname": "func_door",
+    "origin": "6208.000000 -6208.000000 3481.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2805",
+    "model": "maps/ze_no_name_v2_3/entities/ex_escape_ball_maker_move3_2805.vmdl",
+    "connections": [
+      {
+        "output": "OnFullyOpen",
+        "target": "!self",
+        "input": "Close",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFullyClosed",
+        "target": "!self",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PostSpawnInheritAngles": "0",
+    "PostSpawnDirectionVariance": "0.150000",
+    "PostSpawnDirection": "0.000000 0.000000 0.000000",
+    "PostSpawnSpeed": "0.000000",
+    "EntityTemplate": "[PR#]st2_escape_ball_temp",
+    "spawnflags": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_ball_maker_move3",
+    "targetname": "[PR#]ex_escape_ball_maker3",
+    "classname": "env_entity_maker",
+    "origin": "6208.000000 -6208.000000 3469.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2807"
+  },
+  {
+    "PostSpawnInheritAngles": "0",
+    "PostSpawnDirectionVariance": "0.150000",
+    "PostSpawnDirection": "0.000000 0.000000 0.000000",
+    "PostSpawnSpeed": "0.000000",
+    "EntityTemplate": "[PR#]st2_escape_laser_temp",
+    "spawnflags": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ex_escape_laser_rot",
+    "targetname": "[PR#]ex_escape_laser_maker",
+    "classname": "env_entity_maker",
+    "origin": "6208.000000 -6144.000000 3452.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2810"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]filter_human",
+    "spawnflags": "4097",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]practice_wintest_check",
+    "classname": "trigger_multiple",
+    "origin": "8192.000000 -6144.000000 3744.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2813",
+    "model": "maps/ze_no_name_v2_3/entities/practice_wintest_check_2813.vmdl",
+    "connections": [
+      {
+        "output": "OnNotTouching",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***FAIL***",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnNotTouching",
+        "target": "[PR#]st2_win_nuke",
+        "input": "Enable",
+        "param": "",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTouching",
+        "target": "[PR#]st2_win_nuke",
+        "input": "Enable",
+        "param": "",
+        "delay": 5.5,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]zr_toggle_respawn",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]st2_escape_field_part",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***Practice Mode Complete***",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***loading Extreme Mode***",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]level_counter",
+        "input": "SetValue",
+        "param": "6",
+        "delay": 1,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]filter_human",
+    "spawnflags": "4097",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]ex_wintest_tri",
+    "classname": "trigger_multiple",
+    "origin": "8192.000000 -6144.000000 3744.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2822",
+    "model": "maps/ze_no_name_v2_3/entities/ex_wintest_tri_2822.vmdl",
+    "connections": [
+      {
+        "output": "OnNotTouching",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***FAIL***",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***Extreme Mode Complete***",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnNotTouching",
+        "target": "[PR#]st2_win_nuke",
+        "input": "Enable",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]level_counter",
+        "input": "SetValue",
+        "param": "1",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTouching",
+        "target": "[PR#]st2_win_nuke",
+        "input": "Enable",
+        "param": "",
+        "delay": 1.5,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]zr_toggle_respawn",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]st2_escape_field_part",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -28142,6 +28760,66 @@
     "hammerUniqueId": "2753"
   },
   {
+    "fadescale": "1",
+    "solidbsp": "0",
+    "MoveWithoutPushingBlockers": "0",
+    "NoInterpolate": "0",
+    "dmg": "0",
+    "spawnflags": "65",
+    "volume": "10",
+    "fanfriction": "20",
+    "maxspeed": "180",
+    "disableshadows": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "0",
+    "renderfx": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]ex_escape_ball_rot",
+    "classname": "func_rotating",
+    "origin": "6208.000000 -6144.000000 3477.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2797",
+    "model": "maps/ze_no_name_v2_3/entities/ex_escape_ball_rot_2797.vmdl"
+  },
+  {
+    "fadescale": "1",
+    "solidbsp": "0",
+    "MoveWithoutPushingBlockers": "0",
+    "NoInterpolate": "0",
+    "dmg": "0",
+    "spawnflags": "65",
+    "volume": "10",
+    "fanfriction": "20",
+    "maxspeed": "150",
+    "disableshadows": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "0",
+    "renderfx": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]ex_escape_laser_rot",
+    "classname": "func_rotating",
+    "origin": "6208.000000 -6144.000000 3452.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2811",
+    "model": "maps/ze_no_name_v2_3/entities/ex_escape_laser_rot_2811.vmdl"
+  },
+  {
     "bakedshadowindex": "0",
     "light_map_uniqueid": "1886302813",
     "light_path_uniqueid": "293730921",
@@ -28601,6 +29279,24 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "message": "sounds/electric_explosion4.vsnd",
+    "health": "7",
+    "spawnflags": "49",
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "kaguya",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]ex_bgm",
+    "classname": "point_soundevent",
+    "origin": "-1640.000000 406.000000 14344.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2785"
   },
   {
     "worldGroupID": "skyboxWorldGroup0",
@@ -29401,7 +30097,7 @@
     "maxexposure": "1.000000",
     "minexposure": "1.000000",
     "master": "0",
-    "postprocessing": "lighting/postprocessing/ze_no_name_v2_3/danmaku.vpost",
+    "postprocessing": "lighting/postprocessing/ze_no_name_v2_3/danmaku2.vpost",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -35426,7 +36122,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]practice_admin_bt",
     "classname": "func_button",
-    "origin": "1807.995239 -0.959256 14384.000000",
+    "origin": "1807.995239 -127.666740 14384.000000",
     "angles": "0.000000 180.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2769",
@@ -35498,7 +36194,7 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "1793.995239 -71.292519 14416.000000",
+    "origin": "1793.995239 -198.000000 14416.000000",
     "angles": "0.000000 90.000015 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2772"
@@ -35674,7 +36370,7 @@
         "target": "[PR#]st2_escape_ball_field",
         "input": "Kill",
         "param": "",
-        "delay": 120,
+        "delay": 119,
         "limit": -1
       },
       {
@@ -35754,7 +36450,7 @@
         "target": "[PR#]field_beam_main",
         "input": "Kill",
         "param": "",
-        "delay": 120,
+        "delay": 119,
         "limit": -1
       },
       {
@@ -35832,7 +36528,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]no_name_damaku_post",
-        "input": "Enable",
+        "input": "Disable",
         "param": "",
         "delay": 127,
         "limit": 1
@@ -35844,14 +36540,6 @@
         "param": "",
         "delay": 2,
         "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]level_counter",
-        "input": "setvalue",
-        "param": "1",
-        "delay": 129,
-        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -35884,6 +36572,590 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_wintest_tri",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]practice_wintest_check",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_wintest_tri",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "targetname": "[PR#]extreme_start_relay",
+    "classname": "logic_relay",
+    "origin": "-1591.429688 441.000000 14342.541016",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2779",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_bgm",
+        "input": "StartSound",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_door9",
+        "input": "Break",
+        "param": "",
+        "delay": 50,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]start_teleport5",
+        "input": "Enable",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_escape_tele_zm",
+        "input": "Enable",
+        "param": "",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_afk9",
+        "input": "Enable",
+        "param": "",
+        "delay": 70,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***40 seconds***",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***10 seconds***",
+        "delay": 40,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_door10",
+        "input": "Break",
+        "param": "",
+        "delay": 96,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***25 seconds***",
+        "delay": 71,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***10 seconds***",
+        "delay": 86,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***5 seconds***",
+        "delay": 91,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_timer",
+        "input": "Enable",
+        "param": "",
+        "delay": 101.30000305175781,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_reverse_timer",
+        "input": "Enable",
+        "param": "",
+        "delay": 101.30000305175781,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_laser_timer",
+        "input": "Enable",
+        "param": "",
+        "delay": 112,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_timer",
+        "input": "Disable",
+        "param": "",
+        "delay": 124,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_reverse_timer",
+        "input": "Disable",
+        "param": "",
+        "delay": 124,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_escape_laser_timer",
+        "input": "Disable",
+        "param": "",
+        "delay": 124,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_escape_ball_field",
+        "input": "Kill",
+        "param": "",
+        "delay": 126,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]field_beam_main",
+        "input": "Start",
+        "param": "",
+        "delay": 96,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_wintest_tri",
+        "input": "TouchTest",
+        "param": "",
+        "delay": 129,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_escape_field_part",
+        "input": "Start",
+        "param": "",
+        "delay": 92,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_afk10",
+        "input": "Enable",
+        "param": "",
+        "delay": 100,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_des5",
+        "input": "KeyValue",
+        "param": "origin 9696 -3648 3656",
+        "delay": 69,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_des5",
+        "input": "KeyValue",
+        "param": "angles 0 180 0",
+        "delay": 69.5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***LOOK DOWN***",
+        "delay": 97,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***LOOK DOWN***",
+        "delay": 98,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***LOOK DOWN***",
+        "delay": 99,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]field_beam_main",
+        "input": "Kill",
+        "param": "",
+        "delay": 126,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_escape_wt",
+        "input": "Toggle",
+        "param": "",
+        "delay": 25,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]fog",
+        "input": "Enable",
+        "param": "",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]fog",
+        "input": "Disable",
+        "param": "",
+        "delay": 97,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]fog",
+        "input": "Enable",
+        "param": "",
+        "delay": 129,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]player",
+        "input": "alpha",
+        "param": "0",
+        "delay": 97.5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]player",
+        "input": "alpha",
+        "param": "255",
+        "delay": 129,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]no_name_post",
+        "input": "Disable",
+        "param": "",
+        "delay": 97,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]no_name_damaku_post2",
+        "input": "Enable",
+        "param": "",
+        "delay": 97,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]no_name_post",
+        "input": "Enable",
+        "param": "",
+        "delay": 129,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]no_name_damaku_post2",
+        "input": "Disable",
+        "param": "",
+        "delay": 129,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_fade_black",
+        "input": "Fade",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]level_counter",
+        "input": "setvalue",
+        "param": "1",
+        "delay": 129,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_maker_move1",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_maker_move2",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_maker_move3",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_maker_move4",
+        "input": "Open",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***LOOK DOWN***",
+        "delay": 100,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***LOOK DOWN***",
+        "delay": 101,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_escape_laser_timer",
+        "input": "Enable",
+        "param": "",
+        "delay": 101.30000305175781,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_laser_timer",
+        "input": "Disable",
+        "param": "",
+        "delay": 124,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_escape_ball_timer",
+        "input": "Disable",
+        "param": "",
+        "delay": 112,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]st2_wintest_tri",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]practice_wintest_check",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_wintest_tri",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "fadetime": "0.000000",
+    "exposurespeeddown": "1.000000",
+    "exposurespeedup": "1.000000",
+    "enableexposure": "1",
+    "maxexposure": "1.000000",
+    "minexposure": "1.000000",
+    "master": "0",
+    "postprocessing": "lighting/postprocessing/ze_no_name_v2_3/danmaku.vpost",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]no_name_damaku_post2",
+    "classname": "post_processing_volume",
+    "origin": "6000.000000 -6299.795898 5168.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2782",
+    "model": "maps/ze_no_name_v2_3/entities/no_name_damaku_post2_2782.vmdl"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "90.000000",
+    "world_units_per_pixel": "0.250000",
+    "color": "255 255 255",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "EXTREME MODE",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "useLocalOffset": "0",
+    "classname": "point_worldtext",
+    "origin": "1793.995239 57.000000 14416.000000",
+    "angles": "0.000000 90.000015 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2818"
+  },
+  {
+    "fadescale": "1",
+    "health": "0",
+    "spawnflags": "1025",
+    "forcenpcexclude": "0",
+    "lip": "0",
+    "wait": "3.000000",
+    "speed": "5",
+    "movedir": "0.000000 0.000000 0.000000",
+    "unlocked_sound": "0",
+    "locked_sound": "0",
+    "use_sound": "Buttons.snd9",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "0",
+    "renderfx": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]extreme_admin_bt",
+    "classname": "func_button",
+    "origin": "1807.995239 127.333260 14384.000000",
+    "angles": "0.000000 180.000031 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2819",
+    "model": "maps/ze_no_name_v2_3/entities/extreme_admin_bt_2819.vmdl",
+    "connections": [
+      {
+        "output": "OnPressed",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say ***The admin pressed the EXTREME MODE button***",
+        "delay": 0.05000000074505806,
+        "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]st1_admin_bt",
+        "input": "Lock",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]level_counter",
+        "input": "SetValue",
+        "param": "6",
+        "delay": 0.05000000074505806,
+        "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]st3_admin_bt",
+        "input": "Lock",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]st2_admin_bt",
+        "input": "Lock",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]practice_admin_bt",
+        "input": "Lock",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   }
