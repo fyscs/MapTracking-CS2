@@ -21217,7 +21217,7 @@
       },
       {
         "output": "OnMapSpawn",
-        "target": "[PR#]radiation_zombie_temp",
+        "target": "[PR#]radiation_zombie_brush",
         "input": "Kill",
         "param": "",
         "delay": 0,
