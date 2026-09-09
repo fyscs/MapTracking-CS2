@@ -185,7 +185,7 @@
     "parentname": "[PR#]solder_knife",
     "targetname": "[PR#]solder_skill_mk",
     "classname": "env_entity_maker",
-    "origin": "0.000000 0.000000 0.000000",
+    "origin": "0.000000 0.000000 -10.280029",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9959",

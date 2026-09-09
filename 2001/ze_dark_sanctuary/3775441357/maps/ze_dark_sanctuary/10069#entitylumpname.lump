@@ -641,7 +641,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "10000",
-    "damage": "3500",
+    "damage": "2222",
     "filtername": "[PR#]T",
     "spawnflags": "4097",
     "StartDisabled": "1",
@@ -665,7 +665,7 @@
         "limit": -1
       },
       {
-        "output": "OnEndTouch",
+        "output": "OnHurtPlayer",
         "target": "!activator",
         "input": "KeyValue",
         "param": "speed 1",

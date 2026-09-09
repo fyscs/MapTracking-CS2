@@ -420,7 +420,7 @@
     "fogstartheight": "0.000000",
     "heightfog": "0",
     "fogfalloffexponent": "0.500000",
-    "fogend": "500.000000",
+    "fogend": "1500.000000",
     "fogstart": "0.000000",
     "fogmaxopacity": "1.000000",
     "fogstrength": "1.000000",
@@ -802,9 +802,9 @@
     "AnimateOnServer": "0",
     "LagCompensate": "0",
     "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_LOOPING",
     "IdleAnim": "stay",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_LOOPING",
     "StartingAnim": "stay",
     "use_animgraph": "1",
     "disablelowviolence": "0",
@@ -2730,7 +2730,7 @@
         "target": "[PR#]redhood_hurt3",
         "input": "Enable",
         "param": "",
-        "delay": 2,
+        "delay": 0,
         "limit": -1
       },
       {
@@ -6475,7 +6475,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -6483,7 +6483,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -6570,7 +6570,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -6578,7 +6578,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -6816,7 +6816,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 20,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -6824,7 +6824,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 21,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -9238,7 +9238,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -9246,7 +9246,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -9643,7 +9643,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 11,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -9651,7 +9651,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 10,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -10427,7 +10427,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 20,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -10435,7 +10435,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 21,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -11666,7 +11666,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]lv400",
     "classname": "info_player_start",
-    "origin": "-9065.999023 -10725.000000 -7154.000000",
+    "origin": "-9065.999023 -10845.000000 -7154.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9086"
@@ -12246,7 +12246,7 @@
     "StartDisabled": "0",
     "useLocalOffset": "0",
     "classname": "trigger_multiple",
-    "origin": "-12538.499023 1249.000000 -11984.000000",
+    "origin": "-12538.499023 -1951.000000 -11984.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9114",
@@ -12444,7 +12444,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 10,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -12452,7 +12452,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 11,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -17177,7 +17177,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -17185,7 +17185,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -18478,7 +18478,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnBreak",
@@ -18486,7 +18486,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -20567,6 +20567,14 @@
         "target": "[PR#]zmzmzm",
         "input": "Break",
         "param": "",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u50F5\u5C38\u5373\u5C06\u51FA\u73B0",
         "delay": 0,
         "limit": 1
       }
@@ -20677,7 +20685,7 @@
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "health 15000",
+        "param": "health 20000",
         "delay": 0,
         "limit": -1
       },
@@ -20685,7 +20693,7 @@
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "max_health 15000",
+        "param": "max_health 20000",
         "delay": 0,
         "limit": -1
       }
@@ -30846,7 +30854,7 @@
         "target": "!activator",
         "input": "KeyValue",
         "param": "speed 1.2",
-        "delay": 5,
+        "delay": 6,
         "limit": -1
       },
       {
@@ -32152,7 +32160,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -32160,7 +32168,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -39174,7 +39182,7 @@
     "classname": "prop_dynamic",
     "origin": "-4029.000000 1688.000000 4113.000000",
     "angles": "0.000000 270.000000 0.000000",
-    "scales": "12.772655 12.772655 12.772655",
+    "scales": "14.944005 14.944005 14.944005",
     "hammerUniqueId": "12288"
   },
   {
@@ -41457,5 +41465,78 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12454"
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "classname": "trigger_multiple",
+    "origin": "-10237.000000 4224.000000 4177.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12458",
+    "model": "maps/ze_dark_sanctuary/entities/unnamed_12458.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]tgf",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "spawnflags": "48",
+    "radius": "1250",
+    "cspinup": "0",
+    "lfomodvol": "0",
+    "lfomodpitch": "0",
+    "lforate": "0",
+    "lfotype": "0",
+    "spindown": "0",
+    "spinup": "0",
+    "pitchstart": "100",
+    "pitch": "100",
+    "fadeoutsecs": "0",
+    "fadeinsecs": "0",
+    "volstart": "0",
+    "preset": "0",
+    "health": "10",
+    "message": "tgf",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]tgf",
+    "classname": "ambient_generic",
+    "origin": "-10219.843750 4146.485840 4168.252441",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12459"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "1",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]lv2_door9",
+    "effect_name": "particles/news/defend_wall.vpcf",
+    "classname": "info_particle_system",
+    "origin": "9302.000000 -7244.000000 469.000000",
+    "angles": "90.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12462"
   }
 ]

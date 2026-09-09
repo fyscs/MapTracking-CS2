@@ -447,7 +447,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "285",
+    "speed": "275",
     "pushdir": "0.000000 0.000000 0.000000",
     "filtername": "[PR#]CT",
     "spawnflags": "4097",

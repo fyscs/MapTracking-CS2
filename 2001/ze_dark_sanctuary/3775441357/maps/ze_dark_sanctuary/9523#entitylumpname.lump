@@ -421,7 +421,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "20",
-    "damage": "20",
+    "damage": "40",
     "filtername": "[PR#]CT",
     "spawnflags": "4097",
     "StartDisabled": "0",

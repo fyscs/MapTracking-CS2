@@ -622,7 +622,7 @@
         "input": "Enable",
         "param": "",
         "delay": 5,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnBreak",
@@ -638,7 +638,7 @@
         "input": "StopSound",
         "param": "",
         "delay": 1,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnBreak",
@@ -646,7 +646,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 2,
-        "limit": -1
+        "limit": 1
       }
     ]
   },

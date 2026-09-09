@@ -191,7 +191,7 @@
     "parentname": "[PR#]hummer_knife",
     "targetname": "[PR#]hummer_dynamic",
     "classname": "prop_dynamic",
-    "origin": "-33.957275 -2.028320 -16.847168",
+    "origin": "-33.957275 -2.028320 -30.280029",
     "angles": "0.000000 90.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8312",

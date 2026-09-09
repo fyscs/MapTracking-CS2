@@ -100,7 +100,7 @@
     "parentname": "[PR#]tr_weapons",
     "targetname": "[PR#]tr_dynamic",
     "classname": "prop_dynamic",
-    "origin": "-33.957275 -2.030151 -37.280029",
+    "origin": "-33.957275 -2.030151 -44.280029",
     "angles": "0.000000 90.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10092",
