@@ -11902,6 +11902,14 @@
         "param": "",
         "delay": 0.10000000149011612,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]snd_fail1",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -11985,7 +11993,7 @@
   {
     "max": "100",
     "min": "0",
-    "startvalue": "30",
+    "startvalue": "18",
     "StartDisabled": "0",
     "targetname": "[PR#]sm_luffzmsz",
     "classname": "math_counter",
@@ -99037,7 +99045,7 @@
         "target": "[PR#]snd_dl2",
         "input": "StartSound",
         "param": "",
-        "delay": 62.5,
+        "delay": 62.79999923706055,
         "limit": -1
       }
     ]
@@ -108790,6 +108798,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]servercommand1",
+        "input": "Command",
+        "param": "say \u4E00\u540D\u73A9\u5BB6\u62FE\u53D6\u4E86\u52A0\u901F\u661F\u661F",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -108866,6 +108882,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]servercommand1",
+        "input": "Command",
+        "param": "say \u4E00\u540D\u73A9\u5BB6\u62FE\u53D6\u4E86\u52A0\u901F\u661F\u661F",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -108912,6 +108936,14 @@
         "target": "[PR#]snd_star3",
         "input": "StartSound",
         "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]servercommand1",
+        "input": "Command",
+        "param": "say \u4E00\u540D\u73A9\u5BB6\u62FE\u53D6\u4E86\u52A0\u901F\u661F\u661F",
         "delay": 0,
         "limit": 1
       }
@@ -109001,6 +109033,14 @@
         "target": "[PR#]snd_star4",
         "input": "StartSound",
         "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]servercommand1",
+        "input": "Command",
+        "param": "say \u4E00\u540D\u73A9\u5BB6\u62FE\u53D6\u4E86\u52A0\u901F\u661F\u661F",
         "delay": 0,
         "limit": 1
       }
