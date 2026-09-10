@@ -15413,7 +15413,7 @@
   {
     "InitialDelay": "0.000000",
     "UpperRandomBound": "0.300000",
-    "LowerRandomBound": "0.300000",
+    "LowerRandomBound": "0.200000",
     "PauseAfterFiring": "0",
     "UseRandomTime": "1",
     "spawnflags": "0",
@@ -15965,6 +15965,30 @@
         "output": "OnStartTouch",
         "target": "[PR#]st2_escape_field_part",
         "input": "Stop",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "InitialDelay": "0.000000",
+    "RefireTime": "1.500000",
+    "PauseAfterFiring": "0",
+    "UseRandomTime": "0",
+    "spawnflags": "0",
+    "StartDisabled": "1",
+    "targetname": "[PR#]ex_escape_ball_reverse_timer2",
+    "classname": "logic_timer",
+    "origin": "6224.000000 -6144.000000 3520.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2824",
+    "connections": [
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ex_escape_ball_rot",
+        "input": "Reverse",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -28768,7 +28792,7 @@
     "spawnflags": "65",
     "volume": "10",
     "fanfriction": "20",
-    "maxspeed": "180",
+    "maxspeed": "250",
     "disableshadows": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -37025,6 +37049,22 @@
         "input": "Enable",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_reverse_timer2",
+        "input": "Enable",
+        "param": "",
+        "delay": 103.30000305175781,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ex_escape_ball_reverse_timer2",
+        "input": "Disable",
+        "param": "",
+        "delay": 124,
         "limit": -1
       }
     ]
