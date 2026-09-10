@@ -9,7 +9,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "2000",
-    "damage": "1000",
+    "damage": "800",
     "filtername": "[PR#]T",
     "spawnflags": "4097",
     "StartDisabled": "0",

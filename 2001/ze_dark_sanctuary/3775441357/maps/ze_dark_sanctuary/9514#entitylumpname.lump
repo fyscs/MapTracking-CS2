@@ -590,7 +590,7 @@
     "parentname": "[PR#]witch_knife",
     "targetname": "[PR#]witch_button",
     "classname": "func_button",
-    "origin": "104.000000 15.000000 16.000000",
+    "origin": "104.000000 15.000000 14.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12296",
@@ -606,5 +606,33 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "spawnflags": "48",
+    "radius": "1250",
+    "cspinup": "0",
+    "lfomodvol": "0",
+    "lfomodpitch": "0",
+    "lforate": "0",
+    "lfotype": "0",
+    "spindown": "0",
+    "spinup": "0",
+    "pitchstart": "100",
+    "pitch": "100",
+    "fadeoutsecs": "0",
+    "fadeinsecs": "0",
+    "volstart": "0",
+    "preset": "0",
+    "health": "10",
+    "message": "xuechu",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]witch_knife",
+    "targetname": "[PR#]xuechu",
+    "classname": "ambient_generic",
+    "origin": "-9.444336 -63.793945 -41.999023",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12508",
+    "_template_lump_ent_index": "13"
   }
 ]

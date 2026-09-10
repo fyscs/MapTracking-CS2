@@ -60,7 +60,7 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "health 15000",
+        "param": "health 20000",
         "delay": 0,
         "limit": -1
       },
@@ -84,7 +84,7 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "max_health 15000",
+        "param": "max_health 20000",
         "delay": 0,
         "limit": -1
       },
