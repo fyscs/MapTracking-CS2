@@ -212,7 +212,6 @@ class Item0100 {
         const justAttacked = this.owner.WasInputJustPressed(CSInputs.ATTACK);
         const isWalking = this.owner.IsInputPressed(CSInputs.WALK);
 
-        // 仅响应 Shift + 左键
         if (isWalking && justAttacked && !this.target) {
             const target = getAimTarget(this.owner);
             if (target) this.onTargetTrigger(target);
@@ -229,20 +228,8 @@ class Item0100 {
                 this.releaseTarget();
                 if (escapee.IsValid()) Item0100Manager.immunize(escapee, 90.0);
             } else {
-                // 优先挂载在中间点 Model_1，若无效则精准计算背人者的背部坐标
-                let pos;
-                if (this.model1?.IsValid()) {
-                    pos = this.model1.GetAbsOrigin();
-                    pos.z -= 16;
-                } else {
-                    const ownerPos = this.owner.GetAbsOrigin();
-                    const yawRad = this.owner.GetEyeAngles().yaw * Math.PI / 180;
-                    pos = {
-                        x: ownerPos.x - Math.cos(yawRad) * 24,
-                        y: ownerPos.y - Math.sin(yawRad) * 24,
-                        z: ownerPos.z
-                    };
-                }
+                // 直接使用背人者的绝对坐标（完全重合）
+                const pos = this.owner.GetAbsOrigin();
                 this.target.Teleport({ position: pos, velocity: {x:0, y:0, z:0} });
             }
         } else if (this.target) {
