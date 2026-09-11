@@ -100,14 +100,14 @@
         "target": "[PR#]GoldenBottle_Model\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0,
+        "delay": 0.019999999552965164,
         "limit": 1
       },
       {
         "output": "OnPressed",
-        "target": "[PR#]Map_Bottle_Counter",
-        "input": "Add",
-        "param": "5",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "AddBottle5",
         "delay": 0,
         "limit": 1
       },
@@ -132,14 +132,22 @@
         "target": "[PR#]GoldenBottle_Sound\u00260000",
         "input": "StartSound",
         "param": "",
-        "delay": 0,
+        "delay": 0.019999999552965164,
         "limit": 1
       },
       {
         "output": "OnPressed",
-        "target": "!activator",
-        "input": "AddScore",
-        "param": "5",
+        "target": "[PR#]GoldenBottle_Sound\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]GoldenBottle_Sound\u00260000",
+        "input": "ClearParent",
+        "param": "",
         "delay": 0,
         "limit": 1
       }
@@ -178,26 +186,15 @@
     "stopOnNew": "1",
     "toLocalPlayer": "0",
     "startOnSpawn": "0",
-    "sourceEntityName": "[PR#]GoldenBottle_Model\u00260000",
     "soundName": "Giga.Sounds.Bottle.TakeBottle",
     "useLocalOffset": "0",
     "parentname": "[PR#]GoldenBottle_Model\u00260000",
     "targetname": "[PR#]GoldenBottle_Sound\u00260000",
     "classname": "point_soundevent",
-    "origin": "0.000000 0.000000 16.000000",
+    "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3599",
-    "_template_lump_ent_index": "3",
-    "connections": [
-      {
-        "output": "OnSoundFinished",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
+    "_template_lump_ent_index": "3"
   }
 ]

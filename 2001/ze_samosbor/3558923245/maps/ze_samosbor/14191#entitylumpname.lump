@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/smart_floor_2_14186.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Smart_Floor_2\u00260000",
@@ -49,6 +48,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14186",
+    "model": "maps/ze_samosbor/entities/smart_floor_2_14186.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -2650,7 +2650,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/smart_wall_c_14244.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Smart_Wall_C\u00260000",
@@ -2659,6 +2658,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14244",
+    "model": "maps/ze_samosbor/entities/smart_wall_c_14244.vmdl",
     "_template_lump_ent_index": "65"
   },
   {

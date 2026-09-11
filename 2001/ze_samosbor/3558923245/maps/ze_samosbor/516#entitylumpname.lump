@@ -463,6 +463,10 @@
   {
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
+    "light_style_output_event3": "event_3",
+    "light_style_output_event2": "event_2",
+    "light_style_output_event1": "event_1",
+    "light_style_output_event0": "event_0",
     "fade_size_end": "0.025000",
     "fade_size_start": "0.050000",
     "showlight": "0",
@@ -510,7 +514,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.20000000298023224,
         "limit": -1
       },
@@ -518,7 +522,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 1.600000023841858,
         "limit": -1
       }
@@ -527,6 +531,10 @@
   {
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
+    "light_style_output_event3": "event_3",
+    "light_style_output_event2": "event_2",
+    "light_style_output_event1": "event_1",
+    "light_style_output_event0": "event_0",
     "fade_size_end": "0.025000",
     "fade_size_start": "0.050000",
     "showlight": "0",
@@ -574,7 +582,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.20000000298023224,
         "limit": -1
       },
@@ -582,7 +590,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 1.600000023841858,
         "limit": -1
       }
@@ -591,6 +599,10 @@
   {
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
+    "light_style_output_event3": "event_3",
+    "light_style_output_event2": "event_2",
+    "light_style_output_event1": "event_1",
+    "light_style_output_event0": "event_0",
     "fade_size_end": "0.025000",
     "fade_size_start": "0.050000",
     "showlight": "0",
@@ -638,7 +650,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.20000000298023224,
         "limit": -1
       },
@@ -646,7 +658,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 1.600000023841858,
         "limit": -1
       }
@@ -655,6 +667,10 @@
   {
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
+    "light_style_output_event3": "event_3",
+    "light_style_output_event2": "event_2",
+    "light_style_output_event1": "event_1",
+    "light_style_output_event0": "event_0",
     "fade_size_end": "0.025000",
     "fade_size_start": "0.050000",
     "showlight": "0",
@@ -702,7 +718,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.20000000298023224,
         "limit": -1
       },
@@ -710,7 +726,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 1.600000023841858,
         "limit": -1
       }
@@ -1137,7 +1153,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_l\u00260000",
         "input": "SetColor",
-        "param": "ff5d00",
+        "param": "255 93 0",
         "delay": 1.5,
         "limit": -1
       },
@@ -1145,7 +1161,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_l\u00260000",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.5,
         "limit": -1
       }
@@ -1168,7 +1184,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_l1\u00260000",
         "input": "SetColor",
-        "param": "ff5d00",
+        "param": "255 93 0",
         "delay": 1.5,
         "limit": -1
       },
@@ -1176,7 +1192,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_l1\u00260000",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.5,
         "limit": -1
       }
@@ -1199,7 +1215,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_r\u00260000",
         "input": "SetColor",
-        "param": "ff5d00",
+        "param": "255 93 0",
         "delay": 1.5,
         "limit": -1
       },
@@ -1207,7 +1223,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_r\u00260000",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.5,
         "limit": -1
       }
@@ -1230,7 +1246,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_r1\u00260000",
         "input": "SetColor",
-        "param": "ff5d00",
+        "param": "255 93 0",
         "delay": 1.5,
         "limit": -1
       },
@@ -1238,7 +1254,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Door_b1_Light_r1\u00260000",
         "input": "SetColor",
-        "param": "00ff00",
+        "param": "0 255 0",
         "delay": 0.5,
         "limit": -1
       }

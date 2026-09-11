@@ -57,22 +57,6 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "max_health 60000",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPlayerPickup",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "health 60000",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPlayerPickup",
         "target": "!self",
         "input": "FireUser1",
         "param": "",
@@ -190,6 +174,22 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "PickUpZombieItem",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]Item_SuicideBomber_Model\u00260000",
+        "input": "StopGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -206,10 +206,10 @@
     "use_animgraph": "1",
     "disablelowviolence": "0",
     "solid": "0",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
+    "glowteam": "2",
+    "glowcolor": "143 143 143",
     "glowrangemin": "0",
-    "glowrange": "0",
+    "glowrange": "4096",
     "glowstate": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -231,7 +231,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/item_suicidebomber_model_3955.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Item_SuicideBomber_Weapon\u00260000",
@@ -241,6 +240,7 @@
     "angles": "-89.999969 -15.000013 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3955",
+    "model": "maps/ze_samosbor/entities/item_suicidebomber_model_3955.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -256,10 +256,10 @@
     "use_animgraph": "1",
     "disablelowviolence": "0",
     "solid": "0",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
+    "glowteam": "2",
+    "glowcolor": "193 30 30",
     "glowrangemin": "0",
-    "glowrange": "0",
+    "glowrange": "4096",
     "glowstate": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -281,7 +281,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/item_suicidebomber_model_3957.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Item_SuicideBomber_Weapon\u00260000",
@@ -291,6 +290,7 @@
     "angles": "-89.999969 -15.000013 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3957",
+    "model": "maps/ze_samosbor/entities/item_suicidebomber_model_3957.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -506,7 +506,7 @@
         "output": "OnPass",
         "target": "[PR#]Item_SuicideBomber_SoundTimer\u00260000",
         "input": "RefireTime",
-        "param": "0.300000",
+        "param": "0.3",
         "delay": 3,
         "limit": 1
       },
@@ -514,7 +514,7 @@
         "output": "OnPass",
         "target": "[PR#]Item_SuicideBomber_SoundTimer\u00260000",
         "input": "RefireTime",
-        "param": "0.150000",
+        "param": "0.15",
         "delay": 5,
         "limit": 1
       },

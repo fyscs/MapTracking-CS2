@@ -112,7 +112,7 @@
   {
     "PassthroughCaller": "0",
     "FastRetrigger": "0",
-    "TriggerOnce": "1",
+    "TriggerOnce": "0",
     "StartDisabled": "0",
     "targetname": "[PR#]BottleCrate_Relay\u00260000",
     "classname": "logic_relay",
@@ -122,22 +122,6 @@
     "hammerUniqueId": "3589",
     "_template_lump_ent_index": "2",
     "connections": [
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]BottleCrate_Phys\u00260000",
-        "input": "SetDamageFilter",
-        "param": "[PR#]Filter_Team_Zombie",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]BottleCrate_Phys\u00260000",
-        "input": "SetDamageFilter",
-        "param": "[PR#]Filter_Team_Human",
-        "delay": 2,
-        "limit": 1
-      },
       {
         "output": "OnSpawn",
         "target": "[PR#]BottleCrate_AngleCase\u00260000",
@@ -152,6 +136,30 @@
         "input": "Kill",
         "param": "",
         "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "BottleBoxDamageFilter",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.019999999552965164,
         "limit": 1
       }
     ]

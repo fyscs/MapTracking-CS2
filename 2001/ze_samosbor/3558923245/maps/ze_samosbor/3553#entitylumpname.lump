@@ -38,7 +38,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/trap_trap_model_3566.vmdl",
     "clientSideEntity": "0",
     "spawnflags": "0",
     "StartDisabled": "0",
@@ -50,6 +49,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3566",
+    "model": "maps/ze_samosbor/entities/trap_trap_model_3566.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -124,7 +124,6 @@
   },
   {
     "wait": "1.000000",
-    "filtername": "[PR#]Filter_Team_Human",
     "spawnflags": "1",
     "StartDisabled": "0",
     "useLocalOffset": "0",

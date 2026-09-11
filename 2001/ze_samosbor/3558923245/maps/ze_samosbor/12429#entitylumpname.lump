@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/map_chunk_19_12458.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Map_Chunk_19\u00260000",
@@ -49,6 +48,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12458",
+    "model": "maps/ze_samosbor/entities/map_chunk_19_12458.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -1583,6 +1583,36 @@
     ]
   },
   {
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Map_Chunk_19_TD\u00260000",
+    "classname": "info_teleport_destination",
+    "origin": "123.167969 44.835938 184.020508",
+    "angles": "-0.000000 -114.999985 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20163",
+    "_template_lump_ent_index": "36"
+  },
+  {
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Map_Chunk_19_TD\u00260000",
+    "classname": "info_teleport_destination",
+    "origin": "107.385010 -792.848633 0.000000",
+    "angles": "-0.000000 -74.999977 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20164",
+    "_template_lump_ent_index": "37"
+  },
+  {
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Map_Chunk_19_TD\u00260000",
+    "classname": "info_teleport_destination",
+    "origin": "-737.915039 575.569336 -8.000000",
+    "angles": "-0.000000 -119.999985 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20165",
+    "_template_lump_ent_index": "38"
+  },
+  {
     "PostSpawnInheritAngles": "0",
     "PostSpawnDirectionVariance": "0.000000",
     "PostSpawnDirection": "0.000000 0.000000 0.000000",
@@ -1596,7 +1626,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14040",
-    "_template_lump_ent_index": "36"
+    "_template_lump_ent_index": "39"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1612,7 +1642,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14041",
-    "_template_lump_ent_index": "37"
+    "_template_lump_ent_index": "40"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1628,7 +1658,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14042",
-    "_template_lump_ent_index": "38"
+    "_template_lump_ent_index": "41"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1644,7 +1674,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14048",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "39"
+    "_template_lump_ent_index": "42"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1660,7 +1690,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14049",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "40"
+    "_template_lump_ent_index": "43"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1676,7 +1706,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14050",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "41"
+    "_template_lump_ent_index": "44"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1692,7 +1722,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14051",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "42"
+    "_template_lump_ent_index": "45"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1708,7 +1738,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14043",
-    "_template_lump_ent_index": "43"
+    "_template_lump_ent_index": "46"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1724,7 +1754,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14044",
-    "_template_lump_ent_index": "44"
+    "_template_lump_ent_index": "47"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1740,7 +1770,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14045",
-    "_template_lump_ent_index": "45"
+    "_template_lump_ent_index": "48"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1756,7 +1786,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14046",
-    "_template_lump_ent_index": "46"
+    "_template_lump_ent_index": "49"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1772,7 +1802,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14047",
-    "_template_lump_ent_index": "47"
+    "_template_lump_ent_index": "50"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1788,7 +1818,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14052",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "48"
+    "_template_lump_ent_index": "51"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1804,7 +1834,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14053",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "49"
+    "_template_lump_ent_index": "52"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1820,7 +1850,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14055",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "50"
+    "_template_lump_ent_index": "53"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -1836,7 +1866,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14056",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "51"
+    "_template_lump_ent_index": "54"
   },
   {
     "cpoint7_parent": "0",
@@ -1862,7 +1892,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15090",
-    "_template_lump_ent_index": "52"
+    "_template_lump_ent_index": "55"
   },
   {
     "Case04": "4",
@@ -1875,7 +1905,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19448",
-    "_template_lump_ent_index": "53",
+    "_template_lump_ent_index": "56",
     "connections": [
       {
         "output": "OnCase01",
@@ -2034,7 +2064,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19449",
-    "_template_lump_ent_index": "54",
+    "_template_lump_ent_index": "57",
     "connections": [
       {
         "output": "OnCase01",
@@ -2107,7 +2137,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19453",
     "model": "maps/ze_samosbor/entities/map_chunk_19_cell_1_19453.vmdl",
-    "_template_lump_ent_index": "55"
+    "_template_lump_ent_index": "58"
   },
   {
     "physdamagescale": "1.000000",
@@ -2146,7 +2176,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19455",
     "model": "maps/ze_samosbor/entities/map_chunk_19_cell_2_19455.vmdl",
-    "_template_lump_ent_index": "56"
+    "_template_lump_ent_index": "59"
   },
   {
     "physdamagescale": "1.000000",
@@ -2185,7 +2215,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19457",
     "model": "maps/ze_samosbor/entities/map_chunk_19_cell_3_19457.vmdl",
-    "_template_lump_ent_index": "57"
+    "_template_lump_ent_index": "60"
   },
   {
     "physdamagescale": "1.000000",
@@ -2224,6 +2254,6 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19459",
     "model": "maps/ze_samosbor/entities/map_chunk_19_cell_4_19459.vmdl",
-    "_template_lump_ent_index": "58"
+    "_template_lump_ent_index": "61"
   }
 ]

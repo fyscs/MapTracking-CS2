@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/map_chunk_silenthill3_11422.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Map_Chunk_SilentHill3\u00260000",
@@ -49,6 +48,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11422",
+    "model": "maps/ze_samosbor/entities/map_chunk_silenthill3_11422.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -4568,7 +4568,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Map_Music_Param",
         "input": "SetFloatValue",
-        "param": "0.200000",
+        "param": "0.2",
         "delay": 0.5,
         "limit": 1
       }
@@ -4603,7 +4603,7 @@
         "output": "OnSoundFinished",
         "target": "[PR#]Map_Music_Param",
         "input": "SetFloatValue",
-        "param": "1.700000",
+        "param": "1.7",
         "delay": 0,
         "limit": 1
       }

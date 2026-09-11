@@ -359,6 +359,14 @@
       },
       {
         "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
         "target": "[PR#]Preset_Maker_L\u00260000",
         "input": "KeyValue",
         "param": "EntityTemplate Door_Temp",
@@ -372,14 +380,6 @@
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
       }
     ]
   },
@@ -407,6 +407,14 @@
       },
       {
         "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
         "target": "[PR#]Preset_Maker_F\u00260000",
         "input": "KeyValue",
         "param": "EntityTemplate Door_Temp",
@@ -420,14 +428,6 @@
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
       }
     ]
   },
@@ -455,6 +455,14 @@
       },
       {
         "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
         "target": "[PR#]Preset_Maker_R\u00260000",
         "input": "KeyValue",
         "param": "EntityTemplate Door_Temp",
@@ -468,14 +476,6 @@
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
       }
     ]
   },
@@ -927,6 +927,14 @@
         "target": "[PR#]Map_Script",
         "input": "RunScriptInput",
         "param": "SpawnBottleBox",
+        "delay": 0.4300000071525574,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "GetDestinationsAndRemove",
         "delay": 0.4300000071525574,
         "limit": 1
       }

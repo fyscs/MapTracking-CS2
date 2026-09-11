@@ -119,6 +119,8 @@
     "precomputedobbangles": "-0.000000 1.000000 0.000000",
     "precomputedobborigin": "-479.851349 -564.762268 -496.000366",
     "precomputedfieldsvalid": "1",
+    "transmit_always": "0",
+    "bakespeculartocubemaps_scale": "1.000000",
     "forceshadowsenabled": "0",
     "fade_size_end": "0.025000",
     "fade_size_start": "0.050000",
@@ -182,11 +184,11 @@
     "array_index": "0"
   },
   {
-    "lightprobetexture_dlshd": "maps\\ze_samosbor_skybox/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps\\ze_samosbor_skybox/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_samosbor_skybox/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_samosbor_skybox/lightmaps/env_light_probe_volume_atlas.vtex",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "1024.000000 1024.000000 2560.000000",
     "box_mins": "-1024.000000 -1024.000000 -2560.000000",
     "indoor_outdoor_level": "0",
@@ -326,7 +328,6 @@
     "StartDisabled": "0",
     "spawnflags": "0",
     "clientSideEntity": "0",
-    "model": "maps/ze_samosbor_skybox/entities/skybox_spiral_model_872.vmdl",
     "skin": "default",
     "disableshadows": "0",
     "ExplodeDamage": "0.000000",
@@ -366,6 +367,18 @@
     "origin": "-448.000000 -564.250000 -496.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "872"
+    "hammerUniqueId": "872",
+    "model": "maps/ze_samosbor_skybox/entities/skybox_spiral_model_872.vmdl"
+  },
+  {
+    "TeamNum": "-1",
+    "IsEnabled": "1",
+    "EventName": "player_connect",
+    "targetname": "[PR#]Map_Event_Listener",
+    "classname": "logic_eventlistener",
+    "origin": "-432.000000 -560.000000 872.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "875"
   }
 ]

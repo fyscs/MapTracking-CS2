@@ -269,7 +269,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/smart_floor_1b_14177.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Smart_Floor_1b\u00260000",
@@ -278,6 +277,7 @@
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14177",
+    "model": "maps/ze_samosbor/entities/smart_floor_1b_14177.vmdl",
     "_template_lump_ent_index": "10"
   },
   {
@@ -318,7 +318,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/smart_floor_1b_14180.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Smart_Floor_1b\u00260000",
@@ -327,6 +326,7 @@
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14180",
+    "model": "maps/ze_samosbor/entities/smart_floor_1b_14180.vmdl",
     "_template_lump_ent_index": "11"
   }
 ]

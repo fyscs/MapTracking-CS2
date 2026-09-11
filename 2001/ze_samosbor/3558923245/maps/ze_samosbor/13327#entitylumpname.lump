@@ -93,7 +93,7 @@
         "output": "OnHealthChanged",
         "target": "[PR#]Map_BossWorm_HP",
         "input": "Subtract",
-        "param": "0.300000",
+        "param": "0.3",
         "delay": 0,
         "limit": -1
       }

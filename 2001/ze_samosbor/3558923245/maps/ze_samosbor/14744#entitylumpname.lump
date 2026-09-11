@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_model_14796.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]FakeElevator_Movelinear\u00260000",
@@ -50,6 +49,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14796",
+    "model": "maps/ze_samosbor/entities/fakeelevator_model_14796.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -90,7 +90,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_model_14816.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]FakeElevator_Model\u00260000",
@@ -99,6 +98,7 @@
     "angles": "15.000000 -169.999954 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14816",
+    "model": "maps/ze_samosbor/entities/fakeelevator_model_14816.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -139,7 +139,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_model_14842.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]FakeElevator_Model\u00260000",
@@ -148,6 +147,7 @@
     "angles": "-0.000000 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14842",
+    "model": "maps/ze_samosbor/entities/fakeelevator_model_14842.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -288,7 +288,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_props_14793.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]FakeElevator_Model\u00260000",
@@ -298,6 +297,7 @@
     "angles": "-33.750000 0.000000 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14793",
+    "model": "maps/ze_samosbor/entities/fakeelevator_props_14793.vmdl",
     "_template_lump_ent_index": "5"
   },
   {
@@ -338,7 +338,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_props_14811.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]FakeElevator_Model\u00260000",
@@ -348,6 +347,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14811",
+    "model": "maps/ze_samosbor/entities/fakeelevator_props_14811.vmdl",
     "_template_lump_ent_index": "6"
   },
   {
@@ -1419,7 +1419,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_mouth_r_model_16309.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]FakeElevator_Mouth_R_Move\u00260000",
@@ -1429,6 +1428,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16309",
+    "model": "maps/ze_samosbor/entities/fakeelevator_mouth_r_model_16309.vmdl",
     "_template_lump_ent_index": "25"
   },
   {
@@ -1583,7 +1583,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_mouth_l_model_16311.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]FakeElevator_Mouth_L_Move\u00260000",
@@ -1593,6 +1592,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16311",
+    "model": "maps/ze_samosbor/entities/fakeelevator_mouth_l_model_16311.vmdl",
     "_template_lump_ent_index": "28"
   },
   {
@@ -2061,7 +2061,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "1",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/fakeelevator_exitglow_14782.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]FakeElevator_ExitGlow_Rotating\u00260000",
@@ -2071,6 +2070,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14782",
+    "model": "maps/ze_samosbor/entities/fakeelevator_exitglow_14782.vmdl",
     "_template_lump_ent_index": "40",
     "connections": [
       {

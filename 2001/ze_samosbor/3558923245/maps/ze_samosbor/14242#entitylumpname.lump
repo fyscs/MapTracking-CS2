@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/smart_wall_b_14248.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Smart_Wall_b\u00260000",
@@ -49,6 +48,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14248",
+    "model": "maps/ze_samosbor/entities/smart_wall_b_14248.vmdl",
     "_template_lump_ent_index": "0"
   }
 ]

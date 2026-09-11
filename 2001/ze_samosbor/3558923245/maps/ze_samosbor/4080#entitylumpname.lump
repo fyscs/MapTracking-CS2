@@ -57,17 +57,9 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "max_health 60000",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPlayerPickup",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "health 60000",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "PickUpZombieItem",
         "delay": 0,
         "limit": 1
       },
@@ -174,6 +166,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]Item_NailGun_Model\u00260000",
+        "input": "StopGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -190,10 +190,10 @@
     "use_animgraph": "1",
     "disablelowviolence": "0",
     "solid": "0",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
+    "glowteam": "2",
+    "glowcolor": "162 162 162",
     "glowrangemin": "0",
-    "glowrange": "0",
+    "glowrange": "4096",
     "glowstate": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -231,7 +231,7 @@
     "spawnflags": "17409",
     "forcenpcexclude": "0",
     "lip": "0",
-    "wait": "0.100000",
+    "wait": "0.300000",
     "speed": "0",
     "movedir": "0.000000 0.000000 0.000000",
     "lightmapstatic": "0",

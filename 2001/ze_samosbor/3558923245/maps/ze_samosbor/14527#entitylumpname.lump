@@ -127,7 +127,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/item_mine_model_14558.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Item_Mine_Weapon\u00260000",
@@ -137,6 +136,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14558",
+    "model": "maps/ze_samosbor/entities/item_mine_model_14558.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -177,7 +177,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/item_mine_model_14560.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Item_Mine_Weapon\u00260000",
@@ -187,6 +186,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14560",
+    "model": "maps/ze_samosbor/entities/item_mine_model_14560.vmdl",
     "_template_lump_ent_index": "2"
   },
   {

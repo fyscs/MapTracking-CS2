@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/trap_mine_model_3535.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Trap_Mine_Physbox\u00260000",
@@ -50,6 +49,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3535",
+    "model": "maps/ze_samosbor/entities/trap_mine_model_3535.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -88,7 +88,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/trap_mine_model_3545.vmdl",
     "clientSideEntity": "0",
     "spawnflags": "0",
     "StartDisabled": "0",
@@ -100,6 +99,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3545",
+    "model": "maps/ze_samosbor/entities/trap_mine_model_3545.vmdl",
     "_template_lump_ent_index": "1"
   },
   {

@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/trap_gasmine_model_4034.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Trap_GasMine_Physbox\u00260000",
@@ -50,6 +49,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4034",
+    "model": "maps/ze_samosbor/entities/trap_gasmine_model_4034.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -148,7 +148,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/trap_gasmine_model_4036.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Trap_GasMine_Physbox\u00260000",
@@ -158,6 +157,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4036",
+    "model": "maps/ze_samosbor/entities/trap_gasmine_model_4036.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -220,7 +220,6 @@
   },
   {
     "wait": "1.000000",
-    "filtername": "[PR#]Filter_Team_Human",
     "spawnflags": "1",
     "StartDisabled": "0",
     "useLocalOffset": "0",
@@ -336,6 +335,14 @@
         "input": "Kill",
         "param": "",
         "delay": 18,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "SetFilterNameTrap",
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -505,6 +512,14 @@
         "input": "DisableMotion",
         "param": "",
         "delay": 3,
+        "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Trap_GasMine_Trigger\u00260000",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
         "limit": 1
       }
     ]

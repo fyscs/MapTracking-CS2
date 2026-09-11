@@ -38,7 +38,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/map_chunk_twinpeaks_8255.vmdl",
     "clientSideEntity": "0",
     "spawnflags": "0",
     "StartDisabled": "0",
@@ -49,6 +48,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8255",
+    "model": "maps/ze_samosbor/entities/map_chunk_twinpeaks_8255.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -970,7 +970,7 @@
         "output": "OnSoundFinished",
         "target": "[PR#]Map_Music_Param",
         "input": "SetFloatValue",
-        "param": "1.700000",
+        "param": "1.7",
         "delay": 0,
         "limit": 1
       }
@@ -1001,7 +1001,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Map_Music_Param",
         "input": "SetFloatValue",
-        "param": "0.200000",
+        "param": "0.2",
         "delay": 0.5,
         "limit": 1
       }

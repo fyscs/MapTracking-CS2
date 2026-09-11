@@ -46,6 +46,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Item_Canister_Model\u00260000",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -62,10 +70,10 @@
     "use_animgraph": "1",
     "disablelowviolence": "0",
     "solid": "0",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
+    "glowteam": "2",
+    "glowcolor": "255 0 0",
     "glowrangemin": "0",
-    "glowrange": "0",
+    "glowrange": "4096",
     "glowstate": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",

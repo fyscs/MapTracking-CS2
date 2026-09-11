@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/map_chunk_smart_14184.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Map_Chunk_Smart\u00260000",
@@ -49,6 +48,7 @@
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14184",
+    "model": "maps/ze_samosbor/entities/map_chunk_smart_14184.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -3067,7 +3067,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/map_chunk_smart_props_14412.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Map_Chunk_Smart_Props\u00260000",
@@ -3076,6 +3075,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14412",
+    "model": "maps/ze_samosbor/entities/map_chunk_smart_props_14412.vmdl",
     "_template_lump_ent_index": "64"
   },
   {
@@ -3508,7 +3508,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/map_chunk_smart_props_14431.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Map_Chunk_Smart_Props\u00260000",
@@ -3517,6 +3516,7 @@
     "angles": "-0.000000 -89.999886 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14431",
+    "model": "maps/ze_samosbor/entities/map_chunk_smart_props_14431.vmdl",
     "_template_lump_ent_index": "73"
   },
   {

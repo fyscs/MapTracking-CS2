@@ -40,7 +40,6 @@
     "ExplodeDamage": "0.000000",
     "disableshadows": "2",
     "skin": "default",
-    "model": "maps/ze_samosbor/entities/map_chunk_23_16277.vmdl",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "targetname": "[PR#]Map_Chunk_23\u00260000",
@@ -49,6 +48,7 @@
     "angles": "-0.000000 -90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16277",
+    "model": "maps/ze_samosbor/entities/map_chunk_23_16277.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -7969,27 +7969,27 @@
     "light_path_uniqueid": "-815116925",
     "precomputedsubfrusta": "6",
     "precomputedobbextent5": "256.653809 361.904541 256.688477",
-    "precomputedobbangles5": "-45.000000 31.000000 0.000000",
+    "precomputedobbangles5": "-45.000000 30.999994 0.000000",
     "precomputedobborigin5": "13909.276367 11117.390625 -14646.828125",
     "precomputedobbextent4": "256.055664 257.660156 361.450195",
-    "precomputedobbangles4": "0.000000 -14.000000 0.000000",
+    "precomputedobbangles4": "0.000000 -13.999999 0.000000",
     "precomputedobborigin4": "14219.166016 11302.289062 -15008.258789",
     "precomputedobbextent3": "256.054199 257.661133 361.684570",
-    "precomputedobbangles3": "0.000000 -14.000000 0.000000",
+    "precomputedobbangles3": "0.000000 -13.999999 0.000000",
     "precomputedobborigin3": "13599.300781 10932.542969 -15008.246094",
     "precomputedobbextent2": "257.659668 256.055664 361.896484",
-    "precomputedobbangles2": "0.000000 -14.000000 0.000000",
+    "precomputedobbangles2": "0.000000 -13.999999 0.000000",
     "precomputedobborigin2": "13724.353516 11427.355469 -15007.978516",
     "precomputedobbextent1": "257.622070 256.054199 361.751953",
-    "precomputedobbangles1": "0.000000 -14.000000 0.000000",
+    "precomputedobbangles1": "0.000000 -13.999999 0.000000",
     "precomputedobborigin1": "14094.152344 10807.474609 -15007.906250",
     "precomputedobbextent0": "256.601318 361.854736 256.573242",
-    "precomputedobbangles0": "-45.000000 31.000000 0.000000",
+    "precomputedobbangles0": "-45.000000 30.999994 0.000000",
     "precomputedobborigin0": "13909.247070 11117.431641 -15369.290039",
     "precomputedboundsmaxs": "14421.256836 11629.479492 -14495.962891",
     "precomputedboundsmins": "13397.171875 10605.391602 -15520.051758",
     "precomputedobbextent": "511.843750 511.963867 511.991699",
-    "precomputedobbangles": "26.999996 6.000000 2.000000",
+    "precomputedobbangles": "26.999998 6.000000 2.000000",
     "precomputedobborigin": "13909.175781 11117.510742 -15008.031250",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
@@ -8152,7 +8152,7 @@
     "precomputedboundsmaxs": "14624.013672 12738.187500 -14449.633789",
     "precomputedboundsmins": "13023.941406 11138.132812 -16049.707031",
     "precomputedobbextent": "799.709961 799.903320 799.950195",
-    "precomputedobbangles": "26.999996 6.000000 2.000000",
+    "precomputedobbangles": "26.999998 6.000000 2.000000",
     "precomputedobborigin": "13823.906250 11938.277344 -15249.705078",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
@@ -8884,6 +8884,46 @@
     ]
   },
   {
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Map_Chunk_23_TD\u00260000",
+    "classname": "info_teleport_destination",
+    "origin": "-139.955078 -212.551758 576.000000",
+    "angles": "-0.000000 69.999985 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20176",
+    "_template_lump_ent_index": "183"
+  },
+  {
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Map_Chunk_23_TD\u00260000",
+    "classname": "info_teleport_destination",
+    "origin": "-728.000000 421.191406 0.000000",
+    "angles": "-0.000000 -60.000004 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20178",
+    "_template_lump_ent_index": "184"
+  },
+  {
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Map_Chunk_23_TD\u00260000",
+    "classname": "info_teleport_destination",
+    "origin": "464.000977 544.000000 63.274414",
+    "angles": "-0.000000 139.999985 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20180",
+    "_template_lump_ent_index": "185"
+  },
+  {
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Map_Chunk_23_TD\u00260000",
+    "classname": "info_teleport_destination",
+    "origin": "-745.278320 -720.149414 0.000000",
+    "angles": "-0.000000 -20.000011 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20181",
+    "_template_lump_ent_index": "186"
+  },
+  {
     "PostSpawnInheritAngles": "0",
     "PostSpawnDirectionVariance": "0.000000",
     "PostSpawnDirection": "0.000000 0.000000 0.000000",
@@ -8897,7 +8937,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14097",
-    "_template_lump_ent_index": "183"
+    "_template_lump_ent_index": "187"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -8913,7 +8953,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14098",
-    "_template_lump_ent_index": "184"
+    "_template_lump_ent_index": "188"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -8929,7 +8969,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14099",
-    "_template_lump_ent_index": "185"
+    "_template_lump_ent_index": "189"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -8945,7 +8985,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14100",
-    "_template_lump_ent_index": "186"
+    "_template_lump_ent_index": "190"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -8961,7 +9001,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14101",
-    "_template_lump_ent_index": "187"
+    "_template_lump_ent_index": "191"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -8977,7 +9017,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14102",
-    "_template_lump_ent_index": "188"
+    "_template_lump_ent_index": "192"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -8993,7 +9033,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14117",
-    "_template_lump_ent_index": "189"
+    "_template_lump_ent_index": "193"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9009,7 +9049,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14103",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "190"
+    "_template_lump_ent_index": "194"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9025,7 +9065,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14104",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "191"
+    "_template_lump_ent_index": "195"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9041,7 +9081,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14105",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "192"
+    "_template_lump_ent_index": "196"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9057,7 +9097,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14106",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "193"
+    "_template_lump_ent_index": "197"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9073,7 +9113,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14107",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "194"
+    "_template_lump_ent_index": "198"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9089,7 +9129,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14108",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "195"
+    "_template_lump_ent_index": "199"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9105,7 +9145,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14109",
-    "_template_lump_ent_index": "196"
+    "_template_lump_ent_index": "200"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9121,7 +9161,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14110",
-    "_template_lump_ent_index": "197"
+    "_template_lump_ent_index": "201"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9137,7 +9177,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14111",
-    "_template_lump_ent_index": "198"
+    "_template_lump_ent_index": "202"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9153,7 +9193,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14112",
-    "_template_lump_ent_index": "199"
+    "_template_lump_ent_index": "203"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9169,7 +9209,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14114",
-    "_template_lump_ent_index": "200"
+    "_template_lump_ent_index": "204"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9185,7 +9225,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14115",
-    "_template_lump_ent_index": "201"
+    "_template_lump_ent_index": "205"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9201,7 +9241,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14116",
-    "_template_lump_ent_index": "202"
+    "_template_lump_ent_index": "206"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9217,7 +9257,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14118",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "203"
+    "_template_lump_ent_index": "207"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9233,7 +9273,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14119",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "204"
+    "_template_lump_ent_index": "208"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9249,7 +9289,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14120",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "205"
+    "_template_lump_ent_index": "209"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9265,7 +9305,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14122",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "206"
+    "_template_lump_ent_index": "210"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9281,7 +9321,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14123",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "207"
+    "_template_lump_ent_index": "211"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9297,7 +9337,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14124",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "208"
+    "_template_lump_ent_index": "212"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -9313,7 +9353,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14125",
     "PostSpawnDirectionVariance": "0.150000",
-    "_template_lump_ent_index": "209"
+    "_template_lump_ent_index": "213"
   },
   {
     "cpoint7_parent": "0",
@@ -9339,6 +9379,6 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15086",
-    "_template_lump_ent_index": "210"
+    "_template_lump_ent_index": "214"
   }
 ]
