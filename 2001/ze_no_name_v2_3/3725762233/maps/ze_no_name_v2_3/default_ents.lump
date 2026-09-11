@@ -15850,12 +15850,12 @@
         "limit": 1
       },
       {
-        "output": "OnTouching",
+        "output": "OnStartTouch",
         "target": "[PR#]st2_win_nuke",
         "input": "Enable",
         "param": "",
         "delay": 5.5,
-        "limit": 1
+        "limit": -1
       },
       {
         "output": "OnStartTouch",
@@ -15946,12 +15946,12 @@
         "limit": 1
       },
       {
-        "output": "OnTouching",
+        "output": "OnStartTouch",
         "target": "[PR#]st2_win_nuke",
         "input": "Enable",
         "param": "",
         "delay": 1.5,
-        "limit": 1
+        "limit": -1
       },
       {
         "output": "OnStartTouch",
