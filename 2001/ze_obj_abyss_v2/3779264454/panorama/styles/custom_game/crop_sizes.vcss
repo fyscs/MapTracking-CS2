@@ -2,334 +2,251 @@
 /* https://github.com/Kxnrl */
 
 #abyss_000 {
-    width: 739px;
-    height: 137px;
+    height: 48.86%;
 }
 #abyss_001 {
-    width: 926px;
-    height: 134px;
+    height: 47.75%;
 }
 #abyss_002 {
-    width: 942px;
-    height: 128px;
+    height: 45.55%;
 }
 #abyss_003 {
-    width: 940px;
-    height: 138px;
+    height: 49.25%;
 }
 #abyss_004 {
-    width: 351px;
-    height: 138px;
+    height: 49.18%;
 }
 #abyss_005 {
-    width: 268px;
-    height: 128px;
+    height: 45.51%;
 }
 #abyss_006 {
-    width: 912px;
-    height: 137px;
+    height: 48.88%;
 }
 #abyss_007 {
-    width: 474px;
-    height: 137px;
+    height: 48.86%;
 }
 #abyss_008 {
-    width: 922px;
-    height: 128px;
+    height: 45.54%;
 }
 #abyss_009 {
-    width: 710px;
-    height: 138px;
+    height: 49.24%;
 }
 #abyss_010 {
-    width: 692px;
-    height: 138px;
+    height: 49.21%;
 }
 #abyss_011 {
-    width: 910px;
-    height: 147px;
+    height: 52.22%;
 }
 #sees_000 {
-    width: 552px;
-    height: 131px;
+    height: 46.65%;
 }
 #sees_001 {
-    width: 573px;
-    height: 137px;
+    height: 48.89%;
 }
 #sees_002 {
-    width: 927px;
-    height: 137px;
+    height: 48.85%;
 }
 #sees_003 {
-    width: 455px;
-    height: 137px;
+    height: 48.83%;
 }
 #sees_004 {
-    width: 574px;
-    height: 137px;
+    height: 48.89%;
 }
 #sees_005 {
-    width: 683px;
-    height: 136px;
+    height: 48.50%;
 }
 #sees_006 {
-    width: 824px;
-    height: 139px;
+    height: 49.59%;
 }
 #sees_007 {
-    width: 925px;
-    height: 130px;
+    height: 46.27%;
 }
 #sees_008 {
-    width: 634px;
-    height: 138px;
+    height: 49.23%;
 }
 #sees_009 {
-    width: 501px;
-    height: 128px;
+    height: 45.52%;
 }
 #sees_010 {
-    width: 915px;
-    height: 131px;
+    height: 46.66%;
 }
 #sees_011 {
-    width: 536px;
-    height: 138px;
+    height: 49.20%;
 }
 #sees_012 {
-    width: 475px;
-    height: 137px;
+    height: 48.86%;
 }
 #sees_013 {
-    width: 520px;
-    height: 139px;
+    height: 49.64%;
 }
 #sees_014 {
-    width: 623px;
-    height: 136px;
+    height: 48.52%;
 }
 #sees_015 {
-    width: 821px;
-    height: 137px;
+    height: 48.85%;
 }
 #sees_016 {
-    width: 588px;
-    height: 139px;
+    height: 49.58%;
 }
 #sees_017 {
-    width: 531px;
-    height: 136px;
+    height: 48.48%;
 }
 #sees_018 {
-    width: 927px;
-    height: 129px;
+    height: 45.89%;
 }
 #sees_019 {
-    width: 931px;
-    height: 125px;
+    height: 44.40%;
 }
 #sees_020 {
-    width: 629px;
-    height: 137px;
+    height: 48.88%;
 }
 #sees_021 {
-    width: 922px;
-    height: 117px;
+    height: 41.83%;
 }
 #sees_022 {
-    width: 638px;
-    height: 137px;
+    height: 48.84%;
 }
 #sees_023 {
-    width: 611px;
-    height: 138px;
+    height: 49.21%;
 }
 #sees_024 {
-    width: 1038px;
-    height: 125px;
+    height: 44.78%;
 }
 #sees_025 {
-    width: 583px;
-    height: 138px;
+    height: 49.22%;
 }
 #sees_026 {
-    width: 542px;
-    height: 128px;
+    height: 45.56%;
 }
 #sees_027 {
-    width: 928px;
-    height: 135px;
+    height: 48.11%;
 }
 #sees_028 {
-    width: 124px;
-    height: 128px;
+    height: 45.66%;
 }
 #sees_029 {
-    width: 928px;
-    height: 125px;
+    height: 44.41%;
 }
 #sees_030 {
-    width: 926px;
-    height: 135px;
+    height: 48.12%;
 }
 #enli_000 {
-    width: 278px;
-    height: 137px;
+    height: 48.94%;
 }
 #enli_001 {
-    width: 921px;
-    height: 124px;
+    height: 44.06%;
 }
 #enli_002 {
-    width: 1115px;
-    height: 145px;
+    height: 51.61%;
 }
 #enli_003 {
-    width: 675px;
-    height: 137px;
+    height: 48.89%;
 }
 #enli_004 {
-    width: 1029px;
-    height: 148px;
+    height: 52.65%;
 }
 #enli_005 {
-    width: 494px;
-    height: 140px;
+    height: 49.99%;
 }
 #enli_006 {
-    width: 1217px;
-    height: 145px;
+    height: 51.83%;
 }
 #enli_007 {
-    width: 739px;
-    height: 131px;
+    height: 46.64%;
 }
 #enli_008 {
-    width: 1016px;
-    height: 150px;
+    height: 53.51%;
 }
 #enli_009 {
-    width: 704px;
-    height: 137px;
+    height: 48.89%;
 }
 #enli_010 {
-    width: 662px;
-    height: 128px;
+    height: 45.53%;
 }
 #enli_011 {
-    width: 581px;
-    height: 129px;
+    height: 45.90%;
 }
 #enli_012 {
-    width: 713px;
-    height: 131px;
+    height: 46.64%;
 }
 #enli_013 {
-    width: 869px;
-    height: 137px;
+    height: 48.86%;
 }
 #enli_014 {
-    width: 858px;
-    height: 137px;
+    height: 48.89%;
 }
 #enli_015 {
-    width: 474px;
-    height: 137px;
+    height: 48.86%;
 }
 #enli_016 {
-    width: 1138px;
-    height: 143px;
+    height: 51.11%;
 }
 #enli_017 {
-    width: 1253px;
-    height: 146px;
+    height: 52.23%;
 }
 #enli_018 {
-    width: 1030px;
-    height: 131px;
+    height: 46.46%;
 }
 #enli_019 {
-    width: 494px;
-    height: 139px;
+    height: 49.62%;
 }
 #enli_020 {
-    width: 613px;
-    height: 137px;
+    height: 48.84%;
 }
 #enli_021 {
-    width: 756px;
-    height: 131px;
+    height: 46.66%;
 }
 #enli_022 {
-    width: 647px;
-    height: 139px;
+    height: 49.64%;
 }
 #enli_023 {
-    width: 694px;
-    height: 129px;
+    height: 45.88%;
 }
 #enli_024 {
-    width: 1040px;
-    height: 142px;
+    height: 50.62%;
 }
 #enli_025 {
-    width: 1042px;
-    height: 133px;
+    height: 47.31%;
 }
 #enli_026 {
-    width: 719px;
-    height: 137px;
+    height: 48.84%;
 }
 #enli_027 {
-    width: 540px;
-    height: 130px;
+    height: 46.32%;
 }
 #enli_028 {
-    width: 795px;
-    height: 140px;
+    height: 49.96%;
 }
 #enli_029 {
-    width: 483px;
-    height: 138px;
+    height: 49.20%;
 }
 #enli_030 {
-    width: 333px;
-    height: 137px;
+    height: 48.92%;
 }
 #enli_031 {
-    width: 480px;
-    height: 131px;
+    height: 46.61%;
 }
 #enli_032 {
-    width: 559px;
-    height: 131px;
+    height: 46.62%;
 }
 #enli_033 {
-    width: 673px;
-    height: 139px;
+    height: 49.64%;
 }
 #enli_034 {
-    width: 818px;
-    height: 141px;
+    height: 50.34%;
 }
 #enli_035 {
-    width: 1039px;
-    height: 140px;
+    height: 49.80%;
 }
 #enli_036 {
-    width: 488px;
-    height: 132px;
+    height: 47.06%;
 }
 #enli_037 {
-    width: 1034px;
-    height: 140px;
+    height: 49.73%;
 }
 #enli_038 {
-    width: 923px;
-    height: 128px;
+    height: 45.53%;
 }
 #enli_039 {
-    width: 488px;
-    height: 131px;
+    height: 46.69%;
 }

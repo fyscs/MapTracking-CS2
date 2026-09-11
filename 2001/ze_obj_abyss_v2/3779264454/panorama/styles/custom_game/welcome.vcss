@@ -10,7 +10,8 @@
     width: 76%;
     horizontal-align: center;
     vertical-align: bottom;
-    margin-bottom: 32px;
+    height: 26%;
+    margin-bottom: 2%;
     flow-children: down;
     padding: 10px 22px 12px 22px;
     background-color: #07131ce8;
@@ -26,7 +27,7 @@
 }
 .AbyssImageStack {
     width: 100%;
-    height: 260px;
+    height: 100%;
     horizontal-align: center;
     margin-top: 0px;
     visibility: collapse;
