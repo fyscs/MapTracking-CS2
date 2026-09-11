@@ -34591,6 +34591,22 @@
         "param": "",
         "delay": 1.5,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ss_par3",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ss_par3",
+        "input": "Stop",
+        "param": "",
+        "delay": 3,
+        "limit": -1
       }
     ]
   },
@@ -41874,7 +41890,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]typ_arrowincrease",
-        "input": "SetIntMessage",
+        "input": "SetMessage",
         "param": "\u003CArrowMade:Grav\u003E",
         "delay": 0,
         "limit": -1
@@ -41928,7 +41944,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]typ_arrowincrease",
-        "input": "SetIntMessage",
+        "input": "SetMessage",
         "param": "\u003CArrowMade:Bomb\u003E",
         "delay": 0,
         "limit": -1
@@ -41982,7 +41998,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]typ_arrowincrease",
-        "input": "SetIntMessage",
+        "input": "SetMessage",
         "param": "\u003CArrowMade:Slow\u003E",
         "delay": 0,
         "limit": -1
@@ -42036,7 +42052,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]typ_arrowincrease",
-        "input": "SetIntMessage",
+        "input": "SetMessage",
         "param": "\u003CArrowMade:Teleport\u003E",
         "delay": 0,
         "limit": -1
@@ -42073,5 +42089,57 @@
     "angles": "0.000000 90.000000 89.999954",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12507"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/sspar1.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ss_knife",
+    "targetname": "[PR#]ss_par3",
+    "classname": "info_particle_system",
+    "origin": "-5123.229980 -3617.000000 3905.004150",
+    "angles": "3.338000 128.626663 -75.278152",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12509"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/zzzz1111.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]ss_knife",
+    "targetname": "[PR#]ss_par2",
+    "classname": "info_particle_system",
+    "origin": "-5082.000000 -3674.000000 4425.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12515"
   }
 ]
