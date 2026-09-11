@@ -1562,7 +1562,7 @@
   {
     "max": "332",
     "min": "0",
-    "startvalue": "8",
+    "startvalue": "6",
     "StartDisabled": "0",
     "targetname": "[PR#]Seymour_Natus_HP_attack",
     "classname": "math_counter",
@@ -1609,7 +1609,7 @@
   {
     "max": "332",
     "min": "0",
-    "startvalue": "8",
+    "startvalue": "6",
     "StartDisabled": "0",
     "targetname": "[PR#]Seymour_Natus_HP_int",
     "classname": "math_counter",

@@ -715,7 +715,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]KOH_HP_int",
         "input": "Add",
-        "param": "3.5",
+        "param": "3",
         "delay": 0,
         "limit": -1
       },
@@ -739,7 +739,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]KOH_HP_attack",
         "input": "Add",
-        "param": "3.5",
+        "param": "3",
         "delay": 0,
         "limit": -1
       }
@@ -823,7 +823,7 @@
   {
     "max": "10000",
     "min": "0",
-    "startvalue": "4",
+    "startvalue": "3",
     "StartDisabled": "0",
     "targetname": "[PR#]KOH_HP_attack",
     "classname": "math_counter",
@@ -870,7 +870,7 @@
   {
     "max": "10000",
     "min": "0",
-    "startvalue": "4",
+    "startvalue": "3",
     "StartDisabled": "0",
     "targetname": "[PR#]KOH_HP_int",
     "classname": "math_counter",

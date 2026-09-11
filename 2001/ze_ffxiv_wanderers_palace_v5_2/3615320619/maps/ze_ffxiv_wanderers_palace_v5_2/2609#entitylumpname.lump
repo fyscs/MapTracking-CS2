@@ -728,7 +728,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Behemoth_HP_attack",
         "input": "Add",
-        "param": "6",
+        "param": "2.7",
         "delay": 0,
         "limit": -1
       },
@@ -736,7 +736,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Behemoth_HP_int",
         "input": "Add",
-        "param": "6",
+        "param": "2.7",
         "delay": 0,
         "limit": -1
       }
@@ -1393,9 +1393,9 @@
     "_template_lump_ent_index": "25"
   },
   {
-    "max": "82",
+    "max": "220",
     "min": "0",
-    "startvalue": "4",
+    "startvalue": "2",
     "StartDisabled": "0",
     "targetname": "[PR#]Behemoth_HP_int",
     "classname": "math_counter",
@@ -1416,9 +1416,9 @@
     ]
   },
   {
-    "max": "82",
+    "max": "220",
     "min": "0",
-    "startvalue": "4",
+    "startvalue": "2",
     "StartDisabled": "0",
     "targetname": "[PR#]Behemoth_HP_attack",
     "classname": "math_counter",
