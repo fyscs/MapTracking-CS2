@@ -85,7 +85,7 @@
     "disableshadows": "0",
     "targetname": "[PR#]Custom_Item0100_Model_2\u00260000",
     "classname": "func_physbox",
-    "origin": "-5.577393 -29.044922 -7.108398",
+    "origin": "-5.577393 -22.357422 -7.108398",
     "angles": "-0.259135 89.991142 1.946054",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "40138",

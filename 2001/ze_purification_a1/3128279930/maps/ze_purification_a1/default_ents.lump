@@ -14282,6 +14282,22 @@
         "param": "",
         "delay": 20,
         "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]command",
+        "input": "Command",
+        "param": "say ** \u6241\u62C5\u6A21\u578B\u811A\u672C\u5B9E\u4F53\u652F\u6301\u4F5C\u8005:PokieeAkuno **",
+        "delay": 8,
+        "limit": 1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]command",
+        "input": "Command",
+        "param": "say ** \u6241\u62C5\u6A21\u578B\u811A\u672C\u5B9E\u4F53\u652F\u6301\u4F5C\u8005:PokieeAkuno **",
+        "delay": 9,
+        "limit": 1
       }
     ]
   },
