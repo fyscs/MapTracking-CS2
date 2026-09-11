@@ -59,40 +59,8 @@
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "KeyValues",
-        "param": "speed 0.01",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.01",
-        "delay": 2.5,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.01",
-        "delay": 3,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.01",
-        "delay": 3.5,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValues",
         "param": "speed 1.16",
-        "delay": 4,
+        "delay": 2,
         "limit": -1
       },
       {

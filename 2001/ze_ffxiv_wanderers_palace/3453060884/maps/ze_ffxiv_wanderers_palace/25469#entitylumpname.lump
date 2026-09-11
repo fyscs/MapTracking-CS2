@@ -30,7 +30,7 @@
         "target": "!activator",
         "input": "KeyValues",
         "param": "speed 1",
-        "delay": 3,
+        "delay": 4,
         "limit": -1
       },
       {
@@ -38,7 +38,7 @@
         "target": "[PR#]Holmgang_*",
         "input": "Kill",
         "param": "",
-        "delay": 3,
+        "delay": 4,
         "limit": 1
       },
       {
@@ -46,7 +46,7 @@
         "target": "[PR#]S_Holmgang_*",
         "input": "Kill",
         "param": "",
-        "delay": 3,
+        "delay": 4,
         "limit": 1
       }
     ]

@@ -960,26 +960,10 @@
     "connections": [
       {
         "output": "OnHitMin",
-        "target": "[PR#]S5_Final_Afk",
-        "input": "Enable",
-        "param": "",
-        "delay": 2.0999999046325684,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMin",
         "target": "[PR#]Map_Item_Spawn_Des_ZM",
         "input": "TeleportEntity",
         "param": "[PR#]Map_Spawn_Des",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMin",
-        "target": "[PR#]S5_Final_Afk",
-        "input": "Kill",
-        "param": "",
-        "delay": 3,
+        "delay": 0,
         "limit": -1
       },
       {
@@ -1019,6 +1003,14 @@
         "target": "[PR#]Map_Explosion_1_Maker",
         "input": "ForceSpawnAtEntityOrigin",
         "param": "[PR#]End_S5_Bahamut",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Map_Afk_9",
+        "input": "Disable",
+        "param": "",
         "delay": 0,
         "limit": -1
       }

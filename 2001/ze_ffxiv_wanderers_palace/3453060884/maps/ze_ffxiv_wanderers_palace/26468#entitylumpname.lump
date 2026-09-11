@@ -267,6 +267,24 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "26473",
     "model": "maps/ze_ffxiv_wanderers_palace/entities/salted_trigger_2_26473.vmdl",
-    "_template_lump_ent_index": "9"
+    "_template_lump_ent_index": "9",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "speed 2",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "speed 1.16",
+        "delay": 10,
+        "limit": -1
+      }
+    ]
   }
 ]

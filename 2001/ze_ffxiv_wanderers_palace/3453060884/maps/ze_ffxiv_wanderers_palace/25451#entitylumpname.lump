@@ -266,71 +266,7 @@
         "target": "!activator",
         "input": "SetDamageFilter",
         "param": "",
-        "delay": 3,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.5",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 1.16",
-        "delay": 3,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.5",
-        "delay": 0.5,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.5",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.5",
-        "delay": 1.5,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.5",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.5",
-        "delay": 2.5,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 0.5",
-        "delay": 3,
+        "delay": 4,
         "limit": -1
       }
     ]

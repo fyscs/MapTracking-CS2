@@ -71,7 +71,7 @@
         "output": "OnHurtPlayer",
         "target": "[PR#]End_S5_Bahamut_Hp",
         "input": "Subtract",
-        "param": "46",
+        "param": "42",
         "delay": 0,
         "limit": -1
       },

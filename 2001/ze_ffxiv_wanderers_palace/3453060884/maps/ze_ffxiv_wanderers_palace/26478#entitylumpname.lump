@@ -210,7 +210,7 @@
         "target": "[PR#]Item_Shift_Light",
         "input": "Start",
         "param": "",
-        "delay": 70,
+        "delay": 60,
         "limit": -1
       },
       {
@@ -218,7 +218,7 @@
         "target": "[PR#]Item_Shift_Button",
         "input": "Unlock",
         "param": "",
-        "delay": 70,
+        "delay": 60,
         "limit": -1
       },
       {
@@ -264,7 +264,7 @@
     ]
   },
   {
-    "message": "\u003CDimensional Shift\u003E DUR:3s CD:80s",
+    "message": "\u003CDimensional Shift\u003E DUR:3s CD:60s",
     "targetname": "[PR#]Item_Shift_Hint",
     "classname": "env_hudhint",
     "origin": "-16.000000 0.000000 -40.000000",

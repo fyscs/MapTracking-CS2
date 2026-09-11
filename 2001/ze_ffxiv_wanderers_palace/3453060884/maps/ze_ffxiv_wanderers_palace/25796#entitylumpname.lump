@@ -373,7 +373,7 @@
         "target": "[PR#]Map_Door_2_L_Reverse",
         "input": "Open",
         "param": "",
-        "delay": 7,
+        "delay": 15,
         "limit": -1
       },
       {
@@ -381,14 +381,14 @@
         "target": "[PR#]Map_Door_2_R_Reverse",
         "input": "Open",
         "param": "",
-        "delay": 7,
+        "delay": 15,
         "limit": -1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u003E\u003EDoor will open in 7 seconds\u003C\u003C",
+        "param": "say \u003E\u003EDoor will open in 15 seconds\u003C\u003C",
         "delay": 0,
         "limit": -1
       },
@@ -420,7 +420,7 @@
         "target": "[PR#]Map_Door_1_L_Reverse",
         "input": "Open",
         "param": "",
-        "delay": 15,
+        "delay": 10,
         "limit": -1
       },
       {
@@ -428,14 +428,14 @@
         "target": "[PR#]Map_Door_1_R_Reverse",
         "input": "Open",
         "param": "",
-        "delay": 15,
+        "delay": 10,
         "limit": -1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u003E\u003EDoor will open in 15 seconds\u003C\u003C",
+        "param": "say \u003E\u003EDoor will open in 10 seconds\u003C\u003C",
         "delay": 0,
         "limit": -1
       },
@@ -453,6 +453,14 @@
         "input": "FireUser1",
         "param": "",
         "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Map_Afk_9",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 45,
         "limit": 1
       }
     ]
@@ -475,16 +483,24 @@
         "target": "[PR#]End_S5_Wall",
         "input": "Kill",
         "param": "",
-        "delay": 10,
+        "delay": 15,
         "limit": -1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u003E\u003ETonberry will leave in 10 seconds\u003C\u003C",
+        "param": "say \u003E\u003ETonberry will leave in 15 seconds\u003C\u003C",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]S5_Final_Afk",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 33,
+        "limit": 1
       }
     ]
   },
@@ -535,59 +551,11 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]cmd",
-        "input": "Command",
-        "param": "say \u003E\u003EZM item has been disabled\u003C\u003C",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Item_Holmgang_Branch",
-        "input": "SetValue",
-        "param": "0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]Item_Lalafel_Model",
         "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Item_Wreath_Branch",
-        "input": "SetValue",
-        "param": "0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Item_Shift_Branch",
-        "input": "SetValue",
-        "param": "0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Item_Salted_Branch",
-        "input": "SetValue",
-        "param": "0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Item_Shadow_Branch",
-        "input": "SetValue",
-        "param": "0",
-        "delay": 0,
-        "limit": -1
       },
       {
         "output": "OnTrigger",
