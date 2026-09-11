@@ -118,7 +118,7 @@
         "target": "[PR#]tnt_push\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 4.039999961853027,
+        "delay": 4.050000190734863,
         "limit": 1
       },
       {
@@ -237,7 +237,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "120",
+    "speed": "80",
     "pushdir": "-90.000000 0.000000 0.000000",
     "spawnflags": "4097",
     "StartDisabled": "1",
@@ -332,7 +332,7 @@
   },
   {
     "wait": "1.000000",
-    "filtername": "[PR#]filter_prop",
+    "filtername": "[PR#]filter_fix",
     "spawnflags": "5129",
     "StartDisabled": "1",
     "useLocalOffset": "0",
