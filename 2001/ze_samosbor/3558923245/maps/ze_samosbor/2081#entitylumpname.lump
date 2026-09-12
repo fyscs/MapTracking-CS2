@@ -298,7 +298,7 @@
     "_template_lump_ent_index": "6",
     "connections": [
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Elevator_Door_l2\u00260000",
         "input": "Open",
         "param": "",
@@ -306,7 +306,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Elevator_Door_l1\u00260000",
         "input": "Open",
         "param": "",
@@ -314,7 +314,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Elevator_Door_r1\u00260000",
         "input": "Open",
         "param": "",
@@ -322,7 +322,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Elevator_Door_r2\u00260000",
         "input": "Open",
         "param": "",
@@ -330,7 +330,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]R_Loc_EX_ExitGlow\u00260000",
         "input": "FireUser1",
         "param": "",
@@ -338,7 +338,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "!self",
         "input": "Lock",
         "param": "",
@@ -346,7 +346,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]R_Loc_EX_ExitGlow_Rotating\u00260000",
         "input": "Start",
         "param": "",
@@ -354,7 +354,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Map_FogController",
         "input": "SetFarZ",
         "param": "8096",
@@ -362,7 +362,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Elevator_Out_Button_Relay\u00260000",
         "input": "Trigger",
         "param": "",
@@ -370,7 +370,7 @@
         "limit": 1
       },
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Map_Chunk_08_Walls*",
         "input": "FireUser1",
         "param": "",
@@ -378,7 +378,103 @@
         "limit": 1
       },
       {
+        "output": "OnUser1",
+        "target": "[PR#]Map_FogController_RareChunk",
+        "input": "SetFarZ",
+        "param": "8096",
+        "delay": 1,
+        "limit": 1
+      },
+      {
         "output": "OnPressed",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "PressElevatorOutsideButton",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u003E\u003E Elevator has been found \u003C\u003C",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Elevator_Door_l2\u00260000",
+        "input": "Open",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Elevator_Door_l1\u00260000",
+        "input": "Open",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Elevator_Door_r1\u00260000",
+        "input": "Open",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Elevator_Door_r2\u00260000",
+        "input": "Open",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]R_Loc_EX_ExitGlow\u00260000",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "Lock",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]R_Loc_EX_ExitGlow_Rotating\u00260000",
+        "input": "Start",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Map_FogController",
+        "input": "SetFarZ",
+        "param": "8096",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Map_Chunk_08_Walls*",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
         "target": "[PR#]Map_FogController_RareChunk",
         "input": "SetFarZ",
         "param": "8096",
@@ -407,8 +503,24 @@
     "_template_lump_ent_index": "7",
     "connections": [
       {
-        "output": "OnPressed",
+        "output": "OnUser1",
         "target": "[PR#]Elevator_Button_Filter\u00260000",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "PressElevatorInsideButton",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Elevator_Button_Filter2\u00260000",
         "input": "TestActivator",
         "param": "",
         "delay": 0,
@@ -822,6 +934,14 @@
         "target": "[PR#]Elevator_Button_Filter\u00260000",
         "input": "AddOutput",
         "param": "OnFail\u003EMap_Script\u003ERunScriptInput\u003ECountPlayersInElevator\u003E0\u003E-1",
+        "delay": 2.5199999809265137,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Elevator_Button_Filter2\u00260000",
+        "input": "AddOutput",
+        "param": "OnPass\u003EMap_Script\u003ERunScriptInput\u003ECountPlayersInElevator\u003E0\u003E-1",
         "delay": 2.5199999809265137,
         "limit": 1
       }
@@ -2932,6 +3052,28 @@
         "param": "",
         "delay": 0.05000000074505806,
         "limit": 1
+      }
+    ]
+  },
+  {
+    "filterteam": "3",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]Elevator_Button_Filter2\u00260000",
+    "classname": "filter_activator_team",
+    "origin": "168.000000 -152.000000 24.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20260",
+    "_template_lump_ent_index": "59",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Elevator_Branch\u00260000",
+        "input": "Test",
+        "param": "",
+        "delay": 0.05000000074505806,
+        "limit": -1
       }
     ]
   }

@@ -961,8 +961,8 @@ const SURVIVAL_DEST_SAFE_RADIUS = 800;
 
 let survivalDestLoopActive = false;
 
-let SURVIVAL_ZOMBIE_HP = 2500;
-let SURVIVAL_ZM_ITEM_HP = 3500;
+let SURVIVAL_ZOMBIE_HP = 700;
+let SURVIVAL_ZM_ITEM_HP = 900;
 const DEFAULT_ZM_ITEM_HP = 60000;
 
 const SURVIVAL_ZM_ITEM_MAX = 4;
@@ -1174,7 +1174,7 @@ const SLOT_RIGHT_TICKS = 27;  // ≈4.59s
 const SLOT_POST_SPIN_WAIT = 3.0;
 const SLOT_MACHINE_COST = 3;
 
-const SLOT_NO_WIN_CHANCE = 0.40;
+const SLOT_NO_WIN_CHANCE = 0.30;
 
 const VOTE_DURATION = 45;
 const WRAPPER_IDS = ["wrapper_left", "wrapper_center", "wrapper_right"];
@@ -1949,34 +1949,19 @@ Instance.SetThink(function () {
         return;
     }
 
-    if(HUD_ENT)
-    {
-        for(const [slot, inst] of PlayerInstancesMap)
-        {
-            const player = inst.player;
-            if(!player || !player.IsValid() || !player.IsAlive()) continue;
-
-            UpdateUseProgress(slot, inst, player, now);
-            if(isSurvivalMode)
-            {
-                if(player.IsInputPressed(CSInputs.WALK) && player.WasInputJustPressed(CSInputs.ATTACK2))
-                {
-                    ToggleRadar(slot, inst, player);
-                }
-            }
-        }
-
-        if(now - lastRadarUpdate >= RADAR_UPDATE_INTERVAL && IsAnyRadarOpen())
-        {
-            lastRadarUpdate = now;
-            UpdateRadarDots();
-        }
-    }
-
     for(const [slot, inst] of PlayerInstancesMap)
     {
         const player = inst.player;
         if(!player || !player.IsValid() || !player.IsAlive()) continue;
+
+        UpdateUseProgress(slot, inst, player, now);
+
+        if(isSurvivalMode
+           && player.IsInputPressed(CSInputs.WALK)
+           && player.WasInputJustPressed(CSInputs.ATTACK2))
+        {
+            ToggleRadar(slot, inst, player);
+        }
 
         if(inst.HudScoreOverlayOpen && player.WasInputJustReleased(CSInputs.SHOW_SCORES))
         {
@@ -1984,18 +1969,6 @@ Instance.SetThink(function () {
             HUD_ENT.SetHasClassForPlayer(slot, "score_overlay", "Visible", false);
             HUD_ENT.SetInputCaptureEnabled(slot, inst.HudMainMenuOpen);
         }
-
-        // if(!isSurvivalMode
-        //    && !votingActive
-        //    && !revealingWinner
-        //    && player.IsInputPressed(CSInputs.WALK)
-        //    && player.WasInputJustPressed(CSInputs.DUCK))
-        // {
-        //     inst.ThirdPersonOn = !inst.ThirdPersonOn;
-
-        //     if(inst.ThirdPersonOn) EnableThirdPerson(player);
-        //     else DisableThirdPerson(player);
-        // }
 
         if(player.WasInputJustPressed(CSInputs.SHOW_SCORES)
            && !player.IsInputPressed(CSInputs.WALK)
@@ -2005,8 +1978,9 @@ Instance.SetThink(function () {
         {
             ToggleScoreOverlay(slot, inst);
         }
+
         if(player.WasInputJustPressed(CSInputs.DUCK)
-            && !player.IsInputPressed(CSInputs.WALK)
+           && !player.IsInputPressed(CSInputs.WALK)
            && !votingActive
            && !revealingWinner)
         {
@@ -2026,8 +2000,16 @@ Instance.SetThink(function () {
         UpdateCameraLerp(player, inst, 0.01);
     }
 
-    for (let i = DelayedCalls.length - 1; i >= 0; i--) {
-        if (DelayedCalls[i].time <= now) {
+    if(now - lastRadarUpdate >= RADAR_UPDATE_INTERVAL && IsAnyRadarOpen())
+    {
+        lastRadarUpdate = now;
+        UpdateRadarDots();
+    }
+
+    for(let i = DelayedCalls.length - 1; i >= 0; i--)
+    {
+        if(DelayedCalls[i].time <= now)
+        {
             DelayedCalls[i].callback();
             DelayedCalls.splice(i, 1);
         }
@@ -2201,13 +2183,23 @@ Instance.OnScriptInput("SetLastims", ({caller, activator}) => {
 // \__/   \_/ \___|_| |_|\__|___/
 
 Instance.OnPlayerDisconnect((event) => {
-    let player_slot = event.playerSlot
+    const player_slot = event.playerSlot
+
+    if(HUD_ENT)
+    {
+        for(const panel of HUD_ALL_PANELS)
+        {
+            HUD_ENT.SetHasClassForPlayer(player_slot, panel, "Visible");
+        }
+        HUD_ENT.SetInputCaptureEnabled(player_slot, false);
+    }
+
     const inst = PlayerInstancesMap.get(player_slot);
     PlayerInstancesMap.delete(event.playerSlot);
     SteamIdBySlot.delete(event.playerSlot);
     if(isVoteForChangingMode)
     {
-        if(inst.voted_for_changing_mode)
+        if(inst?.voted_for_changing_mode)
         {
             VotesForChangingMode--
         }
@@ -2230,6 +2222,10 @@ Instance.OnPlayerDisconnect((event) => {
             isVotingForMode = true;
             HideChangeModeVoteText();
             Instance.EntFireAtName({ name: "Map_Parameters", input: "FireWinCondition", value: "10" });
+        }
+        else
+        {
+            UpdateChangeModeVoteText();
         }
     }
 });
@@ -2612,7 +2608,7 @@ Instance.OnPlayerChat((event) => {
 
         Instance.Msg("Server set to: '" + STATS.server + "'");
     }
-    if(player_text.includes("!m_zmhp") && (inst.Mapper))
+    if(player_text.includes("!m_zmhp") && (inst.Mapper || inst.Leader))
     {
         const text = player_text.split(' ');
         const value = Number(text[1]);
@@ -2623,7 +2619,7 @@ Instance.OnPlayerChat((event) => {
         }
     }
 
-    if(player_text.includes("!m_zmitemhp") && (inst.Mapper))
+    if(player_text.includes("!m_zmitemhp") && (inst.Mapper || inst.Leader))
     {
         const text = player_text.split(' ');
         const value = Number(text[1]);
@@ -2634,7 +2630,7 @@ Instance.OnPlayerChat((event) => {
         }
     }
 
-    if(player_text.includes("!m_hptick") && (inst.Mapper))
+    if(player_text.includes("!m_hptick") && (inst.Mapper || inst.Leader))
     {
         const text = player_text.split(' ');
         const value = Number(text[1]);
@@ -2645,7 +2641,7 @@ Instance.OnPlayerChat((event) => {
         }
     }
 
-    if(player_text.includes("!m_zmdamage") && (inst.Mapper))
+    if(player_text.includes("!m_zmdamage") && (inst.Mapper || inst.Leader))
     {
         const text = player_text.split(' ');
         const value = Number(text[1]);
@@ -2656,7 +2652,7 @@ Instance.OnPlayerChat((event) => {
         }
     }
 
-    if(player_text.includes("!m_chunks") && (inst.Mapper))
+    if(player_text.includes("!m_chunks") && (inst.Mapper || inst.Leader))
     {
         const text = player_text.split(' ');
         const value = Number(text[1]);
@@ -2667,7 +2663,7 @@ Instance.OnPlayerChat((event) => {
         }
     }
 
-    if(player_text.includes("!m_survivalfloors") && (inst.Mapper))
+    if(player_text.includes("!m_survivalfloors") && (inst.Mapper || inst.Leader))
     {
         const text = player_text.split(' ');
         const value = Number(text[1]);
@@ -3280,6 +3276,28 @@ Instance.OnScriptInput("FloorElevatorInsideTeleport", ({ caller, activator }) =>
 
 Instance.OnScriptInput("SetFysSkins", ({ caller, activator }) => {
     is_fys = true;
+});
+
+Instance.OnScriptInput("PressElevatorOutsideButton", ({ caller, activator }) => {
+    if(!isSurvivalMode)
+    {
+        Instance.EntFireAtTarget({ target: caller, input: "FireUser1", activator: activator });
+    }
+    else
+    {
+        Instance.EntFireAtTarget({ target: caller, input: "FireUser2", activator: activator });
+    }
+});
+
+Instance.OnScriptInput("PressElevatorInsideButton", ({ caller, activator }) => {
+    if(!isSurvivalMode)
+    {
+        Instance.EntFireAtTarget({ target: caller, input: "FireUser1", activator: activator });
+    }
+    else
+    {
+        Instance.EntFireAtTarget({ target: caller, input: "FireUser2", activator: activator });
+    }
 });
 
 Instance.OnScriptInput("SpawnFire", () => {
@@ -5317,7 +5335,7 @@ function ResetScript()
 
     if(isSurvivalMode)
     {
-        BOTTLES = Math.ceil(BOTTLES *= 0.8);
+        BOTTLES = Math.ceil(BOTTLES *= 0.9);
         Instance.EntFireAtName({ name: "Map_Slot_Machine*", input: "Enable" });
     }
     else

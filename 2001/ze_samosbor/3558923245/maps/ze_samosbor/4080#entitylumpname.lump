@@ -231,7 +231,7 @@
     "spawnflags": "17409",
     "forcenpcexclude": "0",
     "lip": "0",
-    "wait": "0.300000",
+    "wait": "0.100000",
     "speed": "0",
     "movedir": "0.000000 0.000000 0.000000",
     "lightmapstatic": "0",
