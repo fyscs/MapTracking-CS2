@@ -255,7 +255,7 @@
     "PostSpawnInheritAngles": "1",
     "PostSpawnDirectionVariance": "0.000000",
     "PostSpawnDirection": "-45.000000 0.000000 0.000000",
-    "PostSpawnSpeed": "500.000000",
+    "PostSpawnSpeed": "600.000000",
     "EntityTemplate": "[PR#]tnt_temp",
     "spawnflags": "0",
     "useLocalOffset": "0",
