@@ -24,12 +24,12 @@
     "forcetoenablemotion": "0.000000",
     "damagetoenablemotion": "0",
     "buoyancyScale": "1.000000",
-    "massScale": "0.000000",
+    "massScale": "1.000000",
     "inertiaScale": "1.000000",
     "acceptdamagefromheldobjects": "0",
     "nodamageforces": "0",
     "Damagetype": "0",
-    "physdamagescale": "0.100000",
+    "physdamagescale": "1.000000",
     "shadowcastdist": "0",
     "minhealthdmg": "0",
     "glowteam": "-1",
@@ -53,10 +53,10 @@
     "rendercolor": "255 255 255",
     "model": "models/portal.vmdl",
     "classname": "prop_physics_override",
-    "origin": "80.000000 0.000000 24.000000",
+    "origin": "80.000000 0.000000 120.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4586",
+    "hammerUniqueId": "4604",
     "_template_lump_ent_index": "0"
   }
 ]

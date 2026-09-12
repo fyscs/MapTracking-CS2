@@ -12,65 +12,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4480",
-    "_template_lump_ent_index": "0",
-    "connections": [
-      {
-        "output": "OnPass",
-        "target": "[PR#]tnt_mdl\u00260000",
-        "input": "Alpha",
-        "param": "0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]tnt_mdl\u00260000",
-        "input": "Alpha",
-        "param": "128",
-        "delay": 30,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]tnt_maker\u00260000",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!Activator",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]tnt_zm_relay\u00260000",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]tnt_cd_hud",
-        "input": "ShowHudHint",
-        "param": "",
-        "delay": 30,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]tnt_cd_hud",
-        "input": "HideHudHint",
-        "param": "",
-        "delay": 35,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]tnt_zm_relay\u00260000",
-        "input": "Enable",
-        "param": "",
-        "delay": 30,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "0"
   },
   {
     "wait": "1.000000",
@@ -305,10 +247,58 @@
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]tnt_filter\u00260000",
-        "input": "TestActivator",
+        "target": "[PR#]tnt_mdl\u00260000",
+        "input": "Alpha",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]tnt_maker\u00260000",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!Activator",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Disable",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]tnt_mdl\u00260000",
+        "input": "Alpha",
+        "param": "128",
+        "delay": 60,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]tnt_cd_hud",
+        "input": "ShowHudHint",
+        "param": "",
+        "delay": 60,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 60,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]tnt_cd_hud",
+        "input": "HideHudHint",
+        "param": "",
+        "delay": 65,
         "limit": -1
       }
     ]
