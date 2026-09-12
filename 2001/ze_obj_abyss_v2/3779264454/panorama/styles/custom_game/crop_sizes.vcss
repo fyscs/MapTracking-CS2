@@ -2,251 +2,334 @@
 /* https://github.com/Kxnrl */
 
 #abyss_000 {
+    width: 50.64%;
     height: 48.86%;
 }
 #abyss_001 {
+    width: 63.47%;
     height: 47.75%;
 }
 #abyss_002 {
+    width: 64.56%;
     height: 45.55%;
 }
 #abyss_003 {
+    width: 64.42%;
     height: 49.25%;
 }
 #abyss_004 {
+    width: 24.05%;
     height: 49.18%;
 }
 #abyss_005 {
+    width: 18.37%;
     height: 45.51%;
 }
 #abyss_006 {
+    width: 62.49%;
     height: 48.88%;
 }
 #abyss_007 {
+    width: 32.48%;
     height: 48.86%;
 }
 #abyss_008 {
+    width: 63.20%;
     height: 45.54%;
 }
 #abyss_009 {
+    width: 48.66%;
     height: 49.24%;
 }
 #abyss_010 {
+    width: 47.42%;
     height: 49.21%;
 }
 #abyss_011 {
+    width: 62.36%;
     height: 52.22%;
 }
 #sees_000 {
+    width: 37.83%;
     height: 46.65%;
 }
 #sees_001 {
+    width: 39.27%;
     height: 48.89%;
 }
 #sees_002 {
+    width: 63.52%;
     height: 48.85%;
 }
 #sees_003 {
+    width: 31.18%;
     height: 48.83%;
 }
 #sees_004 {
+    width: 39.34%;
     height: 48.89%;
 }
 #sees_005 {
+    width: 46.81%;
     height: 48.50%;
 }
 #sees_006 {
+    width: 56.47%;
     height: 49.59%;
 }
 #sees_007 {
+    width: 63.40%;
     height: 46.27%;
 }
 #sees_008 {
+    width: 43.45%;
     height: 49.23%;
 }
 #sees_009 {
+    width: 34.33%;
     height: 45.52%;
 }
 #sees_010 {
+    width: 62.71%;
     height: 46.66%;
 }
 #sees_011 {
+    width: 36.73%;
     height: 49.20%;
 }
 #sees_012 {
+    width: 32.55%;
     height: 48.86%;
 }
 #sees_013 {
+    width: 35.64%;
     height: 49.64%;
 }
 #sees_014 {
+    width: 42.69%;
     height: 48.52%;
 }
 #sees_015 {
+    width: 56.26%;
     height: 48.85%;
 }
 #sees_016 {
+    width: 40.30%;
     height: 49.58%;
 }
 #sees_017 {
+    width: 36.39%;
     height: 48.48%;
 }
 #sees_018 {
+    width: 63.52%;
     height: 45.89%;
 }
 #sees_019 {
+    width: 63.80%;
     height: 44.40%;
 }
 #sees_020 {
+    width: 43.11%;
     height: 48.88%;
 }
 #sees_021 {
+    width: 63.19%;
     height: 41.83%;
 }
 #sees_022 {
+    width: 43.72%;
     height: 48.84%;
 }
 #sees_023 {
+    width: 41.87%;
     height: 49.21%;
 }
 #sees_024 {
+    width: 71.13%;
     height: 44.78%;
 }
 #sees_025 {
+    width: 39.95%;
     height: 49.22%;
 }
 #sees_026 {
+    width: 37.14%;
     height: 45.56%;
 }
 #sees_027 {
+    width: 63.60%;
     height: 48.11%;
 }
 #sees_028 {
+    width: 8.50%;
     height: 45.66%;
 }
 #sees_029 {
+    width: 63.60%;
     height: 44.41%;
 }
 #sees_030 {
+    width: 63.47%;
     height: 48.12%;
 }
 #enli_000 {
+    width: 19.05%;
     height: 48.94%;
 }
 #enli_001 {
-    height: 44.06%;
+    width: 69.44%;
+    height: 48.47%;
 }
 #enli_002 {
+    width: 76.40%;
     height: 51.61%;
 }
 #enli_003 {
+    width: 46.26%;
     height: 48.89%;
 }
 #enli_004 {
+    width: 70.53%;
     height: 52.65%;
 }
 #enli_005 {
+    width: 33.85%;
     height: 49.99%;
 }
 #enli_006 {
+    width: 83.40%;
     height: 51.83%;
 }
 #enli_007 {
+    width: 50.65%;
     height: 46.64%;
 }
 #enli_008 {
+    width: 69.62%;
     height: 53.51%;
 }
 #enli_009 {
+    width: 48.25%;
     height: 48.89%;
 }
 #enli_010 {
+    width: 45.37%;
     height: 45.53%;
 }
 #enli_011 {
+    width: 39.82%;
     height: 45.90%;
 }
 #enli_012 {
+    width: 48.86%;
     height: 46.64%;
 }
 #enli_013 {
+    width: 59.55%;
     height: 48.86%;
 }
 #enli_014 {
+    width: 58.80%;
     height: 48.89%;
 }
 #enli_015 {
+    width: 32.48%;
     height: 48.86%;
 }
 #enli_016 {
+    width: 77.99%;
     height: 51.11%;
 }
 #enli_017 {
+    width: 85.86%;
     height: 52.23%;
 }
 #enli_018 {
+    width: 70.58%;
     height: 46.46%;
 }
 #enli_019 {
+    width: 33.85%;
     height: 49.62%;
 }
 #enli_020 {
+    width: 42.01%;
     height: 48.84%;
 }
 #enli_021 {
+    width: 51.81%;
     height: 46.66%;
 }
 #enli_022 {
+    width: 44.34%;
     height: 49.64%;
 }
 #enli_023 {
+    width: 47.56%;
     height: 45.88%;
 }
 #enli_024 {
+    width: 71.28%;
     height: 50.62%;
 }
 #enli_025 {
+    width: 71.41%;
     height: 47.31%;
 }
 #enli_026 {
+    width: 49.27%;
     height: 48.84%;
 }
 #enli_027 {
+    width: 37.01%;
     height: 46.32%;
 }
 #enli_028 {
+    width: 54.48%;
     height: 49.96%;
 }
 #enli_029 {
+    width: 33.10%;
     height: 49.20%;
 }
 #enli_030 {
+    width: 22.82%;
     height: 48.92%;
 }
 #enli_031 {
+    width: 32.89%;
     height: 46.61%;
 }
 #enli_032 {
+    width: 38.31%;
     height: 46.62%;
 }
 #enli_033 {
+    width: 46.12%;
     height: 49.64%;
 }
 #enli_034 {
+    width: 56.06%;
     height: 50.34%;
 }
 #enli_035 {
+    width: 71.20%;
     height: 49.80%;
 }
 #enli_036 {
+    width: 33.44%;
     height: 47.06%;
 }
 #enli_037 {
+    width: 70.86%;
     height: 49.73%;
 }
 #enli_038 {
+    width: 63.25%;
     height: 45.53%;
 }
 #enli_039 {
+    width: 33.44%;
     height: 46.69%;
 }
