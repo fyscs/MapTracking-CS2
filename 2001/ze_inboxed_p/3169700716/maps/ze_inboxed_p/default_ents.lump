@@ -3,6 +3,28 @@
 
 [
   {
+    "steamaudio_customdata_occlusion_reflection_bounces": "8",
+    "steamaudio_customdata_occlusion_reflection_rays": "8192",
+    "steamaudio_customdata_occlusion_reflection": "0",
+    "steamaudio_customdata_occlusion_pathing": "1",
+    "steamaudio_customdata_bake_materials": "0",
+    "steamaudio_customdata_bake_dimensions": "0",
+    "steamaudio_customdata_bake_occlusion": "0",
+    "steamaudio_customdata_height_above_floor": "1.500000",
+    "steamaudio_customdata_grid_spacing": "6.000000",
+    "steamaudio_customdata_filter_navmesh": "0",
+    "steamaudio_customdata_filter_volumes": "1",
+    "steamaudio_customdata_generation_type": "0",
+    "steamaudio_customdata_rebake_option": "0",
+    "steamaudio_pathing_filter_navmesh": "0",
+    "steamaudio_pathing_filter_volumes": "1",
+    "steamaudio_pathing_generation_type": "0",
+    "steamaudio_reverb_clustering_depth_threshold": "10.000000",
+    "steamaudio_reverb_clustering_cubemap_resolution": "16",
+    "steamaudio_reverb_clustering_enable": "0",
+    "steamaudio_reverb_filter_navmesh": "0",
+    "steamaudio_reverb_filter_volumes": "1",
+    "steamaudio_reverb_generation_type": "0",
     "steamaudio_pathing_grid_type": "0",
     "steamaudio_reverb_grid_type": "0",
     "prefab_has_runtime_entity_by_default": "0",
@@ -55,7 +77,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4",
-    "model": "maps\\ze_inboxed_p\\entities\\tele_spawn_4.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tele_spawn_4.vmdl"
   },
   {
     "CreateNavObstacle": "1",
@@ -88,7 +110,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6",
-    "model": "maps\\ze_inboxed_p\\entities\\level_4_go_ex_6.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_4_go_ex_6.vmdl"
   },
   {
     "filtername": "[PR#]ct_fil",
@@ -101,7 +123,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8",
-    "model": "maps\\ze_inboxed_p\\entities\\level_1_extreme_8.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_1_extreme_8.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -148,7 +170,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10",
-    "model": "maps\\ze_inboxed_p\\entities\\level_2_extreme_10.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_2_extreme_10.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -187,7 +209,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_extreme_12.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_3_extreme_12.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -258,7 +280,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_extreme_14.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_8_extreme_14.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -329,7 +351,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16",
-    "model": "maps\\ze_inboxed_p\\entities\\level_9_extreme_16.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_9_extreme_16.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -368,7 +390,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18",
-    "model": "maps\\ze_inboxed_p\\entities\\level_10_extreme_18.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_10_extreme_18.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -407,7 +429,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20",
-    "model": "maps\\ze_inboxed_p\\entities\\level_6_extreme_20.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_6_extreme_20.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -462,7 +484,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "22",
-    "model": "maps\\ze_inboxed_p\\entities\\new_level_extreme_22.vmdl",
+    "model": "maps/ze_inboxed_p/entities/new_level_extreme_22.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -483,7 +505,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "28",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_28.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_28.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -500,6 +522,14 @@
         "param": "",
         "delay": 15,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Chunk_6",
+        "input": "FireUser2",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -513,7 +543,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "30",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_30.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_30.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -544,7 +574,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "44",
-    "model": "maps\\ze_inboxed_p\\entities\\new_level_normal_44.vmdl",
+    "model": "maps/ze_inboxed_p/entities/new_level_normal_44.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -567,7 +597,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "46",
-    "model": "maps\\ze_inboxed_p\\entities\\new_level_hard_46.vmdl",
+    "model": "maps/ze_inboxed_p/entities/new_level_hard_46.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -613,7 +643,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "48",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_48.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_48.vmdl"
   },
   {
     "orientationtype": "1",
@@ -675,7 +705,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "52",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_go1_52.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_8_go1_52.vmdl"
   },
   {
     "CreateNavObstacle": "1",
@@ -709,7 +739,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "54",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_go2_54.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_8_go2_54.vmdl"
   },
   {
     "CreateNavObstacle": "1",
@@ -743,7 +773,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "56",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_go3_56.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_8_go3_56.vmdl"
   },
   {
     "CreateNavObstacle": "1",
@@ -777,7 +807,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "58",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_go4_58.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_8_go4_58.vmdl"
   },
   {
     "filtername": "[PR#]ct_fil",
@@ -790,7 +820,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "60",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_easy_60.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_8_easy_60.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -864,7 +894,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "62",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_62.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_62.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -878,6 +908,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_4",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -898,7 +936,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "64",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_64.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_64.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -912,6 +950,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_4",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -968,7 +1014,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "70",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_70.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_70.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -982,6 +1028,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_5",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -1002,7 +1056,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "72",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_72.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_72.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1016,6 +1070,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_5",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -1033,7 +1095,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "74",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_normal_74.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_8_normal_74.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1104,7 +1166,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "76",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_hard_76.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_8_hard_76.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1175,7 +1237,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "78",
-    "model": "maps\\ze_inboxed_p\\entities\\level_9_normal_78.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_9_normal_78.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1214,7 +1276,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "80",
-    "model": "maps\\ze_inboxed_p\\entities\\level_9_easy_80.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_9_easy_80.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1253,7 +1315,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "82",
-    "model": "maps\\ze_inboxed_p\\entities\\level_9_hard_82.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_9_hard_82.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1313,7 +1375,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "86",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_86.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_86.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1327,6 +1389,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_6",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -1347,7 +1417,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "88",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_88.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_88.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1361,6 +1431,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_6",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -1378,7 +1456,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "90",
-    "model": "maps\\ze_inboxed_p\\entities\\level_10_hard_90.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_10_hard_90.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1417,7 +1495,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "92",
-    "model": "maps\\ze_inboxed_p\\entities\\level_10_normal_92.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_10_normal_92.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1456,7 +1534,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "94",
-    "model": "maps\\ze_inboxed_p\\entities\\level_10_easy_94.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_10_easy_94.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1493,7 +1571,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "96",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_96.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_96.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1510,6 +1588,14 @@
         "param": "",
         "delay": 30,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Chunk_2",
+        "input": "FireUser2",
+        "param": "",
+        "delay": 30,
+        "limit": 1
       }
     ]
   },
@@ -1530,7 +1616,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "98",
-    "model": "maps\\ze_inboxed_p\\entities\\end_98.vmdl"
+    "model": "maps/ze_inboxed_p/entities/end_98.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1549,7 +1635,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "100",
-    "model": "maps\\ze_inboxed_p\\entities\\end_100.vmdl"
+    "model": "maps/ze_inboxed_p/entities/end_100.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1568,7 +1654,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "102",
-    "model": "maps\\ze_inboxed_p\\entities\\end_102.vmdl"
+    "model": "maps/ze_inboxed_p/entities/end_102.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1588,7 +1674,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "104",
-    "model": "maps\\ze_inboxed_p\\entities\\ct_kill_4_104.vmdl"
+    "model": "maps/ze_inboxed_p/entities/ct_kill_4_104.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1608,7 +1694,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "106",
-    "model": "maps\\ze_inboxed_p\\entities\\ct_kill_5_106.vmdl"
+    "model": "maps/ze_inboxed_p/entities/ct_kill_5_106.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1628,7 +1714,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "108",
-    "model": "maps\\ze_inboxed_p\\entities\\ct_kill_6_108.vmdl"
+    "model": "maps/ze_inboxed_p/entities/ct_kill_6_108.vmdl"
   },
   {
     "spawnflags": "4097",
@@ -1639,7 +1725,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "110",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_110.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_110.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1656,6 +1742,14 @@
         "param": "",
         "delay": 25,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Chunk_3",
+        "input": "FireUser2",
+        "param": "",
+        "delay": 25,
+        "limit": 1
       }
     ]
   },
@@ -1668,7 +1762,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "112",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_112.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_112.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1685,6 +1779,14 @@
         "param": "",
         "delay": 20,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Chunk_4",
+        "input": "FireUser2",
+        "param": "",
+        "delay": 20,
+        "limit": 1
       }
     ]
   },
@@ -1705,7 +1807,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "114",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_114.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_114.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1724,7 +1826,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "116",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_116.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_116.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1743,7 +1845,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "118",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_118.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_118.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1762,7 +1864,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "120",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_120.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_120.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1781,7 +1883,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "122",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_122.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_122.vmdl"
   },
   {
     "thinkalways": "0",
@@ -1800,7 +1902,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "124",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_124.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_124.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -1817,7 +1919,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "126",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_15_trigger_126.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_15_trigger_126.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -1843,7 +1945,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "129",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_16_trigger_129.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_16_trigger_129.vmdl"
   },
   {
     "filtername": "[PR#]t_fill",
@@ -1855,7 +1957,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "131",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_131.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_131.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1891,7 +1993,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "134",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_17_trigger_134.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_17_trigger_134.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -1912,7 +2014,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "137",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_137.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_137.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1939,7 +2041,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "139",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_18_trigger_139.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_18_trigger_139.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -1965,7 +2067,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "142",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_19_trigger_142.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_19_trigger_142.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -1986,7 +2088,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "145",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_145.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_145.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2013,7 +2115,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "147",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_20_trigger_147.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_20_trigger_147.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -2039,7 +2141,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "150",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_21_trigger_150.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_21_trigger_150.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -2060,7 +2162,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "153",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_153.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_153.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2087,7 +2189,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "155",
-    "model": "maps\\ze_inboxed_p\\entities\\1_155.vmdl"
+    "model": "maps/ze_inboxed_p/entities/1_155.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -2104,7 +2206,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "157",
-    "model": "maps\\ze_inboxed_p\\entities\\2_157.vmdl"
+    "model": "maps/ze_inboxed_p/entities/2_157.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -2121,7 +2223,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "159",
-    "model": "maps\\ze_inboxed_p\\entities\\3_159.vmdl"
+    "model": "maps/ze_inboxed_p/entities/3_159.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -2138,7 +2240,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "161",
-    "model": "maps\\ze_inboxed_p\\entities\\4_161.vmdl"
+    "model": "maps/ze_inboxed_p/entities/4_161.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -2155,7 +2257,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "163",
-    "model": "maps\\ze_inboxed_p\\entities\\5_163.vmdl"
+    "model": "maps/ze_inboxed_p/entities/5_163.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -2172,7 +2274,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "165",
-    "model": "maps\\ze_inboxed_p\\entities\\6_165.vmdl"
+    "model": "maps/ze_inboxed_p/entities/6_165.vmdl"
   },
   {
     "filtername": "[PR#]t_fill",
@@ -2185,7 +2287,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "167",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_wait1_167.vmdl",
+    "model": "maps/ze_inboxed_p/entities/tel_wait1_167.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2222,7 +2324,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "169",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_169.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_169.vmdl"
   },
   {
     "thinkalways": "0",
@@ -2240,7 +2342,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "171",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_171.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_171.vmdl"
   },
   {
     "thinkalways": "0",
@@ -2260,7 +2362,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "173",
-    "model": "maps\\ze_inboxed_p\\entities\\ct_kill_1_173.vmdl"
+    "model": "maps/ze_inboxed_p/entities/ct_kill_1_173.vmdl"
   },
   {
     "spawnflags": "4097",
@@ -2271,7 +2373,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "175",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_175.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_175.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2288,6 +2390,14 @@
         "param": "",
         "delay": 15,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Chunk_1",
+        "input": "FireUser2",
+        "param": "",
+        "delay": 15,
+        "limit": -1
       }
     ]
   },
@@ -2300,7 +2410,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "177",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_177.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_177.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2317,6 +2427,14 @@
         "param": "",
         "delay": 20,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Chunk_5",
+        "input": "FireUser2",
+        "param": "",
+        "delay": 20,
+        "limit": 1
       }
     ]
   },
@@ -2338,7 +2456,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "179",
-    "model": "maps\\ze_inboxed_p\\entities\\ct_kill_2_179.vmdl"
+    "model": "maps/ze_inboxed_p/entities/ct_kill_2_179.vmdl"
   },
   {
     "thinkalways": "0",
@@ -2358,7 +2476,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "181",
-    "model": "maps\\ze_inboxed_p\\entities\\ct_kill_3_181.vmdl"
+    "model": "maps/ze_inboxed_p/entities/ct_kill_3_181.vmdl"
   },
   {
     "thinkalways": "0",
@@ -2377,7 +2495,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "183",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_183.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_183.vmdl"
   },
   {
     "thinkalways": "0",
@@ -2396,7 +2514,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "185",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_185.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_185.vmdl"
   },
   {
     "thinkalways": "0",
@@ -2415,7 +2533,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "187",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_187.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_187.vmdl"
   },
   {
     "filtername": "[PR#]ct_fil",
@@ -2428,7 +2546,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "189",
-    "model": "maps\\ze_inboxed_p\\entities\\level_1_hard_189.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_1_hard_189.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2475,7 +2593,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "191",
-    "model": "maps\\ze_inboxed_p\\entities\\level_1_easy_191.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_1_easy_191.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2522,7 +2640,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "193",
-    "model": "maps\\ze_inboxed_p\\entities\\level_2_easy_193.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_2_easy_193.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2561,7 +2679,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "195",
-    "model": "maps\\ze_inboxed_p\\entities\\level_2_hard_195.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_2_hard_195.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2600,7 +2718,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "197",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_easy_197.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_3_easy_197.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2663,7 +2781,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "199",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_hard_199.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_3_hard_199.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2726,7 +2844,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "201",
-    "model": "maps\\ze_inboxed_p\\entities\\level_6_hard_201.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_6_hard_201.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2781,7 +2899,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "203",
-    "model": "maps\\ze_inboxed_p\\entities\\level_6_easy_203.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_6_easy_203.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -2934,7 +3052,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "213",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_6_trigger_213.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_6_trigger_213.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -2960,7 +3078,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "216",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_7_trigger_216.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_7_trigger_216.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -2986,7 +3104,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "219",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_8_trigger_219.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_8_trigger_219.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -3012,7 +3130,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "222",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_9_trigger_222.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_9_trigger_222.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -3032,7 +3150,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "225",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_225.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_225.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -3062,7 +3180,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "227",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_227.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_227.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -3092,7 +3210,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "229",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_229.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_229.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -3129,7 +3247,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "231",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_231.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_231.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -3146,7 +3264,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "233",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_10_trigger_233.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_10_trigger_233.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -3172,7 +3290,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "236",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_11_trigger_236.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_11_trigger_236.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -3198,7 +3316,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "239",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_12_trigger_239.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_12_trigger_239.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -3219,7 +3337,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "242",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_242.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_242.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -3254,7 +3372,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "244",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_14_trigger_244.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_14_trigger_244.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -3266,6 +3384,8 @@
     "hammerUniqueId": "246"
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -3328,6 +3448,8 @@
     "hammerUniqueId": "247"
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -3403,7 +3525,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "249",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_249.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_249.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -3417,6 +3539,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_7",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -3440,7 +3570,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "251",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_251.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_251.vmdl"
   },
   {
     "triggeronstarttouch": "0",
@@ -3454,7 +3584,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "253",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_253.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_253.vmdl"
   },
   {
     "triggeronstarttouch": "0",
@@ -3468,7 +3598,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "255",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_255.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_255.vmdl"
   },
   {
     "triggeronstarttouch": "0",
@@ -3482,7 +3612,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "257",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_257.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_257.vmdl"
   },
   {
     "MoveSoundMaxTime": "0.000000",
@@ -3519,7 +3649,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "259",
-    "model": "maps\\ze_inboxed_p\\entities\\escape_train_259.vmdl"
+    "model": "maps/ze_inboxed_p/entities/escape_train_259.vmdl"
   },
   {
     "orientationtype": "1",
@@ -3622,7 +3752,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "275",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_275.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_275.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -3636,6 +3766,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_7",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -3682,7 +3820,17 @@
     "origin": "-3336.000000 -3632.000000 2582.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "279"
+    "hammerUniqueId": "279",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]helicopter_unfucker",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
   },
   {
     "spawnflags": "4097",
@@ -3693,7 +3841,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "280",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_280.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_280.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -3754,7 +3902,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "282",
-    "model": "maps\\ze_inboxed_p\\entities\\end_282.vmdl"
+    "model": "maps/ze_inboxed_p/entities/end_282.vmdl"
   },
   {
     "thinkalways": "0",
@@ -3773,7 +3921,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "284",
-    "model": "maps\\ze_inboxed_p\\entities\\end_284.vmdl"
+    "model": "maps/ze_inboxed_p/entities/end_284.vmdl"
   },
   {
     "thinkalways": "0",
@@ -3792,7 +3940,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "286",
-    "model": "maps\\ze_inboxed_p\\entities\\end_286.vmdl"
+    "model": "maps/ze_inboxed_p/entities/end_286.vmdl"
   },
   {
     "thinkalways": "0",
@@ -3811,7 +3959,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "288",
-    "model": "maps\\ze_inboxed_p\\entities\\end_288.vmdl"
+    "model": "maps/ze_inboxed_p/entities/end_288.vmdl"
   },
   {
     "entityIndexSelection": "0",
@@ -3864,7 +4012,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "293",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_293.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_293.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -3924,6 +4072,8 @@
     "hammerUniqueId": "298"
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -3980,8 +4130,8 @@
     "targetname": "[PR#]phys_prop",
     "useLocalOffset": "0",
     "classname": "prop_physics",
-    "origin": "1478.999512 -5161.000000 1872.093506",
-    "angles": "0.000000 30.000679 0.000000",
+    "origin": "1479.008789 -5160.995117 1872.098145",
+    "angles": "-0.023654 29.999811 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "299",
     "connections": [
@@ -3996,6 +4146,8 @@
     ]
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -4052,8 +4204,8 @@
     "targetname": "[PR#]phys_prop",
     "useLocalOffset": "0",
     "classname": "prop_physics",
-    "origin": "1566.000000 -5164.000488 1872.093506",
-    "angles": "0.000000 105.000038 0.000000",
+    "origin": "1565.997070 -5163.989258 1872.098511",
+    "angles": "-0.025268 104.999825 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "300",
     "connections": [
@@ -4078,7 +4230,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "301",
-    "model": "maps\\ze_inboxed_p\\entities\\level_6_normal_301.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_6_normal_301.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -4133,7 +4285,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "303",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_wait_303.vmdl",
+    "model": "maps/ze_inboxed_p/entities/tel_wait_303.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -4168,7 +4320,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "305",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_2_trigger_305.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_2_trigger_305.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -4194,7 +4346,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "308",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_3_trigger_308.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_3_trigger_308.vmdl"
   },
   {
     "filtername": "[PR#]t_fill",
@@ -4207,7 +4359,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "310",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_wait_310.vmdl",
+    "model": "maps/ze_inboxed_p/entities/tel_wait_310.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -4418,6 +4570,62 @@
         "param": "mp_roundtime 9",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]LevelLayer_Chunk_2",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]LevelLayer_Chunk_3",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]LevelLayer_Chunk_4",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]LevelLayer_Chunk_5",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]LevelLayer_Chunk_6",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]LevelLayer_Chunk_7",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]LevelLayer_Chunk_1",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -4436,7 +4644,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "313",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_4_trigger_313.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_4_trigger_313.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -4458,7 +4666,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "316",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_wait_316.vmdl",
+    "model": "maps/ze_inboxed_p/entities/tel_wait_316.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -4493,7 +4701,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "318",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_5_trigger_318.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_5_trigger_318.vmdl"
   },
   {
     "useLocalOffset": "0",
@@ -4520,7 +4728,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "321",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_321.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_321.vmdl"
   },
   {
     "thinkalways": "0",
@@ -4539,7 +4747,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "323",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_323.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_323.vmdl"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -4555,7 +4763,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "325",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_325.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_325.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -4569,6 +4777,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_3",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -4589,7 +4805,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "327",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_327.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_327.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -4603,6 +4819,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_3",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -4640,7 +4864,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "329",
-    "model": "maps\\ze_inboxed_p\\entities\\level_4_go_329.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_4_go_329.vmdl"
   },
   {
     "filtername": "[PR#]ct_fil",
@@ -4652,7 +4876,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "331",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_331.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_331.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -4665,6 +4889,8 @@
     ]
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -4726,6 +4952,8 @@
     "hammerUniqueId": "333"
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -4787,6 +5015,9 @@
     "hammerUniqueId": "334"
   },
   {
+    "buoyancyscale": "1.000000",
+    "massScale": "0.000000",
+    "allowStretch": "0",
     "spawnflags": "16384",
     "skipPreSettle": "0",
     "StartDisabled": "0",
@@ -4812,7 +5043,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "336",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_336.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_336.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -4825,6 +5056,8 @@
     ]
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -4880,8 +5113,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_physics",
-    "origin": "396.000031 505.000214 542.017151",
-    "angles": "0.000000 344.999969 0.000000",
+    "origin": "396.000061 505.000000 542.017090",
+    "angles": "0.000000 345.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "338"
   },
@@ -4918,9 +5151,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "341",
-    "model": "maps\\ze_inboxed_p\\entities\\tel_1_trigger_341.vmdl"
+    "model": "maps/ze_inboxed_p/entities/tel_1_trigger_341.vmdl"
   },
   {
+    "clientSideEntity": "0",
     "filterteam": "3",
     "Negated": "0",
     "targetname": "[PR#]ct_fil",
@@ -4931,6 +5165,7 @@
     "hammerUniqueId": "343"
   },
   {
+    "clientSideEntity": "0",
     "filterteam": "2",
     "Negated": "0",
     "targetname": "[PR#]t_fill",
@@ -4975,7 +5210,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "345",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_go1_345.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_3_go1_345.vmdl"
   },
   {
     "MoveSoundMaxTime": "0.000000",
@@ -5012,7 +5247,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "347",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_go2_347.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_3_go2_347.vmdl"
   },
   {
     "MoveSoundMaxTime": "0.000000",
@@ -5049,7 +5284,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "349",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_go4_349.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_3_go4_349.vmdl"
   },
   {
     "MoveSoundMaxTime": "0.000000",
@@ -5086,7 +5321,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "351",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_go3_351.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_3_go3_351.vmdl"
   },
   {
     "filtername": "[PR#]ct_fil",
@@ -5099,7 +5334,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "353",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_normal_353.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_3_normal_353.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -5202,7 +5437,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "358",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_358.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_358.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5216,6 +5451,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_2",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -5245,7 +5488,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "361",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_361.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_361.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5259,6 +5502,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]sfx_teleport",
         "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LevelLayer_Chunk_2",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -5276,7 +5527,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "363",
-    "model": "maps\\ze_inboxed_p\\entities\\level_2_normal_363.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_2_normal_363.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -5335,7 +5586,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "365",
-    "model": "maps\\ze_inboxed_p\\entities\\level_1_go_365.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_1_go_365.vmdl"
   },
   {
     "filtername": "[PR#]ct_fil",
@@ -5348,7 +5599,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "367",
-    "model": "maps\\ze_inboxed_p\\entities\\level_1_normal_367.vmdl",
+    "model": "maps/ze_inboxed_p/entities/level_1_normal_367.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -5391,9 +5642,11 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "369",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_369.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_369.vmdl"
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -6047,7 +6300,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "436",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_436.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_436.vmdl"
   },
   {
     "NoInterpolate": "0",
@@ -6085,7 +6338,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "705",
-    "model": "maps\\ze_inboxed_p\\entities\\break_1_705.vmdl"
+    "model": "maps/ze_inboxed_p/entities/break_1_705.vmdl"
   },
   {
     "NoInterpolate": "0",
@@ -6123,9 +6376,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "707",
-    "model": "maps\\ze_inboxed_p\\entities\\break_2_707.vmdl"
+    "model": "maps/ze_inboxed_p/entities/break_2_707.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6153,7 +6407,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "711",
-    "model": "maps\\ze_inboxed_p\\entities\\extreme_711.vmdl"
+    "model": "maps/ze_inboxed_p/entities/extreme_711.vmdl"
   },
   {
     "snapshot_mesh": "0",
@@ -6225,7 +6479,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "740",
-    "model": "maps\\ze_inboxed_p\\entities\\level_9_go_740.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_9_go_740.vmdl"
   },
   {
     "snapshot_mesh": "0",
@@ -6280,9 +6534,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "745",
-    "model": "maps\\ze_inboxed_p\\entities\\level_10_go_745.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_10_go_745.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6310,9 +6565,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "748",
-    "model": "maps\\ze_inboxed_p\\entities\\level_8_hard_1_748.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_8_hard_1_748.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6340,9 +6596,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "751",
-    "model": "maps\\ze_inboxed_p\\entities\\level_10_hard_1_751.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_10_hard_1_751.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6370,9 +6627,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "753",
-    "model": "maps\\ze_inboxed_p\\entities\\hard_753.vmdl"
+    "model": "maps/ze_inboxed_p/entities/hard_753.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6400,9 +6658,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "755",
-    "model": "maps\\ze_inboxed_p\\entities\\normal_755.vmdl"
+    "model": "maps/ze_inboxed_p/entities/normal_755.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6430,9 +6689,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "757",
-    "model": "maps\\ze_inboxed_p\\entities\\easy_757.vmdl"
+    "model": "maps/ze_inboxed_p/entities/easy_757.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6460,9 +6720,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "759",
-    "model": "maps\\ze_inboxed_p\\entities\\level_1_hard_1_759.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_1_hard_1_759.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6490,9 +6751,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "765",
-    "model": "maps\\ze_inboxed_p\\entities\\level_2_easy_1_765.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_2_easy_1_765.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6520,9 +6782,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "767",
-    "model": "maps\\ze_inboxed_p\\entities\\level_2_hard_1_767.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_2_hard_1_767.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6550,9 +6813,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "772",
-    "model": "maps\\ze_inboxed_p\\entities\\level_3_easy_1_772.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_3_easy_1_772.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6580,9 +6844,10 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "775",
-    "model": "maps\\ze_inboxed_p\\entities\\level_6_hard_1_775.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_6_hard_1_775.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
@@ -6610,7 +6875,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "777",
-    "model": "maps\\ze_inboxed_p\\entities\\level_7_hard_1_777.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_7_hard_1_777.vmdl"
   },
   {
     "snapshot_mesh": "0",
@@ -6665,7 +6930,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "795",
-    "model": "maps\\ze_inboxed_p\\entities\\level_6_go_795.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_6_go_795.vmdl"
   },
   {
     "BreakableContentsType": "BC_DEFAULT",
@@ -6676,7 +6941,7 @@
     "StartingAnimationLoopMode": "ANIM_LOOP_MODE_LOOPING",
     "StartingAnim": "3ready",
     "clothScale": "1.000000",
-    "StartDisabled": "0",
+    "StartDisabled": "1",
     "forcenpcexclude": "0",
     "CreateNavObstacle": "0",
     "AnimateOnServer": "0",
@@ -6753,7 +7018,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "800",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_800.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_800.vmdl"
   },
   {
     "snapshot_mesh": "0",
@@ -6807,7 +7072,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "827",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_827.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_827.vmdl"
   },
   {
     "snapshot_mesh": "0",
@@ -6862,7 +7127,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "830",
-    "model": "maps\\ze_inboxed_p\\entities\\level_2_go_830.vmdl"
+    "model": "maps/ze_inboxed_p/entities/level_2_go_830.vmdl"
   },
   {
     "ajardoorshouldntalwaysopen": "0",
@@ -6901,13 +7166,14 @@
     "hammerUniqueId": "832"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "1728.000000 1248.000000 512.000000",
     "box_mins": "-448.000000 -800.000000 -320.000000",
     "bakefarz": "4096.000000",
@@ -6923,20 +7189,20 @@
     "light_probe_size_x": "46",
     "light_probe_size_y": "43",
     "light_probe_size_z": "18",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "0",
-    "light_probe_atlas_x": "1",
+    "light_probe_atlas_x": "37",
     "light_probe_atlas_Y": "29",
-    "light_probe_atlas_Z": "65"
+    "light_probe_atlas_Z": "69"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 32.000000 64.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "128.000000 192.000000 192.000000",
     "box_mins": "-128.000000 -256.000000 -160.000000",
     "bakefarz": "4096.000000",
@@ -6952,20 +7218,20 @@
     "light_probe_size_x": "6",
     "light_probe_size_y": "10",
     "light_probe_size_z": "8",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "1",
-    "light_probe_atlas_x": "33",
-    "light_probe_atlas_Y": "77",
-    "light_probe_atlas_Z": "65"
+    "light_probe_atlas_x": "17",
+    "light_probe_atlas_Y": "81",
+    "light_probe_atlas_Z": "41"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 64.000000 64.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "352.000000 128.000000 256.000000",
     "box_mins": "-384.000000 -1024.000000 -256.000000",
     "bakefarz": "4096.000000",
@@ -6981,13 +7247,14 @@
     "light_probe_size_x": "16",
     "light_probe_size_y": "24",
     "light_probe_size_z": "11",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "2",
-    "light_probe_atlas_x": "81",
+    "light_probe_atlas_x": "17",
     "light_probe_atlas_Y": "53",
     "light_probe_atlas_Z": "41"
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -7037,7 +7304,7 @@
     "model": "models/props/hr_massive/barrel/barrel_1.vmdl",
     "classname": "prop_physics_override",
     "origin": "1590.002319 -2507.999512 1120.085693",
-    "angles": "0.006231 44.999512 0.000000",
+    "angles": "0.006187 44.999516 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "940",
     "connections": [
@@ -7052,6 +7319,8 @@
     ]
   },
   {
+    "allowobstacleconvexhullmerging": "1",
+    "dynamiccontinuouscontactbehavior": "0",
     "ItemCount4": "1",
     "ItemCount3": "1",
     "ItemCount2": "1",
@@ -7100,8 +7369,8 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]phys_prop",
     "classname": "prop_physics_override",
-    "origin": "1609.022827 -2534.690674 1120.084106",
-    "angles": "0.000000 359.152283 0.000000",
+    "origin": "1609.011108 -2534.684814 1120.083252",
+    "angles": "0.000000 358.951752 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "42084",
     "connections": [
@@ -7604,12 +7873,13 @@
     ]
   },
   {
-    "soundevent": "Inboxed.ss.outside",
+    "soundevent": "inboxed.ss.rooftop",
     "enablesoundevent": "1",
     "soundscape": "Nothing",
     "radius": "-1",
     "useLocalOffset": "0",
     "StartDisabled": "0",
+    "targetname": "[PR#]soundscape",
     "classname": "env_soundscape",
     "origin": "-24.000000 -200.000000 192.000000",
     "angles": "0.000000 0.000000 0.000000",
@@ -7663,20 +7933,6 @@
     ]
   },
   {
-    "entityIndexSelection": "0",
-    "saveAndRestore": "0",
-    "stopOnNew": "1",
-    "toLocalPlayer": "0",
-    "startOnSpawn": "0",
-    "soundName": "office.Outdoor_01b.Wind",
-    "useLocalOffset": "0",
-    "classname": "point_soundevent",
-    "origin": "28.133301 46.248699 153.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "212"
-  },
-  {
     "wait": "0.050000",
     "filtername": "[PR#]prop_fil",
     "spawnflags": "4104",
@@ -7687,7 +7943,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "42140",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_42140.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_42140.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -7710,7 +7966,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "42143",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_42143.vmdl",
+    "model": "maps/ze_inboxed_p/entities/unnamed_42143.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -7761,8 +8017,12 @@
     "hammerUniqueId": "1012"
   },
   {
+    "bakedshadowindex": "0",
+    "light_map_uniqueid": "-55107749",
+    "light_path_uniqueid": "-85748997",
     "brightness_legacy": "-nan(ind)",
     "brightness_lumens": "0",
+    "allow_sst_generation": "1",
     "ambient_occlusion_proxy_ambient_strength": "1.000000",
     "ambient_occlusion_proxy_strength_3": "0.500000",
     "ambient_occlusion_proxy_strength_2": "0.500000",
@@ -7782,19 +8042,19 @@
     "clientSideEntity": "1",
     "brightnessscale": "1.000000",
     "skybouncescale": "1.000000",
-    "skyambientbounce": "0 0 0",
+    "skyambientbounce": "119 136 153",
     "skytexturescale": "1.000000",
     "skyintensity": "0.784314",
     "skycolor": "202 216 219",
     "angulardiameter": "1.000000",
-    "directlight": "2",
+    "directlight": "3",
     "bouncescale": "1.000000",
     "rendertocubemaps": "1",
     "fademaxdist": "1250",
     "fademindist": "-250",
     "style": "0",
     "shadowpriority": "-1",
-    "nearclipplane": "1",
+    "nearclipplane": "1.000000",
     "castshadows": "1",
     "brightness": "1.568628",
     "color": "247 232 202",
@@ -7817,22 +8077,14 @@
     "hammerUniqueId": "1014"
   },
   {
-    "classname": "team_select",
-    "isPointPrefab": "true",
-    "targetMapName": "prefabs/misc/team_select",
-    "origin": "823.999939 -5792.000000 1879.000000",
-    "angles": "0.000000 255.000031 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1026"
-  },
-  {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "512.000000 2080.000000 896.000000",
     "box_mins": "-2112.000000 -544.000000 -352.000000",
     "bakefarz": "4096.000000",
@@ -7848,20 +8100,20 @@
     "light_probe_size_x": "55",
     "light_probe_size_y": "55",
     "light_probe_size_z": "26",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "3",
     "light_probe_atlas_x": "57",
     "light_probe_atlas_Y": "1",
     "light_probe_atlas_Z": "1"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 64.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "320.000000 736.000000 480.000000",
     "box_mins": "-352.000000 -960.000000 -288.000000",
     "bakefarz": "4096.000000",
@@ -7877,20 +8129,20 @@
     "light_probe_size_x": "14",
     "light_probe_size_y": "36",
     "light_probe_size_z": "16",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "4",
-    "light_probe_atlas_x": "65",
+    "light_probe_atlas_x": "1",
     "light_probe_atlas_Y": "53",
     "light_probe_atlas_Z": "41"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 64.000000 64.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "128.000000 128.000000 576.000000",
     "box_mins": "-160.000000 -128.000000 -288.000000",
     "bakefarz": "4096.000000",
@@ -7906,20 +8158,20 @@
     "light_probe_size_x": "6",
     "light_probe_size_y": "6",
     "light_probe_size_z": "18",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "5",
-    "light_probe_atlas_x": "1",
-    "light_probe_atlas_Y": "77",
-    "light_probe_atlas_Z": "65"
+    "light_probe_atlas_x": "85",
+    "light_probe_atlas_Y": "29",
+    "light_probe_atlas_Z": "69"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "960.000000 1600.000000 960.000000",
     "box_mins": "-1408.000000 -512.000000 -608.000000",
     "bakefarz": "4096.000000",
@@ -7935,20 +8187,20 @@
     "light_probe_size_x": "50",
     "light_probe_size_y": "44",
     "light_probe_size_z": "33",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "6",
     "light_probe_atlas_x": "1",
     "light_probe_atlas_Y": "45",
     "light_probe_atlas_Z": "1"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "992.000000 320.000000 704.000000",
     "box_mins": "-1568.000000 -1664.000000 -960.000000",
     "bakefarz": "4096.000000",
@@ -7964,20 +8216,20 @@
     "light_probe_size_x": "54",
     "light_probe_size_y": "42",
     "light_probe_size_z": "35",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "7",
     "light_probe_atlas_x": "1",
     "light_probe_atlas_Y": "1",
     "light_probe_atlas_Z": "1"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "704.000000 352.000000 192.000000",
     "box_mins": "-288.000000 -288.000000 -160.000000",
     "bakefarz": "4096.000000",
@@ -7993,20 +8245,20 @@
     "light_probe_size_x": "21",
     "light_probe_size_y": "14",
     "light_probe_size_z": "8",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "8",
-    "light_probe_atlas_x": "9",
+    "light_probe_atlas_x": "37",
     "light_probe_atlas_Y": "77",
-    "light_probe_atlas_Z": "65"
+    "light_probe_atlas_Z": "69"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 64.000000 64.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "384.000000 320.000000 192.000000",
     "box_mins": "-1024.000000 -512.000000 -256.000000",
     "bakefarz": "4096.000000",
@@ -8022,20 +8274,20 @@
     "light_probe_size_x": "30",
     "light_probe_size_y": "18",
     "light_probe_size_z": "10",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "9",
     "light_probe_atlas_x": "57",
     "light_probe_atlas_Y": "1",
     "light_probe_atlas_Z": "29"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "352.000000 800.000000 544.000000",
     "box_mins": "-1184.000000 -1504.000000 -320.000000",
     "bakefarz": "4096.000000",
@@ -8051,21 +8303,21 @@
     "light_probe_size_x": "32",
     "light_probe_size_y": "48",
     "light_probe_size_z": "18",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "10",
-    "light_probe_atlas_x": "65",
-    "light_probe_atlas_Y": "1",
-    "light_probe_atlas_Z": "41"
+    "light_probe_atlas_x": "1",
+    "light_probe_atlas_Y": "29",
+    "light_probe_atlas_Z": "69"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
-    "box_maxs": "1760.000000 1920.000000 672.000000",
+    "voxel_size": "48.0",
+    "box_maxs": "1760.000000 1920.000000 800.000000",
     "box_mins": "-1184.000000 -320.000000 -352.000000",
     "bakefarz": "4096.000000",
     "cubemaptexture": "maps/ze_inboxed_p/cubemaps/env_cubemap_array.vtex",
@@ -8079,21 +8331,21 @@
     "handshake": "1710630674",
     "light_probe_size_x": "62",
     "light_probe_size_y": "47",
-    "light_probe_size_z": "22",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "light_probe_size_z": "24",
     "array_index": "11",
     "light_probe_atlas_x": "1",
     "light_probe_atlas_Y": "1",
     "light_probe_atlas_Z": "41"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 64.000000 64.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "256.000000 256.000000 128.000000",
     "box_mins": "-352.000000 -448.000000 -160.000000",
     "bakefarz": "4096.000000",
@@ -8109,20 +8361,20 @@
     "light_probe_size_x": "13",
     "light_probe_size_y": "15",
     "light_probe_size_z": "6",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "12",
     "light_probe_atlas_x": "69",
     "light_probe_atlas_Y": "21",
     "light_probe_atlas_Z": "29"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 64.000000 64.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "192.000000 224.000000 128.000000",
     "box_mins": "-160.000000 -160.000000 -160.000000",
     "bakefarz": "4096.000000",
@@ -8138,20 +8390,20 @@
     "light_probe_size_x": "8",
     "light_probe_size_y": "8",
     "light_probe_size_z": "6",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "13",
-    "light_probe_atlas_x": "81",
+    "light_probe_atlas_x": "25",
     "light_probe_atlas_Y": "81",
     "light_probe_atlas_Z": "41"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "608.000000 608.000000 544.000000",
     "box_mins": "-3616.000000 -544.000000 -416.000000",
     "bakefarz": "4096.000000",
@@ -8167,11 +8419,10 @@
     "light_probe_size_x": "88",
     "light_probe_size_y": "24",
     "light_probe_size_z": "20",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "14",
     "light_probe_atlas_x": "1",
     "light_probe_atlas_Y": "1",
-    "light_probe_atlas_Z": "65"
+    "light_probe_atlas_Z": "69"
   },
   {
     "classname": "point_nav_walkable",
@@ -8378,7 +8629,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "42075",
-    "model": "maps\\ze_inboxed_p\\entities\\unnamed_42075.vmdl"
+    "model": "maps/ze_inboxed_p/entities/unnamed_42075.vmdl"
   },
   {
     "entityIndexSelection": "0",
@@ -8396,13 +8647,14 @@
     "hammerUniqueId": "42087"
   },
   {
-    "lightprobetexture": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_inboxed_p/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "64.000000 64.000000 0.000000",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "128.000000 384.000000 192.000000",
     "box_mins": "-288.000000 -320.000000 -160.000000",
     "bakefarz": "4096.000000",
@@ -8418,13 +8670,13 @@
     "light_probe_size_x": "9",
     "light_probe_size_y": "15",
     "light_probe_size_z": "8",
-    "lightprobetexture_dlshd": "maps\\ze_inboxed_p/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
     "array_index": "15",
     "light_probe_atlas_x": "57",
     "light_probe_atlas_Y": "21",
     "light_probe_atlas_Z": "29"
   },
   {
+    "clientSideEntity": "0",
     "filtername": "[PR#]phys_prop",
     "Negated": "0",
     "targetname": "[PR#]prop_fil",
@@ -8585,6 +8837,7 @@
     "hammerUniqueId": "42175"
   },
   {
+    "useLocalOffset": "0",
     "Template01": "[PR#]gman_fortnite",
     "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
     "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
@@ -8949,5 +9202,324 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "42213"
+  },
+  {
+    "childSpawnGroup": "0",
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Chunk_1",
+    "targetname": "[PR#]LevelLayer_Chunk_1",
+    "classname": "info_world_layer",
+    "origin": "-2208.000000 -3680.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42227",
+    "worldname": "ze_inboxed_p",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "childSpawnGroup": "0",
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Chunk_2",
+    "targetname": "[PR#]LevelLayer_Chunk_2",
+    "classname": "info_world_layer",
+    "origin": "-2208.000000 -3664.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42247",
+    "worldname": "ze_inboxed_p",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "childSpawnGroup": "0",
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Chunk_3",
+    "targetname": "[PR#]LevelLayer_Chunk_3",
+    "classname": "info_world_layer",
+    "origin": "-2208.000000 -3648.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42248",
+    "worldname": "ze_inboxed_p",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "childSpawnGroup": "0",
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Chunk_4",
+    "targetname": "[PR#]LevelLayer_Chunk_4",
+    "classname": "info_world_layer",
+    "origin": "-2208.000000 -3632.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42249",
+    "worldname": "ze_inboxed_p",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "childSpawnGroup": "0",
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Chunk_5",
+    "targetname": "[PR#]LevelLayer_Chunk_5",
+    "classname": "info_world_layer",
+    "origin": "-2208.000000 -3616.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42250",
+    "worldname": "ze_inboxed_p",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "childSpawnGroup": "0",
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Chunk_6",
+    "targetname": "[PR#]LevelLayer_Chunk_6",
+    "classname": "info_world_layer",
+    "origin": "-2208.000000 -3600.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42251",
+    "worldname": "ze_inboxed_p",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "childSpawnGroup": "0",
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Chunk_7",
+    "targetname": "[PR#]LevelLayer_Chunk_7",
+    "classname": "info_world_layer",
+    "origin": "-2208.000000 -3584.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42252",
+    "worldname": "ze_inboxed_p",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]escape",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]escape",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "classname": "team_select",
+    "isPointPrefab": "true",
+    "targetMapName": "prefabs/misc/team_select",
+    "origin": "383.999939 351.999969 519.188965",
+    "angles": "0.000000 287.826019 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42253"
+  },
+  {
+    "TeamNum": "-1",
+    "IsEnabled": "1",
+    "EventName": "cs_win_panel_match",
+    "targetname": "[PR#]win_panel",
+    "classname": "logic_eventlistener",
+    "origin": "-2208.000000 -3568.000000 2656.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42255",
+    "connections": [
+      {
+        "output": "OnEventFired",
+        "target": "[PR#]sfx_win_panel",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnEventFired",
+        "target": "[PR#]LevelLayer_Chunk_7",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "entityIndexSelection": "0",
+    "saveAndRestore": "0",
+    "stopOnNew": "1",
+    "toLocalPlayer": "0",
+    "startOnSpawn": "0",
+    "soundName": "inboxed.sfx.win_panel",
+    "useLocalOffset": "0",
+    "EventName": "cs_win_panel_match",
+    "targetname": "[PR#]sfx_win_panel",
+    "classname": "point_soundevent",
+    "origin": "-2208.000000 -3568.000000 2672.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42256"
+  },
+  {
+    "wait": "0.000000",
+    "filtername": "[PR#]ct_fil",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]escape_train",
+    "targetname": "[PR#]helicopter_unfucker",
+    "classname": "trigger_multiple",
+    "origin": "-3074.000000 -3632.000000 2788.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42258",
+    "model": "maps/ze_inboxed_p/entities/helicopter_unfucker_42258.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]helicopter_unfucker_dest",
+        "input": "Teleport",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "teleport_use_current_angle": "0",
+    "teleport_parented_entities": "0",
+    "spawnflags": "0",
+    "target": "!activator",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]escape_train",
+    "targetname": "[PR#]helicopter_unfucker_dest",
+    "classname": "point_teleport",
+    "origin": "-3056.000000 -3632.000000 2576.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "42259"
   }
 ]
