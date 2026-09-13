@@ -36134,6 +36134,70 @@
         "param": "",
         "delay": 5,
         "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd1",
+        "input": "Stop",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd2",
+        "input": "Stop",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd3",
+        "input": "Stop",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd4",
+        "input": "Stop",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd4",
+        "input": "Start",
+        "param": "",
+        "delay": 0.8999999761581421,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd3",
+        "input": "Start",
+        "param": "",
+        "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd2",
+        "input": "Start",
+        "param": "",
+        "delay": 0.30000001192092896,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]typ_sd1",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -38920,172 +38984,6 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12276"
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "1",
-    "TriggerOnce": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]typ_relayR",
-    "classname": "logic_relay",
-    "origin": "-8467.000000 -2694.809814 3869.439941",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "12279",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!self",
-        "input": "Enable",
-        "param": "",
-        "delay": 12,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_mk",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "gravity 0.2",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "basevelocity 0 0 250",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "gravity 1",
-        "delay": 0.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "absvelocity 0 0 0",
-        "delay": 0.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!activator",
-        "input": "keyvalue",
-        "param": "speed 0",
-        "delay": 1.399999976158142,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!activator",
-        "input": "keyvalue",
-        "param": "speed 1",
-        "delay": 1.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_pushme",
-        "input": "Kill",
-        "param": "",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_model",
-        "input": "SetAnimationNotLooping",
-        "param": "rush",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd1",
-        "input": "Start",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd2",
-        "input": "Start",
-        "param": "",
-        "delay": 0.30000001192092896,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd3",
-        "input": "Start",
-        "param": "",
-        "delay": 0.6000000238418579,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd3",
-        "input": "Start",
-        "param": "",
-        "delay": 0.8999999761581421,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd3",
-        "input": "Stop",
-        "param": "",
-        "delay": 5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd3",
-        "input": "Stop",
-        "param": "",
-        "delay": 4,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd2",
-        "input": "Stop",
-        "param": "",
-        "delay": 3,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typ_sd1",
-        "input": "Stop",
-        "param": "",
-        "delay": 2,
-        "limit": -1
-      }
-    ]
   },
   {
     "Template01": "[PR#]typ_pushme",
@@ -42316,5 +42214,107 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12551"
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "1",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "targetname": "[PR#]typ_relayR",
+    "classname": "logic_relay",
+    "origin": "-8467.000000 -2694.809814 3869.439941",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12279",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 12,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]typ_mk",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "gravity 0.2",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "basevelocity 0 0 250",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "gravity 1",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "absvelocity 0 0 0",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 0",
+        "delay": 1.399999976158142,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 1",
+        "delay": 1.5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]typ_pushme",
+        "input": "Kill",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]typ_model",
+        "input": "SetAnimationNotLooping",
+        "param": "rush",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]
