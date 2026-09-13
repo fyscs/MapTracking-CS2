@@ -44,7 +44,7 @@
         "target": "[PR#]Omega_F_Normal_Attack_MM\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.20000000298023224,
+        "delay": 0.10000000149011612,
         "limit": 1
       },
       {
@@ -52,7 +52,7 @@
         "target": "[PR#]Omega_F_Normal_Attack_Target\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.20000000298023224,
+        "delay": 0.10000000149011612,
         "limit": 1
       },
       {
@@ -60,7 +60,7 @@
         "target": "!self",
         "input": "SetSpeedReal",
         "param": "500",
-        "delay": 0.2800000011920929,
+        "delay": 0.12999999523162842,
         "limit": 1
       },
       {
@@ -118,6 +118,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Omega_F_Normal_Attack_Particle_1\u00260000",
+        "input": "Start",
+        "param": "",
+        "delay": 0.11999999731779099,
+        "limit": 1
       }
     ]
   },
@@ -166,8 +174,8 @@
     "data_cp": "-1",
     "snapshot_mesh": "0",
     "no_save": "0",
-    "start_active": "1",
-    "effect_name": "particles/orbit/orbit.vpcf",
+    "start_active": "0",
+    "effect_name": "particles/orbit/orbit_parent.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "parentname": "[PR#]Omega_F_Normal_Attack_Train\u00260000",
@@ -280,7 +288,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Omega_F_Normal_Attack_Path2\u00260000",
     "classname": "path_track",
-    "origin": "-46.000000 -63.000000 6.000000",
+    "origin": "1.000000 -582.000000 6.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6233",

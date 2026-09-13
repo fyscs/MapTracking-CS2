@@ -100,13 +100,37 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 0.019999999552965164,
+        "delay": 5.019999980926514,
         "limit": 1
       },
       {
         "output": "OnUser4",
         "target": "!self",
         "input": "StopSound",
+        "param": "",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "!self",
+        "input": "SetSoundEventName",
+        "param": "Extreme_Sound_5",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser3",
+        "target": "!self",
+        "input": "KeyValues",
+        "param": "targetname Music_Extreme_4",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser2",
+        "target": "[PR#]Music_Extreme_4",
+        "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -730,6 +754,14 @@
         "input": "StartSound",
         "param": "",
         "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Map_Hud_Script",
+        "input": "RunScriptInput",
+        "param": "MusicRandom",
+        "delay": 0.8999999761581421,
         "limit": 1
       }
     ]

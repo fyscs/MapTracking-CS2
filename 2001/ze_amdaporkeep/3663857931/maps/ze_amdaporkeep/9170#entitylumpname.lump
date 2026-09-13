@@ -167,18 +167,18 @@
       },
       {
         "output": "OnSpawn",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnSpawn",
         "target": "[PR#]Item_Elidibus_Ui_Case",
         "input": "Kill",
         "param": "",
         "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Item_Elidibus_Ui_Model",
+        "input": "KillHierarchy",
+        "param": "",
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -261,26 +261,10 @@
       },
       {
         "output": "OnCase01",
-        "target": "[PR#]Item_Elidibus_Button",
-        "input": "Unlock",
-        "param": "",
-        "delay": 2.799999952316284,
-        "limit": 1
-      },
-      {
-        "output": "OnCase01",
         "target": "[PR#]Item_Elidibus_Filter_Ui_Disabled",
         "input": "KeyValues",
         "param": "targetname Item_Elidibus_Filter_Ui",
         "delay": 2.799999952316284,
-        "limit": 1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]Item_Elidibus_Button",
-        "input": "Unlock",
-        "param": "",
-        "delay": 1.7999999523162842,
         "limit": 1
       },
       {
@@ -401,6 +385,22 @@
         "input": "StartSound",
         "param": "",
         "delay": 0.44999998807907104,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]Item_Elidibus_Ui_Relay",
+        "input": "Kill",
+        "param": "",
+        "delay": 2.799999952316284,
+        "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]Item_Elidibus_Ui_Relay",
+        "input": "Kill",
+        "param": "",
+        "delay": 1.7999999523162842,
         "limit": 1
       }
     ]

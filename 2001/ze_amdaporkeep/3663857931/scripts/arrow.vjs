@@ -63,17 +63,20 @@ let DK = null;
 let TG = null;
 let StartTime = 0;
 
-Instance.SetThink(UpdatePosition);
-
 Instance.OnScriptInput("Omega_M_Arrow", (pl) => {
     TG = pl.activator;
     if (!TG || !TG.IsValid()) return;
     DK = Instance.FindEntityByName("Player_Dark_Knight");
     if (DK && DK.GetTeamNumber() == 3) TG = DK;
-    Instance.EntFireAtName({name: "Omega_Sagittarius_Arrow_Text",input: "ShowHudHint", activator: TG});
+    Instance.EntFireAtName({name: "Omega_Sagittarius_Arrow_Text",input: "ShowHudHint",activator: TG});
+    Instance.EntFireAtName({name: "Omega_Sagittarius_Arrow_Screen",input: "SetParent",value: "!activator",delay: 0,activator: TG});
+    Instance.EntFireAtName({name: "Omega_Sagittarius_Arrow_Screen",input: "SetParentAttachment",value: "primary",delay: 0.02});
+    Instance.EntFireAtName({name: "Omega_Sagittarius_Arrow_Screen",input: "kill",delay: 8.5});
     StartTime = Instance.GetGameTime();
     Instance.SetNextThink(StartTime);
 });
+
+Instance.SetThink(UpdatePosition);
 
 function UpdatePosition() {
     const Time = Instance.GetGameTime();
@@ -86,7 +89,7 @@ function UpdatePosition() {
     const Evec = Normalization2d(TGpos, Mpos);
     const theangles = ReturnAngles(Evec);
     MBoss.Teleport({ angles: theangles });
-    Instance.SetNextThink(Time);
+    Instance.SetNextThink(Time + 0.1);
 }
 
 function ReturnAngles(vec) {

@@ -195,7 +195,7 @@
         "limit": 1
       },
       {
-        "output": "OnHurtPlayer",
+        "output": "OnStartTouch",
         "target": "!activator",
         "input": "AddContext",
         "param": "Abyss:1",
@@ -224,14 +224,6 @@
         "input": "KeyValues",
         "param": "speed 1",
         "delay": 0.47999998927116394,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "RemoveContext",
-        "param": "Abyss",
-        "delay": 4.5,
         "limit": -1
       },
       {
@@ -307,7 +299,7 @@
         "output": "OnHitMin",
         "target": "[PR#]ZM_Diabolos_Hollow_Magic_Hp_Blocks",
         "input": "Subtract",
-        "param": "20",
+        "param": "1",
         "delay": 0,
         "limit": -1
       },
@@ -548,12 +540,12 @@
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "0.000000",
-    "movedistance": "200.000000",
+    "movedistance": "20.000000",
     "speed": "100",
     "MoveWithoutPushingBlockers": "0",
     "NoInterpolate": "0",
     "authoredposition": "0",
-    "startposition": "1.000000",
+    "startposition": "10.000000",
     "spawnflags": "8",
     "movedir": "0.000000 0.000000 0.000000",
     "lightmapstatic": "0",
@@ -608,9 +600,9 @@
     ]
   },
   {
-    "max": "200",
+    "max": "10",
     "min": "0",
-    "startvalue": "200",
+    "startvalue": "10",
     "StartDisabled": "0",
     "targetname": "[PR#]ZM_Diabolos_Hollow_Magic_Hp_Blocks",
     "classname": "math_counter",
@@ -647,17 +639,9 @@
       {
         "output": "OutValue",
         "target": "[PR#]ZM_Diabolos_Hollow_Magic_Hpbar_Movelinear",
-        "input": "SetMoveDistanceFromStart",
+        "input": "SetPosition",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]ZM_Diabolos_Hollow_Magic_Hpbar_Movelinear",
-        "input": "SetPosition",
-        "param": "1",
-        "delay": 0.019999999552965164,
         "limit": -1
       }
     ]

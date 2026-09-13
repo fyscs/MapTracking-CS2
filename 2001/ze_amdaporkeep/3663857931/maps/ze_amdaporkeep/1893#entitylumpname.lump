@@ -1054,17 +1054,9 @@
       {
         "output": "OutValue",
         "target": "[PR#]Ahriman_Hpbar_Movelinear",
-        "input": "SetMoveDistanceFromStart",
+        "input": "SetPosition",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Ahriman_Hpbar_Movelinear",
-        "input": "SetPosition",
-        "param": "1",
-        "delay": 0.019999999552965164,
         "limit": -1
       }
     ]
@@ -1108,8 +1100,8 @@
       {
         "output": "OnUser1",
         "target": "[PR#]Ahriman_Hpbar_Movelinear",
-        "input": "Open",
-        "param": "",
+        "input": "SetPosition",
+        "param": "100",
         "delay": 0.019999999552965164,
         "limit": 1
       },
@@ -1152,7 +1144,7 @@
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "0.000000",
-    "movedistance": "100.000000",
+    "movedistance": "1.000000",
     "speed": "100",
     "MoveWithoutPushingBlockers": "0",
     "NoInterpolate": "0",

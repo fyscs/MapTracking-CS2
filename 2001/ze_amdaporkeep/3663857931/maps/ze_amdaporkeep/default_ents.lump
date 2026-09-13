@@ -2206,7 +2206,7 @@
       {
         "output": "OnPass",
         "target": "[PR#]Item_Black_Mage_Counter",
-        "input": "Add",
+        "input": "Subtract",
         "param": "5",
         "delay": 0,
         "limit": -1
@@ -3856,34 +3856,10 @@
         "limit": -1
       },
       {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "keyvalues",
-        "param": "speed 1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "SetDamageFilter",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnPlayerOutZone",
         "target": "!activator",
         "input": "SetDamageFilter",
         "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "keyvalues",
-        "param": "max_health 100",
         "delay": 0,
         "limit": -1
       },
@@ -3896,26 +3872,10 @@
         "limit": -1
       },
       {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "keyvalues",
-        "param": "targetname Player_None",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnPlayerOutZone",
         "target": "!activator",
         "input": "keyvalues",
         "param": "targetname Player_None",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "keyvalues",
-        "param": "rendermode 0 ",
         "delay": 0,
         "limit": -1
       },
@@ -3928,27 +3888,11 @@
         "limit": -1
       },
       {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "ClearContext",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnPlayerOutZone",
         "target": "!activator",
         "input": "ClearContext",
         "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "keyvalues",
-        "param": "health 100",
-        "delay": 0,
+        "delay": 0.5,
         "limit": -1
       },
       {
@@ -3956,14 +3900,6 @@
         "target": "!activator",
         "input": "keyvalues",
         "param": "health 100",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerInZone",
-        "target": "!activator",
-        "input": "keyvalues",
-        "param": "movetype 2",
         "delay": 0,
         "limit": -1
       },
@@ -4402,7 +4338,7 @@
     "DamageTarget": "!activator",
     "targetname": "[PR#]Doom_Hurt",
     "classname": "point_hurt",
-    "origin": "-5576.000000 -7708.000000 136.000000",
+    "origin": "-5576.000000 -7724.000000 152.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1435"
@@ -7917,7 +7853,7 @@
         "target": "[PR#]Item_Elidibus_Branch",
         "input": "Test",
         "param": "",
-        "delay": 0,
+        "delay": 0.019999999552965164,
         "limit": -1
       },
       {
@@ -7957,6 +7893,14 @@
         "target": "[PR#]Item_Red_Mage_White_Counter",
         "input": "Add",
         "param": "10",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Item_Elidibus_Ui_Relay",
+        "input": "Trigger",
+        "param": "",
         "delay": 0,
         "limit": -1
       }
@@ -20804,10 +20748,10 @@
     "hammerUniqueId": "1897"
   },
   {
-    "Filter02": "[PR#]Filter_Dark_Knight",
-    "Filter01": "[PR#]Filter_Team_Human",
-    "filtertype": "0",
-    "Negated": "0",
+    "Filter02": "[PR#]Item_Dark_Knight_Filter",
+    "Filter01": "[PR#]Filter_Team_Zombie",
+    "filtertype": "1",
+    "Negated": "1",
     "clientSideEntity": "0",
     "targetname": "[PR#]Filter_Team_HM_NoDK",
     "classname": "filter_multi",
@@ -21250,17 +21194,6 @@
         "limit": 1
       }
     ]
-  },
-  {
-    "filtername": "[PR#]Player_Dark_Knight",
-    "Negated": "1",
-    "clientSideEntity": "0",
-    "targetname": "[PR#]Filter_Dark_Knight",
-    "classname": "filter_activator_name",
-    "origin": "-5464.000000 -7784.000000 136.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4134"
   },
   {
     "Case28": "UnpressedDuck",
@@ -22946,7 +22879,7 @@
         "target": "[PR#]Omega_Efficient_BladeWorks_Particle",
         "input": "Start",
         "param": "",
-        "delay": 4,
+        "delay": 3.700000047683716,
         "limit": -1
       },
       {
@@ -23044,7 +22977,7 @@
         "target": "[PR#]Omega_SuperLiminal_Motion_Particle",
         "input": "Start",
         "param": "",
-        "delay": 3.4000000953674316,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -23766,6 +23699,7 @@
     ]
   },
   {
+    "Template20": "[PR#]Omega_F_Normal_Attack_Particle",
     "Template19": "[PR#]Omega_F_Hpbar_Movelinear",
     "Template18": "[PR#]Omega_F_Hpbar",
     "Template17": "[PR#]Omega_Fnomalattack_Sound",
@@ -27315,6 +27249,7 @@
   {
     "Template08": "[PR#]Omega_Sagittarius_Arrow_Text",
     "Template07": "[PR#]Omega_Sagittarius_Arrow_Particle",
+    "Template05": "[PR#]Omega_Sagittarius_Arrow_Screen",
     "Template04": "[PR#]Omega_Sagittarius_Arrow_Hurt",
     "Template03": "[PR#]Omega_Sagittarius_Arrow_Particle",
     "Template02": "[PR#]Omega_Sagittarius_Arrow_Sound",
@@ -30343,7 +30278,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Level_Template_ZM",
     "classname": "point_template",
-    "origin": "-5560.000000 -7692.000000 136.000000",
+    "origin": "-5576.000000 -7708.000000 136.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6931",
@@ -33356,7 +33291,7 @@
     "filtertype": "1",
     "Negated": "0",
     "clientSideEntity": "0",
-    "targetname": "[PR#]Item_Human_Clean",
+    "targetname": "[PR#]Filter_Human_Items",
     "classname": "filter_multi",
     "origin": "-4237.994141 15035.000000 123.000000",
     "angles": "0.000000 270.000000 0.000000",
@@ -34117,30 +34052,6 @@
   },
   {
     "wait": "1.000000",
-    "filtername": "[PR#]Item_Human_Clean",
-    "spawnflags": "4097",
-    "StartDisabled": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]Human_TN_Reset",
-    "classname": "trigger_multiple",
-    "origin": "-4573.000000 15359.998047 192.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8884",
-    "model": "maps/ze_amdaporkeep/entities/human_tn_reset_8884.vmdl",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "targetname Player_None",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "wait": "1.000000",
     "filtername": "[PR#]Filter_Team_Zombie",
     "spawnflags": "4097",
     "StartDisabled": "0",
@@ -34598,10 +34509,10 @@
     ]
   },
   {
-    "force": "1150",
+    "force": "800",
     "forcetime": "0",
     "attach1": "[PR#]Chocobo_Physbox",
-    "spawnflags": "30",
+    "spawnflags": "26",
     "targetname": "[PR#]Chocobo_ThrusterForward",
     "classname": "phys_thruster",
     "origin": "-6944.000000 10568.000000 124.000000",
@@ -34613,7 +34524,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "KeyValues",
-        "param": "force 1750",
+        "param": "force 1200",
         "delay": 0,
         "limit": -1
       },
@@ -34621,7 +34532,7 @@
         "output": "OnUser1",
         "target": "!self",
         "input": "Scale",
-        "param": "3",
+        "param": "2",
         "delay": 0.019999999552965164,
         "limit": -1
       },
@@ -34656,10 +34567,10 @@
     "hammerUniqueId": "8998"
   },
   {
-    "force": "1150",
+    "force": "800",
     "forcetime": "0",
     "attach1": "[PR#]Chocobo_Physbox",
-    "spawnflags": "30",
+    "spawnflags": "26",
     "targetname": "[PR#]Chocobo_ThrusterBackward",
     "classname": "phys_thruster",
     "origin": "-6944.000000 10504.000000 124.000000",
@@ -34844,7 +34755,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Map_Winner_Relay",
     "classname": "logic_relay",
-    "origin": "-7008.000000 10362.000000 88.000000",
+    "origin": "-7008.000000 10360.000000 88.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9015",
@@ -34872,6 +34783,14 @@
         "param": "OnUser1\u003E!activator\u003EKeyValues\u003Espeed 1\u003E20\u003E1",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Chocobo_Rider_Check_Once",
+        "input": "Kill",
+        "param": "",
+        "delay": 25,
+        "limit": 1
       }
     ]
   },
@@ -34918,8 +34837,8 @@
         "target": "[PR#]Back_TD",
         "input": "Teleport",
         "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -35037,7 +34956,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Chocobo_Run_Sound_Relay",
     "classname": "logic_relay",
-    "origin": "-6992.000000 10362.000000 88.000000",
+    "origin": "-6992.000000 10360.000000 88.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9029",
@@ -35093,7 +35012,7 @@
         "target": "!activator",
         "input": "KeyValues",
         "param": "targetname Player_Chocobo_Rider",
-        "delay": 0,
+        "delay": 0.019999999552965164,
         "limit": -1
       },
       {
@@ -35133,7 +35052,7 @@
         "target": "[PR#]Temp_Chocobo_MM",
         "input": "ForceSpawn",
         "param": "",
-        "delay": 0.019999999552965164,
+        "delay": 0.03999999910593033,
         "limit": -1
       },
       {
@@ -35149,6 +35068,14 @@
         "target": "[PR#]Chocobo_Point_ViewControl",
         "input": "EnableCamera",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Map_Hud_Script",
+        "input": "RunScriptInput",
+        "param": "ItemCheck",
         "delay": 0,
         "limit": -1
       }
@@ -35329,7 +35256,7 @@
     "vscripts": "game_ui",
     "targetname": "[PR#]Chocobo_Motion_Ui",
     "classname": "logic_case",
-    "origin": "-7000.000000 10266.000000 88.000000",
+    "origin": "-7024.000000 10292.000000 88.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9045",
@@ -35432,8 +35359,8 @@
       },
       {
         "output": "OnCase16",
-        "target": "[PR#]Chocobo_Speed_Up_Relay",
-        "input": "Trigger",
+        "target": "[PR#]Filter_Chocobo_WithItem",
+        "input": "TestActivator",
         "param": "",
         "delay": 0.019999999552965164,
         "limit": -1
@@ -35653,6 +35580,14 @@
         "param": "1",
         "delay": 0.4000000059604645,
         "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0.019999999552965164,
+        "limit": -1
       }
     ]
   },
@@ -35660,7 +35595,7 @@
     "InitialValue": "0",
     "targetname": "[PR#]Chocobo_Animation_Branch",
     "classname": "logic_branch",
-    "origin": "-7000.000000 10285.000000 92.000000",
+    "origin": "-7024.000000 10311.000000 88.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9046",
@@ -35714,7 +35649,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Chocobo_Animation_Counter",
     "classname": "math_counter",
-    "origin": "-6984.000000 10266.000000 88.000000",
+    "origin": "-7008.000000 10292.000000 88.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9047",
@@ -35733,7 +35668,7 @@
     "InitialValue": "0",
     "targetname": "[PR#]Chocobo_Animation_Branch2",
     "classname": "logic_branch",
-    "origin": "-6984.000000 10285.000000 92.000000",
+    "origin": "-7008.000000 10311.000000 88.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9048",
@@ -35776,7 +35711,7 @@
     "InitialValue": "0",
     "targetname": "[PR#]Chocobo_Animation_Branch3",
     "classname": "logic_branch",
-    "origin": "-6968.000000 10285.000000 92.000000",
+    "origin": "-6992.000000 10311.000000 88.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9049",
@@ -35840,7 +35775,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Chocobo_Speed_Up_Relay",
     "classname": "logic_relay",
-    "origin": "-6968.000000 10266.000000 87.000000",
+    "origin": "-6992.000000 10292.000000 87.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9050",
@@ -36003,7 +35938,7 @@
     "StartDisabled": "1",
     "targetname": "[PR#]Chocobo_PlayerOn_Relay",
     "classname": "logic_relay",
-    "origin": "-6976.000000 10362.000000 88.000000",
+    "origin": "-6976.000000 10360.000000 88.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9079",
@@ -36012,7 +35947,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Chocobo_ThrusterForward",
         "input": "KeyValues",
-        "param": "force 1150",
+        "param": "force 800",
         "delay": 0,
         "limit": -1
       },
@@ -36120,7 +36055,7 @@
     "clientSideEntity": "0",
     "targetname": "[PR#]Filter_ChocoboOrHuman",
     "classname": "filter_multi",
-    "origin": "-6976.000000 10328.000000 104.000000",
+    "origin": "-7024.000000 10328.000000 88.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9167"
@@ -36602,7 +36537,7 @@
     "StartDisabled": "1",
     "targetname": "[PR#]Chocobo_Switch_Relay",
     "classname": "logic_relay",
-    "origin": "-6952.000000 10266.000000 87.000000",
+    "origin": "-6976.000000 10292.000000 87.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9286",
@@ -36653,7 +36588,7 @@
     "InitialValue": "1",
     "targetname": "[PR#]Chocobo_Switch_Branch",
     "classname": "logic_branch",
-    "origin": "-6952.000000 10285.000000 92.000000",
+    "origin": "-6976.000000 10311.000000 88.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9288",
@@ -36714,7 +36649,7 @@
     "vscripts": "point_viewcontrol",
     "targetname": "[PR#]Chocobo_Point_ViewControl",
     "classname": "logic_relay",
-    "origin": "-6936.000000 10266.000000 87.000000",
+    "origin": "-7024.000000 10360.000000 87.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9293"
@@ -36723,7 +36658,7 @@
     "CompareValue": "0.000000",
     "targetname": "[PR#]Chocobo_Animation_Compare",
     "classname": "logic_compare",
-    "origin": "-6984.000000 10266.000000 104.000000",
+    "origin": "-7008.000000 10292.000000 104.000000",
     "angles": "0.000000 180.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9294",
@@ -36836,5 +36771,69 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9301"
+  },
+  {
+    "Filter01": "[PR#]Filter_Human_Items",
+    "filtertype": "0",
+    "Negated": "1",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]Filter_Chocobo_WithItem",
+    "classname": "filter_multi",
+    "origin": "-7024.000000 10344.000000 88.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9306",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Chocobo_Speed_Up_Relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "cs_script": "scripts/hud.vjs",
+    "targetname": "[PR#]Map_Hud_Script",
+    "classname": "point_script",
+    "origin": "-14376.000000 -10856.000000 5128.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9307"
+  },
+  {
+    "observable": "1",
+    "layout": "panorama/layout/custom_game/map_hud.xml",
+    "targetname": "[PR#]Map_Hud_Layout",
+    "classname": "custom_hud_layout",
+    "origin": "-14392.000000 -10856.000000 5128.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9308"
+  },
+  {
+    "filtername": "[PR#]Filter_Chocobo_ZM",
+    "spawnflags": "1",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Chocobo_Rider_Check_Once",
+    "classname": "trigger_once",
+    "origin": "-14961.762695 -53.248047 149.053696",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9315",
+    "model": "maps/ze_amdaporkeep/entities/chocobo_rider_check_once_9315.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Back_TD",
+        "input": "Teleport",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      }
+    ]
   }
 ]

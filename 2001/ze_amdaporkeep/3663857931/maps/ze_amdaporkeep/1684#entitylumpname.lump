@@ -14,8 +14,8 @@
     "disablereceiveshadows": "1",
     "rendercolor": "255 255 255",
     "renderamt": "255",
-    "rendermode": "0",
-    "renderfx": "0",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
     "targetname": "[PR#]Item_Ninja_Elite",
     "classname": "weapon_elite",
     "origin": "-4.000000 0.000000 0.000000",
@@ -42,22 +42,6 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "targetname Player_Ninja",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerPickup",
-        "target": "[PR#]Player_Ninja",
-        "input": "KeyValues",
-        "param": "targetname Player_None",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerPickup",
         "target": "[PR#]Item_Ninja_Ninjutsu_Text",
         "input": "ShowHudHint",
         "param": "",
@@ -71,6 +55,30 @@
         "param": "",
         "delay": 8,
         "limit": 1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]Player_Ninja",
+        "input": "KeyValues",
+        "param": "targetname Player_None",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "targetname Player_Ninja",
+        "delay": 0.019999999552965164,
+        "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]Map_Hud_Script",
+        "input": "RunScriptInput",
+        "param": "Ninja",
+        "delay": 0.03999999910593033,
+        "limit": -1
       }
     ]
   },
@@ -97,7 +105,7 @@
     "parentname": "[PR#]Item_Ninja_Elite",
     "targetname": "[PR#]Item_Ninja_Button",
     "classname": "func_button",
-    "origin": "33.000000 0.000000 -12.000000",
+    "origin": "33.000000 0.000000 -8.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1281",

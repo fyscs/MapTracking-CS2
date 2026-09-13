@@ -30,7 +30,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "400",
+    "speed": "550",
     "pushdir": "90.000000 0.000000 0.000000",
     "filtername": "[PR#]Filter_Team_Zombie",
     "spawnflags": "4097",
@@ -52,6 +52,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },

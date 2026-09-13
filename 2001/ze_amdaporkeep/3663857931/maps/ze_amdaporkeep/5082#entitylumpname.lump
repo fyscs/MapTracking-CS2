@@ -596,10 +596,10 @@
     "parentname": "[PR#]Omega_F_Model",
     "targetname": "[PR#]Omega_F_Normal_Attack_Maker",
     "classname": "env_entity_maker",
-    "origin": "2853.000000 -2229.000000 726.000000",
+    "origin": "2856.000000 -2200.000000 723.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5934",
+    "hammerUniqueId": "9314",
     "_template_lump_ent_index": "10",
     "connections": [
       {
@@ -615,7 +615,7 @@
         "target": "[PR#]Omega_Fnomalattack_Sound",
         "input": "FireUser1",
         "param": "",
-        "delay": 0.11999999731779099,
+        "delay": 0,
         "limit": -1
       },
       {
@@ -647,7 +647,15 @@
         "target": "[PR#]Omega_F_Normal_Attack_Train*",
         "input": "FireUser1",
         "param": "",
-        "delay": 0.019999999552965164,
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Omega_F_Normal_Attack_Particle",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -866,15 +874,7 @@
         "output": "OnSpawn",
         "target": "[PR#]Omega_HP_Blocks",
         "input": "AddOutput",
-        "param": "OutValue\u003EOmega_F_Hpbar_Movelinear\u003ESetMoveDistanceFromStart\u003E\u003E0\u003E-1",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Omega_HP_Blocks",
-        "input": "AddOutput",
-        "param": "OutValue\u003EOmega_F_Hpbar_Movelinear\u003ESetPosition\u003E1\u003E0.02\u003E-1",
+        "param": "OutValue\u003EOmega_F_Hpbar_Movelinear\u003ESetPosition\u003E\u003E0\u003E-1",
         "delay": 0,
         "limit": 1
       }
@@ -1135,14 +1135,6 @@
         "param": "",
         "delay": 0,
         "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "StopSound",
-        "param": "",
-        "delay": 2,
-        "limit": -1
       }
     ]
   },
@@ -1252,7 +1244,7 @@
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "0.000000",
-    "movedistance": "100.000000",
+    "movedistance": "1.000000",
     "speed": "100",
     "MoveWithoutPushingBlockers": "0",
     "NoInterpolate": "0",
@@ -1280,5 +1272,51 @@
     "hammerUniqueId": "8513",
     "model": "maps/ze_amdaporkeep/entities/omega_f_hpbar_movelinear_8513.vmdl",
     "_template_lump_ent_index": "18"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/f_casting.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "staff",
+    "parentname": "[PR#]Omega_F_Model",
+    "targetname": "[PR#]Omega_F_Normal_Attack_Particle",
+    "classname": "info_particle_system",
+    "origin": "48.000000 -32.000000 -1.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9304",
+    "_template_lump_ent_index": "19",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "StopPlayEndCap",
+        "param": "",
+        "delay": 0.5,
+        "limit": -1
+      }
+    ]
   }
 ]

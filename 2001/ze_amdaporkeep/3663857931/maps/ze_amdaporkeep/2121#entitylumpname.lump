@@ -49,7 +49,7 @@
   },
   {
     "wait": "1.000000",
-    "filtername": "[PR#]Item_Human_Clean",
+    "filtername": "[PR#]Filter_Human_Items",
     "spawnflags": "1",
     "StartDisabled": "0",
     "useLocalOffset": "0",
@@ -73,9 +73,17 @@
       {
         "output": "OnStartTouch",
         "target": "!activator",
+        "input": "ClearContext",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
         "input": "KeyValues",
         "param": "targetname Player_None",
-        "delay": 0,
+        "delay": 0.5,
         "limit": -1
       }
     ]
@@ -2748,17 +2756,9 @@
       {
         "output": "OutValue",
         "target": "[PR#]Diabolos_Hpbar_Movelinear",
-        "input": "SetMoveDistanceFromStart",
+        "input": "SetPosition",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OutValue",
-        "target": "[PR#]Diabolos_Hpbar_Movelinear",
-        "input": "SetPosition",
-        "param": "1",
-        "delay": 0.019999999552965164,
         "limit": -1
       },
       {
@@ -2826,8 +2826,8 @@
       {
         "output": "OnUser1",
         "target": "[PR#]Diabolos_Hpbar_Movelinear",
-        "input": "Open",
-        "param": "",
+        "input": "SetPosition",
+        "param": "100",
         "delay": 0.019999999552965164,
         "limit": 1
       },
@@ -2870,7 +2870,7 @@
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "0.000000",
-    "movedistance": "100.000000",
+    "movedistance": "1.000000",
     "speed": "100",
     "MoveWithoutPushingBlockers": "0",
     "NoInterpolate": "0",

@@ -54,6 +54,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -61,7 +69,7 @@
     "FallingSpeedThreshold": "-150",
     "alternateticksfix": "0",
     "triggeronstarttouch": "0",
-    "speed": "400",
+    "speed": "500",
     "pushdir": "0.000000 337.500000 0.000000",
     "filtername": "[PR#]Filter_Team_Zombie",
     "spawnflags": "1",
@@ -83,6 +91,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -90,7 +106,7 @@
     "FallingSpeedThreshold": "-150",
     "alternateticksfix": "0",
     "triggeronstarttouch": "0",
-    "speed": "400",
+    "speed": "500",
     "pushdir": "0.000000 22.500000 0.000000",
     "filtername": "[PR#]Filter_Team_Zombie",
     "spawnflags": "1",
@@ -112,6 +128,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -141,6 +165,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -170,6 +202,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -199,6 +239,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "absvelocity 0 0 0",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
