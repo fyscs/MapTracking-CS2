@@ -555,6 +555,7 @@ const STEAM_IDS_LIST = {
     "[U:1:322548190]":    ["VIP"],                       // NICESHOT
     "[U:1:229842349]":    ["VIP"],                       // KOEN
     "[U:1:248696175]":    ["VIP"],                       // KOTYA
+    "[U:1:291899504]":    ["VIP"],                       // CMAZ
     "[U:1:910174825]":    ["VIP", "LEADER"],             // IDGI
     "[U:1:213985657]":    ["SPONSOR", "LEADER"],         // ICECREAM
     "[U:1:394124028]":    ["SPONSOR", "LEADER"],         // XYZ
@@ -651,7 +652,7 @@ const RADAR_STEPS = 15;
 const MAP_SIZE = 30720;
 const MAP_HALF = MAP_SIZE / 2;
 const RADAR_DOTS_PER_TEAM = 40;
-const RADAR_UPDATE_INTERVAL = 0.5;
+const RADAR_UPDATE_INTERVAL = 0.75;
 
 let lastRadarUpdate = 0;
 
@@ -671,229 +672,6 @@ const TRAP_TYPES = [
     { name: "Map_Chunk_02_Wall",    duration: 7.0,  isTrap: false },
     { name: "Map_Chunk_27_Cell",    duration: 7.0, isTrap: false },
 ];
-
-const LANG_STRINGS = {
-    eng: {
-        menu_btn: "MENU",
-        cursor_hint: "PRESS CTRL TO ENABLE CURSOR",
-        tab_map_stats: "MAP STATS",
-        tab_skin_menu: "SKIN MENU",
-        tab_admin_room: "MAP SETTINGS",
-
-        mode_easy: "EASY MODE",
-        mode_normal: "NORMAL MODE",
-        mode_extreme: "EXTREME MODE",
-        mode_survival: "LIQUIDATION MODE",
-
-        desc_easy: "One way open max. Standard rules apply. A relaxed run.",
-        desc_normal: "All ways can be possibly be open. Standard rules apply.",
-        desc_extreme: "Includes a timer before SAMOSBOR. 6 Floors.",
-        desc_survival: "Survive as long as possible. Find the canister and escape the floor.",
-
-        voting_now: "VOTING...",
-        current_mode: "CURRENT MODE",
-        setting_mode: "SETTING MODE TO",
-        votes_change: "VOTED TO CHANGE MODE",
-
-        obj_ct: "OBJECTIVE: FIND THE CANISTER AND REACH THE ELEVATOR. SURVIVE AT ALL COSTS. YOU CAN ALSO COLLECT BOTTLES AND SPEND THEM AT THE SLOT MACHINE.",
-        obj_t: "OBJECTIVE: STOP THE HUMANS FROM FINDING THE CANISTER AND ESCAPING THE FLOOR.",
-
-        you_won: "YOU WON",
-        no_win: "NO WIN — TRY AGAIN",
-        floor: "FLOOR",
-
-        skin_click: "Click a skin to apply it.",
-        skin_noflag: "Skins are available to players with a flag.",
-        skin_locked: "LOCKED",
-        skin_active: "ACTIVE",
-        skin_avail: "AVAILABLE",
-
-        it_beer: "BEER",
-        it_beans: "BEANS",
-        it_spanner: "SPANNER",
-        it_whip: "WHIP",
-        it_flaregun: "FLARE GUN",
-        it_ppsh: "PPSH",
-        it_ppsh_golden: "PPSH GOLDEN",
-
-        ms_title: "MAP STATISTICS",
-        ms_ways: "WAYS GENERATED",
-        ms_way1: "1 WAY",
-        ms_way2: "2 WAYS",
-        ms_way3: "3 WAYS",
-        ms_way4: "4 WAYS",
-        ms_besttimes: "BEST TIMES",
-        ms_easy_normal: "EASY — NORMAL ENDING",
-        ms_easy_true: "EASY — TRUE ENDING",
-        ms_normal_normal: "NORMAL — NORMAL ENDING",
-        ms_normal_true: "NORMAL — TRUE ENDING",
-        ms_extreme_normal: "EXTREME — NORMAL ENDING",
-        ms_extreme_true: "EXTREME — TRUE ENDING",
-        ms_totals: "TOTALS",
-        ms_runs_lbl: "RUNS STARTED",
-        ms_wins_lbl: "RUNS COMPLETED",
-        ms_floors_lbl: "FLOORS CLEARED",
-        ms_traps_lbl: "TRAPS DEFUSED",
-        ms_bottles_lbl: "BOTTLES COLLECTED",
-        ms_bottles_spent_lbl: "BOTTLES SPENT",
-        ms_spins_lbl: "SLOT MACHINE SPINS",
-        ms_ranking: "LIQUIDATION MODE RANKING (UNAVAILABLE)",
-        ms_ranking_sub: "",
-        ms_th_player: "PLAYER",
-        ms_th_bottles: "",
-
-        admin_noaccess: "YOU CANNOT INTERACT WITH THIS PANEL",
-        as_values: "VALUES",
-        as_toggles: "TOGGLES",
-        as_health: "HEALTH",
-        as_maxhealth: "MAX HEALTH",
-        as_maxfloors: "MAX FLOORS",
-        as_traps: "TRAPS %",
-        as_npcs: "NPCS %",
-        as_samosbortime: "SAMOSBOR TIME",
-        as_samosbordamage: "SAMOSBOR DAMAGE",
-        as_exitglow: "EXIT GLOW",
-        as_lightning: "LIGHTNING STRIKES",
-        as_falldamage: "FALL DAMAGE",
-        as_fakeexits: "FAKE EXITS",
-        as_deadend: "DEAD END CHUNKS",
-        as_minibosses: "MINI BOSSES",
-        as_extrememode: "EXTREME MODE",
-        as_vipmode: "VIP MODE",
-        as_chunksshuffle: "CHUNKS SHUFFLE",
-        as_samosbortimer: "SAMOSBOR TIMER",
-        as_elevator: "ELEVATOR HUMANS CHECK",
-        as_on: "ON",
-        as_off: "OFF",
-        as_reset: "RESET TO DEFAULT",
-        as_on_1: "ON",   as_off_1: "OFF",
-        as_on_2: "ON",   as_off_2: "OFF",
-        as_on_3: "ON",   as_off_3: "OFF",
-        as_on_4: "ON",   as_off_4: "OFF",
-        as_on_5: "ON",   as_off_5: "OFF",
-        as_on_6: "ON",   as_off_6: "OFF",
-        as_on_7: "ON",   as_off_7: "OFF",
-        as_on_8: "ON",   as_off_8: "OFF",
-        as_on_9: "ON",   as_off_9: "OFF",
-        as_on_10: "ON",  as_off_10: "OFF",
-        as_on_11: "ON",  as_off_11: "OFF",
-
-        hint_radar: "SHIFT + ATTACK2 — OPEN RADAR",
-        hint_thirdperson: "SHIFT + CTRL — THIRDPERSON MODE",
-    },
-    chs: {
-        menu_btn: "菜单",
-        cursor_hint: "按 CTRL 启用光标",
-        tab_map_stats: "地图统计",
-        tab_skin_menu: "皮肤菜单",
-        tab_admin_room: "地图设置",
-
-        mode_easy: "简单模式",
-        mode_normal: "普通模式",
-        mode_extreme: "极限模式",
-        mode_survival: "清算模式",
-
-        desc_easy: "最多开放一条路，标准规则，轻松通关。",
-        desc_normal: "所有通路都可能开放，标准规则。",
-        desc_extreme: "自组前有倒计时，共6层。",
-        desc_survival: "尽可能长时间生存。找到罐子并逃离楼层。",
-
-        voting_now: "投票中...",
-        current_mode: "当前模式",
-        setting_mode: "正在设置模式为",
-        votes_change: "已投票更换模式",
-
-        obj_ct: "目标：找到罐子并抵达电梯。不惜一切代价生存。你还可以收集瓶子并在老虎机中使用。",
-        obj_t: "目标：阻止人类找到罐子并逃离楼层。",
-
-        you_won: "你赢得了",
-        no_win: "未中奖 — 再试一次",
-        floor: "楼层",
-
-        skin_click: "点击皮肤即可应用。",
-        skin_noflag: "皮肤仅对拥有权限的玩家开放。",
-        skin_locked: "已锁定",
-        skin_active: "使用中",
-        skin_avail: "可用",
-
-        it_beer: "啤酒",
-        it_beans: "罐头豆",
-        it_spanner: "扳手",
-        it_whip: "鞭子",
-        it_flaregun: "信号枪",
-        it_ppsh: "波波沙",
-        it_ppsh_golden: "黄金波波沙",
-
-        ms_title: "地图统计",
-        ms_ways: "生成的通路",
-        ms_way1: "1 条路",
-        ms_way2: "2 条路",
-        ms_way3: "3 条路",
-        ms_way4: "4 条路",
-        ms_besttimes: "最佳纪录",
-        ms_easy_normal: "简单 — 普通结局",
-        ms_easy_true: "简单 — 真结局",
-        ms_normal_normal: "普通 — 普通结局",
-        ms_normal_true: "普通 — 真结局",
-        ms_extreme_normal: "极限 — 普通结局",
-        ms_extreme_true: "极限 — 真结局",
-        ms_totals: "总计",
-        ms_runs_lbl: "开始次数",
-        ms_wins_lbl: "完成次数",
-        ms_floors_lbl: "通过楼层",
-        ms_traps_lbl: "拆除陷阱",
-        ms_bottles_lbl: "收集瓶子",
-        ms_bottles_spent_lbl: "消耗瓶子",
-        ms_spins_lbl: "老虎机次数",
-        ms_ranking: "清算模式排行 (UNAVAILABLE)",
-        ms_ranking_sub: "",
-        ms_th_player: "玩家",
-        ms_th_bottles: "",
-
-        admin_noaccess: "你无法操作此面板",
-        as_values: "数值",
-        as_toggles: "开关",
-        as_health: "生命值",
-        as_maxhealth: "最大生命值",
-        as_maxfloors: "最大楼层",
-        as_traps: "陷阱 %",
-        as_npcs: "NPC %",
-        as_samosbortime: "自组时间",
-        as_samosbordamage: "自组伤害",
-        as_exitglow: "出口发光",
-        as_lightning: "闪电打击",
-        as_falldamage: "坠落伤害",
-        as_fakeexits: "假出口",
-        as_deadend: "死路区块",
-        as_minibosses: "小BOSS",
-        as_extrememode: "极限模式",
-        as_vipmode: "VIP模式",
-        as_chunksshuffle: "区块随机",
-        as_samosbortimer: "自组计时器",
-        as_elevator: "电梯人数检测",
-        as_on: "开",
-        as_off: "关",
-        as_reset: "恢复默认",
-        as_on_1: "开",   as_off_1: "关",
-        as_on_2: "开",   as_off_2: "关",
-        as_on_3: "开",   as_off_3: "关",
-        as_on_4: "开",   as_off_4: "关",
-        as_on_5: "开",   as_off_5: "关",
-        as_on_6: "开",   as_off_6: "关",
-        as_on_7: "开",   as_off_7: "关",
-        as_on_8: "开",   as_off_8: "关",
-        as_on_9: "开",   as_off_9: "关",
-        as_on_10: "开",  as_off_10: "关",
-        as_on_11: "开",  as_off_11: "关",
-
-        hint_radar: "SHIFT + ATTACK2 — 打开雷达",
-        hint_thirdperson: "SHIFT + CTRL — 第三人称模式",
-    },
-};
-
-const MODE_KEYS  = ["mode_easy", "mode_normal", "mode_extreme", "mode_survival"];
-const MODE_DKEYS = ["desc_easy", "desc_normal", "desc_extreme", "desc_survival"];
-const SLOT_ITEM_LANGKEYS = ["it_beer", "it_beans", "it_spanner", "it_whip", "it_flaregun", "it_ppsh", "it_ppsh_golden"];
 
 const MENU_TABS = ["map_stats", "skin_menu", "admin_room"];
 
@@ -969,7 +747,7 @@ const SURVIVAL_ZM_ITEM_MAX = 4;
 const SURVIVAL_ZM_ITEM_START = 3;
 const SURVIVAL_ZM_ITEM_INTERVAL = 60.0;
 const SURVIVAL_ZM_ITEM_CHECK = 1.0;
-let SURVIVAL_HP_TICK = 4.00;
+let SURVIVAL_HP_TICK = 7.00;
 let SURVIVAL_ZOMBIE_DAMAGE = 25;
 
 const SURVIVAL_CANISTER_COUNT = 3;
@@ -1153,6 +931,8 @@ let MapEntrancesCount_Max = 1;
 
 const TEAM_OBJECTIVE_DISPLAY_DURATION = 10.0;
 
+const SLOT_ITEM_NAMES = ["BEER", "BEANS", "SPANNER", "WHIP", "FLARE GUN", "PPSH", "PPSH GOLDEN"];
+
 const SLOT_ITEM_DEFS = [
     { key: "beer",        name: "BEER",        template: "Item_Beer_Template" },
     { key: "beans",       name: "BEANS",       template: "Item_Beans_Template" },
@@ -1166,6 +946,8 @@ const SLOT_ITEM_DEFS = [
 const SLOT_TICK_SCROLL_DURATION = 0.15;
 const SLOT_TICK_GAP = 0.01;
 const SLOT_TICK_CYCLE = SLOT_TICK_GAP + SLOT_TICK_SCROLL_DURATION + SLOT_TICK_GAP; // ≈0.17s
+
+const SLOT_REEL_FRAME_IDS = ["slot_reel_left", "slot_reel_center", "slot_reel_right"];
 
 const SLOT_LEFT_TICKS = 20;   // 20 × 0.17 = 3.4s
 const SLOT_CENTER_TICKS = 24; // ≈4.08s
@@ -1183,13 +965,21 @@ const BUTTON_IDS = ["btn_left", "btn_center", "btn_right"];
 const ALL_PATTERNS = ["LCR", "LC", "LR", "CR", "L", "C", "R", "None"];
 
 const MODE_DEFS = [
-    { enabled: true },   // 0 Easy
-    { enabled: true },   // 1 Normal
-    { enabled: true },   // 2 Extreme
-    { enabled: false },  // 3 Survival
+    { enabled: true,  name: "EASY MODE",        desc: "One way open max. Standard rules apply. A relaxed run." },
+    { enabled: true,  name: "NORMAL MODE",      desc: "All ways can be possibly be open. Standard rules apply." },
+    { enabled: true,  name: "EXTREME MODE",     desc: "Includes a timer before SAMOSBOR. 6 Floors." },
+    { enabled: false, name: "LIQUIDATION MODE", desc: "Survive as long as possible. Find the canister and escape the floor." },
 ];
 
 let activeModeIndex = 1;
+
+let currentButtonModes = ComputeInitialButtonModes();
+let previousActiveModeIndexHolder = 0;
+
+let votingActive = false;
+let revealingWinner = false;
+let voteEndTime = 0;
+let lastTimeLabelUpdate = 0;
 
 function ComputeInitialButtonModes() {
     const pool = [];
@@ -1204,14 +994,6 @@ function ComputeInitialButtonModes() {
     }
     return slots;
 }
-
-let currentButtonModes = ComputeInitialButtonModes();
-let previousActiveModeIndexHolder = 0;
-
-let votingActive = false;
-let revealingWinner = false;
-let voteEndTime = 0;
-let lastTimeLabelUpdate = 0;
 
 function ClearFocus(playerSlot) {
     if(!HUD_ENT)
@@ -1306,7 +1088,7 @@ function UpdateButtonLabels()
         }
     }
 
-    RefreshModeTextsForAll();
+    RefreshModeTexts();
 }
 
 function UpdateButtonVisibility()
@@ -1354,7 +1136,7 @@ function StartVoting()
         HUD_ENT.SetHasClass(id, "VoteLoser", false);
     }
 
-    RefreshModeTextsForAll();
+    RefreshModeTexts();
 
     for(const [slot, inst] of PlayerInstancesMap)
     {
@@ -1417,7 +1199,7 @@ function EndVoting()
     const winningModeIndex = currentButtonModes[winnerButtonIndex];
 
     SetActiveMode(winningModeIndex);
-    RefreshModeTextsForAll();
+    RefreshModeTexts();
 
     // Instance.Msg("Voting ended. Winning mode: " + MODE_DEFS[winningModeIndex].name);
 
@@ -1444,7 +1226,7 @@ function EndVoting()
         UpdateButtonLabels();
         UpdateButtonVisibility();
         UpdatePositionPattern();
-        RefreshModeTextsForAll();
+        RefreshModeTexts();
 
         isVotingForMode = false;
         isVoteForChangingModeSucceeded = false;
@@ -1540,15 +1322,15 @@ function SetFloor(text)
 function ComputeVotesNeeded()
 {
     let players_amount = GetValidPlayersCT();
-    let players_needed = (players_amount.length/100) * 70;
+    let players_needed = (players_amount.length/100) * 65;
     players_needed = Math.ceil(players_needed);
     if(players_needed <= VotesForChangingMode_Min)
     {
         players_needed = VotesForChangingMode_Min;
     }
-    if(players_needed >= 44)
+    if(players_needed >= 41)
     {
-        players_needed = 44;
+        players_needed = 41;
     }
     return players_needed;
 }
@@ -1557,13 +1339,8 @@ function UpdateChangeModeVoteText()
 {
     if(!HUD_ENT) return;
     const need = ComputeVotesNeeded();
-
-    for(const [slot, inst] of PlayerInstancesMap)
-    {
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "change_mode_vote_text", "vote_count_text",
-            `${VotesForChangingMode}/${need} ` + TP(inst, "votes_change"));
-    }
-
+    HUD_ENT.SetDialogVariableString("change_mode_vote_text", "vote_count_text",
+        `${VotesForChangingMode}/${need} VOTED TO CHANGE MODE`);
     HUD_ENT.SetHasClass("change_mode_vote_container", "Visible", true);
 }
 
@@ -1580,13 +1357,8 @@ function ResetChangeModeVoteText()
 {
     if(!HUD_ENT) return;
     const need = ComputeVotesNeeded();
-
-    for(const [slot, inst] of PlayerInstancesMap)
-    {
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "change_mode_vote_text", "vote_count_text",
-            `0/${need} ` + TP(inst, "votes_change"));
-    }
-
+    HUD_ENT.SetDialogVariableString("change_mode_vote_text", "vote_count_text",
+        `0/${need} VOTED TO CHANGE MODE`);
     HUD_ENT.SetHasClass("change_mode_vote_container", "Visible", false);
 }
 
@@ -1599,8 +1371,6 @@ Instance.OnCustomHudClicked((event) => {
         return;
     }
 
-    if(buttonId === "lang_btn_eng")  { inst.Lang = "eng"; ApplyLanguage(playerSlot, "eng"); return; }
-    if(buttonId === "lang_btn_chs")  { inst.Lang = "chs"; ApplyLanguage(playerSlot, "chs"); return; }
     if(buttonId === "menu_open_btn") { OpenBigMenu(playerSlot, inst);  return; }
     if(buttonId === "menu_close_btn"){ CloseBigMenu(playerSlot, inst); return; }
 
@@ -1665,18 +1435,12 @@ function SetSlotRow(rowPrefix, itemIndex)
     }
 }
 
-const SLOT_REEL_FRAME_IDS = ["slot_reel_left", "slot_reel_center", "slot_reel_right"];
-
 function ShowSlotResult(isWin, itemIndex)
 {
     if(!HUD_ENT) return;
  
-    for(const [slot, inst] of PlayerInstancesMap)
-    {
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "slot_result_text", "result_text",
-            isWin ? (TP(inst, "you_won") + ": " + TP(inst, SLOT_ITEM_LANGKEYS[itemIndex]))
-                  : TP(inst, "no_win"));
-    }
+    HUD_ENT.SetDialogVariableString("slot_result_text", "result_text",
+        isWin ? ("YOU WON: " + SLOT_ITEM_NAMES[itemIndex]) : "NO WIN — TRY AGAIN");
  
     if(isWin)
     {
@@ -1957,6 +1721,8 @@ Instance.SetThink(function () {
         UpdateUseProgress(slot, inst, player, now);
 
         if(isSurvivalMode
+           && !inst.HudScoreOverlayOpen
+           && !inst.HudMainMenuOpen
            && player.IsInputPressed(CSInputs.WALK)
            && player.WasInputJustPressed(CSInputs.ATTACK2))
         {
@@ -1973,6 +1739,7 @@ Instance.SetThink(function () {
         if(player.WasInputJustPressed(CSInputs.SHOW_SCORES)
            && !player.IsInputPressed(CSInputs.WALK)
            && !inst.HudMainMenuOpen
+           && !inst.HudRadarOpen
            && !votingActive
            && !revealingWinner)
         {
@@ -2050,6 +1817,7 @@ class Player {
         this.SpannerUseStartTime = 0;
 
         this.HudRadarOpen = false;
+        this.HudRadarHlIndex = -1;
         this.HudScoreOverlayOpen = false;
         this.HudMainMenuOpen = false;
         this.HudMainMenuTab = "map_stats";
@@ -2059,8 +1827,6 @@ class Player {
         this.CamOffset = { x: 0, y: 0, z: 0 };
         this.CamTarget = { x: 0, y: 0, z: 0 };
         this.CamAnimating = false;
-
-        this.Lang = "eng";
     }
     SetVotedForChangingMode()
     {
@@ -2185,47 +1951,43 @@ Instance.OnScriptInput("SetLastims", ({caller, activator}) => {
 Instance.OnPlayerDisconnect((event) => {
     const player_slot = event.playerSlot
 
-    if(HUD_ENT)
-    {
-        for(const panel of HUD_ALL_PANELS)
-        {
-            HUD_ENT.SetHasClassForPlayer(player_slot, panel, "Visible");
-        }
-        HUD_ENT.SetInputCaptureEnabled(player_slot, false);
-    }
+    ClearPlayerHudState(player_slot);
 
     const inst = PlayerInstancesMap.get(player_slot);
     PlayerInstancesMap.delete(event.playerSlot);
     SteamIdBySlot.delete(event.playerSlot);
-    if(isVoteForChangingMode)
+    if(floor == 0)
     {
-        if(inst?.voted_for_changing_mode)
+        if(isVoteForChangingMode)
         {
-            VotesForChangingMode--
-        }
-        let players_amount = GetValidPlayersCT();
-        let players_needed = (players_amount.length/100) * 70;
-        players_needed = Math.ceil(players_needed);
-        if(players_needed <= VotesForChangingMode_Min)
-        {
-            players_needed = VotesForChangingMode_Min;
-        }
-        if(players_needed >= 44)
-        {
-            players_needed = 44;
-        }
-        if(VotesForChangingMode >= players_needed)
-        {
-            isVoteForChangingMode = false;
-            isVoteForChangingModeSucceeded = true;
-            VotesForChangingMode = 0;
-            isVotingForMode = true;
-            HideChangeModeVoteText();
-            Instance.EntFireAtName({ name: "Map_Parameters", input: "FireWinCondition", value: "10" });
-        }
-        else
-        {
-            UpdateChangeModeVoteText();
+            if(inst?.voted_for_changing_mode)
+            {
+                VotesForChangingMode--
+            }
+            let players_amount = GetValidPlayersCT();
+            let players_needed = (players_amount.length/100) * 65;
+            players_needed = Math.ceil(players_needed);
+            if(players_needed <= VotesForChangingMode_Min)
+            {
+                players_needed = VotesForChangingMode_Min;
+            }
+            if(players_needed >= 41)
+            {
+                players_needed = 41;
+            }
+            if(VotesForChangingMode >= players_needed)
+            {
+                isVoteForChangingMode = false;
+                isVoteForChangingModeSucceeded = true;
+                VotesForChangingMode = 0;
+                isVotingForMode = true;
+                HideChangeModeVoteText();
+                Instance.EntFireAtName({ name: "Map_Parameters", input: "FireWinCondition", value: "10" });
+            }
+            else
+            {
+                UpdateChangeModeVoteText();
+            }
         }
     }
 });
@@ -2273,6 +2035,7 @@ Instance.OnPlayerReset((event) => {
             inst.controller = player_controller;
             inst.name = player_name;
             inst.ThirdPersonOn = false;
+            inst.HudRadarHlIndex = -1;
             inst.CamState = 0;
             inst.CamOffset = { x: 0, y: 0, z: 0 };
             inst.CamTarget = { x: 0, y: 0, z: 0 };
@@ -2281,7 +2044,7 @@ Instance.OnPlayerReset((event) => {
             {
                 if(inst.Skin != "" && player.GetTeamNumber() === 3)
                 {
-                    Instance.EntFireAtTarget({ target: inst.player, input: "SetModel", value: inst.Skin, delay: 1.00 });
+                    Instance.EntFireAtTarget({ target: inst.player, input: "SetModel", value: ResolveSkinPath(inst.Skin), delay: 1.00 });
                 }
                 if(inst.BodyGroup == "1" && player.GetTeamNumber() === 3)
                 {
@@ -2307,8 +2070,6 @@ Instance.OnPlayerReset((event) => {
         }
         Instance.Delay(0.01).then(() => {
             ApplyPlayerFlags(player_slot, PlayerInstancesMap.get(player_slot));
-            ApplyLanguage(player_slot, PlayerInstancesMap.get(player_slot).lang);
-            RefreshHintFor(player_slot, PlayerInstancesMap.get(player_slot));
         })
     }
 });
@@ -2343,16 +2104,12 @@ Instance.OnActivate(async () => {
 Instance.OnRoundStart(() => {
     CloseAllHud();
     ResetScript();
+    RefreshHint();
     DelayedCalls.length = 0;
     Instance.Delay(1.20).then(() => { Instance.ServerCommand(`say < Map Version: ${VERSION} >`) });
 
     recursive_fix = Instance.FindEntityByName("recursive_fix");
     HUD_ENT = Instance.FindEntityByName("Map_Hud");
-
-    for(const [slot, inst] of PlayerInstancesMap)
-    {
-        ApplyLanguage(slot, inst.Lang);
-    }
 
     if(isSurvivalMode)
     {
@@ -2361,6 +2118,12 @@ Instance.OnRoundStart(() => {
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_Elevator_Check", input: "Enable" });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Push", input: "Enable" });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Teleport", input: "Enable" });
+        Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Lock", delay: 1.00 });
+        Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Unlock", delay: 20.00 });
+
+        Instance.EntFireAtName({ name: "Spawn_SurvivalMode_Elevator_Check", input: "Enable", delay: 2.00 });
+        Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Push", input: "Enable", delay: 2.00 });
+        Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Teleport", input: "Enable", delay: 2.00 });
     }
     else
     {
@@ -2375,7 +2138,7 @@ Instance.OnRoundStart(() => {
 
     if(HUD_ENT)
     {
-        RefreshModeTextsForAll();
+        RefreshModeTexts();
         SetFloor("");
         HUD_ENT.SetHasClass("floor_label_container", "Visible", true);
         ResetChangeModeVoteText();
@@ -2430,6 +2193,7 @@ Instance.OnRoundEnd(() => {
         inst.SpannerUseStartTime = 0;
 
         inst.HudRadarOpen = false;
+        inst.HudRadarHlIndex = -1;
         inst.HudScoreOverlayOpen = false;
         inst.HudMainMenuOpen = false;
 
@@ -2465,6 +2229,7 @@ Instance.OnBeginRoundRestart(() => {
         inst.SpannerUseStartTime = 0;
 
         inst.HudRadarOpen = false;
+        inst.HudRadarHlIndex = -1;
         inst.HudScoreOverlayOpen = false;
         inst.HudMainMenuOpen = false;
 
@@ -3071,41 +2836,6 @@ Instance.OnScriptInput("CountPlayersInElevator", ({ caller, activator }) => {
     }
 });
 
-Instance.OnScriptInput("StartSpawnElevator", ({ caller, activator }) => {
-    if(isSurvivalMode)
-    {
-        let players = Instance.FindEntitiesByClass("player");
-        if(players.length == 0) return;
-        let players_human = players.filter(player => player?.GetTeamNumber() === 3);
-        if(players_human.length > 0)
-        {
-            let players_needed = (players_human.length/100) * 60;
-            let players_total = players_human.length;
-            players_needed = Math.ceil(players_needed);
-            if(isElevatorHumansCheck)
-            {
-                if(players_in_elevator >= players_needed || players_total <= 20)
-                {
-                    Instance.EntFireAtName({ name: "Map_Elevator_Warning", input: "HideHudHint", value: "", delay: 0.00, activator: activator });
-                    Instance.EntFireAtName({ name: "Spawn_Elevator_In_Button", input: "FireUser1", value: "", delay: 0.00 });
-                }
-                if(players_in_elevator <= players_needed && players_total > 20)
-                {
-                    Instance.EntFireAtName({ name: "Map_Elevator_Warning", input: "ShowHudHint", value: "", delay: 0.00, activator: activator });
-                }
-            }
-            else
-            {
-                Instance.EntFireAtName({ name: "Elevator_Branch*", input: "Toggle", value: "", delay: 0.00 });
-            }
-        }
-    }
-    else
-    {
-        Instance.EntFireAtName({ name: "Spawn_Elevator_In_Button", input: "FireUser1", value: "", delay: 0.00 });
-    }
-});
-
 Instance.OnScriptInput("SetExitGlow", ({ caller, activator }) => {
     if(caller?.IsValid() && caller?.GetClassName() == "prop_dynamic")
     {
@@ -3417,33 +3147,36 @@ Instance.OnScriptInput("PlayerVoteForMode", ({ caller, activator }) => {
     const player_controller = player?.GetPlayerController();
     const player_slot = player_controller?.GetPlayerSlot();
     const inst = PlayerInstancesMap.get(player_slot);
-    if(isVoteForChangingMode && !isVoteForChangingModeSucceeded && !inst.voted_for_changing_mode)
+    if(floor == 0)
     {
-        inst.SetVotedForChangingMode();
-        VotesForChangingMode++
-        UpdateChangeModeVoteText();
-        let players_amount = GetValidPlayersCT();
-        let players_needed = (players_amount.length/100) * 70;
-        players_needed = Math.ceil(players_needed);
-        if(players_needed <= VotesForChangingMode_Min)
+        if(isVoteForChangingMode && !isVoteForChangingModeSucceeded && !inst.voted_for_changing_mode)
         {
-            players_needed = VotesForChangingMode_Min;
-        }
-        if(players_needed >= 44)
-        {
-            players_needed = 44;
-        }
-        Instance.EntFireAtName({ name: "Map_VoteExtreme_Fade", input: "Fade", value: "", delay: 0.00, activator: activator });
-        if(VotesForChangingMode >= players_needed)
-        {
-            Instance.EntFireAtName({ name: "Admin_*", input: "Lock", value: "", delay: 0.00 })
-            ResetVariables();
-            isVoteForChangingMode = false;
-            isVoteForChangingModeSucceeded = true;
-            VotesForChangingMode = 0;
-            isVotingForMode = true;
-            HideChangeModeVoteText();
-            Instance.EntFireAtName({ name: "Map_Parameters", input: "FireWinCondition", value: "10" });
+            inst.SetVotedForChangingMode();
+            VotesForChangingMode++
+            UpdateChangeModeVoteText();
+            let players_amount = GetValidPlayersCT();
+            let players_needed = (players_amount.length/100) * 65;
+            players_needed = Math.ceil(players_needed);
+            if(players_needed <= VotesForChangingMode_Min)
+            {
+                players_needed = VotesForChangingMode_Min;
+            }
+            if(players_needed >= 41)
+            {
+                players_needed = 41;
+            }
+            Instance.EntFireAtName({ name: "Map_VoteExtreme_Fade", input: "Fade", value: "", delay: 0.00, activator: activator });
+            if(VotesForChangingMode >= players_needed)
+            {
+                Instance.EntFireAtName({ name: "Admin_*", input: "Lock", value: "", delay: 0.00 })
+                ResetVariables();
+                isVoteForChangingMode = false;
+                isVoteForChangingModeSucceeded = true;
+                VotesForChangingMode = 0;
+                isVotingForMode = true;
+                HideChangeModeVoteText();
+                Instance.EntFireAtName({ name: "Map_Parameters", input: "FireWinCondition", value: "10" });
+            }
         }
     }
 });
@@ -4230,9 +3963,7 @@ function ShowTeamObjectives()
     {
         const slot = p.GetPlayerController()?.GetPlayerSlot();
         if(slot == null) continue;
-
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "team_objective_text", "objective_text",
-            TP(PlayerInstancesMap.get(slot), "obj_ct"));
+        HUD_ENT.SetHasClassForPlayer(slot, "team_objective_ct", "Visible", true);
         HUD_ENT.SetHasClassForPlayer(slot, "team_objective_container", "Visible", true);
         shown.push(slot);
     }
@@ -4241,9 +3972,7 @@ function ShowTeamObjectives()
     {
         const slot = p.GetPlayerController()?.GetPlayerSlot();
         if(slot == null) continue;
-
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "team_objective_text", "objective_text",
-            TP(PlayerInstancesMap.get(slot), "obj_t"));
+        HUD_ENT.SetHasClassForPlayer(slot, "team_objective_t", "Visible", true);
         HUD_ENT.SetHasClassForPlayer(slot, "team_objective_container", "Visible", true);
         shown.push(slot);
     }
@@ -4253,6 +3982,8 @@ function ShowTeamObjectives()
         for(const slot of shown)
         {
             HUD_ENT.SetHasClassForPlayer(slot, "team_objective_container", "Visible", false);
+            HUD_ENT.SetHasClassForPlayer(slot, "team_objective_ct", "Visible");
+            HUD_ENT.SetHasClassForPlayer(slot, "team_objective_t", "Visible");
         }
     });
 }
@@ -5079,6 +4810,7 @@ function ApplyPlayerFlags(slot, inst)
 
     inst.Vip = flags.includes("VIP");
     inst.Mapper = flags.includes("MAPPER");
+    inst.Sponsor = flags.includes("SPONSOR");
     inst.Leader = flags.includes("LEADER");
     inst.Lastims = flags.includes("LASTIMS");
 
@@ -5103,6 +4835,59 @@ function CloseAllHud()
 
         HUD_ENT.SetInputCaptureEnabled(slot, false);
     }
+}
+
+function ClearPlayerHudState(slot)
+{
+    if(!HUD_ENT) return;
+
+    // верхнеуровневые панели
+    for(const p of HUD_ALL_PANELS)
+    {
+        HUD_ENT.SetHasClassForPlayer(slot, p, "Visible");
+    }
+
+    // голосование
+    for(const id of WRAPPER_IDS)
+    {
+        HUD_ENT.SetHasClassForPlayer(slot, id, "Focused");
+        HUD_ENT.SetHasClassForPlayer(slot, id, "Dimmed");
+    }
+
+    // вкладки меню
+    for(const t of MENU_TABS)
+    {
+        HUD_ENT.SetHasClassForPlayer(slot, "tab_btn_" + t, "Active");
+        HUD_ENT.SetHasClassForPlayer(slot, "tab_page_" + t, "Active");
+    }
+    HUD_ENT.SetHasClassForPlayer(slot, "tab_btn_admin_room", "Locked");
+    HUD_ENT.SetHasClassForPlayer(slot, "lang_admin_noaccess", "Visible");
+
+    // скины
+    for(const card of SKIN_CARDS)
+    {
+        HUD_ENT.SetHasClassForPlayer(slot, "skin_card_" + card.key, "Locked");
+        HUD_ENT.SetHasClassForPlayer(slot, "skin_card_" + card.key, "Selected");
+        HUD_ENT.SetDialogVariableStringForPlayer(slot, "skin_state_" + card.key, "txt", "");
+    }
+    HUD_ENT.SetDialogVariableStringForPlayer(slot, "skins_hint", "txt", "");
+
+    // радар: подсветка
+    for(const team of ["ct", "t"])
+    {
+        for(let i = 0; i < RADAR_DOTS_PER_TEAM; i++)
+        {
+            HUD_ENT.SetHasClassForPlayer(slot, "radar_cell_highlight_" + team + "_" + i, "Visible");
+        }
+    }
+
+    // прочее
+    HUD_ENT.SetHasClassForPlayer(slot, "lang_cursor_hint", "Hidden");
+    HUD_ENT.SetHasClassForPlayer(slot, "use_progress_fill", "Active");
+    HUD_ENT.SetHasClassForPlayer(slot, "team_objective_ct", "Visible");
+    HUD_ENT.SetHasClassForPlayer(slot, "team_objective_t", "Visible");
+
+    HUD_ENT.SetInputCaptureEnabled(slot, false);
 }
 
 //    __                _       
@@ -5698,16 +5483,24 @@ function UpdateRadarDots()
     // ИНДИВИДУАЛЬНАЯ ВИДИМОСТЬ ПОДСВЕТКИ ДЛЯ КАЖДОГО ИГРОКА
     for(const [slot, inst] of PlayerInstancesMap)
     {
-        if(!inst.HudRadarOpen) continue;
-
         const player = inst.player;
-        if(!player || !player.IsValid() || !player.IsAlive()) continue;
+
+        if(!inst.HudRadarOpen || !player || !player.IsValid() || !player.IsAlive())
+        {
+            // радар закрыт — снимаем свою подсветку, если была
+            if(inst.HudRadarHlIndex >= 0)
+            {
+                HUD_ENT.SetHasClassForPlayer(slot, inst.HudRadarHlId, "Visible");
+                inst.HudRadarHlIndex = -1;
+                inst.HudRadarHlId = null;
+            }
+            continue;
+        }
 
         const team = player.GetTeamNumber();
-        let teamKey = (team === 3) ? "ct" : "t";
-        let players = (team === 3) ? GetValidPlayersCT() : GetValidPlayersT();
+        const teamKey = (team === 3) ? "ct" : "t";
+        const players = (team === 3) ? GetValidPlayersCT() : GetValidPlayersT();
 
-        // Находим индекс этого игрока в списке его команды
         let playerIndex = -1;
         for(let i = 0; i < players.length; i++)
         {
@@ -5718,12 +5511,22 @@ function UpdateRadarDots()
             }
         }
 
-        // Показываем подсветку ТОЛЬКО для себя, для остальных скрываем
-        for(let i = 0; i < RADAR_DOTS_PER_TEAM; i++)
+        const newId = playerIndex >= 0 ? ("radar_cell_highlight_" + teamKey + "_" + playerIndex) : null;
+
+        if(newId === inst.HudRadarHlId) continue;   // ничего не изменилось
+
+        if(inst.HudRadarHlId)
         {
-            const hlId = "radar_cell_highlight_" + teamKey + "_" + i;
-            HUD_ENT.SetHasClassForPlayer(slot, hlId, "Visible", i === playerIndex);
+            HUD_ENT.SetHasClassForPlayer(slot, inst.HudRadarHlId, "Visible");
         }
+
+        if(newId)
+        {
+            HUD_ENT.SetHasClassForPlayer(slot, newId, "Visible", true);
+        }
+
+        inst.HudRadarHlId = newId;
+        inst.HudRadarHlIndex = playerIndex;
     }
 }
 
@@ -5902,40 +5705,8 @@ function CancelUseProgress(slot, inst)
 
 
 
-function T(lang, key)
-{
-    const t = LANG_STRINGS[lang] || LANG_STRINGS.eng;
-    return t[key] ?? LANG_STRINGS.eng[key] ?? key;
-}
 
-function TP(inst, key)
-{
-    return T(inst ? inst.Lang : "eng", key);
-}
-
-function ApplyLanguage(slot, lang)
-{
-    if(!HUD_ENT) return;
-    const s = LANG_STRINGS[lang];
-    if(!s) return;
-
-    for(const key in s)
-    {
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "lang_" + key, "txt", s[key]);
-    }
-
-    HUD_ENT.SetHasClassForPlayer(slot, "lang_btn_eng", "Selected", lang === "eng");
-    HUD_ENT.SetHasClassForPlayer(slot, "lang_btn_chs", "Selected", lang === "chs");
-
-    const inst = PlayerInstancesMap.get(slot);
-    if(!inst) return;
-
-    RefreshModeTextsFor(slot, inst);
-    RefreshSkinMenu(slot, inst);
-    RefreshHintFor(slot, inst);
-}
-
-function RefreshModeTextsFor(slot, inst)
+function RefreshModeTexts()
 {
     if(!HUD_ENT) return;
 
@@ -5945,22 +5716,17 @@ function RefreshModeTextsFor(slot, inst)
         if(mi === null) continue;
 
         const sfx = LABEL_SUFFIXES[i];
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "mode_label_" + sfx,     "mode_name", TP(inst, MODE_KEYS[mi]));
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "button_caption_" + sfx, "mode_name", TP(inst, MODE_KEYS[mi]));
-        HUD_ENT.SetDialogVariableStringForPlayer(slot, "info_text_" + sfx,      "mode_desc", TP(inst, MODE_DKEYS[mi]));
+        HUD_ENT.SetDialogVariableString("mode_label_" + sfx,     "mode_name", MODE_DEFS[mi].name);
+        HUD_ENT.SetDialogVariableString("button_caption_" + sfx, "mode_name", MODE_DEFS[mi].name);
+        HUD_ENT.SetDialogVariableString("info_text_" + sfx,      "mode_desc", MODE_DEFS[mi].desc);
     }
 
     let status;
-    if(votingActive)         status = TP(inst, "voting_now");
-    else if(revealingWinner) status = TP(inst, "setting_mode") + " " + TP(inst, MODE_KEYS[activeModeIndex]);
-    else                     status = TP(inst, "current_mode") + " - " + TP(inst, MODE_KEYS[activeModeIndex]);
+    if(votingActive)         status = "VOTING...";
+    else if(revealingWinner) status = "SETTING MODE TO " + MODE_DEFS[activeModeIndex].name;
+    else                     status = "CURRENT MODE - " + MODE_DEFS[activeModeIndex].name;
 
-    HUD_ENT.SetDialogVariableStringForPlayer(slot, "current_mode_label", "mode_status", status);
-}
-
-function RefreshModeTextsForAll()
-{
-    for(const [slot, inst] of PlayerInstancesMap) RefreshModeTextsFor(slot, inst);
+    HUD_ENT.SetDialogVariableString("current_mode_label", "mode_status", status);
 }
 
 function ToggleScoreOverlay(slot, inst)
@@ -5970,7 +5736,6 @@ function ToggleScoreOverlay(slot, inst)
 
     if(inst.HudScoreOverlayOpen)
     {
-        ApplyLanguage(slot, inst.Lang);
         HUD_ENT.SetHasClassForPlayer(slot, "lang_cursor_hint", "Hidden", false);
     }
 
@@ -5983,7 +5748,6 @@ function OpenBigMenu(slot, inst)
     if(!HUD_ENT) return;
     inst.HudMainMenuOpen = true;
     inst.HudScoreOverlayOpen = false;
-    ApplyLanguage(slot, inst.Lang);
     HUD_ENT.SetHasClassForPlayer(slot, "score_overlay", "Visible", false);
     HUD_ENT.SetHasClassForPlayer(slot, "big_menu", "Visible", true);
     HUD_ENT.SetHasClassForPlayer(slot, "tab_btn_admin_room", "Locked", false);
@@ -6042,14 +5806,16 @@ function RefreshSkinMenu(slot, inst)
         if(unlocked) any = true;
 
         const path = SKINS_LIST.find(s => s.number === card.number)?.path;
+
         HUD_ENT.SetHasClassForPlayer(slot, "skin_card_" + card.key, "Locked", !unlocked);
         HUD_ENT.SetHasClassForPlayer(slot, "skin_card_" + card.key, "Selected", unlocked && inst.Skin === path);
+
         HUD_ENT.SetDialogVariableStringForPlayer(slot, "skin_state_" + card.key, "txt",
-            !unlocked ? TP(inst, "skin_locked") : (inst.Skin === path ? TP(inst, "skin_active") : TP(inst, "skin_avail")));
+            !unlocked ? "LOCKED" : (inst.Skin === path ? "ACTIVE" : "AVAILABLE"));
     }
 
     HUD_ENT.SetDialogVariableStringForPlayer(slot, "skins_hint", "txt",
-        TP(inst, any ? "skin_click" : "skin_noflag"));
+        any ? "Click a skin to apply it." : "Skins are available to players with a flag.");
 }
 
 function ApplySkin(slot, inst, key)
@@ -6817,17 +6583,13 @@ function UpdateCameraLerp(player, inst, delta)
 
 
 
-function RefreshHintFor(slot, inst)
+function RefreshHint()
 {
     if(!HUD_ENT) return;
 
-    const key = isSurvivalMode ? "hint_radar" : "hint_thirdperson";
+    HUD_ENT.SetDialogVariableString("hint_text", "txt",
+        isSurvivalMode ? "SHIFT + ATTACK2 — OPEN RADAR"
+                       : "SHIFT + CTRL — THIRDPERSON MODE");
 
-    HUD_ENT.SetDialogVariableStringForPlayer(slot, "lang_hint_text", "txt", TP(inst, key));
-    HUD_ENT.SetHasClassForPlayer(slot, "hint_container", "Visible", true);
-}
-
-function RefreshHintForAll()
-{
-    for(const [slot, inst] of PlayerInstancesMap) RefreshHintFor(slot, inst);
+    HUD_ENT.SetHasClass("hint_container", "Visible", true);
 }

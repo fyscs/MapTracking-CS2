@@ -7,34 +7,26 @@
     </styles>
     <Panel class="Root">
         <Panel id="score_overlay" class="score_overlay">
-            <Panel class="lang_row">
-                <Button id="lang_btn_eng" class="lang_btn">
-                    <Image class="lang_icon" src="s2r://panorama/layout/custom_game/icons/flag_eng_png.vtex" />
-                </Button>
-                <Button id="lang_btn_chs" class="lang_btn">
-                    <Image class="lang_icon" src="s2r://panorama/layout/custom_game/icons/flag_chs_png.vtex" />
-                </Button>
-            </Panel>
             <Button id="menu_open_btn" class="menu_open_btn">
-                <Label id="lang_menu_btn" class="menu_open_btn_text" text="{s:txt}" />
+                <Label class="menu_open_btn_text" text="MENU" />
             </Button>
-            <Label id="lang_cursor_hint" class="cursor_hint" text="{s:txt}" />
+            <Label class="cursor_hint" text="PRESS CTRL TO ENABLE CURSOR" />
         </Panel>
         <Panel id="hint_container" class="hint_container">
-            <Label id="lang_hint_text" class="hint_text" text="{s:txt}" />
+            <Label id="hint_text" class="hint_text" text="{s:txt}" />
         </Panel>
         <Panel id="big_menu" class="big_menu">
             <Panel class="big_menu_panel">
                 <Panel class="big_menu_header">
                     <Panel class="big_menu_tabs">
                         <Button id="tab_btn_map_stats" class="tab_btn">
-                            <Label id="lang_tab_map_stats" class="tab_btn_text" text="{s:txt}" />
+                            <Label class="tab_btn_text" text="MAP STATS" />
                         </Button>
                         <Button id="tab_btn_skin_menu" class="tab_btn">
-                            <Label id="lang_tab_skin_menu" class="tab_btn_text" text="{s:txt}" />
+                            <Label class="tab_btn_text" text="SKIN MENU" />
                         </Button>
                         <Button id="tab_btn_admin_room" class="tab_btn">
-                            <Label id="lang_tab_admin_room" class="tab_btn_text" text="{s:txt}" />
+                            <Label class="tab_btn_text" text="MAP SETTINGS" />
                         </Button>
                     </Panel>
                     <Button id="menu_close_btn" class="menu_close_btn">
@@ -45,88 +37,88 @@
                     <Panel id="tab_page_map_stats" class="tab_page">
                         <Panel class="ms_wrap">
                             <Panel class="ms_left">
-                                <Label id="lang_ms_title" class="col_header" text="{s:txt}" />
-                                <Label id="lang_ms_ways" class="ms_group" text="{s:txt}" />
+                                <Label class="col_header" text="MAP STATISTICS" />
+                                <Label class="ms_group" text="WAYS GENERATED" />
                                 <Panel class="ms_ways">
                                     <Panel class="ms_way_box">
-                                        <Label id="lang_ms_way1" class="ms_way_title" text="{s:txt}" />
+                                        <Label class="ms_way_title" text="1 WAY" />
                                         <Label id="ms_way1" class="ms_way_val" text="{s:val}" />
                                     </Panel>
                                     <Panel class="ms_way_box">
-                                        <Label id="lang_ms_way2" class="ms_way_title" text="{s:txt}" />
+                                        <Label class="ms_way_title" text="2 WAYS" />
                                         <Label id="ms_way2" class="ms_way_val" text="{s:val}" />
                                     </Panel>
                                     <Panel class="ms_way_box">
-                                        <Label id="lang_ms_way3" class="ms_way_title" text="{s:txt}" />
+                                        <Label class="ms_way_title" text="3 WAYS" />
                                         <Label id="ms_way3" class="ms_way_val" text="{s:val}" />
                                     </Panel>
                                     <Panel class="ms_way_box">
-                                        <Label id="lang_ms_way4" class="ms_way_title" text="{s:txt}" />
+                                        <Label class="ms_way_title" text="4 WAYS" />
                                         <Label id="ms_way4" class="ms_way_val" text="{s:val}" />
                                     </Panel>
                                 </Panel>
-                                <Label id="lang_ms_besttimes" class="ms_group" text="{s:txt}" />
+                                <Label class="ms_group" text="BEST TIMES" />
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_easy_normal" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="EASY — NORMAL ENDING" />
                                     <Label id="ms_rec_en2" class="ms_row_val ms_time" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_easy_true" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="EASY — TRUE ENDING" />
                                     <Label id="ms_rec_et2" class="ms_row_val ms_time" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_normal_normal" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="NORMAL — NORMAL ENDING" />
                                     <Label id="ms_rec_nn" class="ms_row_val ms_time" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_normal_true" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="NORMAL — TRUE ENDING" />
                                     <Label id="ms_rec_nt" class="ms_row_val ms_time" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_extreme_normal" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="EXTREME — NORMAL ENDING" />
                                     <Label id="ms_rec_en" class="ms_row_val ms_time" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_extreme_true" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="EXTREME — TRUE ENDING" />
                                     <Label id="ms_rec_et" class="ms_row_val ms_time" text="{s:val}" />
                                 </Panel>
-                                <Label id="lang_ms_totals" class="ms_group" text="{s:txt}" />
+                                <Label class="ms_group" text="TOTALS" />
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_runs_lbl" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="RUNS STARTED" />
                                     <Label id="ms_runs" class="ms_row_val" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_wins_lbl" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="RUNS COMPLETED" />
                                     <Label id="ms_wins" class="ms_row_val" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_floors_lbl" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="FLOORS CLEARED" />
                                     <Label id="ms_floors" class="ms_row_val" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_traps_lbl" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="TRAPS DEFUSED" />
                                     <Label id="ms_traps" class="ms_row_val" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_bottles_lbl" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="BOTTLES COLLECTED" />
                                     <Label id="ms_bottles" class="ms_row_val" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_bottles_spent_lbl" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="BOTTLES SPENT" />
                                     <Label id="ms_bottles_spent" class="ms_row_val" text="{s:val}" />
                                 </Panel>
                                 <Panel class="ms_row">
-                                    <Label id="lang_ms_spins_lbl" class="ms_row_key" text="{s:txt}" />
+                                    <Label class="ms_row_key" text="SLOT MACHINE SPINS" />
                                     <Label id="ms_spins" class="ms_row_val" text="{s:val}" />
                                 </Panel>
                             </Panel>
                             <Panel class="ms_right">
-                                <Label id="lang_ms_ranking" class="col_header" text="{s:txt}" />
-                                <Label id="lang_ms_ranking_sub" class="ms_sub" text="{s:txt}" />
+                                <Label class="col_header" text="LIQUIDATION MODE RANKING (UNAVAILABLE)" />
+                                <Label class="ms_sub" text="" />
                                 <Panel class="ms_top_head">
                                     <Label class="ms_th_rank" text="#" />
-                                    <Label id="lang_ms_th_player" class="ms_th_name" text="{s:txt}" />
-                                    <Label id="lang_ms_th_bottles" class="ms_th_val" text="{s:txt}" />
+                                    <Label class="ms_th_name" text="PLAYER" />
+                                    <Label class="ms_th_val" text="" />
                                 </Panel>
                                 <Panel id="ms_top_1" class="ms_top_row">
                                     <Label class="ms_tr_rank" text="1" />
@@ -228,9 +220,9 @@
                     <Panel id="tab_page_admin_room" class="tab_page">
                         <Panel class="admin_wrap">
                             <Panel class="admin_col">
-                                <Label id="lang_as_values" class="col_header" text="{s:txt}" />
+                                <Label class="col_header" text="VALUES" />
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_health" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="HEALTH" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_hp_sub1" class="admin_btn admin_btn_step">
                                             <Label class="admin_btn_text" text="-1" />
@@ -248,7 +240,7 @@
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_maxhealth" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="MAX HEALTH" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_maxhp_sub1" class="admin_btn admin_btn_step">
                                             <Label class="admin_btn_text" text="-1" />
@@ -266,7 +258,7 @@
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_maxfloors" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="MAX FLOORS" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_maxfloors_sub1" class="admin_btn admin_btn_step">
                                             <Label class="admin_btn_text" text="-1" />
@@ -278,7 +270,7 @@
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_traps" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="TRAPS %" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_traps_sub1" class="admin_btn admin_btn_step">
                                             <Label class="admin_btn_text" text="-1" />
@@ -296,7 +288,7 @@
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_samosbortime" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="SAMOSBOR TIME" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_samosbortime_sub60" class="admin_btn admin_btn_step">
                                             <Label class="admin_btn_text" text="-60" />
@@ -308,7 +300,7 @@
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_samosbordamage" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="SAMOSBOR DAMAGE" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_samosbordamage_sub1" class="admin_btn admin_btn_step">
                                             <Label class="admin_btn_text" text="-1" />
@@ -321,134 +313,134 @@
                                 </Panel>
                             </Panel>
                             <Panel class="admin_col">
-                                <Label id="lang_as_toggles" class="col_header" text="{s:txt}" />
+                                <Label class="col_header" text="TOGGLES" />
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_exitglow" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="EXIT GLOW" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_exitglow_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_1" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_exitglow_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_1" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_lightning" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="LIGHTNING STRIKES" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_lightningstrikes_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_2" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_lightningstrikes_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_2" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_falldamage" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="FALL DAMAGE" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_falldamage_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_3" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_falldamage_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_3" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_fakeexits" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="FAKE EXITS" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_fakeexits_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_4" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_fakeexits_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_4" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_deadend" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="DEAD END CHUNKS" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_deadendchunks_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_5" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_deadendchunks_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_5" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_minibosses" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="MINI BOSSES" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_minibosses_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_6" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_minibosses_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_6" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_extrememode" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="EXTREME MODE" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_extrememode_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_7" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_extrememode_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_7" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_vipmode" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="VIP MODE" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_vipmode_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_8" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_vipmode_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_8" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_chunksshuffle" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="CHUNKS SHUFFLE" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_chunksshuffle_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_9" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_chunksshuffle_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_9" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_samosbortimer" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="SAMOSBOR TIMER" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_samosbortimer_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_10" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_samosbortimer_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_10" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                                 <Panel class="admin_row">
-                                    <Label id="lang_as_elevator" class="admin_row_label" text="{s:txt}" />
+                                    <Label class="admin_row_label" text="ELEVATOR HUMANS CHECK" />
                                     <Panel class="admin_ctrl">
                                         <Button id="admin_elevatorhumanscheck_off" class="admin_btn admin_btn_off">
-                                            <Label id="lang_as_off_11" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="OFF" />
                                         </Button>
                                         <Button id="admin_elevatorhumanscheck_on" class="admin_btn admin_btn_on">
-                                            <Label id="lang_as_on_11" class="admin_btn_text" text="{s:txt}" />
+                                            <Label class="admin_btn_text" text="ON" />
                                         </Button>
                                     </Panel>
                                 </Panel>
                             </Panel>
                         </Panel>
                         <Button id="admin_reset" class="admin_reset_btn">
-                            <Label id="lang_as_reset" class="admin_reset_text" text="{s:txt}" />
+                            <Label class="admin_reset_text" text="RESET TO DEFAULT" />
                         </Button>
-                        <Label id="lang_admin_noaccess" class="admin_noaccess" text="{s:txt}" />
+                        <Label class="admin_noaccess" text="YOU CANNOT INTERACT WITH THIS PANEL" />
                     </Panel>
                 </Panel>
             </Panel>
@@ -704,7 +696,8 @@
             <Label id="floor_label_text" class="floor_label_text" text="{s:floor_text}" />
         </Panel>
         <Panel id="team_objective_container" class="team_objective_container">
-            <Label id="team_objective_text" class="team_objective_text" text="{s:objective_text}" />
+            <Label id="team_objective_ct" class="team_objective_text" text="OBJECTIVE: FIND THE CANISTER AND REACH THE ELEVATOR. SURVIVE AT ALL COSTS. YOU CAN ALSO COLLECT BOTTLES AND SPEND THEM AT THE SLOT MACHINE." />
+            <Label id="team_objective_t" class="team_objective_text" text="OBJECTIVE: STOP THE HUMANS FROM FINDING THE CANISTER AND ESCAPING THE FLOOR." />
         </Panel>
         <Panel id="change_mode_vote_container" class="change_mode_vote_container">
             <Label id="change_mode_vote_text" class="change_mode_vote_text" text="{s:vote_count_text}" />

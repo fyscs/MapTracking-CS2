@@ -552,7 +552,7 @@ to {
 .bottles_container {
     horizontal-align: left;
     vertical-align: bottom;
-    margin-left: 24px;
+    margin-left: -24px;
     margin-bottom: 16px;
     flow-children: right;
     width: fit-children;
@@ -603,6 +603,10 @@ to {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 1), 0px 2px 2px rgba(0, 0, 0, 0.9);
+    visibility: collapse;
+}
+.team_objective_text.Visible {
+    visibility: visible;
 }
 .slot_machine_container {
     width: 100%;
@@ -626,7 +630,7 @@ to {
     height: 100%;
     horizontal-align: center;
     vertical-align: center;
-    world-blur: gaussian(2,2,2);
+    world-blur: gaussian(1,1,1);
 }
 .slot_machine_cabinet {
     width: 810px;
@@ -1936,42 +1940,6 @@ to {
 }
 .cursor_hint.Hidden {
     opacity: 0;
-}
-.lang_row {
-    horizontal-align: right;
-    vertical-align: top;
-    margin-top: 240px;
-    margin-right: 480px;
-    flow-children: right;
-    width: fit-children;
-    height: fit-children;
-}
-.lang_btn {
-    width: 52px;
-    height: 34px;
-    margin-left: 6px;
-    background-color: #000000e0;
-    border: 1px solid #333333ff;
-    border-radius: 2px;
-    opacity: 0.5;
-    transition-property: opacity, border-color;
-    transition-duration: 0.15s;
-    transition-timing-function: ease-out;
-}
-.lang_btn:hover {
-    opacity: 0.85;
-    border-color: #6a6a6aff;
-    sound: 'UIPanorama.sidemenu_rollover';
-}
-.lang_btn.Selected {
-    opacity: 1;
-    border-color: #d0708fff;
-}
-.lang_icon {
-    width: 42px;
-    height: 24px;
-    horizontal-align: center;
-    vertical-align: center;
 }
 .menu_open_btn {
     width: 240px;

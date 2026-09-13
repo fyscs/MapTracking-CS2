@@ -78,7 +78,7 @@
     "parentname": "[PR#]Item_Trail_Orange_Weapon\u00260000",
     "targetname": "[PR#]Item_Trail_Orange_Particle\u00260000",
     "classname": "info_particle_system",
-    "origin": "4.000000 -9.000000 12.000000",
+    "origin": "4.000000 -9.000000 22.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8067",

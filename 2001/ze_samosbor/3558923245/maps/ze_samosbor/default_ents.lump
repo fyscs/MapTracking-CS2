@@ -3182,7 +3182,7 @@
     "model": "maps/ze_samosbor/entities/spawn_elevator_in_button_4609.vmdl",
     "connections": [
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]cmd",
         "input": "Command",
         "param": "say \u003E\u003E Elevator will leave in 10 seconds \u003C\u003C",
@@ -3190,7 +3190,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Map_Fade",
         "input": "Fade",
         "param": "",
@@ -3198,7 +3198,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Spawn_Elevator_Door_l2",
         "input": "Close",
         "param": "",
@@ -3206,7 +3206,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Spawn_Elevator_Door_l1",
         "input": "Close",
         "param": "",
@@ -3214,7 +3214,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Spawn_Elevator_Door_r1",
         "input": "Close",
         "param": "",
@@ -3222,7 +3222,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Spawn_Elevator_Door_r2",
         "input": "Close",
         "param": "",
@@ -3230,7 +3230,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Spawn_Elevator_Teleport",
         "input": "Enable",
         "param": "",
@@ -3238,7 +3238,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Map_Script",
         "input": "RunScriptInput",
         "param": "LoadMode",
@@ -3246,7 +3246,7 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Anomaly_*",
         "input": "Kill",
         "param": "",
@@ -3254,20 +3254,12 @@
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnPressed",
         "target": "[PR#]Map_Script",
         "input": "RunScriptInput",
         "param": "ResetHumanHealth",
         "delay": 20,
         "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]Map_Script",
-        "input": "RunScriptInput",
-        "param": "StartSpawnElevator",
-        "delay": 0,
-        "limit": -1
       }
     ]
   },
