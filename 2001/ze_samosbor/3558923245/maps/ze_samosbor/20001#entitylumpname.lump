@@ -392,6 +392,29 @@
     ]
   },
   {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]Item_PPSh_Relay\u00260000",
+    "classname": "logic_relay",
+    "origin": "0.000000 16.000000 40.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20262",
+    "_template_lump_ent_index": "9",
+    "connections": [
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Item_PPSh_Case\u00260000",
+        "input": "InValue",
+        "param": "1",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
     "max": "240",
     "min": "0",
     "startvalue": "0",
@@ -402,7 +425,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20014",
-    "_template_lump_ent_index": "9",
+    "_template_lump_ent_index": "10",
     "connections": [
       {
         "output": "OutValue",
@@ -499,7 +522,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20015",
-    "_template_lump_ent_index": "10",
+    "_template_lump_ent_index": "11",
     "connections": [
       {
         "output": "OnTimer",
@@ -546,7 +569,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20017",
-    "_template_lump_ent_index": "11",
+    "_template_lump_ent_index": "12",
     "connections": [
       {
         "output": "OnCase01",
@@ -649,7 +672,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 0,
+        "delay": 0.10000000149011612,
         "limit": 1
       },
       {
@@ -657,7 +680,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 0,
+        "delay": 0.10000000149011612,
         "limit": 1
       }
     ]
@@ -687,6 +710,6 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20028",
-    "_template_lump_ent_index": "12"
+    "_template_lump_ent_index": "13"
   }
 ]

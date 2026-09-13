@@ -34,7 +34,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Map_Chunk_Store_Maker_M\u00260000",
     "classname": "env_entity_maker",
-    "origin": "-40.000000 -104.000000 -88.000000",
+    "origin": "-40.000000 -104.000000 -112.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3901",

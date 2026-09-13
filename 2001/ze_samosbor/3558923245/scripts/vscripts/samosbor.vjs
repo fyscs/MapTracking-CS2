@@ -623,6 +623,8 @@ const STEAM_IDS_LIST = {
     "[U:1:1826512598]":   ["SPONSOR"],
     "[U:1:1873977017]":   ["SPONSOR"],
     "[U:1:22853297]":     ["SPONSOR"],
+    "[U:1:372244152]":    ["SPONSOR"],
+    "[U:1:761769159]":    ["SPONSOR"],
 };
 
 const HUD_ALL_PANELS = [
@@ -641,7 +643,7 @@ const HUD_ALL_PANELS = [
     "hint_container",
 ];
 
-const VERSION = "11/09/26";
+const VERSION = "13/09/26";
 
 
 
@@ -684,7 +686,7 @@ const SKIN_CARDS = [
 const ADMIN_NUMERIC = [
     { key: "hp",             fn: () => ChangeHealth,         steps: ["5","1"], get: () => pre_human_hp },
     { key: "maxhp",          fn: () => ChangeMaxHealth,      steps: ["5","1"], get: () => pre_human_max_hp },
-    { key: "maxfloors",      fn: () => ChangeMaxFloors,      steps: ["1"],     get: () => pre_floors_max },
+    { key: "maxfloors",      fn: () => ChangeMaxFloors,      steps: ["1"],     get: () => pre_floors_max - 1 },
     { key: "traps",          fn: () => ChangeTrapsAmount,    steps: ["5","1"], get: () => pre_traps_percentage },
     { key: "samosbortime",   fn: () => ChangeSamosborTime,   steps: ["60"],    get: () => pre_samosbortime },
     { key: "samosbordamage", fn: () => ChangeSamosborDamage, steps: ["1"],     get: () => pre_samosbordamage },
@@ -747,8 +749,8 @@ const SURVIVAL_ZM_ITEM_MAX = 4;
 const SURVIVAL_ZM_ITEM_START = 3;
 const SURVIVAL_ZM_ITEM_INTERVAL = 60.0;
 const SURVIVAL_ZM_ITEM_CHECK = 1.0;
-let SURVIVAL_HP_TICK = 7.00;
-let SURVIVAL_ZOMBIE_DAMAGE = 25;
+let SURVIVAL_HP_TICK = 5.00;
+let SURVIVAL_ZOMBIE_DAMAGE = 10;
 
 const SURVIVAL_CANISTER_COUNT = 3;
 
@@ -958,7 +960,7 @@ const SLOT_MACHINE_COST = 3;
 
 const SLOT_NO_WIN_CHANCE = 0.30;
 
-const VOTE_DURATION = 45;
+const VOTE_DURATION = 35;
 const WRAPPER_IDS = ["wrapper_left", "wrapper_center", "wrapper_right"];
 const LABEL_SUFFIXES = ["left", "center", "right"];
 const BUTTON_IDS = ["btn_left", "btn_center", "btn_right"];
@@ -1462,14 +1464,12 @@ function ShowSlotResult(isWin, itemIndex)
             else if(itemIndex === 5)
             {
                 const temp = Temp_Item_PPSh.ForceSpawn(pos);
-                const logic_case = (temp ?? []).filter(ent => ent?.IsValid() && ent.GetClassName() === "logic_case")[0];
-                Instance.EntFireAtTarget({ target: logic_case, input: "InValue", value: "1" });
             }
             else if(itemIndex === 6)
             {
                 const temp = Temp_Item_PPSh.ForceSpawn(pos);
                 const logic_case = (temp ?? []).filter(ent => ent?.IsValid() && ent.GetClassName() === "logic_case")[0];
-                Instance.EntFireAtTarget({ target: logic_case, input: "InValue", value: "2" });
+                Instance.EntFireAtTarget({ target: logic_case, input: "InValue", value: "2", delay: 0.02 });
             }
         });
  
@@ -2115,13 +2115,11 @@ Instance.OnRoundStart(() => {
     {
         Instance.ServerCommand(`zr_infect_spawn_mz_ratio ${mz_ratio}`);
         Instance.EntFireAtName({ name: "Temp_Anomaly_Mita", input: "Kill" });
-        Instance.EntFireAtName({ name: "Spawn_SurvivalMode_Elevator_Check", input: "Enable" });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Push", input: "Enable" });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Teleport", input: "Enable" });
         Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Lock", delay: 1.00 });
         Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Unlock", delay: 20.00 });
 
-        Instance.EntFireAtName({ name: "Spawn_SurvivalMode_Elevator_Check", input: "Enable", delay: 2.00 });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Push", input: "Enable", delay: 2.00 });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Teleport", input: "Enable", delay: 2.00 });
     }
@@ -2449,6 +2447,77 @@ Instance.OnPlayerChat((event) => {
             Instance.Msg("mz_ratio = " + mz_ratio);
         }
     }
+
+    if(player_text.includes("!m_stress") && (inst.Mapper))
+    {
+        let n = 0;
+
+        for(const p of Instance.FindEntitiesByClass("player"))
+        {
+            if(!p?.IsValid()) continue;
+
+            const s = p.GetPlayerController()?.GetPlayerSlot();
+            if(s == null) continue;
+
+            const i = PlayerInstancesMap.get(s);
+            if(!i) continue;
+
+            // меню
+            i.HudMainMenuOpen = true;
+            HUD_ENT.SetHasClassForPlayer(s, "big_menu", "Visible", true);
+            HUD_ENT.SetHasClassForPlayer(s, "score_overlay", "Visible", true);
+            HUD_ENT.SetHasClassForPlayer(s, "lang_cursor_hint", "Hidden", true);
+            HUD_ENT.SetHasClassForPlayer(s, "tab_btn_admin_room", "Locked", true);
+            HUD_ENT.SetHasClassForPlayer(s, "lang_admin_noaccess", "Visible", true);
+
+            for(const t of MENU_TABS)
+            {
+                HUD_ENT.SetHasClassForPlayer(s, "tab_btn_" + t, "Active", t === "map_stats");
+                HUD_ENT.SetHasClassForPlayer(s, "tab_page_" + t, "Active", t === "map_stats");
+            }
+
+            RefreshSkinMenu(s, i);
+
+            // голосование
+            HUD_ENT.SetHasClassForPlayer(s, "main_menu_hud", "Visible", true);
+            for(let k = 0; k < WRAPPER_IDS.length; k++)
+            {
+                HUD_ENT.SetHasClassForPlayer(s, WRAPPER_IDS[k], "Focused", k === 0);
+                HUD_ENT.SetHasClassForPlayer(s, WRAPPER_IDS[k], "Dimmed", k !== 0);
+            }
+
+            // радар
+            i.HudRadarOpen = true;
+            HUD_ENT.SetHasClassForPlayer(s, "radar_container", "Visible", true);
+            HUD_ENT.SetHasClassForPlayer(s, "radar_dots_ct", "Visible", true);
+            HUD_ENT.SetHasClassForPlayer(s, "radar_dots_t", "Visible", true);
+            HUD_ENT.SetHasClassForPlayer(s, "radar_cell_highlight_ct_0", "Visible", true);
+
+            // цели команд
+            HUD_ENT.SetHasClassForPlayer(s, "team_objective_container", "Visible", true);
+            HUD_ENT.SetHasClassForPlayer(s, "team_objective_ct", "Visible", true);
+
+            // спаннер
+            HUD_ENT.SetHasClassForPlayer(s, "use_progress_container", "Visible", true);
+            HUD_ENT.SetHasClassForPlayer(s, "use_progress_fill", "Active", true);
+            HUD_ENT.SetHasClassForPlayer(s, "use_progress_fill", "Dur5", true);
+
+            n++;
+        }
+
+        Instance.Msg("STRESS: применено к " + n + " слотам");
+    }
+
+    if(player_text.includes("!m_unstress") && (inst.Mapper))
+    {
+        for(const [s, i] of PlayerInstancesMap)
+        {
+            i.HudMainMenuOpen = false;
+            i.HudRadarOpen = false;
+            ClearPlayerHudState(s);
+        }
+        Instance.Msg("STRESS снят");
+    }
 });
 
 //                         ___                 _   _                 
@@ -2682,8 +2751,6 @@ Instance.OnScriptInput("SpawnItem", ({ caller, activator }) => {
                 {
                     Instance.Msg("PPSH")
                     const temp = Temp_Item_PPSh.ForceSpawn(ent_pos);
-                    const logic_case = (temp ?? []).filter(ent => ent?.IsValid() && ent.GetClassName() === "logic_case")[0];
-                    Instance.EntFireAtTarget({ target: logic_case, input: "InValue", value: "1" });
                     r_ent.Remove();
                 }
                 if(item?.value == 6)
@@ -2691,7 +2758,7 @@ Instance.OnScriptInput("SpawnItem", ({ caller, activator }) => {
                     Instance.Msg("GOLDEN PPSH")
                     const temp = Temp_Item_PPSh.ForceSpawn(ent_pos);
                     const logic_case = (temp ?? []).filter(ent => ent?.IsValid() && ent.GetClassName() === "logic_case")[0];
-                    Instance.EntFireAtTarget({ target: logic_case, input: "InValue", value: "2" });
+                    Instance.EntFireAtTarget({ target: logic_case, input: "InValue", value: "2", delay: 0.02 });
                     r_ent.Remove();
                 }
             }
@@ -4840,11 +4907,12 @@ function CloseAllHud()
 function ClearPlayerHudState(slot)
 {
     if(!HUD_ENT) return;
-
+	let count = 0;
     // верхнеуровневые панели
     for(const p of HUD_ALL_PANELS)
     {
         HUD_ENT.SetHasClassForPlayer(slot, p, "Visible");
+		count++;
     }
 
     // голосование
@@ -4852,6 +4920,7 @@ function ClearPlayerHudState(slot)
     {
         HUD_ENT.SetHasClassForPlayer(slot, id, "Focused");
         HUD_ENT.SetHasClassForPlayer(slot, id, "Dimmed");
+		count++;
     }
 
     // вкладки меню
@@ -4859,6 +4928,7 @@ function ClearPlayerHudState(slot)
     {
         HUD_ENT.SetHasClassForPlayer(slot, "tab_btn_" + t, "Active");
         HUD_ENT.SetHasClassForPlayer(slot, "tab_page_" + t, "Active");
+		count++;
     }
     HUD_ENT.SetHasClassForPlayer(slot, "tab_btn_admin_room", "Locked");
     HUD_ENT.SetHasClassForPlayer(slot, "lang_admin_noaccess", "Visible");
@@ -4869,15 +4939,18 @@ function ClearPlayerHudState(slot)
         HUD_ENT.SetHasClassForPlayer(slot, "skin_card_" + card.key, "Locked");
         HUD_ENT.SetHasClassForPlayer(slot, "skin_card_" + card.key, "Selected");
         HUD_ENT.SetDialogVariableStringForPlayer(slot, "skin_state_" + card.key, "txt", "");
+		count++;
     }
     HUD_ENT.SetDialogVariableStringForPlayer(slot, "skins_hint", "txt", "");
 
     // радар: подсветка
     for(const team of ["ct", "t"])
     {
+		count++;
         for(let i = 0; i < RADAR_DOTS_PER_TEAM; i++)
         {
             HUD_ENT.SetHasClassForPlayer(slot, "radar_cell_highlight_" + team + "_" + i, "Visible");
+			count++;
         }
     }
 
@@ -4886,7 +4959,7 @@ function ClearPlayerHudState(slot)
     HUD_ENT.SetHasClassForPlayer(slot, "use_progress_fill", "Active");
     HUD_ENT.SetHasClassForPlayer(slot, "team_objective_ct", "Visible");
     HUD_ENT.SetHasClassForPlayer(slot, "team_objective_t", "Visible");
-
+	Instance.Msg(`count: ${count}`);
     HUD_ENT.SetInputCaptureEnabled(slot, false);
 }
 
@@ -4963,6 +5036,10 @@ function ResetVariables()
         FLOOR_TYPE_CHANCE[1].weight = 0;
         FLOOR_TYPE_CHANCE[2].weight = 0;
         FLOOR_TYPE_CHANCE[3].weight = 0;
+        BOTTLE_CHANCE[0].weight = 10;
+        BOTTLE_CHANCE[1].weight = 60;
+        BOTTLE_CHANCE[2].weight = 25;
+        BOTTLE_CHANCE[3].weight = 5;
         GIFTBOX_CHANCE[0].weight = 38;
         GIFTBOX_CHANCE[1].weight = 23;
         GIFTBOX_CHANCE[2].weight = 0;
@@ -5002,6 +5079,10 @@ function ResetVariables()
         FLOOR_TYPE_CHANCE[1].weight = 9;
         FLOOR_TYPE_CHANCE[2].weight = 9;
         FLOOR_TYPE_CHANCE[3].weight = 2;
+        BOTTLE_CHANCE[0].weight = 10;
+        BOTTLE_CHANCE[1].weight = 60;
+        BOTTLE_CHANCE[2].weight = 25;
+        BOTTLE_CHANCE[3].weight = 5;
         GIFTBOX_CHANCE[0].weight = 25;
         GIFTBOX_CHANCE[1].weight = 10;
         GIFTBOX_CHANCE[2].weight = 52;
@@ -5028,7 +5109,7 @@ function ResetVariables()
         pre_isFallDamage = false;
         pre_isFakeExits = true;
         pre_isDeadEndChunks = true;
-        pre_isMiniBosses = true;
+        pre_isMiniBosses = false;
         pre_isVipMode = false;
         pre_isChunksShuffle = true;
         pre_isSamosborTimer = true;
@@ -5041,6 +5122,10 @@ function ResetVariables()
         FLOOR_TYPE_CHANCE[1].weight = 20;
         FLOOR_TYPE_CHANCE[2].weight = 35;
         FLOOR_TYPE_CHANCE[3].weight = 5;
+        BOTTLE_CHANCE[0].weight = 10;
+        BOTTLE_CHANCE[1].weight = 60;
+        BOTTLE_CHANCE[2].weight = 25;
+        BOTTLE_CHANCE[3].weight = 5;
         GIFTBOX_CHANCE[0].weight = 25;
         GIFTBOX_CHANCE[1].weight = 10;
         GIFTBOX_CHANCE[2].weight = 52;
@@ -5052,12 +5137,12 @@ function ResetVariables()
         // VALUES
         pre_human_hp = 100;
         pre_human_max_hp = 170;
-        pre_traps_percentage = 60;
+        pre_traps_percentage = 50;
         pre_npcs_percentage = 20;
         pre_miniboss_max = 1;
         pre_floors_max = 6;
-        pre_samosbortime = 600;
-        pre_samosbordamage = 1;
+        pre_samosbortime = 480;
+        pre_samosbordamage = 2;
         fire_percentage = 10;
         snow_percentage = 10;
 
@@ -5071,7 +5156,7 @@ function ResetVariables()
         pre_isVipMode = false;
         pre_isChunksShuffle = true;
         pre_isSamosborTimer = false;
-        pre_isElevatorHumansCheck = true;
+        pre_isElevatorHumansCheck = false;
 
         // CHANCES
         FAKE_EXIT_CHANCE[0].weight = 100;
@@ -5080,6 +5165,10 @@ function ResetVariables()
         FLOOR_TYPE_CHANCE[1].weight = 0;
         FLOOR_TYPE_CHANCE[2].weight = 0;
         FLOOR_TYPE_CHANCE[3].weight = 0;
+        BOTTLE_CHANCE[0].weight = 5;
+        BOTTLE_CHANCE[1].weight = 45;
+        BOTTLE_CHANCE[2].weight = 35;
+        BOTTLE_CHANCE[3].weight = 15;
         GIFTBOX_CHANCE[0].weight = 25;
         GIFTBOX_CHANCE[1].weight = 10;
         GIFTBOX_CHANCE[2].weight = 52;
@@ -5187,8 +5276,12 @@ function ResetScript()
         {
             let player = players[i]
             let player_controller = player?.GetPlayerController();
-            let player_slot = player_controller.GetPlayerSlot();
+            let player_slot = player_controller?.GetPlayerSlot();
+            if(player_slot == null) continue;
+
             const inst = PlayerInstancesMap.get(player_slot);
+            if(!inst) continue;
+            
             if(inst.voted_for_changing_mode)
             {
                 inst.SetNotVotedForChangingMode();
@@ -6237,6 +6330,17 @@ Instance.OnScriptInput("TeleportToRandomDestination", ({ caller, activator }) =>
         position: dest.position,
         angles: dest.angles,
         velocity: { x: 0, y: 0, z: 0 },
+    });
+
+    Instance.Delay(1.00).then(() => {
+        if(!activator?.IsValid() || !activator?.IsAlive()) return;
+
+        const name = activator.GetEntityName();
+        const hasItem = name && ZM_ITEM_PLAYER_NAMES.includes(name);
+        const hp = hasItem ? SURVIVAL_ZM_ITEM_HP : SURVIVAL_ZOMBIE_HP;
+
+        activator.SetMaxHealth(hp);
+        activator.SetHealth(hp);
     });
 });
 
