@@ -384,7 +384,7 @@
     "nodamageforces": "0",
     "explosion": "0",
     "material": "8",
-    "health": "4500",
+    "health": "3500",
     "propdata": "0",
     "spawnflags": "52224",
     "useLocalOffset": "0",

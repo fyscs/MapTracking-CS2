@@ -110,7 +110,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]hole_hurt",
     "classname": "trigger_hurt",
-    "origin": "0.000000 0.000000 -0.004883",
+    "origin": "9.250000 0.000000 -0.004883",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12043",

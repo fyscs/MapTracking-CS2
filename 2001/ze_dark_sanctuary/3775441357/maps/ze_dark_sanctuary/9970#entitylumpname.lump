@@ -27,7 +27,7 @@
         "output": "OnHurtPlayer",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 0.5",
+        "param": "speed 0.4",
         "delay": 0,
         "limit": -1
       },
@@ -44,6 +44,14 @@
         "target": "!activator",
         "input": "Ignitelifetime",
         "param": "3",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "basevelocity 0 0 10",
         "delay": 0,
         "limit": -1
       }

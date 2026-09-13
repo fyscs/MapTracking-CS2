@@ -5736,14 +5736,6 @@
         "limit": -1
       },
       {
-        "output": "OnCase01",
-        "target": "[PR#]hummer_mk",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnCase02",
         "target": "[PR#]gebulin_mk",
         "input": "ForceSpawn",
@@ -5770,14 +5762,6 @@
       {
         "output": "OnCase02",
         "target": "[PR#]solder_mk",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]hummer_mk",
         "input": "ForceSpawn",
         "param": "",
         "delay": 0,
@@ -6144,54 +6128,6 @@
         "limit": -1
       },
       {
-        "output": "OnCase01",
-        "target": "[PR#]xqy_mkz",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase01",
-        "target": "[PR#]windmb_mk",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase01",
-        "target": "[PR#]hb_mkz",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]xqy_mkz",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]windmb_mk",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]hb_mkz",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnCase03",
         "target": "[PR#]xqy_mkz",
         "input": "ForceSpawn",
@@ -6267,6 +6203,86 @@
         "output": "OnCase04",
         "target": "[PR#]llk_mk",
         "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shenqi_case",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shenqi_case",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]shenqi_case",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]shenqi_case",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]lv3-4",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]skinpick",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]lv3-4",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]skinpick",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]LV1-2",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]LV1-2",
+        "input": "Enable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -12159,7 +12175,7 @@
         "target": "[PR#]lv4_door5",
         "input": "Break",
         "param": "",
-        "delay": 25,
+        "delay": 15,
         "limit": 1
       },
       {
@@ -12175,7 +12191,7 @@
         "target": "[PR#]juben",
         "input": "Command",
         "param": "say \u8FD8\u970015\u79D2",
-        "delay": 10,
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -12273,7 +12289,7 @@
         "target": "[PR#]lv4_door6",
         "input": "Break",
         "param": "",
-        "delay": 30,
+        "delay": 20,
         "limit": 1
       },
       {
@@ -12289,7 +12305,7 @@
         "target": "[PR#]juben",
         "input": "Command",
         "param": "say \u8FD8\u9700\u898120\u79D2",
-        "delay": 10,
+        "delay": 0,
         "limit": 1
       },
       {
@@ -12373,7 +12389,7 @@
         "target": "[PR#]lv4_door7",
         "input": "Break",
         "param": "",
-        "delay": 40,
+        "delay": 32,
         "limit": 1
       },
       {
@@ -12405,7 +12421,7 @@
         "target": "[PR#]juben",
         "input": "Command",
         "param": "say \u8FD8\u9700\u898120\u79D2",
-        "delay": 20,
+        "delay": 12,
         "limit": 1
       }
     ]
@@ -12427,7 +12443,7 @@
         "target": "[PR#]lv4_door8",
         "input": "Open",
         "param": "",
-        "delay": 20,
+        "delay": 15,
         "limit": 1
       },
       {
@@ -12443,7 +12459,7 @@
         "target": "[PR#]juben",
         "input": "Command",
         "param": "say \u8FD8\u9700\u898110\u79D2",
-        "delay": 10,
+        "delay": 5,
         "limit": 1
       },
       {
@@ -12555,7 +12571,7 @@
         "target": "[PR#]lv4_door9",
         "input": "Open",
         "param": "",
-        "delay": 30,
+        "delay": 12,
         "limit": 1
       },
       {
@@ -12578,8 +12594,8 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u8FD8\u9700\u898120\u79D2",
-        "delay": 10,
+        "param": "say \u8FD8\u9700\u898110\u79D2",
+        "delay": 2,
         "limit": 1
       },
       {
@@ -12625,7 +12641,7 @@
         "target": "[PR#]lv4_zmtp8",
         "input": "Enable",
         "param": "",
-        "delay": 8,
+        "delay": 18,
         "limit": 1
       },
       {
@@ -12750,7 +12766,7 @@
         "target": "[PR#]lv4_doormove",
         "input": "Open",
         "param": "",
-        "delay": 30,
+        "delay": 25,
         "limit": 1
       },
       {
@@ -12766,7 +12782,7 @@
         "target": "[PR#]juben",
         "input": "Command",
         "param": "say \u8FD8\u9700\u898120\u79D2",
-        "delay": 10,
+        "delay": 5,
         "limit": 1
       },
       {
@@ -12774,7 +12790,7 @@
         "target": "[PR#]lv4_zmtp9",
         "input": "Enable",
         "param": "",
-        "delay": 10,
+        "delay": 20,
         "limit": 1
       },
       {
@@ -12782,7 +12798,7 @@
         "target": "[PR#]juben",
         "input": "Command",
         "param": "say \u003E\u003E\u003E\u50F5\u5C38\u5373\u5C06\u4F20\u9001\u003C\u003C\u003C",
-        "delay": 5,
+        "delay": 15,
         "limit": 1
       }
     ]
@@ -12858,7 +12874,7 @@
     "StartDisabled": "0",
     "useLocalOffset": "0",
     "classname": "trigger_multiple",
-    "origin": "-5503.500000 12683.000000 -11185.500000",
+    "origin": "-5503.500000 12683.000000 -11214.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9138",
@@ -15842,14 +15858,15 @@
   {
     "wait": "1.000000",
     "spawnflags": "4097",
-    "StartDisabled": "0",
+    "StartDisabled": "1",
     "useLocalOffset": "0",
+    "targetname": "[PR#]LV1-2",
     "classname": "trigger_multiple",
     "origin": "-4035.500000 1160.500000 4157.500000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9529",
-    "model": "maps/ze_dark_sanctuary/entities/unnamed_9529.vmdl",
+    "model": "maps/ze_dark_sanctuary/entities/lv1-2_9529.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -15869,14 +15886,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]bgm_case",
-        "input": "PickRandomShuffle",
-        "param": "",
-        "delay": 15,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]zmstart",
         "input": "Enable",
         "param": "",
@@ -15885,18 +15894,10 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]ss_tp",
-        "input": "Enable",
+        "target": "[PR#]skinpick",
+        "input": "PickRandom",
         "param": "",
-        "delay": 10,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]typtp",
-        "input": "Enable",
-        "param": "",
-        "delay": 10,
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -30876,6 +30877,22 @@
         "param": "atk1",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "health 200000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "max_health 100000",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -34034,7 +34051,7 @@
         "target": "[PR#]huaibiao_mk",
         "input": "ForceSpawn",
         "param": "",
-        "delay": 1,
+        "delay": 0,
         "limit": -1
       },
       {
@@ -34135,7 +34152,7 @@
         "target": "[PR#]xqy_mk",
         "input": "ForceSpawn",
         "param": "",
-        "delay": 1,
+        "delay": 0,
         "limit": -1
       },
       {
@@ -34151,7 +34168,7 @@
         "target": "[PR#]hole_hurt",
         "input": "Kill",
         "param": "",
-        "delay": 8,
+        "delay": 9,
         "limit": -1
       },
       {
@@ -34212,7 +34229,7 @@
         "target": "[PR#]windmb_push",
         "input": "Enable",
         "param": "",
-        "delay": 1,
+        "delay": 0,
         "limit": -1
       },
       {
@@ -34228,7 +34245,7 @@
         "target": "[PR#]windmb_par1",
         "input": "Start",
         "param": "",
-        "delay": 1,
+        "delay": 0,
         "limit": -1
       },
       {
@@ -34977,6 +34994,14 @@
         "input": "KeyValue",
         "param": "speed 1",
         "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "basevelocity 0 0 25",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -40276,7 +40301,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]tiaotingzhe",
     "classname": "info_player_start",
-    "origin": "-10234.167969 4208.759277 4168.161133",
+    "origin": "-10234.167969 4208.759277 4202.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12348"
@@ -41458,7 +41483,7 @@
     "StartDisabled": "0",
     "useLocalOffset": "0",
     "classname": "trigger_multiple",
-    "origin": "-10237.000000 4224.000000 4177.500000",
+    "origin": "-10237.000000 4237.000000 4177.500000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12458",
@@ -42132,7 +42157,7 @@
     "targetname": "[PR#]typ_sd1",
     "effect_name": "particles/newspar/magic_chuansong2.vpcf",
     "classname": "info_particle_system",
-    "origin": "-8601.000000 -2684.000000 3961.000000",
+    "origin": "-8496.000000 -2601.000000 3845.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12548"
@@ -42158,7 +42183,7 @@
     "parentname": "[PR#]typ_knife",
     "targetname": "[PR#]typ_sd2",
     "classname": "info_particle_system",
-    "origin": "-8740.000000 -2684.000000 3961.000000",
+    "origin": "-8635.000000 -2601.000000 3845.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12549"
@@ -42184,7 +42209,7 @@
     "parentname": "[PR#]typ_knife",
     "targetname": "[PR#]typ_sd3",
     "classname": "info_particle_system",
-    "origin": "-8856.000000 -2684.000000 3961.000000",
+    "origin": "-8751.000000 -2601.000000 3845.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12550"
@@ -42210,7 +42235,7 @@
     "parentname": "[PR#]typ_knife",
     "targetname": "[PR#]typ_sd4",
     "classname": "info_particle_system",
-    "origin": "-8951.000000 -2684.000000 3961.000000",
+    "origin": "-8846.000000 -2601.000000 3845.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12551"
@@ -42312,6 +42337,255 @@
         "target": "[PR#]typ_model",
         "input": "SetAnimationNotLooping",
         "param": "rush",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/newspar/magic_chuansong2.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]typ_knife",
+    "targetname": "[PR#]typ_sd4",
+    "classname": "info_particle_system",
+    "origin": "-8912.000000 -2601.000000 3845.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12552"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/newspar/magic_chuansong2.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]typ_knife",
+    "targetname": "[PR#]typ_sd3",
+    "classname": "info_particle_system",
+    "origin": "-8817.000000 -2601.000000 3845.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12553"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/newspar/magic_chuansong2.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]typ_knife",
+    "targetname": "[PR#]typ_sd2",
+    "classname": "info_particle_system",
+    "origin": "-8701.000000 -2601.000000 3845.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12554"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/newspar/magic_chuansong2.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]typ_knife",
+    "targetname": "[PR#]typ_sd1",
+    "classname": "info_particle_system",
+    "origin": "-8562.000000 -2601.000000 3845.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12555"
+  },
+  {
+    "Case04": "4",
+    "Case03": "3",
+    "Case02": "2",
+    "Case01": "1",
+    "targetname": "[PR#]shenqi_case",
+    "classname": "logic_case",
+    "origin": "-5665.831543 12957.007812 6740.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12557",
+    "connections": [
+      {
+        "output": "OnCase01",
+        "target": "[PR#]hummer_mk",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]xqy_mkz",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]windmb_mk",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hb_mkz",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]lv3-4",
+    "classname": "trigger_multiple",
+    "origin": "-4008.000000 1160.500000 4239.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12561",
+    "model": "maps/ze_dark_sanctuary/entities/lv3-4_12561.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ss_tp",
+        "input": "Enable",
+        "param": "",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]typtp",
+        "input": "Enable",
+        "param": "",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]startz",
+        "input": "Enable",
+        "param": "",
+        "delay": 15,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E10\u003C\u003C\u003C",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]zmstart",
+        "input": "Enable",
+        "param": "",
+        "delay": 20,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "Case02": "2",
+    "Case01": "1",
+    "targetname": "[PR#]skinpick",
+    "classname": "logic_case",
+    "origin": "-4338.358887 1440.502441 4107.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12562",
+    "connections": [
+      {
+        "output": "OnCase01",
+        "target": "[PR#]typtp",
+        "input": "Enable",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]ss_tp",
+        "input": "Enable",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u63D0\u4E30",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u6B7B\u795E",
         "delay": 0,
         "limit": -1
       }
