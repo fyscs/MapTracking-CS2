@@ -43081,27 +43081,11 @@
     "connections": [
       {
         "output": "OnPass",
-        "target": "!activator",
-        "input": "addcontext",
-        "param": "sub:1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]sn_relay_3",
-        "input": "trigger",
+        "target": "[PR#]s3_relay_train",
+        "input": "Trigger",
         "param": "",
         "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]script_vip",
-        "input": "RunScriptInput",
-        "param": "getpar",
-        "delay": 0,
-        "limit": 1
+        "limit": -1
       }
     ]
   },
@@ -43119,27 +43103,11 @@
     "connections": [
       {
         "output": "OnPass",
-        "target": "!activator",
-        "input": "addcontext",
-        "param": "sub:1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]sn_relay_6",
-        "input": "trigger",
+        "target": "[PR#]s3_relay_train",
+        "input": "Trigger",
         "param": "",
         "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]script_vip",
-        "input": "RunScriptInput",
-        "param": "getpar",
-        "delay": 0,
-        "limit": 1
+        "limit": -1
       }
     ]
   },
@@ -43157,27 +43125,11 @@
     "connections": [
       {
         "output": "OnPass",
-        "target": "!activator",
-        "input": "addcontext",
-        "param": "sub:1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]sn_relay_7",
-        "input": "trigger",
+        "target": "[PR#]s3_relay_train",
+        "input": "Trigger",
         "param": "",
         "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#]script_vip",
-        "input": "RunScriptInput",
-        "param": "getpar",
-        "delay": 0,
-        "limit": 1
+        "limit": -1
       }
     ]
   },
