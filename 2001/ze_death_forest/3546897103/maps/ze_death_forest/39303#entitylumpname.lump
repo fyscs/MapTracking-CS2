@@ -60,7 +60,7 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "health 50000",
+        "param": "health 90000000",
         "delay": 0,
         "limit": -1
       },
@@ -189,7 +189,7 @@
     "_template_lump_ent_index": "3",
     "connections": [
       {
-        "output": "OnHurt",
+        "output": "OnStartTouch",
         "target": "[PR#]sound_173",
         "input": "StartSound",
         "param": "",
