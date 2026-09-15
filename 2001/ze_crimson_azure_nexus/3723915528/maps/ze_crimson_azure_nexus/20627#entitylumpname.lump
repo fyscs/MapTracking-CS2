@@ -11,7 +11,7 @@
     "LagCompensate": "0",
     "randomizecycle": "0",
     "IdleAnimationLoopMode": "ANIM_LOOP_MODE_LOOPING",
-    "IdleAnim": "NonBattle_Move",
+    "IdleAnim": "Move",
     "StartingAnimationLoopMode": "ANIM_LOOP_MODE_LOOPING",
     "StartingAnim": "Move",
     "use_animgraph": "1",
