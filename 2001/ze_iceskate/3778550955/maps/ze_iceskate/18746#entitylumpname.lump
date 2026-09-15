@@ -33,8 +33,8 @@
     "origin": "17.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18710",
-    "model": "maps/ze_iceskate/entities/pizza_door_18710.vmdl",
+    "hammerUniqueId": "18732",
+    "model": "maps/ze_iceskate/entities/pizza_door_18732.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -84,8 +84,8 @@
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18725",
-    "model": "maps/ze_iceskate/entities/pizza_physbox_18725.vmdl",
+    "hammerUniqueId": "18747",
+    "model": "maps/ze_iceskate/entities/pizza_physbox_18747.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -112,7 +112,7 @@
     "origin": "-2.000000 1.000000 1.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18717",
+    "hammerUniqueId": "18739",
     "_template_lump_ent_index": "2"
   },
   {
@@ -130,7 +130,7 @@
     "origin": "1.000000 0.000000 9.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18718",
+    "hammerUniqueId": "18740",
     "_template_lump_ent_index": "3"
   },
   {
@@ -148,7 +148,7 @@
     "origin": "1.000000 0.000000 26.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18719",
+    "hammerUniqueId": "18741",
     "_template_lump_ent_index": "4"
   },
   {
@@ -201,7 +201,7 @@
     "origin": "-1.000000 1.477539 6.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18716",
+    "hammerUniqueId": "18738",
     "_template_lump_ent_index": "6"
   }
 ]

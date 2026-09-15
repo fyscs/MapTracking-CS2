@@ -15,19 +15,19 @@
     "renderamt": "255",
     "rendermode": "kRenderNormal",
     "renderfx": "kRenderFxNone",
-    "targetname": "[PR#]destroyer\u00260000",
-    "classname": "weapon_revolver",
+    "targetname": "[PR#]item_human_boomstick\u00260000",
+    "classname": "weapon_sawedoff",
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18611",
+    "hammerUniqueId": "18553",
     "_template_lump_ent_index": "0",
     "connections": [
       {
         "output": "OnPlayerPickup",
         "target": "[PR#]item_script",
         "input": "RunScriptInput",
-        "param": "PickupDestroyer",
+        "param": "PickupBoomStick",
         "delay": 0,
         "limit": -1
       },
@@ -35,7 +35,7 @@
         "output": "OnPlayerPickup",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say HUMAN PICKED UP DESTROYER",
+        "param": "say HUMAN PICKED UP BOOMSTICK",
         "delay": 0,
         "limit": 1
       }

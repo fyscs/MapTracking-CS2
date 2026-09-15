@@ -108,8 +108,8 @@ let wallsAllowed = false     // fenêtre d'utilisation des murs (piloté par Okf
 const WALL_MIN_DIST = 600    // distance minimale (unités) entre deux murs
 
 // ouverture / fermeture de la fenêtre d'utilisation (déclenchés par ta map)
-Instance.OnScriptInput("Okforwalls", () => { wallsAllowed = true })
-Instance.OnScriptInput("Nomorewalls", () => { wallsAllowed = false })
+Instance.OnScriptInput("Okforwalls", () => { wallsAllowed = true;  updateItemColors() })
+Instance.OnScriptInput("Nomorewalls", () => { wallsAllowed = false; updateItemColors() })
 
 Instance.OnScriptInput("PickupWall", (context) => {
     const a = context.activator
@@ -222,3 +222,43 @@ function getSuffixFromCaller(caller) {
     }
     return id
 }
+
+/* ── FEEDBACK VISUEL : couleur des physbox selon l'autorisation / la distance ── */
+
+const COLOR_THINK_INTERVAL = 0.5
+const COL_RED   = { r: 255, g: 0,   b: 0,   a: 50 }
+const COL_WHITE = { r: 255, g: 255, b: 255, a: 50 }
+
+// applique la couleur à toutes les entités dont le nom matche le pattern
+function colorEntities(pattern, col) {
+    Instance.FindEntitiesByName(pattern).forEach((e) => {
+        if (e && e.IsValid()) e.SetColor(col)
+    })
+}
+
+// check si une position (X/Y) est trop proche d'un mur déjà posé
+function posTooClose(x, y) {
+    for (const w of wallPositions) {
+        const dx = x - w.x, dy = y - w.y
+        if (Math.sqrt(dx * dx + dy * dy) < WALL_MIN_DIST) return true
+    }
+    return false
+}
+
+function updateItemColors() {
+    // freeze physboxes : rouge si Nomorewalls, blanc si Okforwalls (pas de contrainte distance)
+    colorEntities("item_fake_frozenphys*", wallsAllowed ? COL_WHITE : COL_RED)
+
+    // wall physboxes : rouge si Nomorewalls OU si trop proche d'un mur existant
+    Instance.FindEntitiesByName("item_wall_phys*").forEach((e) => {
+        if (!e || !e.IsValid()) return
+        if (!wallsAllowed) { e.SetColor(COL_RED); return }
+        const pos = e.GetAbsOrigin()
+        e.SetColor(posTooClose(pos.x, pos.y) ? COL_RED : COL_WHITE)
+    })
+
+    Instance.SetNextThink(Instance.GetGameTime() + COLOR_THINK_INTERVAL)
+}
+
+Instance.SetThink(updateItemColors)
+Instance.SetNextThink(Instance.GetGameTime() + COLOR_THINK_INTERVAL)

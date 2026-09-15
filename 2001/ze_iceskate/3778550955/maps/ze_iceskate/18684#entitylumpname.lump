@@ -26,7 +26,7 @@
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18654",
+    "hammerUniqueId": "18676",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -62,7 +62,7 @@
     "origin": "-0.004883 -0.004883 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18648",
+    "hammerUniqueId": "18670",
     "_template_lump_ent_index": "1"
   },
   {
@@ -120,7 +120,7 @@
     "origin": "-0.004883 -0.004883 0.000000",
     "angles": "-0.000000 0.000000 90.000000",
     "scales": "2.000000 2.000000 2.000000",
-    "hammerUniqueId": "18661",
+    "hammerUniqueId": "18683",
     "_template_lump_ent_index": "2"
   }
 ]

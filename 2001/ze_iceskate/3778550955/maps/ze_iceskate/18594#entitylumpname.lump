@@ -49,8 +49,8 @@
     "origin": "0.002441 -0.000488 -0.000031",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18566",
-    "model": "maps/ze_iceskate/entities/sleepy_physb_18566.vmdl",
+    "hammerUniqueId": "18588",
+    "model": "maps/ze_iceskate/entities/sleepy_physb_18588.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -100,7 +100,7 @@
     "origin": "0.002441 -1.841064 -8.337891",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18568",
+    "hammerUniqueId": "18590",
     "_template_lump_ent_index": "1"
   },
   {
@@ -113,7 +113,7 @@
     "origin": "-1.458496 -31.717041 -6.815460",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18565",
+    "hammerUniqueId": "18587",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -163,8 +163,8 @@
     "origin": "42.340332 -3.717041 -10.337891",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18561",
-    "model": "maps/ze_iceskate/entities/sleepy_physbox_pusher_18561.vmdl",
+    "hammerUniqueId": "18583",
+    "model": "maps/ze_iceskate/entities/sleepy_physbox_pusher_18583.vmdl",
     "_template_lump_ent_index": "3"
   },
   {
@@ -191,7 +191,7 @@
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18573",
+    "hammerUniqueId": "18595",
     "_template_lump_ent_index": "4"
   },
   {
@@ -206,7 +206,7 @@
     "origin": "27.948242 -1.841064 -8.337891",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18569",
+    "hammerUniqueId": "18591",
     "_template_lump_ent_index": "5",
     "connections": [
       {
@@ -234,7 +234,7 @@
     "origin": "-3.945801 -0.599609 17.555634",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18575",
+    "hammerUniqueId": "18597",
     "_template_lump_ent_index": "6"
   }
 ]

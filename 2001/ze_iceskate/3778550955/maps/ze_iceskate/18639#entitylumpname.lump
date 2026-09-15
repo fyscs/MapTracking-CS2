@@ -25,7 +25,7 @@
     "origin": "-0.000977 0.003418 -0.000031",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18618",
+    "hammerUniqueId": "18640",
     "_template_lump_ent_index": "0"
   },
   {
@@ -42,7 +42,7 @@
     "origin": "2.197754 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18624",
+    "hammerUniqueId": "18646",
     "_template_lump_ent_index": "1"
   }
 ]

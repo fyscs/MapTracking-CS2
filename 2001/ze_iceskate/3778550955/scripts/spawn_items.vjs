@@ -21,7 +21,7 @@ const CT_MAKERS = [
 ]
 
 const T_MAKERS = [
-    "maker_card", "maker_bac", "maker_banana", "maker_hoop", "maker_zshield", "maker_67", "maker_rocket"
+    "maker_card", "maker_bac", "maker_banana", "maker_hoop", "maker_zshield", "maker_67", "maker_rocket", "maker_amogus", "maker_sandwich"
 ]
 
 Instance.OnScriptInput("SpawnItems", (context) => {

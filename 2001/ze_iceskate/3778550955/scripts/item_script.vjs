@@ -20,7 +20,7 @@ let uniqueItemTemplateList = []
 const TEAMS = { CT: 3, T: 2 }
 
 let humanItemFilter = { JAM: null, SLEEPY: null, BAC: null }
-let zombieItemFilter = { SLEEPY: null, HOOP: null, BANANA: null, BAGUETTE: null, SHIELD: null, SIXTYSEVEN: null, ROCKET: null, AMOGUS: null }
+let zombieItemFilter = { SLEEPY: null, HOOP: null, BANANA: null, BAGUETTE: null, SHIELD: null, SIXTYSEVEN: null, ROCKET: null, AMOGUS: null, SANDWICH: null }
 
 // templates d'items (remplis dans Init)
 let templatePizza
@@ -73,6 +73,16 @@ let boingCounter = 0
 const ITEM_BANANA = { cooldown: 60, radius: 300, radius_droplets: 250, damage: 70, damage_droplets: 30, throwForward: 700, throwUp: 250, spin: 720 }
 // amogus (zombie) : déguise les zombies proches en CT vivant aléatoire. radius en unités (~40 = 1m).
 const ITEM_AMOGUS = { cooldown: 120, radius: 100, effectDuration: 3, disguiseDuration: 10, disguiseDelay: 1 }
+const ITEM_SANDWICH = {
+    cooldown: 100,      // cooldown du bouton (sec)
+    radius: 216,        // rayon d'attraction
+    touchRadius: 16,    // rayon de "contact" zombie -> kill CT
+    pullForce: 300,     // force d'attraction vers le zombie
+    startDelay: 1,      // délai avant l'attraction
+    effectDuration: 6,  // durée totale de l'effet
+    tickInterval: 0.05, // mise à jour de l'attraction (réseau)
+    killInterval: 0.015,// fréquence du check de contact (chaque tick)
+}
 
 // baguette
 let templateBaguette
@@ -176,28 +186,11 @@ function filterHolder(activator, caller) {
 
 /* ── TIMING ASYNC ────────────────────────────────────────── */
 
-const thinkQueue = []
-
-function RunThinkQueue() {
-    const upperThinkTime = Instance.GetGameTime() + 1 / 128
-    while (thinkQueue.length > 0 && thinkQueue[0].time <= upperThinkTime) thinkQueue.shift().callback()
-    if (thinkQueue.length > 0) Instance.SetNextThink(thinkQueue[0].time)
-}
-
-function QueueThink(time, callback) {
-    const indexAfter = thinkQueue.findIndex((t) => t.time > time)
-    if (indexAfter === -1) thinkQueue.push({ time, callback })
-    else thinkQueue.splice(indexAfter, 0, { time, callback })
-    if (indexAfter === 0 || indexAfter === -1) Instance.SetNextThink(time)
-}
-
+// Delay natif -> géré par la VM cs_script, indépendant du think scheduling.
+// Résout les bugs de timing sous charge serveur (drops de frames).
 function Delay(delay) {
-    return new Promise((resolve) => QueueThink(Instance.GetGameTime() + delay, resolve))
+    return Instance.Delay(delay)
 }
-
-Instance.SetThink(() => {
-    RunThinkQueue()
-})
 
 /* ── SCRIPT INPUTS (core) ────────────────────────────────── */
 
@@ -1097,12 +1090,13 @@ Instance.OnScriptInput("Use67", async (context) => {
         // anti double-usage pendant le compte à rebours
         Instance.EntFireAtTarget({ target: context.caller, input: "Lock" })
 
-        // repointe le logic_measure_movement 67_mm du dummy vers le JOUEUR, pour que
-        // les effets (parentés via 67_mm) suivent le zombie et pas le C4.
-        user.SetEntityName("67_carrier")
-        Instance.EntFireAtName({ name: "67_mm", input: "SetMeasureTarget", value: "67_carrier" })
-        Instance.EntFireAtName({ name: "67_mm", input: "SetMeasureReference", value: "67_carrier" })
-        Instance.EntFireAtName({ name: "67_mm", input: "SetTargetReference", value: "67_carrier" })
+        // téléporte l'entité proxy 67_carrier sur le zombie (+48u en Z pour éviter les pieds)
+        // le logic_measure_movement 67_mm cible 67_carrier -> les effets suivent le zombie
+        const carrierEnt = Instance.FindEntityByName("67_carrier")
+        if (carrierEnt) {
+            const uPos = user.GetAbsOrigin()
+            carrierEnt.Teleport({ position: Vector(uPos.x, uPos.y, uPos.z + 48) })
+        }
 
         Instance.EntFireAtName({ name: "67_sfx2", input: "StartSound" })
 
@@ -1181,7 +1175,7 @@ Instance.OnScriptInput("UseRocket", (context) => {
     Instance.EntFireAtName({ name: "missile_sound", input: "StartSound" })
 
     // démarre la boucle de vol (léger délai pour que le Disable prenne effet)
-    QueueThink(Instance.GetGameTime() + 0.1, rocketTick)
+    Instance.Delay(0.1).then(rocketTick)
 })
 
 // Hitbox détruite en vol -> OnBreak -> RunScriptInput "ROCKETHIT" -> explosion.
@@ -1229,7 +1223,7 @@ function rocketTick() {
     if (tr.didHit) { explodeRocket(tr.end); return }
 
     rocketModel.Teleport({ position: next, angles: modelAng })
-    QueueThink(Instance.GetGameTime() + ITEM_ROCKET.tick, rocketTick)
+    Instance.Delay(ITEM_ROCKET.tick).then(rocketTick)
 }
 
 // Explosion centralisée : une seule fois, quelle que soit la cause (impact,
@@ -1268,7 +1262,7 @@ function explodeRocket(pos) {
         if (p.GetTeamNumber() === TEAMS.CT) Instance.EntFireAtTarget({ target: p, input: "IgniteLifetime", value: ITEM_ROCKET.fireDuration })
     })
     // dégâts appliqués après la propulsion (les cadavres héritent de la vélocité)
-    QueueThink(Instance.GetGameTime() + 0.1, () => {
+    Instance.Delay(0.1).then(() => {
         hits.forEach((h) => {
             if (h.p.IsValid() && h.dmg > 0) {
                 h.p.TakeDamage({ damage: h.dmg, damageTypes: CSDamageTypes.BLAST, inflictor: killfeed, attacker: pilot })
@@ -1346,7 +1340,7 @@ Instance.OnScriptInput("UseAmogus", (context) => {
         if (ctModels.length === 0) return   // aucun CT vivant -> pas de déguisement
 
         // le déguisement s'applique disguiseDelay seconde(s) après l'appui
-        QueueThink(Instance.GetGameTime() + ITEM_AMOGUS.disguiseDelay, () => {
+        Instance.Delay(ITEM_AMOGUS.disguiseDelay).then(() => {
             if (!user.IsValid()) return
             // zombies dans le rayon autour du porteur (le porteur inclus car au centre)
             const zombies = findEntitiesInSphere(user.GetAbsOrigin(), ITEM_AMOGUS.radius, "player")
@@ -1355,7 +1349,7 @@ Instance.OnScriptInput("UseAmogus", (context) => {
                 const original = z.GetModelName()
                 z.SetModel(ctModels[rand(0, ctModels.length)])
                 // retour au skin d'origine après disguiseDuration
-                QueueThink(Instance.GetGameTime() + ITEM_AMOGUS.disguiseDuration, () => {
+                Instance.Delay(ITEM_AMOGUS.disguiseDuration).then(() => {
                     if (z.IsValid()) z.SetModel(original)
                 })
             })
@@ -1474,3 +1468,105 @@ function acumulateVector(vec1, vec2, amount) {
     finalVector = (vec1.z - vec2.z < 0 ? vectorAdd(finalVector, Vector(0, 0, amount)) : vectorAdd(finalVector, Vector(0, 0, -amount)))
     return finalVector
 }
+/* ══ ITEM : SANDWICH (attraction des humains proches vers le zombie) ══════════════════ */
+// Templates dans le spawner : sandwich_weapon, sandwich_mm, sandwich_dummy,
+// sandwich_button, sandwich_particle, sandwich_model, sandwich_sound, sandwich_soundB
+
+// incrémente sandwichLife à chaque respawn -> stoppe les boucles de la vie précédente
+// et remet le scale à 1.0 (efface les gains du sandwich)
+Instance.OnPlayerReset((event) => {
+    const p = event.player
+    if (!p || !p.IsValid()) return
+    p.sandwichLife = (p.sandwichLife || 0) + 1
+    if (p.GetTeamNumber() === TEAMS.T) p.SetModelScale(1.0)
+})
+
+// reset du scale au début de chaque round (efface les gains du sandwich)
+Instance.OnRoundStart(() => {
+    Instance.FindEntitiesByClass("player").forEach((p) => {
+        if (!p || !p.IsValid()) return
+        p.sandwichLife = (p.sandwichLife || 0) + 1   // stoppe les boucles actives
+        if (p.GetTeamNumber() === TEAMS.T) p.SetModelScale(1.0)
+    })
+})
+
+Instance.OnScriptInput("PickupSandwich", (context) => {
+    zombieItemFilter.SANDWICH = context.activator
+})
+
+// boucle de kill : check contact à chaque tick (0.015s) pour ne jamais rater
+async function sandwichKillLoop(user, endTime, life) {
+    if (!user.IsValid() || user.GetHealth() <= 0) return
+    if (Instance.GetGameTime() >= endTime) return
+    if ((user.sandwichLife || 0) !== life) return   // joueur respawné -> stop
+
+    const zPos = user.GetAbsOrigin()
+    const humans = findEntitiesInSphere(zPos, ITEM_SANDWICH.touchRadius, "player")
+    const killfeed = Instance.FindEntityByName("sandwich_killfeed")
+    humans.forEach((p) => {
+        if (!p.IsValid() || p.GetHealth() <= 0 || p.GetTeamNumber() !== TEAMS.CT) return
+        const soundB = Instance.FindEntityByName("sandwich_soundB*")
+        if (soundB && soundB.IsValid()) Instance.EntFireAtTarget({ target: soundB, input: "StartSound" })
+        p.TakeDamage({ damage: 99999, attacker: user, inflictor: killfeed || user })
+        // grandit de 10% à chaque humain mangé
+        const currentScale = user.GetModelScale ? user.GetModelScale() : 1.0
+        user.SetModelScale(currentScale * 1.1)
+    })
+
+    await Instance.Delay(ITEM_SANDWICH.killInterval)
+    sandwichKillLoop(user, endTime, life)
+}
+
+// boucle d'attraction : tire les CT vers le zombie toutes les 0.05s (moins de réseau)
+async function sandwichPullLoop(user, endTime, life) {
+    if (!user.IsValid() || user.GetHealth() <= 0) return
+    if (Instance.GetGameTime() >= endTime) return
+    if ((user.sandwichLife || 0) !== life) return   // joueur respawné -> stop
+
+    const zPos = user.GetAbsOrigin()
+    const humans = findEntitiesInSphere(zPos, ITEM_SANDWICH.radius, "player")
+    humans.forEach((p) => {
+        if (!p.IsValid() || p.GetHealth() <= 0 || p.GetTeamNumber() !== TEAMS.CT) return
+        const pull = acumulateVector(p.GetAbsOrigin(), zPos, ITEM_SANDWICH.pullForce)
+        p.Teleport({ velocity: pull })
+    })
+
+    await Instance.Delay(ITEM_SANDWICH.tickInterval)
+    sandwichPullLoop(user, endTime, life)
+}
+
+Instance.OnScriptInput("UseSandwich", (context) => {
+    if (!filterItem(zombieItemFilter.SANDWICH, context.activator, TEAMS.T)) return
+    const user = context.activator
+
+    // cooldown du bouton
+    Instance.EntFireAtTarget({ target: context.caller, input: "Lock" })
+    Instance.EntFireAtTarget({ target: context.caller, input: "Unlock", delay: ITEM_SANDWICH.cooldown })
+
+    // couleur : sandwich_model noir immédiatement, blanc après cooldown
+    const sandwichModel = Instance.FindEntityByName("sandwich_model*")
+    if (sandwichModel && sandwichModel.IsValid()) {
+        Instance.EntFireAtTarget({ target: sandwichModel, input: "Color", value: "0 0 0" })
+        Instance.EntFireAtTarget({ target: sandwichModel, input: "Color", value: "255 255 255", delay: ITEM_SANDWICH.cooldown })
+    }
+
+    // son d'activation
+    Instance.EntFireAtName({ name: "sandwich_sound", input: "StartSound" })
+
+    // délai avant attraction + particule
+    Instance.Delay(ITEM_SANDWICH.startDelay).then(() => {
+        if (!user.IsValid() || user.GetHealth() <= 0) return
+        // lancer la particule
+        Instance.EntFireAtName({ name: "sandwich_particle", input: "Start" })
+        // démarrer les deux boucles : kill (chaque tick) + attraction (0.05s)
+        const endTime = Instance.GetGameTime() + (ITEM_SANDWICH.effectDuration - ITEM_SANDWICH.startDelay)
+        const myLife = user.sandwichLife || 0
+        sandwichKillLoop(user, endTime, myLife)
+        sandwichPullLoop(user, endTime, myLife)
+    })
+
+    // arrêter la particule après effectDuration
+    Instance.Delay(ITEM_SANDWICH.effectDuration).then(() => {
+        Instance.EntFireAtName({ name: "sandwich_particle", input: "Stop" })
+    })
+})
