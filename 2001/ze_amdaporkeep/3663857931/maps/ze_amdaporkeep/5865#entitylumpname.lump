@@ -16,7 +16,7 @@
     "parentname": "[PR#]Omega_M_Shield_Target_Particle",
     "targetname": "[PR#]Omega_M_Shield_Target_Hurt",
     "classname": "trigger_hurt",
-    "origin": "0.000000 0.000000 55.970215",
+    "origin": "0.000000 0.000000 56.068359",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5868",
@@ -66,78 +66,6 @@
     ]
   },
   {
-    "wait": "0.500000",
-    "spawnflags": "1",
-    "StartDisabled": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]Omega_M_Shield_Target_Trigger",
-    "classname": "trigger_multiple",
-    "origin": "0.000000 0.000000 24.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5866",
-    "model": "maps/ze_amdaporkeep/entities/omega_m_shield_target_trigger_5866.vmdl",
-    "_template_lump_ent_index": "1",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Omega_M_Shield_Target_Particle",
-        "input": "SetParent",
-        "param": "!activator",
-        "delay": 0.03999999910593033,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.10000000149011612,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Omega_M_Model",
-        "input": "SetAnimationNotLooping",
-        "param": "sp04",
-        "delay": 1.5,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Omega_M_Shield_Target_Hurt",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 2,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Omega_M_Shield_Target_Particle",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 2,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Omega_Not_BossTarget_Trigger",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "cpoint7_parent": "0",
     "cpoint6_parent": "0",
     "cpoint5_parent": "0",
@@ -157,11 +85,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Omega_M_Shield_Target_Particle",
     "classname": "info_particle_system",
-    "origin": "0.000000 0.000000 1.000000",
+    "origin": "0.000000 0.000000 52.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5872",
-    "_template_lump_ent_index": "2",
+    "_template_lump_ent_index": "1",
     "connections": [
       {
         "output": "OnUser1",
@@ -185,6 +113,14 @@
         "input": "ClearParent",
         "param": "",
         "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "KeyValues",
+        "param": "angles 0 0 0",
+        "delay": 0.019999999552965164,
         "limit": 1
       }
     ]

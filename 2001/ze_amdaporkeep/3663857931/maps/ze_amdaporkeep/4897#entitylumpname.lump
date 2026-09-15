@@ -4,7 +4,7 @@
 [
   {
     "triggeronstarttouch": "0",
-    "speed": "1450",
+    "speed": "1250",
     "pushdir": "0.000000 0.000000 0.000000",
     "spawnflags": "1",
     "StartDisabled": "1",
@@ -20,7 +20,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "1450",
+    "speed": "1250",
     "pushdir": "0.000000 90.000000 0.000000",
     "spawnflags": "1",
     "StartDisabled": "1",
@@ -36,7 +36,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "1450",
+    "speed": "1250",
     "pushdir": "0.000000 180.000000 0.000000",
     "spawnflags": "1",
     "StartDisabled": "1",
@@ -52,7 +52,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "1450",
+    "speed": "1250",
     "pushdir": "0.000000 270.000000 0.000000",
     "spawnflags": "1",
     "StartDisabled": "1",

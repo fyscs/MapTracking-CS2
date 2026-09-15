@@ -889,7 +889,7 @@
     "StartDisabled": "0",
     "targetname": "[PR#]Omega_F_Normal_Attack_Relay",
     "classname": "logic_relay",
-    "origin": "0.000000 30.000000 0.000000",
+    "origin": "0.000000 32.000000 -1.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6351",

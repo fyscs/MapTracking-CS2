@@ -2363,6 +2363,14 @@
         "param": "EntityTemplate Temp_Omega_Meteor",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_Not_BossTarget_Branch",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -2532,39 +2540,6 @@
     "_template_lump_ent_index": "23"
   },
   {
-    "wait": "1.000000",
-    "filtername": "[PR#]Boss_TargetFilter2",
-    "spawnflags": "4097",
-    "StartDisabled": "1",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]Omega_Not_BossTarget_Trigger",
-    "classname": "trigger_multiple",
-    "origin": "2894.500000 -2878.250000 652.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5883",
-    "model": "maps/ze_amdaporkeep/entities/omega_not_bosstarget_trigger_5883.vmdl",
-    "_template_lump_ent_index": "24",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 0.10000000149011612,
-        "limit": -1
-      },
-      {
-        "output": "OnUser4",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "entityIndexSelection": "0",
     "saveAndRestore": "0",
     "stopOnNew": "1",
@@ -2580,7 +2555,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6862",
-    "_template_lump_ent_index": "25"
+    "_template_lump_ent_index": "24"
   },
   {
     "message": "\u4F60\u662F\u9668\u77F3\u76EE\u6807\uFF01\u8BF7\u5F15\u5BFC\u9668\u77F3\u8FDC\u79BB\u4EBA\u7FA4\uFF01",
@@ -2590,7 +2565,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6079",
-    "_template_lump_ent_index": "26",
+    "_template_lump_ent_index": "25",
     "connections": [
       {
         "output": "OnUser3",
@@ -2612,7 +2587,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5363",
-    "_template_lump_ent_index": "27",
+    "_template_lump_ent_index": "26",
     "connections": [
       {
         "output": "OnPass",
@@ -2666,7 +2641,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5945",
-    "_template_lump_ent_index": "28",
+    "_template_lump_ent_index": "27",
     "connections": [
       {
         "output": "OnCase01",
@@ -2712,7 +2687,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4706",
     "model": "maps/ze_amdaporkeep/entities/omega_fall_damage_4706.vmdl",
-    "_template_lump_ent_index": "29",
+    "_template_lump_ent_index": "28",
     "connections": [
       {
         "output": "OnHurtPlayer",
@@ -2740,7 +2715,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5851",
-    "_template_lump_ent_index": "30"
+    "_template_lump_ent_index": "29"
   },
   {
     "spawnflags": "0",
@@ -2755,7 +2730,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5798",
-    "_template_lump_ent_index": "31",
+    "_template_lump_ent_index": "30",
     "connections": [
       {
         "output": "OnUser3",
@@ -3020,7 +2995,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5799",
-    "_template_lump_ent_index": "32",
+    "_template_lump_ent_index": "31",
     "connections": [
       {
         "output": "OnUser3",
@@ -3282,7 +3257,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5950",
-    "_template_lump_ent_index": "33",
+    "_template_lump_ent_index": "32",
     "connections": [
       {
         "output": "OnCase01",
@@ -3328,7 +3303,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6181",
     "model": "maps/ze_amdaporkeep/entities/omega_aoe_hurt_6181.vmdl",
-    "_template_lump_ent_index": "34",
+    "_template_lump_ent_index": "33",
     "connections": [
       {
         "output": "OnUser1",
@@ -3448,7 +3423,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5947",
-    "_template_lump_ent_index": "35",
+    "_template_lump_ent_index": "34",
     "connections": [
       {
         "output": "OnUser3",
@@ -3484,7 +3459,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6114",
-    "_template_lump_ent_index": "36",
+    "_template_lump_ent_index": "35",
     "connections": [
       {
         "output": "OnUser3",
@@ -3519,7 +3494,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6212",
-    "_template_lump_ent_index": "37",
+    "_template_lump_ent_index": "36",
     "connections": [
       {
         "output": "OnUser3",
@@ -3597,7 +3572,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6897",
-    "_template_lump_ent_index": "38",
+    "_template_lump_ent_index": "37",
     "connections": [
       {
         "output": "OnCase01",
@@ -3677,7 +3652,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9189",
-    "_template_lump_ent_index": "39",
+    "_template_lump_ent_index": "38",
     "connections": [
       {
         "output": "OnUser3",
@@ -3757,7 +3732,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5967",
-    "_template_lump_ent_index": "40",
+    "_template_lump_ent_index": "39",
     "connections": [
       {
         "output": "OnUser4",
@@ -3795,7 +3770,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6899",
-    "_template_lump_ent_index": "41",
+    "_template_lump_ent_index": "40",
     "connections": [
       {
         "output": "OnCase01",
@@ -3880,7 +3855,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6095",
-    "_template_lump_ent_index": "42",
+    "_template_lump_ent_index": "41",
     "connections": [
       {
         "output": "OnUser3",
@@ -3904,7 +3879,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5287",
-    "_template_lump_ent_index": "43",
+    "_template_lump_ent_index": "42",
     "connections": [
       {
         "output": "OnUser4",
@@ -3928,7 +3903,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6108",
     "model": "maps/ze_amdaporkeep/entities/omega_cosmomemory_tg_6108.vmdl",
-    "_template_lump_ent_index": "44",
+    "_template_lump_ent_index": "43",
     "connections": [
       {
         "output": "OnUser3",
@@ -3953,7 +3928,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6925",
     "model": "maps/ze_amdaporkeep/entities/omega_hmitem_reset_trigger_6925.vmdl",
-    "_template_lump_ent_index": "45",
+    "_template_lump_ent_index": "44",
     "connections": [
       {
         "output": "OnStartTouch",

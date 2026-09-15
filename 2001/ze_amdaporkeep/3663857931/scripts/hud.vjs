@@ -32,7 +32,6 @@ const ITEM_CONFIG = {
         colorClass: "ColorDarkKnight",
         bgClass: "BgDarkKnight",
         textClass: "TextDarkKnight",
-        text: ["Item_Dark_Knight_Percent_Text", "Item_Dark_Knight_Energy_Text"],
         counterName: "Item_Dark_Knight_Earth_Counter",
         counterCallback: OnCounterDarkKnight,
     },
@@ -60,14 +59,12 @@ const ITEM_CONFIG = {
         colorClass: "ColorElidibus",
         bgClass: "BgElidibus",
         textClass: "TextElidibus",
-        text: ["Item_Elidibus_Percent_Text", "Item_Elidibus_Energy_Text"],
         counterName: "Item_Elidibus_Counter",
         counterCallback: OnCounterElidibus,
     },
     "Red_Mage": {
         displayName: "赤魔法师",
         maxEnergy: 100,
-        text: ["Item_Red_White_Text", "Item_Red_Black_Text", "Item_Red_Magia_Text"],
         isSpecial: true,
         whiteCounter: "Item_Red_Mage_White_Counter",
         blackCounter: "Item_Red_Mage_Black_Counter",
@@ -98,107 +95,203 @@ const ITEM_CONFIG = {
 // =========================================================
 let SCRIPT_ENABLED = true;
 let SAMURAI_ULTI = false;
+let SAMURAI_ENERGY = 0;
 const ITEM_OWNER = {};
-const LAST_COLOR_CLASS = {};
-const LAST_ENERGY1_HEIGHT_CLASS = {};
-const LAST_ENERGY2_HEIGHT_CLASS = {};
 const CONNECTED_COUNTERS = {};
 
-// RED
-const RED_MAGE_STATE = { white: 0, black: 0, magia: 0 };
+// ★ 关键：记录 HUD 上“实际挂着的 class”，而不是猜
+const ACTUAL_ENERGY1_CLASS = {};   // slot -> "Energy-N"
+const ACTUAL_ENERGY2_CLASS = {};   // slot -> "Energy-N"
+const ACTUAL_COLOR_CLASS  = {};    // slot -> "ColorXxx"
+const ACTUAL_BG_CLASS     = {};    // slot -> "BgXxx"
+const ACTUAL_TEXT_CLASS   = {};    // slot -> "TextXxx"
+
+// 文本的“当前实际显示值”
+const ACTUAL_VALUE_TEXT   = {};    // slot -> "50"
+const ACTUAL_WHITE_TEXT   = {};    // slot -> "0"
+const ACTUAL_BLACK_TEXT   = {};    // slot -> "0"
+
+// 满能量状态
+const ACTUAL_IS_FULL      = {};    // slot -> bool
+const ACTUAL_WHITE_FULL   = {};    // slot -> bool
+const ACTUAL_BLACK_FULL   = {};    // slot -> bool
+
+// 赤魔
+const RED_MAGE_STATE = { white: 0, black: 0, magia: 2 };
 const RED_MAGE_COUNTERS_CONNECTED = {};
-const RED_MAGE_LAST_WHITE_CLASS = {};
-const RED_MAGE_LAST_BLACK_CLASS = {};
+const RED_MAGE_REGISTERED = { done: false };
+const ACTUAL_WHITE_CLASS = {};     // slot -> "Energy-N"
+const ACTUAL_BLACK_CLASS = {};     // slot -> "Energy-N"
 
 const hudEntity = Instance.FindEntityByName("Map_Hud_Layout");
 
 // =========================================================
-// 3. 工具函数
+// 3. 批处理状态
+// =========================================================
+const PENDING_HUD_STATE = {};   // slot -> { ... }
+const PENDING_PLAYERS = new Set();
+
+let batchLoopRunning = false;
+
+function MarkPlayerDirty(slot) {
+    if (slot < 0) return;
+    PENDING_PLAYERS.add(slot);
+}
+
+function GetPending(slot) {
+    if (!PENDING_HUD_STATE[slot]) PENDING_HUD_STATE[slot] = {};
+    return PENDING_HUD_STATE[slot];
+}
+
+// =========================================================
+// 4. 工具函数
 // =========================================================
 function GetHeightClass(percent) {
     const clamped = percent < 0 ? 0 : percent > 100 ? 100 : percent;
     return "Energy-" + clamped;
 }
 
+// 安全移除：只有当前记录非空且不等于目标时才移除
+function ClearActualEnergy1(slot) {
+    const c = ACTUAL_ENERGY1_CLASS[slot];
+    if (c && hudEntity) {
+        hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill1", c, false);
+    }
+    ACTUAL_ENERGY1_CLASS[slot] = null;
+}
+function ClearActualEnergy2(slot) {
+    const c = ACTUAL_ENERGY2_CLASS[slot];
+    if (c && hudEntity) {
+        hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill2", c, false);
+    }
+    ACTUAL_ENERGY2_CLASS[slot] = null;
+}
+function ClearActualWhite(slot) {
+    const c = ACTUAL_WHITE_CLASS[slot];
+    if (c && hudEntity) {
+        hudEntity.SetHasClassForPlayer(slot, "WhiteMageFill", c, false);
+    }
+    ACTUAL_WHITE_CLASS[slot] = null;
+}
+function ClearActualBlack(slot) {
+    const c = ACTUAL_BLACK_CLASS[slot];
+    if (c && hudEntity) {
+        hudEntity.SetHasClassForPlayer(slot, "BlackMageFill", c, false);
+    }
+    ACTUAL_BLACK_CLASS[slot] = null;
+}
+
 // =========================================================
-// 4. HUD 更新
+// 5. HUD 更新（拾取 / 丢弃 —— 低频，直接调用）
 // =========================================================
 function OnItemPickupHUD(itemName, playerSlot) {
     if (!ITEM_CONFIG[itemName] || !hudEntity) return;
 
     const config = ITEM_CONFIG[itemName];
 
-    hudEntity.SetDialogVariableStringForPlayer(
-        playerSlot, "ArtifactName", "item_name", config.displayName
-    );
-
-    const oldColor = LAST_COLOR_CLASS[playerSlot];
-    if (oldColor) {
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", oldColor, false);
+    // 颜色：先移除旧的，再加新的
+    if (ACTUAL_COLOR_CLASS[playerSlot]) {
+        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", ACTUAL_COLOR_CLASS[playerSlot], false);
     }
     hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", config.colorClass, true);
-    LAST_COLOR_CLASS[playerSlot] = config.colorClass;
+    ACTUAL_COLOR_CLASS[playerSlot] = config.colorClass;
 
+    // 底槽色
+    if (ACTUAL_BG_CLASS[playerSlot]) {
+        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarContainer", ACTUAL_BG_CLASS[playerSlot], false);
+    }
     hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarContainer", config.bgClass, true);
+    ACTUAL_BG_CLASS[playerSlot] = config.bgClass;
 
+    // 文字色（ArtifactValue + ArtifactName）
+    if (ACTUAL_TEXT_CLASS[playerSlot]) {
+        hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", ACTUAL_TEXT_CLASS[playerSlot], false);
+        hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactName", ACTUAL_TEXT_CLASS[playerSlot], false);
+    }
     hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", config.textClass, true);
     hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactName", config.textClass, true);
+    ACTUAL_TEXT_CLASS[playerSlot] = config.textClass;
 
-    const oldHeight = LAST_ENERGY1_HEIGHT_CLASS[playerSlot];
-    if (oldHeight && oldHeight !== "Energy-0") {
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", oldHeight, false);
-    }
+    // 进度条归零：先移除实际挂着的旧 Energy-N，再挂 Energy-0
+    ClearActualEnergy1(playerSlot);
+    ClearActualEnergy2(playerSlot);
     hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", "Energy-0", true);
-    LAST_ENERGY1_HEIGHT_CLASS[playerSlot] = "Energy-0";
-
-    const oldHeight2 = LAST_ENERGY2_HEIGHT_CLASS[playerSlot];
-    if (oldHeight2 && oldHeight2 !== "Energy-0") {
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", oldHeight2, false);
-    }
     hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", "Energy-0", true);
-    LAST_ENERGY2_HEIGHT_CLASS[playerSlot] = "Energy-0";
+    ACTUAL_ENERGY1_CLASS[playerSlot] = "Energy-0";
+    ACTUAL_ENERGY2_CLASS[playerSlot] = "Energy-0";
 
+    // 满能量清掉
+    hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", "FullEnergy", false);
+    ACTUAL_IS_FULL[playerSlot] = false;
+
+    // 拾取时先清掉旧数字，等 counter 返回当前值。
+    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "ArtifactValue", "item_value", "");
+    ACTUAL_VALUE_TEXT[playerSlot] = "";
+
+    // 显示
     hudEntity.SetHasClassForPlayer(playerSlot, "HudContainer", "HasItem", true);
+
+    // 清 pending，防止上一件神器的残留
+    delete PENDING_HUD_STATE[playerSlot];
+    PENDING_PLAYERS.delete(playerSlot);
 }
 
 function OnItemDropHUD(playerSlot) {
     if (!hudEntity) return;
 
+    // 移除实际挂着的 Energy-N（这一步是关键，解决残留问题）
+    ClearActualEnergy1(playerSlot);
+    ClearActualEnergy2(playerSlot);
+
     hudEntity.SetHasClassForPlayer(playerSlot, "HudContainer", "HasItem", false);
 
-    const lastColor = LAST_COLOR_CLASS[playerSlot];
-    if (lastColor) {
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", lastColor, false);
-    }
-    LAST_COLOR_CLASS[playerSlot] = null;
+    // 满能量清掉
+    hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", "FullEnergy", false);
+    ACTUAL_IS_FULL[playerSlot] = false;
 
-    for (const itemName in ITEM_CONFIG) {
-        const cfg = ITEM_CONFIG[itemName];
-        if (!cfg.isSpecial) {
-            hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarContainer", cfg.bgClass, false);
-            hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", cfg.textClass, false);
-            hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactName", cfg.textClass, false);
-        }
+    // 颜色清掉
+    if (ACTUAL_COLOR_CLASS[playerSlot]) {
+        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", ACTUAL_COLOR_CLASS[playerSlot], false);
+        ACTUAL_COLOR_CLASS[playerSlot] = null;
+    }
+    if (ACTUAL_BG_CLASS[playerSlot]) {
+        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarContainer", ACTUAL_BG_CLASS[playerSlot], false);
+        ACTUAL_BG_CLASS[playerSlot] = null;
+    }
+    if (ACTUAL_TEXT_CLASS[playerSlot]) {
+        hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", ACTUAL_TEXT_CLASS[playerSlot], false);
+        hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactName", ACTUAL_TEXT_CLASS[playerSlot], false);
+        ACTUAL_TEXT_CLASS[playerSlot] = null;
     }
 
-    const lastHeight = LAST_ENERGY1_HEIGHT_CLASS[playerSlot];
-    if (lastHeight && lastHeight !== "Energy-0") {
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", lastHeight, false);
-    }
+    // 进度条归零
     hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", "Energy-0", true);
-    LAST_ENERGY1_HEIGHT_CLASS[playerSlot] = "Energy-0";
+    hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", "Energy-0", true);
+    ACTUAL_ENERGY1_CLASS[playerSlot] = "Energy-0";
+    ACTUAL_ENERGY2_CLASS[playerSlot] = "Energy-0";
+
+    ACTUAL_VALUE_TEXT[playerSlot] = undefined;
+
+    // 清 pending
+    delete PENDING_HUD_STATE[playerSlot];
+    PENDING_PLAYERS.delete(playerSlot);
 }
 
+// =========================================================
+// 6. 数值回调 —— 只存值，不碰 HUD
+// =========================================================
 function OnEnergyChanged(itemName, energy) {
     if (!SCRIPT_ENABLED) return;
     const playerSlot = ITEM_OWNER[itemName];
-    const isSamurai = (ITEM_CONFIG[itemName].maxEnergy === 3);
-    if (isSamurai && SAMURAI_ULTI) return;
-
     if (playerSlot < 0 || !hudEntity) return;
 
     const config = ITEM_CONFIG[itemName];
     const maxEnergy = config.maxEnergy;
+    const intValue = Math.floor(energy);
 
     let energy1Percent, energy2Percent;
     if (maxEnergy <= 100) {
@@ -209,65 +302,69 @@ function OnEnergyChanged(itemName, energy) {
         energy2Percent = Math.floor((Math.max(energy - 100, 0) / 100) * 100);
     }
 
-    hudEntity.SetDialogVariableStringForPlayer(
-        playerSlot, "ArtifactValue", "item_value", energy.toFixed(1)
-    );
+    const target = GetPending(playerSlot);
+    const newEnergy1 = GetHeightClass(energy1Percent);
+    const newEnergy2 = GetHeightClass(energy2Percent);
+    const newText = String(intValue);
+    const newFull = (energy >= maxEnergy);
 
-    const energy1HeightClass = GetHeightClass(energy1Percent);
-    if (LAST_ENERGY1_HEIGHT_CLASS[playerSlot] !== energy1HeightClass) {
-        if (LAST_ENERGY1_HEIGHT_CLASS[playerSlot]) {
-            hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", LAST_ENERGY1_HEIGHT_CLASS[playerSlot], false);
-        }
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", energy1HeightClass, true);
-        LAST_ENERGY1_HEIGHT_CLASS[playerSlot] = energy1HeightClass;
+    if (target.energy1 === newEnergy1 &&
+        target.energy2 === newEnergy2 &&
+        target.artifactValueText === newText &&
+        target.isFull === newFull) {
+        return;
     }
 
-    const energy2HeightClass = GetHeightClass(energy2Percent);
-    if (LAST_ENERGY2_HEIGHT_CLASS[playerSlot] !== energy2HeightClass) {
-        if (LAST_ENERGY2_HEIGHT_CLASS[playerSlot]) {
-            hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", LAST_ENERGY2_HEIGHT_CLASS[playerSlot], false);
-        }
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", energy2HeightClass, true);
-        LAST_ENERGY2_HEIGHT_CLASS[playerSlot] = energy2HeightClass;
-    }
+    target.energy1 = newEnergy1;
+    target.energy2 = newEnergy2;
+    target.artifactValueText = newText;
+    target.isFull = newFull;
 
-    const isFull = (energy >= maxEnergy);
-    if (isFull) {
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", "FullEnergy", true);
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", "FullEnergy", true);
-        hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", "FullEnergy", true);
-        if (isSamurai) SAMURAI_ULTI = true;
-    } else {
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill1", "FullEnergy", false);
-        hudEntity.SetHasClassForPlayer(playerSlot, "EnergyBarFill2", "FullEnergy", false);
-        hudEntity.SetHasClassForPlayer(playerSlot, "ArtifactValue", "FullEnergy", false);
-    }
+    MarkPlayerDirty(playerSlot);
 }
 
 // =========================================================
-// 5. 赤魔
+// 7. 赤魔
 // =========================================================
 function OnRedMagePickup(playerSlot) {
     if (!hudEntity) return;
 
-    RED_MAGE_STATE.white = 0;
-    RED_MAGE_STATE.black = 0;
-    RED_MAGE_STATE.magia = 2;
+    ClearActualWhite(playerSlot);
+    ClearActualBlack(playerSlot);
+
     hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageFill", "Energy-0", true);
     hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageFill", "Energy-0", true);
+    ACTUAL_WHITE_CLASS[playerSlot] = "Energy-0";
+    ACTUAL_BLACK_CLASS[playerSlot] = "Energy-0";
 
-    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "WhiteMageValue", "white_value", "0.0");
-    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "BlackMageValue", "black_value", "0.0");
+    hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageFill", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageFill", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageValue", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageValue", "FullEnergy", false);
+    ACTUAL_WHITE_FULL[playerSlot] = false;
+    ACTUAL_BLACK_FULL[playerSlot] = false;
 
-    RED_MAGE_LAST_WHITE_CLASS[playerSlot] = "Energy-0";
-    RED_MAGE_LAST_BLACK_CLASS[playerSlot] = "Energy-0";
+    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "WhiteMageValue", "white_value", "0");
+    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "BlackMageValue", "black_value", "0");
+    ACTUAL_WHITE_TEXT[playerSlot] = "0";
+    ACTUAL_BLACK_TEXT[playerSlot] = "0";
 
     hudEntity.SetHasClassForPlayer(playerSlot, "RedMageContainer", "HasItem", true);
+
+    delete PENDING_HUD_STATE[playerSlot];
+    PENDING_PLAYERS.delete(playerSlot);
+
+    // 换手只同步显示，不把魔元重新设成两个。
+    OnRedMageWhiteChanged({ value: RED_MAGE_STATE.white });
+    OnRedMageBlackChanged({ value: RED_MAGE_STATE.black });
+    UpdateMagiaDisplay(playerSlot, RED_MAGE_STATE.magia);
 }
 
 function OnRedMageDrop(playerSlot) {
     if (!hudEntity) return;
     hudEntity.SetHasClassForPlayer(playerSlot, "RedMageContainer", "HasItem", false);
+    delete PENDING_HUD_STATE[playerSlot];
+    PENDING_PLAYERS.delete(playerSlot);
 }
 
 function UpdateMagiaDisplay(playerSlot, magiaCount) {
@@ -281,52 +378,56 @@ function UpdateMagiaDisplay(playerSlot, magiaCount) {
 }
 
 function OnRedMageWhiteChanged({ value }) {
+    RED_MAGE_STATE.white = value;
     if (!SCRIPT_ENABLED) return;
     const playerSlot = ITEM_OWNER["Red_Mage"];
     if (playerSlot < 0 || !hudEntity) return;
-    RED_MAGE_STATE.white = value;
-    const percent = Math.floor((value / 100) * 100);
-    const newClass = GetHeightClass(percent);
 
-    const oldClass = RED_MAGE_LAST_WHITE_CLASS[playerSlot];
-    if (oldClass && oldClass !== newClass) {
-        hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageFill", oldClass, false);
+    const target = GetPending(playerSlot);
+    const newPercent = Math.floor((value / 100) * 100);
+    const newText = String(Math.floor(value));
+    const newFull = (value >= 100);
+
+    if (target.whitePercent === newPercent &&
+        target.whiteText === newText &&
+        target.whiteFull === newFull) {
+        return;
     }
-    hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageFill", newClass, true);
-    RED_MAGE_LAST_WHITE_CLASS[playerSlot] = newClass;
-    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "WhiteMageValue", "white_value", value.toFixed(1));
 
-    const isFull = (value >= 100);
-    hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageFill", "FullEnergy", isFull);
-    hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageValue", "FullEnergy", isFull);
+    target.whitePercent = newPercent;
+    target.whiteText = newText;
+    target.whiteFull = newFull;
+    MarkPlayerDirty(playerSlot);
 }
 
 function OnRedMageBlackChanged({ value }) {
+    RED_MAGE_STATE.black = value;
     if (!SCRIPT_ENABLED) return;
     const playerSlot = ITEM_OWNER["Red_Mage"];
     if (playerSlot < 0 || !hudEntity) return;
-    RED_MAGE_STATE.black = value;
-    const percent = Math.floor((value / 100) * 100);
-    const newClass = GetHeightClass(percent);
 
-    const oldClass = RED_MAGE_LAST_BLACK_CLASS[playerSlot];
-    if (oldClass && oldClass !== newClass) {
-        hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageFill", oldClass, false);
+    const target = GetPending(playerSlot);
+    const newPercent = Math.floor((value / 100) * 100);
+    const newText = String(Math.floor(value));
+    const newFull = (value >= 100);
+
+    if (target.blackPercent === newPercent &&
+        target.blackText === newText &&
+        target.blackFull === newFull) {
+        return;
     }
-    hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageFill", newClass, true);
-    RED_MAGE_LAST_BLACK_CLASS[playerSlot] = newClass;
-    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "BlackMageValue", "black_value", value.toFixed(1));
 
-    const isFull = (value >= 100);
-    hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageFill", "FullEnergy", isFull);
-    hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageValue", "FullEnergy", isFull);
+    target.blackPercent = newPercent;
+    target.blackText = newText;
+    target.blackFull = newFull;
+    MarkPlayerDirty(playerSlot);
 }
 
 function OnRedMageMagiaChanged({ value }) {
+    RED_MAGE_STATE.magia = value;
     if (!SCRIPT_ENABLED) return;
     const playerSlot = ITEM_OWNER["Red_Mage"];
     if (playerSlot < 0 || !hudEntity) return;
-    RED_MAGE_STATE.magia = value;
     UpdateMagiaDisplay(playerSlot, value);
 }
 
@@ -334,13 +435,20 @@ Instance.RegisterCheatCommand("script_enable_toggle", () => {
     SCRIPT_ENABLED = !SCRIPT_ENABLED;
     if (!SCRIPT_ENABLED) {
         DisableAllHUD();
+        PENDING_PLAYERS.clear();
+        for (const slot in PENDING_HUD_STATE) delete PENDING_HUD_STATE[slot];
+    } else {
+        // 关闭期间仍记录持有者，重新开启时同步当前神器和能量。
+        for (const itemName in ITEM_CONFIG) {
+            const playerSlot = ITEM_OWNER[itemName];
+            if (playerSlot >= 0) OnItemPickup(itemName, playerSlot);
+        }
+        BatchLoop();
     }
 });
 
-function RegisterRedMageCounters(playerSlot) {
-    if (RED_MAGE_COUNTERS_CONNECTED.white) {
-        return;
-    }
+function RegisterRedMageCounters() {
+    if (RED_MAGE_REGISTERED.done) return;
 
     const config = ITEM_CONFIG["Red_Mage"];
     const connections = [
@@ -350,6 +458,11 @@ function RegisterRedMageCounters(playerSlot) {
     ];
 
     for (const conn of connections) {
+        const connected = RED_MAGE_COUNTERS_CONNECTED[conn.key];
+        if (connected) {
+            ConnectCounterOutputs(connected, conn.callback);
+            continue;
+        }
         let entity = null;
         try {
             entity = Instance.FindEntitiesByName(conn.name);
@@ -361,38 +474,68 @@ function RegisterRedMageCounters(playerSlot) {
             LogWarn("赤魔 counter 未找到:", conn.name);
             continue;
         }
-        try {
-            Instance.ConnectOutput(entity, "OutValue", conn.callback);
-            RED_MAGE_COUNTERS_CONNECTED[conn.key] = true;
-        } catch (e) {
-            LogError("赤魔 ConnectOutput 失败:", conn.name, e);
-        }
+        const connection = { entity, outputs: {} };
+        RED_MAGE_COUNTERS_CONNECTED[conn.key] = connection;
+        ConnectCounterOutputs(connection, conn.callback);
     }
 
-    for (const textname of config.text) {
-        const point_worldtext = Instance.FindEntityByName(textname);
-        point_worldtext?.Remove();
-    }
-
-    UpdateMagiaDisplay(playerSlot, 2);
+    // 只补连失败的输出，三个 counter 都成功后才标记完成。
+    RED_MAGE_REGISTERED.done = connections.every(conn => {
+        const connection = RED_MAGE_COUNTERS_CONNECTED[conn.key];
+        return connection && connection.outputs.OutValue !== undefined &&
+            connection.outputs.OnGetValue !== undefined;
+    });
 }
 
 // =========================================================
-// 6. counter 回调
+// 8. counter 回调
 // =========================================================
 function OnCounterAstrologer({ value }) { OnEnergyChanged("Astrologer", value); }
 function OnCounterDarkKnight({ value }) { OnEnergyChanged("Dark_Knight", value); }
 function OnCounterNinja({ value }) { OnEnergyChanged("Ninja", value); }
 function OnCounterBlackMage({ value }) { OnEnergyChanged("Black_Mage", value); }
 function OnCounterElidibus({ value }) { OnEnergyChanged("Elidibus", value); }
-function OnCounterSamurai({ value }) { OnEnergyChanged("Samurai", value); }
+function OnCounterSamurai({ value }) {
+    SAMURAI_ENERGY = value;
+    // 满能量保持到 Samurai_Ulti，状态不再由延迟的 HUD 批处理修改。
+    if (value >= ITEM_CONFIG.Samurai.maxEnergy) SAMURAI_ULTI = true;
+    OnEnergyChanged("Samurai", SAMURAI_ULTI ? ITEM_CONFIG.Samurai.maxEnergy : value);
+}
 function OnCounterScholar({ value }) { OnEnergyChanged("Scholar", value); }
 
 // =========================================================
-// 7. 按需注册 counter
+// 9. 按需注册 counter
 // =========================================================
+// OutValue 接收变化，OnGetValue 用于拾取和重新开启 HUD 时同步当前值。
+function ConnectCounterOutputs(connection, callback) {
+    for (const output of ["OutValue", "OnGetValue"]) {
+        if (connection.outputs[output] !== undefined) continue;
+        try {
+            const id = Instance.ConnectOutput(connection.entity, output, callback);
+            if (id === undefined) {
+                LogWarn("ConnectOutput 未成功:", output);
+            } else {
+                connection.outputs[output] = id;
+            }
+        } catch (e) {
+            LogError("ConnectOutput 失败:", output, e);
+        }
+    }
+}
+
+function RequestCounterValue(connection) {
+    if (!connection || connection.outputs.OnGetValue === undefined) return;
+    Instance.EntFireAtTarget({ target: connection.entity, input: "GetValue" });
+}
+
+// 回合重置时解除旧连接，避免重复订阅。
+function DisconnectCounterOutputs(connection) {
+    for (const id of Object.values(connection.outputs)) Instance.DisconnectOutput(id);
+}
+
 function RegisterCounterForItem(itemName) {
     if (CONNECTED_COUNTERS[itemName]) {
+        ConnectCounterOutputs(CONNECTED_COUNTERS[itemName], ITEM_CONFIG[itemName].counterCallback);
         return;
     }
 
@@ -415,48 +558,50 @@ function RegisterCounterForItem(itemName) {
         return;
     }
 
-    try {
-        Instance.ConnectOutput(counterEntity, "OutValue", config.counterCallback);
-        CONNECTED_COUNTERS[itemName] = config.counterName;
-    } catch (e) {
-        LogError(`ConnectOutput 失败: ${e}`);
-    }
-
-    // 删除当局 hud 文字
-    if (!config.text) return;
-    for (const textname of config.text) {
-        const point_worldtext = Instance.FindEntityByName(textname);
-        point_worldtext?.Remove();
-    }
+    const connection = { entity: counterEntity, outputs: {} };
+    CONNECTED_COUNTERS[itemName] = connection;
+    ConnectCounterOutputs(connection, config.counterCallback);
 }
 
 // =========================================================
-// 拾取 / 丢弃
+// 10. 拾取 / 丢弃
 // =========================================================
 function OnItemPickup(itemName, playerSlot) {
-    if (!SCRIPT_ENABLED) return;
     if (!ITEM_CONFIG[itemName]) {
         LogWarn("OnItemPickup: 未知 item", itemName);
         return;
     }
     ITEM_OWNER[itemName] = playerSlot;
 
+    // 停用 HUD 时仍跟踪神器状态，避免重新开启后显示旧持有者。
+    if (itemName === "Red_Mage") {
+        RegisterRedMageCounters();
+    } else if (ITEM_CONFIG[itemName].maxEnergy > 0) {
+        RegisterCounterForItem(itemName);
+    }
+    if (!SCRIPT_ENABLED) return;
+
     ClearAllHUDForPlayer(playerSlot);
 
     if (itemName === "Red_Mage") {
         OnRedMagePickup(playerSlot);
-        RegisterRedMageCounters(playerSlot);
+        for (const connection of Object.values(RED_MAGE_COUNTERS_CONNECTED)) {
+            RequestCounterValue(connection);
+        }
     } else if (ITEM_CONFIG[itemName].maxEnergy > 0) {
         OnItemPickupHUD(itemName, playerSlot);
-        RegisterCounterForItem(itemName);
+        if (itemName === "Samurai") {
+            OnEnergyChanged(itemName, SAMURAI_ULTI ? ITEM_CONFIG.Samurai.maxEnergy : SAMURAI_ENERGY);
+        }
+        RequestCounterValue(CONNECTED_COUNTERS[itemName]);
     }
 }
 
 function OnItemDrop(itemName) {
-    if (!SCRIPT_ENABLED) return;
     const playerSlot = ITEM_OWNER[itemName];
     if (playerSlot < 0) return;
     ITEM_OWNER[itemName] = -1;
+    if (!SCRIPT_ENABLED) return;
 
     if (itemName === "Red_Mage") {
         OnRedMageDrop(playerSlot);
@@ -475,35 +620,34 @@ function GetItemName(name) {
 function ClearAllHUDForPlayer(playerSlot) {
     if (!hudEntity) return;
 
-    // 1. 普通神器 HUD
     OnItemDropHUD(playerSlot);
 
-    // 2. 赤魔 HUD
+    // 先移除实际的赤魔进度条样式，再覆盖记录，避免旧高度残留。
+    ClearActualWhite(playerSlot);
+    ClearActualBlack(playerSlot);
     hudEntity.SetHasClassForPlayer(playerSlot, "RedMageContainer", "HasItem", false);
-
-    for (const panel of ["WhiteMageFill", "BlackMageFill"]) {
-        const oldW = RED_MAGE_LAST_WHITE_CLASS[playerSlot];
-        const oldB = RED_MAGE_LAST_BLACK_CLASS[playerSlot];
-        if (panel === "WhiteMageFill" && oldW) {
-            hudEntity.SetHasClassForPlayer(playerSlot, panel, oldW, false);
-        }
-        if (panel === "BlackMageFill" && oldB) {
-            hudEntity.SetHasClassForPlayer(playerSlot, panel, oldB, false);
-        }
-        hudEntity.SetHasClassForPlayer(playerSlot, panel, "Energy-0", true);
-        hudEntity.SetHasClassForPlayer(playerSlot, panel, "FullEnergy", false);
-    }
+    hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageFill", "Energy-0", true);
+    hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageFill", "Energy-0", true);
+    hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageFill", "FullEnergy", false);
+    hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageFill", "FullEnergy", false);
     hudEntity.SetHasClassForPlayer(playerSlot, "WhiteMageValue", "FullEnergy", false);
     hudEntity.SetHasClassForPlayer(playerSlot, "BlackMageValue", "FullEnergy", false);
-    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "WhiteMageValue", "white_value", "0.0");
-    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "BlackMageValue", "black_value", "0.0");
-    delete RED_MAGE_LAST_WHITE_CLASS[playerSlot];
-    delete RED_MAGE_LAST_BLACK_CLASS[playerSlot];
+    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "WhiteMageValue", "white_value", "0");
+    hudEntity.SetDialogVariableStringForPlayer(playerSlot, "BlackMageValue", "black_value", "0");
+
+    ACTUAL_WHITE_CLASS[playerSlot] = "Energy-0";
+    ACTUAL_BLACK_CLASS[playerSlot] = "Energy-0";
+    ACTUAL_WHITE_FULL[playerSlot] = false;
+    ACTUAL_BLACK_FULL[playerSlot] = false;
+    ACTUAL_WHITE_TEXT[playerSlot] = "0";
+    ACTUAL_BLACK_TEXT[playerSlot] = "0";
+
+    delete PENDING_HUD_STATE[playerSlot];
+    PENDING_PLAYERS.delete(playerSlot);
 }
 
 function DisableAllHUD() {
     if (!hudEntity) return;
-
     for (const player of Instance.GetAllPlayerControllers()) {
         const playerSlot = player.GetPlayerSlot();
         if (playerSlot >= 0) {
@@ -513,7 +657,128 @@ function DisableAllHUD() {
 }
 
 // =========================================================
-// 拾取输入
+// 11. 批处理循环
+// =========================================================
+function ProcessPendingHudUpdates() {
+    if (!SCRIPT_ENABLED || !hudEntity || PENDING_PLAYERS.size === 0) return;
+
+    PENDING_PLAYERS.forEach(slot => {
+        const target = PENDING_HUD_STATE[slot];
+        if (!target) return;
+
+        // ---- 通用进度条 1 ----
+        if (target.energy1 !== undefined) {
+            const cur = ACTUAL_ENERGY1_CLASS[slot];
+            if (cur !== target.energy1) {
+                if (cur) {
+                    hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill1", cur, false);
+                }
+                hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill1", target.energy1, true);
+                ACTUAL_ENERGY1_CLASS[slot] = target.energy1;
+            }
+        }
+
+        // ---- 通用进度条 2 ----
+        if (target.energy2 !== undefined) {
+            const cur = ACTUAL_ENERGY2_CLASS[slot];
+            if (cur !== target.energy2) {
+                if (cur) {
+                    hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill2", cur, false);
+                }
+                hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill2", target.energy2, true);
+                ACTUAL_ENERGY2_CLASS[slot] = target.energy2;
+            }
+        }
+
+        // ---- 数值文本 ----
+        if (target.artifactValueText !== undefined) {
+            if (ACTUAL_VALUE_TEXT[slot] !== target.artifactValueText) {
+                hudEntity.SetDialogVariableStringForPlayer(slot, "ArtifactValue", "item_value", target.artifactValueText);
+                ACTUAL_VALUE_TEXT[slot] = target.artifactValueText;
+            }
+        }
+
+        // ---- 满能量 ----
+        if (target.isFull !== undefined) {
+            if (ACTUAL_IS_FULL[slot] !== target.isFull) {
+                hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill1", "FullEnergy", target.isFull);
+                hudEntity.SetHasClassForPlayer(slot, "EnergyBarFill2", "FullEnergy", target.isFull);
+                hudEntity.SetHasClassForPlayer(slot, "ArtifactValue", "FullEnergy", target.isFull);
+                ACTUAL_IS_FULL[slot] = target.isFull;
+            }
+        }
+
+        // ---- 赤魔：白 ----
+        if (target.whitePercent !== undefined) {
+            const newWhite = GetHeightClass(target.whitePercent);
+            if (ACTUAL_WHITE_CLASS[slot] !== newWhite) {
+                if (ACTUAL_WHITE_CLASS[slot]) {
+                    hudEntity.SetHasClassForPlayer(slot, "WhiteMageFill", ACTUAL_WHITE_CLASS[slot], false);
+                }
+                hudEntity.SetHasClassForPlayer(slot, "WhiteMageFill", newWhite, true);
+                ACTUAL_WHITE_CLASS[slot] = newWhite;
+            }
+        }
+        if (target.whiteText !== undefined) {
+            if (ACTUAL_WHITE_TEXT[slot] !== target.whiteText) {
+                hudEntity.SetDialogVariableStringForPlayer(slot, "WhiteMageValue", "white_value", target.whiteText);
+                ACTUAL_WHITE_TEXT[slot] = target.whiteText;
+            }
+        }
+        if (target.whiteFull !== undefined) {
+            if (ACTUAL_WHITE_FULL[slot] !== target.whiteFull) {
+                hudEntity.SetHasClassForPlayer(slot, "WhiteMageFill", "FullEnergy", target.whiteFull);
+                hudEntity.SetHasClassForPlayer(slot, "WhiteMageValue", "FullEnergy", target.whiteFull);
+                ACTUAL_WHITE_FULL[slot] = target.whiteFull;
+            }
+        }
+
+        // ---- 赤魔：黑 ----
+        if (target.blackPercent !== undefined) {
+            const newBlack = GetHeightClass(target.blackPercent);
+            if (ACTUAL_BLACK_CLASS[slot] !== newBlack) {
+                if (ACTUAL_BLACK_CLASS[slot]) {
+                    hudEntity.SetHasClassForPlayer(slot, "BlackMageFill", ACTUAL_BLACK_CLASS[slot], false);
+                }
+                hudEntity.SetHasClassForPlayer(slot, "BlackMageFill", newBlack, true);
+                ACTUAL_BLACK_CLASS[slot] = newBlack;
+            }
+        }
+        if (target.blackText !== undefined) {
+            if (ACTUAL_BLACK_TEXT[slot] !== target.blackText) {
+                hudEntity.SetDialogVariableStringForPlayer(slot, "BlackMageValue", "black_value", target.blackText);
+                ACTUAL_BLACK_TEXT[slot] = target.blackText;
+            }
+        }
+        if (target.blackFull !== undefined) {
+            if (ACTUAL_BLACK_FULL[slot] !== target.blackFull) {
+                hudEntity.SetHasClassForPlayer(slot, "BlackMageFill", "FullEnergy", target.blackFull);
+                hudEntity.SetHasClassForPlayer(slot, "BlackMageValue", "FullEnergy", target.blackFull);
+                ACTUAL_BLACK_FULL[slot] = target.blackFull;
+            }
+        }
+
+        PENDING_HUD_STATE[slot] = {};
+    });
+
+    PENDING_PLAYERS.clear();
+}
+
+// ★ 用 async/await + Instance.Delay(秒)
+async function BatchLoop() {
+    if (batchLoopRunning) return;
+    batchLoopRunning = true;
+
+    // 紧急关闭后退出刷新循环，重新开启时再启动。
+    while (SCRIPT_ENABLED) {
+        ProcessPendingHudUpdates();
+        await Instance.Delay(0.2);
+    }
+    batchLoopRunning = false;
+}
+
+// =========================================================
+// 12. 拾取输入
 // =========================================================
 for (const itemName in ITEM_CONFIG) {
     Instance.OnScriptInput(itemName, (inputData) => {
@@ -527,7 +792,7 @@ for (const itemName in ITEM_CONFIG) {
 }
 
 // =========================================================
-// 神器丢弃
+// 13. 神器丢弃
 // =========================================================
 Instance.OnWeaponDrop(({ weapon }) => {
     const name = weapon.GetEntityName();
@@ -537,11 +802,16 @@ Instance.OnWeaponDrop(({ weapon }) => {
 });
 
 // =========================================================
-// 武士 Ulti
+// 14. 武士 Ulti
 // =========================================================
-Instance.OnScriptInput("Samurai_Ulti", () => SAMURAI_ULTI = false);
+Instance.OnScriptInput("Samurai_Ulti", () => {
+    SAMURAI_ULTI = false;
+    OnEnergyChanged("Samurai", SAMURAI_ENERGY);
+});
 
-
+// =========================================================
+// 14. 地图事件
+// =========================================================
 Instance.OnScriptInput("MusicRandom", () => {
     if (RandomInt(0, 1)) return;
     Instance.EntFireAtName({name: "Music_Extreme_2", input: "FireUser2"});
@@ -565,13 +835,15 @@ Instance.OnScriptInput("ResetName", ({activator}) => {
 });
 
 // =========================================================
-// 8. 回合开始重置
+// 15. 回合开始重置
 // =========================================================
 Instance.OnRoundStart(() => {
-    for (const player of Instance.GetAllPlayerControllers()) {
-        const playerSlot = player.GetPlayerSlot();
-        if (playerSlot >= 0) {
-            ClearAllHUDForPlayer(playerSlot);
+    if (SCRIPT_ENABLED) {
+        for (const player of Instance.GetAllPlayerControllers()) {
+            const playerSlot = player.GetPlayerSlot();
+            if (playerSlot >= 0) {
+                ClearAllHUDForPlayer(playerSlot);
+            }
         }
     }
 
@@ -581,7 +853,10 @@ Instance.OnRoundStart(() => {
         item?.Remove();
     }
 
-    for (const itemName in CONNECTED_COUNTERS) delete CONNECTED_COUNTERS[itemName];
+    for (const itemName in CONNECTED_COUNTERS) {
+        DisconnectCounterOutputs(CONNECTED_COUNTERS[itemName]);
+        delete CONNECTED_COUNTERS[itemName];
+    }
 
     for (const itemName in ITEM_CONFIG) {
         ITEM_OWNER[itemName] = -1;
@@ -590,17 +865,41 @@ Instance.OnRoundStart(() => {
     RED_MAGE_STATE.white = 0;
     RED_MAGE_STATE.black = 0;
     RED_MAGE_STATE.magia = 2;
-    for (const key in RED_MAGE_COUNTERS_CONNECTED) delete RED_MAGE_COUNTERS_CONNECTED[key];
+    RED_MAGE_REGISTERED.done = false;
+    for (const key in RED_MAGE_COUNTERS_CONNECTED) {
+        DisconnectCounterOutputs(RED_MAGE_COUNTERS_CONNECTED[key]);
+        delete RED_MAGE_COUNTERS_CONNECTED[key];
+    }
 
     SAMURAI_ULTI = false;
+    SAMURAI_ENERGY = 0;
+    PENDING_PLAYERS.clear();
+    for (const k in PENDING_HUD_STATE) delete PENDING_HUD_STATE[k];
+
+    // 清所有 ACTUAL_*
+    for (const k in ACTUAL_ENERGY1_CLASS) delete ACTUAL_ENERGY1_CLASS[k];
+    for (const k in ACTUAL_ENERGY2_CLASS) delete ACTUAL_ENERGY2_CLASS[k];
+    for (const k in ACTUAL_COLOR_CLASS)   delete ACTUAL_COLOR_CLASS[k];
+    for (const k in ACTUAL_BG_CLASS)      delete ACTUAL_BG_CLASS[k];
+    for (const k in ACTUAL_TEXT_CLASS)    delete ACTUAL_TEXT_CLASS[k];
+    for (const k in ACTUAL_VALUE_TEXT)    delete ACTUAL_VALUE_TEXT[k];
+    for (const k in ACTUAL_WHITE_TEXT)    delete ACTUAL_WHITE_TEXT[k];
+    for (const k in ACTUAL_BLACK_TEXT)    delete ACTUAL_BLACK_TEXT[k];
+    for (const k in ACTUAL_IS_FULL)       delete ACTUAL_IS_FULL[k];
+    for (const k in ACTUAL_WHITE_FULL)    delete ACTUAL_WHITE_FULL[k];
+    for (const k in ACTUAL_BLACK_FULL)    delete ACTUAL_BLACK_FULL[k];
+    for (const k in ACTUAL_WHITE_CLASS)   delete ACTUAL_WHITE_CLASS[k];
+    for (const k in ACTUAL_BLACK_CLASS)   delete ACTUAL_BLACK_CLASS[k];
 });
 
 // =========================================================
-// 9. 初始化
+// 16. 初始化
 // =========================================================
 for (const itemName in ITEM_CONFIG) {
     ITEM_OWNER[itemName] = -1;
 }
+
+BatchLoop();
 
 function RandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

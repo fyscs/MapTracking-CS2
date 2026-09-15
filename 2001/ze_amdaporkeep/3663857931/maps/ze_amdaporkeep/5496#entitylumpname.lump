@@ -993,7 +993,7 @@
       {
         "output": "OnFullyOpen",
         "target": "[PR#]First_Omega_Rlaser_Particle",
-        "input": "Stop",
+        "input": "StopPlayEndCap",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -1003,7 +1003,7 @@
         "target": "!self",
         "input": "Close",
         "param": "",
-        "delay": 0.019999999552965164,
+        "delay": 1,
         "limit": -1
       },
       {
@@ -1084,7 +1084,7 @@
       {
         "output": "OnFullyOpen",
         "target": "[PR#]First_Omega_Llaser_Particle",
-        "input": "Stop",
+        "input": "StopPlayEndCap",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -1094,7 +1094,7 @@
         "target": "!self",
         "input": "Close",
         "param": "",
-        "delay": 0.019999999552965164,
+        "delay": 1,
         "limit": -1
       },
       {

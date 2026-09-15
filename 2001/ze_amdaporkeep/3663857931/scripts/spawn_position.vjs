@@ -122,8 +122,6 @@ Instance.OnScriptInput("Case02", () => {
     }
 });
 
-Instance.SetThink(UpdatePosition);
-
 let TGpos = null;
 
 Instance.OnScriptInput("Omega_M_Shield", (pl) => {
@@ -140,10 +138,14 @@ Instance.OnScriptInput("Omega_M_Shield", (pl) => {
     if (Dis > r) {
         const TGvec = TargetCalculate(vector, Evec);
         TGpos  = VectorAdd(Mpos, TGvec);
-        const Time = Instance.GetGameTime();
         Instance.EntFireAtName({name: "Omega_M_TP_Particle",input: "FireUser1"});
-        Instance.SetNextThink(Time + 0.7);
+        Instance.EntFireAtName({name: "Omega_Boss_TP_Script", input: "RunScriptInput", value: "UpdatePosition", delay: 0.7});
     }
+});
+
+Instance.OnScriptInput("UpdatePosition",() => {
+    MBoss.Teleport({ position: TGpos });
+    Instance.EntFireAtName({name: "Omega_M_TP_Particle2",input: "FireUser1"});
 });
 
 function TargetCalculate(vec1, vec2) {
@@ -152,12 +154,6 @@ function TargetCalculate(vec1, vec2) {
         y: vec1.y - vec2.y * r,
         z: 4
     };
-}
-
-function UpdatePosition() {
-    MBoss.Teleport({ position: TGpos });
-    Instance.EntFireAtName({name: "Omega_M_TP_Particle2",input: "FireUser1"});
-    return;
 }
 
 function RelativeDis(vec) {

@@ -4,18 +4,51 @@
 [
   {
     "wait": "1.000000",
-    "filtername": "[PR#]Boss_TargetFilter",
+    "filtername": "[PR#]Boss_TargetFilter2",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
-    "targetname": "[PR#]Omega_BossTarget_Trigger",
+    "targetname": "[PR#]Omega_Not_BossTarget_Trigger",
     "classname": "trigger_multiple",
-    "origin": "2878.500000 -2910.250000 652.000000",
+    "origin": "2894.500000 -2926.250000 652.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5854",
-    "model": "maps/ze_amdaporkeep/entities/omega_bosstarget_trigger_5854.vmdl",
+    "hammerUniqueId": "5883",
+    "model": "maps/ze_amdaporkeep/entities/omega_not_bosstarget_trigger_5883.vmdl",
     "_template_lump_ent_index": "0",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnUser3",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "spawnflags": "0",
+    "health": "0",
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "targetname": "[PR#]Omega_Not_BossTarget_Relay",
+    "classname": "logic_relay",
+    "origin": "0.000000 -16.000000 0.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9318",
+    "_template_lump_ent_index": "1",
     "connections": [
       {
         "output": "OnUser3",
@@ -27,35 +60,83 @@
       },
       {
         "output": "OnTrigger",
-        "target": "!self",
-        "input": "Kill",
+        "target": "[PR#]Omega_M_Shield_Target2_Particle",
+        "input": "SetParent",
+        "param": "!activator",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_M_Shield_Target2_Hurt",
+        "input": "Enable",
+        "param": "",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_M_Shield_Target2_Hurt",
+        "input": "Disable",
+        "param": "",
+        "delay": 2.4000000953674316,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_M_Shield_Target2_Math",
+        "input": "GetValue",
+        "param": "",
+        "delay": 2.5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_M_Shield_Target2_Hurt",
+        "input": "Enable",
+        "param": "",
+        "delay": 2.5999999046325684,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_M_Shield_Target2_Particle",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 2.4000000953674316,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_M_Model",
+        "input": "SetAnimationNotLooping",
+        "param": "sp05",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Omega_M_Shield_Target2_Particle",
+        "input": "SetParentAttachment",
+        "param": "primary",
+        "delay": 0.20000000298023224,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Temp_Omega_M_Shield_Target2",
+        "input": "ForceSpawn",
         "param": "",
         "delay": 0,
         "limit": 1
       },
       {
-        "output": "OnUser1",
+        "output": "OnTrigger",
         "target": "!self",
-        "input": "Enable",
+        "input": "Kill",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0.03999999910593033,
-        "limit": -1
+        "limit": 1
       }
     ]
   }

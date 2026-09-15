@@ -9,7 +9,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]Omega_All_Trigger",
     "classname": "trigger_multiple",
-    "origin": "2894.500000 -2894.250000 652.000000",
+    "origin": "2862.500000 -2926.250000 652.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5216",

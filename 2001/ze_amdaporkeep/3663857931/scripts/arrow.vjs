@@ -58,7 +58,7 @@
 import { Instance } from "cs_script/point_script";
 
 
-const MBoss = Instance.FindEntityByName("Boss_Physbox");
+let BossEntity = null;
 let DK = null;
 let TG = null;
 let StartTime = 0;
@@ -81,15 +81,24 @@ Instance.SetThink(UpdatePosition);
 function UpdatePosition() {
     const Time = Instance.GetGameTime();
     if (Time - StartTime > 8.5) return;
+    const boss = GetBoss();
+    if (!boss) return;
     DK = Instance.FindEntityByName("Player_Dark_Knight");
     if (DK && DK.GetTeamNumber() == 3) TG = DK;
     if (!TG) return;
     const TGpos = TG.GetAbsOrigin();
-    const Mpos = MBoss.GetAbsOrigin();
-    const Evec = Normalization2d(TGpos, Mpos);
+    const Bosspos = boss.GetAbsOrigin();
+    const Evec = Normalization2d(TGpos, Bosspos);
     const theangles = ReturnAngles(Evec);
-    MBoss.Teleport({ angles: theangles });
-    Instance.SetNextThink(Time + 0.1);
+    boss.Teleport({ angles: theangles });
+    Instance.SetNextThink(Time);
+}
+
+function GetBoss() {
+    if (!BossEntity) {
+        BossEntity = Instance.FindEntityByName("Boss_Physbox");
+    }
+    return BossEntity;
 }
 
 function ReturnAngles(vec) {
