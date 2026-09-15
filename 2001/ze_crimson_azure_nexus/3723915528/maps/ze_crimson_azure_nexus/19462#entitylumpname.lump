@@ -117,7 +117,7 @@
         "target": "[PR#]item_human_health_hurt",
         "input": "Disable",
         "param": "",
-        "delay": 7,
+        "delay": 5,
         "limit": -1
       },
       {
@@ -149,7 +149,7 @@
         "target": "[PR#]item_human_health_par",
         "input": "Stop",
         "param": "",
-        "delay": 7,
+        "delay": 5,
         "limit": -1
       },
       {
@@ -165,7 +165,7 @@
         "target": "[PR#]item_human_health_hurt1",
         "input": "Disable",
         "param": "",
-        "delay": 7,
+        "delay": 5,
         "limit": -1
       },
       {

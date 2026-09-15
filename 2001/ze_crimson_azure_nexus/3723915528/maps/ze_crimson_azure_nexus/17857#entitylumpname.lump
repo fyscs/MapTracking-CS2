@@ -8,8 +8,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "0",
-    "damagecap": "10",
-    "damage": "100",
+    "damagecap": "0",
+    "damage": "90",
     "spawnflags": "4097",
     "StartDisabled": "0",
     "useLocalOffset": "0",
@@ -21,7 +21,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17854",
     "model": "maps/ze_crimson_azure_nexus/entities/level4_dm_hurt_17854.vmdl",
-    "_template_lump_ent_index": "0"
+    "_template_lump_ent_index": "0",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "[PR#]map_hurtskin2",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "[PR#]map_hurtskin1",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "PassthroughCaller": "0",

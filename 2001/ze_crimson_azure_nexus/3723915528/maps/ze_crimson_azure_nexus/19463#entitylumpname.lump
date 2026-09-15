@@ -257,7 +257,7 @@
         "target": "[PR#]z_item_speed_button",
         "input": "Unlock",
         "param": "",
-        "delay": 60,
+        "delay": 40,
         "limit": -1
       },
       {
@@ -273,7 +273,7 @@
         "target": "[PR#]z_item_speed_par",
         "input": "Start",
         "param": "",
-        "delay": 60,
+        "delay": 40,
         "limit": -1
       },
       {

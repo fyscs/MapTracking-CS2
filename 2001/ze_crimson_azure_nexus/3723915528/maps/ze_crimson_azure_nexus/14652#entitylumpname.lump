@@ -72,7 +72,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14646",
     "model": "maps/ze_crimson_azure_nexus/entities/level2_boss_laser_h_hurt_14646.vmdl",
-    "_template_lump_ent_index": "1"
+    "_template_lump_ent_index": "1",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "[PR#]map_hurtskin2",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "[PR#]map_hurtskin1",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "PassthroughCaller": "0",

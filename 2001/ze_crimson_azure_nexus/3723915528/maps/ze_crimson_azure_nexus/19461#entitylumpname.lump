@@ -82,7 +82,7 @@
         "target": "[PR#]h_snow_hurt1",
         "input": "Disable",
         "param": "",
-        "delay": 8,
+        "delay": 7,
         "limit": -1
       },
       {
@@ -114,7 +114,7 @@
         "target": "[PR#]h_snow_par21",
         "input": "Stop",
         "param": "",
-        "delay": 8,
+        "delay": 7,
         "limit": -1
       },
       {

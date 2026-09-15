@@ -61,7 +61,7 @@
     "damagemodel": "0",
     "damagetype": "512",
     "damagecap": "20",
-    "damage": "100",
+    "damage": "80",
     "filtername": "[PR#]human",
     "spawnflags": "4097",
     "StartDisabled": "1",
