@@ -30276,6 +30276,8 @@
     ]
   },
   {
+    "Template16": "[PR#]Anti_Glitch_Text",
+    "Template15": "[PR#]Anti_Glitch",
     "Template14": "[PR#]music_stage_hard_start_case",
     "Template13": "[PR#]tp_afk_ladylilith",
     "Template12": "[PR#]tp_afk_shadowlord",
@@ -30565,6 +30567,7 @@
     "hammerUniqueId": "34325"
   },
   {
+    "observable": "0",
     "layout": "panorama/layout/custom_game/map_gametext.xml",
     "targetname": "[PR#]global_hud_layout",
     "classname": "custom_hud_layout",

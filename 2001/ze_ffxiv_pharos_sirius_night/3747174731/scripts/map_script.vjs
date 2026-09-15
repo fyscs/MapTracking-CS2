@@ -45,7 +45,8 @@ Instance.OnScriptInput("Enter", (event) => {
     const player = event.activator;
     if (!player && !player.IsValid()) return;
     const name = player.GetPlayerController().GetPlayerName();
-    Instance.ServerCommand(`say ${name} entered the teleporter.Global Tp in 10s.`);
+    const safeName = name.replace(/[^0-9a-zA-Z \p{Script=Han}]/gu, "");
+    Instance.ServerCommand(`say ${safeName} entered the teleporter.Global Tp in 10s.`);
 });
 
 function GlowEntity(entity) {

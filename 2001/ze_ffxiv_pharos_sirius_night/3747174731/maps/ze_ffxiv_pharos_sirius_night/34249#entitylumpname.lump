@@ -1368,5 +1368,58 @@
         "limit": 1
       }
     ]
+  },
+  {
+    "check_if_dest_clear_for_player": "0",
+    "mirror_player": "0",
+    "use_landmark_angles": "0",
+    "target": "[PR#]td_pharos",
+    "spawnflags": "4097",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]Anti_Glitch",
+    "classname": "trigger_teleport",
+    "origin": "-7130.000000 -3688.000000 1164.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "34333",
+    "model": "maps/ze_ffxiv_pharos_sirius_night/entities/anti_glitch_34333.vmdl",
+    "_template_lump_ent_index": "22",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Anti_Glitch_Text",
+        "input": "ShowHudHint",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Anti_Glitch_Text",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "message": "\u524D\u9762\u7684\u533A\u57DF\uFF0C\u4EE5\u540E\u518D\u6765\u63A2\u7D22\u5427",
+    "targetname": "[PR#]Anti_Glitch_Text",
+    "classname": "env_hudhint",
+    "origin": "-7360.000000 -3600.000000 994.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "34334",
+    "_template_lump_ent_index": "23"
   }
 ]

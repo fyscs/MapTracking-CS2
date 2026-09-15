@@ -325,6 +325,14 @@
         "param": "",
         "delay": 0.10000000149011612,
         "limit": 1
+      },
+      {
+        "output": "OnUser3",
+        "target": "[PR#]Anti_Glitch",
+        "input": "FireUser4",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
