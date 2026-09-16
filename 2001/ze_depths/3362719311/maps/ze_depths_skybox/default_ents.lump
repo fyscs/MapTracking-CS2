@@ -135,12 +135,12 @@
     "nearclipplane": "1.000000"
   },
   {
-    "lightprobetexture_dlshd": "maps\\ze_depths_skybox/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps\\ze_depths_skybox/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/ze_depths_skybox/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/ze_depths_skybox/lightmaps/env_light_probe_volume_atlas.vtex",
     "indoor_outdoor_level": "0",
     "voxelize": "1",
     "flood_fill": "1",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "box_maxs": "3456.000000 4544.000000 1152.000000",
     "box_mins": "-4736.000000 -2624.000000 -3456.000000",
     "StartDisabled": "0",

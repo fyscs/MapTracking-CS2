@@ -13,8 +13,8 @@
     "disablereceiveshadows": "0",
     "rendercolor": "255 255 255",
     "renderamt": "255",
-    "rendermode": "0",
-    "renderfx": "0",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
     "targetname": "[PR#]i_trail_elite",
     "classname": "weapon_fiveseven",
     "origin": "-4.000000 0.000000 -8.000000",
@@ -29,14 +29,6 @@
         "input": "Start",
         "param": "",
         "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPlayerPickup",
-        "target": "[PR#]i_trail_particle",
-        "input": "SetParent",
-        "param": "[PR#]i_trail_elite",
-        "delay": 0.019999999552965164,
         "limit": 1
       }
     ]
@@ -53,7 +45,7 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "-1",
+    "snapshot_mesh": "0",
     "no_save": "0",
     "start_active": "0",
     "effect_name": "particles/nyafi_trail1.vpcf",
