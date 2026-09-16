@@ -6,6 +6,22 @@ import { Instance } from 'cs_script/point_script';
 
 // Please don't judge my vscript thank you
 
+Instance.OnRoundStart(() => {
+    reset_player_speed();
+    ammo_timer = 1.5;
+    slow_value = 1.0;
+    fog_value = 60000;
+});
+
+function reset_player_speed() {
+    const players = Instance.FindEntitiesByClass("player");
+    for (const player of players) {
+        if (player?.IsValid() && player.GetTeamNumber() === 3) {
+            Instance.EntFireAtTarget({ target: player, input: "KeyValue", value: "speed " + slow_value });
+        }   
+    }
+}
+
 const radius = 200;
 
 Instance.OnScriptInput("find_red_door", (stuff) => {
@@ -200,7 +216,7 @@ let ammo_timer = 1.5;
 Instance.OnScriptInput("red_curse_reload", (stuff) => {
 
     ammo_timer -= 0.05;
-    //Instance.EntFireAtName({ name: "cmd", input: "Command", value: "say Current ammo value: " + ammo_timer, delay: 1 });
+    // Instance.EntFireAtName({ name: "cmd", input: "Command", value: "say Current ammo value: " + ammo_timer, delay: 1 });
     
     Instance.EntFireAtName({ name: "red_curse_timer", input: "RefireTime", value: ammo_timer});
 
@@ -240,7 +256,7 @@ let slow_value = 1;
 Instance.OnScriptInput("green_curse_slow", (stuff) => {
 
     slow_value -= 0.0125;
-    // Instance.EntFireAtName({ name: "cmd", input: "Command", value: "say Current slow value: " + slow_value });
+    // Instance.EntFireAtName({ name: "cmd", input: "Command", value: "say Current slow value: " + slow_value, delay: 1 });
 
     const players = Instance.FindEntitiesByClass("player");
 
@@ -281,8 +297,11 @@ let fog_value = 60000;
 Instance.OnScriptInput("yellow_curse_fog", (stuff) => {
 
     fog_value -= 3250;
-    // Instance.EntFireAtName({ name: "cmd", input: "Command", value: "say Current fog value: " + fog_value });
-    Instance.EntFireAtName({ name: "map_fog", input: "SetFogEndDistance", value: fog_value });
+    
+    if (fog_value >= 6500) {
+        // Instance.EntFireAtName({ name: "cmd", input: "Command", value: "say Current fog value: " + fog_value, delay: 1 });
+        Instance.EntFireAtName({ name: "map_fog", input: "SetFogEndDistance", value: fog_value });
+    }
 });
 
 /*

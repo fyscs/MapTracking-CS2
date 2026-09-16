@@ -115428,7 +115428,7 @@
         "target": "[PR#]st4_tp4",
         "input": "Enable",
         "param": "",
-        "delay": 40,
+        "delay": 45,
         "limit": -1
       }
     ]
@@ -120245,7 +120245,7 @@
         "target": "[PR#]st4_ending_relay",
         "input": "Trigger",
         "param": "",
-        "delay": 5.099999904632568,
+        "delay": 8.100000381469727,
         "limit": -1
       },
       {
@@ -120253,7 +120253,7 @@
         "target": "[PR#]st4_music2",
         "input": "FireUser1",
         "param": "",
-        "delay": 5,
+        "delay": 3,
         "limit": -1
       }
     ]
@@ -145610,14 +145610,13 @@
     ]
   },
   {
-    "wait": "0.000000",
     "filtername": "[PR#]filter_t",
     "spawnflags": "1",
     "StartDisabled": "0",
     "useLocalOffset": "0",
     "vscripts": "mythings/depths/zestagewinner.nut",
     "targetname": "[PR#]st4_t_scan",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "-2688.000000 -2624.000000 -12896.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -146125,14 +146124,13 @@
     "hammerUniqueId": "18111"
   },
   {
-    "wait": "0.000000",
     "filtername": "[PR#]filter_ct",
     "spawnflags": "1",
     "StartDisabled": "0",
     "useLocalOffset": "0",
     "vscripts": "mythings/depths/zestagewinner.nut",
     "targetname": "[PR#]st4_ct_scan",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "-2688.000000 -2624.000000 -12832.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
