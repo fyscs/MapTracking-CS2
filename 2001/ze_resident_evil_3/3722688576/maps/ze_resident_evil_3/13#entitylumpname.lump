@@ -82,14 +82,6 @@
     "connections": [
       {
         "output": "OnHitMax",
-        "target": "[PR#]spasbutton",
-        "input": "Lock",
-        "param": "",
-        "delay": 2.0999999046325684,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
         "target": "[PR#]cmd",
         "input": "Command",
         "param": "say **Shotgun is out of ammo**",
@@ -101,55 +93,15 @@
         "target": "[PR#]spasbutton",
         "input": "Lock",
         "param": "",
-        "delay": 2.109999895095825,
+        "delay": 1,
         "limit": -1
       },
       {
         "output": "OnHitMax",
-        "target": "[PR#]spasbutton",
-        "input": "Lock",
+        "target": "[PR#]shotgun_relay",
+        "input": "CancelPending",
         "param": "",
-        "delay": 2.119999885559082,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]spasbutton",
-        "input": "Lock",
-        "param": "",
-        "delay": 2.130000114440918,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]spasbutton",
-        "input": "Lock",
-        "param": "",
-        "delay": 2.140000104904175,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]spasbutton",
-        "input": "Lock",
-        "param": "",
-        "delay": 2.1500000953674316,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]spasbutton",
-        "input": "Lock",
-        "param": "",
-        "delay": 2.009999990463257,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]spasbutton",
-        "input": "Lock",
-        "param": "",
-        "delay": 2.049999952316284,
+        "delay": 0.009999999776482582,
         "limit": -1
       }
     ]
@@ -514,10 +466,161 @@
     "connections": [
       {
         "output": "OnStartTouch",
-        "target": "[PR#]random_crocodile_counter",
+        "target": "[PR#]random_crocodile_hp_iterations",
         "input": "Subtract",
         "param": "200",
         "delay": 0.10000000149011612,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "targetname": "[PR#]shotgun_relay",
+    "classname": "logic_relay",
+    "origin": "-41.367676 27.989014 4.615997",
+    "angles": "-0.000000 -90.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "177592",
+    "_template_lump_ent_index": "14",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgunpush",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]spas12firesound",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]spas12",
+        "input": "SetAnimationNotLooping",
+        "param": "shoot",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]spasbutton",
+        "input": "Lock",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgunhurt",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgun_detect_npc",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgun_detect_nemesis",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgun_detect_crocodile",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgunammo",
+        "input": "Add",
+        "param": "1",
+        "delay": 0.009999999776482582,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]spas12fire",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0.009999999776482582,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgunpush",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgunhurt",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgun_detect_npc",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgun_detect_nemesis",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]shotgun_detect_crocodile",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]spas12",
+        "input": "SetAnimationNotLooping",
+        "param": "after_shoot_v1",
+        "delay": 1.6699999570846558,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]spasbutton",
+        "input": "Unlock",
+        "param": "",
+        "delay": 2,
         "limit": -1
       }
     ]

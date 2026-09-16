@@ -231,7 +231,7 @@
         "target": "[PR#]em_phys2",
         "input": "Kill",
         "param": "",
-        "delay": 4,
+        "delay": 9.25,
         "limit": -1
       },
       {
@@ -247,7 +247,7 @@
         "target": "[PR#]em_model2",
         "input": "Alpha",
         "param": "220",
-        "delay": 3.200000047683716,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -255,7 +255,7 @@
         "target": "[PR#]em_model2",
         "input": "Alpha",
         "param": "190",
-        "delay": 3.3499999046325684,
+        "delay": 8.300000190734863,
         "limit": -1
       },
       {
@@ -263,7 +263,7 @@
         "target": "[PR#]em_model2",
         "input": "Alpha",
         "param": "150",
-        "delay": 3.5,
+        "delay": 8.600000381469727,
         "limit": -1
       },
       {
@@ -271,7 +271,7 @@
         "target": "[PR#]em_model2",
         "input": "Alpha",
         "param": "120",
-        "delay": 3.6500000953674316,
+        "delay": 8.800000190734863,
         "limit": -1
       },
       {
@@ -279,7 +279,7 @@
         "target": "[PR#]em_model2",
         "input": "Alpha",
         "param": "80",
-        "delay": 3.799999952316284,
+        "delay": 9,
         "limit": -1
       },
       {
@@ -287,7 +287,7 @@
         "target": "[PR#]em_model2",
         "input": "Alpha",
         "param": "50",
-        "delay": 3.950000047683716,
+        "delay": 9.199999809265137,
         "limit": -1
       },
       {
@@ -303,7 +303,7 @@
         "target": "[PR#]em_model2",
         "input": "Kill",
         "param": "",
-        "delay": 3.9800000190734863,
+        "delay": 9.25,
         "limit": -1
       },
       {
@@ -360,6 +360,22 @@
         "input": "Kill",
         "param": "",
         "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]em_hurt2",
+        "input": "Kill",
+        "param": "",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]em_model2",
+        "input": "SetPlaybackRate",
+        "param": "0",
+        "delay": 4,
         "limit": -1
       }
     ]

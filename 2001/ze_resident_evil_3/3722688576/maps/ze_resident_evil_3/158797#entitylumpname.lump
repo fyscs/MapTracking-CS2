@@ -155,10 +155,12 @@
     ]
   },
   {
-    "CompareValue": "1.000000",
-    "InitialValue": "1.000000",
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
     "targetname": "[PR#]lanzaMisilescontador",
-    "classname": "logic_compare",
+    "classname": "logic_relay",
     "origin": "32.000000 -48.000000 -1.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -166,7 +168,7 @@
     "_template_lump_ent_index": "4",
     "connections": [
       {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]weapon_rocket2",
         "input": "ForceSpawn",
         "param": "",
@@ -174,23 +176,7 @@
         "limit": -1
       },
       {
-        "output": "OnEqualTo",
-        "target": "[PR#]lanzaMisilescontador",
-        "input": "SetCompareValue",
-        "param": "2",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnEqualTo",
-        "target": "[PR#]lanzaMisilescontador",
-        "input": "SetCompareValue",
-        "param": "1",
-        "delay": 6,
-        "limit": -1
-      },
-      {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]misilexp",
         "input": "FireUser1",
         "param": "",
@@ -198,7 +184,7 @@
         "limit": -1
       },
       {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]rocket_counter",
         "input": "Add",
         "param": "1",
@@ -206,7 +192,7 @@
         "limit": -1
       },
       {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]misil_sound",
         "input": "StartSound",
         "param": "",
@@ -214,7 +200,7 @@
         "limit": -1
       },
       {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]misil_sound_reload",
         "input": "StartSound",
         "param": "",
@@ -222,7 +208,7 @@
         "limit": -1
       },
       {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]misil_sound_ready",
         "input": "StartSound",
         "param": "",
@@ -230,15 +216,7 @@
         "limit": -1
       },
       {
-        "output": "OnLessThan",
-        "target": "[PR#]misil_sound_reload",
-        "input": "StartSound",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]rocketbtn",
         "input": "Lock",
         "param": "",
@@ -246,7 +224,7 @@
         "limit": -1
       },
       {
-        "output": "OnEqualTo",
+        "output": "OnTrigger",
         "target": "[PR#]rocketbtn",
         "input": "Unlock",
         "param": "",
@@ -270,66 +248,26 @@
     "connections": [
       {
         "output": "OnHitMax",
-        "target": "[PR#]rocketbtn",
-        "input": "Lock",
-        "param": "",
-        "delay": 6.03000020980835,
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say **Rocket launcher is out of ammo**",
+        "delay": 0.019999999552965164,
         "limit": -1
       },
       {
         "output": "OnHitMax",
-        "target": "[PR#]cmd",
-        "input": "Command",
-        "param": "say **Rocket launcher is out of ammo**",
+        "target": "[PR#]rocketbtn",
+        "input": "Lock",
+        "param": "",
         "delay": 1,
         "limit": -1
       },
       {
         "output": "OnHitMax",
-        "target": "[PR#]rocketbtn",
-        "input": "Lock",
+        "target": "[PR#]lanzaMisilescontador",
+        "input": "CancelPending",
         "param": "",
-        "delay": 6.099999904632568,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]rocketbtn",
-        "input": "Lock",
-        "param": "",
-        "delay": 6.199999809265137,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]rocketbtn",
-        "input": "Lock",
-        "param": "",
-        "delay": 6.400000095367432,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]rocketbtn",
-        "input": "Lock",
-        "param": "",
-        "delay": 6.300000190734863,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]rocketbtn",
-        "input": "Lock",
-        "param": "",
-        "delay": 6.050000190734863,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]rocketbtn",
-        "input": "Lock",
-        "param": "",
-        "delay": 6.019999980926514,
+        "delay": 0.009999999776482582,
         "limit": -1
       }
     ]
@@ -396,7 +334,7 @@
       {
         "output": "OnPass",
         "target": "[PR#]lanzaMisilescontador",
-        "input": "Compare",
+        "input": "Trigger",
         "param": "",
         "delay": 0,
         "limit": -1

@@ -11,7 +11,7 @@ let IVY = {
 };
 const GOO = {
     COOLDOWN: 90,            // Cooldown of Ivy goo attack (+use)
-    COOLDOWN_MISS: 40,       // Cooldown of Ivy goo attack (+use) if it did not damage anyone
+    COOLDOWN_MISS: 35,       // Cooldown of Ivy goo attack (+use) if it did not damage anyone
     DELAY: 0.72,            // Delay after using that the projectile spawns
     VELOCITY: 750.0,        // Launch speed of goo projectile (750 is default grenade throw speed)
     LIFETIME: -1,           // Max lifetime of a goo projectile (-1 = until it stops moving)

@@ -617,7 +617,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "20",
-    "damage": "60",
+    "damage": "80",
     "filtername": "[PR#]Humans_Filter",
     "spawnflags": "4097",
     "StartDisabled": "0",
