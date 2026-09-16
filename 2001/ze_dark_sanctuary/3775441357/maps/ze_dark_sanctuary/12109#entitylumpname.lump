@@ -21,7 +21,7 @@
     "useLocalOffset": "0",
     "parentname": "[PR#]hb_weapons",
     "targetname": "[PR#]huaibiao_par1",
-    "effect_name": "particles/zzz/zmtp.vpcf",
+    "effect_name": "particles/zzz/zmtp3.vpcf",
     "classname": "info_particle_system",
     "origin": "-0.409912 0.000000 -27.280029",
     "angles": "-0.000000 179.999985 0.000000",

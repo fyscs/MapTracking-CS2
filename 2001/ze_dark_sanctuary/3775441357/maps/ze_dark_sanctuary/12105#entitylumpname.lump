@@ -293,5 +293,32 @@
     "scales": "158.229599 178.130325 172.089233",
     "hammerUniqueId": "11992",
     "_template_lump_ent_index": "8"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "1",
+    "effect_name": "particles/zzz/zmtp.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]windmb_weapons",
+    "targetname": "[PR#]wmb_par1",
+    "classname": "info_particle_system",
+    "origin": "2.689941 0.000000 -27.280029",
+    "angles": "-0.000000 179.999985 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12636",
+    "_template_lump_ent_index": "9"
   }
 ]

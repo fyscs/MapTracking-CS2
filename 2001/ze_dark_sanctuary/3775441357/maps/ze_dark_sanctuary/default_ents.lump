@@ -21761,7 +21761,7 @@
         "target": "[PR#]tr_hurt",
         "input": "Disable",
         "param": "",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -21782,7 +21782,7 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]tongren_par",
+        "target": "[PR#]tongren_par4",
         "input": "Start",
         "param": "",
         "delay": 0,
@@ -21793,7 +21793,7 @@
         "target": "[PR#]tongren_par",
         "input": "Stop",
         "param": "",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -21826,6 +21826,166 @@
         "input": "StopSound",
         "param": "",
         "delay": 99,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par5",
+        "input": "Start",
+        "param": "",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par4",
+        "input": "Start",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par7",
+        "input": "Start",
+        "param": "",
+        "delay": 1.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par6",
+        "input": "Start",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par2",
+        "input": "Start",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par3",
+        "input": "Start",
+        "param": "",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par3z",
+        "input": "Start",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par2z",
+        "input": "Start",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par",
+        "input": "Start",
+        "param": "",
+        "delay": 4.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par",
+        "input": "Stop",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par",
+        "input": "Start",
+        "param": "",
+        "delay": 6.099999904632568,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par2",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par3",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par4",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par5",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par6",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par7",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par2z",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par3z",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
         "limit": -1
       }
     ]
@@ -22054,6 +22214,13 @@
     "hammerUniqueId": "10154"
   },
   {
+    "Template23": "[PR#]tongren_par7",
+    "Template22": "[PR#]tongren_par6",
+    "Template21": "[PR#]tongren_par5",
+    "Template20": "[PR#]tongren_par4",
+    "Template19": "[PR#]tongren_par2z",
+    "Template18": "[PR#]tongren_par3z",
+    "Template17": "[PR#]tongren_par3",
     "Template16": "[PR#]yui",
     "Template15": "[PR#]tongren_par2",
     "Template14": "[PR#]tongren4",
@@ -34016,6 +34183,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]biaoti",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -35212,6 +35387,7 @@
     ]
   },
   {
+    "Template09": "[PR#]wmb_par1",
     "Template08": "[PR#]windmb_model",
     "Template07": "[PR#]windmb_par2",
     "Template06": "[PR#]windmb_dynamic",
@@ -35263,6 +35439,7 @@
     "entityLumpName": "12109#entityLumpName"
   },
   {
+    "Template08": "[PR#]xqy_par3",
     "Template07": "[PR#]xqy_model",
     "Template06": "[PR#]xqy_mk",
     "Template05": "[PR#]xqy_par1",
@@ -40389,31 +40566,6 @@
     ]
   },
   {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "no_save": "0",
-    "start_active": "0",
-    "clientSideEntity": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]biaoti",
-    "effect_name": "particles/face/1alicel.vpcf",
-    "classname": "info_particle_system",
-    "origin": "-4270.000000 1594.000000 4107.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "12358"
-  },
-  {
     "PassthroughCaller": "0",
     "FastRetrigger": "1",
     "TriggerOnce": "0",
@@ -42590,5 +42742,54 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/face/1alicel.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]biaoti",
+    "classname": "info_particle_system",
+    "origin": "-5619.000000 12867.000000 6702.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12563"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "1",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "effect_name": "particles/daoguang.vpcf",
+    "classname": "info_particle_system",
+    "origin": "-3099.536133 -2087.000000 4158.000000",
+    "angles": "39.864136 302.676270 -55.200737",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12595"
   }
 ]
