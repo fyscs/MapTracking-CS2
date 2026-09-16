@@ -23,13 +23,41 @@ function Bounce(player, speed) {
 }
 
 // ============================================================
-// RunScriptInput 命令
+// RunScriptInput 定义命令: Bounce2000, Bounce1600, Bounce1500, Bounce1400, Bounce1300, Bounce800
 // ============================================================
 
 Instance.OnScriptInput("Bounce2000", (inputData) => {
     const activator = inputData.activator;
     if (activator) {
-        Instance.QueueAfterThinks(() => Bounce(activator, 1200));
+        Instance.QueueAfterThinks(() => Bounce(activator, 2000));
+    }
+});
+
+Instance.OnScriptInput("Bounce1600", (inputData) => {
+    const activator = inputData.activator;
+    if (activator) {
+        Instance.QueueAfterThinks(() => Bounce(activator, 1600));
+    }
+});
+
+Instance.OnScriptInput("Bounce1500", (inputData) => {
+    const activator = inputData.activator;
+    if (activator) {
+        Instance.QueueAfterThinks(() => Bounce(activator, 1500));
+    }
+});
+
+Instance.OnScriptInput("Bounce1400", (inputData) => {
+    const activator = inputData.activator;
+    if (activator) {
+        Instance.QueueAfterThinks(() => Bounce(activator, 1400));
+    }
+});
+
+Instance.OnScriptInput("Bounce1300", (inputData) => {
+    const activator = inputData.activator;
+    if (activator) {
+        Instance.QueueAfterThinks(() => Bounce(activator, 1300));
     }
 });
 
@@ -41,11 +69,11 @@ Instance.OnScriptInput("Bounce800", (inputData) => {
 });
 
 // ============================================================
-// 初始化
+// 初始化 
 // ============================================================
 
 Instance.OnActivate(() => {
-    Instance.Msg("[Bounce] 已加载 | 命令: Bounce2000, Bounce800");
+    Instance.Msg("[Bounce] 已加载");
 });
 
 Instance.OnScriptReload({

@@ -3436,9 +3436,9 @@
     "connections": [
       {
         "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "basevelocity 0 0 1400",
+        "target": "[PR#]bounce",
+        "input": "RunScriptInput",
+        "param": "Bounce2000",
         "delay": 0,
         "limit": -1
       }
@@ -3458,9 +3458,9 @@
     "connections": [
       {
         "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "basevelocity 0 0 1400",
+        "target": "[PR#]bounce",
+        "input": "RunScriptInput",
+        "param": "Bounce2000",
         "delay": 0,
         "limit": -1
       }

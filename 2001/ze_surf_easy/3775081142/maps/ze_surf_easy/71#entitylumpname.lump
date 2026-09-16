@@ -47,7 +47,7 @@
     "solid": "0",
     "skin": "default",
     "rendercolor": "255 255 255",
-    "model": "models/daemonium_luka_zombie-1_refs/daemonium_luka_zombie-1.vmdl",
+    "model": "models/agent/edit/daemonium_luka_zombie/daemonium_luka_zombie.vmdl",
     "targetname": "[PR#]dance_girl_1",
     "classname": "prop_dynamic",
     "origin": "-143.070312 -32.000000 -16.000000",
@@ -101,7 +101,7 @@
     "solid": "0",
     "skin": "default",
     "rendercolor": "255 255 255",
-    "model": "models/gawr_gura_mg-1_refs/gawr_gura_mg_1_bg_base_lod0.vmdl",
+    "model": "models/agent/edit/gawr_gura/gawr_gura.vmdl",
     "targetname": "[PR#]dance_girl_3",
     "classname": "prop_dynamic",
     "origin": "0.930664 16.000977 -16.000000",
@@ -155,7 +155,7 @@
     "solid": "0",
     "skin": "default",
     "rendercolor": "255 255 255",
-    "model": "models/daemonium_luka_zombie-1_refs/daemonium_luka_zombie-1.vmdl",
+    "model": "models/agent/edit/daemonium_luka_zombie/daemonium_luka_zombie.vmdl",
     "targetname": "[PR#]dance_girl_2",
     "classname": "prop_dynamic",
     "origin": "144.929688 -32.000000 -16.000000",
@@ -189,7 +189,7 @@
         "output": "OnSpawn",
         "target": "[PR#]dance_girl_*",
         "input": "SetAnimation",
-        "param": "Emote_GrooveJam",
+        "param": "emote_groovejam",
         "delay": 0,
         "limit": -1
       },
@@ -197,7 +197,7 @@
         "output": "OnSpawn",
         "target": "[PR#]girls_timer",
         "input": "Enable",
-        "param": "Emote_GrooveJam",
+        "param": "",
         "delay": 0,
         "limit": -1
       },
@@ -264,6 +264,14 @@
         "param": "",
         "delay": 25,
         "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]dance_girl_*",
+        "input": "SetAnimation",
+        "param": "Emote_GrooveJam",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -282,6 +290,14 @@
     "hammerUniqueId": "7262",
     "_template_lump_ent_index": "4",
     "connections": [
+      {
+        "output": "OnTimer",
+        "target": "[PR#]dance_girl_*",
+        "input": "SetAnimation",
+        "param": "emote_groovejam",
+        "delay": 0,
+        "limit": -1
+      },
       {
         "output": "OnTimer",
         "target": "[PR#]dance_girl_*",
