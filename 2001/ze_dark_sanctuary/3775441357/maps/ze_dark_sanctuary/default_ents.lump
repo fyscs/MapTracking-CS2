@@ -21710,6 +21710,22 @@
         "param": "",
         "delay": 3,
         "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par3",
+        "input": "Start",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par3",
+        "input": "Stop",
+        "param": "",
+        "delay": 3,
+        "limit": -1
       }
     ]
   },
@@ -21873,7 +21889,7 @@
         "target": "[PR#]tongren_par3",
         "input": "Start",
         "param": "",
-        "delay": 2.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -21986,6 +22002,14 @@
         "input": "Stop",
         "param": "",
         "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]tongren_par",
+        "input": "Stop",
+        "param": "",
+        "delay": 3,
         "limit": -1
       }
     ]
@@ -30793,10 +30817,274 @@
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]hummer_skill_mk",
-        "input": "ForceSpawn",
+        "target": "[PR#]tr_button2",
+        "input": "Lock",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tr_model",
+        "input": "SetAnimationNotLooping",
+        "param": "star",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tr_hurt",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren3",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par4",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "!activator",
+        "input": "setdamagefilter",
+        "param": "[PR#]nozombies",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par5",
+        "input": "Start",
         "param": "",
         "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par4",
+        "input": "Start",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par7",
+        "input": "Start",
+        "param": "",
+        "delay": 1.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par6",
+        "input": "Start",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par2",
+        "input": "Start",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par3",
+        "input": "Start",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par3z",
+        "input": "Start",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par2z",
+        "input": "Start",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par",
+        "input": "Stop",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par",
+        "input": "Start",
+        "param": "",
+        "delay": 4.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par",
+        "input": "Stop",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par",
+        "input": "Start",
+        "param": "",
+        "delay": 6.099999904632568,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren3",
+        "input": "StopSound",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par2",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par3",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par4",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par5",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par6",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par7",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par2z",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par3z",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tr_hurt",
+        "input": "Disable",
+        "param": "",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren_par",
+        "input": "Stop",
+        "param": "",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "!activator",
+        "input": "setdamagefilter",
+        "param": "",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tr_button2",
+        "input": "Unlock",
+        "param": "",
+        "delay": 90,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren4",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 90,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]tongren4",
+        "input": "StopSound",
+        "param": "",
+        "delay": 99,
         "limit": -1
       }
     ]
