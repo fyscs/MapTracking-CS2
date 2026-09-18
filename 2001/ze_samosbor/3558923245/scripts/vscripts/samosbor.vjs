@@ -556,6 +556,7 @@ const STEAM_IDS_LIST = {
     "[U:1:229842349]":    ["VIP"],                       // KOEN
     "[U:1:248696175]":    ["VIP"],                       // KOTYA
     "[U:1:291899504]":    ["VIP"],                       // CMAZ
+    "[U:1:146689693]":    ["VIP"],                       // VAUFF
     "[U:1:910174825]":    ["VIP", "LEADER"],             // IDGI
     "[U:1:213985657]":    ["SPONSOR", "LEADER"],         // ICECREAM
     "[U:1:394124028]":    ["SPONSOR", "LEADER"],         // XYZ
@@ -643,7 +644,7 @@ const HUD_ALL_PANELS = [
     "hint_container",
 ];
 
-const VERSION = "13/09/26";
+const VERSION = "18/09/26";
 
 
 
@@ -706,6 +707,14 @@ const ADMIN_TOGGLES = [
     { key: "elevatorhumanscheck", fn: () => ChangeElevatorHumansCheck, get: () => pre_isElevatorHumansCheck },
 ];
 
+const WEAPON_REPLACEMENTS = {
+    "weapon_revolver": "weapon_glock",
+    "weapon_awp": "weapon_m4a1",
+};
+
+const WEAPON_CHECK_INTERVAL = 1.0;
+let lastWeaponCheck = 0;
+
 const STATS_DEFAULT = {
     server: "",
     ways: [0, 0, 0, 0],
@@ -745,12 +754,12 @@ let SURVIVAL_ZOMBIE_HP = 700;
 let SURVIVAL_ZM_ITEM_HP = 900;
 const DEFAULT_ZM_ITEM_HP = 60000;
 
-const SURVIVAL_ZM_ITEM_MAX = 4;
-const SURVIVAL_ZM_ITEM_START = 3;
-const SURVIVAL_ZM_ITEM_INTERVAL = 60.0;
+const SURVIVAL_ZM_ITEM_MAX = 10;
+const SURVIVAL_ZM_ITEM_START = 5;
+const SURVIVAL_ZM_ITEM_INTERVAL = 40.0;
 const SURVIVAL_ZM_ITEM_CHECK = 1.0;
 let SURVIVAL_HP_TICK = 5.00;
-let SURVIVAL_ZOMBIE_DAMAGE = 10;
+let SURVIVAL_ZOMBIE_DAMAGE = 11;
 
 const SURVIVAL_CANISTER_COUNT = 3;
 
@@ -777,6 +786,8 @@ const FYS_SKINS = ["kipfel_ghostcandy", "kipfel_cherry"];
 
 
 
+
+let Temp_Trap_Mine = undefined;
 
 let Temp_Item_Flamethrower = undefined;
 let Temp_Item_SuicideBomber = undefined;
@@ -958,7 +969,7 @@ const SLOT_RIGHT_TICKS = 27;  // ≈4.59s
 const SLOT_POST_SPIN_WAIT = 3.0;
 const SLOT_MACHINE_COST = 3;
 
-const SLOT_NO_WIN_CHANCE = 0.30;
+const SLOT_NO_WIN_CHANCE = 0.20;
 
 const VOTE_DURATION = 35;
 const WRAPPER_IDS = ["wrapper_left", "wrapper_center", "wrapper_right"];
@@ -1688,7 +1699,6 @@ let enable_chunks3 = false;
 let players_in_elevator = 0;
 let meat = 0;
 let meat_max = 0;
-let survival_floor_max = 3;
 let floor = 0;
 let floors_min = 1;
 let pre_floors_max = 6;
@@ -1720,6 +1730,14 @@ Instance.SetThink(function () {
 
         UpdateUseProgress(slot, inst, player, now);
 
+        if(isSurvivalMode)
+        {
+            if(now - lastWeaponCheck >= WEAPON_CHECK_INTERVAL)
+            {
+                ReplaceForbiddenWeapons(player);
+            }
+        }
+
         if(isSurvivalMode
            && !inst.HudScoreOverlayOpen
            && !inst.HudMainMenuOpen
@@ -1729,13 +1747,7 @@ Instance.SetThink(function () {
             ToggleRadar(slot, inst, player);
         }
 
-        if(inst.HudScoreOverlayOpen && player.WasInputJustReleased(CSInputs.SHOW_SCORES))
-        {
-            inst.HudScoreOverlayOpen = false;
-            HUD_ENT.SetHasClassForPlayer(slot, "score_overlay", "Visible", false);
-            HUD_ENT.SetInputCaptureEnabled(slot, inst.HudMainMenuOpen);
-        }
-
+        // 1. открытие
         if(player.WasInputJustPressed(CSInputs.SHOW_SCORES)
            && !player.IsInputPressed(CSInputs.WALK)
            && !inst.HudMainMenuOpen
@@ -1746,6 +1758,15 @@ Instance.SetThink(function () {
             ToggleScoreOverlay(slot, inst);
         }
 
+        // 2. закрытие — по факту состояния клавиши, а не по событию
+        if(inst.HudScoreOverlayOpen && !player.IsInputPressed(CSInputs.SHOW_SCORES))
+        {
+            inst.HudScoreOverlayOpen = false;
+            HUD_ENT.SetHasClassForPlayer(slot, "score_overlay", "Visible", false);
+            HUD_ENT.SetInputCaptureEnabled(slot, inst.HudMainMenuOpen);
+        }
+
+        // 3. курсор по CTRL
         if(player.WasInputJustPressed(CSInputs.DUCK)
            && !player.IsInputPressed(CSInputs.WALK)
            && !votingActive
@@ -1771,6 +1792,11 @@ Instance.SetThink(function () {
     {
         lastRadarUpdate = now;
         UpdateRadarDots();
+    }
+
+    if(isSurvivalMode && now - lastWeaponCheck >= WEAPON_CHECK_INTERVAL)
+    {
+        lastWeaponCheck = now;
     }
 
     for(let i = DelayedCalls.length - 1; i >= 0; i--)
@@ -1948,6 +1974,57 @@ Instance.OnScriptInput("SetLastims", ({caller, activator}) => {
 // //__  \ V /  __/ | | | |_\__ \
 // \__/   \_/ \___|_| |_|\__|___/
 
+Instance.OnPlayerKill((event) => {
+    const player = event.player;
+    const attacker = event.attacker;
+
+    if(!player?.IsValid()) return;
+    if(!isSurvivalMode) return;
+
+    if(attacker?.IsValid()
+       && attacker !== player
+       && attacker.GetClassName() === "player")
+    {
+        const slot = attacker.GetPlayerController()?.GetPlayerSlot();
+        if(slot != null)
+        {
+            Instance.ClientCommand(slot, `play sounds/giga/sounds/liquidation_kill`);
+        }
+    }
+
+    if(player === attacker) return;
+    if(player.GetEntityName() !== "player_zm_suicide") return;
+    if(!Temp_Trap_Mine?.IsValid()) return;
+
+    const pos = player.GetAbsOrigin();
+    const temp = Temp_Trap_Mine.ForceSpawn({ x: pos.x, y: pos.y, z: pos.z + 8 });
+    const physbox = (temp ?? []).filter(ent => ent?.IsValid() && ent.GetClassName() === "func_physbox")[0];
+    const explosion = (temp ?? []).filter(ent => ent?.IsValid() && ent.GetClassName() === "env_explosion")[0];
+
+    if(!physbox?.IsValid()) return;
+    if(!explosion?.IsValid()) return;
+
+    physbox.Teleport({
+        angles: { pitch: GetRandomNumber(0, 360), yaw: GetRandomNumber(0, 360), roll: GetRandomNumber(0, 360) },
+        velocity: { x: 0, y: 0, z: 500 },
+        angularVelocity: { x: 200, y: 200, z: 200 }
+    });
+
+    Instance.Delay(2.98).then(() => {
+        if(!explosion?.IsValid()) return;
+
+        const boomPos = physbox?.IsValid() ? physbox.GetAbsOrigin() : pos;
+
+        Instance.EntFireAtTarget({ target: explosion, input: "ClearParent" });
+        Instance.Delay(0.01).then(() => {
+            if(!explosion?.IsValid()) return;
+
+            explosion.Teleport({ position: { x: boomPos.x, y: boomPos.y, z: boomPos.z + 16 } });
+            Instance.EntFireAtTarget({ target: explosion, input: "Explode", delay: 0.01 });
+        });
+    });
+});
+
 Instance.OnPlayerDisconnect((event) => {
     const player_slot = event.playerSlot
 
@@ -2117,8 +2194,11 @@ Instance.OnRoundStart(() => {
         Instance.EntFireAtName({ name: "Temp_Anomaly_Mita", input: "Kill" });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Push", input: "Enable" });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Teleport", input: "Enable" });
-        Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Lock", delay: 1.00 });
-        Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Unlock", delay: 20.00 });
+        if(BOTTLES >= 3)
+        {
+            Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Lock", delay: 1.00 });
+            Instance.EntFireAtName({ name: "Spawn_Elevator_Out_Button", input: "Unlock", delay: 20.00 });
+        }
 
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Push", input: "Enable", delay: 2.00 });
         Instance.EntFireAtName({ name: "Spawn_SurvivalMode_ZM_Teleport", input: "Enable", delay: 2.00 });
@@ -2251,18 +2331,34 @@ Instance.OnModifyPlayerDamage((event) => {
 
     if(isVotingForMode)
     {
-        if(isVotingImmunity && inflictor.GetClassName() == "player" && inflictor.GetTeamNumber() == 2)
+        if(inflictor?.GetClassName() == "player" && inflictor.GetTeamNumber() == 2)
         {
             return { abort: true }
         }
     }
+
+    if(!player?.IsValid()) return;
     
     if(isSurvivalMode)
     {
         if(player !== attacker && weapon !== recursive_fix && player.IsAlive() && attacker?.IsValid() && attacker.GetClassName() === "player" && attacker.GetTeamNumber() === 2)
         {
+            const slot = attacker.GetPlayerController()?.GetPlayerSlot();
+            if(slot != null)
+            {
+                Instance.ClientCommand(slot, `play sounds/giga/sounds/liquidation_knife_hit${GetRandomNumber(1, 2)}`);
+            }
             player.TakeDamage({ damage: SURVIVAL_ZOMBIE_DAMAGE, damageTypes: CSDamageTypes.SONIC, inflictor: attacker, weapon: recursive_fix });
             return { abort: true }
+        }
+
+        if(player.IsAlive() && attacker?.IsValid() && attacker.GetClassName() === "player" && attacker.GetTeamNumber() === 3)
+        {
+            if(weapon?.GetClassName() == "weapon_knife")
+            {
+                Instance.Msg("[DEBUG] Can't kill zombies with a knife.");
+                return { abort: true }
+            }
         }
     }
 
@@ -2423,17 +2519,6 @@ Instance.OnPlayerChat((event) => {
         {
             chunks_survival = value;
             Instance.Msg("chunks_survival = " + chunks_survival);
-        }
-    }
-
-    if(player_text.includes("!m_survivalfloors") && (inst.Mapper || inst.Leader))
-    {
-        const text = player_text.split(' ');
-        const value = Number(text[1]);
-        if(!isNaN(value) && value > 0)
-        {
-            survival_floor_max = value;
-            Instance.Msg("survival_floor_max = " + survival_floor_max);
         }
     }
 
@@ -3929,9 +4014,19 @@ function ChangeMaxMiniBosses(arg)
 function ChangeMaxFloors(arg)
 {
     pre_floors_max = pre_floors_max - arg;
-    if(pre_floors_max > 9)
+    if(isSurvivalMode)
     {
-        pre_floors_max = 9
+        if(pre_floors_max > 30)
+        {
+            pre_floors_max = 30
+        }
+    }
+    else
+    {
+        if(pre_floors_max > 9)
+        {
+            pre_floors_max = 9
+        }
     }
     if(pre_floors_max < 2)
     {
@@ -4088,6 +4183,7 @@ Instance.OnScriptInput("LoadMode", () => {
             Instance.EntFireAtName({ name: "cmd", input: "Command", value: "sv_disable_radar 1" });
             Instance.EntFireAtName({ name: "Map_Chunk_Counter", input: "SetHitMax", value: chunks_survival });
             Instance.EntFireAtName({ name: "Admin_*", input: "Lock" });
+            Instance.EntFireAtName({ name: "Temp_SafeZone", input: "ForceSpawn" });
         }
         Instance.EntFireAtName({ name: SCRIPT_ENT, input: "RunScriptInput", value: "SpawnSurvivalMap" });
     }
@@ -4103,7 +4199,7 @@ Instance.OnScriptInput("SpawnSurvivalMap", () => {
 
     floor++;
 
-    if(floor < survival_floor_max)
+    if(floor < floors_max)
     {
         SURVIVAL_DESTINATIONS = [];
 
@@ -5135,13 +5231,13 @@ function ResetVariables()
     if(isSurvivalMode)
     {
         // VALUES
-        pre_human_hp = 100;
+        pre_human_hp = 130;
         pre_human_max_hp = 170;
         pre_traps_percentage = 50;
         pre_npcs_percentage = 20;
         pre_miniboss_max = 1;
-        pre_floors_max = 6;
-        pre_samosbortime = 480;
+        pre_floors_max = 3;
+        pre_samosbortime = 360;
         pre_samosbordamage = 2;
         fire_percentage = 10;
         snow_percentage = 10;
@@ -5165,10 +5261,10 @@ function ResetVariables()
         FLOOR_TYPE_CHANCE[1].weight = 0;
         FLOOR_TYPE_CHANCE[2].weight = 0;
         FLOOR_TYPE_CHANCE[3].weight = 0;
-        BOTTLE_CHANCE[0].weight = 5;
+        BOTTLE_CHANCE[0].weight = 8;
         BOTTLE_CHANCE[1].weight = 45;
         BOTTLE_CHANCE[2].weight = 35;
-        BOTTLE_CHANCE[3].weight = 15;
+        BOTTLE_CHANCE[3].weight = 12;
         GIFTBOX_CHANCE[0].weight = 25;
         GIFTBOX_CHANCE[1].weight = 10;
         GIFTBOX_CHANCE[2].weight = 52;
@@ -5178,12 +5274,6 @@ function ResetVariables()
 
     ResetAdminWorldText();
 }
-
-// function UpdateMapStats()
-// {
-//     let text = `- SERVER STATISTICS -\n\nTOTAL MAP WINS: ${Server_MapData.total_wins}\nFASTEST TRUTH WIN: X\nFASTEST EXTREME TRUTH WIN: X`
-//     Instance.EntFireAtName({ name: "Server_MapData_Text", input: "SetMessage", value: text })
-// }
 
 function ResetMusicList()
 {
@@ -5209,13 +5299,18 @@ function ResetScript()
 
     if(isSurvivalMode)
     {
-        BOTTLES = Math.ceil(BOTTLES *= 0.9);
+        if(BOTTLES > 30)
+        {
+            BOTTLES = 30;
+        }
         Instance.EntFireAtName({ name: "Map_Slot_Machine*", input: "Enable" });
     }
     else
     {
         BOTTLES = 0;
     }
+
+    Temp_Trap_Mine = Instance.FindEntityByName("Map_Suicider_Mine_Template");
 
     Temp_Item_Flamethrower = Instance.FindEntityByName("Item_Flamethrower_Template");
     Temp_Item_SuicideBomber = Instance.FindEntityByName("Item_SuicideBomber_Template");
@@ -5348,9 +5443,19 @@ function UpdateVariables()
 
 function UpdateBottlesAmount()
 {
-    if(BOTTLES > 999)
+    if(isSurvivalMode)
     {
-        BOTTLES = 999;
+        if(BOTTLES > 30)
+        {
+            BOTTLES = 30;
+        }
+    }
+    else
+    {
+        if(BOTTLES > 99)
+        {
+            BOTTLES = 99;
+        }
     }
     if(BOTTLES < 0)
     {
@@ -6557,6 +6662,20 @@ function SurvivalHealthTick()
     }
 
     Instance.Delay(SURVIVAL_HP_TICK).then(() => SurvivalHealthTick());
+}
+
+function ReplaceForbiddenWeapons(player)
+{
+    if(!player?.IsValid()) return;
+
+    for(const oldName in WEAPON_REPLACEMENTS)
+    {
+        const weapon = player.FindWeapon(oldName);
+        if(!weapon?.IsValid()) continue;
+
+        player.DestroyWeapon(weapon);
+        player.GiveNamedItem(WEAPON_REPLACEMENTS[oldName], true);
+    }
 }
 
 function VectorDistance(a, b)

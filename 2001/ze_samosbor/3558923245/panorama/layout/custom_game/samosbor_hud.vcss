@@ -630,64 +630,64 @@ to {
     height: 100%;
     horizontal-align: center;
     vertical-align: center;
-    world-blur: gaussian(1,1,1);
 }
 .slot_machine_cabinet {
-    width: 810px;
+    width: 612px;
     height: fit-children;
     horizontal-align: center;
-    vertical-align: center;
+    vertical-align: bottom;
+    margin-bottom: 120px;
     flow-children: down;
     overflow: noclip;
 }
 .slot_machine_title {
-    width: 810px;
+    width: 612px;
     text-align: center;
-    font-size: 34px;
+    font-size: 26px;
     font-weight: bold;
     color: rgb(230, 190, 110);
     font-family: Stratum2, 'Arial Unicode MS';
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     text-shadow: 0px 3px 0px rgba(0, 0, 0, 1), 0px 2px 2px rgba(0, 0, 0, 0.9);
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 }
 .slot_reels_block {
-    width: 810px;
-    height: 410px;
+    width: 612px;
+    height: 310px;
     horizontal-align: center;
     flow-children: none;
 }
 .slot_reels_row {
-    width: 810px;
-    height: 410px;
+    width: 612px;
+    height: 310px;
     horizontal-align: center;
     vertical-align: center;
     flow-children: right;
 }
 .slot_reel_frame {
-    width: 240px;
-    height: 410px;
-    margin: 0px 15px;
+    width: 182px;
+    height: 310px;
+    margin: 0px 11px;
     background-color: gradient(linear, 0% 0%, 0% 100%, from(#6b4a22ff), to(#2a1c0cff));
-    border: 4px solid #8a6a2a;
-    border-radius: 10px;
-    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.6);
+    border: 3px solid #8a6a2a;
+    border-radius: 8px;
+    box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.6);
     overflow: noclip;
     flow-children: none;
-    padding: 10px;
+    padding: 8px;
 }
 .slot_reel_window {
-    width: 220px;
-    height: 390px;
+    width: 166px;
+    height: 294px;
     horizontal-align: center;
     vertical-align: center;
-    background-color: gradient(linear, 0% 0%, 0% 100%, from(#f5e6c8ff), color-stop(0.5, #e8cfa0ff), to(#c9a86bff));
+    background-color: gradient(linear, 0% 0%, 0% 100%, from(#f5e6c8ff), to(#c9a86bff));
     border: 2px solid #8a6a2aff;
-    border-radius: 6px;
-    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.5);
     flow-children: down;
-    margin-left: -4px;
+    margin-left: -3px;
 }
 .slot_reel_strip {
     width: 100%;
@@ -697,7 +697,7 @@ to {
 }
 .slot_row {
     width: 100%;
-    height: 130px;
+    height: 98px;
     flow-children: none;
     overflow: noclip;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -729,17 +729,17 @@ to {
     color: rgb(160, 60, 20);
 }
 .slot_reel_shine {
-    width: 220px;
-    height: 135px;
+    width: 166px;
+    height: 101px;
     horizontal-align: center;
     vertical-align: top;
-    margin-top: 10px;
+    margin-top: 8px;
     background-color: gradient(linear, 0% 0%, 0% 100%, from(#ffffff2e), to(#ffffff00));
     z-index: 5;
-    margin-left: -4px;
+    margin-left: -3px;
 }
 .slot_payline {
-    width: 800px;
+    width: 600px;
     height: 2px;
     horizontal-align: center;
     vertical-align: center;
@@ -752,8 +752,8 @@ to {
     animation-iteration-count: 1;
 }
 .slot_icon {
-    width: 118px;
-    height: 118px;
+    width: 88px;
+    height: 88px;
     horizontal-align: center;
     vertical-align: center;
     visibility: collapse;
@@ -762,16 +762,16 @@ to {
     visibility: visible;
 }
 .slot_result_text {
-    width: 810px;
+    width: 612px;
     text-align: center;
-    font-size: 28px;
+    font-size: 21px;
     font-weight: bold;
     color: rgb(230, 190, 110);
     font-family: Stratum2, 'Arial Unicode MS';
     letter-spacing: 2px;
     text-transform: uppercase;
     text-shadow: 0px 3px 0px rgba(0, 0, 0, 1), 0px 2px 2px rgba(0, 0, 0, 0.9);
-    margin-top: 50px;
+    margin-top: 38px;
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.3s;
@@ -798,7 +798,7 @@ to {
 }
 .slot_strip {
     width: 100%;
-    height: 520px;
+    height: 392px;
     flow-children: down;
     transform: translateY(0px);
     transition-property: transform;
@@ -806,7 +806,7 @@ to {
     transition-timing-function: linear;
 }
 .slot_strip.Shifted {
-    transform: translateY(-130px);
+    transform: translateY(-98px);
 }
 .slot_strip.NoTransition {
     transition-duration: 0s;
@@ -1451,11 +1451,12 @@ to {
     height: 20px;
     text-align: center;
     vertical-align: center;
-    font-size: 11px;
+    font-size: 14px;
     font-family: Stratum2, 'Arial Unicode MS';
     color: rgba(255, 255, 255, 0.7);
     text-shadow: 0 0 4px black;
     line-height: 20px;
+    overflow: noclip;
 }
 .radar_axis_y .radar_axis_label {
     width: 20px;

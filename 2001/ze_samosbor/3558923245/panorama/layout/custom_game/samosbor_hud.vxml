@@ -670,21 +670,21 @@
                     <Label class="radar_axis_label" text="14" />
                 </Panel>
                 <Panel id="radar_axis_y" class="radar_axis_y">
-                    <Label class="radar_axis_label" text="0" />
-                    <Label class="radar_axis_label" text="1" />
-                    <Label class="radar_axis_label" text="2" />
-                    <Label class="radar_axis_label" text="3" />
-                    <Label class="radar_axis_label" text="4" />
-                    <Label class="radar_axis_label" text="5" />
-                    <Label class="radar_axis_label" text="6" />
-                    <Label class="radar_axis_label" text="7" />
-                    <Label class="radar_axis_label" text="8" />
-                    <Label class="radar_axis_label" text="9" />
-                    <Label class="radar_axis_label" text="10" />
-                    <Label class="radar_axis_label" text="11" />
-                    <Label class="radar_axis_label" text="12" />
-                    <Label class="radar_axis_label" text="13" />
-                    <Label class="radar_axis_label" text="14" />
+                    <Label class="radar_axis_label" text="A" />
+                    <Label class="radar_axis_label" text="B" />
+                    <Label class="radar_axis_label" text="C" />
+                    <Label class="radar_axis_label" text="D" />
+                    <Label class="radar_axis_label" text="E" />
+                    <Label class="radar_axis_label" text="F" />
+                    <Label class="radar_axis_label" text="G" />
+                    <Label class="radar_axis_label" text="H" />
+                    <Label class="radar_axis_label" text="I" />
+                    <Label class="radar_axis_label" text="J" />
+                    <Label class="radar_axis_label" text="K" />
+                    <Label class="radar_axis_label" text="L" />
+                    <Label class="radar_axis_label" text="M" />
+                    <Label class="radar_axis_label" text="N" />
+                    <Label class="radar_axis_label" text="O" />
                 </Panel>
             </Panel>
             <Panel class="radar_legend">

@@ -108,16 +108,16 @@
     "explosion_type": "tripmine",
     "spawnflags": "0",
     "iRadiusOverride": "0",
-    "iMagnitude": "120",
+    "iMagnitude": "270",
     "rendermode": "kRenderNormal",
     "useLocalOffset": "0",
     "parentname": "[PR#]Trap_Mine_Physbox\u00260000",
-    "targetname": "[PR#]Trap_Mine_Explosion\u00260000",
+    "targetname": "[PR#]Trap_Suicider_Mine_Explosion\u00260000",
     "classname": "env_explosion",
     "origin": "0.000000 0.000000 15.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3541",
+    "hammerUniqueId": "20264",
     "_template_lump_ent_index": "2"
   },
   {
@@ -316,42 +316,17 @@
     ]
   },
   {
-    "filtername": "[PR#]Filter_WormBoss_Phys",
-    "spawnflags": "1032",
-    "StartDisabled": "1",
-    "useLocalOffset": "0",
-    "parentname": "[PR#]Trap_Mine_Physbox\u00260000",
-    "targetname": "[PR#]Trap_MineBossWorm_Trigger\u00260000",
-    "classname": "trigger_once",
-    "origin": "0.000000 0.000000 26.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14541",
-    "model": "maps/ze_samosbor/entities/trap_minebossworm_trigger_14541.vmdl",
-    "_template_lump_ent_index": "8",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]Map_BossWorm_HP",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "PassthroughCaller": "0",
     "FastRetrigger": "0",
     "TriggerOnce": "1",
     "StartDisabled": "0",
-    "targetname": "[PR#]Trap_MineBossWorm_Relay\u00260000",
+    "targetname": "[PR#]Trap_MineSuicider_Relay\u00260000",
     "classname": "logic_relay",
-    "origin": "0.000000 0.000000 79.000000",
+    "origin": "0.000000 0.000000 95.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14538",
-    "_template_lump_ent_index": "9",
+    "hammerUniqueId": "20265",
+    "_template_lump_ent_index": "8",
     "connections": [
       {
         "output": "OnSpawn",
@@ -363,18 +338,10 @@
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]Trap_Mine_Explosion\u00260000",
-        "input": "ClearParent",
-        "param": "",
-        "delay": 1.3799999952316284,
-        "limit": 1
-      },
-      {
-        "output": "OnSpawn",
         "target": "[PR#]Trap_Mine_SoundActivate\u00260000",
         "input": "ClearParent",
         "param": "",
-        "delay": 1.3799999952316284,
+        "delay": 2.9800000190734863,
         "limit": 1
       },
       {
@@ -382,7 +349,7 @@
         "target": "[PR#]Trap_Mine_Particle\u00260000",
         "input": "ClearParent",
         "param": "",
-        "delay": 1.3799999952316284,
+        "delay": 2.9800000190734863,
         "limit": 1
       },
       {
@@ -390,7 +357,7 @@
         "target": "[PR#]Trap_Mine_SoundActivate\u00260000",
         "input": "StopSound",
         "param": "",
-        "delay": 1.399999976158142,
+        "delay": 3,
         "limit": 1
       },
       {
@@ -398,15 +365,7 @@
         "target": "[PR#]Trap_Mine_Model\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 1.399999976158142,
-        "limit": 1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Trap_Mine_Explosion\u00260000",
-        "input": "Explode",
-        "param": "",
-        "delay": 1.399999976158142,
+        "delay": 3,
         "limit": 1
       },
       {
@@ -414,7 +373,7 @@
         "target": "[PR#]Trap_Mine_Light\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 1.399999976158142,
+        "delay": 3,
         "limit": 1
       },
       {
@@ -422,7 +381,7 @@
         "target": "[PR#]Trap_Mine_Particle\u00260000",
         "input": "Start",
         "param": "",
-        "delay": 1.399999976158142,
+        "delay": 3,
         "limit": 1
       },
       {
@@ -430,7 +389,7 @@
         "target": "[PR#]Trap_Mine_Physbox\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 1.399999976158142,
+        "delay": 3,
         "limit": 1
       },
       {
@@ -438,7 +397,7 @@
         "target": "[PR#]Trap_Mine_SoundActivate\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 1.399999976158142,
+        "delay": 3,
         "limit": 1
       },
       {
@@ -470,7 +429,7 @@
         "target": "[PR#]Trap_MineBossWorm_SoundTimer\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 1.399999976158142,
+        "delay": 3,
         "limit": 1
       },
       {
@@ -478,7 +437,7 @@
         "target": "[PR#]Trap_MineBossWorm_SoundTimer\u00260000",
         "input": "RefireTime",
         "param": "0.1",
-        "delay": 0.699999988079071,
+        "delay": 2.299999952316284,
         "limit": 1
       },
       {
@@ -491,18 +450,10 @@
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]Trap_MineBossWorm_Trigger\u00260000",
-        "input": "Enable",
+        "target": "[PR#]Trap_Suicider_Mine_Explosion\u00260000",
+        "input": "ClearParent",
         "param": "",
-        "delay": 1.3799999952316284,
-        "limit": 1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Trap_MineBossWorm_Trigger\u00260000",
-        "input": "Kill",
-        "param": "",
-        "delay": 1.4199999570846558,
+        "delay": 2.9800000190734863,
         "limit": 1
       }
     ]
