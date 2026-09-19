@@ -6460,14 +6460,14 @@
         "target": "[PR#]stage3_dira_skrin3_1",
         "input": "Break",
         "param": "",
-        "delay": 30,
+        "delay": 25,
         "limit": -1
       },
       {
         "output": "OnStartTouch",
         "target": "[PR#]consola",
         "input": "Command",
-        "param": "say \u003E\u003E\u003E Defend 30 sec \u003C\u003C\u003C",
+        "param": "say \u003E\u003E\u003E Defend 25 sec \u003C\u003C\u003C",
         "delay": 0,
         "limit": 1
       },
@@ -6476,7 +6476,7 @@
         "target": "[PR#]consola",
         "input": "Command",
         "param": "say \u003E\u003E\u003E Still defend 5 sec \u003C\u003C\u003C",
-        "delay": 25,
+        "delay": 20,
         "limit": 1
       }
     ]
@@ -16602,7 +16602,8 @@
     "origin": "-704.000000 -3512.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24018"
+    "hammerUniqueId": "24018",
+    "precomputed_vis_clusters": "822 824 825 835 836 840 842 851 856 859"
   },
   {
     "bakedshadowindex": "2",
@@ -16670,7 +16671,8 @@
     "origin": "-1458.000000 -3512.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24036"
+    "hammerUniqueId": "24036",
+    "precomputed_vis_clusters": "801 819 821 822 824 825 832 835 836 840"
   },
   {
     "bakedshadowindex": "3",
@@ -16738,7 +16740,8 @@
     "origin": "-1032.000000 -4192.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24037"
+    "hammerUniqueId": "24037",
+    "precomputed_vis_clusters": "305 308 821 822 824 825 828 835 836"
   },
   {
     "bakedshadowindex": "2",
@@ -16806,7 +16809,8 @@
     "origin": "-704.000000 -2600.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24038"
+    "hammerUniqueId": "24038",
+    "precomputed_vis_clusters": "835 836 840 842 847 856 859 864"
   },
   {
     "bakedshadowindex": "1",
@@ -16874,7 +16878,8 @@
     "origin": "-1458.000000 -2600.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24039"
+    "hammerUniqueId": "24039",
+    "precomputed_vis_clusters": "804 817 822 832 835 840 842 844 847"
   },
   {
     "bakedshadowindex": "3",
@@ -16942,7 +16947,8 @@
     "origin": "-3712.000000 -3440.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24040"
+    "hammerUniqueId": "24040",
+    "precomputed_vis_clusters": "277 659 662 665 666 766 774 780 782 784 785 786 787"
   },
   {
     "bakedshadowindex": "2",
@@ -17010,7 +17016,8 @@
     "origin": "-2688.000000 -3440.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24041"
+    "hammerUniqueId": "24041",
+    "precomputed_vis_clusters": "282 770 782 784 786 787 801 822"
   },
   {
     "bakedshadowindex": "2",
@@ -17078,7 +17085,8 @@
     "origin": "-3712.000000 -2672.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24042"
+    "hammerUniqueId": "24042",
+    "precomputed_vis_clusters": "662 665 666 776 779 791 792 794 796 806 810 813 867"
   },
   {
     "bakedshadowindex": "3",
@@ -17146,7 +17154,8 @@
     "origin": "-2716.000000 -2672.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24043"
+    "hammerUniqueId": "24043",
+    "precomputed_vis_clusters": "791 792 794 796 804 810 813 817 872"
   },
   {
     "bakedshadowindex": "1",
@@ -17214,7 +17223,8 @@
     "origin": "-2688.000000 -888.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24044"
+    "hammerUniqueId": "24044",
+    "precomputed_vis_clusters": "872 879 882"
   },
   {
     "bakedshadowindex": "2",
@@ -17282,7 +17292,8 @@
     "origin": "-3712.000000 -888.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24046"
+    "hammerUniqueId": "24046",
+    "precomputed_vis_clusters": "748 867 874 879 882"
   },
   {
     "bakedshadowindex": "1",
@@ -17350,7 +17361,8 @@
     "origin": "-5248.000000 -880.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24047"
+    "hammerUniqueId": "24047",
+    "precomputed_vis_clusters": "734 742 748 750"
   },
   {
     "bakedshadowindex": "2",
@@ -17418,7 +17430,8 @@
     "origin": "-5248.000000 -1734.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24048"
+    "hammerUniqueId": "24048",
+    "precomputed_vis_clusters": "653 734 742"
   },
   {
     "bakedshadowindex": "2",
@@ -17486,7 +17499,8 @@
     "origin": "-5248.000000 -3056.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24049"
+    "hammerUniqueId": "24049",
+    "precomputed_vis_clusters": "627 632 635 639 642 646 647 649 653 659 662 665 666"
   },
   {
     "bakedshadowindex": "1",
@@ -17554,7 +17568,8 @@
     "origin": "-5248.000000 -4192.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24050"
+    "hammerUniqueId": "24050",
+    "precomputed_vis_clusters": "160 175 627 639"
   },
   {
     "bakedshadowindex": "2",
@@ -17622,7 +17637,8 @@
     "origin": "-5248.000000 -5232.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24051"
+    "hammerUniqueId": "24051",
+    "precomputed_vis_clusters": "160 164 175"
   },
   {
     "bakedshadowindex": "1",
@@ -17690,7 +17706,8 @@
     "origin": "-3712.000000 -5232.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24052"
+    "hammerUniqueId": "24052",
+    "precomputed_vis_clusters": "164 257 260 263 266 277"
   },
   {
     "bakedshadowindex": "2",
@@ -17758,7 +17775,8 @@
     "origin": "-2688.000000 -5232.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24053"
+    "hammerUniqueId": "24053",
+    "precomputed_vis_clusters": "260 263 266 282"
   },
   {
     "bakedshadowindex": "1",
@@ -17826,7 +17844,8 @@
     "origin": "-3208.000000 -3056.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24054"
+    "hammerUniqueId": "24054",
+    "precomputed_vis_clusters": "780 782 784 785 786 787 791 792 794 796"
   },
   {
     "bakedshadowindex": "1",
@@ -17894,7 +17913,8 @@
     "origin": "-4406.000000 -3056.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24055"
+    "hammerUniqueId": "24055",
+    "precomputed_vis_clusters": "642 649 659 662 665 666 774 776 779"
   },
   {
     "bakedshadowindex": "1",
@@ -17962,7 +17982,8 @@
     "origin": "-5976.000000 -3056.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24056"
+    "hammerUniqueId": "24056",
+    "precomputed_vis_clusters": "595 598 602 603 632 635 639 647"
   },
   {
     "bakedshadowindex": "2",
@@ -18030,7 +18051,8 @@
     "origin": "-6664.000000 -3176.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24057"
+    "hammerUniqueId": "24057",
+    "precomputed_vis_clusters": "557 558 576 578 579 580 584 595 598 602 603 632 635"
   },
   {
     "bakedshadowindex": "1",
@@ -18098,7 +18120,8 @@
     "origin": "-7300.000000 -2800.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24058"
+    "hammerUniqueId": "24058",
+    "precomputed_vis_clusters": "568 588 590 595"
   },
   {
     "bakedshadowindex": "2",
@@ -18166,7 +18189,8 @@
     "origin": "-7944.000000 -3184.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24059"
+    "hammerUniqueId": "24059",
+    "precomputed_vis_clusters": "399 412 545 547 560 561 568 576 588"
   },
   {
     "bakedshadowindex": "2",
@@ -18234,7 +18258,8 @@
     "origin": "-7304.000000 -4208.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24060"
+    "hammerUniqueId": "24060",
+    "precomputed_vis_clusters": "137 138 144 147 150 545 547 552 557 558"
   },
   {
     "bakedshadowindex": "1",
@@ -18302,7 +18327,8 @@
     "origin": "-6664.000000 -4848.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24061"
+    "hammerUniqueId": "24061",
+    "precomputed_vis_clusters": "129 133 147 150"
   },
   {
     "bakedshadowindex": "2",
@@ -18370,7 +18396,8 @@
     "origin": "-6680.000000 -6512.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24062"
+    "hammerUniqueId": "24062",
+    "precomputed_vis_clusters": "129 186 187 188 189"
   },
   {
     "bakedshadowindex": "2",
@@ -18438,7 +18465,8 @@
     "origin": "-8584.000000 -5489.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24063"
+    "hammerUniqueId": "24063",
+    "precomputed_vis_clusters": "14 24 37 69 117 154"
   },
   {
     "bakedshadowindex": "1",
@@ -18506,7 +18534,8 @@
     "origin": "-9224.000000 -4848.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24064"
+    "hammerUniqueId": "24064",
+    "precomputed_vis_clusters": "14 22 24 49"
   },
   {
     "bakedshadowindex": "1",
@@ -18574,7 +18603,8 @@
     "origin": "-9224.000000 -3176.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24065"
+    "hammerUniqueId": "24065",
+    "precomputed_vis_clusters": "49 348 352 399 412"
   },
   {
     "bakedshadowindex": "1",
@@ -18642,7 +18672,8 @@
     "origin": "-7944.000000 -6506.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24067"
+    "hammerUniqueId": "24067",
+    "precomputed_vis_clusters": "77 154 180 182 183 184 185 186"
   },
   {
     "bakedshadowindex": "2",
@@ -18710,7 +18741,8 @@
     "origin": "-9224.000000 -6506.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24068"
+    "hammerUniqueId": "24068",
+    "precomputed_vis_clusters": "67 68 69 73 74 75 77"
   },
   {
     "bakedshadowindex": "1",
@@ -18778,7 +18810,8 @@
     "origin": "-8776.000000 -7280.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24069"
+    "hammerUniqueId": "24069",
+    "precomputed_vis_clusters": "70 71 76 180 182"
   },
   {
     "bakedshadowindex": "2",
@@ -18846,7 +18879,8 @@
     "origin": "-7960.000000 -7280.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24070"
+    "hammerUniqueId": "24070",
+    "precomputed_vis_clusters": "71 76 180 181 182 185"
   },
   {
     "bakedshadowindex": "2",
@@ -18914,7 +18948,8 @@
     "origin": "-9608.000000 -7280.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24071"
+    "hammerUniqueId": "24071",
+    "precomputed_vis_clusters": "70 71 72"
   },
   {
     "bakedshadowindex": "1",
@@ -18982,7 +19017,8 @@
     "origin": "-9609.000000 -6280.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24072"
+    "hammerUniqueId": "24072",
+    "precomputed_vis_clusters": "13 67 68 69 70 72"
   },
   {
     "bakedshadowindex": "2",
@@ -19050,7 +19086,8 @@
     "origin": "-9608.000000 -5280.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24073"
+    "hammerUniqueId": "24073",
+    "precomputed_vis_clusters": "13 18 67 68"
   },
   {
     "bakedshadowindex": "1",
@@ -19118,7 +19155,8 @@
     "origin": "-10376.000000 -3440.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24074"
+    "hammerUniqueId": "24074",
+    "precomputed_vis_clusters": "320 325 336 338 507 508"
   },
   {
     "bakedshadowindex": "2",
@@ -19186,7 +19224,8 @@
     "origin": "-9630.000000 -3569.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24075"
+    "hammerUniqueId": "24075",
+    "precomputed_vis_clusters": "18 320 325 507 508"
   },
   {
     "bakedshadowindex": "1",
@@ -19254,7 +19293,8 @@
     "origin": "-9608.000000 -4424.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24076"
+    "hammerUniqueId": "24076",
+    "precomputed_vis_clusters": "18 325"
   },
   {
     "bakedshadowindex": "1",
@@ -19322,7 +19362,8 @@
     "origin": "-7944.000000 -4848.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24077"
+    "hammerUniqueId": "24077",
+    "precomputed_vis_clusters": "117 118 126 137 138"
   },
   {
     "bakedshadowindex": "3",
@@ -19390,7 +19431,8 @@
     "origin": "8268.000000 -6584.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24078"
+    "hammerUniqueId": "24078",
+    "precomputed_vis_clusters": "1321 1343 1368 1369 1373 1374 1380 1533 4066 4067 4068 4070 4071 4072 4073 4074 4075 4076"
   },
   {
     "bakedshadowindex": "1",
@@ -19458,7 +19500,8 @@
     "origin": "8746.000000 -6717.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24079"
+    "hammerUniqueId": "24079",
+    "precomputed_vis_clusters": "1368 1373 1374 1380 4066 4067 4068 4069 4070 4071 4072 4073 4074 4075 4076"
   },
   {
     "bakedshadowindex": "2",
@@ -19526,7 +19569,8 @@
     "origin": "7881.000000 -6280.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24080"
+    "hammerUniqueId": "24080",
+    "precomputed_vis_clusters": "1321 1343 1368 1369 1373 1374 1380 1509 1526 1532 1533 4068 4070 4075 4077"
   },
   {
     "bakedshadowindex": "1",
@@ -19594,7 +19638,8 @@
     "origin": "7881.000000 -5541.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24081"
+    "hammerUniqueId": "24081",
+    "precomputed_vis_clusters": "1343 1374 1476 1487 1488 1509 1521 1522 1524 1526 1532 1533 1541 4077 4078"
   },
   {
     "bakedshadowindex": "2",
@@ -19662,7 +19707,8 @@
     "origin": "8654.000000 -5112.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24082"
+    "hammerUniqueId": "24082",
+    "precomputed_vis_clusters": "1526 4077 4078 4079 4080 4081 4082 4083 4084"
   },
   {
     "bakedshadowindex": "2",
@@ -19730,7 +19776,8 @@
     "origin": "7106.000000 -5112.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24083"
+    "hammerUniqueId": "24083",
+    "precomputed_vis_clusters": "1459 1471 1473 1476 1487 1488 1493 1509 1526 1560"
   },
   {
     "bakedshadowindex": "1",
@@ -19798,7 +19845,8 @@
     "origin": "6984.000000 -4488.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24084"
+    "hammerUniqueId": "24084",
+    "precomputed_vis_clusters": "1459 1471 1473 1560 1781 1782"
   },
   {
     "bakedshadowindex": "2",
@@ -19866,7 +19914,8 @@
     "origin": "7881.000000 -4488.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24085"
+    "hammerUniqueId": "24085",
+    "precomputed_vis_clusters": "1526 1541 1576 1913"
   },
   {
     "bakedshadowindex": "1",
@@ -19934,7 +19983,8 @@
     "origin": "8776.000000 -4488.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24086"
+    "hammerUniqueId": "24086",
+    "precomputed_vis_clusters": "4078 4079 4080 4081 4082 4083 4084 4085 4086"
   },
   {
     "bakedshadowindex": "1",
@@ -20002,7 +20052,8 @@
     "origin": "7881.000000 -3448.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24087"
+    "hammerUniqueId": "24087",
+    "precomputed_vis_clusters": "1576 1789 1838 1840 1848 1861 1907 1913 1924 1926 4085 4087 4088 4091"
   },
   {
     "bakedshadowindex": "3",
@@ -20070,7 +20121,8 @@
     "origin": "8766.000000 -3591.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24088"
+    "hammerUniqueId": "24088",
+    "precomputed_vis_clusters": "1913 1926 4083 4084 4085 4086 4088 4089 4090"
   },
   {
     "bakedshadowindex": "2",
@@ -20138,7 +20190,8 @@
     "origin": "6984.000000 -3590.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24089"
+    "hammerUniqueId": "24089",
+    "precomputed_vis_clusters": "1560 1781 1782 1789 1831 1836 1848 1851"
   },
   {
     "bakedshadowindex": "2",
@@ -20206,7 +20259,8 @@
     "origin": "8776.000000 -2678.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24092"
+    "hammerUniqueId": "24092",
+    "precomputed_vis_clusters": "1907 4085 4087 4089 4090 4091 4092 4093"
   },
   {
     "bakedshadowindex": "3",
@@ -20274,7 +20328,8 @@
     "origin": "6984.000000 -2688.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24093"
+    "hammerUniqueId": "24093",
+    "precomputed_vis_clusters": "1831 1836 1838 1840 1851 1861 1896 1991"
   },
   {
     "bakedshadowindex": "1",
@@ -20342,7 +20397,8 @@
     "origin": "6984.000000 -1794.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24094"
+    "hammerUniqueId": "24094",
+    "precomputed_vis_clusters": "1896 1991 1995"
   },
   {
     "bakedshadowindex": "1",
@@ -20410,7 +20466,8 @@
     "origin": "8776.000000 -1795.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24095"
+    "hammerUniqueId": "24095",
+    "precomputed_vis_clusters": "2037 2039 4090 4092 4093 4094 4095"
   },
   {
     "bakedshadowindex": "2",
@@ -20478,7 +20535,8 @@
     "origin": "7880.000000 -1792.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24096"
+    "hammerUniqueId": "24096",
+    "precomputed_vis_clusters": "1995 2037 2039 2044 4094 4095"
   },
   {
     "bakedshadowindex": "2",
@@ -20546,7 +20604,8 @@
     "origin": "7656.000000 129.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24098"
+    "hammerUniqueId": "24098",
+    "precomputed_vis_clusters": "2054 2274 2284"
   },
   {
     "bakedshadowindex": "1",
@@ -20614,7 +20673,8 @@
     "origin": "7872.000000 -794.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24099"
+    "hammerUniqueId": "24099",
+    "precomputed_vis_clusters": "2044 2051 2054"
   },
   {
     "bakedshadowindex": "1",
@@ -20682,7 +20742,8 @@
     "origin": "7424.000000 888.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24100"
+    "hammerUniqueId": "24100",
+    "precomputed_vis_clusters": "2249 2258 2265 2274 2284"
   },
   {
     "bakedshadowindex": "2",
@@ -20750,7 +20811,8 @@
     "origin": "7424.000000 1920.000000 3728.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24101"
+    "hammerUniqueId": "24101",
+    "precomputed_vis_clusters": "2249 2258 2259 2260 2261 2263 2264 2265 2355"
   },
   {
     "precomputedsubfrusta": "5",
@@ -21263,7 +21325,8 @@
     "origin": "27.000000 7296.000000 -1553.000000",
     "angles": "19.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24161"
+    "hammerUniqueId": "24161",
+    "precomputed_vis_clusters": "2427 2440 2444 2445 2451 2464 2465 2466 2469 2475 2476 2486 2490 2503 2505 2511 2512 2521 2529 2537 2565 2571 2572 2576 2784 2789 2790 2795 2797 2871 2882 2886 2894 2901 2907 2915 2925 2931"
   },
   {
     "bakedshadowindex": "2",
@@ -21331,7 +21394,8 @@
     "origin": "-863.000000 7296.000000 -1553.000000",
     "angles": "19.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24162"
+    "hammerUniqueId": "24162",
+    "precomputed_vis_clusters": "2426 2427 2429 2434 2435 2440 2444 2445 2451 2464 2465 2466 2469 2475 2476 2481 2482 2486 2490 2502 2503 2505 2511 2512 2521 2529 2537 2565 2571 2572 2576 2784 2789 2871 2882 2894 2901 2907 2925"
   },
   {
     "bakedshadowindex": "2",
@@ -21399,7 +21463,8 @@
     "origin": "7727.000000 -4527.000000 1184.000000",
     "angles": "43.999992 180.000046 -179.999924",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24164"
+    "hammerUniqueId": "24164",
+    "precomputed_vis_clusters": "1421 1432 1437 1438 1448 1464 1466 1478 1492 1518 1539 1549 1555 1563 1564 1573 1578 1764 1779 1787 1834 1845 1921"
   },
   {
     "bakedshadowindex": "1",
@@ -21467,7 +21532,8 @@
     "origin": "7414.000000 -289.000000 2448.000000",
     "angles": "90.000000 180.000000 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24167"
+    "hammerUniqueId": "24167",
+    "precomputed_vis_clusters": "1864 1899 1905 1989 1992 1996 1997 2000 2001 2010 2014 2016 2017 2020 2028 2031 2041 2042 2043 2048 2050 2052 2244 2268 2273 2276 2279 2283 2290 2293"
   },
   {
     "bakedshadowindex": "2",
@@ -21535,7 +21601,8 @@
     "origin": "7414.000000 -1179.000000 2448.000000",
     "angles": "90.000000 180.000000 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24168"
+    "hammerUniqueId": "24168",
+    "precomputed_vis_clusters": "1989 1992 1996 2000 2001 2010 2014 2016 2017 2020 2028 2031 2041 2042 2043 2048 2050 2052 2268 2273 2290 2293"
   },
   {
     "bakedshadowindex": "2",
@@ -21603,7 +21670,8 @@
     "origin": "7384.542969 -6732.000000 2490.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24177"
+    "hammerUniqueId": "24177",
+    "precomputed_vis_clusters": "1233 1252 1256 1266 1267 1276 1277 1280 1295 1298 1307 1319 1323 1329 1336 1347 1353 1355 1370 1375 1403 1416 1420 1441 1445 1456 1474 1502 1508 1512 1527 1534"
   },
   {
     "bakedshadowindex": "1",
@@ -21671,7 +21739,8 @@
     "origin": "7384.542969 -6229.000000 1169.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24180"
+    "hammerUniqueId": "24180",
+    "precomputed_vis_clusters": "1252 1256 1266 1271 1276 1277 1282 1284 1287 1292 1303 1305 1325 1329 1331 1338 1345 1349 1360 1364 1367 1376 1458 1485 1499 1503 1513 1523 1535"
   },
   {
     "bakedshadowindex": "3",
@@ -21739,7 +21808,8 @@
     "origin": "7384.542969 -7155.000000 1153.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "24181"
+    "hammerUniqueId": "24181",
+    "precomputed_vis_clusters": "1247 1256 1266 1271 1276 1277 1282 1284 1287 1292 1303 1305 1325 1329 1331 1338 1345 1349 1360 1364 1367 1376 1396 1485 1499 1503 1513 1535"
   },
   {
     "clothScale": "1.000000",

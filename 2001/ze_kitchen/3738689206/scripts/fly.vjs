@@ -4,7 +4,7 @@
 import { Instance, PointTemplate } from "cs_script/point_script";
 
 const BASE_HEALTH = 1000;
-const HP_PER_PLAYER = 415;
+const HP_PER_PLAYER = 405;
 
 let target = null;
 let dead = false;
@@ -28,6 +28,9 @@ let speed = 7;
 let rotationSpeed = 0.01;
 let currentTripId = 0;
 let blockedTicks = 0;
+
+let lastWatchdogPos = null;
+let watchdogTicks = 0;
 
 const ROTATION_SPEED_MIN = 0.006; 
 const ROTATION_SPEED_MAX = 0.025;       
@@ -228,7 +231,7 @@ function MoveTowardsTarget(flyPos, targetPos) {
     const dir = GetNewDir(normTargetDir, currentDir); 
     
     flyBoss.Teleport({ angles: vectorToAngles({ x: dir.x, y: dir.y, z: normTargetDir.z }) });
-    MoveForward(60, 170);
+    MoveForward(40, 120);
 }
 
 function MoveForward(blocker1, blocker2) {
@@ -325,6 +328,9 @@ function ResetState() {
     currentTripId = 0;
     blockedTicks = 0;
     thinkQueue.length = 0;
+
+    lastWatchdogPos = null;
+    watchdogTicks = 0;
 
     const flyBoss = getFlyBoss();
     if (flyBoss && initialPos && initialAngles) {
@@ -427,6 +433,28 @@ Instance.SetThink(() => {
 
 function Tick(flyBoss) {
     const flyPos = flyBoss.GetAbsOrigin();
+    
+    if (started && !dead) {
+        watchdogTicks++;
+        if (watchdogTicks >= 100) { 
+            if (lastWatchdogPos) {
+                const distMoved = vectorLength(vectorSub(flyPos, lastWatchdogPos));
+                if (distMoved < 15) { 
+                    const currentAngles = flyBoss.GetAbsAngles();
+                    flyBoss.Teleport({ 
+                        position: vectorAdd(flyPos, { x: 0, y: 0, z: 60 }), 
+                        angles: { pitch: 0, yaw: currentAngles.yaw, roll: 0 } 
+                    });
+                    
+                    returnToToaster = true;
+                    blockedTicks = 0;
+                }
+            }
+            lastWatchdogPos = flyBoss.GetAbsOrigin(); 
+            watchdogTicks = 0;
+        }
+    }
+
     const forward = getForward(flyBoss.GetAbsAngles()); 
     
     const endFloor = vectorAdd(flyPos, { x: 0, y: 0, z: -300 });
@@ -463,7 +491,7 @@ function Tick(flyBoss) {
             const zDiffMouth = Math.abs(playerCenter.z - grabCenter.z);
             const zDiffBody = Math.abs(playerCenter.z - flyPos.z);
             
-            if (p.GetTeamNumber() === 3 && ((distToMouth <= 90 && zDiffMouth <= 45) || (distToBody <= 90 && zDiffBody <= 45))) {
+            if (p.GetTeamNumber() === 3 && ((distToMouth <= 130 && zDiffMouth <= 65) || (distToBody <= 130 && zDiffBody <= 65))) {
                 if (!grabbedPlayers.includes(p) && !grabbedPlayersDead.includes(p)) {
                     grabbedPlayers.push(p);
                     grabbedPlayersDead.push(p);
