@@ -107,7 +107,7 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "AddOutput",
-        "param": "OnKilled\u003E!self\u003Eremovecontext\u003Enorepick\u003E0\u003E1",
+        "param": "OnKilled\u003E!self\u003Eclearcontext\u003E\u003E0\u003E1",
         "delay": 0,
         "limit": -1
       },
@@ -133,6 +133,14 @@
         "input": "Disable",
         "param": "",
         "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "!activator",
+        "input": "addcontext",
+        "param": "alucard:1",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -504,7 +512,7 @@
     "parentname": "[PR#]alucard_holder",
     "targetname": "[PR#]alucard_hurt_trigger",
     "classname": "trigger_hurt",
-    "origin": "-15.997009 0.000000 -24.000000",
+    "origin": "-8.027008 0.004883 -35.949951",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "27856",
@@ -1032,11 +1040,11 @@
     ]
   },
   {
-    "filtername": "[PR#]alucard_filter_guy",
+    "ResponseContext": "alucard",
     "Negated": "0",
     "clientSideEntity": "0",
     "targetname": "[PR#]alucard_filter2",
-    "classname": "filter_activator_name",
+    "classname": "filter_activator_context",
     "origin": "-34.777008 -113.120117 29.300049",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
