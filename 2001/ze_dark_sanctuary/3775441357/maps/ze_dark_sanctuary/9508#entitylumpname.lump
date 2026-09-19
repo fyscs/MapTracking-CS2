@@ -304,7 +304,7 @@
         "output": "OnTrigger",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 1.45",
+        "param": "speed 1.4",
         "delay": 0,
         "limit": -1
       },
@@ -313,7 +313,15 @@
         "target": "!activator",
         "input": "KeyValue",
         "param": "speed 1.15",
-        "delay": 12,
+        "delay": 15,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1.4",
+        "delay": 7,
         "limit": -1
       }
     ]
@@ -325,7 +333,8 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "100",
-    "damage": "80",
+    "damage": "40",
+    "filtername": "[PR#]CT",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -337,7 +346,33 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9878",
     "model": "maps/ze_dark_sanctuary/entities/shouren_hurt_9878.vmdl",
-    "_template_lump_ent_index": "7"
+    "_template_lump_ent_index": "7",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "basevelocity 0 0 100",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.4",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 1,
+        "limit": -1
+      }
+    ]
   },
   {
     "PassthroughCaller": "0",

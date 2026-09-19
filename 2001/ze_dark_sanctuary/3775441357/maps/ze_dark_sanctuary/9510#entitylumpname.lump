@@ -60,7 +60,7 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "health 13000",
+        "param": "health 12000",
         "delay": 0,
         "limit": -1
       },
@@ -84,7 +84,7 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "max_health 13000",
+        "param": "max_health 12000",
         "delay": 0,
         "limit": -1
       },
@@ -344,7 +344,7 @@
         "target": "!self",
         "input": "Enable",
         "param": "",
-        "delay": 3,
+        "delay": 5,
         "limit": -1
       },
       {
@@ -381,6 +381,7 @@
     "damagetype": "0",
     "damagecap": "120",
     "damage": "120",
+    "filtername": "[PR#]CT",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -392,6 +393,32 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9881",
     "model": "maps/ze_dark_sanctuary/entities/gubulin_hurt_9881.vmdl",
-    "_template_lump_ent_index": "8"
+    "_template_lump_ent_index": "8",
+    "connections": [
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "Ignitelifetime",
+        "param": "3",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.25",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 2,
+        "limit": -1
+      }
+    ]
   }
 ]

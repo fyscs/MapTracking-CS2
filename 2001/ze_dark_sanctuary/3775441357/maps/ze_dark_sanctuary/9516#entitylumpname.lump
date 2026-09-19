@@ -467,6 +467,7 @@
     "damagetype": "0",
     "damagecap": "100",
     "damage": "100",
+    "filtername": "[PR#]CT",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",

@@ -65,7 +65,33 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12072",
     "model": "maps/ze_dark_sanctuary/entities/ss_laser_move_h_12072.vmdl",
-    "_template_lump_ent_index": "1"
+    "_template_lump_ent_index": "1",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.33",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "Ignitelifetime",
+        "param": "3",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "cpoint7_parent": "0",

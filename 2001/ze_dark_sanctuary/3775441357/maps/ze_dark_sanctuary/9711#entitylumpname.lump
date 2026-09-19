@@ -99,7 +99,7 @@
         "target": "[PR#]bk_CYTrRightB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -165,7 +165,7 @@
         "target": "[PR#]bk_CYTrRightB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -173,7 +173,7 @@
         "target": "[PR#]bk_CYTrRight1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -181,7 +181,7 @@
         "target": "[PR#]bk_CYTrRightB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -255,7 +255,7 @@
         "target": "[PR#]bk_CyTrLeft1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -263,7 +263,7 @@
         "target": "[PR#]bk_CyTrLeftB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -271,7 +271,7 @@
         "target": "[PR#]bk_CYTrRight1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -279,7 +279,7 @@
         "target": "[PR#]bk_CYTrRightB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -337,7 +337,7 @@
         "target": "[PR#]bk_CyTrLeftB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -345,7 +345,7 @@
         "target": "[PR#]bk_CYTrRightB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -395,7 +395,7 @@
         "target": "[PR#]bk_CyTrLeftB1",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]

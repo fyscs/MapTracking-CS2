@@ -47,7 +47,7 @@
         "target": "[PR#]mayi_CYTrRightB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -97,7 +97,7 @@
         "target": "[PR#]mayi_CyTrLeftB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -163,7 +163,7 @@
         "target": "[PR#]mayi_CYTrRightB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -171,7 +171,7 @@
         "target": "[PR#]mayi_CYTrRight1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -179,7 +179,7 @@
         "target": "[PR#]mayi_CYTrRightB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -237,7 +237,7 @@
         "target": "[PR#]mayi_CyTrLeftB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -245,7 +245,7 @@
         "target": "[PR#]mayi_CYTrRightB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
@@ -319,7 +319,7 @@
         "target": "[PR#]mayi_CyTrLeft1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -327,7 +327,7 @@
         "target": "[PR#]mayi_CyTrLeftB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -335,7 +335,7 @@
         "target": "[PR#]mayi_CYTrRight1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       },
       {
@@ -343,7 +343,7 @@
         "target": "[PR#]mayi_CYTrRightB1\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.5,
+        "delay": 2,
         "limit": -1
       }
     ]
