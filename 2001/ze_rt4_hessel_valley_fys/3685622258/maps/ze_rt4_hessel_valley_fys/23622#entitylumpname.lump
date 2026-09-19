@@ -44,7 +44,7 @@
         "output": "OnHurtPlayer",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "absvelocity 0 0 250",
+        "param": "absvelocity 0 0 350",
         "delay": 0,
         "limit": -1
       },

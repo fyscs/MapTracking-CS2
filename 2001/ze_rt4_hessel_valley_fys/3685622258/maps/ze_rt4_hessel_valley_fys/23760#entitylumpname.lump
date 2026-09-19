@@ -271,7 +271,7 @@
     "effect_name": "particles/ze_rt4_hessel_valley/yanwu3.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "parentname": "[PR#]item_fog_phys",
+    "parentname": "[PR#]item_fog_par1",
     "targetname": "[PR#]item_fog_usedspr",
     "classname": "info_particle_system",
     "origin": "0.000000 0.000000 -18.000000",

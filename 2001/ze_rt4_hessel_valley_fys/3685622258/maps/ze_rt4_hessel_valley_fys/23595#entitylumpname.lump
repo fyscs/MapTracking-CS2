@@ -96,8 +96,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "8",
-    "damagecap": "0",
-    "damage": "0",
+    "damagecap": "70",
+    "damage": "70",
     "filtername": "[PR#]CT",
     "spawnflags": "1",
     "StartDisabled": "0",
@@ -110,17 +110,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "23596",
     "model": "maps/ze_rt4_hessel_valley_fys/entities/zombie_laser_2hurt_23596.vmdl",
-    "_template_lump_ent_index": "2",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]script_blade",
-        "input": "RunScriptInput",
-        "param": "ps_blade",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "2"
   },
   {
     "thinkalways": "0",
@@ -128,8 +118,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "8",
-    "damagecap": "0",
-    "damage": "0",
+    "damagecap": "70",
+    "damage": "70",
     "filtername": "[PR#]CT",
     "spawnflags": "1",
     "StartDisabled": "0",
@@ -142,17 +132,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "23598",
     "model": "maps/ze_rt4_hessel_valley_fys/entities/zombie_laser_2hurt_23598.vmdl",
-    "_template_lump_ent_index": "3",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]script_blade",
-        "input": "RunScriptInput",
-        "param": "ps_blade",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "3"
   },
   {
     "PassthroughCaller": "0",

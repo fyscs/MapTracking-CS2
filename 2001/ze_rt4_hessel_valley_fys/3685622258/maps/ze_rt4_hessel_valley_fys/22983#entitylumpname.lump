@@ -37,7 +37,7 @@
         "input": "Command",
         "param": "say \u003E\u003E\u003E \u4E00\u4F4D\u4EBA\u7C7B\u83B7\u5F97\u4E86\u53EC\u5524\u5668\u003C\u003C\u003C",
         "delay": 0,
-        "limit": 1
+        "limit": -1
       },
       {
         "output": "OnPlayerPickup",

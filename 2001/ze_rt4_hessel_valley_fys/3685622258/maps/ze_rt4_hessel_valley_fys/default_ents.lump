@@ -25352,6 +25352,14 @@
         "param": "",
         "delay": 3,
         "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Item_whitehole_hurt",
+        "input": "Enable",
+        "param": "",
+        "delay": 1,
+        "limit": -1
       }
     ]
   },
@@ -33060,9 +33068,9 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "0",
+    "damagetype": "8",
     "damagecap": "20",
-    "damage": "10000",
+    "damage": "100000",
     "spawnflags": "1",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -44315,7 +44323,7 @@
     "color": "255 255 255",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u5E38\u9646\u8309\u5B50_Official        \u840C\u7231         Rainmisty \n\n\u9707\u60CA\u6211\u4E24\u8F88\u5B50     \u5929\u82B1\u6CA1\u6709\u677F        Asada Shino\n\n\u5361\u5361\u7F57       \u4E00\u6761\u54B8\u9C7C\u3001      \u5E7D\u7075\u730E\u624B\n\n\u6A31\u5C0F\u8DEF \u5170",
+    "message": "\u5E38\u9646\u8309\u5B50_Official        \u840C\u7231         Rainmisty \n\n\u9707\u60CA\u6211\u4E24\u8F88\u5B50     \u5929\u82B1\u6CA1\u6709\u677F        Asada Shino\n\n\u5361\u5361\u7F57       \u4E00\u6761\u54B8\u9C7C\u3001      \u5E7D\u7075\u730E\u624B\n\n\u6A31\u5C0F\u8DEF \u5170        ouououou",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -51339,6 +51347,7 @@
     "hammerUniqueId": "23291"
   },
   {
+    "Filter09": "[PR#]MySteamID39",
     "Filter08": "[PR#]MySteamID38",
     "Filter07": "[PR#]MySteamID37",
     "Filter06": "[PR#]MySteamID36",
@@ -55648,7 +55657,7 @@
         "target": "[PR#]Item_whitehole_hurt",
         "input": "Disable",
         "param": "",
-        "delay": 16,
+        "delay": 56,
         "limit": -1
       },
       {
@@ -62224,6 +62233,14 @@
         "param": "",
         "delay": 17,
         "limit": -1
+      },
+      {
+        "output": "OnHitMin",
+        "target": "[PR#]Item_whitehole_hurt",
+        "input": "Enable",
+        "param": "",
+        "delay": 15,
+        "limit": -1
       }
     ]
   },
@@ -67569,15 +67586,6 @@
     "hammerUniqueId": "25574"
   },
   {
-    "cs_script": "scripts/vscripts/script_blade.vjs",
-    "targetname": "[PR#]script_blade",
-    "classname": "point_script",
-    "origin": "10295.731445 12384.000000 -6204.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "25575"
-  },
-  {
     "PostSpawnInheritAngles": "0",
     "PostSpawnDirectionVariance": "0.150000",
     "PostSpawnDirection": "0.000000 0.000000 0.000000",
@@ -69039,5 +69047,16 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "25826",
     "model": "maps/ze_rt4_hessel_valley_fys/entities/unnamed_25826.vmdl"
+  },
+  {
+    "filterattribute": "76561199030926072",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]MySteamID39",
+    "classname": "filter_activator_attribute_int",
+    "origin": "7231.000000 12494.000000 -1968.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "25828"
   }
 ]
