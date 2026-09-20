@@ -241,28 +241,12 @@
     "_template_lump_ent_index": "4",
     "connections": [
       {
-        "output": "SoundEventGuid",
-        "target": "[PR#]i_zw_init_0_param",
-        "input": "SetSoundEventGUID",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnUser4",
         "target": "!self",
         "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnUser2",
-        "target": "[PR#]i_zw_init_0_param",
-        "input": "SetFloatValue",
-        "param": "1.0",
-        "delay": 0,
-        "limit": -1
       }
     ]
   },

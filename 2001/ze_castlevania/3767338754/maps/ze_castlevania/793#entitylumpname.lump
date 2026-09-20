@@ -918,27 +918,11 @@
     "_template_lump_ent_index": "6",
     "connections": [
       {
-        "output": "SoundEventGuid",
-        "target": "[PR#]belmont_nuke_param",
-        "input": "SetSoundEventGUID",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnUser1",
         "target": "!self",
         "input": "StartSound",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]belmont_nuke_param",
-        "input": "SetFloatValue",
-        "param": "1.0",
-        "delay": 0.009999999776482582,
         "limit": -1
       },
       {

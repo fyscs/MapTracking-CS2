@@ -11,6 +11,13 @@ let STAGE = 1;
 const MAX_STAGE = 6;
 let VPK_LOAD_IMMUNE = true;
 
+let STAGE1_BOSSHP_MULTIPLIER = 2.0;
+let STAGE2_BOSSHP_MULTIPLIER = 2.0;
+let STAGE3_BOSSHP_MULTIPLIER = 1.0;
+let STAGE4_BOSSHP_MULTIPLIER = 3.0;
+let STAGE5_BOSSHP_MULTIPLIER = 2.0;
+let STAGE6_BOSSHP_MULTIPLIER = 2.0;
+
 Instance.OnScriptInput("VPK_Unload_All", () => {
     Instance.EntFireAtName({ name: "VPK_Load_Stage1", input: "StartSpawnGroupUnload" });
     Instance.EntFireAtName({ name: "VPK_Load_Stage2", input: "StartSpawnGroupUnload" });
@@ -32,6 +39,176 @@ Instance.OnScriptInput("VPK_SetStage", () => {
 
 Instance.OnScriptInput("VPK_DisableImmune", () => {
     VPK_LOAD_IMMUNE = false;
+});
+
+Instance.OnScriptInput("Stage1_SetHPMultiplierX1.0", () => {
+    STAGE1_BOSSHP_MULTIPLIER = 1.0;
+});
+
+Instance.OnScriptInput("Stage1_SetHPMultiplierX2.0", () => {
+    STAGE1_BOSSHP_MULTIPLIER = 2.0;
+});
+
+Instance.OnScriptInput("Stage1_SetHPMultiplierX3.0", () => {
+    STAGE1_BOSSHP_MULTIPLIER = 3.0;
+});
+
+Instance.OnScriptInput("Stage1_SetHPMultiplierX4.0", () => {
+    STAGE1_BOSSHP_MULTIPLIER = 4.0;
+});
+
+Instance.OnScriptInput("Stage1_SetHPMultiplierX5.0", () => {
+    STAGE1_BOSSHP_MULTIPLIER = 5.0;
+});
+
+
+
+
+Instance.OnScriptInput("Stage2_SetHPMultiplierX1.0", () => {
+    STAGE2_BOSSHP_MULTIPLIER = 1.0;
+});
+
+Instance.OnScriptInput("Stage2_SetHPMultiplierX2.0", () => {
+    STAGE2_BOSSHP_MULTIPLIER = 2.0;
+});
+
+Instance.OnScriptInput("Stage2_SetHPMultiplierX3.0", () => {
+    STAGE2_BOSSHP_MULTIPLIER = 3.0;
+});
+
+Instance.OnScriptInput("Stage2_SetHPMultiplierX4.0", () => {
+    STAGE2_BOSSHP_MULTIPLIER = 4.0;
+});
+
+Instance.OnScriptInput("Stage2_SetHPMultiplierX5.0", () => {
+    STAGE2_BOSSHP_MULTIPLIER = 5.0;
+});
+
+
+
+Instance.OnScriptInput("Stage3_SetHPMultiplierX1.0", () => {
+    STAGE3_BOSSHP_MULTIPLIER = 1.0;
+});
+
+Instance.OnScriptInput("Stage3_SetHPMultiplierX2.0", () => {
+    STAGE3_BOSSHP_MULTIPLIER = 2.0;
+});
+
+Instance.OnScriptInput("Stage3_SetHPMultiplierX3.0", () => {
+    STAGE3_BOSSHP_MULTIPLIER = 3.0;
+});
+
+Instance.OnScriptInput("Stage3_SetHPMultiplierX4.0", () => {
+    STAGE3_BOSSHP_MULTIPLIER = 4.0;
+});
+
+Instance.OnScriptInput("Stage3_SetHPMultiplierX5.0", () => {
+    STAGE3_BOSSHP_MULTIPLIER = 5.0;
+});
+
+
+
+
+Instance.OnScriptInput("Stage4_SetHPMultiplierX1.0", () => {
+    STAGE4_BOSSHP_MULTIPLIER = 1.0;
+});
+
+Instance.OnScriptInput("Stage4_SetHPMultiplierX2.0", () => {
+    STAGE4_BOSSHP_MULTIPLIER = 2.0;
+});
+
+Instance.OnScriptInput("Stage4_SetHPMultiplierX3.0", () => {
+    STAGE4_BOSSHP_MULTIPLIER = 3.0;
+});
+
+Instance.OnScriptInput("Stage4_SetHPMultiplierX4.0", () => {
+    STAGE4_BOSSHP_MULTIPLIER = 4.0;
+});
+
+Instance.OnScriptInput("Stage4_SetHPMultiplierX5.0", () => {
+    STAGE4_BOSSHP_MULTIPLIER = 5.0;
+});
+
+
+
+
+Instance.OnScriptInput("Stage5_SetHPMultiplierX1.0", () => {
+    STAGE5_BOSSHP_MULTIPLIER = 1.0;
+});
+
+Instance.OnScriptInput("Stage5_SetHPMultiplierX2.0", () => {
+    STAGE5_BOSSHP_MULTIPLIER = 2.0;
+});
+
+Instance.OnScriptInput("Stage5_SetHPMultiplierX3.0", () => {
+    STAGE5_BOSSHP_MULTIPLIER = 3.0;
+});
+
+Instance.OnScriptInput("Stage5_SetHPMultiplierX4.0", () => {
+    STAGE5_BOSSHP_MULTIPLIER = 4.0;
+});
+
+Instance.OnScriptInput("Stage5_SetHPMultiplierX5.0", () => {
+    STAGE5_BOSSHP_MULTIPLIER = 5.0;
+});
+
+
+
+
+Instance.OnScriptInput("Stage6_SetHPMultiplierX1.0", () => {
+    STAGE6_BOSSHP_MULTIPLIER = 1.0;
+});
+
+Instance.OnScriptInput("Stage6_SetHPMultiplierX2.0", () => {
+    STAGE6_BOSSHP_MULTIPLIER = 2.0;
+});
+
+Instance.OnScriptInput("Stage6_SetHPMultiplierX3.0", () => {
+    STAGE6_BOSSHP_MULTIPLIER = 3.0;
+});
+
+Instance.OnScriptInput("Stage6_SetHPMultiplierX4.0", () => {
+    STAGE6_BOSSHP_MULTIPLIER = 4.0;
+});
+
+Instance.OnScriptInput("Stage6_SetHPMultiplierX5.0", () => {
+    STAGE6_BOSSHP_MULTIPLIER = 5.0;
+});
+
+
+
+
+
+Instance.OnScriptInput("Stage1_AddBossHP", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${5 * STAGE1_BOSSHP_MULTIPLIER}` });
+});
+
+Instance.OnScriptInput("Stage2_AddBossHP", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${15 * STAGE2_BOSSHP_MULTIPLIER}` });
+});
+
+Instance.OnScriptInput("Stage3_AddBossHP", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${7 * STAGE3_BOSSHP_MULTIPLIER}` });
+});
+
+Instance.OnScriptInput("Stage3_AddBossHP_2", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${6 * STAGE3_BOSSHP_MULTIPLIER}` });
+});
+
+Instance.OnScriptInput("Stage4_AddBossHP", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${30 * STAGE4_BOSSHP_MULTIPLIER}` });
+});
+
+Instance.OnScriptInput("Stage5_AddBossHP", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${25 * STAGE5_BOSSHP_MULTIPLIER}` });
+});
+
+Instance.OnScriptInput("Stage6_AddBossHP", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${40 * STAGE6_BOSSHP_MULTIPLIER}` });
+});
+
+Instance.OnScriptInput("Stage6_AddBossHP_2", () => {
+    Instance.EntFireAtName({ name: "boss_addhp_counter", input: "SetValue", value: `${5 * STAGE6_BOSSHP_MULTIPLIER}` });
 });
 
 const ITEM_CASE = {
@@ -1826,7 +2003,10 @@ Instance.OnScriptInput("ValidateCheck", ({caller, activator}) => {
     {
         if(player?.IsValid() && player?.IsAlive() && player?.GetTeamNumber() === 2)
         {
-            player.SetHealth(1000);
+            if(player.GetHealth() > 1000)
+            {
+                player.SetHealth(1000);
+            }
             clear_win = false;
         }
     }

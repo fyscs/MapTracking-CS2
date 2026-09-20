@@ -764,17 +764,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "779",
-    "_template_lump_ent_index": "5",
-    "connections": [
-      {
-        "output": "SoundEventGuid",
-        "target": "[PR#]alucard_fog_s_param",
-        "input": "SetSoundEventGUID",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "5"
   },
   {
     "CanBePickedUp": "1",

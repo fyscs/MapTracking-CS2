@@ -335,25 +335,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6364",
-    "_template_lump_ent_index": "5",
-    "connections": [
-      {
-        "output": "SoundEventGuid",
-        "target": "[PR#]i_zw_paralyzer_param",
-        "input": "SetSoundEventGUID",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser2",
-        "target": "[PR#]i_zw_paralyzer_param",
-        "input": "SetFloatValue",
-        "param": "1.0",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "5"
   },
   {
     "thinkalways": "0",

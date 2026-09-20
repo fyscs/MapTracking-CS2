@@ -109,7 +109,7 @@
         "limit": -1
       },
       {
-        "output": "OnPressed",
+        "output": "",
         "target": "[PR#]i_healer_button",
         "input": "Lock",
         "param": "",
@@ -118,16 +118,8 @@
       },
       {
         "output": "OnPressed",
-        "target": "[PR#]i_healer_t1",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]i_healer_t2",
-        "input": "Trigger",
+        "target": "[PR#]i_healer_branch",
+        "input": "ToggleTest",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -173,7 +165,7 @@
         "limit": -1
       },
       {
-        "output": "OnPressed",
+        "output": "",
         "target": "[PR#]i_healer_button",
         "input": "Unlock",
         "param": "",
@@ -423,67 +415,17 @@
     "_template_lump_ent_index": "6"
   },
   {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "0",
-    "StartDisabled": "1",
-    "targetname": "[PR#]i_healer_t1",
-    "classname": "logic_relay",
-    "origin": "-8.000000 -8.000000 40.000000",
+    "InitialValue": "0",
+    "targetname": "[PR#]i_healer_branch",
+    "classname": "logic_branch",
+    "origin": "-8.000000 0.000000 38.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "967",
+    "hammerUniqueId": "23532",
     "_template_lump_ent_index": "7",
     "connections": [
       {
-        "output": "OnTrigger",
-        "target": "[PR#]i_healer_spawner",
-        "input": "KeyValue",
-        "param": "EntityTemplate s_magic_heal",
-        "delay": 1.2000000476837158,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]i_healer_model",
-        "input": "Skin",
-        "param": "2",
-        "delay": 1.2000000476837158,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]i_healer_t1",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]i_healer_t2",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]i_healer_t2",
-    "classname": "logic_relay",
-    "origin": "-8.000000 8.000000 40.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "968",
-    "_template_lump_ent_index": "8",
-    "connections": [
-      {
-        "output": "OnTrigger",
+        "output": "OnTrue",
         "target": "[PR#]i_healer_model",
         "input": "Skin",
         "param": "1",
@@ -491,7 +433,7 @@
         "limit": -1
       },
       {
-        "output": "OnTrigger",
+        "output": "OnTrue",
         "target": "[PR#]i_healer_spawner",
         "input": "KeyValue",
         "param": "EntityTemplate s_iceprojectile",
@@ -499,19 +441,19 @@
         "limit": -1
       },
       {
-        "output": "OnTrigger",
-        "target": "[PR#]i_healer_t2",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
+        "output": "OnFalse",
+        "target": "[PR#]i_healer_model",
+        "input": "Skin",
+        "param": "2",
+        "delay": 1.2000000476837158,
         "limit": -1
       },
       {
-        "output": "OnTrigger",
-        "target": "[PR#]i_healer_t1",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
+        "output": "OnFalse",
+        "target": "[PR#]i_healer_spawner",
+        "input": "KeyValue",
+        "param": "EntityTemplate s_magic_heal",
+        "delay": 1.2000000476837158,
         "limit": -1
       }
     ]
@@ -530,7 +472,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5773",
     "model": "maps/ze_castlevania/entities/i_healer_trigger_5773.vmdl",
-    "_template_lump_ent_index": "9",
+    "_template_lump_ent_index": "8",
     "connections": [
       {
         "output": "OnUser4",
