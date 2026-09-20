@@ -647,6 +647,38 @@
         "param": "",
         "delay": 2,
         "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u4ED6\u8D25\u4E86",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u8FD9\u80A1\u529B\u91CF\u4E0D\u5C5E\u4E8E\u4ED6",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u6211\u5DF2\u7ECF\u5BDF\u89C9\u4E86\u771F\u6B63\u7684\u529B\u91CF\u6765\u6E90",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u5FEB\u79BB\u5F00\u8FD9\u91CC",
+        "delay": 8,
+        "limit": 1
       }
     ]
   },

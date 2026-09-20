@@ -4207,30 +4207,27 @@
     "hammerUniqueId": "8531"
   },
   {
-    "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "213.038086 213.045410 106.128174",
-    "precomputedobbangles5": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin5": "9961.892578 -7791.025879 -4460.934570",
-    "precomputedobbextent4": "476.385742 247.354492 354.312256",
-    "precomputedobbangles4": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin4": "9966.586914 -8039.291992 -4709.056641",
-    "precomputedobbextent3": "391.954346 388.936035 304.057129",
-    "precomputedobbangles3": "-1.000000 45.000000 1.000000",
-    "precomputedobborigin3": "9964.563477 -7245.620605 -4648.239258",
-    "precomputedobbextent2": "240.034668 434.591309 346.962158",
-    "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "10202.972656 -7837.057129 -4701.692383",
-    "precomputedobbextent1": "235.440918 429.983887 342.353760",
-    "precomputedobbangles1": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin1": "9725.621094 -7832.440918 -4697.083008",
+    "precomputedsubfrusta": "5",
+    "precomputedobbextent4": "476.400879 349.867676 168.092163",
+    "precomputedobbangles4": "-0.000000 0.000000 45.000004",
+    "precomputedobborigin4": "9966.568359 -8157.684570 -4697.055664",
+    "precomputedobbextent3": "385.887207 388.584473 188.736328",
+    "precomputedobbangles3": "-2.000000 -45.000000 -2.000000",
+    "precomputedobborigin3": "9964.235352 -7252.990234 -4774.621582",
+    "precomputedobbextent2": "163.102173 434.585693 339.607910",
+    "precomputedobbangles2": "-45.000004 0.000000 0.000000",
+    "precomputedobborigin2": "10317.901367 -7837.027344 -4693.328125",
+    "precomputedobbextent1": "333.092773 429.940186 159.993164",
+    "precomputedobbangles1": "-45.000004 0.000000 0.000000",
+    "precomputedobborigin1": "9612.903320 -7832.387695 -4690.919922",
     "precomputedobbextent0": "476.442871 377.259155 439.533203",
     "precomputedobbangles0": "0.000000 0.000000 -45.000004",
     "precomputedobborigin0": "9966.578125 -7835.034180 -5145.471191",
-    "precomputedboundsmaxs": "10443.085938 -6790.981445 -4332.005371",
-    "precomputedboundsmins": "9490.175781 -8383.568359 -5316.337402",
-    "precomputedobbextent": "476.455078 802.213623 487.728516",
-    "precomputedobbangles": "-0.000000 0.000000 1.000000",
-    "precomputedobborigin": "9966.630859 -7588.738281 -4830.514648",
+    "precomputedboundsmaxs": "10443.085938 -6791.737793 -4538.415039",
+    "precomputedboundsmins": "9490.175781 -8383.568359 -5316.345215",
+    "precomputedobbextent": "476.455078 795.915283 388.965088",
+    "precomputedobbangles": "-0.000000 0.000000 0.000000",
+    "precomputedobborigin": "9966.630859 -7587.653320 -4927.379883",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "fade_size_end": "0.025000",
@@ -4247,8 +4244,8 @@
     "minroughness": "0.000000",
     "bakespeculartocubemaps_scale": "1.000000",
     "bakespeculartocubemaps": "0",
-    "inner_angle": "165.867996",
-    "outer_angle": "180.000000",
+    "inner_angle": "80.821503",
+    "outer_angle": "87.707603",
     "size_params": "29.883667 24.000000 0.150000",
     "shape": "0",
     "bouncescale": "1.000000",
@@ -4261,10 +4258,10 @@
     "colormode": "0",
     "directlight": "1",
     "enabled": "1",
-    "brightness_legacy": "10.078100",
-    "brightness": "3.332030",
+    "brightness_legacy": "22.214800",
+    "brightness": "4.472660",
     "brightness_nits": "440.000000",
-    "brightness_candelas": "802.000000",
+    "brightness_candelas": "1768.000000",
     "brightness_units": "1",
     "clientSideEntity": "1",
     "useLocalOffset": "0",
@@ -4275,30 +4272,27 @@
     "hammerUniqueId": "8533"
   },
   {
-    "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "280.113281 280.078613 139.648926",
-    "precomputedobbangles5": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin5": "9961.942383 -5935.995605 -4049.413574",
-    "precomputedobbextent4": "499.416504 499.441650 461.135742",
+    "precomputedsubfrusta": "5",
+    "precomputedobbextent4": "496.129883 496.296143 321.007812",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin4": "9961.982422 -6642.209961 -4370.770020",
-    "precomputedobbextent3": "499.233398 499.153809 461.140625",
+    "precomputedobborigin4": "9961.883789 -6637.662598 -4510.945312",
+    "precomputedobbextent3": "499.300781 499.096558 321.056641",
     "precomputedobbangles3": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin3": "9961.942383 -5230.121094 -4370.733398",
-    "precomputedobbextent2": "499.166626 499.848633 461.374512",
+    "precomputedobborigin3": "9961.855469 -5230.115234 -4510.994629",
+    "precomputedobbextent2": "497.756714 499.730469 321.236084",
     "precomputedobbangles2": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin2": "10668.322266 -5936.481445 -4371.004883",
-    "precomputedobbextent1": "499.171875 499.787598 461.391479",
+    "precomputedobborigin2": "10667.242188 -5937.395508 -4511.173828",
+    "precomputedobbextent1": "497.624023 499.819092 321.232666",
     "precomputedobbangles1": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin1": "9255.716797 -5936.435059 -4371.002930",
+    "precomputedobborigin1": "9256.790039 -5937.552734 -4511.170898",
     "precomputedobbextent0": "641.986816 641.292480 320.715088",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "9962.273438 -5935.973633 -4511.652344",
-    "precomputedboundsmaxs": "10962.028320 -4935.981445 -3909.636230",
-    "precomputedboundsmins": "8962.059570 -6920.457520 -4832.349121",
-    "precomputedobbextent": "999.968262 991.931641 461.356445",
-    "precomputedobbangles": "-0.000000 1.000000 0.000000",
-    "precomputedobborigin": "9961.913086 -5928.013672 -4370.992676",
+    "precomputedboundsmaxs": "10961.858398 -4935.983398 -4160.252441",
+    "precomputedboundsmins": "8961.969727 -6920.858398 -4832.383789",
+    "precomputedobbextent": "1000.005859 992.360596 336.065674",
+    "precomputedobbangles": "0.000000 -1.000000 0.000000",
+    "precomputedobborigin": "9962.135742 -5928.311523 -4496.318359",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "fade_size_end": "0.025000",
@@ -4315,8 +4309,8 @@
     "minroughness": "0.000000",
     "bakespeculartocubemaps_scale": "1.000000",
     "bakespeculartocubemaps": "0",
-    "inner_angle": "165.867996",
-    "outer_angle": "180.000000",
+    "inner_angle": "82.933998",
+    "outer_angle": "90.000000",
     "size_params": "29.883667 24.000000 0.150000",
     "shape": "0",
     "bouncescale": "1.000000",
@@ -4329,10 +4323,10 @@
     "colormode": "0",
     "directlight": "1",
     "enabled": "1",
-    "brightness_legacy": "100.762001",
-    "brightness": "6.656250",
+    "brightness_legacy": "213.108994",
+    "brightness": "7.734380",
     "brightness_nits": "4396.000000",
-    "brightness_candelas": "8018.000000",
+    "brightness_candelas": "16959.000000",
     "brightness_units": "1",
     "clientSideEntity": "1",
     "useLocalOffset": "0",
@@ -4343,30 +4337,27 @@
     "hammerUniqueId": "8534"
   },
   {
-    "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "280.113281 280.078613 139.648926",
-    "precomputedobbangles5": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin5": "9961.942383 -5244.995605 -4049.413574",
-    "precomputedobbextent4": "499.319336 499.158447 461.066162",
-    "precomputedobbangles4": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin4": "9962.113281 -5950.941895 -4370.700195",
-    "precomputedobbextent3": "499.173340 499.103149 461.066895",
-    "precomputedobbangles3": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin3": "9961.950195 -4539.199707 -4370.659668",
-    "precomputedobbextent2": "499.166870 499.572754 461.374512",
-    "precomputedobbangles2": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin2": "10668.126953 -5245.286133 -4371.004883",
-    "precomputedobbextent1": "499.595337 499.171875 461.391479",
-    "precomputedobbangles1": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin1": "9255.852539 -5245.299316 -4371.002930",
+    "precomputedsubfrusta": "5",
+    "precomputedobbextent4": "496.191284 496.251465 284.767090",
+    "precomputedobbangles4": "-4.000000 45.000004 5.000000",
+    "precomputedobborigin4": "9960.152344 -5910.964844 -4549.482422",
+    "precomputedobbextent3": "498.461914 498.209229 284.848145",
+    "precomputedobbangles3": "-4.000000 -45.000004 -5.000000",
+    "precomputedobborigin3": "9959.932617 -4576.086914 -4550.023438",
+    "precomputedobbextent2": "499.445312 497.348389 285.189209",
+    "precomputedobbangles2": "5.000000 -45.000004 -4.000000",
+    "precomputedobborigin2": "10630.963867 -5240.416016 -4550.278809",
+    "precomputedobbextent1": "499.416870 497.394531 285.304199",
+    "precomputedobbangles1": "-5.000000 45.000004 -4.000000",
+    "precomputedobborigin1": "9293.052734 -5240.361328 -4550.529785",
     "precomputedobbextent0": "641.986816 641.141602 320.712402",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "9962.273438 -5244.955078 -4511.649902",
-    "precomputedboundsmaxs": "10962.028320 -4244.981445 -3909.636230",
-    "precomputedboundsmins": "8962.059570 -6245.008789 -4832.349121",
-    "precomputedobbextent": "993.253418 1000.036987 461.356445",
-    "precomputedobbangles": "0.000000 -28.999998 0.000000",
-    "precomputedobborigin": "9964.119141 -5246.179199 -4370.992676",
+    "precomputedboundsmaxs": "10955.994141 -4251.005859 -4161.637695",
+    "precomputedboundsmins": "8968.005859 -6238.994141 -4832.383789",
+    "precomputedobbextent": "991.466309 991.541748 335.373047",
+    "precomputedobbangles": "0.000000 -45.999996 0.000000",
+    "precomputedobborigin": "9960.841797 -5245.267578 -4497.010742",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "fade_size_end": "0.025000",
@@ -4383,9 +4374,9 @@
     "minroughness": "0.000000",
     "bakespeculartocubemaps_scale": "1.000000",
     "bakespeculartocubemaps": "0",
-    "inner_angle": "165.867996",
-    "outer_angle": "180.000000",
-    "size_params": "29.883667 24.000000 0.150000",
+    "inner_angle": "69.468002",
+    "outer_angle": "83.684700",
+    "size_params": "29.000000 24.000000 0.150000",
     "shape": "0",
     "bouncescale": "1.000000",
     "bouncelight": "1",
@@ -4397,10 +4388,10 @@
     "colormode": "0",
     "directlight": "1",
     "enabled": "1",
-    "brightness_legacy": "100.762001",
-    "brightness": "6.656250",
-    "brightness_nits": "4396.000000",
-    "brightness_candelas": "8018.000000",
+    "brightness_legacy": "259.863007",
+    "brightness": "8.023440",
+    "brightness_nits": "4668.000000",
+    "brightness_candelas": "20679.000000",
     "brightness_units": "1",
     "clientSideEntity": "1",
     "useLocalOffset": "0",
@@ -4411,30 +4402,27 @@
     "hammerUniqueId": "8535"
   },
   {
-    "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "280.113281 280.078613 139.648926",
-    "precomputedobbangles5": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin5": "9961.942383 -4541.995605 -4049.413574",
-    "precomputedobbextent4": "499.331787 499.319336 461.295410",
-    "precomputedobbangles4": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin4": "9961.991211 -5248.064453 -4370.929688",
-    "precomputedobbextent3": "499.172852 499.103027 461.055908",
+    "precomputedsubfrusta": "5",
+    "precomputedobbextent4": "496.712402 496.496948 326.161133",
+    "precomputedobbangles4": "0.000000 -45.000004 0.000000",
+    "precomputedobborigin4": "9962.151367 -5244.215820 -4506.150391",
+    "precomputedobbextent3": "499.129883 498.862305 325.865723",
     "precomputedobbangles3": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin3": "9961.949219 -3836.199463 -4370.648438",
-    "precomputedobbextent2": "499.166626 499.572266 461.374512",
+    "precomputedobborigin3": "9961.810547 -3836.401367 -4505.855957",
+    "precomputedobbextent2": "498.173462 499.645508 326.229248",
     "precomputedobbangles2": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin2": "10668.126953 -4542.286133 -4371.004883",
-    "precomputedobbextent1": "499.723633 499.171875 461.391479",
+    "precomputedobborigin2": "10667.476562 -4543.040039 -4506.166016",
+    "precomputedobbextent1": "499.734985 497.891113 326.112549",
     "precomputedobbangles1": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin1": "9255.761719 -4542.390137 -4371.002930",
+    "precomputedobborigin1": "9256.660156 -4543.304688 -4506.285156",
     "precomputedobbextent0": "641.986816 641.070190 320.715088",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "9962.273438 -4542.009277 -4511.652344",
-    "precomputedboundsmaxs": "10962.028320 -3541.981201 -3909.636230",
-    "precomputedboundsmins": "8962.059570 -5542.008789 -4832.349121",
-    "precomputedobbextent": "993.252930 1000.037109 461.356445",
+    "precomputedboundsmaxs": "10961.858398 -3541.983398 -4151.690918",
+    "precomputedboundsmins": "8961.969727 -5542.008789 -4832.383789",
+    "precomputedobbextent": "993.664062 1000.040405 340.346436",
     "precomputedobbangles": "0.000000 -28.999998 0.000000",
-    "precomputedobborigin": "9964.119141 -4543.178711 -4370.992676",
+    "precomputedobborigin": "9964.227539 -4543.235352 -4492.037109",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "fade_size_end": "0.025000",
@@ -4451,8 +4439,8 @@
     "minroughness": "0.000000",
     "bakespeculartocubemaps_scale": "1.000000",
     "bakespeculartocubemaps": "0",
-    "inner_angle": "165.867996",
-    "outer_angle": "180.000000",
+    "inner_angle": "83.461998",
+    "outer_angle": "90.572998",
     "size_params": "29.883667 24.000000 0.150000",
     "shape": "0",
     "bouncescale": "1.000000",
@@ -4465,10 +4453,10 @@
     "colormode": "0",
     "directlight": "1",
     "enabled": "1",
-    "brightness_legacy": "100.762001",
-    "brightness": "6.656250",
+    "brightness_legacy": "210.957001",
+    "brightness": "7.722660",
     "brightness_nits": "4396.000000",
-    "brightness_candelas": "8018.000000",
+    "brightness_candelas": "16787.000000",
     "brightness_units": "1",
     "clientSideEntity": "1",
     "useLocalOffset": "0",
@@ -4479,30 +4467,27 @@
     "hammerUniqueId": "8536"
   },
   {
-    "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "280.138672 280.061401 139.669922",
-    "precomputedobbangles5": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin5": "9961.966797 -3839.012695 -4049.392578",
-    "precomputedobbextent4": "499.441406 499.319336 461.109863",
-    "precomputedobbangles4": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin4": "9961.914062 -4545.141602 -4370.730957",
-    "precomputedobbextent3": "499.373047 499.103027 461.075684",
-    "precomputedobbangles3": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin3": "9961.808594 -3133.058350 -4370.668457",
-    "precomputedobbextent2": "499.167480 499.721191 461.409424",
-    "precomputedobbangles2": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin2": "10668.232422 -3839.391113 -4370.998047",
-    "precomputedobbextent1": "499.785522 499.171875 461.411377",
-    "precomputedobbangles1": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin1": "9255.718750 -3839.434326 -4371.005859",
+    "precomputedsubfrusta": "5",
+    "precomputedobbextent4": "496.413086 495.941895 312.909790",
+    "precomputedobbangles4": "1.000000 -45.000000 1.000000",
+    "precomputedobborigin4": "9962.226562 -4532.680176 -4520.073242",
+    "precomputedobbextent3": "498.847900 499.222168 312.846680",
+    "precomputedobbangles3": "1.000000 45.000000 -1.000000",
+    "precomputedobborigin3": "9961.628906 -3141.278320 -4520.109375",
+    "precomputedobbextent2": "499.703125 497.942383 313.151855",
+    "precomputedobbangles2": "1.000000 -45.000000 -1.000000",
+    "precomputedobborigin2": "10659.413086 -3840.139404 -4520.407227",
+    "precomputedobbextent1": "497.374512 499.683716 313.163818",
+    "precomputedobbangles1": "-1.000000 -45.000000 1.000000",
+    "precomputedobborigin1": "9265.000000 -3840.738281 -4520.408691",
     "precomputedobbextent0": "641.891602 641.208496 320.748291",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "9962.380859 -3839.137207 -4511.685547",
-    "precomputedboundsmaxs": "10962.028320 -2838.981201 -3909.617188",
-    "precomputedboundsmins": "8962.059570 -4839.008789 -4832.389648",
-    "precomputedobbextent": "993.252930 1000.036987 461.386230",
+    "precomputedboundsmaxs": "10961.612305 -2839.387451 -4160.415039",
+    "precomputedboundsmins": "8962.387695 -4838.612305 -4832.389648",
+    "precomputedobbextent": "993.214355 999.710815 335.987305",
     "precomputedobbangles": "0.000000 -28.999998 0.000000",
-    "precomputedobborigin": "9964.119141 -3840.178711 -4371.003418",
+    "precomputedobborigin": "9964.610352 -3840.472656 -4496.402344",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "fade_size_end": "0.025000",
@@ -4519,8 +4504,8 @@
     "minroughness": "0.000000",
     "bakespeculartocubemaps_scale": "1.000000",
     "bakespeculartocubemaps": "0",
-    "inner_angle": "165.867996",
-    "outer_angle": "180.000000",
+    "inner_angle": "81.349800",
+    "outer_angle": "88.280899",
     "size_params": "29.883667 24.000000 0.150000",
     "shape": "0",
     "bouncescale": "1.000000",
@@ -4533,10 +4518,10 @@
     "colormode": "0",
     "directlight": "1",
     "enabled": "1",
-    "brightness_legacy": "100.762001",
-    "brightness": "6.656250",
+    "brightness_legacy": "219.828003",
+    "brightness": "7.781250",
     "brightness_nits": "4396.000000",
-    "brightness_candelas": "8018.000000",
+    "brightness_candelas": "17493.000000",
     "brightness_units": "1",
     "clientSideEntity": "1",
     "useLocalOffset": "0",
@@ -5531,7 +5516,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u5148\u53BB\u627E\u5230\u5750\u6807\u4F4D\u7F6E\u5427,\u5411\u5DE6\u53BB\u6559\u5802",
+        "param": "say R:\u5148\u53BB\u627E\u5230\u5750\u6807\u4F4D\u7F6E\u5427,\u5411\u5DE6\u53BB\u6559\u5802",
         "delay": 0,
         "limit": 1
       },
@@ -5581,6 +5566,46 @@
         "input": "StopSound",
         "param": "",
         "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u6211\u597D\u50CF\u5728\u54EA\u89C1\u8FC7\u4F60",
+        "delay": 4,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u53C8\u5FD8\u8BB0\u4E86\u5417\uFF08\u53F9\u6C14\uFF09",
+        "delay": 7,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u8FD9\u4E2A\u57CE\u9547\u5DF2\u7ECF\u5168\u662F\u602A\u7269\u4E86",
+        "delay": 9,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u7B49\u6709\u7A7A\u7684\u65F6\u5019\u5728\u56DE\u5FC6\u5427",
+        "delay": 12,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u53EF\u6076,\u8BB0\u5FC6\u4E71\u4E03\u516B\u7CDF",
+        "delay": 15,
         "limit": 1
       }
     ]
@@ -6286,6 +6311,70 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]lv1_start",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]lv2_start",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]lv3_start",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]lv4_start",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]fuck value5",
+        "input": "Enable",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]fuck value5",
+        "input": "Enable",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]fuck value5",
+        "input": "Enable",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]fuck value5",
+        "input": "Enable",
+        "param": "",
+        "delay": 7,
+        "limit": -1
       }
     ]
   },
@@ -6322,7 +6411,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u53BB\u5BFB\u6C42\u9B54\u5973\u7684\u5E2E\u52A9,\u9274\u5B9A\u4E00\u4E0B\u5E26\u56DE\u6765\u7684\u6C34\u6676",
+        "param": "say R:\u53BB\u5BFB\u6C42\u9B54\u5973\u7684\u5E2E\u52A9,\u9274\u5B9A\u4E00\u4E0B\u5E26\u56DE\u6765\u7684\u6C34\u6676",
         "delay": 0,
         "limit": 1
       },
@@ -6338,7 +6427,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u53BB\u53F3\u8FB9\u533A\u57DF\u7684\u65F6\u949F\u4E0B\u6709\u53BB\u8BE5\u533A\u57DF\u7684\u9B54\u6CD5\u9635",
+        "param": "say R:\u53BB\u53F3\u8FB9\u533A\u57DF\u7684\u65F6\u949F\u4E0B\u6709\u53BB\u8BE5\u533A\u57DF\u7684\u9B54\u6CD5\u9635",
         "delay": 2,
         "limit": 1
       },
@@ -6381,6 +6470,30 @@
         "param": "",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u679C\u7136\u6211\u8FD8\u662F\u60F3\u4E0D\u8D77\u4F60\u662F\u8C01",
+        "delay": 4,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u8FD9\u4E9B\u5DF2\u7ECF\u65E0\u5173\u7D27\u8981\u4E86",
+        "delay": 8,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u7EE7\u7EED\u8D76\u8DEF\u5427",
+        "delay": 10,
+        "limit": 1
       }
     ]
   },
@@ -6397,14 +6510,6 @@
     "hammerUniqueId": "8586",
     "model": "maps/ze_dark_sanctuary/entities/lv3_trigger_1_8586.vmdl",
     "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]juben",
-        "input": "Command",
-        "param": "say \u57CE\u5E02\u89C6\u4E4E\u88AB\u4EC0\u4E48\u4E1C\u897F\u63A7\u5236\u4E86",
-        "delay": 0,
-        "limit": 1
-      },
       {
         "output": "OnTrigger",
         "target": "[PR#]lv3_door1",
@@ -6499,6 +6604,22 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u8BE5\u53BB\u6B63\u5728\u7684\u76EE\u7684\u5730\u4E86",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u51FA\u53D1\u5427",
+        "delay": 2,
         "limit": 1
       }
     ]
@@ -6595,6 +6716,38 @@
         "param": "",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u8BD5\u8BD5\u522B\u7684\u8DEF\u7EBF",
+        "delay": 7,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u53F3\u524D\u65B9\u89C6\u4E4E\u53EF\u4EE5\u901A\u8FC7",
+        "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u4E4B\u524D\u7684\u5F88\u591A\u8DEF\u597D\u50CF\u90FD\u8D70\u4E0D\u901A\u4E86",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u57CE\u5E02\u89C6\u4E4E\u88AB\u4EC0\u4E48\u4E1C\u897F\u63A7\u5236\u4E86",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -6679,7 +6832,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u628A\u8DEF\u969C\u6E05\u7406\u5E72\u51C0\u5427",
+        "param": "say R:\u628A\u8DEF\u969C\u6E05\u7406\u5E72\u51C0\u5427",
         "delay": 0,
         "limit": 1
       },
@@ -6738,6 +6891,22 @@
         "param": "",
         "delay": 2,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u4E00\u6CFC\u63A5\u4E00\u6CFC\u7684,\u771F\u662F\u70E6\u4EBA",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u9662\u5B50\u91CC\u597D\u50CF\u6709\u602A\u7269\u8981\u51FA\u6765\u4E86",
+        "delay": 20,
+        "limit": 1
       }
     ]
   },
@@ -6766,7 +6935,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u8FD9\u662F\u58EB\u5175\u8D70\u7684\u5C0F\u95E8,\u628A\u95E8\u5347\u8D77\u6765",
+        "param": "say R:\u8FD9\u662F\u58EB\u5175\u8D70\u7684\u5C0F\u95E8",
         "delay": 0,
         "limit": 1
       },
@@ -6798,7 +6967,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u770B\u6765\u8FD9\u6761\u8DEF\u5E9F\u5F03\u4E86\u5F88\u4E45\u4E86",
+        "param": "say P:\u770B\u6765\u8FD9\u6761\u8DEF\u5E9F\u5F03\u4E86\u5F88\u4E45\u4E86",
         "delay": 30,
         "limit": 1
       },
@@ -6840,6 +7009,14 @@
         "input": "PlaySound",
         "param": "",
         "delay": 21,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u6211\u6765\u628A\u95E8\u5347\u8D77\u6765",
+        "delay": 3,
         "limit": 1
       }
     ]
@@ -7053,7 +7230,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u7EE7\u7EED\u6E05\u7406\u5427",
+        "param": "say P:\u7EE7\u7EED\u6E05\u7406\u5427",
         "delay": 0,
         "limit": 1
       },
@@ -7095,6 +7272,14 @@
         "input": "Disable",
         "param": "",
         "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u6211\u6765\u6E05\u7406\u8FD9\u4E9B\u6742\u788E\u5427",
+        "delay": 5,
         "limit": 1
       }
     ]
@@ -7162,7 +7347,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6765\u4F20\u9001\u9635\u4E0A",
+        "param": "say R:\u6765\u4F20\u9001\u9635\u4E0A",
         "delay": 0,
         "limit": 1
       },
@@ -7180,6 +7365,38 @@
         "input": "Command",
         "param": "say \u8FD8\u9700\u898115\u79D2",
         "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u770B\u6837\u5B50\u8FD8\u8981\u4E00\u4E9B\u65F6\u95F4",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u522B\u8BA9\u8FD9\u4E9B\u602A\u7269\u9760\u8FD1",
+        "delay": 6,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u6211\u4EEC\u597D\u50CF\u5DF2\u7ECF\u7ECF\u5386\u8FC7\u5F88\u591A\u6B21\u6218\u6597\u4E86",
+        "delay": 11,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u2026\u2026\u2026\u2026",
+        "delay": 15,
         "limit": 1
       }
     ]
@@ -7234,7 +7451,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u8FD9\u4E2A\u9057\u8FF9\u91CC\u597D\u50CF\u6709\u7EBF\u7D22",
+        "param": "say R:\u8FD9\u4E2A\u9057\u8FF9\u91CC\u597D\u50CF\u6709\u7EBF\u7D22",
         "delay": 0,
         "limit": 1
       },
@@ -7250,7 +7467,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u60F3\u529E\u6CD5\u628A\u95E8\u6253\u5F00",
+        "param": "say P:\u60F3\u529E\u6CD5\u628A\u95E8\u6253\u5F00",
         "delay": 5,
         "limit": 1
       },
@@ -7276,6 +7493,14 @@
         "input": "Enable",
         "param": "",
         "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u597D\u50CF\u89E6\u53D1\u4E86\u4EC0\u4E48\u5F00\u5173,\u95E8\u5FEB\u5F00\u4E86",
+        "delay": 15,
         "limit": 1
       }
     ]
@@ -7335,7 +7560,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6253\u5F00\u5B83",
+        "param": "say R:\u6253\u5F00\u5B83",
         "delay": 0,
         "limit": 1
       },
@@ -7343,7 +7568,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u989D \u597D\u50CF\u95E8\u574F\u4E86",
+        "param": "say P:\u989D,\u597D\u50CF\u95E8\u574F\u4E86",
         "delay": 5,
         "limit": 1
       },
@@ -7351,7 +7576,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u7834\u574F\u6389",
+        "param": "say R:\u7834\u574F\u6389!",
         "delay": 10,
         "limit": 1
       },
@@ -7393,6 +7618,14 @@
         "input": "Close",
         "param": "",
         "delay": 12,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:tia!",
+        "delay": 29,
         "limit": 1
       }
     ]
@@ -7523,7 +7756,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u770B\u8D77\u6765\u6709\u4E9B\u95E8\u8FD8\u80FD\u52A8",
+        "param": "say P:\u770B\u8D77\u6765\u6709\u4E9B\u95E8\u8FD8\u80FD\u52A8",
         "delay": 0,
         "limit": 1
       },
@@ -7533,6 +7766,14 @@
         "input": "Command",
         "param": "say \u8FD8\u9700\u898110\u79D2",
         "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u4E0D\u8981\u6389\u4EE5\u8F7B\u5FC3",
+        "delay": 3,
         "limit": 1
       }
     ]
@@ -7808,7 +8049,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6CA1\u8DEF\u4E86?\u4E0D\u53EF\u80FD.\u6069?\u5899\u4F53\u597D\u50CF\u662F\u7A7A\u7684.",
+        "param": "say R:\u6CA1\u8DEF\u4E86?\u4E0D\u53EF\u80FD.\u6069?\u5899\u4F53\u597D\u50CF\u662F\u7A7A\u7684.",
         "delay": 0,
         "limit": 1
       },
@@ -7816,7 +8057,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6253\u788E\u4ED6",
+        "param": "say P:\u6253\u788E\u4ED6",
         "delay": 3,
         "limit": 1
       }
@@ -7948,6 +8189,46 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u4ED6\u6B7B\u4E86,\u5FEB\u8D70",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u5FEB\u8FDB\u95E8,\u6FC0\u6D3B\u4F20\u9001\u9635",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u8FD9\u6C34\u6676\u8574\u542B\u672A\u77E5\u7684\u529B\u91CF",
+        "delay": 7,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u8FD9\u5C31\u662F\u6211\u4EEC\u7684\u76EE\u6807\u4E86",
+        "delay": 9,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u62FF\u8D70",
+        "delay": 10,
+        "limit": 1
       }
     ]
   },
@@ -7968,7 +8249,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u554A,\u90A3\u662F\u4EC0\u4E48,\u5FEB\u5E72\u6389\u4ED6",
+        "param": "say R:\u554A,\u90A3\u662F\u4EC0\u4E48,\u5FEB\u5E72\u6389\u4ED6",
         "delay": 0,
         "limit": 1
       },
@@ -7994,6 +8275,14 @@
         "input": "SetAnimationLooping",
         "param": "run",
         "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u80CC\u540E\u7684\u602A\u7269\u4E5F\u8FFD\u4E0A\u6765\u4E86",
+        "delay": 2,
         "limit": 1
       }
     ]
@@ -8022,7 +8311,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u5E0C\u671B\u8FD9\u4E1C\u897F\u8FD8\u6709\u7528",
+        "param": "say P:\u5E0C\u671B\u8FD9\u4E1C\u897F\u8FD8\u6709\u7528",
         "delay": 0,
         "limit": 1
       },
@@ -8038,7 +8327,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u4E0D\u53EF\u601D\u8BAE,\u8FD9\u5C45\u7136\u662F\u4F20\u9001,\u8FD9\u5EA7\u9057\u8FF9\u7684\u4E3B\u4EBA\u4E5F\u592A\u5962\u4F88\u4E86",
+        "param": "say R:\u4E0A\u6765\u4E86,\u770B\u770B\u8FD9\u4E9B\u6728\u677F\u597D\u50CF\u5F88\u8106\u5F31",
         "delay": 25,
         "limit": 1
       }
@@ -8493,7 +8782,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u628A\u8F66\u632A\u5F00",
+        "param": "say R:\u628A\u8F66\u632A\u5F00",
         "delay": 0,
         "limit": 1
       },
@@ -8641,7 +8930,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u5FEB\u628A\u8DEF\u969C\u5F04\u5F00",
+        "param": "say R:\u5FEB\u628A\u8DEF\u969C\u5F04\u5F00",
         "delay": 0,
         "limit": 1
       },
@@ -8691,6 +8980,14 @@
         "input": "Kill",
         "param": "",
         "delay": 8,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u5C0F\u5FC3\u8FD9\u4E9B\u602A\u7269",
+        "delay": 5,
         "limit": 1
       }
     ]
@@ -8750,7 +9047,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u597D\u591A\u8D27\u7269,\u628A\u6728\u5934\u5F04\u5F00",
+        "param": "say R:\u597D\u591A\u8D27\u7269,\u628A\u6728\u5934\u5F04\u5F00",
         "delay": 0,
         "limit": 1
       },
@@ -8800,6 +9097,14 @@
         "input": "Disable",
         "param": "",
         "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u8FD9\u4E9B\u602A\u7269\u771F\u662F\u7D27\u8FFD\u4E0D\u820D\u554A",
+        "delay": 7,
         "limit": 1
       }
     ]
@@ -8853,7 +9158,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6B63\u5728\u5347\u8D77",
+        "param": "say P:\u6B63\u5728\u5347\u8D77\u5927\u95E8",
         "delay": 0,
         "limit": 1
       },
@@ -8885,7 +9190,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u9700\u8981\u7B49\u5F85\u4E00\u4E0B\u8D70\u7684\u6162\u7684\u4EBA",
+        "param": "say R:\u9700\u8981\u7B49\u5F85\u4E00\u4E0B\u8D70\u7684\u6162\u7684\u4EBA",
         "delay": 30,
         "limit": 1
       },
@@ -8893,7 +9198,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u597D\u4E86\u7EE7\u7EED\u8D70\u5427",
+        "param": "say R:\u597D\u4E86\u7EE7\u7EED\u8D70\u5427",
         "delay": 44,
         "limit": 1
       },
@@ -9019,7 +9324,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6069\u59C6,\u6B63\u5728\u51C6\u5907\u8FDB\u884C\u4F20\u9001",
+        "param": "say R:\u4F20\u9001\u9635\u5728\u6B63\u5E38\u8FD0\u884C\u4E86",
         "delay": 0,
         "limit": 1
       },
@@ -9045,6 +9350,30 @@
         "input": "Enable",
         "param": "",
         "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u7AD9\u5728\u4F20\u9001\u9635\u4E0A",
+        "delay": 25,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u4E0D\u8981\u8BA9\u602A\u7269\u9760\u8FC7\u6765",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u51FB\u9000\u4ED6\u4EEC",
+        "delay": 15,
         "limit": 1
       }
     ]
@@ -9220,7 +9549,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u554A,\u628A\u8DEF\u969C\u6E05\u6389\u5427",
+        "param": "say R:\u9B54\u5973\u7684\u5C45\u6240\u6709\u9B54\u6CD5\u4FDD\u62A4,\u4F20\u9001\u5230\u8FD9\u91CC\u5DF2\u7ECF\u662F\u6781\u9650\u4E86",
         "delay": 0,
         "limit": 1
       },
@@ -9278,6 +9607,38 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u7834\u5F00\u969C\u788D",
+        "delay": 3,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u5B83\u4EEC\u6765\u4E86",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u600E\u4E48\u4F1A\u8FD9\u4E48\u5FEB",
+        "delay": 7,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u770B\u6765\u4ED6\u4EEC\u90A3\u4E5F\u6709\u4F1A\u4F20\u9001\u7684\u6CD5\u5E08",
+        "delay": 12,
         "limit": 1
       }
     ]
@@ -9375,7 +9736,7 @@
         "target": "[PR#]lv2_door8",
         "input": "Break",
         "param": "",
-        "delay": 30,
+        "delay": 20,
         "limit": 1
       },
       {
@@ -9383,14 +9744,14 @@
         "target": "[PR#]lv2_door8",
         "input": "Kill",
         "param": "",
-        "delay": 30.100000381469727,
+        "delay": 20.100000381469727,
         "limit": 1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u8D27\u7269\u6321\u4F4F\u4E86\u8DEF",
+        "param": "say R:\u8D27\u7269\u6321\u4F4F\u4E86\u8DEF",
         "delay": 0,
         "limit": 1
       },
@@ -9398,7 +9759,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6CA1\u529E\u6CD5\u4E86\u6E05\u7406\u6389\u5427",
+        "param": "say R:\u6CA1\u529E\u6CD5\u4E86\u6E05\u7406\u6389\u5427",
         "delay": 5,
         "limit": 1
       },
@@ -9407,7 +9768,15 @@
         "target": "[PR#]juben",
         "input": "Command",
         "param": "say \u8FD8\u9700\u898120\u79D2",
-        "delay": 10,
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u5168\u90E8\u5F04\u8D70",
+        "delay": 12,
         "limit": 1
       }
     ]
@@ -9445,7 +9814,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u547C\u547C,\u5E94\u8BE5\u5FEB\u5230\u4E86",
+        "param": "say R:\u5E94\u8BE5\u5FEB\u5230\u4E86",
         "delay": 0,
         "limit": 1
       },
@@ -9517,7 +9886,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6253\u5F00\u4ED6\u5427",
+        "param": "say R:\u6253\u5F00\u4ED6\u5427",
         "delay": 0,
         "limit": 1
       },
@@ -9536,6 +9905,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u5B83\u4EEC\u6765\u4E86",
+        "delay": 6,
+        "limit": 1
       }
     ]
   },
@@ -9641,7 +10018,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6709\u9B54\u6CD5\u9632\u5FA1.",
+        "param": "say R:\u6709\u9B54\u6CD5\u9632\u5FA1.",
         "delay": 0,
         "limit": 1
       },
@@ -9649,7 +10026,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6CE8\u5165\u4E9B\u9B54\u529B,\u7A0D\u5FAE\u7B49\u5F85\u4E00\u4F1A",
+        "param": "say R:\u6CE8\u5165\u4E9B\u9B54\u529B,\u7A0D\u5FAE\u7B49\u5F85\u4E00\u4F1A",
         "delay": 5,
         "limit": 1
       },
@@ -9684,6 +10061,14 @@
         "param": "",
         "delay": 10,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u89E3\u51B3\u6389\u8FD9\u4E9B\u602A\u7269",
+        "delay": 7,
+        "limit": 1
       }
     ]
   },
@@ -9703,7 +10088,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say doroshy:\u80FD\u6765\u5230\u6211\u8FD9,\u4F60\u4EEC\u8FD8\u4E0D\u9519\u5417",
+        "param": "say \u9B54\u5973:\u80FD\u6765\u5230\u6211\u8FD9,\u4F60\u4EEC\u8FD8\u4E0D\u9519\u5417",
         "delay": 0,
         "limit": 1
       },
@@ -9711,16 +10096,16 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say doroshy:\u8DDF\u5728\u4F60\u4EEC\u540E\u9762\u7684\u5C0F\u866B\u5B50\u4EA4\u7ED9\u4F60\u4EEC\u4E86",
-        "delay": 5,
+        "param": "say \u9B54\u5973:\u8DDF\u5728\u4F60\u4EEC\u540E\u9762\u7684\u5C0F\u866B\u5B50\u4EA4\u7ED9\u4F60\u4EEC\u4E86",
+        "delay": 10,
         "limit": 1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say doroshy:\u7814\u7A76\u8FD9\u4E2A\u9700\u8981\u4E00\u4E9B\u65F6\u95F4",
-        "delay": 10,
+        "param": "say \u9B54\u5973:\u7814\u7A76\u8FD9\u4E2A\u9700\u8981\u4E00\u4E9B\u65F6\u95F4",
+        "delay": 7,
         "limit": 1
       },
       {
@@ -9759,7 +10144,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say doroshy:ok\uFF0C\u51C6\u5907\u7ED3\u675F\u8FD9\u4E00\u5207\u54AF",
+        "param": "say \u9B54\u5973:ok\uFF0C\u51C6\u5907\u7ED3\u675F\u8FD9\u4E00\u5207\u54AF",
         "delay": 90,
         "limit": 1
       },
@@ -9809,6 +10194,102 @@
         "input": "Enable",
         "param": "",
         "delay": 90,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E\u50F5\u5C38\u4FA7\u8DEF\u5DF2\u5F00\u542F\u003C\u003C\u003C",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8FD8\u970040\u79D2",
+        "delay": 50,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E\u50F5\u5C38\u4FA7\u8DEF\u5373\u5C06\u5F00\u542F\u003C\u003C\u003C",
+        "delay": 55,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]lv2_break",
+        "input": "Break",
+        "param": "",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u8FD9\u4E2A\u77F3\u5934\u662F\u9057\u8FF9\u5E26\u56DE\u6765\u7684",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u53EF\u4EE5\u5E2E\u5FD9\u770B\u770B\u5417",
+        "delay": 4,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u4E89\u53D6\u4E00\u4E9B\u65F6\u95F4",
+        "delay": 15,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u6709\u8DA3,\u8FD9\u4E2A\u77F3\u5934\u7684\u529B\u91CF\u6211\u5F88\u611F\u5174\u8DA3",
+        "delay": 75,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u5750\u6807\u6211\u5DF2\u7ECF\u8BFB\u53D6\u5230\u4E86",
+        "delay": 80,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u5E94\u8BE5\u4E0D\u4ECB\u610F\u6211\u966A\u4F60\u4EEC\u8D70\u4E00\u6BB5\u8DEF\u5427",
+        "delay": 83,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u6709\u4F60\u7684\u5E2E\u52A9\u5C31\u592A\u597D\u4E86",
+        "delay": 86,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u6CA1\u95EE\u9898",
+        "delay": 20,
         "limit": 1
       }
     ]
@@ -11464,6 +11945,14 @@
         "param": "",
         "delay": 15.100000381469727,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u6709\u9B54\u529B\u5C01\u5370,\u4EA4\u7ED9\u6211\u5C31\u597D",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -11534,6 +12023,46 @@
         "input": "Enable",
         "param": "",
         "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u5F04\u5F00\u8FD9\u4E9B\u8D27\u7269",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u4E00\u54C8!",
+        "delay": 24,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u95E8\u5173\u4E0A\u4E86",
+        "delay": 25,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u6253\u5F00\u5B83",
+        "delay": 27,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u6211\u7528\u9B54\u6CD5\u53EF\u4EE5\u8BA9\u4ED6\u66F4\u5FEB\u7684\u542F\u52A8",
+        "delay": 30,
         "limit": 1
       }
     ]
@@ -11635,6 +12164,30 @@
         "input": "Disable",
         "param": "",
         "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u6709\u9B54\u6CD5\u969C\u58C1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u4EA4\u7ED9\u6211\u5C31\u597D",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u771F\u662F\u53EF\u9760",
+        "delay": 10,
         "limit": 1
       }
     ]
@@ -11995,6 +12548,70 @@
         "param": "say \u524D\u65B9\u5927\u95E8\u8FD8\u970020\u79D2\u5F00\u542F",
         "delay": 120,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E\u524D\u6709\u5F3A\u654C\u003C\u003C\u003C",
+        "delay": 50,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u5FEB\u60F3\u529E\u6CD5\u6253\u5F00\u8FD9\u95E8",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u4E0D\u884C,\u592A\u5927\u4E86",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u8BA9\u6211\u79EF\u7D2F\u4E00\u4E9B\u9B54\u529B",
+        "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8FD8\u9700\u898135\u79D2",
+        "delay": 15,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E\u9ED1\u6697\u9A91\u58EB\u79BB\u5F00\u4E86\u003C\u003C\u003C",
+        "delay": 115,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u5FEB\u79BB\u5F00\u8FD9\u91CC",
+        "delay": 116,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u53BB\u6E2F\u53E3",
+        "delay": 121,
+        "limit": 1
       }
     ]
   },
@@ -12182,7 +12799,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u518D\u7B49\u7B49\u8D70\u7684\u6162\u7684",
+        "param": "say R:\u518D\u7B49\u7B49\u8D70\u7684\u6162\u7684",
         "delay": 5,
         "limit": 1
       },
@@ -12296,7 +12913,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u628A\u5899\u4F53\u7834\u574F\u6389\u5427",
+        "param": "say R:\u628A\u5899\u4F53\u7834\u574F\u6389\u5427",
         "delay": 0,
         "limit": 1
       },
@@ -12396,7 +13013,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u7B49\u7B49?\u8FD9\u91CC\u597D\u50CF\u6709\u4E2A\u6697\u95E8.",
+        "param": "say \u9B54\u5973:\u7B49\u7B49?\u8FD9\u91CC\u597D\u50CF\u6709\u4E2A\u6697\u95E8.",
         "delay": 5,
         "limit": 1
       },
@@ -12404,7 +13021,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u60F3\u529E\u6CD5\u7ED9\u4ED6\u5F04\u5F00.",
+        "param": "say \u9B54\u5973:\u60F3\u529E\u6CD5\u7ED9\u4ED6\u5F04\u5F00.",
         "delay": 10,
         "limit": 1
       },
@@ -12412,7 +13029,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6CA1\u8DEF\u4E86\uFF1F\u8FD9\u4E2A\u5899\u4F53\u6839\u672C\u7834\u574F\u4E0D\u4E86\u3002",
+        "param": "say R:\u6CA1\u8DEF\u4E86\uFF1F\u8FD9\u4E2A\u5899\u4F53\u6839\u672C\u7834\u574F\u4E0D\u4E86\u3002",
         "delay": 0,
         "limit": 1
       },
@@ -12458,7 +13075,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u8FD9\u597D\u50CF\u6709\u4E2A\u95E8,\u6253\u5F00\u4ED6",
+        "param": "say R:\u8FD9\u597D\u50CF\u6709\u4E2A\u95E8,\u6253\u5F00\u4ED6",
         "delay": 0,
         "limit": 1
       },
@@ -12586,7 +13203,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u8FD9\u91CC\u597D\u50CF\u662F\u4E2A\u95E8,\u8BD5\u7740\u6253\u5F00",
+        "param": "say P:\u8FD9\u91CC\u597D\u50CF\u662F\u4E2A\u95E8,\u8BD5\u7740\u6253\u5F00",
         "delay": 5,
         "limit": 1
       },
@@ -12594,7 +13211,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u60F3\u529E\u6CD5\u627E\u5230\u51FA\u8DEF",
+        "param": "say R:\u60F3\u529E\u6CD5\u627E\u5230\u8DEF",
         "delay": 0,
         "limit": 1
       },
@@ -12612,6 +13229,14 @@
         "input": "Enable",
         "param": "",
         "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u63A2\u67E5\u5230\u4E86\u5899\u5185\u7684\u7ED3\u6784,\u6B63\u5728\u6253\u5F00\u5927\u95E8",
+        "delay": 10,
         "limit": 1
       }
     ]
@@ -12633,14 +13258,14 @@
         "target": "[PR#]lv4_door10",
         "input": "Break",
         "param": "",
-        "delay": 5,
+        "delay": 6,
         "limit": 1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u597D\u50CF\u6709\u4EC0\u4E48\u58F0\u97F3",
+        "param": "say P:\u597D\u50CF\u6709\u4EC0\u4E48\u58F0\u97F3",
         "delay": 0,
         "limit": 1
       },
@@ -12649,7 +13274,7 @@
         "target": "[PR#]lv4_zmtp8",
         "input": "Enable",
         "param": "",
-        "delay": 18,
+        "delay": 12,
         "limit": 1
       },
       {
@@ -12666,6 +13291,22 @@
         "input": "Disable",
         "param": "",
         "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u6709\u4F20\u9001\u9B54\u6CD5\u7684\u6CE2\u52A8",
+        "delay": 7,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u5DE6\u8FB9\u6709\u4EC0\u4E48\u4E1C\u897F\u7684\u788E\u5F00\u4E86",
+        "delay": 6,
         "limit": 1
       }
     ]
@@ -12781,7 +13422,7 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u6069,\u8BD5\u7740\u6253\u5F00\u8FD9\u4E2A\u95E8",
+        "param": "say R:\u6069,\u8BD5\u7740\u6253\u5F00\u8FD9\u4E2A\u95E8",
         "delay": 0,
         "limit": 1
       },
@@ -12807,6 +13448,14 @@
         "input": "Command",
         "param": "say \u003E\u003E\u003E\u50F5\u5C38\u5373\u5C06\u4F20\u9001\u003C\u003C\u003C",
         "delay": 15,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u8FFD\u6765\u4E86",
+        "delay": 5,
         "limit": 1
       }
     ]
@@ -12940,14 +13589,6 @@
         "output": "OnTrigger",
         "target": "[PR#]juben",
         "input": "Command",
-        "param": "say \u8FD8\u9700\u898130\u79D2\u5F00\u95E8",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]juben",
-        "input": "Command",
         "param": "say \u8FD8\u9700\u898110\u79D2\u5F00\u95E8",
         "delay": 20,
         "limit": 1
@@ -12975,6 +13616,38 @@
         "param": "",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E\u524D\u65B9\u5F3A\u654C\u003C\u003C\u003C",
+        "delay": 30,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u6253\u5F00\u8FD9\u4E2A\u95E8",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u5728\u5C1D\u8BD5\u4E86 ",
+        "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u4E0D\u7965\u7684\u9884\u611F",
+        "delay": 15,
+        "limit": 1
       }
     ]
   },
@@ -12996,6 +13669,22 @@
         "input": "Break",
         "param": "",
         "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u6B63\u5728\u50AC\u52A8\u5899\u5185\u7ED3\u6784",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u602A\u7269\u6765\u7684\u597D\u5FEB",
+        "delay": 5,
         "limit": 1
       }
     ]
@@ -17084,6 +17773,22 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u8FD9\u91CC\u6709\u9ED1\u6697\u9A91\u58EB\u7559\u4E0B\u7684\u75D5\u8FF9",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u8DDF\u4E0A",
+        "delay": 5,
+        "limit": 1
       }
     ]
   },
@@ -17687,6 +18392,30 @@
         "input": "Disable",
         "param": "",
         "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u662F\u9B54\u6CD5\u9635",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u6B63\u5728\u51C6\u5907\u9B54\u6CD5",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u518D\u575A\u6301\u4E00\u4F1A",
+        "delay": 10,
         "limit": 1
       }
     ]
@@ -20771,7 +21500,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]lv2_tpzm",
     "classname": "trigger_teleport",
-    "origin": "8948.500000 -2248.500000 2176.496826",
+    "origin": "9614.000000 -3011.500000 2021.496826",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10029",
@@ -20787,7 +21516,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]lv2_tpzm2",
     "classname": "trigger_teleport",
-    "origin": "8948.500000 -2504.500000 2099.496826",
+    "origin": "8948.500000 -2981.500000 1944.496826",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10030",
@@ -20833,7 +21562,7 @@
     "targetname": "[PR#]zmtp111",
     "effect_name": "particles/zz/tpzz3.vpcf",
     "classname": "info_particle_system",
-    "origin": "8935.000000 -2505.000000 2139.000000",
+    "origin": "8935.000000 -2982.000000 1984.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10035"
@@ -20858,7 +21587,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]zmtp111",
     "classname": "info_particle_system",
-    "origin": "8935.000000 -2227.000000 2139.000000",
+    "origin": "9600.500000 -2990.000000 1984.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10036"
@@ -20914,6 +21643,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "health 12345",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -20958,7 +21695,7 @@
         "target": "!activator",
         "input": "KeyValue",
         "param": "absvelocity 0 0 0",
-        "delay": 0.5,
+        "delay": 0.550000011920929,
         "limit": -1
       },
       {
@@ -20973,7 +21710,7 @@
         "output": "OnTrigger",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "basevelocity 0 0 250",
+        "param": "basevelocity 0 0 255",
         "delay": 0,
         "limit": -1
       },
@@ -20982,7 +21719,7 @@
         "target": "!activator",
         "input": "keyvalue",
         "param": "speed 0",
-        "delay": 1.399999976158142,
+        "delay": 1.600000023841858,
         "limit": -1
       },
       {
@@ -20990,7 +21727,7 @@
         "target": "!activator",
         "input": "keyvalue",
         "param": "speed 1",
-        "delay": 1.5,
+        "delay": 1.7999999523162842,
         "limit": -1
       },
       {
@@ -21079,6 +21816,14 @@
         "input": "StopSound",
         "param": "",
         "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "health 12345",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -22430,6 +23175,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E\u6B21\u5143\u9B54\u5973\u51B3\u5B9A\u548C\u4F60\u4E00\u8D77\u62EF\u6551\u8FD9\u91CC\u003C\u003C\u003C",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -31300,7 +32053,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]lv1_blueeyes_hitbox",
         "input": "AddHealth",
-        "param": "350",
+        "param": "400",
         "delay": 0,
         "limit": -1
       }
@@ -31660,6 +32413,14 @@
         "param": "say \u4E07\u94A7\u70C8\u65A9",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]mayi_mk_bk",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0.009999999776482582,
+        "limit": -1
       }
     ]
   },
@@ -31680,7 +32441,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "300",
+    "speed": "280",
     "pushdir": "0.000000 0.000000 0.000000",
     "filtername": "[PR#]CT",
     "spawnflags": "4097",
@@ -32514,6 +33275,38 @@
         "input": "PlaySound",
         "param": "",
         "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u8FD9\u53EA\u662F\u4E2A\u4E2D\u8F6C\u7AD9,\u7EE7\u7EED\u5411\u524D\u8D70\u5427",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u8FD9\u4E9B\u602A\u7269\u4F3C\u4E4E\u6709\u4EBA\u5728\u5F15\u5BFC\u4ED6\u4EEC",
+        "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u65E0\u8BBA\u5230\u54EA\u4ED6\u4EEC\u90FD\u80FD\u5FEB\u901F\u8DDF\u4E0A",
+        "delay": 15,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say R:\u90A3\u6211\u4EEC\u4E5F\u53EA\u80FD\u7EE7\u7EED\u5411\u524D\u4E86",
+        "delay": 20,
         "limit": 1
       }
     ]
@@ -34216,14 +35009,6 @@
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]biaoti",
-        "input": "Start",
-        "param": "",
-        "delay": 0,
-        "limit": 1
       }
     ]
   },
@@ -34635,6 +35420,14 @@
         "param": "",
         "delay": 0.019999999552965164,
         "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003ES\u60F3\u8981\u5E2E\u52A9\u4F60\u003C\u003C\u003C",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -35998,6 +36791,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003ET\u60F3\u8981\u5E2E\u52A9\u4F60\u003C\u003C\u003C",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -41183,6 +41984,14 @@
         "param": "",
         "delay": 15,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u9B54\u5973:\u8FD8\u9700\u8981\u4E00\u70B9\u65F6\u95F4",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -44048,7 +44857,7 @@
     "color": "176 73 245",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u6B21\u5143\u9B54\u5973\n\u6838\u5FC3\u673A\u5236:\u5C5E\u6027\u7EC4\u5408\n\u6B21\u5143\u9B54\u5973\u62E5\u6709\u4E94\u79CD\u5E38\u89C4\u5C5E\u6027\n\u548C\u4E24\u79CD\u975E\u5E38\u89C4\u5C5E\u6027\n\u6B21\u5143\u9B54\u5973\u4F7F\u7528Ctrl\u53EF\u4EE5\n\u81EA\u7531\u5207\u6362\u5C5E\u6027\n",
+    "message": "\u6B21\u5143\u9B54\u5973\n\u6838\u5FC3\u673A\u5236:\u5C5E\u6027\u7EC4\u5408\n\u6B21\u5143\u9B54\u5973\u62E5\u6709\u4E94\u79CD\u5E38\u89C4\u5C5E\u6027\n\u548C\u4E24\u79CD\u975E\u5E38\u89C4\u5C5E\u6027\n\u6B21\u5143\u9B54\u5973\u4F7F\u7528Ctrl\u53EF\u4EE5\n\u81EA\u7531\u5207\u6362\u57FA\u7840\u5C5E\u6027\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -44077,7 +44886,7 @@
     "color": "176 73 245",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u6B21\u5143\u9B54\u5973\u5207\u6362\u5C5E\u6027\u540E\u53EF\u4EE5\u6309E\n\u8FDB\u884C\u786E\u8BA4\n\u786E\u8BA4\u4E3A\u91D1 \u6C34 \u706B\u4E09\u79CD\u5C5E\u6027\u65F6\n\u53EF\u4EE5\u8FDB\u884C\u7EC4\u5408\u6280\u80FD\u91CA\u653E\n\u91CA\u653E\u6280\u80FD\u9700\u8981MP\u503C\nMP\u503C\u81EA\u7136\u6062\u590D\u6216\u8005\u6309F\u8FDB\u884C\u5FEB\u901F\u6062\u590D\n",
+    "message": "\u6B21\u5143\u9B54\u5973\u5207\u6362\u5C5E\u6027\u540E\u53EF\u4EE5\u6309E\n\u8FDB\u884C\u786E\u8BA4\n\u786E\u8BA4\u4E3A\u91D1 \u6C34 \u706B\u4E09\u79CD\u5C5E\u6027\u65F6\n\u4F1A\u663E\u793A\u5BF9\u5E94\u6309\u952E\n\u5207\u6362\u5BF9\u5E94\u5C5E\u6027\u786E\u8BA4\u5E76\u4E14\u57281S\u5185\n\u4F7F\u7528\u6B63\u786E\u6309\u952E\u53EF\u4EE5\u8FDB\u884C\u7EC4\u5408\u6280\u80FD\u91CA\u653E\n\u91CA\u653E\u6280\u80FD\u9700\u8981MP\u503C\nMP\u503C\u81EA\u7136\u6062\u590D\u6216\u8005\u6309F\u8FDB\u884C\u5FEB\u901F\u6062\u590D\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -44090,7 +44899,7 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-4883.000000 1204.000000 4141.000000",
+    "origin": "-4883.000000 1204.000000 4127.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12703"
@@ -44106,7 +44915,7 @@
     "color": "176 73 245",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u6B21\u5143\u9B54\u5973\u53EF\u4EE5\u901A\u8FC7\nAADD\u5DE6\u952E\u4EE5\u53CADDAA\u53F3\u952E\n\u8FDB\u884C\u592A\u9633\u548C\u6708\u4EAE\u7684\u91CA\u653E\n\u540C\u65F6\u53EF\u4EE5\u7528\u62AC\u5934E\u8FDB\u884C\n\u56DE\u590D\u9B54\u6CD5\u7684\u91CA\u653E\n\u4EE5\u53CA\u53F3\u952E\u7684\u5143\u7D20\u653B\u51FB",
+    "message": "\u6B21\u5143\u9B54\u5973\u53EF\u4EE5\u901A\u8FC7\nAADD\u5DE6\u952E\u4EE5\u53CADDAA\u53F3\u952E\n\u8FDB\u884C\u592A\u9633\u548C\u6708\u4EAE\u7684\u91CA\u653E\n\u540C\u65F6\u53EF\u4EE5\u7528\u62AC\u5934E\u8FDB\u884C\n\u56DE\u590D\u9B54\u6CD5\u7684\u91CA\u653E\n\u4EE5\u53CA\u53F3\u952E\u7684\u57FA\u7840\u5143\u7D20\u653B\u51FB",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -44302,20 +45111,20 @@
     "precomputedobbextent3": "13.273438 10.396851 3.768005",
     "precomputedobbangles3": "26.999998 -31.000000 36.999989",
     "precomputedobborigin3": "-6192.558594 2033.308716 4266.185547",
-    "precomputedobbextent2": "501.954468 899.043457 648.551392",
-    "precomputedobbangles2": "-0.000000 45.000000 2.000000",
-    "precomputedobborigin2": "-5187.877441 1744.660522 4871.003418",
+    "precomputedobbextent2": "506.512207 553.439331 899.255005",
+    "precomputedobbangles2": "45.000000 0.000000 6.999999",
+    "precomputedobborigin2": "-5250.673340 1402.876465 4506.098145",
     "precomputedobbextent1": "899.090332 426.730164 267.856323",
     "precomputedobbangles1": "44.999996 8.999998 7.999997",
     "precomputedobborigin1": "-6987.394043 1525.108887 4686.103516",
-    "precomputedobbextent0": "891.258057 899.548584 634.734863",
+    "precomputedobbextent0": "891.258057 891.121338 634.734863",
     "precomputedobbangles0": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin0": "-6188.136719 774.796631 4844.233887",
-    "precomputedboundsmaxs": "-4478.886719 2042.048950 5511.423828",
+    "precomputedobborigin0": "-6194.095703 780.755371 4844.233887",
+    "precomputedboundsmaxs": "-4509.324219 2042.048950 5511.423828",
     "precomputedboundsmins": "-7789.909668 242.328491 4163.423828",
-    "precomputedobbextent": "1657.772461 898.114380 659.609619",
-    "precomputedobbangles": "-0.000000 1.000000 3.999999",
-    "precomputedobborigin": "-6130.000488 1102.656738 4851.973633",
+    "precomputedobbextent": "1630.829590 899.881165 656.765869",
+    "precomputedobbangles": "-0.000000 -4.000000 4.000000",
+    "precomputedobborigin": "-6190.176758 1097.499634 4849.814941",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "fade_size_end": "0.025000",
@@ -44367,15 +45176,15 @@
     "precomputedobbextent3": "12.645020 9.238586 10.942871",
     "precomputedobbangles3": "-45.000004 4.000000 -5.000000",
     "precomputedobborigin3": "-7321.097168 2023.759644 4251.997070",
-    "precomputedobbextent2": "669.943359 567.161011 864.921875",
+    "precomputedobbextent2": "669.943359 516.224731 864.921875",
     "precomputedobbangles2": "47.000008 -10.000000 -5.000000",
-    "precomputedobborigin2": "-6298.151367 1364.721680 4399.067383",
+    "precomputedobborigin2": "-6292.537109 1415.256958 4396.039551",
     "precomputedobbextent1": "192.715820 899.169922 541.157471",
     "precomputedobbangles1": "0.000000 -45.000004 0.000000",
     "precomputedobborigin1": "-8092.546387 1533.906250 4647.659180",
-    "precomputedobbextent0": "899.536133 899.548584 660.722656",
+    "precomputedobbextent0": "899.536133 886.328369 660.722656",
     "precomputedobbangles0": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin0": "-7319.990234 761.942871 4767.288086",
+    "precomputedobborigin0": "-7329.338379 771.291504 4767.288086",
     "precomputedboundsmaxs": "-5532.792969 2035.048950 5511.405762",
     "precomputedboundsmins": "-8822.196289 249.317627 4106.528320",
     "precomputedobbextent": "1596.312012 899.651367 702.438721",
@@ -44435,12 +45244,12 @@
     "precomputedobbextent2": "77.672119 262.080078 206.950562",
     "precomputedobbangles2": "24.999998 35.000000 -11.999999",
     "precomputedobborigin2": "-4042.831055 1961.760620 4485.956055",
-    "precomputedobbextent1": "520.900146 898.607422 654.501953",
-    "precomputedobbangles1": "-0.000000 -45.000004 3.999999",
-    "precomputedobborigin1": "-5342.226074 1743.350098 4875.166016",
-    "precomputedobbextent0": "764.515381 905.046570 600.406982",
+    "precomputedobbextent1": "855.627930 488.770386 635.822388",
+    "precomputedobbangles1": "4.999999 -6.000000 16.999996",
+    "precomputedobborigin1": "-5183.284180 1494.438110 4827.979980",
+    "precomputedobbextent0": "764.515381 904.940125 600.406982",
     "precomputedobbangles0": "2.000000 -46.000000 2.000000",
-    "precomputedobborigin0": "-4427.401855 850.311523 4814.087402",
+    "precomputedobborigin0": "-4427.325195 850.385376 4814.091309",
     "precomputedboundsmaxs": "-3418.256348 2042.048950 5511.401855",
     "precomputedboundsmins": "-6011.157227 241.948486 4107.366699",
     "precomputedobbextent": "1253.212036 901.198914 694.842529",
@@ -44572,10 +45381,10 @@
     "precomputedobbangles0": "0.000000 -39.000004 0.000000",
     "precomputedobborigin0": "-6305.252930 1538.870605 4808.926758",
     "precomputedboundsmaxs": "-4403.302734 2088.042236 5511.396484",
-    "precomputedboundsmins": "-7952.375000 287.955170 4106.505371",
-    "precomputedobbextent": "1756.272705 900.013733 702.445557",
+    "precomputedboundsmins": "-7952.375000 287.955170 4106.520020",
+    "precomputedobbextent": "1756.272705 900.013733 702.438232",
     "precomputedobbangles": "-0.000000 6.000000 0.000000",
-    "precomputedobborigin": "-6242.517578 1187.500122 4808.951172",
+    "precomputedobborigin": "-6242.517578 1187.500122 4808.958008",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "fade_size_end": "0.025000",
@@ -44630,12 +45439,12 @@
     "precomputedobbextent2": "899.124512 140.729492 491.535400",
     "precomputedobbangles2": "-0.000000 -36.000000 -1.000000",
     "precomputedobborigin2": "-8128.771484 713.766479 4595.997559",
-    "precomputedobbextent1": "562.087402 671.609375 877.190796",
-    "precomputedobbangles1": "-0.000000 -45.000000 -40.999996",
-    "precomputedobborigin1": "-6165.624023 653.552368 4491.971680",
-    "precomputedobbextent0": "868.770752 899.550415 702.389404",
-    "precomputedobbangles0": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin0": "-7303.235840 1539.303223 4808.919922",
+    "precomputedobbextent1": "899.498657 463.616547 673.060059",
+    "precomputedobbangles1": "-42.999996 8.000000 -3.000000",
+    "precomputedobborigin1": "-6266.707520 869.644897 4380.418945",
+    "precomputedobbextent0": "821.795410 899.353149 702.389404",
+    "precomputedobbangles0": "-0.000000 30.000000 0.000000",
+    "precomputedobborigin0": "-7073.365723 1473.115479 4808.919922",
     "precomputedboundsmaxs": "-5537.302734 2066.765137 5511.324219",
     "precomputedboundsmins": "-8822.184570 287.955170 4106.535156",
     "precomputedobbextent": "1595.518066 898.850464 702.394531",
@@ -45464,5 +46273,471 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13076",
     "model": "maps/ze_dark_sanctuary/entities/rock1_13076.vmdl"
+  },
+  {
+    "precomputedsubfrusta": "5",
+    "precomputedobbextent4": "1442.848145 247.328003 1020.341309",
+    "precomputedobbangles4": "0.000000 0.000000 -45.000004",
+    "precomputedobborigin4": "12735.886719 -9825.623047 -4258.592773",
+    "precomputedobbextent3": "1217.483643 1246.640625 300.155762",
+    "precomputedobbangles3": "26.999998 31.000000 -36.999989",
+    "precomputedobborigin3": "12860.697266 -7491.944336 -4730.146973",
+    "precomputedobbextent2": "1065.895508 1475.427246 258.358154",
+    "precomputedobbangles2": "45.000004 0.000000 0.000000",
+    "precomputedobborigin2": "13672.583984 -8897.265625 -4283.002930",
+    "precomputedobbextent1": "256.287109 1469.410156 1056.799805",
+    "precomputedobbangles1": "45.000004 0.000000 0.000000",
+    "precomputedobborigin1": "11806.364258 -8903.442383 -4278.036133",
+    "precomputedobbextent0": "1502.100586 1227.927734 1249.732056",
+    "precomputedobbangles0": "-0.000000 0.000000 45.000004",
+    "precomputedobborigin0": "12741.995117 -8913.158203 -5463.112793",
+    "precomputedboundsmaxs": "14244.178711 -7188.429688 -3685.244873",
+    "precomputedboundsmins": "11239.957031 -10372.839844 -5792.254883",
+    "precomputedobbextent": "1502.110840 1592.205078 1053.505005",
+    "precomputedobbangles": "-0.000000 0.000000 0.000000",
+    "precomputedobborigin": "12742.068359 -8780.634766 -4738.750000",
+    "precomputedfieldsvalid": "1",
+    "transmit_always": "0",
+    "fade_size_end": "0.025000",
+    "fade_size_start": "0.050000",
+    "showlight": "0",
+    "rendertocubemaps": "1",
+    "brightnessscale": "1.000000",
+    "shadowfade_size_end": "0.050000",
+    "shadowfade_size_start": "0.100000",
+    "pvs_modify_entity": "0",
+    "shadowpriority": "-1",
+    "shadowmapsize": "-1",
+    "castshadows": "2",
+    "minroughness": "0.000000",
+    "bakespeculartocubemaps_scale": "1.000000",
+    "bakespeculartocubemaps": "0",
+    "inner_angle": "57.834400",
+    "outer_angle": "62.762001",
+    "size_params": "29.883667 24.000000 0.150000",
+    "shape": "0",
+    "bouncescale": "1.000000",
+    "bouncelight": "1",
+    "skirt": "0.100000",
+    "range": "2500.000000",
+    "brightness_lumens": "10000.000000",
+    "colortemperature": "6600.000000",
+    "color": "112 177 196",
+    "colormode": "0",
+    "directlight": "1",
+    "enabled": "1",
+    "brightness_legacy": "39.605499",
+    "brightness": "5.308590",
+    "brightness_nits": "440.000000",
+    "brightness_candelas": "3152.000000",
+    "brightness_units": "1",
+    "clientSideEntity": "1",
+    "useLocalOffset": "0",
+    "classname": "light_omni2",
+    "origin": "12735.526367 -8928.576172 -3711.231445",
+    "angles": "89.999954 0.000000 0.000000",
+    "scales": "2.000000 1.000000 1.000000",
+    "hammerUniqueId": "13099"
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]lv1_start",
+    "classname": "trigger_multiple",
+    "origin": "-8078.001953 1167.520020 4205.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13101",
+    "model": "maps/ze_dark_sanctuary/entities/lv1_start_13101.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u8FD9\u662F\u4EC0\u4E48\u5730\u65B9?",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u4E0D\u5FC5\u614C\u5F20",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u6211\u662F\u8FD9\u4E2A\u4E16\u754C\u7684\u8C03\u505C\u8005",
+        "delay": 3,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u8FD9\u4E2A\u4E16\u754C\u7684\u90AA\u6076\u5373\u5C06\u51FB\u6E83\u8FD9\u4E2A\u4E16\u754C",
+        "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u800C\u6211\u56E0\u4E3A\u89C4\u5219\u65E0\u6CD5\u51FA\u624B\u963B\u6B62",
+        "delay": 7,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u6211\u4ECE\u5176\u4ED6\u6B21\u5143\u5F15\u5165\u4E86\u4F60\u4EEC",
+        "delay": 9,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u5E0C\u671B\u4F60\u4EEC\u53EF\u4EE5\u51FB\u6E83\u90AA\u6076",
+        "delay": 11,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:(\u604D\u60DA)",
+        "delay": 13,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u529B\u91CF\u5E76\u672A\u6D88\u5931",
+        "delay": 15,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u4F3C\u4E4E\u6709\u719F\u6089\u7684\u6C14\u606F",
+        "delay": 17,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u6211\u4F1A\u8D4B\u4E88\u4F60\u529B\u91CF,\u8DEF\u9014\u4E2D\u4F1A\u6709\u4EBA\u534F\u52A9\u4F60",
+        "delay": 19,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u8BF7\u62EF\u6551\u8FD9\u4E2A\u4E16\u754C",
+        "delay": 21,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u2026\u2026\u2026\u2026",
+        "delay": 22,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say P:\u603B\u4E4B,\u5148\u524D\u8FDB\u5427",
+        "delay": 23,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]lv2_start",
+    "classname": "trigger_multiple",
+    "origin": "-8006.001953 1167.520020 4205.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13102",
+    "model": "maps/ze_dark_sanctuary/entities/lv2_start_13102.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u4F60\u7684\u4F19\u4F34\u6570\u91CF\u589E\u52A0\u4E86",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u90AA\u6076\u7684\u529B\u91CF\u589E\u52A0\u4E86",
+        "delay": 3,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]lv3_start",
+    "classname": "trigger_multiple",
+    "origin": "-7926.001953 1167.520020 4205.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13104",
+    "model": "maps/ze_dark_sanctuary/entities/lv3_start_13104.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u6B21\u5143\u9B54\u5973\u613F\u610F\u534F\u52A9\u4F60",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u90AA\u6076\u7684\u529B\u91CF\u5230\u8FBE\u4E86\u9876\u5CF0",
+        "delay": 3,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]lv4_start",
+    "classname": "trigger_multiple",
+    "origin": "-7838.001953 1167.520020 4205.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13106",
+    "model": "maps/ze_dark_sanctuary/entities/lv4_start_13106.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003ETIPS:\u89E6\u53D1\u4E0D\u540C\u4E8B\u4EF6\u53EF\u4EE5\u8FBE\u6210\u4E0D\u540C\u7ED3\u5C40\u003C\u003C\u003C",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u770B\u6765\u8FD9\u5C31\u662F\u6700\u540E\u4E86",
+        "delay": 3,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u8C03\u505C\u8005:\u6211\u5F88\u671F\u5F85",
+        "delay": 5,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "physdamagescale": "1.000000",
+    "overrideBlockLOS": "0",
+    "gamemass": "0",
+    "minhealthdmg": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "pressuredelay": "0.000000",
+    "explodemagnitude": "0",
+    "spawnobject": "0",
+    "nodamageforces": "0",
+    "explosion": "0",
+    "material": "8",
+    "health": "0",
+    "propdata": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "disableshadows": "0",
+    "spawnflags": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]lv2_break",
+    "classname": "func_breakable",
+    "origin": "8698.500000 -2202.499512 2238.003174",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13151",
+    "model": "maps/ze_dark_sanctuary/entities/lv2_break_13151.vmdl"
+  },
+  {
+    "rendercolor": "0 0 0",
+    "renderamt": "255",
+    "holdtime": "4.5",
+    "duration": "5",
+    "spawnflags": "0",
+    "targetname": "[PR#]start_fade",
+    "classname": "env_fade",
+    "origin": "-6046.357422 12886.433594 6738.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13254"
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]fuck value5",
+    "classname": "trigger_multiple",
+    "origin": "-9987.000000 1267.500000 4112.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13257",
+    "model": "maps/ze_dark_sanctuary/entities/fuck value5_13257.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]biaoti",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "spawnflags": "4097",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "classname": "trigger_multiple",
+    "origin": "-7798.500000 2022.000000 4123.984375",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13259",
+    "model": "maps/ze_dark_sanctuary/entities/unnamed_13259.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]monvtp",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "filterattribute": "76561197963764068",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]monvtp",
+    "classname": "filter_activator_attribute_int",
+    "origin": "-7755.767578 1848.774414 4107.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13261",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "origin -8522.72 11541.2 3859.5",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "origin -4961 1114 4113",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 0",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 1",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]doro_energy_increas_timer_mp",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "InitialDelay": "0.000000",
+    "RefireTime": "1.000000",
+    "PauseAfterFiring": "0",
+    "UseRandomTime": "0",
+    "spawnflags": "0",
+    "StartDisabled": "1",
+    "targetname": "[PR#]doro_energy_increas_timer_mp",
+    "classname": "logic_timer",
+    "origin": "-8705.626953 11367.000000 3870.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13262",
+    "connections": [
+      {
+        "output": "OnTimer",
+        "target": "[PR#]doro_energy_increase_math",
+        "input": "Add",
+        "param": "5",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]

@@ -70,6 +70,14 @@
         "param": "",
         "delay": 0.009999999776482582,
         "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u003E\u003E\u003E\u6B8B\u66B4\u4E0E\u626D\u66F2\u7684\u523A\u5BA2\u964D\u4E34\u4E86\u003C\u003C\u003C",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
