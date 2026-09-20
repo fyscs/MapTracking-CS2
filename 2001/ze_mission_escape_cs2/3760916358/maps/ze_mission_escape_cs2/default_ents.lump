@@ -52840,7 +52840,7 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_physics_multiplayer",
-    "origin": "4010.001709 4870.000000 89.359375",
+    "origin": "4009.998291 4870.002930 89.359383",
     "angles": "0.000000 34.000004 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "238"
@@ -52997,7 +52997,7 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_physics_multiplayer",
-    "origin": "4031.989014 4831.999023 89.359329",
+    "origin": "4031.989990 4831.995605 89.359344",
     "angles": "0.000000 296.499908 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "237"
@@ -80985,8 +80985,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_physics_multiplayer",
-    "origin": "4021.985840 4851.984863 129.090134",
-    "angles": "0.000000 300.008026 0.000000",
+    "origin": "4021.982666 4851.981934 129.090164",
+    "angles": "0.000000 300.008636 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "239"
   },
@@ -130931,7 +130931,7 @@
         "target": "!activator",
         "input": "alpha",
         "param": "0",
-        "delay": 0,
+        "delay": 1,
         "limit": -1
       },
       {
@@ -130962,7 +130962,7 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "runspeed 2",
+        "param": "speed 2.5",
         "delay": 0.009999999776482582,
         "limit": -1
       },
@@ -131096,7 +131096,7 @@
         "output": "OnTrue",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "runspeed 1.01",
+        "param": "speed 1.1",
         "delay": 0.009999999776482582,
         "limit": -1
       },
@@ -133105,25 +133105,25 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]mashu_model",
-        "input": "SetIdleAnimationLooping",
+        "input": "SetAnimationNoResetLooping",
         "param": "[PR#]death",
-        "delay": 0,
+        "delay": 0.05000000074505806,
         "limit": -1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]zishu_model",
-        "input": "SetIdleAnimationLooping",
+        "input": "SetAnimationLooping",
         "param": "[PR#]death",
-        "delay": 0,
+        "delay": 0.05000000074505806,
         "limit": -1
       },
       {
         "output": "OnTrigger",
         "target": "[PR#]heishu_model",
-        "input": "SetIdleAnimationLooping",
+        "input": "SetAnimationLooping",
         "param": "[PR#]death",
-        "delay": 0,
+        "delay": 0.05000000074505806,
         "limit": -1
       },
       {
@@ -133139,7 +133139,7 @@
         "target": "[PR#]mashu_model",
         "input": "Kill",
         "param": "",
-        "delay": 3.549999952316284,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -133147,7 +133147,7 @@
         "target": "[PR#]zishu_model",
         "input": "Kill",
         "param": "",
-        "delay": 3.549999952316284,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -133155,7 +133155,7 @@
         "target": "[PR#]heishu_model",
         "input": "Kill",
         "param": "",
-        "delay": 3.549999952316284,
+        "delay": 3,
         "limit": -1
       }
     ]
