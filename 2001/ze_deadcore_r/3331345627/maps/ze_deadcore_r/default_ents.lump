@@ -1814,556 +1814,6 @@
     "hammerUniqueId": "1033"
   },
   {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]escape_white_relay",
-    "classname": "logic_relay",
-    "origin": "504.000000 4576.000000 168.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1263",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]radiation_zombie_backtele",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]radiation_explosion_part1",
-        "input": "Start",
-        "param": "",
-        "delay": 2.799999952316284,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]core",
-        "input": "Kill",
-        "param": "",
-        "delay": 2.299999952316284,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]radiation_explosion_part1",
-        "input": "Kill",
-        "param": "",
-        "delay": 5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]music_white_escape",
-        "input": "StartSound",
-        "param": "",
-        "delay": 2.4000000953674316,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]music_d_white_way",
-        "input": "StopSound",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_platform_baserelay1",
-        "input": "Trigger",
-        "param": "",
-        "delay": 45.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]black_white",
-        "input": "Disable",
-        "param": "",
-        "delay": 15.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]skybox_case",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 12,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]skybox_electro",
-        "input": "Start",
-        "param": "",
-        "delay": 29,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_nuke",
-        "input": "Enable",
-        "param": "",
-        "delay": 122,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_laser_rtv_timer1",
-        "input": "Enable",
-        "param": "",
-        "delay": 51.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_laser_rtv_timer1",
-        "input": "Disable",
-        "param": "",
-        "delay": 89.5999984741211,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_beam_timer1",
-        "input": "Enable",
-        "param": "",
-        "delay": 43.70000076293945,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]invert",
-        "input": "Enable",
-        "param": "",
-        "delay": 46,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]invert",
-        "input": "Disable",
-        "param": "",
-        "delay": 59,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]orange",
-        "input": "Enable",
-        "param": "",
-        "delay": 55,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]orange",
-        "input": "Disable",
-        "param": "",
-        "delay": 66.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]yellow",
-        "input": "Enable",
-        "param": "",
-        "delay": 62.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]yellow",
-        "input": "Disable",
-        "param": "",
-        "delay": 75,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]green",
-        "input": "Enable",
-        "param": "",
-        "delay": 73,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]green",
-        "input": "Disable",
-        "param": "",
-        "delay": 81,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue",
-        "input": "Enable",
-        "param": "",
-        "delay": 80.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue",
-        "input": "Disable",
-        "param": "",
-        "delay": 89.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]purple",
-        "input": "Enable",
-        "param": "",
-        "delay": 84.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]purple",
-        "input": "Disable",
-        "param": "",
-        "delay": 97,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]black_white",
-        "input": "Enable",
-        "param": "",
-        "delay": 97,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_humantele",
-        "input": "Enable",
-        "param": "",
-        "delay": 17,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_press_relay2",
-        "input": "Trigger",
-        "param": "",
-        "delay": 92,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_beam_timer1",
-        "input": "Disable",
-        "param": "",
-        "delay": 92.19999694824219,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_beam_movebase1",
-        "input": "KillHierarchy",
-        "param": "",
-        "delay": 121,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_beam_lastcase1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 109.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_finallaser_case1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 108,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_finallaser_case1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 109,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_finallaser_case1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 109.9000015258789,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_finallaser_case1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 110.69999694824219,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_finallaser_case1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 111.4000015258789,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_finallaser_case1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 112.05000305175781,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_zombietele",
-        "input": "Enable",
-        "param": "",
-        "delay": 29,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]postpro_stage_white_d_escape",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 16.799999237060547,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]postpro",
-        "input": "SetLocalContrastEdgeStrength",
-        "param": "1.2",
-        "delay": 16.799999237060547,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]music_temp*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_wall_timer1",
-        "input": "Enable",
-        "param": "",
-        "delay": 72,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_wall_timer1",
-        "input": "Disable",
-        "param": "",
-        "delay": 94,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]skybox_0",
-        "input": "Start",
-        "param": "",
-        "delay": 71,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_fallt2",
-        "input": "Kill",
-        "param": "",
-        "delay": 59,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]des2",
-        "input": "KeyValue",
-        "param": "origin 0 -960 9962",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]des2",
-        "input": "KeyValue",
-        "param": "origin -5 4024 198",
-        "delay": 59,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_afkt1",
-        "input": "Enable",
-        "param": "",
-        "delay": 29,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_afkt2",
-        "input": "Enable",
-        "param": "",
-        "delay": 29,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_afkt3",
-        "input": "Enable",
-        "param": "",
-        "delay": 29,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_afkt4",
-        "input": "Enable",
-        "param": "",
-        "delay": 29,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]s_afkt1",
-        "input": "Enable",
-        "param": "",
-        "delay": 0.10000000149011612,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "SetDataControlPointZ",
-        "param": "7",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "KeyValue",
-        "param": "color 255 255 255",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 3,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_ex_meteor_detecttrigger",
-        "input": "Enable",
-        "param": "",
-        "delay": 21,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_ex_meteor_detecttrigger",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]radiation_meteor_maker1",
-        "input": "Kill",
-        "param": "",
-        "delay": 91,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]fadekill_escape_platform_prop_timer1",
-        "input": "Enable",
-        "param": "",
-        "delay": 99.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]postpro_stage_white_d_way",
-        "input": "Disable",
-        "param": "",
-        "delay": 16.799999237060547,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_fallt3",
-        "input": "Enable",
-        "param": "",
-        "delay": 59,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]win_d",
-        "input": "Enable",
-        "param": "",
-        "delay": 120,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Layer_s",
-        "input": "HideWorldlayerAndDestroyEntities",
-        "param": "",
-        "delay": 0.10000000149011612,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Layer_radiation",
-        "input": "HideWorldlayerAndDestroyEntities",
-        "param": "",
-        "delay": 17,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Layer_main",
-        "input": "ShowWorldlayerAndSpawnEntities",
-        "param": "",
-        "delay": 17,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_beam_prop*",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 120.94999694824219,
-        "limit": -1
-      }
-    ]
-  },
-  {
     "Template05": "[PR#]cannon1_hurt1",
     "Template04": "[PR#]cannon1_path2",
     "Template03": "[PR#]cannon1_path1",
@@ -4836,22 +4286,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "SetDataControlPointZ",
-        "param": "2",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]s_pcf_timer",
         "input": "Enable",
         "param": "",
@@ -4863,6 +4297,14 @@
         "target": "[PR#]Layer_main",
         "input": "ShowWorldlayerAndSpawnEntities",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "[PR#]stage_b",
         "delay": 0,
         "limit": -1
       }
@@ -5722,17 +5164,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "SetDataControlPointZ",
-        "param": "1",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "[PR#]stage_a",
         "delay": 0,
         "limit": -1
       },
@@ -5770,7 +5204,7 @@
     "font_name": "Cambria",
     "font_size": "150.000000",
     "world_units_per_pixel": "0.100000",
-    "color": "0 255 255",
+    "color": "122 204 255",
     "fullbright": "1",
     "enabled": "1",
     "message": "Skip C",
@@ -7638,30 +7072,6 @@
     ]
   },
   {
-    "InitialDelay": "0.000000",
-    "RefireTime": "0.500000",
-    "PauseAfterFiring": "0",
-    "UseRandomTime": "0",
-    "spawnflags": "0",
-    "StartDisabled": "1",
-    "targetname": "[PR#]d_wall_timer1",
-    "classname": "logic_timer",
-    "origin": "13673.000000 -12202.000000 1671.250000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "487",
-    "connections": [
-      {
-        "output": "OnTimer",
-        "target": "[PR#]d_wall_case1",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
     "PassthroughCaller": "0",
     "FastRetrigger": "0",
     "TriggerOnce": "0",
@@ -8577,9 +7987,9 @@
     "connections": [
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 0,
         "limit": -1
       },
@@ -10321,9 +9731,9 @@
     "connections": [
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_20s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random20",
         "delay": 0,
         "limit": -1
       },
@@ -10745,22 +10155,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "SetDataControlPointZ",
-        "param": "6",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]radiation_purple_startrelay1",
         "input": "Trigger",
         "param": "",
@@ -10769,9 +10163,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 25,
         "limit": -1
       },
@@ -10796,6 +10190,14 @@
         "target": "[PR#]s_pcf_timer",
         "input": "Enable",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "stage_purple_d",
         "delay": 0,
         "limit": -1
       }
@@ -13690,7 +13092,7 @@
     "font_name": "Cambria",
     "font_size": "150.000000",
     "world_units_per_pixel": "0.100000",
-    "color": "0 255 255",
+    "color": "122 204 255",
     "fullbright": "1",
     "enabled": "1",
     "message": "Skip A",
@@ -14004,14 +13406,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 23.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]postpro_stage_purple_d_way",
         "input": "Kill",
         "param": "",
@@ -14168,22 +13562,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "SetDataControlPointZ",
-        "param": "4",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]s_pcf_timer",
         "input": "Enable",
         "param": "",
@@ -14203,6 +13581,14 @@
         "target": "[PR#]d_meteor_detecttrigger",
         "input": "Enable",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "stage_d",
         "delay": 0,
         "limit": -1
       }
@@ -16100,18 +15486,10 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "SetDataControlPointZ",
-        "param": "5",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "stage_red_d",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0.009999999776482582,
         "limit": -1
       }
     ]
@@ -16402,7 +15780,7 @@
     "font_name": "Cambria",
     "font_size": "150.000000",
     "world_units_per_pixel": "0.100000",
-    "color": "0 255 255",
+    "color": "122 204 255",
     "fullbright": "1",
     "enabled": "1",
     "message": "Stage reset",
@@ -16998,17 +16376,17 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 10,
         "limit": -1
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_15s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random15",
         "delay": 46,
         "limit": -1
       },
@@ -17030,9 +16408,9 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 70,
         "limit": -1
       },
@@ -17078,9 +16456,9 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 105,
         "limit": -1
       },
@@ -17110,9 +16488,9 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_20s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random20",
         "delay": 140,
         "limit": -1
       },
@@ -17190,9 +16568,9 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]gametxt_40s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random40",
         "delay": 170,
         "limit": -1
       },
@@ -19461,22 +18839,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "SetDataControlPointZ",
-        "param": "3",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]s_pcf_timer",
         "input": "Enable",
         "param": "",
@@ -19488,6 +18850,14 @@
         "target": "[PR#]Layer_main",
         "input": "ShowWorldlayerAndSpawnEntities",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "[PR#]stage_c",
         "delay": 0,
         "limit": -1
       }
@@ -19712,224 +19082,6 @@
         "input": "SetDataControlPointZ",
         "param": "270",
         "delay": 0.10000000149011612,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "targetname": "[PR#]d_wall_case1",
-    "classname": "logic_case",
-    "origin": "13641.000000 -12202.000000 1671.250000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "485",
-    "connections": [
-      {
-        "output": "OnCase01",
-        "target": "[PR#]c_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase03",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase04",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase05",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase06",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase07",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase08",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase09",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase10",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase11",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase12",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase13",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.05000000074505806,
-        "limit": -1
-      },
-      {
-        "output": "OnCase01",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin 590 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin 490 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase03",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin 390 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase04",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin 290 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase05",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin 190 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase06",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin 90 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase07",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin 0 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase08",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin -90 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase09",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin -190 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase10",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin -290 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase11",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin -390 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase12",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin -490 4700 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnCase13",
-        "target": "[PR#]d_dodge_block_maker1",
-        "input": "KeyValue",
-        "param": "origin -590 4700 0",
-        "delay": 0,
         "limit": -1
       }
     ]
@@ -20934,7 +20086,7 @@
     "font_name": "Cambria",
     "font_size": "150.000000",
     "world_units_per_pixel": "0.100000",
-    "color": "0 255 255",
+    "color": "122 204 255",
     "fullbright": "1",
     "enabled": "1",
     "message": "Skip B",
@@ -21065,10 +20217,10 @@
       },
       {
         "output": "OnMapSpawn",
-        "target": "[PR#]gametxt_txt1",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 2.0999999046325684,
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "mapper",
+        "delay": 4,
         "limit": -1
       },
       {
@@ -21221,6 +20373,38 @@
         "input": "Kill",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "hud_reset",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "modder",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "porter",
+        "delay": 12,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "hud_color_deadcore_blue",
+        "delay": 0.009999999776482582,
         "limit": -1
       }
     ]
@@ -22673,31 +21857,6 @@
     "stopOnNew": "1",
     "toLocalPlayer": "0",
     "startOnSpawn": "0",
-    "soundName": "music_white_escape",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]music_white_escape",
-    "classname": "point_soundevent",
-    "origin": "-14600.000000 -14743.999023 -16192.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4802",
-    "connections": [
-      {
-        "output": "SoundEventGuid",
-        "target": "[PR#]music_white_escape_param",
-        "input": "SetSoundEventGUID",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "entityIndexSelection": "0",
-    "saveAndRestore": "0",
-    "stopOnNew": "1",
-    "toLocalPlayer": "0",
-    "startOnSpawn": "0",
     "soundName": "music_core001",
     "useLocalOffset": "0",
     "targetname": "[PR#]music_core001",
@@ -22835,31 +21994,6 @@
       {
         "output": "SoundEventGuid",
         "target": "[PR#]music_purple_escape_param",
-        "input": "SetSoundEventGUID",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "entityIndexSelection": "0",
-    "saveAndRestore": "0",
-    "stopOnNew": "1",
-    "toLocalPlayer": "0",
-    "startOnSpawn": "0",
-    "soundName": "music_d_white_way",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]music_d_white_way",
-    "classname": "point_soundevent",
-    "origin": "-14568.000000 -14743.999023 -16192.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4766",
-    "connections": [
-      {
-        "output": "SoundEventGuid",
-        "target": "[PR#]music_d_white_way_param",
         "input": "SetSoundEventGUID",
         "param": "",
         "delay": 0,
@@ -25920,14 +25054,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Level_Text",
-        "input": "KeyValue",
-        "param": "color 255 0 0",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]postpro_default1",
         "input": "Enable",
         "param": "",
@@ -25987,6 +25113,14 @@
         "target": "[PR#]way_red_music_case",
         "input": "PickRandom",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "hud_color_red",
         "delay": 0,
         "limit": -1
       }
@@ -26186,228 +25320,6 @@
         "input": "ShowWorldlayerAndSpawnEntities",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]skip_white_d_relay",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]a_pcf_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]b_pcf_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]c_pcf_*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]stage_d_white_relay",
-    "classname": "logic_relay",
-    "origin": "-14680.000000 -14912.000000 -16208.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4973",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]music_temp*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]a_relay",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]b_relay",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]c_relay",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]a_temp*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]b_temp*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]c_temp*",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]fadekill_s_p_timer1",
-        "input": "Enable",
-        "param": "",
-        "delay": 3,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]s_p*",
-        "input": "kill",
-        "param": "",
-        "delay": 5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_temp",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]escape_white_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 30,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]music_d_white_way",
-        "input": "StartSound",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]core",
-        "input": "Start",
-        "param": "",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]postpro",
-        "input": "SetLocalContrastEdgeStrength",
-        "param": "2",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]postpro_stage_white_d_way",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]d_afkt*",
-        "input": "Enable",
-        "param": "",
-        "delay": 0.10000000149011612,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]postpro_default1",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]player",
-        "input": "KeyValue",
-        "param": "health 1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]player",
-        "input": "KeyValue",
-        "param": "origin 1000 -11000 15500",
-        "delay": 4.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Layer_main",
-        "input": "HideWorldlayerAndDestroyEntities",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Layer_radiation",
-        "input": "ShowWorldlayerAndSpawnEntities",
-        "param": "",
-        "delay": 4.5,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Layer_s",
-        "input": "HideWorldlayerAndDestroyEntities",
-        "param": "",
-        "delay": 4.5,
         "limit": -1
       },
       {
@@ -26911,44 +25823,6 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5000",
     "model": "maps/ze_deadcore_r/entities/postpro_stage_purple_d_escape_5000.vmdl",
-    "connections": [
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 10,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "fadetime": "1.000000",
-    "exposurespeeddown": "1.000000",
-    "exposurespeedup": "1.000000",
-    "enableexposure": "1",
-    "maxexposure": "1.000000",
-    "minexposure": "1.000000",
-    "master": "1",
-    "postprocessing": "postprocess/stage_white_d_way.vpost",
-    "spawnflags": "4097",
-    "StartDisabled": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]postpro_stage_white_d_way",
-    "classname": "post_processing_volume",
-    "origin": "-14856.000000 -14728.000000 -16208.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5002",
-    "model": "maps/ze_deadcore_r/entities/postpro_stage_white_d_way_5002.vmdl",
     "connections": [
       {
         "output": "OnUser1",
@@ -28468,284 +27342,6 @@
     "hammerUniqueId": "9234",
     "handshake": "395462553",
     "array_index": "31"
-  },
-  {
-    "Case12": "11",
-    "Case11": "10",
-    "Case10": "9",
-    "Case09": "8",
-    "Case08": "7",
-    "Case07": "6",
-    "Case06": "5",
-    "Case05": "4",
-    "Case04": "3",
-    "Case03": "2",
-    "Case02": "1",
-    "Case01": "0",
-    "targetname": "[PR#]Level_Case",
-    "classname": "logic_case",
-    "origin": "-14568.000000 -14968.000000 -16208.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4958",
-    "connections": [
-      {
-        "output": "OnCase01",
-        "target": "[PR#]stage_abc_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]stage_bc_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase03",
-        "target": "[PR#]stage_ac_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase05",
-        "target": "[PR#]stage_ab_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase04",
-        "target": "[PR#]stage_c",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase06",
-        "target": "[PR#]stage_b",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase07",
-        "target": "[PR#]stage_a",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase08",
-        "target": "[PR#]stage_d_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase09",
-        "target": "[PR#]stage_d_red_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase10",
-        "target": "[PR#]stage_d_purple_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase11",
-        "target": "[PR#]stage_d_white_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]admin_skip_a",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase03",
-        "target": "[PR#]admin_skip_b",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase04",
-        "target": "[PR#]admin_skip_a",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase04",
-        "target": "[PR#]admin_skip_b",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase05",
-        "target": "[PR#]admin_skip_c",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase06",
-        "target": "[PR#]admin_skip_a",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase06",
-        "target": "[PR#]admin_skip_c",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase07",
-        "target": "[PR#]admin_skip_b",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase07",
-        "target": "[PR#]admin_skip_c",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase08",
-        "target": "[PR#]admin_skip_b",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase08",
-        "target": "[PR#]admin_skip_c",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase08",
-        "target": "[PR#]admin_skip_a",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase09",
-        "target": "[PR#]admin_skip_b",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase09",
-        "target": "[PR#]admin_skip_c",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase09",
-        "target": "[PR#]admin_skip_a",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase10",
-        "target": "[PR#]admin_skip_b",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase10",
-        "target": "[PR#]admin_skip_c",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase10",
-        "target": "[PR#]admin_skip_a",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase11",
-        "target": "[PR#]admin_skip_b",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase11",
-        "target": "[PR#]admin_skip_c",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase11",
-        "target": "[PR#]admin_skip_a",
-        "input": "Lock",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
   },
   {
     "PassthroughCaller": "0",
@@ -35076,7 +33672,7 @@
   {
     "targetname": "[PR#]lyric_hud",
     "classname": "env_hudhint",
-    "origin": "-14952.000000 -14648.000000 -16208.000000",
+    "origin": "-14936.000000 -14632.000000 -16208.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9553",
@@ -36898,28 +35494,6 @@
     "floatValue": "1.000000",
     "parameterName": "Volume",
     "useLocalOffset": "0",
-    "targetname": "[PR#]music_white_escape_param",
-    "classname": "snd_event_param",
-    "origin": "-14600.000000 -14743.999023 -16208.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "9652"
-  },
-  {
-    "floatValue": "1.000000",
-    "parameterName": "Volume",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]music_d_white_way_param",
-    "classname": "snd_event_param",
-    "origin": "-14568.000000 -14743.999023 -16208.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "9653"
-  },
-  {
-    "floatValue": "1.000000",
-    "parameterName": "Volume",
-    "useLocalOffset": "0",
     "targetname": "[PR#]music_red_core001_param",
     "classname": "snd_event_param",
     "origin": "-14600.000000 -14711.999023 -16208.000000",
@@ -37749,7 +36323,7 @@
   {
     "targetname": "[PR#]game_hud",
     "classname": "env_hudhint",
-    "origin": "-14936.000000 -14648.000000 -16208.000000",
+    "origin": "-14920.000000 -14632.000000 -16208.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9736",
@@ -40086,7 +38660,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]lyric_relay",
     "classname": "game_zone_player",
-    "origin": "-14952.000000 -14648.000000 -16192.000000",
+    "origin": "-14936.000000 -14632.000000 -16192.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10901",
@@ -40114,7 +38688,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]game_hudhint_relay",
     "classname": "game_zone_player",
-    "origin": "-14936.000000 -14648.000000 -16192.000000",
+    "origin": "-14920.000000 -14632.000000 -16192.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10902",
@@ -40689,6 +39263,14 @@
         "input": "Fade",
         "param": "",
         "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "hud_color_red",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -43625,5 +42207,24 @@
     "angles": "0.000000 270.000000 45.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11381"
+  },
+  {
+    "observable": "0",
+    "layout": "panorama/layout/custom_game/game_text_hud.xml",
+    "targetname": "[PR#]game_text_hud_layout",
+    "classname": "custom_hud_layout",
+    "origin": "-14952.000000 -14632.000000 -16192.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "16822"
+  },
+  {
+    "cs_script": "scripts/vscripts/game_text_hud.vjs",
+    "targetname": "[PR#]game_text_hud",
+    "classname": "point_script",
+    "origin": "-14952.000000 -14632.000000 -16208.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "16823"
   }
 ]

@@ -757,9 +757,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametxt_100s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random100",
         "delay": 35,
         "limit": -1
       },
@@ -1019,9 +1019,9 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 0,
         "limit": -1
       },
@@ -1138,17 +1138,17 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_15s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random15",
         "delay": 40,
         "limit": -1
       },
@@ -1241,9 +1241,9 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_40s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random40",
         "delay": 0,
         "limit": -1
       }
@@ -1288,9 +1288,9 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 0,
         "limit": -1
       },

@@ -1370,17 +1370,17 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_15s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random15",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 25,
         "limit": -1
       },
@@ -1489,9 +1489,9 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_40s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random40",
         "delay": 0,
         "limit": -1
       },
@@ -1568,9 +1568,9 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]gametxt_30s",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]game_text_hud",
+        "input": "RunScriptInput",
+        "param": "cd_random30",
         "delay": 0,
         "limit": -1
       }
