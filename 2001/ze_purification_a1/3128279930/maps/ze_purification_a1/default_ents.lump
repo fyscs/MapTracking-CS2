@@ -43713,5 +43713,65 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "ResponseContext": "\u521D\u5C9A\u521D\u68A6",
+    "filterattribute": "76561198284258385",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]sn_tiaoguan_4",
+    "classname": "filter_activator_attribute_int",
+    "origin": "-5442.044922 -7698.066406 6117.710938",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "40221",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]s3_relay_train",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "ResponseContext": "\u521D\u5C9A\u521D\u68A6",
+    "filterattribute": "76561198284258385",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]sn_steam1_8",
+    "classname": "filter_activator_attribute_int",
+    "origin": "7927.859375 8206.277344 5396.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "40222",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "addcontext",
+        "param": "sub:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]sn_relay_8",
+        "input": "trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]script_vip",
+        "input": "RunScriptInput",
+        "param": "getpar",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
   }
 ]
