@@ -11,7 +11,7 @@ Instance.OnScriptInput("ChangeSkin", ({activator}) => {
         const player = activator;
         const player_c = player?.GetPlayerController();
         const player_p = player_c?.GetPlayerPawn();
-        player_p?.SetModel("characters/models/microrost/favor_set.vmdl");
+        player_p?.SetModel("characters/models/microrost/smoughs_set.vmdl");
     }   
 });
 

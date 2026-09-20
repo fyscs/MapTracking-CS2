@@ -264,7 +264,7 @@
     "damagemodel": "0",
     "damagetype": "256",
     "damagecap": "20",
-    "damage": "100",
+    "damage": "60",
     "spawnflags": "4097",
     "StartDisabled": "0",
     "useLocalOffset": "0",

@@ -30,7 +30,7 @@ function TickTrace()
 	let vecOrigin = ent.GetAbsOrigin();
 	let vecAngles = ent.GetAbsAngles();
 	let vecForwardVector = QAngleToVec(vecAngles.pitch, vecAngles.yaw);
-	let iDistance = 64;
+	let iDistance = 32;
 
 	vecOrigin = {x: vecOrigin.x + vecForwardVector.x * -10, y: vecOrigin.y + vecForwardVector.y * -10, z: vecOrigin.z + vecForwardVector.z * -10}
 	let vecEnd = {x: vecOrigin.x + vecForwardVector.x * iDistance, y: vecOrigin.y + vecForwardVector.y * iDistance, z: vecOrigin.z + vecForwardVector.z * iDistance}
@@ -44,7 +44,7 @@ function TickTrace()
 		Instance.EntFireAtName({name: "GR_Move", input: "FireUser1", value: "", delay: 0.0});
 		return
 	}
-	Instance.EntFireAtName({name: "item_gr_script", input: "RunScriptInput", value: "TickTrace", delay: 0.1});
+	Instance.EntFireAtName({name: "item_gr_script", input: "RunScriptInput", value: "TickTrace", delay: 0.05});
 
 	// TraceLine(trace: BaseTraceConfig): TraceResult
 

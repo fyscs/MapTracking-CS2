@@ -188,7 +188,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "0",
+    "damagetype": "512",
     "damagecap": "20",
     "damage": "4000",
     "filtername": "[PR#]Zombies_Filter",
