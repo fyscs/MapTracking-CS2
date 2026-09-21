@@ -10256,7 +10256,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]runsnooze",
-        "input": "StopSound",
+        "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -11325,7 +11325,7 @@
     "color": "0 0 0",
     "fullbright": "0",
     "enabled": "1",
-    "message": "\u591C\u97F3\u5149\u5965\u2605\u2605\u2605\u2605",
+    "message": "\u591C\u97F3\u5149\u5965\u2605\u2605\u2605\u2605\u2605",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -11338,7 +11338,7 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "2307.521484 -343.586121 163.415314",
+    "origin": "2313.000000 -343.586121 163.415314",
     "angles": "0.000000 180.000031 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2410"
@@ -14548,6 +14548,14 @@
         "output": "OnPressed",
         "target": "[PR#]lv3_brush",
         "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]lv3EX_but",
+        "input": "Press",
         "param": "",
         "delay": 0,
         "limit": -1
