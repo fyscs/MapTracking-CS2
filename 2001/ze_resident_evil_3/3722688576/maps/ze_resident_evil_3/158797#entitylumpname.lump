@@ -267,7 +267,7 @@
         "target": "[PR#]lanzaMisilescontador",
         "input": "CancelPending",
         "param": "",
-        "delay": 0.009999999776482582,
+        "delay": 1,
         "limit": -1
       }
     ]

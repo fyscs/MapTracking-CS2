@@ -159,7 +159,7 @@
         "target": "[PR#]sewers_zm_break",
         "input": "Break",
         "param": "",
-        "delay": 10,
+        "delay": 12,
         "limit": 1
       },
       {
@@ -215,7 +215,7 @@
         "target": "[PR#]MAP_TP_sewers_zm_cage",
         "input": "Enable",
         "param": "",
-        "delay": 26,
+        "delay": 28,
         "limit": 1
       }
     ]
