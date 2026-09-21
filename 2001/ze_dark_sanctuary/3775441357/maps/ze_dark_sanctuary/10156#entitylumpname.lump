@@ -9,7 +9,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "1000",
-    "damage": "600",
+    "damage": "250",
     "filtername": "[PR#]T",
     "spawnflags": "4097",
     "StartDisabled": "1",
@@ -159,7 +159,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "888",
+    "speed": "750",
     "pushdir": "0.000000 0.000000 0.000000",
     "filtername": "[PR#]T",
     "spawnflags": "4097",

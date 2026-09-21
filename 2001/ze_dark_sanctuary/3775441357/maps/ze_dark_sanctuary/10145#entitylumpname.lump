@@ -78,8 +78,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "0",
-    "damagecap": "300",
-    "damage": "300",
+    "damagecap": "500",
+    "damage": "350",
     "filtername": "[PR#]T",
     "spawnflags": "4097",
     "StartDisabled": "0",
@@ -98,7 +98,7 @@
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 0.25",
+        "param": "speed 0.65",
         "delay": 0,
         "limit": -1
       },
@@ -107,7 +107,7 @@
         "target": "!activator",
         "input": "KeyValue",
         "param": "speed 1",
-        "delay": 2,
+        "delay": 1,
         "limit": -1
       }
     ]

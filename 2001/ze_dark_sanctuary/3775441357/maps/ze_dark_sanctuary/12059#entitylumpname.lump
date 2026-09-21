@@ -97,6 +97,32 @@
     "_template_lump_ent_index": "4"
   },
   {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "-1",
+    "no_save": "0",
+    "start_active": "1",
+    "effect_name": "particles/7ychu5/ze_s_s_a_df/item/blackhole_main2.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]xqy_par2",
+    "classname": "info_particle_system",
+    "origin": "5.613281 -3.910645 -42.879883",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13265",
+    "_template_lump_ent_index": "5"
+  },
+  {
     "thinkalways": "0",
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
@@ -115,7 +141,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12043",
     "model": "maps/ze_dark_sanctuary/entities/hole_hurt_12043.vmdl",
-    "_template_lump_ent_index": "5",
+    "_template_lump_ent_index": "6",
     "connections": [
       {
         "output": "OnHurtPlayer",

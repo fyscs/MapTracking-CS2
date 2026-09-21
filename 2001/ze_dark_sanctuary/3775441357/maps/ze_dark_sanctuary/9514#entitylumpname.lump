@@ -297,6 +297,14 @@
         "param": "",
         "delay": 7,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]witch_model",
+        "input": "SetAnimationNotLooping",
+        "param": "atk2",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -541,10 +549,10 @@
     "useLocalOffset": "0",
     "parentname": "[PR#]witch_knife",
     "targetname": "[PR#]witch_par",
-    "effect_name": "particles/7ychu5/ze_s_s_a_df/item/blackhole_dun.vpcf",
+    "effect_name": "particles/7ychu5/ze_s_s_a_df/item/blackhole_dun2.vpcf",
     "classname": "info_particle_system",
-    "origin": "78.000000 18.534668 12.000000",
-    "angles": "89.999992 89.999878 0.000000",
+    "origin": "78.000000 18.535156 12.000000",
+    "angles": "89.999962 74.999878 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9866",
     "_template_lump_ent_index": "10"

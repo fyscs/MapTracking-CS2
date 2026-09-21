@@ -58,7 +58,7 @@
         "target": "[PR#]solder_hurt2",
         "input": "Kill",
         "param": "",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -66,7 +66,7 @@
         "target": "[PR#]solder_par1",
         "input": "Kill",
         "param": "",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       }
     ]
@@ -121,6 +121,78 @@
         "input": "Open",
         "param": "",
         "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "setdamagefilter",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "setdamagefilter",
+        "param": "[PR#]nozombies",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 1.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 0.5,
         "limit": -1
       }
     ]

@@ -263,7 +263,7 @@
         "target": "!activator",
         "input": "KeyValue",
         "param": "speed 1.15",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -279,7 +279,7 @@
         "target": "!activator",
         "input": "Alpha",
         "param": "255",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -295,7 +295,7 @@
         "target": "[PR#]assass_model",
         "input": "Alpha",
         "param": "255",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -311,7 +311,7 @@
         "target": "[PR#]assass_par",
         "input": "Stop",
         "param": "",
-        "delay": 7,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -344,6 +344,22 @@
         "input": "StopSound",
         "param": "",
         "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]assass_par3",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]assass_par3",
+        "input": "Stop",
+        "param": "",
+        "delay": 8,
         "limit": -1
       }
     ]
@@ -417,7 +433,17 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9872",
     "model": "maps/ze_dark_sanctuary/entities/assass_hurt_9872.vmdl",
-    "_template_lump_ent_index": "7"
+    "_template_lump_ent_index": "7",
+    "connections": [
+      {
+        "output": "OnEndTouch",
+        "target": "!activator",
+        "input": "Ignitelifetime",
+        "param": "5",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "PassthroughCaller": "0",

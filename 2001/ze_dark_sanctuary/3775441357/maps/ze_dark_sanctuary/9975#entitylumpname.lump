@@ -269,7 +269,7 @@
         "target": "[PR#]hummer_hurt2",
         "input": "Kill",
         "param": "",
-        "delay": 8,
+        "delay": 10,
         "limit": -1
       },
       {
@@ -277,7 +277,7 @@
         "target": "[PR#]hummer_par",
         "input": "Kill",
         "param": "",
-        "delay": 8,
+        "delay": 10,
         "limit": -1
       }
     ]
@@ -363,7 +363,47 @@
         "target": "!activator",
         "input": "setdamagefilter",
         "param": "",
-        "delay": 3,
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 1.5,
         "limit": -1
       }
     ]
@@ -409,7 +449,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "500",
+    "speed": "600",
     "pushdir": "0.000000 0.000000 0.000000",
     "filtername": "[PR#]T",
     "spawnflags": "4097",
@@ -419,7 +459,7 @@
     "targetname": "[PR#]hummer_push",
     "classname": "trigger_push",
     "origin": "129.590088 -6.700195 31.719727",
-    "angles": "-89.999977 179.999985 0.000000",
+    "angles": "-85.000023 0.000000 -179.999985",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9964",
     "model": "maps/ze_dark_sanctuary/entities/hummer_push_9964.vmdl",
@@ -460,7 +500,23 @@
         "target": "!activator",
         "input": "KeyValue",
         "param": "speed 1",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.2",
         "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.1",
+        "delay": 2,
         "limit": -1
       }
     ]

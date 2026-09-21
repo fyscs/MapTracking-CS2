@@ -6346,33 +6346,49 @@
       },
       {
         "output": "OnCase01",
-        "target": "[PR#]fuck value5",
-        "input": "Enable",
+        "target": "[PR#]biaoti",
+        "input": "Start",
         "param": "",
         "delay": 7,
         "limit": -1
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]fuck value5",
-        "input": "Enable",
+        "target": "[PR#]biaoti",
+        "input": "Start",
         "param": "",
         "delay": 7,
         "limit": -1
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]fuck value5",
-        "input": "Enable",
+        "target": "[PR#]biaoti",
+        "input": "Start",
         "param": "",
         "delay": 7,
         "limit": -1
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]fuck value5",
-        "input": "Enable",
+        "target": "[PR#]biaoti",
+        "input": "Start",
         "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u5730\u56FE\u4F5C\u8005:\u5B50\u6CAB \u9E23\u8C22:\u96F6\u5EA6 \u68C9\u82B1\u4E0D\u662F\u68C9",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]juben",
+        "input": "Command",
+        "param": "say \u5730\u56FE\u4F5C\u8005:\u5B50\u6CAB \u9E23\u8C22:\u96F6\u5EA6 \u68C9\u82B1\u4E0D\u662F\u68C9",
         "delay": 7,
         "limit": -1
       }
@@ -8504,6 +8520,14 @@
         "input": "StopSound",
         "param": "",
         "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]witch_model",
+        "input": "SetAnimationNotLooping",
+        "param": "atk1",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -21726,7 +21750,7 @@
         "output": "OnTrigger",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "speed 1",
+        "param": "speed 2",
         "delay": 1.7999999523162842,
         "limit": -1
       },
@@ -21824,6 +21848,54 @@
         "input": "keyvalue",
         "param": "health 12345",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 2",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 2",
+        "delay": 2.299999952316284,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 2",
+        "delay": 2.5999999046325684,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 2",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 2",
+        "delay": 3.299999952316284,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 1",
+        "delay": 3.799999952316284,
         "limit": -1
       }
     ]
@@ -22180,7 +22252,7 @@
         "target": "!activator",
         "input": "setdamagefilter",
         "param": "",
-        "delay": 4,
+        "delay": 2.5,
         "limit": -1
       },
       {
@@ -22188,7 +22260,7 @@
         "target": "[PR#]tr_push",
         "input": "Enable",
         "param": "",
-        "delay": 1,
+        "delay": 0.800000011920929,
         "limit": -1
       },
       {
@@ -22245,6 +22317,46 @@
         "input": "Stop",
         "param": "",
         "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 1.5,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 2",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 2.5,
         "limit": -1
       }
     ]
@@ -31658,6 +31770,30 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnCase11",
+        "target": "[PR#]llk_relays",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase11",
+        "target": "[PR#]llk_relays2",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase11",
+        "target": "[PR#]llk_relays3",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -35052,7 +35188,7 @@
         "target": "[PR#]huaibiao_par2",
         "input": "Kill",
         "param": "",
-        "delay": 9,
+        "delay": 6.5,
         "limit": -1
       },
       {
@@ -35060,7 +35196,7 @@
         "target": "[PR#]huaibiao_hurt",
         "input": "Kill",
         "param": "",
-        "delay": 9,
+        "delay": 6.5,
         "limit": -1
       },
       {
@@ -35153,7 +35289,7 @@
         "target": "[PR#]hole_push",
         "input": "Kill",
         "param": "",
-        "delay": 8,
+        "delay": 7,
         "limit": -1
       },
       {
@@ -35161,7 +35297,7 @@
         "target": "[PR#]hole_hurt",
         "input": "Kill",
         "param": "",
-        "delay": 9,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -35169,7 +35305,7 @@
         "target": "[PR#]xqy_par2",
         "input": "Kill",
         "param": "",
-        "delay": 8,
+        "delay": 7,
         "limit": -1
       },
       {
@@ -35246,7 +35382,7 @@
         "target": "[PR#]windmb_push",
         "input": "Disable",
         "param": "",
-        "delay": 8,
+        "delay": 7,
         "limit": -1
       },
       {
@@ -35262,7 +35398,7 @@
         "target": "[PR#]windmb_par1",
         "input": "Stop",
         "param": "",
-        "delay": 8,
+        "delay": 7,
         "limit": -1
       },
       {
@@ -36000,8 +36136,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "0",
-    "damagecap": "2000",
-    "damage": "2000",
+    "damagecap": "3000",
+    "damage": "2222",
     "filtername": "[PR#]T",
     "spawnflags": "4097",
     "StartDisabled": "0",
@@ -36019,7 +36155,7 @@
         "output": "OnHurtPlayer",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 0.68",
+        "param": "speed 0.65",
         "delay": 0,
         "limit": -1
       },
@@ -36271,6 +36407,7 @@
     "entityLumpName": "12132#entityLumpName"
   },
   {
+    "Template17": "[PR#]llk_par3",
     "Template16": "[PR#]llk5",
     "Template15": "[PR#]llk4",
     "Template14": "[PR#]llk3",
@@ -40089,7 +40226,7 @@
     "color": "140 0 255",
     "fullbright": "1",
     "enabled": "1",
-    "message": "llk\n\u5DE6\u952E \u51CF\u901F\u7403 \u51CF\u901F\u89E6\u78B0\u7684\u4EBA\u7C7B\n\u53F3\u952E \u51CF\u901F\u6CE2 \u51CF\u901F\u6B63\u524D\u65B9\u7684\u4EBA\u7C7B\nE    \u5B9A\u8EAB\u9635 \u5B9A\u8EAB\u5468\u56F4\u7684\u4EBA\u7C7B\u5E76\u5F00\u542F\u9ED1\u96FE\n\n",
+    "message": "llk\n\u5DE6\u952E \u51CF\u901F\u7403 \u51CF\u901F\u89E6\u78B0\u7684\u4EBA\u7C7B\n\u53F3\u952E \u51CF\u901F\u6CE2 \u51CF\u901F\u6B63\u524D\u65B9\u7684\u4EBA\u7C7B\nE    \u5B9A\u8EAB\u9635 \u5B9A\u8EAB\u5468\u56F4\u7684\u4EBA\u7C7B\u5E76\u5F00\u542F\u9ED1\u96FE\nSSS  \u6301\u7EED\u52A0\u901F\n\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -40209,7 +40346,7 @@
     "color": "25 255 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u54E5\u5E03\u6797\n\u5DE6\u952E \u53CC\u5200\u65A9\n\u9020\u6210\u8F83\u957F\u65F6\u95F4\u7684\u51CF\u901F\u548C\u8F83\u9AD8\u7684\u4F24\u5BB3\n\u53F3\u952E \u5F3A\u88AD\n\u8F83\u957F\u65F6\u95F4\u7684\u6781\u9AD8\u79FB\u901F\n\n\n\n",
+    "message": "\u54E5\u5E03\u6797\n\u5DE6\u952E \u6DEC\u6BD2\u9B54\u5203\n\u9020\u6210\u8F83\u957F\u65F6\u95F4\u7684\u51CF\u901F\u548C\u8F83\u9AD8\u7684\u4F24\u5BB3\n\u53F3\u952E \u5F3A\u88AD\n\u8F83\u957F\u65F6\u95F4\u7684\u6781\u9AD8\u79FB\u901F\n\n\n\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -40269,7 +40406,7 @@
     "color": "0 216 255",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u72FC\u4EBA\n\u5DE6\u952E \u722A\u51FB \u5411\u524D\u653B\u51FB\u5E76\u9020\u6210\u71C3\u70E7\n\u53F3\u952E \u72C2\u5954 \u98DE\u5FEB\u7684\u51B2\u950B \u4ECE\u6781\u5FEB\u5230\u8F83\u5FEB\u7684\u53D8\u5316\n\n\n",
+    "message": "\u72FC\u4EBA\n\u5DE6\u952E \u722A\u51FB \u5411\u524D\u653B\u51FB\u5E76\u9020\u6210\u6301\u7EED\u6389\u8840\n\u53F3\u952E \u72C2\u5954 \u98DE\u5FEB\u7684\u51B2\u950B \u4ECE\u6781\u5FEB\u5230\u8F83\u5FEB\u7684\u53D8\u5316\n\n\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -40299,7 +40436,7 @@
     "color": "255 0 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u6697\u6740\u8005\n\u5DE6\u952E \u81F4\u547D\u4E00\u51FB\n\u9AD8\u4F24\u5BB3\u7684\u4E00\u6B21\u653B\u51FB\n\u53F3\u952E \u9690\u533F\u5F3A\u88AD\n\u9690\u85CF\u81EA\u8EAB\u5E76\u63D0\u9AD8\u79FB\u901F\n\n\n",
+    "message": "\u6697\u6740\u8005\n\u5DE6\u952E \u81F4\u547D\u4E00\u51FB\n\u9AD8\u4F24\u5BB3\u7684\u4E00\u6B21\u653B\u51FB\u5E76\u6301\u7EED\u6D41\u8840\n\u53F3\u952E \u9690\u533F\u5F3A\u88AD\n\u91CA\u653E\u80FD\u91CF\u9690\u85CF\u81EA\u8EAB\u6C14\u606F\u5E76\u63D0\u9AD8\u79FB\u901F\n\n\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -44058,8 +44195,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-6324.000000 543.000000 4113.000000",
-    "angles": "0.000000 180.000000 0.000000",
+    "origin": "-5253.337402 1580.243164 4113.000000",
+    "angles": "0.000000 315.000031 0.000000",
     "scales": "78.159340 78.159340 78.159340",
     "hammerUniqueId": "12676"
   },
@@ -44087,8 +44224,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6237.000000 576.000000 4144.000000",
-    "angles": "0.000000 179.999969 90.000000",
+    "origin": "-5338.190430 1618.427246 4144.000000",
+    "angles": "0.000000 314.999939 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12677"
   },
@@ -44136,8 +44273,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-6137.000000 543.000000 4113.000000",
-    "angles": "0.000000 180.000000 0.000000",
+    "origin": "-5385.566406 1712.472168 4113.000000",
+    "angles": "0.000000 315.000031 0.000000",
     "scales": "78.159340 78.159340 78.159340",
     "hammerUniqueId": "12678"
   },
@@ -44165,8 +44302,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6066.000000 576.000000 4128.000000",
-    "angles": "0.000000 179.999969 90.000000",
+    "origin": "-5459.105469 1739.342285 4128.000000",
+    "angles": "0.000000 314.999939 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12679"
   },
@@ -44194,8 +44331,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6105.000000 1709.000000 4128.000000",
-    "angles": "0.000000 0.000000 90.000000",
+    "origin": "-6104.999512 1501.000000 4572.000000",
+    "angles": "0.000000 214.999908 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12682"
   },
@@ -44243,8 +44380,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-6034.000000 1742.000000 4113.000000",
-    "angles": "0.000000 0.000000 0.000000",
+    "origin": "-6176.000000 1535.000244 4557.000000",
+    "angles": "0.000000 179.999954 0.000000",
     "scales": "46.895607 46.895607 46.895607",
     "hammerUniqueId": "12683"
   },
@@ -44272,7 +44409,7 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6437.000000 1709.000000 4117.000000",
+    "origin": "-6949.000000 2031.000000 4137.000000",
     "angles": "0.000000 0.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12684"
@@ -44321,8 +44458,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-6366.000000 1742.000000 4113.000000",
-    "angles": "0.000000 0.000000 0.000000",
+    "origin": "-6845.000000 2064.000000 4113.000000",
+    "angles": "0.000000 350.000000 0.000000",
     "scales": "17.923500 17.923500 17.923500",
     "hammerUniqueId": "12685"
   },
@@ -44350,7 +44487,7 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6935.000000 1709.000000 4117.000000",
+    "origin": "-6876.000000 1522.000000 4560.000000",
     "angles": "0.000000 45.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12686"
@@ -44399,7 +44536,7 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-6801.000000 1742.000000 4113.000000",
+    "origin": "-6742.000000 1555.000000 4556.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "43.374870 43.374870 43.374870",
     "hammerUniqueId": "12687"
@@ -44428,7 +44565,7 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6757.000000 1768.000000 4099.000000",
+    "origin": "-6698.000000 1581.000000 4542.000000",
     "angles": "0.000000 315.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12688"
@@ -44457,8 +44594,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-5812.000000 1709.000000 4110.000000",
-    "angles": "0.000000 0.000000 90.000000",
+    "origin": "-5582.142578 1894.906738 4109.999512",
+    "angles": "0.000000 315.000061 89.999962",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12689"
   },
@@ -44506,8 +44643,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-5741.000000 1742.000000 4113.000000",
-    "angles": "0.000000 0.000000 0.000000",
+    "origin": "-5488.097656 1840.459473 4112.999512",
+    "angles": "0.000000 314.999939 0.000000",
     "scales": "177.734344 177.734344 177.734344",
     "hammerUniqueId": "12690"
   },
@@ -44555,8 +44692,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-5808.000000 543.000000 4148.000000",
-    "angles": "0.000000 180.000000 0.000000",
+    "origin": "-5461.228027 474.176453 4148.000000",
+    "angles": "0.000000 225.000000 0.000000",
     "scales": "8.597528 8.597528 8.597528",
     "hammerUniqueId": "12691"
   },
@@ -44584,8 +44721,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-5737.000000 576.000000 4128.000000",
-    "angles": "0.000000 179.999969 90.000000",
+    "origin": "-5434.358398 547.715271 4128.000000",
+    "angles": "0.000000 224.999985 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12692"
   },
@@ -44600,7 +44737,7 @@
     "color": "255 153 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u5C01\u5370\u7684\u6000\u8868\nE \u91CA\u653E\u5F3A\u529B\u65F6\u95F4\u7684\u9B54\u6CD5\n\n",
+    "message": "\u5C01\u5370\u7684\u6000\u8868\nE \u91CA\u653E\u5F3A\u529B\u7684\u65F6\u95F4\u9B54\u6CD5\n\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -44613,8 +44750,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-5610.000000 576.000000 4128.000000",
-    "angles": "0.000000 179.999969 90.000000",
+    "origin": "-5344.555664 637.518005 4128.000000",
+    "angles": "0.000000 224.999985 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12693"
   },
@@ -44662,8 +44799,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-5681.000000 543.000000 4148.000000",
-    "angles": "0.000000 90.000000 0.000000",
+    "origin": "-5371.425293 563.978943 4148.000000",
+    "angles": "0.000000 135.000000 0.000000",
     "scales": "3.696937 3.696937 3.696937",
     "hammerUniqueId": "12694"
   },
@@ -44678,7 +44815,7 @@
     "color": "174 255 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u5C01\u5370\u7684\u9B54\u6CD5\u4E66\nE \u91CA\u653E\u5F3A\u529B\u7684\u9B54\u6CD5\n\n",
+    "message": "\u5C01\u5370\u7684\u9B54\u6CD5\u4E66\nE \u91CA\u653E\u5F3A\u529B\u7684\u98CE\u9B54\u6CD5\n\n",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -44691,8 +44828,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-5453.000000 576.000000 4128.000000",
-    "angles": "0.000000 179.999969 90.000000",
+    "origin": "-5233.540039 748.533630 4128.000000",
+    "angles": "0.000000 224.999985 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12695"
   },
@@ -44740,8 +44877,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-5524.000000 543.000000 4148.000000",
-    "angles": "0.000000 0.000000 -45.000000",
+    "origin": "-5260.409668 674.994568 4148.000000",
+    "angles": "0.000000 45.000000 -45.000000",
     "scales": "272.847290 272.847290 272.847290",
     "hammerUniqueId": "12696"
   },
@@ -46608,8 +46745,8 @@
   {
     "rendercolor": "0 0 0",
     "renderamt": "255",
-    "holdtime": "4.5",
-    "duration": "5",
+    "holdtime": "0.5",
+    "duration": "4.5",
     "spawnflags": "0",
     "targetname": "[PR#]start_fade",
     "classname": "env_fade",
@@ -46617,29 +46754,6 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13254"
-  },
-  {
-    "wait": "1.000000",
-    "spawnflags": "4097",
-    "StartDisabled": "1",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]fuck value5",
-    "classname": "trigger_multiple",
-    "origin": "-9987.000000 1267.500000 4112.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "13257",
-    "model": "maps/ze_dark_sanctuary/entities/fuck value5_13257.vmdl",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]biaoti",
-        "input": "Start",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
   },
   {
     "wait": "1.000000",
@@ -46739,5 +46853,161 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "targetname": "[PR#]llk_relays",
+    "classname": "logic_relay",
+    "origin": "-7535.719238 -8184.066895 3842.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13271",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_relays2",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_relays2",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "1",
+    "targetname": "[PR#]llk_relays2",
+    "classname": "logic_relay",
+    "origin": "-7505.050293 -8184.066895 3842.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13272",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_relays3",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_relays3",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "1",
+    "targetname": "[PR#]llk_relays3",
+    "classname": "logic_relay",
+    "origin": "-7473.050293 -8184.066895 3842.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13273",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_relays",
+        "input": "Enable",
+        "param": "",
+        "delay": 30,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_relays",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1.5",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1.2",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_model",
+        "input": "SetAnimationLooping",
+        "param": "run2",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]llk_model",
+        "input": "SetAnimationLooping",
+        "param": "run",
+        "delay": 7,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/7ychu5/ze_s_s_a_df/item/levelup2333.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "parentname": "[PR#]assass_knife",
+    "targetname": "[PR#]assass_par3",
+    "classname": "info_particle_system",
+    "origin": "-7432.000000 -7646.000000 3852.000000",
+    "angles": "90.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13274"
   }
 ]

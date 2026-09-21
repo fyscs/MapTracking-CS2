@@ -48,7 +48,7 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]huaibiao_par2",
     "classname": "info_particle_system",
-    "origin": "-15.500000 -4.000000 179.500000",
+    "origin": "-15.500000 -4.000000 158.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12029",

@@ -52,7 +52,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "2000",
-    "damage": "1150",
+    "damage": "1350",
     "filtername": "[PR#]T",
     "StartDisabled": "0",
     "spawnflags": "4097",
@@ -80,7 +80,7 @@
         "target": "!activator",
         "input": "KeyValue",
         "param": "speed 1",
-        "delay": 1,
+        "delay": 2,
         "limit": -1
       },
       {
