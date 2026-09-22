@@ -44331,8 +44331,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6104.999512 1501.000000 4572.000000",
-    "angles": "0.000000 214.999908 90.000000",
+    "origin": "-5151.000000 1360.000000 4572.000000",
+    "angles": "0.000000 124.999886 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12682"
   },
@@ -44380,7 +44380,7 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-6176.000000 1535.000244 4557.000000",
+    "origin": "-5098.000488 1452.000244 4557.000000",
     "angles": "0.000000 179.999954 0.000000",
     "scales": "46.895607 46.895607 46.895607",
     "hammerUniqueId": "12683"
@@ -44487,8 +44487,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6876.000000 1522.000000 4560.000000",
-    "angles": "0.000000 45.000000 90.000000",
+    "origin": "-6055.000000 1274.000000 4111.000000",
+    "angles": "0.000000 315.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12686"
   },
@@ -44536,8 +44536,8 @@
     "clientSideEntity": "0",
     "useLocalOffset": "0",
     "classname": "prop_dynamic",
-    "origin": "-6742.000000 1555.000000 4556.000000",
-    "angles": "0.000000 0.000000 0.000000",
+    "origin": "-6022.000000 1140.000000 4107.000000",
+    "angles": "0.000000 270.000000 0.000000",
     "scales": "43.374870 43.374870 43.374870",
     "hammerUniqueId": "12687"
   },
@@ -44565,8 +44565,8 @@
     "renderfx": "kRenderFxNone",
     "useLocalOffset": "0",
     "classname": "point_worldtext",
-    "origin": "-6698.000000 1581.000000 4542.000000",
-    "angles": "0.000000 315.000000 90.000000",
+    "origin": "-5996.000000 1096.000000 4093.000000",
+    "angles": "0.000000 225.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12688"
   },
