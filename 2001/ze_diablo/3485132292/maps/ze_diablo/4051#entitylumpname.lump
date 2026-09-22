@@ -39,8 +39,8 @@
     "origin": "16.300781 16.300049 -40.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4052",
-    "model": "maps/ze_diablo/entities/generic_boss_tar_4052.vmdl",
+    "hammerUniqueId": "45308",
+    "model": "maps/ze_diablo/entities/generic_boss_tar_45308.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -80,8 +80,8 @@
     "origin": "-381.599609 -18091.160156 -12807.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "41160",
-    "model": "maps/ze_diablo/entities/generic_boss_tar_41160.vmdl",
+    "hammerUniqueId": "45314",
+    "model": "maps/ze_diablo/entities/generic_boss_tar_45314.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -121,8 +121,8 @@
     "origin": "15189.500000 10728.339844 -5039.259766",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11380",
-    "model": "maps/ze_diablo/entities/generic_boss_tar_11380.vmdl",
+    "hammerUniqueId": "45338",
+    "model": "maps/ze_diablo/entities/generic_boss_tar_45338.vmdl",
     "_template_lump_ent_index": "2"
   }
 ]

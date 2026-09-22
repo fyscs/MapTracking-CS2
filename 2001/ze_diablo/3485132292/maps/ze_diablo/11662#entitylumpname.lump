@@ -39,8 +39,8 @@
     "origin": "236.000000 -622.000000 -801.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3788",
-    "model": "maps/ze_diablo/entities/doorfuckyoubitchass_3788.vmdl",
+    "hammerUniqueId": "45326",
+    "model": "maps/ze_diablo/entities/doorfuckyoubitchass_45326.vmdl",
     "_template_lump_ent_index": "0"
   }
 ]

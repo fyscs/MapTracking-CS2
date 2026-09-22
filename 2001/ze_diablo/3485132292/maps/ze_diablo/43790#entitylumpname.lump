@@ -48,8 +48,8 @@
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "43738",
-    "model": "maps/ze_diablo/entities/boss_base_43738.vmdl",
+    "hammerUniqueId": "43788",
+    "model": "maps/ze_diablo/entities/boss_base_43788.vmdl",
     "_template_lump_ent_index": "0"
   },
   {

@@ -33,6 +33,7 @@
     "BreakableContentsType": "BC_DEFAULT",
     "burstscale": "100.000000",
     "pressuredelay": "0.000000",
+    "spawnflags": "0",
     "NoInterpolate": "0",
     "PerformanceMode": "PM_NORMAL",
     "ExplodeRadius": "0.000000",
@@ -41,37 +42,44 @@
     "skin": "default",
     "model": "models/hobgoblin/diablo_ammo_crate/diablo_ammo_crate.vmdl",
     "clientSideEntity": "0",
-    "spawnflags": "0",
     "useLocalOffset": "0",
-    "targetname": "[PR#]i_ammocrate_model\u00260000",
+    "targetname": "[PR#]i_ammocrate_model",
     "classname": "prop_dynamic",
-    "origin": "0.000000 -3.099609 24.900391",
-    "angles": "-0.000000 90.000000 0.000000",
+    "origin": "0.000000 0.000488 0.000000",
+    "angles": "0.000000 90.000023 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11145",
+    "hammerUniqueId": "45482",
     "_template_lump_ent_index": "0"
   },
   {
     "InitialDelay": "0.000000",
-    "RefireTime": "0.010000",
+    "RefireTime": "0.200000",
     "PauseAfterFiring": "0",
     "UseRandomTime": "0",
     "spawnflags": "0",
-    "StartDisabled": "1",
-    "targetname": "[PR#]Item_Ammo_Timer\u00260000",
+    "StartDisabled": "0",
+    "targetname": "[PR#]i_ammocrate_timer",
     "classname": "logic_timer",
-    "origin": "-69.569824 60.700195 -20.000000",
+    "origin": "-91.939453 0.000488 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7900",
+    "hammerUniqueId": "45483",
     "_template_lump_ent_index": "1",
     "connections": [
       {
         "output": "OnTimer",
-        "target": "[PR#]Item_Ammo_finder\u00260000",
-        "input": "FindEntity",
+        "target": "[PR#]i_ammocrate_trigger",
+        "input": "Enable",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]i_ammocrate_trigger",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.10000000149011612,
         "limit": -1
       }
     ]
@@ -82,15 +90,15 @@
     "stopOnNew": "1",
     "toLocalPlayer": "0",
     "startOnSpawn": "1",
+    "sourceEntityName": "[PR#]i_ammocrate_model",
     "soundName": "ammo03",
-    "SourceEntityName": "[PR#]i_ammocrate_model\u00260000",
     "useLocalOffset": "0",
-    "targetname": "[PR#]i_ammocrate_s\u00260000",
+    "targetname": "[PR#]i_ammocrate_s",
     "classname": "point_soundevent",
-    "origin": "12.060059 0.000000 56.000000",
+    "origin": "-115.939453 0.000488 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11986",
+    "hammerUniqueId": "45484",
     "_template_lump_ent_index": "2"
   },
   {
@@ -98,17 +106,17 @@
     "FastRetrigger": "0",
     "TriggerOnce": "0",
     "StartDisabled": "0",
-    "targetname": "[PR#]i_ammocrate_init\u00260000",
+    "targetname": "[PR#]i_ammocrate_init",
     "classname": "logic_relay",
-    "origin": "0.000000 0.000000 72.000000",
+    "origin": "-67.939453 0.000488 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7558",
+    "hammerUniqueId": "45485",
     "_template_lump_ent_index": "3",
     "connections": [
       {
         "output": "OnSpawn",
-        "target": "[PR#]i_ammocrate_s\u00260000",
+        "target": "[PR#]i_ammocrate_s",
         "input": "StartSound",
         "param": "",
         "delay": 0,
@@ -116,15 +124,7 @@
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]i_ammocrate_s\u00260000",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]i_ammocrate_init\u00260000",
+        "target": "[PR#]i_ammocrate_init",
         "input": "Kill",
         "param": "",
         "delay": 0,
@@ -132,7 +132,7 @@
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]i_ammocrate_model\u00260000",
+        "target": "[PR#]i_ammocrate_model",
         "input": "Kill",
         "param": "",
         "delay": 15,
@@ -140,7 +140,7 @@
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]Item_Ammo_Timer\u00260000",
+        "target": "[PR#]i_ammocrate_timer",
         "input": "Disable",
         "param": "",
         "delay": 15,
@@ -148,15 +148,7 @@
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]Item_Ammo_Timer\u00260000",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Item_Ammo_Timer\u00260000",
+        "target": "[PR#]i_ammocrate_timer",
         "input": "Kill",
         "param": "",
         "delay": 16,
@@ -164,15 +156,23 @@
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]i_ammo_particle\u00260000",
-        "input": "Start",
+        "target": "[PR#]i_ammo_particle",
+        "input": "Kill",
         "param": "",
-        "delay": 0.009999999776482582,
+        "delay": 15,
         "limit": -1
       },
       {
         "output": "OnSpawn",
-        "target": "[PR#]i_ammo_particle\u00260000",
+        "target": "[PR#]i_ammocrate_s",
+        "input": "Kill",
+        "param": "",
+        "delay": 15,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]i_ammocrate_trigger",
         "input": "Kill",
         "param": "",
         "delay": 15,
@@ -181,44 +181,6 @@
     ]
   },
   {
-    "Method": "2",
-    "filtername": "[PR#]weapon_filter",
-    "targetname": "[PR#]Item_Ammo_finder\u00260000",
-    "classname": "point_entity_finder",
-    "origin": "-0.939941 -0.099609 -5.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16669",
-    "_template_lump_ent_index": "4",
-    "connections": [
-      {
-        "output": "OnFoundEntity",
-        "target": "!caller",
-        "input": "SetAmmoAmount",
-        "param": "999",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnFoundEntity",
-        "target": "!caller",
-        "input": "AddContext",
-        "param": "hasAmmo:1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnFoundEntity",
-        "target": "!caller",
-        "input": "RemoveContext",
-        "param": "hasAmmo",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "flag_as_weather": "0",
     "cpoint7_parent": "0",
     "cpoint6_parent": "0",
     "cpoint5_parent": "0",
@@ -230,30 +192,43 @@
     "tint_cp": "-1",
     "data_cp_value": "0.000000 0.000000 0.000000",
     "data_cp": "-1",
-    "snapshot_mesh": "0",
+    "snapshot_mesh": "-1",
     "no_save": "0",
-    "start_active": "0",
+    "start_active": "1",
     "effect_name": "particles/diablov5_particles/item_municion.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "targetname": "[PR#]i_ammo_particle\u00260000",
+    "targetname": "[PR#]i_ammo_particle",
     "classname": "info_particle_system",
-    "origin": "-0.939941 -0.099609 -5.000000",
+    "origin": "-0.939453 3.000488 -29.900391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "12170",
-    "_template_lump_ent_index": "5"
+    "hammerUniqueId": "45486",
+    "_template_lump_ent_index": "4"
   },
   {
-    "clientSideEntity": "0",
-    "filter_radius": "480.000000",
-    "Negated": "0",
-    "targetname": "[PR#]Item_Ammo_proximity\u00260000",
-    "classname": "filter_proximity",
-    "origin": "-1.439941 -21.099609 174.490234",
+    "wait": "1.000000",
+    "filtername": "[PR#]MapFilterCT",
+    "spawnflags": "4097",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]i_ammocrate_trigger",
+    "classname": "trigger_multiple",
+    "origin": "0.000000 0.000488 53.589844",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16671",
-    "_template_lump_ent_index": "6"
+    "hammerUniqueId": "45488",
+    "model": "maps/ze_diablo/entities/i_ammocrate_trigger_45488.vmdl",
+    "_template_lump_ent_index": "5",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]diablo",
+        "input": "RunScriptInput",
+        "param": "armor",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]

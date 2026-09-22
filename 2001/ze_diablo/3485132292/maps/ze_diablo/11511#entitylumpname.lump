@@ -39,8 +39,8 @@
     "origin": "108.000000 -112.000000 183.299805",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7404",
-    "model": "maps/ze_diablo/entities/dungeon_clip_7404.vmdl",
+    "hammerUniqueId": "45140",
+    "model": "maps/ze_diablo/entities/dungeon_clip_45140.vmdl",
     "_template_lump_ent_index": "0"
   },
   {

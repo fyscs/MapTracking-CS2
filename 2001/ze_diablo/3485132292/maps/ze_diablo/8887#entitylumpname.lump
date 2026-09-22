@@ -135,8 +135,8 @@
     "origin": "-4.000000 -50.000000 41.679932",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "9518",
-    "model": "maps/ze_diablo/entities/cain_strip_9518.vmdl",
+    "hammerUniqueId": "44156",
+    "model": "maps/ze_diablo/entities/cain_strip_44156.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -257,6 +257,14 @@
         "param": "",
         "delay": 0.10000000149011612,
         "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "cain",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -302,6 +310,7 @@
     "clientSideEntity": "0",
     "spawnflags": "0",
     "useLocalOffset": "0",
+    "parentname": "[PR#]cain_knife",
     "targetname": "[PR#]cain_item_model",
     "classname": "prop_dynamic",
     "origin": "-4.000000 -50.000000 1.679932",
@@ -329,7 +338,7 @@
     "damagecap": "20",
     "damage": "-75",
     "filtername": "[PR#]MapFilterCT",
-    "spawnflags": "268435457",
+    "spawnflags": "268439553",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "parentname": "[PR#]cain_knife",
@@ -338,8 +347,8 @@
     "origin": "-4.000000 -50.000000 1.719971",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "43785",
-    "model": "maps/ze_diablo/entities/cain_heal_trig_normal_43785.vmdl",
+    "hammerUniqueId": "44505",
+    "model": "maps/ze_diablo/entities/cain_heal_trig_normal_44505.vmdl",
     "_template_lump_ent_index": "5",
     "connections": [
       {
@@ -441,7 +450,6 @@
     "MeasureType": "0",
     "TargetScale": "1.000000",
     "TargetReference": "[PR#]cain_item_heal_dy",
-    "Target": "[PR#]cain_item_model",
     "MeasureReference": "[PR#]cain_item_heal_dy",
     "MeasureTarget": "[PR#]cain_item_heal_dy",
     "targetname": "[PR#]cain_item_heal_mm",

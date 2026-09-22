@@ -3,8 +3,6 @@
 
 [
   {
-    "health": "0",
-    "fadescale": "1",
     "spawnflags": "17408",
     "forcenpcexclude": "0",
     "lip": "0",
@@ -26,11 +24,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]chest_button\u00260000",
     "classname": "func_button",
-    "origin": "0.010010 -22.000000 1.740234",
+    "origin": "-0.050049 0.000000 -13.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16927",
-    "model": "maps/ze_diablo/entities/chest_button_16927.vmdl",
+    "hammerUniqueId": "45478",
+    "model": "maps/ze_diablo/entities/chest_button_45478.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -88,7 +86,7 @@
     "origin": "0.000000 0.000000 14.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16925",
+    "hammerUniqueId": "45475",
     "_template_lump_ent_index": "1"
   },
   {
@@ -98,10 +96,10 @@
     "Case01": "no",
     "targetname": "[PR#]wind_pick_chance_case\u00260000",
     "classname": "logic_case",
-    "origin": "-91.410034 -1.900391 -24.000000",
+    "origin": "-65.050049 3.000000 -17.509766",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16929",
+    "hammerUniqueId": "45477",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -113,25 +111,17 @@
         "limit": -1
       },
       {
-        "output": "",
-        "target": "[PR#]npc_item_spawner",
-        "input": "keyvalue",
-        "param": "EntityTemplate Item_wind_crystal_template",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
         "output": "OnCase01",
-        "target": "",
-        "input": "",
+        "target": "[PR#]wind_maker\u00260000",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase02",
-        "target": "",
-        "input": "",
+        "target": "[PR#]wind_maker\u00260000",
+        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -185,7 +175,7 @@
     "origin": "0.000000 0.000000 -31.000000",
     "angles": "-0.000000 -90.000000 0.000000",
     "scales": "0.750000 0.750000 0.750000",
-    "hammerUniqueId": "16926",
+    "hammerUniqueId": "45476",
     "_template_lump_ent_index": "3"
   }
 ]

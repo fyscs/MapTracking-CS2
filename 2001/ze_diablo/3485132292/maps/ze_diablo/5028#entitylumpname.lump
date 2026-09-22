@@ -3,8 +3,8 @@
 
 [
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "0.000000",
@@ -32,8 +32,8 @@
     "origin": "-152.000000 -8.000000 47.400391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8453",
-    "model": "maps/ze_diablo/entities/cain_mover_8453.vmdl",
+    "hammerUniqueId": "44916",
+    "model": "maps/ze_diablo/entities/cain_mover_44916.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -143,7 +143,8 @@
     "LagCompensate": "0",
     "randomizecycle": "0",
     "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_LOOPING",
+    "StartingAnim": "walk",
     "use_animgraph": "1",
     "disablelowviolence": "0",
     "solid": "6",

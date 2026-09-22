@@ -307,8 +307,8 @@
     ]
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -336,8 +336,8 @@
     "origin": "-8659.140625 11263.200195 23363.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4312",
-    "model": "maps/ze_diablo/entities/s4_gate_open_4312.vmdl",
+    "hammerUniqueId": "44902",
+    "model": "maps/ze_diablo/entities/s4_gate_open_44902.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -365,9 +365,9 @@
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]belial_cutscene_overlay",
-        "input": "StopOverlays",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "stopoverlay",
         "delay": 18,
         "limit": -1
       },
@@ -421,9 +421,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]text_diablo",
-        "input": "Display",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "text_diablo",
         "delay": 12,
         "limit": -1
       },
@@ -493,9 +493,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]belial_cutscene_overlay",
-        "input": "StartOverlays",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "startoverlay",
         "delay": 3,
         "limit": -1
       },
@@ -552,8 +552,8 @@
     "origin": "6002.359863 26319.199219 5535.250000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8164",
-    "model": "maps/ze_diablo/entities/s4_infinite_ammo_8164.vmdl",
+    "hammerUniqueId": "44277",
+    "model": "maps/ze_diablo/entities/s4_infinite_ammo_44277.vmdl",
     "_template_lump_ent_index": "6"
   },
   {
@@ -659,8 +659,8 @@
     "origin": "-11065.640625 24363.199219 25247.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4022",
-    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp_4022.vmdl",
+    "hammerUniqueId": "43929",
+    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp_43929.vmdl",
     "_template_lump_ent_index": "9"
   },
   {
@@ -694,9 +694,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]belial_cutscene_overlay",
-        "input": "StartOverlays",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "startoverlay",
         "delay": 0,
         "limit": -1
       },
@@ -734,9 +734,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]belial_cutscene_overlay",
-        "input": "StopOverlays",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "stopoverlay",
         "delay": 11,
         "limit": -1
       },
@@ -776,8 +776,8 @@
     "origin": "2290.359863 15727.200195 12679.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4112",
-    "model": "maps/ze_diablo/entities/s4_diablo_hp_add_4112.vmdl",
+    "hammerUniqueId": "44091",
+    "model": "maps/ze_diablo/entities/s4_diablo_hp_add_44091.vmdl",
     "_template_lump_ent_index": "11",
     "connections": [
       {
@@ -864,60 +864,60 @@
     "_template_lump_ent_index": "12"
   },
   {
-    "fluiddragscale": "1.000000",
+    "ExploitableByPlayer": "0",
+    "preferredcarryangles": "0 0 0",
+    "physdamagescale": "1",
+    "minhealthdmg": "1",
+    "gibdir": "0 0 0",
+    "fadescale": "1",
+    "touchoutputperentitydelay": "0.000000",
+    "notsolid": "0",
     "hoverposeangles": "0.000000 0.000000 0.000000",
     "hoverposeposition": "0.000000 0.000000 0.000000",
     "hoverposeflags": "0",
+    "enableuseoutput": "0",
+    "forcetoenablemotion": "0.000000",
+    "damagetoenablemotion": "0",
+    "fluiddragscale": "1.000000",
     "buoyancyscale": "1.000000",
     "masscenteroffset": "0.000000 0.000000 0.000000",
+    "massScale": "0.000000",
     "gamemass": "0",
-    "touchoutputperentitydelay": "0.000000",
-    "ExploitableByPlayer": "0",
-    "enableuseoutput": "0",
+    "Damagetype": "0",
     "skipPreSettle": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
     "fademaxdist": "0.000000",
-    "useLocalOffset": "0",
-    "NoInterpolate": "0",
-    "spawnobject": "0",
-    "spawnflags": "35840",
-    "rendermode": "0",
-    "renderfx": "0",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
     "rendercolor": "255 255 255",
     "renderamt": "255",
-    "propdata": "0",
+    "rendermode": "0",
+    "renderfx": "0",
     "pressuredelay": "0.000000",
-    "preferredcarryangles": "0 0 0",
-    "physdamagescale": "1",
-    "PerformanceMode": "0",
-    "notsolid": "0",
-    "nodamageforces": "0",
-    "minhealthdmg": "1",
-    "material": "10",
-    "massScale": "0.000000",
-    "health": "1215752191",
-    "gibdir": "0 0 0",
-    "forcetoenablemotion": "0.000000",
-    "fadescale": "1",
-    "fademindist": "-1.000000",
-    "explosion": "0",
-    "ExplodeRadius": "0.000000",
     "explodemagnitude": "0",
+    "spawnobject": "0",
+    "nodamageforces": "0",
+    "explosion": "0",
+    "material": "10",
+    "health": "1215752191",
+    "propdata": "0",
+    "spawnflags": "35840",
+    "useLocalOffset": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "0",
+    "ExplodeRadius": "0.000000",
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
-    "disablereceiveshadows": "0",
-    "Damagetype": "0",
-    "damagetoenablemotion": "0",
     "damagefilter": "[PR#]Filter_Nada",
     "targetname": "[PR#]s4_ending_physbox",
     "classname": "func_physbox",
     "origin": "6002.359863 23591.199219 5413.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7643",
-    "model": "maps/ze_diablo/entities/s4_ending_physbox_7643.vmdl",
+    "hammerUniqueId": "44836",
+    "model": "maps/ze_diablo/entities/s4_ending_physbox_44836.vmdl",
     "_template_lump_ent_index": "13",
     "connections": [
       {
@@ -959,8 +959,8 @@
     "origin": "-8972.640625 703.200195 23215.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11109",
-    "model": "maps/ze_diablo/entities/s4_stair_open_tp2_11109.vmdl",
+    "hammerUniqueId": "43854",
+    "model": "maps/ze_diablo/entities/s4_stair_open_tp2_43854.vmdl",
     "_template_lump_ent_index": "14"
   },
   {
@@ -1030,11 +1030,11 @@
     "wheels": "0",
     "orientationtype": "1",
     "velocitytype": "0",
+    "speed": "0",
     "startspeed": "50",
     "target": "[PR#]s4_stairs_path1",
-    "disableshadows": "0",
-    "speed": "0",
     "spawnflags": "530",
+    "disableshadows": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -1051,8 +1051,8 @@
     "origin": "-10482.640625 2032.200195 22508.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6935",
-    "model": "maps/ze_diablo/entities/s4_stairs_6935.vmdl",
+    "hammerUniqueId": "44631",
+    "model": "maps/ze_diablo/entities/s4_stairs_44631.vmdl",
     "_template_lump_ent_index": "16"
   },
   {
@@ -1065,8 +1065,8 @@
     "origin": "6002.359863 26319.199219 6201.190430",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7457",
-    "model": "maps/ze_diablo/entities/s4_ex_check_for_win_7457.vmdl",
+    "hammerUniqueId": "44109",
+    "model": "maps/ze_diablo/entities/s4_ex_check_for_win_44109.vmdl",
     "_template_lump_ent_index": "17",
     "connections": [
       {
@@ -1385,13 +1385,13 @@
     "origin": "-8972.640625 5399.200195 23215.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11116",
-    "model": "maps/ze_diablo/entities/s4_stair_open_tp1_11116.vmdl",
+    "hammerUniqueId": "43852",
+    "model": "maps/ze_diablo/entities/s4_stair_open_tp1_43852.vmdl",
     "_template_lump_ent_index": "23"
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "0.000000",
@@ -1419,8 +1419,8 @@
     "origin": "-10231.640625 17297.199219 20604.371094",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4518",
-    "model": "maps/ze_diablo/entities/s4_portal_spawn_4518.vmdl",
+    "hammerUniqueId": "44904",
+    "model": "maps/ze_diablo/entities/s4_portal_spawn_44904.vmdl",
     "_template_lump_ent_index": "24",
     "connections": [
       {
@@ -1963,8 +1963,8 @@
     "origin": "2942.359863 15939.200195 14262.900391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3782",
-    "model": "maps/ze_diablo/entities/s4_fail_3782.vmdl",
+    "hammerUniqueId": "44470",
+    "model": "maps/ze_diablo/entities/s4_fail_44470.vmdl",
     "_template_lump_ent_index": "33"
   },
   {
@@ -2008,8 +2008,8 @@
     "origin": "7262.359863 27555.199219 5227.200195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "12076",
-    "model": "maps/ze_diablo/entities/s4_ending_push1_12076.vmdl",
+    "hammerUniqueId": "44035",
+    "model": "maps/ze_diablo/entities/s4_ending_push1_44035.vmdl",
     "_template_lump_ent_index": "36"
   },
   {
@@ -2049,8 +2049,8 @@
     "origin": "2302.359863 15703.200195 13450.900391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11825",
-    "model": "maps/ze_diablo/entities/s4_arena_clip_11825.vmdl",
+    "hammerUniqueId": "45299",
+    "model": "maps/ze_diablo/entities/s4_arena_clip_45299.vmdl",
     "_template_lump_ent_index": "37"
   },
   {
@@ -2103,8 +2103,8 @@
     "_template_lump_ent_index": "39"
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -2132,8 +2132,8 @@
     "origin": "-6410.090332 6337.200195 24055.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8762",
-    "model": "maps/ze_diablo/entities/s4_gate_open3_8762.vmdl",
+    "hammerUniqueId": "44922",
+    "model": "maps/ze_diablo/entities/s4_gate_open3_44922.vmdl",
     "_template_lump_ent_index": "40",
     "connections": [
       {
@@ -2498,8 +2498,8 @@
     "origin": "4742.359863 25083.199219 5227.200195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "12082",
-    "model": "maps/ze_diablo/entities/s4_ending_push3_12082.vmdl",
+    "hammerUniqueId": "44037",
+    "model": "maps/ze_diablo/entities/s4_ending_push3_44037.vmdl",
     "_template_lump_ent_index": "46"
   },
   {
@@ -2530,8 +2530,8 @@
     "_template_lump_ent_index": "47"
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -2559,8 +2559,8 @@
     "origin": "-6392.210449 8353.200195 23825.281250",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11631",
-    "model": "maps/ze_diablo/entities/s4_gate_open2_11631.vmdl",
+    "hammerUniqueId": "44930",
+    "model": "maps/ze_diablo/entities/s4_gate_open2_44930.vmdl",
     "_template_lump_ent_index": "48",
     "connections": [
       {

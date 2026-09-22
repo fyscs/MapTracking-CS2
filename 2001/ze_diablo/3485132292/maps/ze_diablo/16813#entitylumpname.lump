@@ -14,8 +14,8 @@
     "origin": "33.375000 -747.973633 -426.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16823",
-    "model": "maps/ze_diablo/entities/npc_trig_left_16823.vmdl",
+    "hammerUniqueId": "44289",
+    "model": "maps/ze_diablo/entities/npc_trig_left_44289.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -112,8 +112,8 @@
     "origin": "33.375000 784.151367 -426.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16825",
-    "model": "maps/ze_diablo/entities/npc_trig_right_16825.vmdl",
+    "hammerUniqueId": "44291",
+    "model": "maps/ze_diablo/entities/npc_trig_right_44291.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -210,8 +210,8 @@
     "origin": "782.750000 0.776367 -426.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16830",
-    "model": "maps/ze_diablo/entities/npc_trig_front_16830.vmdl",
+    "hammerUniqueId": "44296",
+    "model": "maps/ze_diablo/entities/npc_trig_front_44296.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -429,8 +429,8 @@
     "origin": "0.000000 0.000000 -2.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16834",
-    "model": "maps/ze_diablo/entities/npc_hurt_16834.vmdl",
+    "hammerUniqueId": "44416",
+    "model": "maps/ze_diablo/entities/npc_hurt_44416.vmdl",
     "_template_lump_ent_index": "5",
     "connections": [
       {
@@ -476,8 +476,8 @@
     "origin": "-0.099609 0.099609 -35.299805",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16856",
-    "model": "maps/ze_diablo/entities/npc_coin_hurt_16856.vmdl",
+    "hammerUniqueId": "44418",
+    "model": "maps/ze_diablo/entities/npc_coin_hurt_44418.vmdl",
     "_template_lump_ent_index": "6",
     "connections": [
       {
@@ -529,24 +529,24 @@
     "_template_lump_ent_index": "8"
   },
   {
-    "fluiddragscale": "1.000000",
-    "hoverposeangles": "0.000000 0.000000 0.000000",
-    "hoverposeposition": "0.000000 0.000000 0.000000",
-    "hoverposeflags": "0",
-    "buoyancyscale": "1.000000",
-    "masscenteroffset": "0.000000 0.000000 0.000000",
-    "gamemass": "0",
     "overridescript": "damping,2.5,rotdamping,100",
     "gibdir": "0 0 0",
     "fadescale": "1",
-    "touchoutputperentitydelay": "0.000000",
     "ExploitableByPlayer": "0",
-    "notsolid": "0",
     "preferredcarryangles": "0 0 0",
+    "touchoutputperentitydelay": "0.000000",
+    "notsolid": "0",
+    "hoverposeangles": "0.000000 0.000000 0.000000",
+    "hoverposeposition": "0.000000 0.000000 0.000000",
+    "hoverposeflags": "0",
     "enableuseoutput": "0",
     "forcetoenablemotion": "0.000000",
     "damagetoenablemotion": "0",
+    "fluiddragscale": "1.000000",
+    "buoyancyscale": "1.000000",
+    "masscenteroffset": "0.000000 0.000000 0.000000",
     "massScale": "0.000000",
+    "gamemass": "0",
     "Damagetype": "0",
     "skipPreSettle": "0",
     "lightmapstatic": "0",
@@ -579,30 +579,30 @@
     "origin": "0.000000 0.000000 -27.500000",
     "angles": "-0.000000 44.999973 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16838",
-    "model": "maps/ze_diablo/entities/npc_daddy_phys_16838.vmdl",
+    "hammerUniqueId": "44844",
+    "model": "maps/ze_diablo/entities/npc_daddy_phys_44844.vmdl",
     "_template_lump_ent_index": "9"
   },
   {
-    "fluiddragscale": "1.000000",
-    "hoverposeangles": "0.000000 0.000000 0.000000",
-    "hoverposeposition": "0.000000 0.000000 0.000000",
-    "hoverposeflags": "0",
-    "buoyancyscale": "1.000000",
-    "masscenteroffset": "0.000000 0.000000 0.000000",
-    "gamemass": "0",
     "physdamagescale": "1",
     "minhealthdmg": "1",
     "gibdir": "0 0 0",
     "fadescale": "1",
-    "touchoutputperentitydelay": "0.000000",
     "ExploitableByPlayer": "0",
-    "notsolid": "0",
     "preferredcarryangles": "0 0 0",
+    "touchoutputperentitydelay": "0.000000",
+    "notsolid": "0",
+    "hoverposeangles": "0.000000 0.000000 0.000000",
+    "hoverposeposition": "0.000000 0.000000 0.000000",
+    "hoverposeflags": "0",
     "enableuseoutput": "0",
     "forcetoenablemotion": "0.000000",
     "damagetoenablemotion": "0",
+    "fluiddragscale": "1.000000",
+    "buoyancyscale": "1.000000",
+    "masscenteroffset": "0.000000 0.000000 0.000000",
     "massScale": "0.000000",
+    "gamemass": "0",
     "Damagetype": "0",
     "skipPreSettle": "0",
     "lightmapstatic": "0",
@@ -636,8 +636,8 @@
     "origin": "0.000000 0.000000 2.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16836",
-    "model": "maps/ze_diablo/entities/npc_npc_hitbox_16836.vmdl",
+    "hammerUniqueId": "44842",
+    "model": "maps/ze_diablo/entities/npc_npc_hitbox_44842.vmdl",
     "_template_lump_ent_index": "10",
     "connections": [
       {
@@ -650,7 +650,7 @@
       },
       {
         "output": "OnBreak",
-        "target": "[PR#]NPC_npc_sides_thruster\u00260000",
+        "target": "[PR#]NPC_npc_sides_thruster",
         "input": "Kill",
         "param": "",
         "delay": 0.009999999776482582,
@@ -919,6 +919,38 @@
         "param": "",
         "delay": 0.019999999552965164,
         "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]NPC_npc_left_b_thruster\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]NPC_npc_left_thruster\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]NPC_npc_right_b_thruster\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnBreak",
+        "target": "[PR#]NPC_npc_right_thruster\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 60,
+        "limit": 1
       }
     ]
   },
@@ -1185,6 +1217,7 @@
     "soundName": "diablo_zombie_rot_noise1",
     "SourceEntityName": "[PR#]NPC_npc_model\u00260000",
     "useLocalOffset": "0",
+    "parentname": "[PR#]NPC_npc_model\u00260000",
     "targetname": "[PR#]NPC_noise_sound\u00260000",
     "classname": "point_soundevent",
     "origin": "16.000000 -64.000000 110.000000",
@@ -1320,14 +1353,6 @@
       },
       {
         "output": "OnTimer",
-        "target": "[PR#]NPC_npc_sides_thruster\u00260000",
-        "input": "Deactivate",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTimer",
         "target": "[PR#]NPC_npc_timer\u00260000",
         "input": "Kill",
         "param": "",
@@ -1376,7 +1401,7 @@
       },
       {
         "output": "OnTimer",
-        "target": "[PR#]NPC_npc_sides_thruster\u00260000",
+        "target": "[PR#]NPC_npc_right_b_thruster\u00260000",
         "input": "Kill",
         "param": "",
         "delay": 60,
@@ -1497,6 +1522,30 @@
       {
         "output": "OnTimer",
         "target": "[PR#]NPC_Trig_Right_b\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]NPC_npc_right_thruster\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]NPC_npc_left_thruster\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]NPC_npc_left_b_thruster\u00260000",
         "input": "Kill",
         "param": "",
         "delay": 60,
@@ -1731,6 +1780,7 @@
     "soundName": "diablo_spider_attack",
     "SourceEntityName": "[PR#]NPC_npc_model_spider\u00260000",
     "useLocalOffset": "0",
+    "parentname": "[PR#]NPC_npc_model_spider\u00260000",
     "targetname": "[PR#]NPC_noise_sound_spider\u00260000",
     "classname": "point_soundevent",
     "origin": "31.900391 -63.900391 110.000000",
@@ -1751,8 +1801,8 @@
     "origin": "782.750000 -531.973633 -426.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16832",
-    "model": "maps/ze_diablo/entities/npc_trig_left_b_16832.vmdl",
+    "hammerUniqueId": "44298",
+    "model": "maps/ze_diablo/entities/npc_trig_left_b_44298.vmdl",
     "_template_lump_ent_index": "24",
     "connections": [
       {
@@ -1881,8 +1931,8 @@
     "origin": "782.750000 533.651367 -426.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16828",
-    "model": "maps/ze_diablo/entities/npc_trig_right_b_16828.vmdl",
+    "hammerUniqueId": "44294",
+    "model": "maps/ze_diablo/entities/npc_trig_right_b_44294.vmdl",
     "_template_lump_ent_index": "25",
     "connections": [
       {

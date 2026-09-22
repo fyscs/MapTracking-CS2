@@ -3,7 +3,10 @@
 
 [
   {
+    "modelscale": "1",
+    "fadescale": "1",
     "CanBePickedUp": "1",
+    "spawnflags": "1",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -14,28 +17,17 @@
     "renderamt": "255",
     "rendermode": "kRenderNormal",
     "renderfx": "kRenderFxNone",
-    "modelscale": "1",
-    "fadescale": "1",
-    "spawnflags": "1",
-    "targetname": "[PR#]Item_wind_crystal_weapon\u00260000",
+    "targetname": "[PR#]Item_ice_crystal_weapon\u00260000",
     "classname": "weapon_elite",
-    "origin": "0.399963 -3.000000 39.109863",
+    "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16909",
+    "hammerUniqueId": "45415",
     "_template_lump_ent_index": "0",
     "connections": [
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]Item_wind_crystal_text\u00260000",
-        "input": "Display",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerPickup",
-        "target": "[PR#]Item_wind_crystal_button\u00260000",
+        "target": "[PR#]Item_ice_crystal_button\u00260000",
         "input": "Unlock",
         "param": "",
         "delay": 0,
@@ -43,7 +35,7 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]item_wind_common_text\u00260000",
+        "target": "[PR#]item_ice_common_text\u00260000",
         "input": "Kill",
         "param": "",
         "delay": 0,
@@ -51,7 +43,7 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]item_wind_rare_text\u00260000",
+        "target": "[PR#]item_ice_rare_text\u00260000",
         "input": "Kill",
         "param": "",
         "delay": 0,
@@ -59,7 +51,7 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]item_wind_legendary_text\u00260000",
+        "target": "[PR#]item_ice_legendary_text\u00260000",
         "input": "Kill",
         "param": "",
         "delay": 0,
@@ -69,48 +61,50 @@
         "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "keyvalue",
-        "param": "targetname filter_wind_crystal",
+        "param": "targetname filter_ice_crystal",
         "delay": 0.019999999552965164,
         "limit": -1
       },
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]Item_wind_crystal_worldtext\u00260000",
-        "input": "Enable",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "ice",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerPickup",
-        "target": "[PR#]Item_wind_crystal_worldtext\u00260000",
-        "input": "Disable",
-        "param": "",
-        "delay": 5,
         "limit": -1
       }
     ]
   },
   {
-    "channel": "2",
-    "fxtime": "0.050000",
-    "holdtime": "4",
-    "fadeout": "0.500000",
-    "fadein": "0.025000",
-    "color2": "156 231 170",
-    "color": "156 231 170",
-    "effect": "2",
-    "y": "0.300000",
-    "x": "0.050000",
-    "message": "Spell: Tornado \\n\\nEffect: Pushes Demons",
-    "spawnflags": "0",
-    "targetname": "[PR#]Item_wind_crystal_text\u00260000",
-    "classname": "game_text",
-    "origin": "-9.700012 -31.300781 -64.399902",
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "targetname": "[PR#]npc_item_ice_rarity_relay\u00260000",
+    "classname": "logic_relay",
+    "origin": "0.000000 -20.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16922",
-    "_template_lump_ent_index": "1"
+    "hammerUniqueId": "45432",
+    "_template_lump_ent_index": "1",
+    "connections": [
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]npc_item_ice_rarity\u00260000",
+        "input": "PickRandom",
+        "param": "",
+        "delay": 0.009999999776482582,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "Case07": "legendary",
@@ -120,17 +114,17 @@
     "Case03": "common",
     "Case02": "common",
     "Case01": "common",
-    "targetname": "[PR#]npc_item_wind_rarity\u00260000",
+    "targetname": "[PR#]npc_item_ice_rarity\u00260000",
     "classname": "logic_case",
-    "origin": "-1884.760010 -653.800781 -672.380371",
+    "origin": "24.000000 -20.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16923",
+    "hammerUniqueId": "45431",
     "_template_lump_ent_index": "2",
     "connections": [
       {
         "output": "OnCase07",
-        "target": "[PR#]item_wind_rare_text\u00260000",
+        "target": "[PR#]item_ice_rare_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -138,7 +132,7 @@
       },
       {
         "output": "OnCase01",
-        "target": "[PR#]item_wind_rare_text\u00260000",
+        "target": "[PR#]item_ice_rare_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -146,7 +140,7 @@
       },
       {
         "output": "OnCase05",
-        "target": "[PR#]item_wind_legendary_text\u00260000",
+        "target": "[PR#]item_ice_legendary_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -154,7 +148,7 @@
       },
       {
         "output": "OnCase01",
-        "target": "[PR#]item_wind_crystal_relay_rare_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_rare_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -162,7 +156,7 @@
       },
       {
         "output": "OnCase01",
-        "target": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -170,7 +164,7 @@
       },
       {
         "output": "OnCase05",
-        "target": "[PR#]item_wind_crystal_relay_common_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_common_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -178,7 +172,7 @@
       },
       {
         "output": "OnCase05",
-        "target": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -186,7 +180,7 @@
       },
       {
         "output": "OnCase05",
-        "target": "[PR#]item_wind_common_text\u00260000",
+        "target": "[PR#]item_ice_common_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -194,7 +188,7 @@
       },
       {
         "output": "OnCase01",
-        "target": "[PR#]item_wind_legendary_text\u00260000",
+        "target": "[PR#]item_ice_legendary_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -202,7 +196,7 @@
       },
       {
         "output": "OnCase06",
-        "target": "[PR#]item_wind_common_text\u00260000",
+        "target": "[PR#]item_ice_common_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -210,7 +204,7 @@
       },
       {
         "output": "OnCase06",
-        "target": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -218,7 +212,7 @@
       },
       {
         "output": "OnCase06",
-        "target": "[PR#]item_wind_crystal_relay_common_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_common_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -226,7 +220,7 @@
       },
       {
         "output": "OnCase06",
-        "target": "[PR#]item_wind_legendary_text\u00260000",
+        "target": "[PR#]item_ice_legendary_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -234,7 +228,7 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]item_wind_legendary_text\u00260000",
+        "target": "[PR#]item_ice_legendary_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -242,7 +236,7 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -250,7 +244,7 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]item_wind_crystal_relay_rare_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_rare_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -258,7 +252,7 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]item_wind_rare_text\u00260000",
+        "target": "[PR#]item_ice_rare_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -266,7 +260,7 @@
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]item_wind_legendary_text\u00260000",
+        "target": "[PR#]item_ice_legendary_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -274,7 +268,7 @@
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -282,7 +276,7 @@
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]item_wind_crystal_relay_rare_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_rare_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -290,7 +284,7 @@
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]item_wind_rare_text\u00260000",
+        "target": "[PR#]item_ice_rare_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -298,7 +292,7 @@
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]item_wind_legendary_text\u00260000",
+        "target": "[PR#]item_ice_legendary_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -306,7 +300,7 @@
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -314,7 +308,7 @@
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]item_wind_crystal_relay_rare_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_rare_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -322,7 +316,7 @@
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]item_wind_rare_text\u00260000",
+        "target": "[PR#]item_ice_rare_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -330,7 +324,7 @@
       },
       {
         "output": "OnCase07",
-        "target": "[PR#]item_wind_common_text\u00260000",
+        "target": "[PR#]item_ice_common_text\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -338,7 +332,7 @@
       },
       {
         "output": "OnCase07",
-        "target": "[PR#]item_wind_crystal_relay_common_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_common_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -346,7 +340,7 @@
       },
       {
         "output": "OnCase07",
-        "target": "[PR#]item_wind_crystal_relay_rare_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_rare_use\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 0.10000000149011612,
@@ -412,7 +406,7 @@
         "output": "OnCase01",
         "target": "[PR#]console",
         "input": "Command",
-        "param": "sm_setcooldown 5362935 60",
+        "param": "sm_setcooldown 5362805 60",
         "delay": 0,
         "limit": -1
       },
@@ -420,7 +414,7 @@
         "output": "OnCase02",
         "target": "[PR#]console",
         "input": "Command",
-        "param": "sm_setcooldown 5362935 60",
+        "param": "sm_setcooldown 5362805 60",
         "delay": 0,
         "limit": -1
       },
@@ -428,7 +422,7 @@
         "output": "OnCase03",
         "target": "[PR#]console",
         "input": "Command",
-        "param": "sm_setcooldown 5362935 60",
+        "param": "sm_setcooldown 5362805 60",
         "delay": 0,
         "limit": -1
       },
@@ -436,7 +430,7 @@
         "output": "OnCase04",
         "target": "[PR#]console",
         "input": "Command",
-        "param": "sm_setcooldown 5362935 60",
+        "param": "sm_setcooldown 5362805 60",
         "delay": 0,
         "limit": -1
       },
@@ -444,7 +438,7 @@
         "output": "OnCase05",
         "target": "[PR#]console",
         "input": "Command",
-        "param": "sm_setcooldown 5362935 45",
+        "param": "sm_setcooldown 5362805 45",
         "delay": 0,
         "limit": -1
       },
@@ -452,7 +446,7 @@
         "output": "OnCase06",
         "target": "[PR#]console",
         "input": "Command",
-        "param": "sm_setcooldown 5362935 45",
+        "param": "sm_setcooldown 5362805 45",
         "delay": 0,
         "limit": -1
       },
@@ -460,8 +454,16 @@
         "output": "OnCase07",
         "target": "[PR#]console",
         "input": "Command",
-        "param": "sm_setcooldown 5362935 20",
+        "param": "sm_setcooldown 5362805 20",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.009999999776482582,
         "limit": -1
       },
       {
@@ -482,14 +484,6 @@
       },
       {
         "output": "OnCase03",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnCase04",
         "target": "!self",
         "input": "Kill",
         "param": "",
@@ -544,19 +538,19 @@
     "rendermode": "10",
     "renderfx": "0",
     "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "targetname": "[PR#]Item_wind_crystal_button\u00260000",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]Item_ice_crystal_button\u00260000",
     "classname": "func_button",
-    "origin": "-0.400024 16.299805 19.379883",
+    "origin": "-1.250000 26.000000 24.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16919",
-    "model": "maps/ze_diablo/entities/item_wind_crystal_button_16919.vmdl",
+    "hammerUniqueId": "45428",
+    "model": "maps/ze_diablo/entities/item_ice_crystal_button_45428.vmdl",
     "_template_lump_ent_index": "3",
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]Item_wind_crystal_filter\u00260000",
+        "target": "[PR#]Item_ice_crystal_filter\u00260000",
         "input": "TestActivator",
         "param": "",
         "delay": 0,
@@ -569,17 +563,17 @@
     "FastRetrigger": "1",
     "TriggerOnce": "0",
     "StartDisabled": "0",
-    "targetname": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+    "targetname": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
     "classname": "logic_relay",
-    "origin": "12.599976 -56.400391 -59.959961",
+    "origin": "0.000000 -44.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16911",
+    "hammerUniqueId": "45420",
     "_template_lump_ent_index": "4",
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_button\u00260000",
+        "target": "[PR#]Item_ice_crystal_button\u00260000",
         "input": "Lock",
         "param": "",
         "delay": 0.009999999776482582,
@@ -587,7 +581,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_button\u00260000",
+        "target": "[PR#]Item_ice_crystal_button\u00260000",
         "input": "Unlock",
         "param": "",
         "delay": 20,
@@ -595,7 +589,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_trigger\u00260000",
+        "target": "[PR#]Item_ice_crystal_trigger\u00260000",
         "input": "Enable",
         "param": "",
         "delay": 0,
@@ -603,7 +597,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_particle\u00260000",
+        "target": "[PR#]ice_crystal_particle\u00260000",
         "input": "Start",
         "param": "",
         "delay": 0.009999999776482582,
@@ -611,23 +605,23 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_particle\u00260000",
+        "target": "[PR#]ice_crystal_particle\u00260000",
         "input": "Stop",
         "param": "",
-        "delay": 4,
+        "delay": 6,
         "limit": -1
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_trigger\u00260000",
+        "target": "[PR#]Item_ice_crystal_trigger\u00260000",
         "input": "Disable",
         "param": "",
-        "delay": 4,
+        "delay": 6,
         "limit": -1
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_ready_particle\u00260000",
+        "target": "[PR#]ice_crystal_ready_particle\u00260000",
         "input": "Start",
         "param": "",
         "delay": 20,
@@ -635,7 +629,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_ready_particle\u00260000",
+        "target": "[PR#]ice_crystal_ready_particle\u00260000",
         "input": "Stop",
         "param": "",
         "delay": 0,
@@ -643,7 +637,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_sound\u00260000",
+        "target": "[PR#]ice_sound\u00260000",
         "input": "StartSound",
         "param": "",
         "delay": 0,
@@ -674,16 +668,16 @@
     "snapshot_mesh": "-1",
     "no_save": "0",
     "start_active": "1",
-    "effect_name": "particles/wind_spell.vpcf",
+    "effect_name": "particles/ice_spell.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "targetname": "[PR#]wind_crystal_ready_particle\u00260000",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]ice_crystal_ready_particle\u00260000",
     "classname": "info_particle_system",
-    "origin": "-0.850037 51.599609 0.619629",
+    "origin": "-1.250000 48.000000 4.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16921",
+    "hammerUniqueId": "45424",
     "_template_lump_ent_index": "5"
   },
   {
@@ -691,17 +685,17 @@
     "FastRetrigger": "1",
     "TriggerOnce": "0",
     "StartDisabled": "0",
-    "targetname": "[PR#]item_wind_crystal_relay_common_use\u00260000",
+    "targetname": "[PR#]item_ice_crystal_relay_common_use\u00260000",
     "classname": "logic_relay",
-    "origin": "11.699951 -22.300781 -59.959961",
+    "origin": "-24.000000 -20.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16918",
+    "hammerUniqueId": "45419",
     "_template_lump_ent_index": "6",
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_button\u00260000",
+        "target": "[PR#]Item_ice_crystal_button\u00260000",
         "input": "Lock",
         "param": "",
         "delay": 0.009999999776482582,
@@ -709,7 +703,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_button\u00260000",
+        "target": "[PR#]Item_ice_crystal_button\u00260000",
         "input": "Unlock",
         "param": "",
         "delay": 60,
@@ -717,7 +711,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_trigger\u00260000",
+        "target": "[PR#]Item_ice_crystal_trigger\u00260000",
         "input": "Enable",
         "param": "",
         "delay": 0,
@@ -725,7 +719,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_particle\u00260000",
+        "target": "[PR#]ice_crystal_particle\u00260000",
         "input": "Start",
         "param": "",
         "delay": 0.009999999776482582,
@@ -733,23 +727,23 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_particle\u00260000",
+        "target": "[PR#]ice_crystal_particle\u00260000",
         "input": "Stop",
         "param": "",
-        "delay": 1,
+        "delay": 2.009999990463257,
         "limit": -1
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_trigger\u00260000",
+        "target": "[PR#]Item_ice_crystal_trigger\u00260000",
         "input": "Disable",
         "param": "",
-        "delay": 1,
+        "delay": 2,
         "limit": -1
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_ready_particle\u00260000",
+        "target": "[PR#]ice_crystal_ready_particle\u00260000",
         "input": "Start",
         "param": "",
         "delay": 60,
@@ -757,7 +751,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_ready_particle\u00260000",
+        "target": "[PR#]ice_crystal_ready_particle\u00260000",
         "input": "Stop",
         "param": "",
         "delay": 0,
@@ -765,7 +759,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_sound\u00260000",
+        "target": "[PR#]ice_sound\u00260000",
         "input": "StartSound",
         "param": "",
         "delay": 0,
@@ -782,41 +776,69 @@
     ]
   },
   {
-    "FallingSpeedThreshold": "-150",
-    "alternateticksfix": "0",
-    "triggeronstarttouch": "0",
-    "speed": "355",
-    "pushdir": "0.000000 90.000000 0.000000",
+    "thinkalways": "0",
+    "nodmgforce": "0",
+    "forgivedelay": "3.000000",
+    "damagemodel": "0",
+    "damagetype": "0",
+    "damagecap": "250",
+    "damage": "250",
     "filtername": "[PR#]MapFilterCT_NO",
-    "spawnflags": "1",
+    "spawnflags": "1097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "targetname": "[PR#]Item_wind_crystal_trigger\u00260000",
-    "classname": "trigger_push",
-    "origin": "-1.300049 335.379883 -138.890137",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]Item_ice_crystal_trigger\u00260000",
+    "classname": "trigger_hurt",
+    "origin": "-2.000000 338.000000 -170.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16906",
-    "model": "maps/ze_diablo/entities/item_wind_crystal_trigger_16906.vmdl",
-    "_template_lump_ent_index": "7"
+    "hammerUniqueId": "45425",
+    "model": "maps/ze_diablo/entities/item_ice_crystal_trigger_45425.vmdl",
+    "_template_lump_ent_index": "7",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 0",
+        "delay": 0.009999999776482582,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "speed 1.1",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnHurt",
+        "target": "!activator",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "PassthroughCaller": "0",
     "FastRetrigger": "1",
     "TriggerOnce": "0",
     "StartDisabled": "0",
-    "targetname": "[PR#]item_wind_crystal_relay_rare_use\u00260000",
+    "targetname": "[PR#]item_ice_crystal_relay_rare_use\u00260000",
     "classname": "logic_relay",
-    "origin": "12.599976 -38.400391 -59.959961",
+    "origin": "24.000000 -44.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16910",
+    "hammerUniqueId": "45418",
     "_template_lump_ent_index": "8",
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_button\u00260000",
+        "target": "[PR#]Item_ice_crystal_button\u00260000",
         "input": "Lock",
         "param": "",
         "delay": 0.009999999776482582,
@@ -824,7 +846,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_button\u00260000",
+        "target": "[PR#]Item_ice_crystal_button\u00260000",
         "input": "Unlock",
         "param": "",
         "delay": 45,
@@ -832,7 +854,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_trigger\u00260000",
+        "target": "[PR#]Item_ice_crystal_trigger\u00260000",
         "input": "Enable",
         "param": "",
         "delay": 0,
@@ -840,7 +862,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_particle\u00260000",
+        "target": "[PR#]ice_crystal_particle\u00260000",
         "input": "Start",
         "param": "",
         "delay": 0.009999999776482582,
@@ -848,23 +870,23 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_particle\u00260000",
+        "target": "[PR#]ice_crystal_particle\u00260000",
         "input": "Stop",
         "param": "",
-        "delay": 2,
+        "delay": 3,
         "limit": -1
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_wind_crystal_trigger\u00260000",
+        "target": "[PR#]Item_ice_crystal_trigger\u00260000",
         "input": "Disable",
         "param": "",
-        "delay": 2,
+        "delay": 3,
         "limit": -1
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_ready_particle\u00260000",
+        "target": "[PR#]ice_crystal_ready_particle\u00260000",
         "input": "Start",
         "param": "",
         "delay": 45,
@@ -872,7 +894,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_crystal_ready_particle\u00260000",
+        "target": "[PR#]ice_crystal_ready_particle\u00260000",
         "input": "Stop",
         "param": "",
         "delay": 0,
@@ -880,7 +902,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]wind_sound\u00260000",
+        "target": "[PR#]ice_sound\u00260000",
         "input": "StartSound",
         "param": "",
         "delay": 0,
@@ -912,16 +934,16 @@
     "snapshot_mesh": "-1",
     "no_save": "0",
     "start_active": "0",
-    "effect_name": "particles/diablov5_particles/diablo_tornado_big.vpcf",
+    "effect_name": "particles/diablov5_particles/diablo_ice_big.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "targetname": "[PR#]wind_crystal_particle\u00260000",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]ice_crystal_particle\u00260000",
     "classname": "info_particle_system",
-    "origin": "0.599976 7.500000 18.109863",
+    "origin": "0.000000 16.000000 12.000000",
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16915",
+    "hammerUniqueId": "45427",
     "_template_lump_ent_index": "9"
   },
   {
@@ -930,15 +952,16 @@
     "stopOnNew": "1",
     "toLocalPlayer": "0",
     "startOnSpawn": "0",
-    "soundName": "diablo_wind_item_sound",
-    "SourceEntityName": "[PR#]Item_wind_crystal_weapon\u00260000",
+    "sourceEntityName": "[PR#]ice_crystal_particle\u00260000",
+    "soundName": "diablo_ice_use",
     "useLocalOffset": "0",
-    "targetname": "[PR#]wind_sound\u00260000",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]ice_sound\u00260000",
     "classname": "point_soundevent",
-    "origin": "16.599976 -19.400391 -51.959961",
+    "origin": "24.000000 -68.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16914",
+    "hammerUniqueId": "45417",
     "_template_lump_ent_index": "10"
   },
   {
@@ -956,16 +979,16 @@
     "snapshot_mesh": "-1",
     "no_save": "0",
     "start_active": "1",
-    "effect_name": "particles/rare_tornado_spell.vpcf",
+    "effect_name": "particles/rare_ice_spell.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "targetname": "[PR#]item_wind_rare_text\u00260000",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]item_ice_rare_text\u00260000",
     "classname": "info_particle_system",
-    "origin": "-1.400024 1.599609 30.600098",
+    "origin": "-1.799801 0.000000 30.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16912",
+    "hammerUniqueId": "45422",
     "_template_lump_ent_index": "11",
     "connections": [
       {
@@ -993,16 +1016,16 @@
     "snapshot_mesh": "-1",
     "no_save": "0",
     "start_active": "1",
-    "effect_name": "particles/common_tornado_spell.vpcf",
+    "effect_name": "particles/common_ice_spell.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "targetname": "[PR#]item_wind_common_text\u00260000",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]item_ice_common_text\u00260000",
     "classname": "info_particle_system",
-    "origin": "-1.400024 1.599609 32.600098",
+    "origin": "-1.799801 0.000000 32.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16917",
+    "hammerUniqueId": "45421",
     "_template_lump_ent_index": "12",
     "connections": [
       {
@@ -1030,16 +1053,16 @@
     "snapshot_mesh": "-1",
     "no_save": "0",
     "start_active": "1",
-    "effect_name": "particles/legendary_tornado_spell.vpcf",
+    "effect_name": "particles/legendary_ice_spell.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "targetname": "[PR#]item_wind_legendary_text\u00260000",
+    "parentname": "[PR#]Item_ice_crystal_weapon\u00260000",
+    "targetname": "[PR#]item_ice_legendary_text\u00260000",
     "classname": "info_particle_system",
-    "origin": "-1.400024 1.599609 34.600098",
+    "origin": "-1.799801 0.000000 34.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16913",
+    "hammerUniqueId": "45423",
     "_template_lump_ent_index": "13",
     "connections": [
       {
@@ -1053,20 +1076,20 @@
     ]
   },
   {
-    "clientSideEntity": "0",
-    "filtername": "[PR#]filter_wind_crystal",
+    "filtername": "[PR#]filter_ice_crystal",
     "Negated": "0",
-    "targetname": "[PR#]Item_wind_crystal_filter\u00260000",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]Item_ice_crystal_filter\u00260000",
     "classname": "filter_activator_name",
-    "origin": "-16.200012 2.299805 -59.959961",
+    "origin": "0.000000 -68.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16908",
+    "hammerUniqueId": "45430",
     "_template_lump_ent_index": "14",
     "connections": [
       {
         "output": "OnPass",
-        "target": "[PR#]item_wind_crystal_relay_common_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_common_use\u00260000",
         "input": "Trigger",
         "param": "",
         "delay": 0,
@@ -1074,7 +1097,7 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]item_wind_crystal_relay_rare_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_rare_use\u00260000",
         "input": "Trigger",
         "param": "",
         "delay": 0,
@@ -1082,75 +1105,12 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]item_wind_crystal_relay_legendary_use\u00260000",
+        "target": "[PR#]item_ice_crystal_relay_legendary_use\u00260000",
         "input": "Trigger",
         "param": "",
         "delay": 0,
         "limit": -1
       }
     ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]npc_item_wind_rarity_relay\u00260000",
-    "classname": "logic_relay",
-    "origin": "-1820.400024 -696.900391 -663.907227",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "17733",
-    "_template_lump_ent_index": "15",
-    "connections": [
-      {
-        "output": "OnSpawn",
-        "target": "!self",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]npc_item_wind_rarity\u00260000",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "depth_render_offset": "0.125000",
-    "reorient_mode": "0",
-    "justify_vertical": "1",
-    "justify_horizontal": "0",
-    "font_name": "Felix Titling",
-    "font_size": "20.000000",
-    "world_units_per_pixel": "0.050000",
-    "fullbright": "1",
-    "enabled": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "useLocalOffset": "0",
-    "parentname": "[PR#]Item_wind_crystal_weapon\u00260000",
-    "color": "156 231 170",
-    "message": "Spell: Tornado \\n\\nEffect: Pushes Demons",
-    "targetname": "[PR#]Item_wind_crystal_worldtext\u00260000",
-    "classname": "point_worldtext",
-    "origin": "-10.400024 10.099609 63.109863",
-    "angles": "-0.000000 16.874998 90.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "41600",
-    "_template_lump_ent_index": "16"
   }
 ]

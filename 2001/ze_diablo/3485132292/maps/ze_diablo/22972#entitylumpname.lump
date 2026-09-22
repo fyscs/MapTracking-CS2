@@ -123,8 +123,8 @@
     "origin": "-90.000000 26.000000 -23.060059",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "23047",
-    "model": "maps/ze_diablo/entities/leoric_cage_1_kill_23047.vmdl",
+    "hammerUniqueId": "44444",
+    "model": "maps/ze_diablo/entities/leoric_cage_1_kill_44444.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -199,8 +199,8 @@
     "origin": "-33.000000 -82.000000 -37.060059",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "23051",
-    "model": "maps/ze_diablo/entities/leoric_cage_1_breakable_23051.vmdl",
+    "hammerUniqueId": "45255",
+    "model": "maps/ze_diablo/entities/leoric_cage_1_breakable_45255.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -224,8 +224,8 @@
     "origin": "-33.000000 -131.000000 -37.600098",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "23049",
-    "model": "maps/ze_diablo/entities/leoric_cage_1_breakable_grenade_23049.vmdl",
+    "hammerUniqueId": "44317",
+    "model": "maps/ze_diablo/entities/leoric_cage_1_breakable_grenade_44317.vmdl",
     "_template_lump_ent_index": "3",
     "connections": [
       {

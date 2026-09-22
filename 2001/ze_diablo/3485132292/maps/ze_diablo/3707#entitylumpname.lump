@@ -39,8 +39,8 @@
     "origin": "48.000000 104.000000 167.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8692",
-    "model": "maps/ze_diablo/entities/dustcloud_entrance_clip_8692.vmdl",
+    "hammerUniqueId": "45161",
+    "model": "maps/ze_diablo/entities/dustcloud_entrance_clip_45161.vmdl",
     "_template_lump_ent_index": "0"
   },
   {

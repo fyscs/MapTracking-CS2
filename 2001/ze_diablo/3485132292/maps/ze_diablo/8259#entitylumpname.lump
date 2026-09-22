@@ -137,8 +137,8 @@
     "origin": "2760.000000 -1848.000000 273.350098",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8617",
-    "model": "maps/ze_diablo/entities/rock_block2_clip_8617.vmdl",
+    "hammerUniqueId": "45157",
+    "model": "maps/ze_diablo/entities/rock_block2_clip_45157.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -178,8 +178,8 @@
     "origin": "13280.000000 19568.000000 -890.909668",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4933",
-    "model": "maps/ze_diablo/entities/rock_block2_clip_4933.vmdl",
+    "hammerUniqueId": "45350",
+    "model": "maps/ze_diablo/entities/rock_block2_clip_45350.vmdl",
     "_template_lump_ent_index": "3"
   }
 ]

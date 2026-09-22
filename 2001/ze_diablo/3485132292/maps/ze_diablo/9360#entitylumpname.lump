@@ -41,8 +41,8 @@
     "origin": "793.400391 -736.000000 1086.359863",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "9337",
-    "model": "maps/ze_diablo/entities/soulstone_breakable_9337.vmdl",
+    "hammerUniqueId": "45306",
+    "model": "maps/ze_diablo/entities/soulstone_breakable_45306.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {

@@ -17,8 +17,8 @@
     "origin": "4742.359863 27555.199219 5227.200195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "12085",
-    "model": "maps/ze_diablo/entities/s4_ending_push2_12085.vmdl",
+    "hammerUniqueId": "44039",
+    "model": "maps/ze_diablo/entities/s4_ending_push2_44039.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -58,13 +58,13 @@
     "origin": "-11329.640625 13879.200195 24035.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7875",
-    "model": "maps/ze_diablo/entities/s4_zm_tp_clip_7875.vmdl",
+    "hammerUniqueId": "45146",
+    "model": "maps/ze_diablo/entities/s4_zm_tp_clip_45146.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -92,8 +92,8 @@
     "origin": "-11215.541016 23945.199219 24937.320312",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4017",
-    "model": "maps/ze_diablo/entities/s4_gate_open5_4017.vmdl",
+    "hammerUniqueId": "44898",
+    "model": "maps/ze_diablo/entities/s4_gate_open5_44898.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -123,8 +123,8 @@
     ]
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -152,8 +152,8 @@
     "origin": "-6435.069824 4639.900391 24055.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8660",
-    "model": "maps/ze_diablo/entities/s4_gate_open4_8660.vmdl",
+    "hammerUniqueId": "44920",
+    "model": "maps/ze_diablo/entities/s4_gate_open4_44920.vmdl",
     "_template_lump_ent_index": "3",
     "connections": [
       {
@@ -231,8 +231,8 @@
     "origin": "7262.359863 25083.199219 5227.200195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "12087",
-    "model": "maps/ze_diablo/entities/s4_ending_push4_12087.vmdl",
+    "hammerUniqueId": "44041",
+    "model": "maps/ze_diablo/entities/s4_ending_push4_44041.vmdl",
     "_template_lump_ent_index": "5"
   },
   {
@@ -331,8 +331,8 @@
     "origin": "6002.359863 26319.199219 6115.190430",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7556",
-    "model": "maps/ze_diablo/entities/s4_ex_zm_hurt_7556.vmdl",
+    "hammerUniqueId": "44359",
+    "model": "maps/ze_diablo/entities/s4_ex_zm_hurt_44359.vmdl",
     "_template_lump_ent_index": "7"
   },
   {
@@ -390,8 +390,8 @@
     "origin": "-7157.640137 7135.200195 24139.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4010",
-    "model": "maps/ze_diablo/entities/s4_tp_out_of_hell_4010.vmdl",
+    "hammerUniqueId": "43931",
+    "model": "maps/ze_diablo/entities/s4_tp_out_of_hell_43931.vmdl",
     "_template_lump_ent_index": "11"
   },
   {
@@ -556,8 +556,8 @@
     ]
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "0.000000",
@@ -585,8 +585,8 @@
     "origin": "2682.359863 16375.200195 12190.900391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11786",
-    "model": "maps/ze_diablo/entities/s4_dummy_diablo_mover_11786.vmdl",
+    "hammerUniqueId": "44932",
+    "model": "maps/ze_diablo/entities/s4_dummy_diablo_mover_44932.vmdl",
     "_template_lump_ent_index": "19"
   },
   {
@@ -629,8 +629,8 @@
     "origin": "-9045.640625 10194.910156 27930.099609",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11768",
-    "model": "maps/ze_diablo/entities/s4_tp_to_diablo_11768.vmdl",
+    "hammerUniqueId": "43838",
+    "model": "maps/ze_diablo/entities/s4_tp_to_diablo_43838.vmdl",
     "_template_lump_ent_index": "21",
     "connections": [
       {
@@ -672,8 +672,8 @@
     "origin": "6002.359863 26319.199219 5369.200195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5888",
-    "model": "maps/ze_diablo/entities/s4_ending_counter_adder1_5888.vmdl",
+    "hammerUniqueId": "44105",
+    "model": "maps/ze_diablo/entities/s4_ending_counter_adder1_44105.vmdl",
     "_template_lump_ent_index": "23",
     "connections": [
       {
@@ -699,8 +699,8 @@
     "origin": "-8913.640625 12911.200195 28806.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11772",
-    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp3_11772.vmdl",
+    "hammerUniqueId": "43836",
+    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp3_43836.vmdl",
     "_template_lump_ent_index": "24"
   },
   {
@@ -861,218 +861,11 @@
     "StartDisabled": "0",
     "targetname": "[PR#]s4_hell_blue_fire_relay",
     "classname": "logic_relay",
-    "origin": "-7929.640137 11407.200195 23115.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6913",
-    "_template_lump_ent_index": "26",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-7657.640137 11407.200195 23115.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6918",
-    "_template_lump_ent_index": "27",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-6390.640137 8043.200195 23753.109375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6922",
-    "_template_lump_ent_index": "28",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-6390.529785 7787.160156 23753.109375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6926",
-    "_template_lump_ent_index": "29",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-6390.529785 7531.160156 23753.109375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6930",
-    "_template_lump_ent_index": "30",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-6390.260254 7018.940430 23753.109375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6934",
-    "_template_lump_ent_index": "31",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-6390.260254 7274.940430 23753.109375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6993",
-    "_template_lump_ent_index": "32",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-7125.540527 9871.019531 23049.109375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6997",
-    "_template_lump_ent_index": "33",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
-    "origin": "-6787.520020 9655.330078 24007.718750",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7002",
-    "_template_lump_ent_index": "34",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]blue_particle_hell_maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]s4_hell_blue_fire_relay",
-    "classname": "logic_relay",
     "origin": "-6720.390137 4640.200195 23860.269531",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7484",
-    "_template_lump_ent_index": "35",
+    "_template_lump_ent_index": "26",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1095,7 +888,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7497",
-    "_template_lump_ent_index": "36",
+    "_template_lump_ent_index": "27",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1118,7 +911,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8090",
-    "_template_lump_ent_index": "37",
+    "_template_lump_ent_index": "28",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1141,7 +934,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8139",
-    "_template_lump_ent_index": "38",
+    "_template_lump_ent_index": "29",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1164,7 +957,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8382",
-    "_template_lump_ent_index": "39",
+    "_template_lump_ent_index": "30",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1187,7 +980,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10390",
-    "_template_lump_ent_index": "40",
+    "_template_lump_ent_index": "31",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1210,7 +1003,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10915",
-    "_template_lump_ent_index": "41",
+    "_template_lump_ent_index": "32",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1233,7 +1026,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10962",
-    "_template_lump_ent_index": "42",
+    "_template_lump_ent_index": "33",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1256,7 +1049,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10967",
-    "_template_lump_ent_index": "43",
+    "_template_lump_ent_index": "34",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1279,7 +1072,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10995",
-    "_template_lump_ent_index": "44",
+    "_template_lump_ent_index": "35",
     "connections": [
       {
         "output": "OnTrigger",
@@ -1302,6 +1095,213 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10997",
+    "_template_lump_ent_index": "36",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-7657.640137 11407.200195 23115.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6918",
+    "_template_lump_ent_index": "37",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-7929.640137 11407.200195 23115.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6913",
+    "_template_lump_ent_index": "38",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-6390.640137 8043.200195 23753.109375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6922",
+    "_template_lump_ent_index": "39",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-6390.529785 7787.160156 23753.109375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6926",
+    "_template_lump_ent_index": "40",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-6787.520020 9655.330078 24007.718750",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "7002",
+    "_template_lump_ent_index": "41",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-6390.260254 7018.940430 23753.109375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6934",
+    "_template_lump_ent_index": "42",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-6390.260254 7274.940430 23753.109375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6993",
+    "_template_lump_ent_index": "43",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-6390.529785 7531.160156 23753.109375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6930",
+    "_template_lump_ent_index": "44",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]blue_particle_hell_maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!caller",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "1",
+    "StartDisabled": "0",
+    "targetname": "[PR#]s4_hell_blue_fire_relay",
+    "classname": "logic_relay",
+    "origin": "-7125.540527 9871.019531 23049.109375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6997",
     "_template_lump_ent_index": "45",
     "connections": [
       {
@@ -1351,8 +1351,8 @@
     "origin": "-9941.640625 18019.199219 26636.300781",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4028",
-    "model": "maps/ze_diablo/entities/s4_fence_4028.vmdl",
+    "hammerUniqueId": "45116",
+    "model": "maps/ze_diablo/entities/s4_fence_45116.vmdl",
     "_template_lump_ent_index": "46"
   },
   {
@@ -1366,8 +1366,8 @@
     "origin": "6002.359863 26319.199219 5395.200195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7501",
-    "model": "maps/ze_diablo/entities/s4_ending_counter_adder2_7501.vmdl",
+    "hammerUniqueId": "44111",
+    "model": "maps/ze_diablo/entities/s4_ending_counter_adder2_44111.vmdl",
     "_template_lump_ent_index": "47",
     "connections": [
       {
@@ -1393,8 +1393,8 @@
     "origin": "-11045.640625 17711.199219 26663.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4037",
-    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp2_4037.vmdl",
+    "hammerUniqueId": "43927",
+    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp2_43927.vmdl",
     "_template_lump_ent_index": "48"
   },
   {
@@ -1412,8 +1412,8 @@
     "origin": "-9041.640625 17649.199219 26663.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3614",
-    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp2_3614.vmdl",
+    "hammerUniqueId": "43939",
+    "model": "maps/ze_diablo/entities/s4_elevator_afk_tp2_43939.vmdl",
     "_template_lump_ent_index": "49"
   },
   {
@@ -1427,8 +1427,8 @@
     "origin": "6002.359863 26319.199219 5417.200195",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7867",
-    "model": "maps/ze_diablo/entities/s4_ending_counter_adder3_7867.vmdl",
+    "hammerUniqueId": "44123",
+    "model": "maps/ze_diablo/entities/s4_ending_counter_adder3_44123.vmdl",
     "_template_lump_ent_index": "50",
     "connections": [
       {
@@ -1456,9 +1456,9 @@
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]belial_cutscene_overlay",
-        "input": "StartOverlays",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "startoverlay",
         "delay": 3,
         "limit": -1
       },
@@ -1560,9 +1560,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]belial_cutscene_overlay",
-        "input": "StopOverlays",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "stopoverlay",
         "delay": 18,
         "limit": -1
       },
@@ -1584,9 +1584,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]text_diablo",
-        "input": "Display",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "text_diablo",
         "delay": 12,
         "limit": -1
       },
@@ -1711,8 +1711,8 @@
     "origin": "-11842.439453 16255.339844 26637.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4035",
-    "model": "maps/ze_diablo/entities/s4_fence2_4035.vmdl",
+    "hammerUniqueId": "45118",
+    "model": "maps/ze_diablo/entities/s4_fence2_45118.vmdl",
     "_template_lump_ent_index": "53",
     "connections": [
       {
@@ -1906,8 +1906,8 @@
     "origin": "-11586.640625 3048.200195 23788.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "6998",
-    "model": "maps/ze_diablo/entities/s4_start_lever2_6998.vmdl",
+    "hammerUniqueId": "45042",
+    "model": "maps/ze_diablo/entities/s4_start_lever2_45042.vmdl",
     "_template_lump_ent_index": "56",
     "connections": [
       {
@@ -1963,8 +1963,8 @@
     "origin": "-11587.240234 1000.299805 23788.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5224",
-    "model": "maps/ze_diablo/entities/s4_start_lever_5224.vmdl",
+    "hammerUniqueId": "45040",
+    "model": "maps/ze_diablo/entities/s4_start_lever_45040.vmdl",
     "_template_lump_ent_index": "57",
     "connections": [
       {
@@ -2034,8 +2034,8 @@
     "origin": "-6881.640137 2027.200195 24557.759766",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4187",
-    "model": "maps/ze_diablo/entities/s4_blue_tp_4187.vmdl",
+    "hammerUniqueId": "43925",
+    "model": "maps/ze_diablo/entities/s4_blue_tp_43925.vmdl",
     "_template_lump_ent_index": "59",
     "connections": [
       {
@@ -2772,8 +2772,8 @@
     "origin": "-9629.640625 12231.200195 23783.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4294",
-    "model": "maps/ze_diablo/entities/s4_afk1_4294.vmdl",
+    "hammerUniqueId": "43923",
+    "model": "maps/ze_diablo/entities/s4_afk1_43923.vmdl",
     "_template_lump_ent_index": "72"
   },
   {
@@ -2803,18 +2803,18 @@
     "StartDisabled": "0",
     "targetname": "[PR#]s4_zm_item_relay",
     "classname": "logic_relay",
-    "origin": "-11559.439453 13264.929688 23637.580078",
-    "angles": "-0.000000 -90.000000 0.000000",
+    "origin": "-11527.439453 13200.929688 23613.580078",
+    "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7362",
+    "hammerUniqueId": "7363",
     "_template_lump_ent_index": "75",
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]Item_zombie_heal_maker",
+        "target": "[PR#]demon_item_maker",
         "input": "ForceSpawnAtEntityOrigin",
         "param": "!caller",
-        "delay": 0,
+        "delay": 0.009999999776482582,
         "limit": -1
       }
     ]
@@ -2826,18 +2826,18 @@
     "StartDisabled": "0",
     "targetname": "[PR#]s4_zm_item_relay",
     "classname": "logic_relay",
-    "origin": "-11527.439453 13200.929688 23613.580078",
-    "angles": "-0.000000 0.000000 0.000000",
+    "origin": "-11559.439453 13264.929688 23637.580078",
+    "angles": "-0.000000 -90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7363",
+    "hammerUniqueId": "7362",
     "_template_lump_ent_index": "76",
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]demon_item_maker",
+        "target": "[PR#]Item_zombie_heal_maker",
         "input": "ForceSpawnAtEntityOrigin",
         "param": "!caller",
-        "delay": 0.009999999776482582,
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -3133,8 +3133,8 @@
     "origin": "-6821.640137 9963.179688 23063.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11140",
-    "model": "maps/ze_diablo/entities/s4_afk2_11140.vmdl",
+    "hammerUniqueId": "43850",
+    "model": "maps/ze_diablo/entities/s4_afk2_43850.vmdl",
     "_template_lump_ent_index": "79"
   },
   {
@@ -3349,7 +3349,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]countdown_script",
+        "target": "[PR#]hud_js",
         "input": "RunScriptInput",
         "param": "no_40",
         "delay": 5,
@@ -3447,8 +3447,8 @@
     "origin": "2942.359863 15939.200195 14230.900391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7527",
-    "model": "maps/ze_diablo/entities/s4_check_for_win_7527.vmdl",
+    "hammerUniqueId": "44249",
+    "model": "maps/ze_diablo/entities/s4_check_for_win_44249.vmdl",
     "_template_lump_ent_index": "85",
     "connections": [
       {
@@ -3718,7 +3718,7 @@
         "output": "",
         "target": "[PR#]arena_model",
         "input": "SetPlaybackRate",
-        "param": "0.700000",
+        "param": "0.7",
         "delay": 5,
         "limit": -1
       },
@@ -4034,11 +4034,11 @@
     "wheels": "0",
     "orientationtype": "1",
     "velocitytype": "0",
+    "speed": "0",
     "startspeed": "355",
     "target": "[PR#]s4_elevator_path1",
-    "disableshadows": "0",
-    "speed": "0",
     "spawnflags": "530",
+    "disableshadows": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -4055,8 +4055,8 @@
     "origin": "-9941.640625 20696.781250 24507.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7294",
-    "model": "maps/ze_diablo/entities/s4_elevator_7294.vmdl",
+    "hammerUniqueId": "44749",
+    "model": "maps/ze_diablo/entities/s4_elevator_44749.vmdl",
     "_template_lump_ent_index": "93"
   }
 ]

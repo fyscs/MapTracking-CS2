@@ -12,8 +12,8 @@
     "origin": "277.000000 54.000000 237.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "22974",
-    "model": "maps/ze_diablo/entities/eat_ct_trigger_22974.vmdl",
+    "hammerUniqueId": "44217",
+    "model": "maps/ze_diablo/entities/eat_ct_trigger_44217.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -52,8 +52,8 @@
     "origin": "277.000000 54.000000 245.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "22958",
-    "model": "maps/ze_diablo/entities/eat_ct_adder_22958.vmdl",
+    "hammerUniqueId": "44215",
+    "model": "maps/ze_diablo/entities/eat_ct_adder_44215.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {

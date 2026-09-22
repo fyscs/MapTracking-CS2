@@ -95,8 +95,8 @@
     "origin": "336.000000 96.000000 106.900391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "10799",
-    "model": "maps/ze_diablo/entities/meteor_bridge_mover_10799.vmdl",
+    "hammerUniqueId": "44724",
+    "model": "maps/ze_diablo/entities/meteor_bridge_mover_44724.vmdl",
     "_template_lump_ent_index": "1"
   },
   {

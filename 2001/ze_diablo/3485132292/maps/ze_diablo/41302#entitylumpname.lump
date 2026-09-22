@@ -29,8 +29,8 @@
     "origin": "-5516.169922 25354.500000 17878.250000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4306",
-    "model": "maps/ze_diablo/entities/s2_meph_tower_end_button_4306.vmdl",
+    "hammerUniqueId": "45036",
+    "model": "maps/ze_diablo/entities/s2_meph_tower_end_button_45036.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -96,8 +96,8 @@
     "origin": "-6377.320312 763.000000 5003.021484",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3867",
-    "model": "maps/ze_diablo/entities/s2_sewtp5_3867.vmdl",
+    "hammerUniqueId": "43951",
+    "model": "maps/ze_diablo/entities/s2_sewtp5_43951.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -152,8 +152,8 @@
     "origin": "-6378.320312 2200.000000 8722.521484",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4990",
-    "model": "maps/ze_diablo/entities/s2_afk_tp_4990.vmdl",
+    "hammerUniqueId": "43961",
+    "model": "maps/ze_diablo/entities/s2_afk_tp_43961.vmdl",
     "_template_lump_ent_index": "3"
   },
   {
@@ -187,7 +187,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]countdown_script",
+        "target": "[PR#]hud_js",
         "input": "RunScriptInput",
         "param": "gateopen_20",
         "delay": 0,
@@ -514,10 +514,10 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]s2_tower_edgemaxxing_fire_particle",
     "classname": "info_particle_system",
-    "origin": "-4462.989746 25362.990234 17882.660156",
+    "origin": "-6610.370117 25362.990234 17882.660156",
     "angles": "-0.000000 -179.999985 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5503",
+    "hammerUniqueId": "5504",
     "_template_lump_ent_index": "11"
   },
   {
@@ -541,38 +541,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]s2_tower_edgemaxxing_fire_particle",
     "classname": "info_particle_system",
-    "origin": "-6610.370117 25362.990234 17882.660156",
+    "origin": "-4462.989746 25362.990234 17882.660156",
     "angles": "-0.000000 -179.999985 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5504",
+    "hammerUniqueId": "5503",
     "_template_lump_ent_index": "12"
-  },
-  {
-    "flag_as_weather": "0",
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "no_save": "0",
-    "start_active": "0",
-    "effect_name": "particles/diablov5_particles/meph_arena_fire.vpcf",
-    "clientSideEntity": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]s2_tower_edgemaxxing_fire_particle",
-    "classname": "info_particle_system",
-    "origin": "-5516.160156 26421.199219 17882.660156",
-    "angles": "-0.000000 -90.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5505",
-    "_template_lump_ent_index": "13"
   },
   {
     "flag_as_weather": "0",
@@ -599,6 +572,33 @@
     "angles": "-0.000000 -90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5506",
+    "_template_lump_ent_index": "13"
+  },
+  {
+    "flag_as_weather": "0",
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/diablov5_particles/meph_arena_fire.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]s2_tower_edgemaxxing_fire_particle",
+    "classname": "info_particle_system",
+    "origin": "-5516.160156 26421.199219 17882.660156",
+    "angles": "-0.000000 -90.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "5505",
     "_template_lump_ent_index": "14"
   },
   {
@@ -640,17 +640,17 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]meph_run_text1",
-        "input": "Display",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "meph_run_text1",
         "delay": 2,
         "limit": 1
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]meph_run_text2",
-        "input": "Display",
-        "param": "",
+        "target": "[PR#]hud_js",
+        "input": "RunScriptInput",
+        "param": "meph_run_text2",
         "delay": 6,
         "limit": 1
       },
@@ -792,22 +792,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]meph_run_text2particle",
-        "input": "Start",
-        "param": "",
-        "delay": 6,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]meph_run_text2particle",
-        "input": "Stop",
-        "param": "",
-        "delay": 15,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]s2_braz_particle",
         "input": "Stop",
         "param": "",
@@ -859,8 +843,8 @@
     "origin": "-4947.160156 14088.000000 4924.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "10241",
-    "model": "maps/ze_diablo/entities/s2_statue_rotate_10241.vmdl",
+    "hammerUniqueId": "44816",
+    "model": "maps/ze_diablo/entities/s2_statue_rotate_44816.vmdl",
     "_template_lump_ent_index": "16"
   },
   {
@@ -927,8 +911,8 @@
     "origin": "-9189.320312 2112.000000 4248.521484",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "9411",
-    "model": "maps/ze_diablo/entities/s2_sewer_gate_9411.vmdl",
+    "hammerUniqueId": "45271",
+    "model": "maps/ze_diablo/entities/s2_sewer_gate_45271.vmdl",
     "_template_lump_ent_index": "18",
     "connections": [
       {
@@ -1242,11 +1226,11 @@
     "wheels": "0",
     "orientationtype": "1",
     "velocitytype": "0",
+    "speed": "0",
     "startspeed": "30",
     "target": "[PR#]s2_intro_gates_path1",
-    "disableshadows": "0",
-    "speed": "0",
     "spawnflags": "530",
+    "disableshadows": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -1263,8 +1247,8 @@
     "origin": "-4931.169922 27000.000000 4135.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7418",
-    "model": "maps/ze_diablo/entities/s2_intro_gates_7418.vmdl",
+    "hammerUniqueId": "44687",
+    "model": "maps/ze_diablo/entities/s2_intro_gates_44687.vmdl",
     "_template_lump_ent_index": "26"
   },
   {
@@ -1373,38 +1357,11 @@
     "useLocalOffset": "0",
     "targetname": "[PR#]s2_particles",
     "classname": "info_particle_system",
-    "origin": "92.880127 30140.099609 10721.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5595",
-    "_template_lump_ent_index": "30"
-  },
-  {
-    "flag_as_weather": "0",
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "no_save": "0",
-    "start_active": "0",
-    "effect_name": "particles/diablov5_particles/ground_fire_flameup_1.vpcf",
-    "clientSideEntity": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]s2_particles",
-    "classname": "info_particle_system",
     "origin": "-3423.169922 30948.000000 9603.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3911",
-    "_template_lump_ent_index": "31"
+    "_template_lump_ent_index": "30"
   },
   {
     "flag_as_weather": "0",
@@ -1431,7 +1388,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4210",
-    "_template_lump_ent_index": "32"
+    "_template_lump_ent_index": "31"
   },
   {
     "flag_as_weather": "0",
@@ -1458,7 +1415,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4736",
-    "_template_lump_ent_index": "33"
+    "_template_lump_ent_index": "32"
   },
   {
     "flag_as_weather": "0",
@@ -1485,7 +1442,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5475",
-    "_template_lump_ent_index": "34"
+    "_template_lump_ent_index": "33"
   },
   {
     "flag_as_weather": "0",
@@ -1512,7 +1469,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10589",
-    "_template_lump_ent_index": "35"
+    "_template_lump_ent_index": "34"
   },
   {
     "flag_as_weather": "0",
@@ -1539,7 +1496,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9390",
-    "_template_lump_ent_index": "36"
+    "_template_lump_ent_index": "35"
   },
   {
     "flag_as_weather": "0",
@@ -1566,6 +1523,33 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4782",
+    "_template_lump_ent_index": "36"
+  },
+  {
+    "flag_as_weather": "0",
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "no_save": "0",
+    "start_active": "0",
+    "effect_name": "particles/diablov5_particles/ground_fire_flameup_1.vpcf",
+    "clientSideEntity": "0",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]s2_particles",
+    "classname": "info_particle_system",
+    "origin": "92.880127 30140.099609 10721.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "5595",
     "_template_lump_ent_index": "37"
   },
   {
@@ -1636,8 +1620,8 @@
     "origin": "-5516.169922 25356.000000 19179.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4673",
-    "model": "maps/ze_diablo/entities/s2_tower_clip_4673.vmdl",
+    "hammerUniqueId": "45128",
+    "model": "maps/ze_diablo/entities/s2_tower_clip_45128.vmdl",
     "_template_lump_ent_index": "39"
   },
   {
@@ -1775,25 +1759,6 @@
     "alternateticksfix": "0",
     "triggeronstarttouch": "0",
     "speed": "145",
-    "pushdir": "0.000000 225.000000 0.000000",
-    "filtername": "[PR#]MapFilterCT",
-    "spawnflags": "1",
-    "StartDisabled": "1",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]s2_tower_grav_trig",
-    "classname": "trigger_push",
-    "origin": "-4512.169922 26289.800781 17885.359375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5510",
-    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_5510.vmdl",
-    "_template_lump_ent_index": "43"
-  },
-  {
-    "FallingSpeedThreshold": "-150",
-    "alternateticksfix": "0",
-    "triggeronstarttouch": "0",
-    "speed": "145",
     "pushdir": "0.000000 135.000000 0.000000",
     "filtername": "[PR#]MapFilterCT",
     "spawnflags": "1",
@@ -1804,28 +1769,9 @@
     "origin": "-4512.169922 24417.169922 17885.359375",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5512",
-    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_5512.vmdl",
-    "_template_lump_ent_index": "44"
-  },
-  {
-    "FallingSpeedThreshold": "-150",
-    "alternateticksfix": "0",
-    "triggeronstarttouch": "0",
-    "speed": "145",
-    "pushdir": "0.000000 45.000000 0.000000",
-    "filtername": "[PR#]MapFilterCT",
-    "spawnflags": "1",
-    "StartDisabled": "1",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]s2_tower_grav_trig",
-    "classname": "trigger_push",
-    "origin": "-6520.169922 24417.169922 17885.359375",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5514",
-    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_5514.vmdl",
-    "_template_lump_ent_index": "45"
+    "hammerUniqueId": "44047",
+    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_44047.vmdl",
+    "_template_lump_ent_index": "43"
   },
   {
     "FallingSpeedThreshold": "-150",
@@ -1842,8 +1788,46 @@
     "origin": "-6520.169922 26289.800781 17885.359375",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5516",
-    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_5516.vmdl",
+    "hammerUniqueId": "44049",
+    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_44049.vmdl",
+    "_template_lump_ent_index": "44"
+  },
+  {
+    "FallingSpeedThreshold": "-150",
+    "alternateticksfix": "0",
+    "triggeronstarttouch": "0",
+    "speed": "145",
+    "pushdir": "0.000000 225.000000 0.000000",
+    "filtername": "[PR#]MapFilterCT",
+    "spawnflags": "1",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]s2_tower_grav_trig",
+    "classname": "trigger_push",
+    "origin": "-4512.169922 26289.800781 17885.359375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "44051",
+    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_44051.vmdl",
+    "_template_lump_ent_index": "45"
+  },
+  {
+    "FallingSpeedThreshold": "-150",
+    "alternateticksfix": "0",
+    "triggeronstarttouch": "0",
+    "speed": "145",
+    "pushdir": "0.000000 45.000000 0.000000",
+    "filtername": "[PR#]MapFilterCT",
+    "spawnflags": "1",
+    "StartDisabled": "1",
+    "useLocalOffset": "0",
+    "targetname": "[PR#]s2_tower_grav_trig",
+    "classname": "trigger_push",
+    "origin": "-6520.169922 24417.169922 17885.359375",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "44053",
+    "model": "maps/ze_diablo/entities/s2_tower_grav_trig_44053.vmdl",
     "_template_lump_ent_index": "46"
   },
   {
@@ -2022,8 +2006,8 @@
     "origin": "-395.169922 30128.000000 10359.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3895",
-    "model": "maps/ze_diablo/entities/s2_to_tower_tp_3895.vmdl",
+    "hammerUniqueId": "43935",
+    "model": "maps/ze_diablo/entities/s2_to_tower_tp_43935.vmdl",
     "_template_lump_ent_index": "55"
   },
   {
@@ -2575,8 +2559,8 @@
     "origin": "-5514.169922 25360.000000 17887.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "7669",
-    "model": "maps/ze_diablo/entities/s2_tower_edgemaxxing_fire_trig_7669.vmdl",
+    "hammerUniqueId": "44361",
+    "model": "maps/ze_diablo/entities/s2_tower_edgemaxxing_fire_trig_44361.vmdl",
     "_template_lump_ent_index": "79",
     "connections": [
       {
@@ -2605,8 +2589,8 @@
     "origin": "15888.830078 31165.625000 20739.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8748",
-    "model": "maps/ze_diablo/entities/s2_end_hurt2_8748.vmdl",
+    "hammerUniqueId": "44372",
+    "model": "maps/ze_diablo/entities/s2_end_hurt2_44372.vmdl",
     "_template_lump_ent_index": "80"
   },
   {
@@ -2706,7 +2690,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]countdown_script",
+        "target": "[PR#]hud_js",
         "input": "RunScriptInput",
         "param": "elevatora_35",
         "delay": 0,
@@ -3123,8 +3107,8 @@
     ]
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -3152,8 +3136,8 @@
     "origin": "-4943.169922 15868.000000 4328.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "17403",
-    "model": "maps/ze_diablo/entities/s2_intro_big_gate_mover2_17403.vmdl",
+    "hammerUniqueId": "44936",
+    "model": "maps/ze_diablo/entities/s2_intro_big_gate_mover2_44936.vmdl",
     "_template_lump_ent_index": "98",
     "connections": [
       {
@@ -3227,8 +3211,8 @@
     "origin": "-5516.669922 25353.500000 20377.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "9526",
-    "model": "maps/ze_diablo/entities/s2_meph_zm_cage_9526.vmdl",
+    "hammerUniqueId": "45189",
+    "model": "maps/ze_diablo/entities/s2_meph_zm_cage_45189.vmdl",
     "_template_lump_ent_index": "99"
   },
   {
@@ -3874,8 +3858,8 @@
     ]
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -3903,8 +3887,8 @@
     "origin": "-4171.169922 14088.000000 4358.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5612",
-    "model": "maps/ze_diablo/entities/s2_intro_big_gate_mover3_5612.vmdl",
+    "hammerUniqueId": "44956",
+    "model": "maps/ze_diablo/entities/s2_intro_big_gate_mover3_44956.vmdl",
     "_template_lump_ent_index": "104"
   },
   {
@@ -3944,8 +3928,8 @@
     "origin": "-9179.820312 3256.000000 4252.021484",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11174",
-    "model": "maps/ze_diablo/entities/s2_sewer_shortcuts_11174.vmdl",
+    "hammerUniqueId": "45264",
+    "model": "maps/ze_diablo/entities/s2_sewer_shortcuts_45264.vmdl",
     "_template_lump_ent_index": "105"
   },
   {
@@ -3980,8 +3964,8 @@
     "origin": "15220.830078 31325.625000 20066.900391",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11050",
-    "model": "maps/ze_diablo/entities/s2_ex_right_fall_hurt_11050.vmdl",
+    "hammerUniqueId": "44388",
+    "model": "maps/ze_diablo/entities/s2_ex_right_fall_hurt_44388.vmdl",
     "_template_lump_ent_index": "107"
   },
   {
@@ -4058,8 +4042,8 @@
     ]
   },
   {
-    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "fadescale": "1",
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
     "blockdamage": "99999.000000",
@@ -4087,8 +4071,8 @@
     "origin": "-4951.169922 12667.990234 4518.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "17405",
-    "model": "maps/ze_diablo/entities/s2_intro_big_gate_mover4_17405.vmdl",
+    "hammerUniqueId": "44938",
+    "model": "maps/ze_diablo/entities/s2_intro_big_gate_mover4_44938.vmdl",
     "_template_lump_ent_index": "111"
   }
 ]

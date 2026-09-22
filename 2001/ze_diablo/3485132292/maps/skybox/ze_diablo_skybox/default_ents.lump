@@ -109,6 +109,7 @@
     "hammerUniqueId": "3"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -143,6 +144,7 @@
     "model": "maps/skybox/ze_diablo_skybox/entities/prop_sky1_4.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -251,6 +253,7 @@
     "hammerUniqueId": "19"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -382,6 +385,7 @@
     "hammerUniqueId": "23"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -417,6 +421,7 @@
     "model": "maps/skybox/ze_diablo_skybox/entities/prop_sky2_24.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -447,6 +452,7 @@
     "model": "maps/skybox/ze_diablo_skybox/entities/prop_castlesky_wall_26.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -477,6 +483,7 @@
     "model": "maps/skybox/ze_diablo_skybox/entities/s3_water1_29.vmdl"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -581,6 +588,7 @@
     "hammerUniqueId": "36"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -1196,6 +1204,7 @@
     "hammerUniqueId": "58"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -1274,6 +1283,7 @@
     "hammerUniqueId": "93"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -1501,6 +1511,7 @@
     "hammerUniqueId": "99"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "vrad_brush_cast_shadows": "0",
     "ScriptedMovement": "0",
     "solidbsp": "0",
@@ -1597,6 +1608,7 @@
     "hammerUniqueId": "105"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -1680,6 +1692,7 @@
     "hammerUniqueId": "108"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -1758,6 +1771,7 @@
     "hammerUniqueId": "111"
   },
   {
+    "AlwaysSolidIgnoreNav": "0",
     "fadescale": "1",
     "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
@@ -2843,15 +2857,15 @@
     "hammerUniqueId": "142"
   },
   {
-    "lightprobetexture_dlshd": "maps\\skybox\\ze_diablo_skybox/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps\\skybox\\ze_diablo_skybox/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/skybox/ze_diablo_skybox/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/skybox/ze_diablo_skybox/lightmaps/env_light_probe_volume_atlas.vtex",
     "useLocalOffset": "0",
     "StartDisabled": "0",
     "cubemaptexture": "maps/skybox/ze_diablo_skybox/cubemaps/env_cubemap_array.vtex",
     "bakefarz": "4096.000000",
     "box_mins": "-8838.000000 -7703.750000 -4279.500000",
     "box_maxs": "8838.000000 7703.637207 4279.500000",
-    "voxel_size": "48.000000",
+    "voxel_size": "48.0",
     "flood_fill": "1",
     "voxelize": "1",
     "indoor_outdoor_level": "0",
