@@ -234,7 +234,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "800",
+    "speed": "700",
     "pushdir": "0.000000 0.000000 0.000000",
     "filtername": "[PR#]zombies",
     "spawnflags": "1",
@@ -252,7 +252,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "800",
+    "speed": "700",
     "pushdir": "0.000000 270.000000 0.000000",
     "filtername": "[PR#]zombies",
     "spawnflags": "1",
@@ -270,7 +270,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "800",
+    "speed": "700",
     "pushdir": "0.000000 180.000000 0.000000",
     "filtername": "[PR#]zombies",
     "spawnflags": "1",
@@ -288,7 +288,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "800",
+    "speed": "700",
     "pushdir": "0.000000 89.000000 0.000000",
     "filtername": "[PR#]zombies",
     "spawnflags": "1",
