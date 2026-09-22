@@ -999,6 +999,6 @@ function AddHP(addAmount) {
 }
 const EXTERNAL_INPUT_ALIASES = [
     input('SetSelf', 'SetSelf()', (inputData) => SetSelf(inputData), 'new'),
-    ...[70, 80, 100, 150, 220].map((amount) => input(`AddHP_${amount}`, `AddHP(${amount})`, () => AddHP(amount), 'vmf+stripper')),
+    ...[70, 72, 100, 135, 198].map((amount) => input(`AddHP_${amount}`, `AddHP(${amount})`, () => AddHP(amount), 'vmf+stripper')),
 ];
 registerInputAliases('ze_diddle/shieldhp', EXTERNAL_INPUT_ALIASES);

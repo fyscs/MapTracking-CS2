@@ -72422,6 +72422,38 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Map_HpAdder_Ord_lvl_01_boss_break_EX",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Map_HpAdder_Ord_lvl_02_boss_break_EX",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Map_HpAdder_X69XOrd_main_large_diglett_EX",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Map_HpAdder_X69XOrd_main_mid_diglett_EX",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },

@@ -940,7 +940,8 @@ function scheduleScript(prefix, callback, delay = 0, inputDataOrActivator = {}, 
 function installScheduler() {
     Instance.SetNextThink(Instance.GetGameTime());
     Instance.SetThink(() => {
-        Instance.SetNextThink(Instance.GetGameTime());
+        const now = Instance.GetGameTime();
+        Instance.SetNextThink(now);
         runSchedulerTick();
     });
 }
@@ -1956,16 +1957,9 @@ function PickStage() {
         let r = RandomInt(0, stagepool.length - 1);
         CheckAutoSlay(r);
         stage = stagepool[r];
-        stagepool.splice(r, 1);
     }
     else {
         stage = stageChosen;
-        for (let i = 0; i < stagepool.length; i++) {
-            if (stagepool[i] == stage) {
-                stagepool.splice(i, 1);
-                break;
-            }
-        }
     }
     if (extreme) {
         KillZombieItems();
@@ -3231,7 +3225,6 @@ modify:
 const extreme_extracakes_in_weeb = 2; //3 in #3
 const extreme_shreks_in_weeb = 5;
 function ExtremeEvent(inputData, index) {
-    Instance.Msg(`[ExtremeEvent] case ${index} triggered at ${Instance.GetGameTime()}\n`);
     const { activator, caller } = inputData;
     if (!extreme && index != 71)
         //case 71 fixes a thing needed for normal as well
@@ -3713,8 +3706,8 @@ function ExtremeEvent(inputData, index) {
             //spawn a shrek at pos:(-14182,15624,13593)
             scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(-14182, 15624, 13593));
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 0.55, null);
             }, 60.0, null, null);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 60.55, null);
             //spawn a couple vaginafaces at pos:(-14206,15437,13704),(-14239,15867,13705)
             ExevSpawn('s_vaginaface', Vector(-14206, 15437, 13704));
             ExevSpawn('s_vaginaface', Vector(-14239, 15867, 13705));
@@ -3874,11 +3867,9 @@ function ExtremeEvent(inputData, index) {
             //spawn 2 shreks at pos:(-12960,12967,14157),(-11623,13996,14418)
             scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(-12960, 12967, 14157));
-            }, 20.0, null, null);
-            scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(-11623, 13996, 14418));
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 0.55, null);
             }, 20.0, null, null);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 20.55, null);
             //'Ord_lvl_01_door_03' opens at 10s, close it at 11, then open it at 12, also print some server message about it
             EntFire('Ord_lvl_01_door_03', 'Close', '', 11.0, null);
             EntFire('Ord_lvl_01_door_03', 'Open', '', 12.0, null);
@@ -4103,11 +4094,9 @@ function ExtremeEvent(inputData, index) {
             //spawn shreks at pos:(-13710,9620,14147),(-11959,9716,14168)
             scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(-13710, 9620, 14147));
-            }, 25.0, null, null);
-            scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(-11959, 9716, 14168));
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 0.55, null);
             }, 25.0, null, null);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 25.55, null);
             //spawn vaginafaces at pos:(-13728,9745,14195),(-11980,9033,14176),(-11695,8838,14193),(-12827,7848,14240)
             ExevSpawn('s_vaginaface', Vector(-13728, 9745, 14195));
             ExevSpawn('s_vaginaface', Vector(-11980, 9033, 14176));
@@ -4238,14 +4227,10 @@ function ExtremeEvent(inputData, index) {
             //spawn shreks at pos:(13608,6987,-1511),(11540,7006,-73),(13180,6767,2224)
             scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(13608, 6987, -1511));
-            }, 85.0, null, null);
-            scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(11540, 7006, -73));
-            }, 85.0, null, null);
-            scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(13180, 6767, 2224));
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 0.55, null);
             }, 85.0, null, null);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 85.55, null);
             //start spawning jump/crouchlasers after 20s until 50s at pos:(14208,6432,-2288/-2232),Y:90
             exev_spawns.splice(0);
             exev_spawns.push(ExSpawn('slash_spawner', Vector(14350, 6432, -2288), Vector(0, 90, 0)));
@@ -4267,8 +4252,8 @@ function ExtremeEvent(inputData, index) {
             //spawn a shrek at pos:(15415,2229,1908)
             scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(15415, 2229, 1908));
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 0.55, null);
             }, 55.0, null, null);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 55.55, null);
             //break 'finale_breakladder2' at 60.0s (a bit earlier than usual)
             EntFire('finale_breakladder2', 'Break', '', 60.0, null);
             break;
@@ -4287,9 +4272,11 @@ function ExtremeEvent(inputData, index) {
             ExevSpawn('s_vaginaface', Vector(13977, -2292, 6241));
             ExevSpawn('s_vaginaface', Vector(14095, -2826, 7359));
             //spawn a shrek after 15.0s at pos:(13067,-1213,6219)
-            ExevSpawn('X69Xluff_shrekspawn', Vector(13067, -1213, 6219), null, 15.0);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 15.55, null);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 16.0, null);
+            scheduleInternalScript(() => {
+                ExevSpawn('X69Xluff_shrekspawn', Vector(13067, -1213, 6219));
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 0.55, null);
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 1.0, null);
+            }, 15.0, null, null);
             //spawn a vaginaface after 8.0s at pos:(15817,-3188,6738)
             ExevSpawn('s_vaginaface', Vector(15817, -3188, 6738), null, 8.0);
             break;
@@ -4532,8 +4519,8 @@ function ExtremeEvent(inputData, index) {
             //spawn shrek at pos:(-14598,-10906,2631)
             scheduleInternalScript(() => {
                 ExevSpawn('X69Xluff_shrekspawn', Vector(-14598, -10906, 2631));
+                EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 0.55, null);
             }, 40.0, null, null);
-            EntFire('X69Xluff_npc_phys2gg*', 'FireUser2', '', 40.55, null);
             //spawn a yellow laser at 17.0s at pos:(-11291,-7753,1731)
             ExevSpawn('blobblaser_tem1', Vector(-11291, -7753, 1731), null, 17.0);
             break;
@@ -4697,6 +4684,8 @@ var exev_spawns = []; //ExSpawn(template,pos,!rot);
 var exev_spawnrate = 0.5; //spawn/tickrate for the spawns/spawnbounds^ (stops ticking when there's no spawns/spawnbounds)
 var exev_spawnticking = false;
 var exev_spawnqueue = []; //spawn-queue for time-based spawns
+let _lastQueueTickTime = 0;
+let _queueTickRunning = false;
 function ExevRoundStart() {
     //reset states (triggered every round start IF 'extreme' is TRUE)
     for (const sm of exev_spawnmakers) {
@@ -4721,8 +4710,9 @@ function ExevRoundStart() {
     exev_spawnqueue = [];
     exev_spawnticking = false;
     exev_spawnrate = 0.1;
+    _lastQueueTickTime = 0;
     ExevSpawnTick();
-    ExevSpawnQueueTick();
+    StartExevSpawnQueueTick();
 }
 function ExevSpawnTick() {
     if (exev_spawns.length <= 0 && exev_spawnbounds.length <= 0) {
@@ -4743,13 +4733,31 @@ function ExevSpawnTick() {
         ExevSpawn(spb.template, sp_pos, spb.rot);
     }
 }
+/**
+ * 只允许存在一个自循环的入口。
+ * 重复调用是安全的：如果已经有循环在跑，直接返回。
+ */
+function StartExevSpawnQueueTick() {
+    if (_queueTickRunning)
+        return;
+    _queueTickRunning = true;
+    ExevSpawnQueueTick();
+}
+/**
+ * 队列 tick 循环体。不要把本函数当作"启动"入口直接调用，
+ * 应当调用 StartExevSpawnQueueTick()。
+ */
 function ExevSpawnQueueTick() {
+    const now = Instance.GetGameTime();
+    const dt = _lastQueueTickTime > 0 ? now - _lastQueueTickTime : 0.0;
+    _lastQueueTickTime = now;
     scheduleInternalScript(() => {
         ExevSpawnQueueTick();
     }, 0.01, null, null);
     let cleaned = true;
     for (const q of exev_spawnqueue) {
-        if (Instance.GetGameTime() >= q.time) {
+        q.time -= dt;
+        if (q.time <= 0.0) {
             cleaned = false;
             ExevSpawn(q.spawn.template, q.spawn.pos, q.spawn.rot);
         }
@@ -4757,7 +4765,7 @@ function ExevSpawnQueueTick() {
     while (!cleaned) {
         cleaned = true;
         for (let i = 0; i < exev_spawnqueue.length; i++) {
-            if (Instance.GetGameTime() >= exev_spawnqueue[i].time) {
+            if (exev_spawnqueue[i].time <= 0.0) {
                 cleaned = false;
                 exev_spawnqueue.splice(i, 1)[0];
                 break;
@@ -4769,8 +4777,7 @@ function ExevSpawn(template, pos, rot = Vector(0, 0, 0), time = 0.0) {
     if (rot == null)
         rot = Vector(0, 0, 0);
     if (time > 0.0) {
-        const targetTime = Instance.GetGameTime() + time; // change to abs time
-        exev_spawnqueue.push(ExSpawnQueue(ExSpawn(template, pos, rot), targetTime));
+        exev_spawnqueue.push(ExSpawnQueue(ExSpawn(template, pos, rot), time));
         return;
     }
     forceSpawnTemplate(template, pos, rot);

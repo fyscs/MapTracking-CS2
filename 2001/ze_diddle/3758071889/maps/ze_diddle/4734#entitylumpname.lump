@@ -23,7 +23,7 @@
     "nodamageforces": "0",
     "explosion": "0",
     "material": "8",
-    "health": "2500",
+    "health": "2000",
     "propdata": "0",
     "spawnflags": "0",
     "useLocalOffset": "0",
@@ -63,7 +63,7 @@
         "output": "OnUser1",
         "target": "[PR#]Map_Shieldhp",
         "input": "RunScriptInput",
-        "param": "AddHP_150",
+        "param": "AddHP_135",
         "delay": 0.05000000074505806,
         "limit": 1
       }

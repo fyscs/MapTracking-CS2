@@ -1244,7 +1244,6 @@ function StartLaser() {
             player.GetHealth() > 0 &&
             distance(getOrigin(player), getOrigin(baby)) <= TARGET_RANGE) {
             const playerOrigin = player.GetEyePosition();
-            // 忽略列表：baby、玩家自己、所有盾牌墙
             const ignoreList = [baby, player, ...shields];
             if (TraceLine(playerOrigin, getOrigin(laserEntity), ignoreList) >= 1.0) {
                 candidates.push(player);
@@ -1252,12 +1251,14 @@ function StartLaser() {
         }
     }
     if (candidates.length <= 0) {
-        scheduleScript('ze_diddle/diddlebaby', () => StartLaser(), 0.5);
+        // 空闲时每 2 秒搜索一次（原为 0.5 秒）
+        scheduleScript('ze_diddle/diddlebaby', () => StartLaser(), 2.0);
         return;
     }
     const target = candidates[candidates.length == 1 ? 0 : RandomInt(0, candidates.length - 1)];
     if (!isValidEntity(target) || target.GetHealth() <= 0) {
-        scheduleScript('ze_diddle/diddlebaby', () => StartLaser(), 0.5);
+        // 目标无效时也每 2 秒重试
+        scheduleScript('ze_diddle/diddlebaby', () => StartLaser(), 2.0);
         return;
     }
     const targetOrigin = getOrigin(target);
@@ -1267,6 +1268,7 @@ function StartLaser() {
     EntFireByHandle(laser, 'Stop', '', 3.1, null, null);
     EntFireByHandle(spawner, 'Forcespawn', '', 0.1, null, null);
     moving = true;
+    // 攻击后 3.1 秒停止移动，并在 3.11 秒后重新准备激光（即重新搜索）
     scheduleScript('ze_diddle/diddlebaby', () => {
         moving = false;
     }, 3.1);
