@@ -26,7 +26,7 @@ const MOVE_EPS = 0.5;   // seuil (units) : en dessous on ne re-téléporte pas l
 
 // ---------------- Config météores ----------------
 // Zone de spawn aléatoire (coins : -10248 -180 -320  et  -12280 -180 504)
-const MET_X = [-12280, -10248];   // plage X
+const MET_X = [-12536, -9992];   // plage X
 const MET_Y = -180;               // Y fixe
 const MET_Z = [-320, 504];        // plage Z
 const FADE_DUR = 1.0;             // durée du fade-in alpha (sec)

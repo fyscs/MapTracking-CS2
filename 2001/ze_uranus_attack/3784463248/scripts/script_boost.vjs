@@ -4,8 +4,9 @@
 import { Instance } from "cs_script/point_script";
 
 // =====================================================================
-//  BOOST PADS — un trigger appelle le script, on FORCE la vélocité du joueur.
-//  Câblage : trigger OnStartTouch -> RunScriptInput -> "boostLeft" ou "boostRight"
+//  BOOST PADS — un trigger force la vélocité du joueur, avec cooldown.
+//  Câblage : trigger OnStartTouch -> RunScriptInput -> "boostLeft" / "boostRight" / "boostFwd" / "boostBack"
+//  Cooldown : chaque direction ne peut relancer un même joueur qu'une fois toutes les COOLDOWN sec.
 // =====================================================================
 
 const V_LEFT  = { x: -350, y:   0, z: 300 };  // trigger 1
@@ -13,14 +14,28 @@ const V_RIGHT = { x:  350, y:   0, z: 300 };  // trigger 2
 const V_FWD   = { x:   0, y:  350, z: 300 };  // trigger 3
 const V_BACK  = { x:   0, y: -350, z: 300 };  // trigger 4
 
-function setVelocity(pawn, v) {
+const COOLDOWN = 0.5;                 // secondes entre deux boosts d'une même direction pour un joueur
+const lastBoost = new Map();          // clé "slot:dir" -> dernier temps de boost
+
+function slotOf(pawn) {
+  for (const c of Instance.GetAllPlayerControllers())
+    if (c.GetPlayerPawn() === pawn) return c.GetPlayerSlot();
+  return -1;
+}
+
+function boost(pawn, dir, v) {
   if (!pawn || !pawn.IsValid()) return;
-  // Teleport avec velocity seul : la position/les angles ne bougent pas,
-  // seule la vélocité absolue est remplacée.
+  const slot = slotOf(pawn);
+  const key = slot + ":" + dir;
+  const now = Instance.GetGameTime();
+  const last = lastBoost.get(key);
+  if (last !== undefined && (now - last) < COOLDOWN) return;   // encore en cooldown -> on ignore
+  lastBoost.set(key, now);
+  // Teleport avec velocity seul : position/angles inchangés, vélocité absolue remplacée.
   pawn.Teleport({ velocity: { x: v.x, y: v.y, z: v.z } });
 }
 
-Instance.OnScriptInput("boostLeft",  (io) => setVelocity(io.activator, V_LEFT));
-Instance.OnScriptInput("boostRight", (io) => setVelocity(io.activator, V_RIGHT));
-Instance.OnScriptInput("boostFwd",   (io) => setVelocity(io.activator, V_FWD));
-Instance.OnScriptInput("boostBack",  (io) => setVelocity(io.activator, V_BACK));
+Instance.OnScriptInput("boostLeft",  (io) => boost(io.activator, "L", V_LEFT));
+Instance.OnScriptInput("boostRight", (io) => boost(io.activator, "R", V_RIGHT));
+Instance.OnScriptInput("boostFwd",   (io) => boost(io.activator, "F", V_FWD));
+Instance.OnScriptInput("boostBack",  (io) => boost(io.activator, "B", V_BACK));
