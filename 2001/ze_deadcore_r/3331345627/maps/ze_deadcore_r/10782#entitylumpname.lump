@@ -998,6 +998,7 @@
     "damagetype": "8",
     "damagecap": "50",
     "damage": "50",
+    "filtername": "[PR#]gap",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -1009,7 +1010,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10843",
     "model": "maps/ze_deadcore_r/entities/enemy4_attack_hurt1_10843.vmdl",
-    "_template_lump_ent_index": "4"
+    "_template_lump_ent_index": "4",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
+        "limit": -1
+      }
+    ]
   },
   {
     "thinkalways": "0",
@@ -1019,6 +1038,7 @@
     "damagetype": "8",
     "damagecap": "50",
     "damage": "50",
+    "filtername": "[PR#]gap",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -1030,7 +1050,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10802",
     "model": "maps/ze_deadcore_r/entities/enemy4_attack_hurt2_10802.vmdl",
-    "_template_lump_ent_index": "5"
+    "_template_lump_ent_index": "5",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
+        "limit": -1
+      }
+    ]
   },
   {
     "thinkalways": "0",
@@ -1040,6 +1078,7 @@
     "damagetype": "8",
     "damagecap": "50",
     "damage": "50",
+    "filtername": "[PR#]gap",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -1051,7 +1090,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "10887",
     "model": "maps/ze_deadcore_r/entities/enemy4_attack_hurt3_10887.vmdl",
-    "_template_lump_ent_index": "6"
+    "_template_lump_ent_index": "6",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
+        "limit": -1
+      }
+    ]
   },
   {
     "fadescale": "1",

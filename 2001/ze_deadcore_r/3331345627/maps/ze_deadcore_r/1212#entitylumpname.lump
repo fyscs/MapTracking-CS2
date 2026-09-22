@@ -2006,7 +2006,7 @@
     "damagetype": "8",
     "damagecap": "50",
     "damage": "50",
-    "filtername": "[PR#]human",
+    "filtername": "[PR#]gap",
     "spawnflags": "1",
     "StartDisabled": "0",
     "useLocalOffset": "0",
@@ -2034,6 +2034,22 @@
         "input": "Disable",
         "param": "",
         "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
         "limit": -1
       }
     ]

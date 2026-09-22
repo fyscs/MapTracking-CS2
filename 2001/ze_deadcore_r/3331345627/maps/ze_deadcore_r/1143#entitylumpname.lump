@@ -1160,7 +1160,7 @@
     "damagetype": "8",
     "damagecap": "40",
     "damage": "40",
-    "filtername": "[PR#]human",
+    "filtername": "[PR#]gap",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -1172,7 +1172,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1139",
     "model": "maps/ze_deadcore_r/entities/enemy2_hurt1_1139.vmdl",
-    "_template_lump_ent_index": "16"
+    "_template_lump_ent_index": "16",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
+        "limit": -1
+      }
+    ]
   },
   {
     "thinkalways": "0",
@@ -1182,7 +1200,7 @@
     "damagetype": "8",
     "damagecap": "40",
     "damage": "40",
-    "filtername": "[PR#]human",
+    "filtername": "[PR#]gap",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -1194,7 +1212,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1162",
     "model": "maps/ze_deadcore_r/entities/enemy2_hurt1_1162.vmdl",
-    "_template_lump_ent_index": "17"
+    "_template_lump_ent_index": "17",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
+        "limit": -1
+      }
+    ]
   },
   {
     "cpoint7_parent": "0",

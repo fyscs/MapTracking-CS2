@@ -57,7 +57,7 @@
     "damagetype": "8",
     "damagecap": "30",
     "damage": "30",
-    "filtername": "[PR#]human",
+    "filtername": "[PR#]gap",
     "spawnflags": "4097",
     "StartDisabled": "0",
     "useLocalOffset": "0",
@@ -72,19 +72,19 @@
     "_template_lump_ent_index": "1",
     "connections": [
       {
-        "output": "OnStartTouch",
+        "output": "OnHurtPlayer",
         "target": "!activator",
-        "input": "KeyValue",
-        "param": "targetname player",
-        "delay": 0.30000001192092896,
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
         "limit": -1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnHurtPlayer",
         "target": "!activator",
-        "input": "KeyValue",
-        "param": "targetname damaged",
-        "delay": 0,
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
         "limit": -1
       }
     ]

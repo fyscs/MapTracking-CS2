@@ -57,7 +57,7 @@
     "damagetype": "8",
     "damagecap": "100",
     "damage": "100",
-    "filtername": "[PR#]human",
+    "filtername": "[PR#]gap",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
@@ -68,7 +68,25 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "505",
     "model": "maps/ze_deadcore_r/entities/radiation_meteor_hurt2_505.vmdl",
-    "_template_lump_ent_index": "1"
+    "_template_lump_ent_index": "1",
+    "connections": [
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "gap:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "[PR#]gap",
+        "delay": 0.25,
+        "limit": -1
+      }
+    ]
   },
   {
     "cpoint7_parent": "0",

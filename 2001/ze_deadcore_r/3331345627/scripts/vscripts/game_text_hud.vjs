@@ -1061,7 +1061,7 @@ const LYRICS = {
 		style: {
 			x: 50, y: 78, size: 44, sub: 0,
 			brightness: 1.5, font: FONT.STRATUM_MONO_BOLD,
-			fadeIn: 0.3, fadeOut: 0.4, ruby: 50, gap: 0,
+			fadeIn: 0.5, fadeOut: 0.5, ruby: 50, gap: 0,
 		},
 		lines: [
 			{ t: "Feariiteiru wa\n御伽話(フェアリーテイル)は", d: 28.8 },
@@ -1079,15 +1079,14 @@ const LYRICS = {
 			{ t: "Saa ataeyou seigi wo\nさぁ与(あた)えよう正義(せいぎ)を", d: 82.7 },
 			{ t: "Kowashite kowasareru mae ni\n壊(こわ)して壊(こわ)される前(まえ)に", d: 85.3 },
 			{ t: "Inga no daishou wo harai\n因果(いんが)の代償(だいしょう)を払(はら)い", d: 87.9 },
-			{ t: "Tomo ni yukou na mo naki\n共(とも)に行(ゆ)こう 名(な)もなき", d: 89.7 },
-			{ t: "Kaibutsu\n怪物(かいぶつ)", d: 92.5 },
+			{ t: "Tomo ni yukou na mo naki kaibutsu\n共(とも)に行(ゆ)こう 名(な)もなき怪物(かいぶつ)", d: 89.7 },
 			{ t: "Kuroi ame furase kono sora\n黒(くろ)い雨(あめ) 降(ふ)らせこの空(そら)", d: 93.5 },
 			{ t: "Watashi wa nozomarenai mono\n私(わたし)は望(のぞ)まれないもの", d: 96.2 },
 			{ t: "Hibi wareta noirooze\nひび割(わ)れたノイローゼ", d: 99.0 },
-			{ t: "Aisu douzai no boukansha tachi ni\n愛(あい)す同罪(どうざい)の傍観者達(ぼうかんしゃたち)に", d: 101.2 },
+			{ t: "Aisu douzai no boukansha tachi ni\n愛(あい)す同罪(どうざい)の傍観者達(ぼうかんしゃたち)に", d: 100.7 },
 			{ t: "Saa ima furue seigi wo\nさぁ今(いま)震(ふる)え正義(せいぎ)を", d: 104.5 },
 			{ t: "Kesenai kizu wo dakishimete\n消(け)せない傷(きず)を抱(だ)きしめて", d: 107.0 },
-			{ t: "Kono karada wo uke ire\nこの身体(しんたい)を受(う)け入(い)れ", d: 109.4 },
+			{ t: "Kono karada wo uke ire\nこの身体(カラダ)を受(う)け入(い)れ", d: 109.4 },
 			{ t: "Tomo ni yukou namae no nai\n共(とも)に行(ゆ)こう名前(なまえ)のない", d: 111.9 },
 		],
 	},
@@ -1096,7 +1095,7 @@ const LYRICS = {
 		style: {
 			x: 50, y: 78, size: 40,
 			brightness: 1.5, font: FONT.STRATUM_MONO_BOLD,
-			fadeIn: 0.3, fadeOut: 0.4,
+			fadeIn: 0.5, fadeOut: 0.5,
 		},
 		lines: [
 			{ t: "A dying fairy tale", d: 27.8 },
