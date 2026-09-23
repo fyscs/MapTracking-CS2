@@ -3,9 +3,14 @@
 
 import { Instance } from "cs_script/point_script";
 
+// ============================================================
+// Skip State
+// ============================================================
+
 let skipA = false;
 let skipB = false;
 let skipC = false;
+let skipD = false;
 
 let currentStage = "";
 
@@ -59,6 +64,14 @@ function TriggerStage(stage)
                 delay: 0.0
             });
             break;
+
+        case "RED_D":
+            Instance.EntFireAtName({
+                name: "stage_d_red_relay",
+                input: "Trigger",
+                delay: 0.0
+            });
+            break;
     }
 }
 
@@ -68,35 +81,42 @@ function TriggerStage(stage)
 
 function SelectStage()
 {
-    // A + B + C → D
+    // Skip A + B + C + D → RED D
+    if (skipA && skipB && skipC && skipD)
+    {
+        TriggerStage("RED_D");
+        return;
+    }
+
+    // Skip A + B + C → D
     if (skipA && skipB && skipC)
     {
         TriggerStage("D");
         return;
     }
 
-    // A + B → C
+    // Skip A + B → C
     if (skipA && skipB)
     {
         TriggerStage("C");
         return;
     }
 
-    // A + C → B
+    // Skip A + C → B
     if (skipA && skipC)
     {
         TriggerStage("B");
         return;
     }
 
-    // B + C → A
+    // Skip B + C → A
     if (skipB && skipC)
     {
         TriggerStage("A");
         return;
     }
 
-    // Only A Skip → B / C
+    // Skip A → B or C
     if (skipA)
     {
         if (RandomInt(0, 1) == 0)
@@ -107,7 +127,7 @@ function SelectStage()
         return;
     }
 
-    // Only B Skip → A / C
+    // Skip B → A or C
     if (skipB)
     {
         if (RandomInt(0, 1) == 0)
@@ -118,7 +138,7 @@ function SelectStage()
         return;
     }
 
-    // Only C Skip → A / B
+    // Skip C → A or B
     if (skipC)
     {
         if (RandomInt(0, 1) == 0)
@@ -129,15 +149,21 @@ function SelectStage()
         return;
     }
 
-    // Nothing, Non_Skip → A / B / C
+    // Non Skip → A or B or C
     let random = RandomInt(0, 2);
 
     if (random == 0)
+    {
         TriggerStage("A");
+    }
     else if (random == 1)
+    {
         TriggerStage("B");
+    }
     else
+    {
         TriggerStage("C");
+    }
 }
 
 // ============================================================
@@ -179,6 +205,15 @@ function SkipC()
 }
 
 // ============================================================
+// Skip D
+// ============================================================
+
+function SkipD()
+{
+    skipD = true;
+}
+
+// ============================================================
 // Reset
 // ============================================================
 
@@ -187,15 +222,9 @@ function Reset()
     skipA = false;
     skipB = false;
     skipC = false;
+    skipD = false;
 
     currentStage = "";
-
-    Instance.EntFireAtName({
-        name: "extra_counter",
-        input: "SetValue",
-        value: "0",
-        delay: 0.0
-    });
 }
 
 // ============================================================
@@ -220,6 +249,11 @@ Instance.OnScriptInput("Skip_B", () =>
 Instance.OnScriptInput("Skip_C", () =>
 {
     SkipC();
+});
+
+Instance.OnScriptInput("Skip_D", () =>
+{
+    SkipD();
 });
 
 Instance.OnScriptInput("Reset", () =>
