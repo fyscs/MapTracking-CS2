@@ -3,7 +3,7 @@
 <!-- xml reconstructed from compiled AST -->
 <root>
     <styles>
-        <include src="s2r://panorama/styles/custom_game/map_gametext.vcss_c" />
+        <include src="s2r://panorama/styles/custom_game/map_gametext.vcss" />
     </styles>
     <Panel class="Root">
         <Panel id="hud" class="Hud">

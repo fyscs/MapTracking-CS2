@@ -5,11 +5,13 @@
   {
     "spawnflags": "0",
     "health": "0",
+    "target": "",
     "PassthroughCaller": "0",
     "FastRetrigger": "1",
     "TriggerOnce": "0",
     "StartDisabled": "0",
     "targetname": "[PR#]TP_manager",
+    "vscripts": "",
     "classname": "logic_relay",
     "origin": "16.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
