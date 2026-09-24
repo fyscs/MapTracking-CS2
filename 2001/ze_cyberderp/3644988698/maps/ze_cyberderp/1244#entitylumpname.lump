@@ -16,6 +16,7 @@
     "renderamt": "255",
     "rendermode": "kRenderNormal",
     "renderfx": "kRenderFxNone",
+    "vscripts": "",
     "targetname": "[PR#]cyber_trampolino_nador",
     "classname": "weapon_hegrenade",
     "origin": "0.000000 0.000000 0.000000",
