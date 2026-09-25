@@ -3,7 +3,16 @@
 
 [
   {
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
     "targetname": "[PR#]item_tlbk_water",
     "classname": "func_water",
     "origin": "-1.512695 0.478516 0.875000",
