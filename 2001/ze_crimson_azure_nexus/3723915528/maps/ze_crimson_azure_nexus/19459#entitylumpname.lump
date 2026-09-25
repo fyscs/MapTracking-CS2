@@ -126,6 +126,14 @@
         "param": "",
         "delay": 8,
         "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]z_fog_particles2",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -204,6 +212,14 @@
         "input": "Stop",
         "param": "",
         "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]z_fog_particles2",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
         "limit": -1
       }
     ]

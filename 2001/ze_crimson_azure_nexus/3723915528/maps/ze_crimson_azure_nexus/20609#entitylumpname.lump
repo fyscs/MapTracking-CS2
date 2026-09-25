@@ -4,8 +4,8 @@
 [
   {
     "triggeronstarttouch": "0",
-    "speed": "650",
-    "pushdir": "0.000000 0.000000 0.000000",
+    "speed": "800",
+    "pushdir": "-10.000000 0.000000 0.000000",
     "filtername": "[PR#]king_filter",
     "spawnflags": "4097",
     "globalname": "",
