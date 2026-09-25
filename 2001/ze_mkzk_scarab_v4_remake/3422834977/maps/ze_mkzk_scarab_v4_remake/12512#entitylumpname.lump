@@ -7,6 +7,7 @@
     "FastRetrigger": "0",
     "TriggerOnce": "0",
     "StartDisabled": "0",
+    "vscripts": "",
     "targetname": "[PR#]runsfx2i\u00260000",
     "classname": "logic_relay",
     "origin": "-32.000000 0.000000 0.000000",

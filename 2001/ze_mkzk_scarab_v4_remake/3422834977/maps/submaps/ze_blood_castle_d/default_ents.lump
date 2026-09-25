@@ -1107,68 +1107,12 @@
     "effect_name": "particles/explosions_fx/explosion_c4_500.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "targetname": "[PR#]expl_3",
-    "classname": "info_particle_system",
-    "origin": "11627.839844 -1823.625000 -13720.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5298"
-  },
-  {
-    "rendermode": "5",
-    "spawnflags": "65",
-    "fireballsprite": "sprites/zerogxplode.spr",
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "-1",
-    "no_save": "0",
-    "start_active": "0",
-    "effect_name": "particles/explosions_fx/explosion_c4_500.vpcf",
-    "clientSideEntity": "0",
-    "useLocalOffset": "0",
     "targetname": "[PR#]expl_4",
     "classname": "info_particle_system",
     "origin": "11672.785156 -1821.876953 -13720.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5299"
-  },
-  {
-    "rendermode": "5",
-    "spawnflags": "65",
-    "fireballsprite": "sprites/zerogxplode.spr",
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "-1",
-    "no_save": "0",
-    "start_active": "0",
-    "effect_name": "particles/explosions_fx/explosion_c4_500.vpcf",
-    "clientSideEntity": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]expl_5",
-    "classname": "info_particle_system",
-    "origin": "11711.405273 -1822.296997 -13720.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5300"
   },
   {
     "rendermode": "5",
@@ -1219,68 +1163,12 @@
     "effect_name": "particles/explosions_fx/explosion_c4_500.vpcf",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
-    "targetname": "[PR#]expl_7",
-    "classname": "info_particle_system",
-    "origin": "11808.120117 -1822.188965 -13720.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5302"
-  },
-  {
-    "rendermode": "5",
-    "spawnflags": "65",
-    "fireballsprite": "sprites/zerogxplode.spr",
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "-1",
-    "no_save": "0",
-    "start_active": "0",
-    "effect_name": "particles/explosions_fx/explosion_c4_500.vpcf",
-    "clientSideEntity": "0",
-    "useLocalOffset": "0",
     "targetname": "[PR#]expl_8",
     "classname": "info_particle_system",
     "origin": "11860.702148 -1823.785034 -13720.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5303"
-  },
-  {
-    "rendermode": "5",
-    "spawnflags": "65",
-    "fireballsprite": "sprites/zerogxplode.spr",
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "-1",
-    "no_save": "0",
-    "start_active": "0",
-    "effect_name": "particles/explosions_fx/explosion_c4_500.vpcf",
-    "clientSideEntity": "0",
-    "useLocalOffset": "0",
-    "targetname": "[PR#]expl_9",
-    "classname": "info_particle_system",
-    "origin": "11909.350586 -1828.839966 -13720.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5304"
   },
   {
     "rendermode": "5",
@@ -2373,7 +2261,6 @@
     "hammerUniqueId": "5338"
   },
   {
-    "model": "maps/submaps/ze_blood_castle_d/entities/unnamed_5340.vmdl",
     "filtername": "[PR#]ct",
     "spawnflags": "4097",
     "StartDisabled": "0",
@@ -2383,6 +2270,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5340",
+    "model": "maps/submaps/ze_blood_castle_d/entities/unnamed_5340.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -2390,7 +2278,7 @@
         "input": "Trigger",
         "param": "",
         "delay": 20,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnStartTouch",
@@ -2398,7 +2286,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 10,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnStartTouch",
@@ -2406,7 +2294,7 @@
         "input": "PlaySound",
         "param": "",
         "delay": 10,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -6861,7 +6749,7 @@
         "input": "Trigger",
         "param": "",
         "delay": 3,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
@@ -6993,28 +6881,6 @@
     ]
   },
   {
-    "wait": "1.000000",
-    "spawnflags": "4097",
-    "StartDisabled": "0",
-    "useLocalOffset": "0",
-    "classname": "trigger_multiple",
-    "origin": "9433.000000 -1504.000000 -13603.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5685",
-    "model": "maps/submaps/ze_blood_castle_d/entities/unnamed_5685.vmdl",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]sm_open",
-        "input": "PickRandom",
-        "param": "",
-        "delay": 1.2000000476837158,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "spawnflags": "49",
     "message": "hestia.jetflyby1",
     "targetname": "[PR#]sm_open",
@@ -7093,6 +6959,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]sm_open",
+        "input": "PickRandom",
+        "param": "",
+        "delay": 1.2000000476837158,
+        "limit": 1
       }
     ]
   },
@@ -7153,13 +7027,12 @@
     "hammerUniqueId": "5701"
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "9584.000000 -1484.451172 -13664.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7177,13 +7050,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10287.999023 -1296.000000 -13728.000000",
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7201,13 +7073,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10304.000000 -736.000000 -13456.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7225,13 +7096,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10704.000000 -975.911682 -13376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7249,13 +7119,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "12208.000000 -1184.000000 -13312.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7273,13 +7142,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "12816.000000 -1187.006104 -13456.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7297,13 +7165,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "12800.000000 -384.000000 -13560.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7321,13 +7188,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "11952.000000 -384.000000 -13744.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7345,13 +7211,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "11392.000000 -864.000000 -13648.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7369,13 +7234,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10608.000000 135.635193 -13760.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7393,13 +7257,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10432.000000 535.999573 -13680.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7417,13 +7280,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10560.000000 192.000000 -13472.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7441,13 +7303,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10736.000000 -864.000305 -13648.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7465,13 +7326,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "10976.000977 -1728.000000 -13728.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7489,13 +7349,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "12464.000000 -1760.000244 -13728.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7513,13 +7372,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "12656.000000 -1184.000000 -13664.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7537,13 +7395,12 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "StartDisabled": "1",
     "useLocalOffset": "0",
     "targetname": "[PR#]mgrun_sfxtg",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "13432.734375 -992.000000 -13568.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -7696,5 +7553,28 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5754",
     "model": "maps/submaps/ze_blood_castle_d/entities/unnamed_5754.vmdl"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]t",
+    "spawnflags": "1",
+    "StartDisabled": "0",
+    "useLocalOffset": "0",
+    "classname": "trigger_multiple",
+    "origin": "11712.000000 -80.000000 -13664.000000",
+    "angles": "0.000000 90.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "5755",
+    "model": "maps/submaps/ze_blood_castle_d/entities/unnamed_5755.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]cfgspeed_runcounter",
+        "input": "GetValue",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]
