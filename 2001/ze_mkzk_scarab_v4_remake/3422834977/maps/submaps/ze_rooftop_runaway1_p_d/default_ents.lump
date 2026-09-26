@@ -9154,6 +9154,14 @@
         "param": "",
         "delay": 8.199999809265137,
         "limit": 1
+      },
+      {
+        "output": "OnHitMax",
+        "target": "[PR#]sm_finaltg",
+        "input": "Enable",
+        "param": "",
+        "delay": 1,
+        "limit": 1
       }
     ]
   },
@@ -15172,7 +15180,7 @@
     "targetname": "",
     "vscripts": "",
     "classname": "trigger_multiple",
-    "origin": "736.000000 -4416.000000 1488.000000",
+    "origin": "736.000000 -4448.000000 1488.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6058",
@@ -15211,7 +15219,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "trigger_multiple",
-    "origin": "736.000000 -4448.000000 1488.000000",
+    "origin": "736.000000 -4480.000000 1488.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6059",
@@ -15219,18 +15227,18 @@
     "connections": [
       {
         "output": "OnStartTouch",
-        "target": "[PR#]cfgspeed_runzm*",
-        "input": "Test",
-        "param": "",
-        "delay": 0.10000000149011612,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
         "target": "!activator",
         "input": "KeyValue",
         "param": "gravity 1.00",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]cfgspeed_runcounter",
+        "input": "GetValue",
+        "param": "",
+        "delay": 0.05000000074505806,
         "limit": -1
       }
     ]
@@ -15311,21 +15319,21 @@
     "filtername": "[PR#]t",
     "spawnflags": "4097",
     "globalname": "",
-    "StartDisabled": "0",
+    "StartDisabled": "1",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
     "parentname": "",
-    "targetname": "",
+    "targetname": "[PR#]sm_finaltg",
     "vscripts": "",
     "classname": "trigger_multiple",
-    "origin": "-896.000000 -3776.000000 1824.000000",
+    "origin": "-1584.000000 -3768.000000 2000.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6068",
-    "model": "maps/submaps/ze_rooftop_runaway1_p_d/entities/unnamed_6068.vmdl",
+    "model": "maps/submaps/ze_rooftop_runaway1_p_d/entities/sm_finaltg_6068.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",

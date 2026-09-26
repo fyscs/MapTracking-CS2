@@ -9176,7 +9176,7 @@
         "target": "[PR#]mg6counter",
         "input": "Add",
         "param": "-1",
-        "delay": 0,
+        "delay": 0.10000000149011612,
         "limit": 1
       },
       {
@@ -129911,18 +129911,10 @@
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]removebud_father",
-        "input": "KillHierarchy",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]gmgtg",
         "input": "Disable",
         "param": "",
-        "delay": 0,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -129930,7 +129922,7 @@
         "target": "[PR#]mg6a1tg",
         "input": "Enable",
         "param": "",
-        "delay": 0,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -129938,7 +129930,7 @@
         "target": "[PR#]mg6a1wall",
         "input": "Open",
         "param": "",
-        "delay": 0,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -129946,7 +129938,7 @@
         "target": "[PR#]mg6a1timer",
         "input": "Enable",
         "param": "",
-        "delay": 0,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -129962,7 +129954,7 @@
         "target": "[PR#]mg6alight",
         "input": "Enable",
         "param": "",
-        "delay": 0,
+        "delay": 3,
         "limit": -1
       },
       {
@@ -129970,7 +129962,7 @@
         "target": "[PR#]tntstartp",
         "input": "TeleportToCurrentPos",
         "param": "",
-        "delay": 0,
+        "delay": 3,
         "limit": -1
       }
     ]
