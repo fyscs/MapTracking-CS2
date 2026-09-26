@@ -3,7 +3,7 @@
 <!-- xml reconstructed from compiled AST -->
 <root>
     <styles>
-        <include src="s2r://panorama/styles/custom_game/game_text_overkill.vcss_c" />
+        <include src="s2r://panorama/styles/custom_game/game_text_overkill.vcss" />
     </styles>
     <Panel class="Root" hittest="false">
         <Panel id="channel_1" class="TextChannel" hittest="false">
@@ -11,6 +11,7 @@
             <Panel class="TextRow" hittest="false">
                 <Panel id="channel_1_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
                 <Label id="channel_1_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_1_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
                 <Panel id="channel_1_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
             </Panel>
             <Panel id="channel_1_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
@@ -20,6 +21,7 @@
             <Panel class="TextRow" hittest="false">
                 <Panel id="channel_2_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
                 <Label id="channel_2_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_2_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
                 <Panel id="channel_2_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
             </Panel>
             <Panel id="channel_2_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
@@ -29,6 +31,7 @@
             <Panel class="TextRow" hittest="false">
                 <Panel id="channel_3_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
                 <Label id="channel_3_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_3_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
                 <Panel id="channel_3_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
             </Panel>
             <Panel id="channel_3_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
@@ -48,6 +51,7 @@
             <Panel class="TextRow" hittest="false">
                 <Panel id="channel_5_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
                 <Label id="channel_5_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_5_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
                 <Panel id="channel_5_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
             </Panel>
             <Panel id="channel_5_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
@@ -57,14 +61,100 @@
             <Panel class="TextRow" hittest="false">
                 <Panel id="channel_6_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
                 <Label id="channel_6_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_6_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
                 <Panel id="channel_6_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
             </Panel>
             <Panel id="channel_6_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
         </Panel>
-        <Panel class="ImageSequence" hittest="false">
-            <Image id="image_kill" class="SequenceImage ImageHidden" src="s2r://panorama/layout/custom_game/kill_png.vtex" texturewidth="1536" textureheight="1024" hittest="false" />
-            <Image id="image_them" class="SequenceImage ImageHidden" src="s2r://panorama/layout/custom_game/them_png.vtex" texturewidth="1536" textureheight="1024" hittest="false" />
-            <Image id="image_all" class="SequenceImage ImageHidden" src="s2r://panorama/layout/custom_game/all_png.vtex" texturewidth="1536" textureheight="1024" hittest="false" />
+        <Panel id="channel_7" class="TextChannel" hittest="false">
+            <Panel id="channel_7_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_7_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_7_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_7_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
+                <Panel id="channel_7_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_7_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_8" class="TextChannel" hittest="false">
+            <Panel id="channel_8_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_8_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_8_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_8_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
+                <Panel id="channel_8_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_8_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_9" class="TextChannel" hittest="false">
+            <Panel id="channel_9_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_9_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_9_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_9_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
+                <Panel id="channel_9_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_9_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_10" class="TextChannel" hittest="false">
+            <Panel id="channel_10_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_10_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_10_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Label id="channel_10_accent" class="DynamicText AccentText Size032 ColorDarkGreen FadeDuration000 FadedOut" text="{s:accent}" hittest="false" />
+                <Panel id="channel_10_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_10_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_11" class="TextChannel" hittest="false">
+            <Panel id="channel_11_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_11_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_11_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Panel id="channel_11_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_11_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_12" class="TextChannel" hittest="false">
+            <Panel id="channel_12_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_12_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_12_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Panel id="channel_12_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_12_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_13" class="TextChannel" hittest="false">
+            <Panel id="channel_13_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_13_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_13_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Panel id="channel_13_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_13_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_14" class="TextChannel" hittest="false">
+            <Panel id="channel_14_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_14_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_14_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Panel id="channel_14_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_14_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="channel_15" class="TextChannel" hittest="false">
+            <Panel id="channel_15_top_spacer" class="VerticalSpacer TopSpacer PositionY000" hittest="false" />
+            <Panel class="TextRow" hittest="false">
+                <Panel id="channel_15_left_spacer" class="HorizontalSpacer LeftSpacer PositionX000" hittest="false" />
+                <Label id="channel_15_text" class="DynamicText Size032 ColorWhite FadeDuration000 FadedOut" text="{s:text}" hittest="false" />
+                <Panel id="channel_15_right_spacer" class="HorizontalSpacer RightSpacer PositionX000" hittest="false" />
+            </Panel>
+            <Panel id="channel_15_bottom_spacer" class="VerticalSpacer BottomSpacer PositionY000" hittest="false" />
+        </Panel>
+        <Panel id="image_sequence" class="ImageSequence ImageSequenceHidden" hittest="false">
+            <Image id="image_kill" class="SequenceImage" src="s2r://panorama/layout/custom_game/kill_png.vtex" hittest="false" />
+            <Image id="image_them" class="SequenceImage" src="s2r://panorama/layout/custom_game/them_png.vtex" hittest="false" />
+            <Image id="image_all" class="SequenceImage" src="s2r://panorama/layout/custom_game/all_png.vtex" hittest="false" />
         </Panel>
     </Panel>
 </root>
