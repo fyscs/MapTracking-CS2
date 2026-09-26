@@ -7,7 +7,7 @@ import { Instance } from "cs_script/point_script";
 
 const TICKRATE = 0.01;
 const TARGET_DISTANCE = 3000;
-let SPEED_FORWARD = 385;
+let SPEED_FORWARD = 410;
 const RETARGET_TIME = 5.00;
 
 const boss_model = "creta_model";
