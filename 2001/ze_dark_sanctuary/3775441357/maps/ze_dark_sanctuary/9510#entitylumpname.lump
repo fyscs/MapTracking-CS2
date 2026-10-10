@@ -252,9 +252,9 @@
     "parentname": "",
     "targetname": "[PR#]gebulin_model\u00260000",
     "classname": "prop_dynamic",
-    "origin": "-21.650391 -2.995605 -10.000977",
+    "origin": "-21.650391 -0.589844 -10.000977",
     "angles": "-0.000000 90.000000 0.000000",
-    "scales": "83.736481 66.383148 87.063042",
+    "scales": "92.110130 73.021461 95.769348",
     "hammerUniqueId": "8034",
     "_template_lump_ent_index": "3"
   },

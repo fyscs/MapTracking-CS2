@@ -55,6 +55,14 @@
         "param": "speed 1",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnHurtPlayer",
+        "target": "[PR#]money",
+        "input": "AddMoneyPlayer",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
