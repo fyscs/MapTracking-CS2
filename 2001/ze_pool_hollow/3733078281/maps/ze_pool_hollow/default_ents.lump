@@ -14939,6 +14939,22 @@
         "param": "",
         "delay": 29.5,
         "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]ex_but",
+        "input": "Press",
+        "param": "",
+        "delay": 29.5,
+        "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]lv3EX_but",
+        "input": "Press",
+        "param": "",
+        "delay": 29.5,
+        "limit": 1
       }
     ]
   },
@@ -17685,9 +17701,9 @@
     "precomputedobbextent1": "84.160522 162.345093 121.330460",
     "precomputedobbangles1": "-0.000000 0.000000 0.000000",
     "precomputedobborigin1": "2312.077148 -1923.867798 121.254532",
-    "precomputedobbextent0": "118.045166 118.030273 58.568363",
+    "precomputedobbextent0": "118.045166 118.035156 58.568363",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "2397.191650 -1917.000610 58.494137",
+    "precomputedobborigin0": "2397.191650 -1917.005493 58.494137",
     "precomputedboundsmaxs": "2599.095703 -1761.522583 242.584351",
     "precomputedboundsmins": "2227.916016 -2111.458984 -0.075066",
     "precomputedobbextent": "185.589844 174.968201 121.329712",
@@ -17758,26 +17774,26 @@
     "precomputedobbextent5": "171.470581 128.051086 127.844299",
     "precomputedobbangles5": "0.000000 0.000000 -45.000004",
     "precomputedobborigin5": "2427.632324 -1932.110596 200.498047",
-    "precomputedobbextent4": "120.712769 121.676697 99.566673",
-    "precomputedobbangles4": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin4": "2436.493164 -2103.270996 99.500893",
+    "precomputedobbextent4": "170.649170 89.278931 99.566673",
+    "precomputedobbangles4": "-0.000000 0.000000 0.000000",
+    "precomputedobborigin4": "2428.454834 -2022.180786 99.500893",
     "precomputedobbextent3": "166.148926 84.751526 95.066185",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "2432.953125 -1846.275391 95.000648",
     "precomputedobbextent2": "80.495605 161.872070 90.797928",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
     "precomputedobborigin2": "2518.608154 -1931.954834 90.732040",
-    "precomputedobbextent1": "127.849731 127.046936 100.365868",
+    "precomputedobbextent1": "127.849731 128.057190 100.365868",
     "precomputedobbangles1": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin1": "2257.024170 -1931.396484 100.299507",
+    "precomputedobborigin1": "2256.309814 -1932.110840 100.299507",
     "precomputedobbextent0": "19.700684 19.699219 9.384055",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "2437.177734 -1931.965210 9.319562",
     "precomputedboundsmaxs": "2599.103027 -1761.523193 242.584152",
-    "precomputedboundsmins": "2227.923340 -2111.458984 -0.065556",
-    "precomputedobbextent": "185.589844 174.967896 121.324852",
+    "precomputedboundsmins": "2227.923340 -2111.459473 -0.065556",
+    "precomputedobbextent": "185.589844 174.968140 121.324852",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin": "2413.513184 -1936.491089 121.259300",
+    "precomputedobborigin": "2413.513184 -1936.491333 121.259300",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -18757,14 +18773,6 @@
         "param": "",
         "delay": 0,
         "limit": -1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]timer_shift",
-        "input": "Enable",
-        "param": "",
-        "delay": 2,
-        "limit": -1
       }
     ]
   },
@@ -19187,6 +19195,14 @@
         "target": "[PR#]lv3_but",
         "input": "Press",
         "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]revive_speed_1",
+        "input": "RunScriptInput",
+        "param": "revive_on",
         "delay": 0,
         "limit": 1
       }
@@ -20067,7 +20083,7 @@
     "hammerUniqueId": "3776"
   },
   {
-    "wait": "0.500000",
+    "wait": "1.000000",
     "filtername": "[PR#]T",
     "spawnflags": "4097",
     "globalname": "",
@@ -20093,6 +20109,14 @@
         "input": "addcontext",
         "param": "zomble_re:1",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u002B\u002B",
+        "delay": 0.20999999344348907,
         "limit": -1
       }
     ]
@@ -20176,7 +20200,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u4E00\u4F4D\u53DB\u5FCD\u5F97\u5230\u4E8610s\u52A0\u901F\uFF0C\u662F\u65F6\u5019\u65AD\u540E\u4E86\uFF01",
+        "param": "say \u002B\u002B-",
         "delay": 0,
         "limit": -1
       }
@@ -20235,10 +20259,10 @@
   },
   {
     "wait": "1.000000",
-    "filtername": "[PR#]zomble_re",
+    "filtername": "[PR#]CT",
     "spawnflags": "4097",
     "globalname": "",
-    "StartDisabled": "0",
+    "StartDisabled": "1",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
@@ -20264,10 +20288,10 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]refresh_context",
-        "input": "Kill",
-        "param": "",
-        "delay": 1,
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u002B",
+        "delay": 0.12099999934434891,
         "limit": -1
       }
     ]
@@ -20548,5 +20572,79 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "forcenpcexclude": "0",
+    "override_anticipation_name": "",
+    "master": "",
+    "lip": "0",
+    "_minlight": "",
+    "glow": "",
+    "speed": "5",
+    "movedir": "0.000000 0.000000 0.000000",
+    "unlocked_sound": "",
+    "locked_sound": "",
+    "use_sound": "",
+    "displaytext": "",
+    "damagefilter": "",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "wait": "1.000000",
+    "spawnflags": "1024",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]ex_but",
+    "vscripts": "",
+    "classname": "func_button",
+    "origin": "2357.455078 -2009.633301 30.659023",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "3803",
+    "model": "maps/ze_pool_hollow/entities/ex_but_3803.vmdl",
+    "connections": [
+      {
+        "output": "OnPressed",
+        "target": "[PR#]lv3_brush",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "cs_script": "maps/scripts/revive_speed.vjs",
+    "targetname": "[PR#]revive_speed_1",
+    "classname": "point_script",
+    "origin": "2360.000000 -272.000000 127.858398",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "3804"
+  },
+  {
+    "observable": "0",
+    "layout": "panorama/layout/custom_game/revive_hud.xml",
+    "PawnSubclass": "",
+    "IsMaster": "0",
+    "StartDisabled": "0",
+    "targetname": "[PR#]revive_hud",
+    "vscripts": "",
+    "classname": "custom_hud_layout",
+    "origin": "2344.000000 -256.000000 127.858398",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "3805"
   }
 ]
