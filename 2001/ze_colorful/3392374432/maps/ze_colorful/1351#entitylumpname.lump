@@ -4,6 +4,12 @@
 [
   {
     "targetname": "[PR#]last rotate",
+    "vscripts": "",
+    "parentname": "",
+    "parentAttachmentName": "",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.scales": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "renderfx": "0",
     "rendermode": "0",
@@ -18,8 +24,10 @@
     "disableshadows": "0",
     "maxspeed": "100",
     "fanfriction": "20",
+    "message": "",
     "volume": "10",
     "spawnflags": "513",
+    "_minlight": "",
     "dmg": "0",
     "NoInterpolate": "0",
     "MoveWithoutPushingBlockers": "0",

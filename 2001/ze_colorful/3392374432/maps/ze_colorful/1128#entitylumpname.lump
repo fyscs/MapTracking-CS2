@@ -4,6 +4,7 @@
 [
   {
     "targetname": "[PR#]push relay 2\u00260000",
+    "vscripts": "",
     "StartDisabled": "0",
     "TriggerOnce": "0",
     "FastRetrigger": "0",
@@ -99,6 +100,12 @@
   },
   {
     "targetname": "[PR#]push mark maker 2\u00260000",
+    "vscripts": "",
+    "parentname": "",
+    "parentAttachmentName": "",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.scales": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "spawnflags": "0",
     "EntityTemplate": "[PR#]push mark template",

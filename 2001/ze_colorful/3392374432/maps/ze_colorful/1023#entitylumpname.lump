@@ -4,6 +4,7 @@
 [
   {
     "targetname": "[PR#]sankaku relay\u00260000",
+    "vscripts": "",
     "StartDisabled": "0",
     "TriggerOnce": "0",
     "FastRetrigger": "0",

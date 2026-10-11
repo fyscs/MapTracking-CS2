@@ -4,6 +4,7 @@
 [
   {
     "targetname": "[PR#]push main relay",
+    "vscripts": "",
     "StartDisabled": "0",
     "TriggerOnce": "0",
     "FastRetrigger": "0",
