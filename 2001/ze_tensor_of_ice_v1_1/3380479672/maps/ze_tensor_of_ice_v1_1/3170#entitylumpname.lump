@@ -3,8 +3,11 @@
 
 [
   {
+    "AllowMovableNavMeshDockingOnEntireEntity": "0",
     "CreateMovableNavMesh": "0",
     "CreateNavObstacle": "0",
+    "stopsound": "",
+    "startsound": "",
     "blockdamage": "0.000000",
     "movedistance": "6000.000000",
     "speed": "150",
@@ -25,13 +28,19 @@
     "rendermode": "0",
     "renderfx": "0",
     "useLocalOffset": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
     "targetname": "[PR#]boss_room_cube3",
     "classname": "func_movelinear",
     "origin": "2.000000 3.099609 2.659912",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3153",
-    "model": "maps\\ze_tensor_of_ice_v1_1\\entities\\boss_room_cube3_3153.vmdl",
+    "model": "maps/ze_tensor_of_ice_v1_1/entities/boss_room_cube3_3153.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -49,6 +58,7 @@
     "FastRetrigger": "0",
     "TriggerOnce": "0",
     "StartDisabled": "0",
+    "vscripts": "",
     "targetname": "[PR#]boss_room_cube3_relay",
     "classname": "logic_relay",
     "origin": "0.000000 0.000000 32.000000",
