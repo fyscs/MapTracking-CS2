@@ -23903,9 +23903,9 @@
     "justify_horizontal": "1",
     "font_name": "Arial Black",
     "font_size": "150.000000",
-    "world_units_per_pixel": "0.020000",
+    "world_units_per_pixel": "0.050000",
     "color": "255 187 0",
-    "fullbright": "0",
+    "fullbright": "1",
     "enabled": "1",
     "message": "\u003E\u003E\u6211\u662F\u5976\u5A03\uFF0C\u6765\u81EA\u6696\u6D0B\u6D0B\u7684\u5976\u9F99\u738B\u56FD\u3002\u003C\u003C",
     "lightmapstatic": "0",
@@ -23939,9 +23939,9 @@
     "justify_horizontal": "1",
     "font_name": "Arial Black",
     "font_size": "150.000000",
-    "world_units_per_pixel": "0.020000",
+    "world_units_per_pixel": "0.050000",
     "color": "200 184 103",
-    "fullbright": "0",
+    "fullbright": "1",
     "enabled": "1",
     "message": "\u003E\u003E\u6211\u662F\u725B\u6765\uFF0C\u6211\u6765\u738B\u56FD\u627E\u5988\u5988\u3002\u003C\u003C",
     "lightmapstatic": "0",
@@ -23967,6 +23967,834 @@
     "angles": "0.000000 270.000061 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1793"
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/feinai/feinai.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "StartDisabled": "0",
+    "targetname": "",
+    "vscripts": "",
+    "classname": "prop_dynamic",
+    "origin": "-119.999512 -10859.000977 -631.000000",
+    "angles": "0.000000 180.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1794"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]CT",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feinai_skin",
+    "classname": "trigger_multiple",
+    "origin": "-100.000000 -10860.000000 -592.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1795",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feinai_skin_1795.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/feinai/feinai.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feinai_skin",
+    "classname": "trigger_multiple",
+    "origin": "-818.000000 -10942.999023 -592.000000",
+    "angles": "0.000000 179.999969 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1797",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feinai_skin_1797.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/yagao/yagao.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/yagao/yagao.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-811.000244 -10943.997070 -639.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1799"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "255 187 0",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u6211\u662F\u5927\u80A5\u9F99\uFF0C\u559C\u6B22\u5403\u5927\u7C73\u996D\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-119.659180 -10857.000000 -541.000000",
+    "angles": "0.000000 270.000061 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1800"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "220 20 60",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u50F5\u5C38\u76AE\u80A4\uFF0C\u6709\u7740\u4E00\u53E3\u79C0\u7259\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-816.000000 -10943.000000 -545.000000",
+    "angles": "0.000000 270.000061 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1801"
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/feinai/feinai.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-10862.391602 -9366.124023 -126.307312",
+    "angles": "0.000000 135.000015 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1807"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]CT",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feinai_skin",
+    "classname": "trigger_multiple",
+    "origin": "-10848.955078 -9380.972656 -96.000000",
+    "angles": "0.000000 315.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1808",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feinai_skin_1808.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/feinai/feinai.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feinai_skin",
+    "classname": "trigger_multiple",
+    "origin": "-11977.270508 -10345.461914 51.000000",
+    "angles": "0.000000 224.999924 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1810",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feinai_skin_1810.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/yagao/yagao.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/yagao/yagao.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-11980.871094 -10351.546875 5.692688",
+    "angles": "0.000000 45.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1812"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "255 187 0",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u6211\u662F\u5927\u80A5\u9F99\uFF0C\u559C\u6B22\u5403\u5927\u7C73\u996D\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-10860.736328 -9364.950195 -45.000000",
+    "angles": "0.000000 225.000061 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1813"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "220 20 60",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u50F5\u5C38\u76AE\u80A4\uFF0C\u6709\u7740\u4E00\u53E3\u79C0\u7259\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-11978.037109 -10347.309570 95.000000",
+    "angles": "0.000000 157.500046 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1814"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "220 20 60",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u50F5\u5C38\u76AE\u80A4\uFF0C\u6709\u7740\u4E00\u53E3\u79C0\u7259\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-12229.702148 6064.985840 153.307312",
+    "angles": "0.000000 157.500046 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1819"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feinai_skin",
+    "classname": "trigger_multiple",
+    "origin": "-12228.935547 6066.833496 109.307312",
+    "angles": "0.000000 224.999969 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1820",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feinai_skin_1820.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/yagao/yagao.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/yagao/yagao.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-12239.607422 6067.819824 64.000000",
+    "angles": "0.000000 315.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1822"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "220 20 60",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u50F5\u5C38\u76AE\u80A4\uFF0C\u6709\u7740\u4E00\u53E3\u79C0\u7259\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "15214.071289 698.086304 -934.692627",
+    "angles": "0.000000 157.500046 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1823"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feinai_skin",
+    "classname": "trigger_multiple",
+    "origin": "15214.837891 699.933960 -978.692627",
+    "angles": "0.000000 224.999954 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1824",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feinai_skin_1824.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/yagao/yagao.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/yagao/yagao.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "15211.237305 693.848999 -1023.999939",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1826"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24054,7 +24882,7 @@
     "origin": "-8752.000000 976.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1796"
+    "hammerUniqueId": "1829"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24142,7 +24970,7 @@
     "origin": "-8720.000000 976.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1797"
+    "hammerUniqueId": "1830"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24230,7 +25058,7 @@
     "origin": "-8720.000000 1008.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1798"
+    "hammerUniqueId": "1831"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24318,7 +25146,7 @@
     "origin": "-8752.000000 1008.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1799"
+    "hammerUniqueId": "1832"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24406,7 +25234,7 @@
     "origin": "-9728.000000 -3584.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1802"
+    "hammerUniqueId": "1835"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24494,7 +25322,7 @@
     "origin": "-9696.000000 -3584.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1803"
+    "hammerUniqueId": "1836"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24582,7 +25410,7 @@
     "origin": "-9696.000000 -3552.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1804"
+    "hammerUniqueId": "1837"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24670,7 +25498,7 @@
     "origin": "-9728.000000 -3552.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1805"
+    "hammerUniqueId": "1838"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24758,7 +25586,7 @@
     "origin": "-11270.000000 6522.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1808"
+    "hammerUniqueId": "1841"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24846,7 +25674,7 @@
     "origin": "-11238.000000 6522.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1809"
+    "hammerUniqueId": "1842"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24934,7 +25762,7 @@
     "origin": "-11238.000000 6554.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1810"
+    "hammerUniqueId": "1843"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25022,7 +25850,7 @@
     "origin": "-11270.000000 6554.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1811"
+    "hammerUniqueId": "1844"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25110,7 +25938,7 @@
     "origin": "-8224.000000 -1056.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1814"
+    "hammerUniqueId": "1847"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25198,7 +26026,7 @@
     "origin": "-8192.000000 -1056.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1815"
+    "hammerUniqueId": "1848"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25286,7 +26114,7 @@
     "origin": "-8192.000000 -1024.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1816"
+    "hammerUniqueId": "1849"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25374,7 +26202,7 @@
     "origin": "-8224.000000 -1024.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1817"
+    "hammerUniqueId": "1850"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25462,7 +26290,7 @@
     "origin": "-12608.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1820"
+    "hammerUniqueId": "1853"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25550,7 +26378,7 @@
     "origin": "-12576.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1821"
+    "hammerUniqueId": "1854"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25638,7 +26466,7 @@
     "origin": "-12576.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1822"
+    "hammerUniqueId": "1855"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25726,7 +26554,7 @@
     "origin": "-12608.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1823"
+    "hammerUniqueId": "1856"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25814,7 +26642,7 @@
     "origin": "-7664.000000 -9328.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1826"
+    "hammerUniqueId": "1859"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25902,7 +26730,7 @@
     "origin": "-7632.000000 -9328.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1827"
+    "hammerUniqueId": "1860"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25990,7 +26818,7 @@
     "origin": "-7632.000000 -9296.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1828"
+    "hammerUniqueId": "1861"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26078,7 +26906,7 @@
     "origin": "-7664.000000 -9296.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1829"
+    "hammerUniqueId": "1862"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26166,7 +26994,7 @@
     "origin": "-11297.000000 513.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1832"
+    "hammerUniqueId": "1865"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26254,7 +27082,7 @@
     "origin": "-11265.000000 513.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1833"
+    "hammerUniqueId": "1866"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26342,7 +27170,7 @@
     "origin": "-11265.000000 545.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1834"
+    "hammerUniqueId": "1867"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26430,7 +27258,7 @@
     "origin": "-11297.000000 545.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1835"
+    "hammerUniqueId": "1868"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26518,7 +27346,7 @@
     "origin": "-12128.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1838"
+    "hammerUniqueId": "1871"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26606,7 +27434,7 @@
     "origin": "-12096.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1839"
+    "hammerUniqueId": "1872"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26694,7 +27522,7 @@
     "origin": "-12096.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1840"
+    "hammerUniqueId": "1873"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26782,7 +27610,7 @@
     "origin": "-12128.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1841"
+    "hammerUniqueId": "1874"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26870,7 +27698,7 @@
     "origin": "-9328.000000 -8816.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1844"
+    "hammerUniqueId": "1877"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26958,7 +27786,7 @@
     "origin": "-9296.000000 -8816.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1845"
+    "hammerUniqueId": "1878"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27046,7 +27874,7 @@
     "origin": "-9296.000000 -8784.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1846"
+    "hammerUniqueId": "1879"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27134,7 +27962,7 @@
     "origin": "-9328.000000 -8784.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1847"
+    "hammerUniqueId": "1880"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27222,7 +28050,7 @@
     "origin": "-7216.000000 -7664.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1850"
+    "hammerUniqueId": "1883"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27310,7 +28138,7 @@
     "origin": "-7184.000000 -7664.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1851"
+    "hammerUniqueId": "1884"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27398,7 +28226,7 @@
     "origin": "-7184.000000 -7632.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1852"
+    "hammerUniqueId": "1885"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27486,7 +28314,7 @@
     "origin": "-7216.000000 -7632.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1853"
+    "hammerUniqueId": "1886"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27574,7 +28402,7 @@
     "origin": "-9328.000000 -8112.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1856"
+    "hammerUniqueId": "1889"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27662,7 +28490,7 @@
     "origin": "-9296.000000 -8112.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1857"
+    "hammerUniqueId": "1890"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27750,7 +28578,7 @@
     "origin": "-9296.000000 -8080.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1858"
+    "hammerUniqueId": "1891"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27838,7 +28666,7 @@
     "origin": "-9328.000000 -8080.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1859"
+    "hammerUniqueId": "1892"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27926,7 +28754,7 @@
     "origin": "-6696.000000 -6008.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1862"
+    "hammerUniqueId": "1895"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28014,7 +28842,7 @@
     "origin": "-6664.000000 -6008.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1863"
+    "hammerUniqueId": "1896"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28102,7 +28930,7 @@
     "origin": "-6664.000000 -5976.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1864"
+    "hammerUniqueId": "1897"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28190,7 +29018,7 @@
     "origin": "-6696.000000 -5976.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1865"
+    "hammerUniqueId": "1898"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28278,7 +29106,7 @@
     "origin": "-8176.000000 -7664.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1868"
+    "hammerUniqueId": "1901"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28366,7 +29194,7 @@
     "origin": "-8144.000000 -7664.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1869"
+    "hammerUniqueId": "1902"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28454,7 +29282,7 @@
     "origin": "-8144.000000 -7632.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1870"
+    "hammerUniqueId": "1903"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28542,7 +29370,7 @@
     "origin": "-8176.000000 -7632.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1871"
+    "hammerUniqueId": "1904"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28630,7 +29458,7 @@
     "origin": "-5168.000000 -5616.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1874"
+    "hammerUniqueId": "1907"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28718,7 +29546,7 @@
     "origin": "-5136.000000 -5616.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1875"
+    "hammerUniqueId": "1908"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28806,7 +29634,7 @@
     "origin": "-5136.000000 -5584.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1876"
+    "hammerUniqueId": "1909"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28894,7 +29722,7 @@
     "origin": "-5168.000000 -5584.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1877"
+    "hammerUniqueId": "1910"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28982,7 +29810,7 @@
     "origin": "-5480.000000 -4136.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1880"
+    "hammerUniqueId": "1913"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29070,7 +29898,7 @@
     "origin": "-5448.000000 -4136.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1881"
+    "hammerUniqueId": "1914"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29158,7 +29986,7 @@
     "origin": "-5448.000000 -4104.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1882"
+    "hammerUniqueId": "1915"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29246,7 +30074,7 @@
     "origin": "-5480.000000 -4104.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1883"
+    "hammerUniqueId": "1916"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29334,7 +30162,7 @@
     "origin": "-7208.000000 -6008.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1886"
+    "hammerUniqueId": "1919"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29422,7 +30250,7 @@
     "origin": "-7176.000000 -6008.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1887"
+    "hammerUniqueId": "1920"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29510,7 +30338,7 @@
     "origin": "-7176.000000 -5976.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1888"
+    "hammerUniqueId": "1921"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29598,7 +30426,7 @@
     "origin": "-7208.000000 -5976.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1889"
+    "hammerUniqueId": "1922"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29686,7 +30514,7 @@
     "origin": "-6180.000000 -8188.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1892"
+    "hammerUniqueId": "1925"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29774,7 +30602,7 @@
     "origin": "-6148.000000 -8188.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1893"
+    "hammerUniqueId": "1926"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29862,7 +30690,7 @@
     "origin": "-6148.000000 -8156.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1894"
+    "hammerUniqueId": "1927"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29950,7 +30778,7 @@
     "origin": "-6180.000000 -8156.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1895"
+    "hammerUniqueId": "1928"
   },
   {
     "snapshot_mesh": "0",
@@ -29976,7 +30804,7 @@
     "origin": "7616.000000 -128.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1897"
+    "hammerUniqueId": "1930"
   },
   {
     "snapshot_mesh": "0",
@@ -30002,7 +30830,7 @@
     "origin": "7616.000000 -128.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1898"
+    "hammerUniqueId": "1931"
   },
   {
     "snapshot_mesh": "0",
@@ -30028,7 +30856,7 @@
     "origin": "7616.000000 -128.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1899"
+    "hammerUniqueId": "1932"
   },
   {
     "snapshot_mesh": "0",
@@ -30054,7 +30882,7 @@
     "origin": "8000.000000 -128.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1901"
+    "hammerUniqueId": "1934"
   },
   {
     "snapshot_mesh": "0",
@@ -30080,7 +30908,7 @@
     "origin": "8000.000000 -128.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1902"
+    "hammerUniqueId": "1935"
   },
   {
     "snapshot_mesh": "0",
@@ -30106,7 +30934,7 @@
     "origin": "8000.000000 -128.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1903"
+    "hammerUniqueId": "1936"
   },
   {
     "snapshot_mesh": "0",
@@ -30132,7 +30960,7 @@
     "origin": "8000.000000 256.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1905"
+    "hammerUniqueId": "1938"
   },
   {
     "snapshot_mesh": "0",
@@ -30158,7 +30986,7 @@
     "origin": "8000.000000 256.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1906"
+    "hammerUniqueId": "1939"
   },
   {
     "snapshot_mesh": "0",
@@ -30184,7 +31012,7 @@
     "origin": "8000.000000 256.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1907"
+    "hammerUniqueId": "1940"
   },
   {
     "snapshot_mesh": "0",
@@ -30210,7 +31038,7 @@
     "origin": "7616.000000 256.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1909"
+    "hammerUniqueId": "1942"
   },
   {
     "snapshot_mesh": "0",
@@ -30236,7 +31064,7 @@
     "origin": "7616.000000 256.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1910"
+    "hammerUniqueId": "1943"
   },
   {
     "snapshot_mesh": "0",
@@ -30262,7 +31090,7 @@
     "origin": "7616.000000 256.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1911"
+    "hammerUniqueId": "1944"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30347,7 +31175,7 @@
     "origin": "-13544.000000 -528.000000 -48.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1913"
+    "hammerUniqueId": "1946"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30432,7 +31260,7 @@
     "origin": "-13544.000000 -528.000000 -112.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1915"
+    "hammerUniqueId": "1948"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30517,7 +31345,7 @@
     "origin": "-13544.000000 -336.000000 -48.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1917"
+    "hammerUniqueId": "1950"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30602,7 +31430,7 @@
     "origin": "-13544.000000 -336.000000 -112.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1919"
+    "hammerUniqueId": "1952"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30687,7 +31515,7 @@
     "origin": "-13544.000000 -144.000000 -112.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1921"
+    "hammerUniqueId": "1954"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30772,6 +31600,6 @@
     "origin": "-13544.000000 -144.000000 -48.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1923"
+    "hammerUniqueId": "1956"
   }
 ]
