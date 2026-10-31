@@ -780,7 +780,7 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]logf_hide3",
+        "target": "[PR#]logf_hidespeed",
         "input": "TestActivator",
         "param": "",
         "delay": 6,

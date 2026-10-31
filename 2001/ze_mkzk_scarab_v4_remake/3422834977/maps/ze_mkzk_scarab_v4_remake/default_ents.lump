@@ -41436,7 +41436,7 @@
     "Template06": "",
     "Template05": "",
     "Template04": "",
-    "Template03": "",
+    "Template03": "[PR#]grenade_naicase",
     "Template02": "[PR#]grenade_nairelay",
     "Template01": "[PR#]grenade_naitrigger",
     "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",

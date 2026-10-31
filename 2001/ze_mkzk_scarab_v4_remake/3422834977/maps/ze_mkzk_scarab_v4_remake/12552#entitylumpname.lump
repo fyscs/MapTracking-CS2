@@ -26,9 +26,9 @@
     "connections": [
       {
         "output": "OnStartTouch",
-        "target": "[PR#]grenade_laughmaker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!activator",
+        "target": "[PR#]grenade_naicase\u00260000",
+        "input": "PickRandom",
+        "param": "",
         "delay": 0,
         "limit": -1
       },
@@ -71,6 +71,74 @@
         "param": "",
         "delay": 0.5,
         "limit": -1
+      }
+    ]
+  },
+  {
+    "Case32": "",
+    "Case31": "",
+    "Case30": "",
+    "Case29": "",
+    "Case28": "",
+    "Case27": "",
+    "Case26": "",
+    "Case25": "",
+    "Case24": "",
+    "Case23": "",
+    "Case22": "",
+    "Case21": "",
+    "Case20": "",
+    "Case19": "",
+    "Case18": "",
+    "Case17": "",
+    "Case16": "",
+    "Case15": "",
+    "Case14": "",
+    "Case13": "",
+    "Case12": "",
+    "Case11": "",
+    "Case10": "",
+    "Case09": "",
+    "Case08": "",
+    "Case07": "",
+    "Case06": "",
+    "Case05": "",
+    "Case04": "",
+    "Case03": "",
+    "Case02": "",
+    "Case01": "",
+    "vscripts": "",
+    "targetname": "[PR#]grenade_naicase\u00260000",
+    "classname": "logic_case",
+    "origin": "-32.000000 0.000000 32.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12600",
+    "_template_lump_ent_index": "2",
+    "connections": [
+      {
+        "output": "OnCase01",
+        "target": "[PR#]grenade_laughmaker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!activator",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]grenade_laughmaker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!activator",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]grenade_laughmaker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!activator",
+        "delay": 0,
+        "limit": 1
       }
     ]
   }
