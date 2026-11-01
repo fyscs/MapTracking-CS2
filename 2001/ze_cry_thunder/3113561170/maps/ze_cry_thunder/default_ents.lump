@@ -20809,5 +20809,57 @@
         "limit": 1
       }
     ]
+  },
+  {
+    "SourceEntityName": "",
+    "spawnflags": "49",
+    "radius": "1250",
+    "cspinup": "0",
+    "lfomodvol": "0",
+    "lfomodpitch": "0",
+    "lforate": "0",
+    "lfotype": "0",
+    "spindown": "0",
+    "spinup": "0",
+    "pitchstart": "100",
+    "pitch": "100",
+    "fadeoutsecs": "3",
+    "fadeinsecs": "3",
+    "volstart": "10",
+    "preset": "0",
+    "health": "10",
+    "message": "global.cursor",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]item_pip",
+    "classname": "ambient_generic",
+    "origin": "544.000000 -13728.000000 -56.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13943"
+  },
+  {
+    "cs_script": "maps/scripts/hmn_item_hud.vjs",
+    "targetname": "[PR#]hmn_item_hud_script",
+    "classname": "point_script",
+    "origin": "544.000000 -13712.000000 -56.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13944"
+  },
+  {
+    "observable": "1",
+    "layout": "panorama/layout/custom_game/hmn_item_hud.xml",
+    "targetname": "[PR#]hmn_item_hud",
+    "classname": "custom_hud_layout",
+    "origin": "544.000000 -13696.000000 -56.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13945"
   }
 ]

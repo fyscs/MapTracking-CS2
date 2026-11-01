@@ -30,7 +30,7 @@
         "input": "Command",
         "param": "say \u003C!\u003E \u6311\u6226\u72B6\u3092\u5165\u624B\u3057\u305F\uFF01 \u003C!\u003E",
         "delay": 0,
-        "limit": 1
+        "limit": -1
       },
       {
         "output": "OnPlayerPickup",
@@ -39,14 +39,6 @@
         "param": "FILTER_ITEM_CHALLENGE:1",
         "delay": 1,
         "limit": -1
-      },
-      {
-        "output": "OnPlayerPickup",
-        "target": "[PR#][SE]CURSOR",
-        "input": "PlaySound",
-        "param": "",
-        "delay": 0,
-        "limit": 1
       },
       {
         "output": "OnPlayerPickup",
@@ -62,6 +54,14 @@
         "input": "KeyValues",
         "param": "health 10",
         "delay": 0.009999999776482582,
+        "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]hmn_item_hud_script",
+        "input": "RunScriptInput",
+        "param": "ShowItem01",
+        "delay": 0,
         "limit": -1
       }
     ]
