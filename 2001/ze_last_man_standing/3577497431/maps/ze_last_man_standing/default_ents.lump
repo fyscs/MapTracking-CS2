@@ -345,7 +345,7 @@
     "Template07": "[PR#]Zombie_Item_Alma_Body_Health",
     "Template06": "[PR#]Zombie_Item_Alma_Trigger",
     "Template05": "[PR#]Zombie_Item_Alma_Relay",
-    "Template04": "[PR#]Zombie_Alpha_5",
+    "Template04": "",
     "Template03": "[PR#]Zombie_Item_Alma_Block_Attack",
     "Template02": "[PR#]Zombie_Item_Alma_Attack_Maker",
     "Template01": "[PR#]Zombie_Item_Alma_UI",
@@ -3884,7 +3884,7 @@
     "Template18": "",
     "Template17": "",
     "Template16": "",
-    "Template15": "[PR#]Zombie_Alpha_3",
+    "Template15": "",
     "Template14": "[PR#]Zombie_Item_Tank_Push_Trigger",
     "Template13": "[PR#]Zombie_Item_Tank_RandomSound",
     "Template12": "[PR#]Zombie_Item_Tank_Sound_3",
@@ -7346,7 +7346,7 @@
     "Template14": "[PR#]Zombie_Item_Predator_Plasma",
     "Template13": "[PR#]Zombie_Item_Predator_Movement",
     "Template12": "[PR#]Zombie_Item_Predator_Plasma_Maker",
-    "Template11": "[PR#]Zombie_Alpha_1",
+    "Template11": "",
     "Template10": "",
     "Template09": "[PR#]Zombie_Item_Predator_UI",
     "Template08": "",
@@ -7445,7 +7445,7 @@
     "Template13": "",
     "Template12": "",
     "Template11": "",
-    "Template10": "[PR#]Zombie_Alpha_6",
+    "Template10": "",
     "Template09": "[PR#]Zombie_Item_Summoner_Teleport_Maker",
     "Template08": "[PR#]Zombie_Item_Summoner_Knife",
     "Template07": "[PR#]Zombie_Item_Summoner_Model",
@@ -7646,7 +7646,7 @@
     "Template10": "[PR#]Zombie_Item_Freezer_Freeze",
     "Template09": "[PR#]Zombie_Item_Freezer_Particle",
     "Template08": "[PR#]Zombie_Item_Freezer_Model",
-    "Template07": "[PR#]Zombie_Alpha_9",
+    "Template07": "",
     "Template06": "[PR#]Zombie_Item_Freezer_Relay",
     "Template05": "[PR#]Zombie_Item_Freezer_Knife",
     "Template04": "[PR#]Zombie_Item_Freezer_Water",
@@ -7830,7 +7830,7 @@
     "Template13": "",
     "Template12": "",
     "Template11": "",
-    "Template10": "[PR#]Zombie_Alpha_4",
+    "Template10": "",
     "Template09": "[PR#]Zombie_Item_Vortigaunt_Relay",
     "Template08": "[PR#]Zombie_Item_Vortigaunt_Trigger_Effectt_2",
     "Template07": "[PR#]Zombie_Item_Vortigaunt_Push",
@@ -8285,7 +8285,7 @@
     "Template12": "",
     "Template11": "",
     "Template10": "",
-    "Template09": "[PR#]Zombie_Alpha_7",
+    "Template09": "",
     "Template08": "[PR#]Zombie_Item_Jumper_Knife",
     "Template07": "[PR#]Zombie_Item_Jumper_Trigger",
     "Template06": "[PR#]Zombie_Item_Jumper_Maker",
@@ -16346,7 +16346,7 @@
     "Template19": "",
     "Template18": "",
     "Template17": "",
-    "Template16": "[PR#]Zombie_Alpha_2",
+    "Template16": "",
     "Template15": "[PR#]Zombie_Item_Antlion_Water_Fly_Timer",
     "Template14": "[PR#]Zombie_Item_Antlion_Block_Brush",
     "Template13": "[PR#]Zombie_Item_Antlion_Water",
@@ -16462,7 +16462,7 @@
     "Template13": "",
     "Template12": "",
     "Template11": "",
-    "Template10": "[PR#]Zombie_Alpha_8",
+    "Template10": "",
     "Template09": "[PR#]Zombie_Item_Shockwave_Push",
     "Template08": "[PR#]Zombie_Item_Shockwave_Trigger",
     "Template07": "[PR#]Zombie_Item_Shockwave_Effect",
@@ -44820,7 +44820,7 @@
     "origin": "-6464.000000 11810.703125 -12074.250000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14609"
+    "hammerUniqueId": "14585"
   },
   {
     "precomputedsubfrusta": "5",
@@ -44903,7 +44903,7 @@
     "origin": "-6464.000000 11810.703125 -12073.250000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14610"
+    "hammerUniqueId": "14586"
   },
   {
     "cpoint7_parent": "0",
@@ -44999,7 +44999,7 @@
     "origin": "-6468.000000 11870.703125 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14611"
+    "hammerUniqueId": "14587"
   },
   {
     "cpoint7_parent": "0",
@@ -45095,7 +45095,7 @@
     "origin": "-6467.943359 11744.713867 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14612"
+    "hammerUniqueId": "14588"
   },
   {
     "precomputedsubfrusta": "5",
@@ -45178,7 +45178,7 @@
     "origin": "-6464.000000 12226.703125 -12074.250000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14615"
+    "hammerUniqueId": "14591"
   },
   {
     "precomputedsubfrusta": "5",
@@ -45261,7 +45261,7 @@
     "origin": "-6464.000000 12226.703125 -12073.250000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14616"
+    "hammerUniqueId": "14592"
   },
   {
     "cpoint7_parent": "0",
@@ -45357,7 +45357,7 @@
     "origin": "-6468.000000 12286.703125 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14617"
+    "hammerUniqueId": "14593"
   },
   {
     "cpoint7_parent": "0",
@@ -45453,7 +45453,7 @@
     "origin": "-6467.943359 12160.713867 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14618"
+    "hammerUniqueId": "14594"
   },
   {
     "precomputedsubfrusta": "5",
@@ -45536,7 +45536,7 @@
     "origin": "-6464.000000 12642.703125 -12074.250000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14621"
+    "hammerUniqueId": "14597"
   },
   {
     "precomputedsubfrusta": "5",
@@ -45619,7 +45619,7 @@
     "origin": "-6464.000000 12642.703125 -12073.250000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14622"
+    "hammerUniqueId": "14598"
   },
   {
     "cpoint7_parent": "0",
@@ -45715,7 +45715,7 @@
     "origin": "-6468.000000 12702.703125 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14623"
+    "hammerUniqueId": "14599"
   },
   {
     "cpoint7_parent": "0",
@@ -45811,7 +45811,7 @@
     "origin": "-6467.943359 12576.713867 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14624"
+    "hammerUniqueId": "14600"
   },
   {
     "precomputedsubfrusta": "5",
@@ -45894,7 +45894,7 @@
     "origin": "-5583.870117 12960.603516 -12494.349609",
     "angles": "0.000000 270.000000 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14627"
+    "hammerUniqueId": "14603"
   },
   {
     "precomputedsubfrusta": "5",
@@ -45977,7 +45977,7 @@
     "origin": "-5583.870117 12961.603516 -12494.349609",
     "angles": "0.000000 90.000000 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14628"
+    "hammerUniqueId": "14604"
   },
   {
     "cpoint7_parent": "0",
@@ -46073,7 +46073,7 @@
     "origin": "-5579.870117 12946.603516 -12434.349609",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14629"
+    "hammerUniqueId": "14605"
   },
   {
     "cpoint7_parent": "0",
@@ -46169,7 +46169,7 @@
     "origin": "-5579.926758 12946.603516 -12560.338867",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14630"
+    "hammerUniqueId": "14606"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46252,7 +46252,7 @@
     "origin": "-5584.129883 11444.802734 -12494.349609",
     "angles": "0.000000 90.000046 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14633"
+    "hammerUniqueId": "14609"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46335,7 +46335,7 @@
     "origin": "-5584.129883 11443.802734 -12494.349609",
     "angles": "0.000000 270.000061 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14634"
+    "hammerUniqueId": "14610"
   },
   {
     "cpoint7_parent": "0",
@@ -46431,7 +46431,7 @@
     "origin": "-5588.129883 11458.802734 -12434.349609",
     "angles": "89.999969 180.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14635"
+    "hammerUniqueId": "14611"
   },
   {
     "cpoint7_parent": "0",
@@ -46527,7 +46527,7 @@
     "origin": "-5588.073242 11458.801758 -12560.338867",
     "angles": "89.999969 180.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14636"
+    "hammerUniqueId": "14612"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46610,7 +46610,7 @@
     "origin": "-6941.879883 11810.703125 -12296.129883",
     "angles": "0.000000 0.000000 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14639"
+    "hammerUniqueId": "14615"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46693,7 +46693,7 @@
     "origin": "-6942.879395 11810.703125 -12296.129883",
     "angles": "0.000000 180.000015 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14640"
+    "hammerUniqueId": "14616"
   },
   {
     "cpoint7_parent": "0",
@@ -46789,7 +46789,7 @@
     "origin": "-6927.879883 11814.703125 -12236.129883",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14641"
+    "hammerUniqueId": "14617"
   },
   {
     "cpoint7_parent": "0",
@@ -46885,7 +46885,7 @@
     "origin": "-6927.880371 11814.646484 -12362.119141",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14642"
+    "hammerUniqueId": "14618"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46968,7 +46968,7 @@
     "origin": "-6941.879883 12594.703125 -12296.129883",
     "angles": "0.000000 0.000000 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14645"
+    "hammerUniqueId": "14621"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47051,7 +47051,7 @@
     "origin": "-6942.879395 12594.703125 -12296.129883",
     "angles": "0.000000 180.000015 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14646"
+    "hammerUniqueId": "14622"
   },
   {
     "cpoint7_parent": "0",
@@ -47147,7 +47147,7 @@
     "origin": "-6927.879883 12598.703125 -12236.129883",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14647"
+    "hammerUniqueId": "14623"
   },
   {
     "cpoint7_parent": "0",
@@ -47243,7 +47243,7 @@
     "origin": "-6927.880371 12598.646484 -12362.119141",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14648"
+    "hammerUniqueId": "14624"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47326,7 +47326,7 @@
     "origin": "-7776.000000 11975.703125 -12424.000000",
     "angles": "0.000000 0.000000 -89.999977",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14735"
+    "hammerUniqueId": "14711"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47409,7 +47409,7 @@
     "origin": "-7774.999512 11975.701172 -12424.000000",
     "angles": "0.000000 180.000107 -90.000038",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14736"
+    "hammerUniqueId": "14712"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47492,7 +47492,7 @@
     "origin": "-7775.000000 12431.000000 -12424.000000",
     "angles": "0.000000 0.000000 -89.999977",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14739"
+    "hammerUniqueId": "14715"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47575,7 +47575,7 @@
     "origin": "-7773.999512 12430.998047 -12424.000000",
     "angles": "0.000000 180.000107 -90.000038",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14740"
+    "hammerUniqueId": "14716"
   },
   {
     "precomputedsubfrusta": "6",
@@ -47664,7 +47664,7 @@
     "origin": "-7320.000000 11933.000000 -12150.000000",
     "angles": "0.000000 90.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14743"
+    "hammerUniqueId": "14719"
   },
   {
     "cpoint7_parent": "0",
@@ -47760,7 +47760,7 @@
     "origin": "-7320.000000 11942.000000 -12150.975586",
     "angles": "0.000000 180.000061 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14744"
+    "hammerUniqueId": "14720"
   },
   {
     "precomputedsubfrusta": "6",
@@ -47849,7 +47849,7 @@
     "origin": "-5515.750000 12012.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14747"
+    "hammerUniqueId": "14723"
   },
   {
     "cpoint7_parent": "0",
@@ -47945,7 +47945,7 @@
     "origin": "-5524.750000 12012.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14748"
+    "hammerUniqueId": "14724"
   },
   {
     "precomputedsubfrusta": "6",
@@ -48034,7 +48034,7 @@
     "origin": "-5515.750000 12376.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14751"
+    "hammerUniqueId": "14727"
   },
   {
     "cpoint7_parent": "0",
@@ -48130,7 +48130,7 @@
     "origin": "-5524.750000 12376.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14752"
+    "hammerUniqueId": "14728"
   },
   {
     "precomputedsubfrusta": "6",
@@ -48219,7 +48219,7 @@
     "origin": "-5519.350586 12300.552734 -12423.129883",
     "angles": "0.000000 180.000031 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14755"
+    "hammerUniqueId": "14731"
   },
   {
     "cpoint7_parent": "0",
@@ -48315,7 +48315,7 @@
     "origin": "-5528.350586 12301.528320 -12423.129883",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14756"
+    "hammerUniqueId": "14732"
   },
   {
     "precomputedsubfrusta": "6",
@@ -48404,7 +48404,7 @@
     "origin": "-5519.350586 12092.563477 -12424.780273",
     "angles": "0.000000 180.000031 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14759"
+    "hammerUniqueId": "14735"
   },
   {
     "cpoint7_parent": "0",
@@ -48500,7 +48500,7 @@
     "origin": "-5528.350586 12093.539062 -12424.780273",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14760"
+    "hammerUniqueId": "14736"
   },
   {
     "precomputedsubfrusta": "6",
@@ -48589,7 +48589,7 @@
     "origin": "-4403.750000 12376.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14763"
+    "hammerUniqueId": "14739"
   },
   {
     "cpoint7_parent": "0",
@@ -48685,7 +48685,7 @@
     "origin": "-4412.750000 12376.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14764"
+    "hammerUniqueId": "14740"
   },
   {
     "precomputedsubfrusta": "6",
@@ -48774,7 +48774,7 @@
     "origin": "-4403.750000 12012.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14767"
+    "hammerUniqueId": "14743"
   },
   {
     "cpoint7_parent": "0",
@@ -48870,7 +48870,7 @@
     "origin": "-4412.750000 12012.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14768"
+    "hammerUniqueId": "14744"
   },
   {
     "precomputedsubfrusta": "6",
@@ -48959,7 +48959,7 @@
     "origin": "-4403.750000 12192.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14771"
+    "hammerUniqueId": "14747"
   },
   {
     "cpoint7_parent": "0",
@@ -49055,7 +49055,7 @@
     "origin": "-4412.750000 12192.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14772"
+    "hammerUniqueId": "14748"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49144,7 +49144,7 @@
     "origin": "-6008.000000 12922.703125 -12373.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14775"
+    "hammerUniqueId": "14751"
   },
   {
     "cpoint7_parent": "0",
@@ -49240,7 +49240,7 @@
     "origin": "-6008.000000 12913.703125 -12373.975586",
     "angles": "0.000000 0.000000 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14776"
+    "hammerUniqueId": "14752"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49329,7 +49329,7 @@
     "origin": "-6920.000000 12266.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14779"
+    "hammerUniqueId": "14755"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49418,7 +49418,7 @@
     "origin": "-7184.000000 12266.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14782"
+    "hammerUniqueId": "14758"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49507,7 +49507,7 @@
     "origin": "-7184.000000 12138.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14785"
+    "hammerUniqueId": "14761"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49596,7 +49596,7 @@
     "origin": "-7464.000000 12138.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14788"
+    "hammerUniqueId": "14764"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49685,7 +49685,7 @@
     "origin": "-7464.000000 12266.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14791"
+    "hammerUniqueId": "14767"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49774,7 +49774,7 @@
     "origin": "-6920.000000 12138.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14794"
+    "hammerUniqueId": "14770"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49863,7 +49863,7 @@
     "origin": "-6008.000000 11482.999023 -12373.000000",
     "angles": "0.000000 89.999947 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14797"
+    "hammerUniqueId": "14773"
   },
   {
     "cpoint7_parent": "0",
@@ -49959,7 +49959,7 @@
     "origin": "-6008.000000 11491.999023 -12373.975586",
     "angles": "0.000000 179.999939 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14798"
+    "hammerUniqueId": "14774"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50048,7 +50048,7 @@
     "origin": "-5730.437500 12950.675781 -12127.341797",
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14801"
+    "hammerUniqueId": "14777"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50137,7 +50137,7 @@
     "origin": "-7248.000000 11934.000000 -12170.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14804"
+    "hammerUniqueId": "14780"
   },
   {
     "precomputedsubfrusta": "5",
@@ -50220,7 +50220,7 @@
     "origin": "-5222.000000 12188.000000 -12072.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14807"
+    "hammerUniqueId": "14783"
   },
   {
     "precomputedsubfrusta": "5",
@@ -50303,7 +50303,7 @@
     "origin": "-5222.000000 12188.000000 -12071.000000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14808"
+    "hammerUniqueId": "14784"
   },
   {
     "cpoint7_parent": "0",
@@ -50399,7 +50399,7 @@
     "origin": "-5226.000000 12248.000000 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14809"
+    "hammerUniqueId": "14785"
   },
   {
     "cpoint7_parent": "0",
@@ -50495,7 +50495,7 @@
     "origin": "-5225.943359 12122.010742 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14810"
+    "hammerUniqueId": "14786"
   },
   {
     "precomputedsubfrusta": "5",
@@ -50578,7 +50578,7 @@
     "origin": "-5222.000000 12700.000000 -12072.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14813"
+    "hammerUniqueId": "14789"
   },
   {
     "precomputedsubfrusta": "5",
@@ -50661,7 +50661,7 @@
     "origin": "-5222.000000 12700.000000 -12071.000000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14814"
+    "hammerUniqueId": "14790"
   },
   {
     "cpoint7_parent": "0",
@@ -50757,7 +50757,7 @@
     "origin": "-5226.000000 12760.000000 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14815"
+    "hammerUniqueId": "14791"
   },
   {
     "cpoint7_parent": "0",
@@ -50853,7 +50853,7 @@
     "origin": "-5225.943359 12634.010742 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14816"
+    "hammerUniqueId": "14792"
   },
   {
     "precomputedsubfrusta": "5",
@@ -50936,7 +50936,7 @@
     "origin": "-5222.000000 11676.000000 -12072.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14819"
+    "hammerUniqueId": "14795"
   },
   {
     "precomputedsubfrusta": "5",
@@ -51019,7 +51019,7 @@
     "origin": "-5222.000000 11676.000000 -12071.000000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14820"
+    "hammerUniqueId": "14796"
   },
   {
     "cpoint7_parent": "0",
@@ -51115,7 +51115,7 @@
     "origin": "-5226.000000 11736.000000 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14821"
+    "hammerUniqueId": "14797"
   },
   {
     "cpoint7_parent": "0",
@@ -51211,6 +51211,6 @@
     "origin": "-5225.943359 11610.010742 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14822"
+    "hammerUniqueId": "14798"
   }
 ]
