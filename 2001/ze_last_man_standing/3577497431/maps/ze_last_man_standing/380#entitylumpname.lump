@@ -320,6 +320,38 @@
     ]
   },
   {
+    "wait": "1.000000",
+    "filtername": "[PR#]Z_Items_Filter_Name",
+    "spawnflags": "1",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]Zombie_Alpha_9",
+    "classname": "trigger_multiple",
+    "origin": "0.000000 0.000000 34.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "14605",
+    "model": "maps/ze_last_man_standing/entities/zombie_alpha_9_14605.vmdl",
+    "_template_lump_ent_index": "6",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Alpha",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
     "steamaudio_geometry_mode": "0",
     "expand_render_bounds_to_include_cloth": "0",
     "animgraph2_identifier": "",
@@ -394,7 +426,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "382",
-    "_template_lump_ent_index": "6",
+    "_template_lump_ent_index": "7",
     "connections": [
       {
         "output": "OnUser1",
@@ -501,7 +533,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11169",
-    "_template_lump_ent_index": "7",
+    "_template_lump_ent_index": "8",
     "connections": [
       {
         "output": "OnUser1",
@@ -541,7 +573,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "389",
     "model": "maps/ze_last_man_standing/entities/zombie_item_freezer_freeze_389.vmdl",
-    "_template_lump_ent_index": "8",
+    "_template_lump_ent_index": "9",
     "connections": [
       {
         "output": "OnStartTouch",

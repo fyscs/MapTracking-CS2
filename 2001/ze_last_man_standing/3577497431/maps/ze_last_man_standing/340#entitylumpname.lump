@@ -537,6 +537,38 @@
     ]
   },
   {
+    "wait": "1.000000",
+    "filtername": "[PR#]Z_Items_Filter_Name",
+    "spawnflags": "1",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]Zombie_Alpha_1",
+    "classname": "trigger_multiple",
+    "origin": "0.000000 0.000000 20.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "14583",
+    "model": "maps/ze_last_man_standing/entities/zombie_alpha_1_14583.vmdl",
+    "_template_lump_ent_index": "8",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Alpha",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
     "PostSpawnInheritAngles": "1",
     "PostSpawnDirectionVariance": "0.150000",
     "PostSpawnDirection": "0.000000 0.000000 0.000000",
@@ -556,7 +588,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "336",
-    "_template_lump_ent_index": "8",
+    "_template_lump_ent_index": "9",
     "connections": [
       {
         "output": "OnEntitySpawned",
@@ -580,7 +612,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "330",
-    "_template_lump_ent_index": "9",
+    "_template_lump_ent_index": "10",
     "connections": [
       {
         "output": "OutValue",
@@ -604,7 +636,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "322",
-    "_template_lump_ent_index": "10",
+    "_template_lump_ent_index": "11",
     "connections": [
       {
         "output": "OnTrigger",
@@ -662,7 +694,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "317",
-    "_template_lump_ent_index": "11"
+    "_template_lump_ent_index": "12"
   },
   {
     "CompareValue": "0.000000",
@@ -674,7 +706,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "321",
-    "_template_lump_ent_index": "12",
+    "_template_lump_ent_index": "13",
     "connections": [
       {
         "output": "OnEqualTo",
@@ -762,7 +794,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "337",
     "model": "maps/ze_last_man_standing/entities/zombie_item_predator_knife_trigger_337.vmdl",
-    "_template_lump_ent_index": "13",
+    "_template_lump_ent_index": "14",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -794,7 +826,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "339",
-    "_template_lump_ent_index": "14",
+    "_template_lump_ent_index": "15",
     "connections": [
       {
         "output": "OnPlayerPickup",
@@ -976,7 +1008,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "331",
-    "_template_lump_ent_index": "15",
+    "_template_lump_ent_index": "16",
     "connections": [
       {
         "output": "OnEqualTo",
@@ -1087,7 +1119,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "335",
-    "_template_lump_ent_index": "16",
+    "_template_lump_ent_index": "17",
     "connections": [
       {
         "output": "OnUser4",
@@ -1129,7 +1161,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "319",
-    "_template_lump_ent_index": "17"
+    "_template_lump_ent_index": "18"
   },
   {
     "entityIndexSelection": "0",
@@ -1153,7 +1185,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "318",
-    "_template_lump_ent_index": "18"
+    "_template_lump_ent_index": "19"
   },
   {
     "entityIndexSelection": "0",
@@ -1177,7 +1209,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "327",
-    "_template_lump_ent_index": "19"
+    "_template_lump_ent_index": "20"
   },
   {
     "CompareValue": "0.000000",
@@ -1189,7 +1221,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "320",
-    "_template_lump_ent_index": "20",
+    "_template_lump_ent_index": "21",
     "connections": [
       {
         "output": "OnEqualTo",
@@ -1251,7 +1283,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "316",
-    "_template_lump_ent_index": "21",
+    "_template_lump_ent_index": "22",
     "connections": [
       {
         "output": "OnEqualTo",
@@ -1403,7 +1435,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "341",
-    "_template_lump_ent_index": "22",
+    "_template_lump_ent_index": "23",
     "connections": [
       {
         "output": "OnEntitySpawned",
@@ -1440,7 +1472,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14377",
-    "_template_lump_ent_index": "23"
+    "_template_lump_ent_index": "24"
   },
   {
     "Case32": "",
@@ -1458,25 +1490,23 @@
     "Case20": "",
     "Case19": "",
     "Case18": "",
-    "Case17": "0",
-    "Case16": "16",
-    "Case15": "15",
-    "Case14": "14",
-    "Case13": "13",
-    "Case12": "12",
-    "Case11": "11",
-    "Case10": "10",
-    "Case09": "9",
-    "Case08": "8",
-    "Case07": "7",
-    "Case06": "6",
-    "Case05": "5",
-    "Case04": "4",
-    "Case03": "3",
-    "Case02": "2",
-    "Case01": "1",
-    "max": "16",
-    "startvalue": "16",
+    "Case17": "0.0",
+    "Case16": "16.0",
+    "Case15": "15.0",
+    "Case14": "14.0",
+    "Case13": "13.0",
+    "Case12": "12.0",
+    "Case11": "11.0",
+    "Case10": "10.0",
+    "Case09": "9.0",
+    "Case08": "8.0",
+    "Case07": "7.0",
+    "Case06": "6.0",
+    "Case05": "5.0",
+    "Case04": "4.0",
+    "Case03": "3.0",
+    "Case02": "2.0",
+    "Case01": "1.0",
     "vscripts": "",
     "targetname": "[PR#]Predator_Energy_Bar_Case",
     "classname": "logic_case",
@@ -1484,7 +1514,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14376",
-    "_template_lump_ent_index": "24",
+    "_template_lump_ent_index": "25",
     "connections": [
       {
         "output": "OnCase01",
@@ -1644,7 +1674,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14378",
     "model": "maps/ze_last_man_standing/entities/predator_energy_bar_trigger_14378.vmdl",
-    "_template_lump_ent_index": "25",
+    "_template_lump_ent_index": "26",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -1694,6 +1724,6 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14381",
-    "_template_lump_ent_index": "26"
+    "_template_lump_ent_index": "27"
   }
 ]

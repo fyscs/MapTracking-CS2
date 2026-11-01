@@ -456,5 +456,37 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]Z_Items_Filter_Name",
+    "spawnflags": "1",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]Zombie_Alpha_7",
+    "classname": "trigger_multiple",
+    "origin": "0.000000 -0.700195 34.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "14601",
+    "model": "maps/ze_last_man_standing/entities/zombie_alpha_7_14601.vmdl",
+    "_template_lump_ent_index": "8",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Alpha",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]
