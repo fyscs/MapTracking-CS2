@@ -30,8 +30,8 @@
       },
       {
         "output": "OnTimer",
-        "target": "[PR#]danmu_tr",
-        "input": "Enable",
+        "target": "[PR#]danmu_tp_fix",
+        "input": "ForceSpawn",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -351,7 +351,6 @@
     "_template_lump_ent_index": "7"
   },
   {
-    "wait": "1.000000",
     "filtername": "",
     "spawnflags": "4097",
     "globalname": "",
@@ -364,7 +363,7 @@
     "parentname": "",
     "vscripts": "",
     "targetname": "[PR#]danmu_stg1",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "13.000000 -1.000000 44.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -378,7 +377,7 @@
         "input": "TeleportToCurrentPos",
         "param": "",
         "delay": 0.10000000149011612,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnStartTouch",
@@ -386,7 +385,7 @@
         "input": "KeyValue",
         "param": "speed 0",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnStartTouch",
@@ -479,11 +478,10 @@
     ]
   },
   {
-    "wait": "1.000000",
     "filtername": "",
     "spawnflags": "4097",
     "globalname": "",
-    "StartDisabled": "1",
+    "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
@@ -492,7 +490,7 @@
     "parentname": "",
     "targetname": "[PR#]danmu_tr",
     "vscripts": "",
-    "classname": "trigger_multiple",
+    "classname": "trigger_once",
     "origin": "13.000000 -1.000000 42.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -506,7 +504,7 @@
         "input": "TeleportToCurrentPos",
         "param": "",
         "delay": 0.10000000149011612,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnStartTouch",
@@ -514,7 +512,7 @@
         "input": "KeyValue",
         "param": "speed 0",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnStartTouch",
