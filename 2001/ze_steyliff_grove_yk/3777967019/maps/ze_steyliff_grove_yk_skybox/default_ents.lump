@@ -60,7 +60,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1",
-    "worldname": "ze_steyliff_grove_r_skybox",
+    "worldname": "ze_steyliff_grove_yk_skybox",
     "mapUsageType": "skybox"
   },
   {
@@ -83,6 +83,9 @@
     "hammerUniqueId": "2"
   },
   {
+    "bakedshadowindex": "0",
+    "light_map_uniqueid": "1930768233",
+    "light_path_uniqueid": "1415680538",
     "brightness_legacy": "-nan(ind)",
     "brightness_lumens": "0",
     "targetname": "[PR#]Moon_Light",
@@ -104,7 +107,7 @@
     "nearclipplane": "0.000000",
     "fademindist": "",
     "fademaxdist": "",
-    "directlight": "2",
+    "directlight": "3",
     "bouncescale": "1.000000",
     "skycolor": "112 128 144",
     "skyintensity": "0.150000",

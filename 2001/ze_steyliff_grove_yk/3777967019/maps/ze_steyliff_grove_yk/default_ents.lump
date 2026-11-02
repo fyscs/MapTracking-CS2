@@ -128358,7 +128358,7 @@
   {
     "worldGroupID": "skyboxWorldGroup0",
     "fixupNames": "0",
-    "targetMapName": "maps/ze_steyliff_grove_r_skybox.vmap",
+    "targetMapName": "maps/ze_steyliff_grove_yk_skybox.vmap",
     "vscripts": "",
     "targetname": "",
     "classname": "skybox_reference",
