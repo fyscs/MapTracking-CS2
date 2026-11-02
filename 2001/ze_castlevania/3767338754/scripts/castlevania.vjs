@@ -11,6 +11,26 @@ let STAGE = 1;
 const MAX_STAGE = 6;
 let VPK_LOAD_IMMUNE = true;
 
+let BelmontIsPickedUp = false;
+let AlucardIsPickedUp = false;
+
+let MAP_BEATEN = false;//все 6 стадий пройдены — до смены карты
+
+//1% шанс: s_alucard_button в другое место (по стадиям)
+const ALUCARD_RARE_POS = {
+    2: { position: { x: -7936, y: 8904, z: 12441 }, angles: { pitch: 0, yaw: 195, roll: 0 } },
+    3: { position: { x: -7448, y: -4784, z: 5308 }, angles: { pitch: 0, yaw: 165, roll: 0 } },
+    4: { position: { x: -12864, y: 5528, z: 14969 }, angles: { pitch: 0, yaw: 300, roll: 0 } },
+    6: { position: { x: -7920, y: 2616, z: 11312 } },
+};
+
+let s6cheese_ticking = true;
+const s6cheese_delay_skincheck = 30.00;
+const S6CHEESE_CENTER = { x: -11971, y: 11198, z: 14875 };
+const S6CHEESE_RADIUS = 1000;
+const S6CHEESE_MIN_Z = 14785;
+let s6cheese_slay_list = [];
+
 let STAGE1_BOSSHP_MULTIPLIER = 2.0;
 let STAGE2_BOSSHP_MULTIPLIER = 2.0;
 let STAGE3_BOSSHP_MULTIPLIER = 1.0;
@@ -32,7 +52,7 @@ Instance.OnScriptInput("VPK_LoadStage", () => {
 });
 
 Instance.OnScriptInput("VPK_SetStage", () => {
-    Instance.EntFireAtName({name: "stagesystem_case", input: "InValue", value: `${STAGE}`, delay: 0.12 });
+    Instance.EntFireAtName({name: "stagesystem_case", input: "InValue", value: STAGE, delay: 0.12 });
     Instance.EntFireAtName({name: "Map_Begin_Relay", input: "Trigger", delay: 0.12 });
     Instance.EntFireAtName({name: script_ent_name, input: "RunScriptInput", value: "VPK_DisableImmune", delay: 14.00 });
 });
@@ -851,6 +871,9 @@ function ResetScript()
     Stage_Win = false;
     givenmessage = false;
 
+    s6cheese_ticking = true;
+    s6cheese_slay_list = [];
+
     Boss_Angle_ticking = false;
     Boss_Angle_retries = 5;
     Boss_Angle_bossmodel = null;
@@ -1149,6 +1172,16 @@ Instance.OnRoundStart(() => {
     script_ent = Instance.FindEntityByName(script_ent_name);
     recursive_fix = Instance.FindEntityByName("recursive_fix");
     ResetScript();
+
+    BelmontIsPickedUp = false;
+    AlucardIsPickedUp = false;
+
+    const alucard_rare = ALUCARD_RARE_POS[STAGE];
+    if(alucard_rare && RandomInt(1, 100) <= (MAP_BEATEN ? 100 : 1))
+    {
+        Instance.FindEntityByName("s_alucard_button")?.Teleport(alucard_rare);
+    }
+
     Instance.EntFireAtName({ name: script_ent_name, input: "RunScriptInput", value: "VPK_Unload_All", delay: 0.00 });
     Instance.EntFireAtName({ name: script_ent_name, input: "RunScriptInput", value: "VPK_LoadStage", delay: 1.00 });
     // Instance.Msg(`Stage: ${STAGE}`);
@@ -1247,6 +1280,7 @@ Instance.OnRoundStart(() => {
         Instance.EntFireAtName({ name: "skybox_skybox", input: "Color", value: "255 255 255" });
         Instance.EntFireAtName({ name: "skybox_cloud", input: "Color", value: "255 255 255" });
         Instance.EntFireAtName({ name: "Sun_*", input: "SetLightColor", value: "255 255 255" });
+        Instance.EntFireAtTarget({ target: script_ent, input: "RunScriptInput", value: "TickS6Cheese", delay: 40.00 });
     }
     if(STAGE !== 6)
     {
@@ -2017,6 +2051,7 @@ Instance.OnScriptInput("ValidateCheck", ({caller, activator}) => {
         if(STAGE > MAX_STAGE)
         {
             STAGE = 1;
+            MAP_BEATEN = true;
         }
         Instance.EntFireAtTarget({ target: script_ent, input: "RunScriptInput", value: "KillAllT" });
         Instance.EntFireAtName({ name: "game_winning_relay", input: "FireUser1", delay: 0.05 });
@@ -3972,8 +4007,9 @@ Instance.OnScriptInput("CanPickUpAlucard", ({caller, activator}) => {
     {
         const player = activator;
         const button = caller;
-        if((!Alucard.player || !Alucard.player?.IsValid()) && CanPickUpItem(player))
+        if((!Alucard.player || !Alucard.player?.IsValid()) && CanPickUpItem(player) && !AlucardIsPickedUp)
         {
+            AlucardIsPickedUp = true;
             pickedUpItems.add(player);
             player?.FindWeaponBySlot(2)?.Remove();
             Instance.EntFireAtTarget({ target: button, input: "FireUser4", activator });
@@ -4087,8 +4123,9 @@ Instance.OnScriptInput("CanPickUpBelmont", ({caller, activator}) => {
     {
         const player = activator;
         const button = caller;
-        if((!Belmont.player || !Belmont.player?.IsValid()) && CanPickUpItem(player))
+        if((!Belmont.player || !Belmont.player?.IsValid()) && CanPickUpItem(player) && !BelmontIsPickedUp)
         {
+            BelmontIsPickedUp = true;
             pickedUpItems.add(player);
             player?.FindWeaponBySlot(2)?.Remove();
             Instance.EntFireAtTarget({ target: button, input: "FireUser4", activator });
@@ -6468,3 +6505,71 @@ Instance.OnScriptReload({
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
+
+
+
+
+//----------------------------------------------------------------------------------------------------------
+//    no more hiding/skin/low-pop/solo-cheese on stage 6 (<=3 normal-humans && >0 skin-humans : SLAY)
+//----------------------------------------------------------------------------------------------------------
+
+//Раз в секунду: если живой CT дошёл до точки — через 30 с проверка
+Instance.OnScriptInput("TickS6Cheese", ({caller, activator}) => {
+    if(!s6cheese_ticking) return;
+    Instance.EntFireAtTarget({ target: script_ent, input: "RunScriptInput", value: "TickS6Cheese", delay: 1.00 });
+    const players = Instance.FindEntitiesByClass("player");
+    for(const player of players)
+    {
+        if(!player?.IsValid() || player.GetTeamNumber() !== 3 || !player.IsAlive()) continue;
+        const origin = player.GetAbsOrigin();
+        if(VectorDistance(origin, S6CHEESE_CENTER) > S6CHEESE_RADIUS || origin.z < S6CHEESE_MIN_Z) continue;
+        s6cheese_ticking = false;
+        Instance.EntFireAtTarget({ target: script_ent, input: "RunScriptInput", value: "TickS6CheeseActPostSkins", delay: s6cheese_delay_skincheck });
+        return;
+    }
+});
+
+Instance.OnScriptInput("TickS6CheeseActPostSkins", ({caller, activator}) => {
+    let total_player_count = 0;
+    let normal_player_count = 0;
+    let character_count = 0;
+    const players = [];
+    //в CS:GO считались все entity "player" — тут все подключённые контроллеры
+    for(const controller of Instance.GetAllPlayerControllers())
+    {
+        if(!controller?.IsValid() || !controller.IsConnected()) continue;
+        total_player_count++;
+        const player = controller.GetPlayerPawn();
+        if(!player?.IsValid() || player.GetTeamNumber() !== 3 || !player.IsAlive()) continue;
+        players.push(player);
+        //в CS:GO персонаж = нож с >=2 детьми (prop_dynamic / func_button / trigger_hurt)
+        const is_character = player === Alucard.player || player === Belmont.player || player === Sypha.player || HolyKnight_Owners.has(player);
+        if(is_character) character_count++;
+        else normal_player_count++;
+    }
+    Instance.Msg(`[s6cheese]    ${total_player_count}    ${character_count}    ${normal_player_count}`);
+    if(total_player_count >= 15 && character_count > 0 && normal_player_count <= 3)
+    {
+        s6cheese_slay_list = players;
+        Instance.EntFireAtTarget({ target: script_ent, input: "RunScriptInput", value: "S6CheeseSlay", delay: 0.02 });
+        Instance.EntFireAtTarget({ target: script_ent, input: "RunScriptInput", value: "S6CheeseSlay", delay: 0.06 });
+        for(let i = 0; i < 30; i++)
+        {
+            Instance.EntFireAtTarget({ target: script_ent, input: "RunScriptInput", value: "S6CheeseSay", delay: i * 0.10 });
+        }
+    }
+});
+
+Instance.OnScriptInput("S6CheeseSlay", ({caller, activator}) => {
+    for(const player of s6cheese_slay_list)
+    {
+        if(player?.IsValid() && player.IsAlive())
+        {
+            player.Kill();
+        }
+    }
+});
+
+Instance.OnScriptInput("S6CheeseSay", ({caller, activator}) => {
+    Instance.ServerCommand("say GO FOR A REAL TEAM WIN YOU EGO CUCKS");
+});
