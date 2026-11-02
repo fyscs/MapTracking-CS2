@@ -46510,7 +46510,7 @@
     "hammerUniqueId": "7361",
     "connections": [
       {
-        "output": "OnUser1",
+        "output": "OnGetValue",
         "target": "[PR#]item_copy_case",
         "input": "InValue",
         "param": "",
@@ -46518,7 +46518,7 @@
         "limit": -1
       },
       {
-        "output": "OnUser1",
+        "output": "OnGetValue",
         "target": "[PR#]item_copy_case2",
         "input": "InValue",
         "param": "",

@@ -658,7 +658,7 @@
       {
         "output": "OnPass",
         "target": "[PR#]item_copy_counter",
-        "input": "FireUser1",
+        "input": "GetValue",
         "param": "",
         "delay": 0,
         "limit": -1
