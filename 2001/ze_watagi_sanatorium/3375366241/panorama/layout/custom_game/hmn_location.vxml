@@ -6,10 +6,11 @@
         <include src="s2r://panorama/styles/custom_game/hmn_location.vcss" />
     </styles>
     <Panel class="Root">
-        <Panel id="location_container" class="Hidden">
-            <Panel id="location_center">
-                <Label id="location_title" class="LocationTitle" text="{s:location_title}" />
-                <Label id="location_text" class="LocationText" text="{s:location_text}" />
+        <Panel id="location_container" class="LocationContainer Hidden">
+            <Panel id="location_content" class="LocationContent">
+                <Label id="location_text" class="LocationText DialogueHidden" text="{s:location_text}" />
+                <Panel id="location_line" class="LocationLine DialogueHidden" />
+                <Label id="location_title" class="LocationTitle DialogueHidden" text="{s:location_title}" />
             </Panel>
         </Panel>
     </Panel>

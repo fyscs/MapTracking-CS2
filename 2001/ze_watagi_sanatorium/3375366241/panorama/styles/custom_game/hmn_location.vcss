@@ -5,63 +5,81 @@
     width: 100%;
     height: 100%;
 }
-#location_container {
+.LocationContainer {
     width: 100%;
     height: 100%;
-}
-#location_container.Hidden {
-    visibility: collapse;
-}
-#location_container.Visible {
-    visibility: visible;
-}
-#location_center {
     horizontal-align: center;
     vertical-align: center;
-    flow-children: down;
-    opacity: 0.0;
-    transform: translateY(20px);
-    transition-property: opacity, transform;
-    transition-duration: 1.5s;
-    transition-timing-function: ease-in-out;
-}
-#location_center.LocationFadeIn {
     opacity: 1.0;
-    transform: translateY(0px);
+    transition-property: opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
 }
-.LocationTitle {
-    horizontal-align: center;
-    font-size: 35px;
-    color: #828ed1;
-    text-align: center;
+.LocationContainer.Hidden {
     opacity: 0.0;
-    transform: translateY(5px);
-    text-shadow: 0px 0px 1px #000000FF, 0px 0px 2px #000000AA;
-    transition-property: opacity, transform, text-shadow;
-    transition-duration: 1.0s;
-    transition-delay: 0.0s;
-    transition-timing-function: ease-in-out;
+}
+.LocationContent {
+    width: 1100px;
+    height: 190px;
+    horizontal-align: center;
+    vertical-align: center;
+    transform: translateY(8px);
+    flow-children: down;
 }
 .LocationText {
+    width: 100%;
     horizontal-align: center;
-    font-size: 49px;
-    color: white;
     text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    color: #FFFFFFFF;
+    letter-spacing: 1px;
+    opacity: 1.0;
+    transform: scale3d(1.0, 1.0, 1.0);
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    text-shadow: 0px 0px 2px #000000FF, 0px 0px 5px #000000FF;
+    white-space: nowrap;
+}
+.LocationText.DialogueHidden {
     opacity: 0.0;
-    transform: translateY(5px);
-    text-shadow: 0px 0px 1px #000000FF, 0px 0px 2px #000000AA;
-    transition-property: opacity, transform, text-shadow;
-    transition-duration: 1.0s;
-    transition-delay: 0.25s;
-    transition-timing-function: ease-in-out;
+    transform: scale3d(0.96, 0.96, 1.0);
 }
-#location_center.LocationFadeIn .LocationTitle {
+.LocationLine {
+    width: 650px;
+    height: 2px;
+    horizontal-align: center;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    background-color: #FFFFFFFF;
     opacity: 1.0;
-    transform: translateY(0px);
-    text-shadow: 0px 0px 4px #000000FF, 0px 0px 8px #000000FF;
+    transform: scaleX(1.0);
+    transition-property: opacity, transform;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-out;
 }
-#location_center.LocationFadeIn .LocationText {
-    opacity: 1.0;
-    transform: translateY(0px);
-    text-shadow: 0px 0px 4px #000000FF, 0px 0px 8px #000000FF;
+.LocationLine.DialogueHidden {
+    opacity: 0.0;
+    transform: scaleX(0.0);
+}
+.LocationTitle {
+    width: 100%;
+    height: 32px;
+    horizontal-align: center;
+    text-align: center;
+    margin-top: 3px;
+    font-size: 24px;
+    color: #828ED1FF;
+    opacity: 0.95;
+    transform: scale3d(1.0, 1.0, 1.0);
+    text-shadow: 0px 0px 3px #000000FF, 0px 0px 8px #000000FF;
+    transition-property: opacity, transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    white-space: nowrap;
+}
+.LocationTitle.DialogueHidden {
+    opacity: 0.0;
+    transform: scale3d(0.97, 0.97, 1.0);
 }
