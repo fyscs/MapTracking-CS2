@@ -33958,7 +33958,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]ex1_boss_tpcase",
-        "input": "PickRandomShuffle",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -34793,7 +34793,7 @@
         "target": "[PR#]ex1_boss_start_tele",
         "input": "Enable",
         "param": "",
-        "delay": 37,
+        "delay": 36,
         "limit": 1
       },
       {
@@ -43440,7 +43440,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "logic_auto",
-    "origin": "-3776.000000 7888.000000 12816.000000",
+    "origin": "-3729.000000 7888.000000 12816.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5812",
@@ -43736,24 +43736,6 @@
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5823"
-  },
-  {
-    "SkyboxName": "zombiehell",
-    "targetname": "[PR#]sky_change",
-    "classname": "skybox_swapper",
-    "origin": "-3872.000000 7904.000000 12816.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5824"
-  },
-  {
-    "SkyboxName": "sky561",
-    "targetname": "[PR#]sky_return",
-    "classname": "skybox_swapper",
-    "origin": "-3872.000000 7888.000000 12816.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5825"
   },
   {
     "fadescale": "1",
