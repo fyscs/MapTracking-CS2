@@ -153,8 +153,7 @@ function StartLevel() {
 	}
 	else if (level === 0)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 10" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 10" });
+		Instance.EntFireAtName({ name: "lr_spawntime_n", input: "Trigger" });
 		Instance.EntFireAtName({ name: "server command", input: "Command", value: "say *** WARM UP ROUND ***", delay: 2.0 });
 		Instance.EntFireAtName({ name: "server command", input: "Command", value: "say *** Expired 20 seconds,next round will start at STAGE 1 ***", delay: 22.0 });
 		Instance.EntFireAtName({ name: "mc_level", input: "SetValue", value: "1", delay: 22.0 });
@@ -162,8 +161,7 @@ function StartLevel() {
 	}
 	else if (level === 1)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 10" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 10" });
+		Instance.EntFireAtName({ name: "lr_spawntime_n", input: "Trigger" });
 		Instance.EntFireAtName({ name: "change lv2 extra", input: "Kill" });
 		dest_ent.Teleport({ position: { x: 9524.3, y: -12932, z: -5072 }, angles: { pitch: 0, yaw: 90, roll: 0 } });
 		Instance.EntFireAtName({ name: "template_stage1", input: "ForceSpawn" });
@@ -180,8 +178,7 @@ function StartLevel() {
 	}
 	else if (level === 2)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 10" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 10" });
+		Instance.EntFireAtName({ name: "lr_spawntime_n", input: "Trigger" });
 		Instance.EntFireAtName({ name: "boss brush", input: "Disable" });
 		Instance.EntFireAtName({ name: "ex2_boss_zombie_road", input: "Disable" });
 		Instance.EntFireAtName({ name: "change lv2 extra", input: "Kill" });
@@ -204,8 +201,7 @@ function StartLevel() {
 	}
 	else if (level === 3)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 10" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 10" });
+		Instance.EntFireAtName({ name: "lr_spawntime_n", input: "Trigger" });
 		Instance.EntFireAtName({ name: "boss brush", input: "Disable" });
 		Instance.EntFireAtName({ name: "lvfinal boss trigger extra", input: "Kill" });
 		Instance.EntFireAtName({ name: "stage3 extra clear trigger", input: "Kill" });
@@ -226,8 +222,7 @@ function StartLevel() {
 	}
 	else if (level === 4)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 7" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 7" });
+		Instance.EntFireAtName({ name: "lr_spawntime_f", input: "Trigger" });
 		Instance.EntFireAtName({ name: "change lv2", input: "Kill" });
 		Instance.EntFireAtName({ name: "change lv2 extra", input: "Enable" });
 		dest_ent.Teleport({ position: { x: 9524.3, y: -12932, z: -5072 }, angles: { pitch: 0, yaw: 90, roll: 0 } });
@@ -250,8 +245,7 @@ function StartLevel() {
 	}
 	else if (level === 5)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 7" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 7" });
+		Instance.EntFireAtName({ name: "lr_spawntime_f", input: "Trigger" });
 		Instance.EntFireAtName({ name: "stage2 clear trigger", input: "Kill" });
 		Instance.EntFireAtName({ name: "lv14 boss trigger", input: "Kill" });
 		Instance.EntFireAtName({ name: "boss brush", input: "Disable" });
@@ -278,8 +272,7 @@ function StartLevel() {
 	}
 	else if (level === 6)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 7" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 7" });
+		Instance.EntFireAtName({ name: "lr_spawntime_f", input: "Trigger" });
 		Instance.EntFireAtName({ name: "crasher hurt", input: "Kill" });
 		Instance.EntFireAtName({ name: "crasher push", input: "Kill" });
 		Instance.EntFireAtName({ name: "crasher target", input: "Kill" });
@@ -315,8 +308,7 @@ function StartLevel() {
 	}
 	else if (level === 7)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 15" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 15" });
+		Instance.EntFireAtName({ name: "lr_spawntime_s", input: "Trigger" });
 		Instance.EntFireAtName({ name: "boss brush", input: "Disable" });
 		Instance.EntFireAtName({ name: "template_ex", input: "ForceSpawn" });
 		Instance.EntFireAtName({ name: "z_item_lv2", input: "Kill" });
@@ -342,8 +334,7 @@ function StartLevel() {
 	}
 	else if (level === 8 && rtv_count !== 0)
 	{
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_max 15" });
-		Instance.EntFireAtName({ name: "server command", input: "Command", value: "zr_infect_spawn_time_min 15" });
+		Instance.EntFireAtName({ name: "lr_spawntime_s", input: "Trigger" });
 		Instance.EntFireAtName({ name: "template_stage3", input: "ForceSpawn" });
 		Instance.EntFireAtName({ name: "z_item_lv2", input: "Kill" });
 		Instance.EntFireAtName({ name: "z_item_lv3", input: "Kill" });

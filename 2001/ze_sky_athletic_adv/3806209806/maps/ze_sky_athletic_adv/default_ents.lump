@@ -65654,5 +65654,98 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8726"
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "vscripts": "",
+    "targetname": "[PR#]lr_spawntime_n",
+    "classname": "logic_relay",
+    "origin": "12238.000000 -13941.663086 -5373.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "8826",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]server command",
+        "input": "Command",
+        "param": "zr_infect_spawn_time_max 10",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]server command",
+        "input": "Command",
+        "param": "zr_infect_spawn_time_min 10",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "vscripts": "",
+    "targetname": "[PR#]lr_spawntime_f",
+    "classname": "logic_relay",
+    "origin": "12256.000000 -13941.663086 -5373.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "8827",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]server command",
+        "input": "Command",
+        "param": "zr_infect_spawn_time_max 7",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]server command",
+        "input": "Command",
+        "param": "zr_infect_spawn_time_min 7",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "vscripts": "",
+    "targetname": "[PR#]lr_spawntime_s",
+    "classname": "logic_relay",
+    "origin": "12274.000000 -13941.663086 -5373.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "8828",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]server command",
+        "input": "Command",
+        "param": "zr_infect_spawn_time_max 15",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]server command",
+        "input": "Command",
+        "param": "zr_infect_spawn_time_min 15",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]
