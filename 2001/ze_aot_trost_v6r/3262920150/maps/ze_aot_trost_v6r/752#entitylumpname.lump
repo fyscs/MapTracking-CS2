@@ -168,30 +168,6 @@
         "param": "speed 0.1",
         "delay": 0,
         "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.1",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.1",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.1",
-        "delay": 3,
-        "limit": -1
       }
     ]
   },
