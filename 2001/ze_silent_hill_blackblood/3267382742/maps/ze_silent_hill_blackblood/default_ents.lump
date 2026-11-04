@@ -11740,8 +11740,8 @@
     "skin": "0",
     "model": "models/cs_italy/crate/italy_wood_crate_2.vmdl",
     "classname": "prop_physics_multiplayer",
-    "origin": "-7532.098633 14411.426758 13946.983398",
-    "angles": "10.377076 275.151306 1.785905",
+    "origin": "-7532.100098 14411.423828 13946.981445",
+    "angles": "10.375223 275.157898 1.787294",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2618"
   },
@@ -11829,8 +11829,8 @@
     "skin": "0",
     "model": "models/cs_italy/crate/italy_wood_crate_2.vmdl",
     "classname": "prop_physics_multiplayer",
-    "origin": "-7567.667480 14404.863281 13986.528320",
-    "angles": "10.351963 273.898560 0.534221",
+    "origin": "-7567.667480 14404.869141 13986.529297",
+    "angles": "10.350586 273.896942 0.534593",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2619"
   },
@@ -11918,8 +11918,8 @@
     "skin": "0",
     "model": "models/cs_italy/crate/italy_wood_crate_2.vmdl",
     "classname": "prop_physics_multiplayer",
-    "origin": "-7617.376465 14411.279297 13947.344727",
-    "angles": "8.975192 263.118378 -3.153646",
+    "origin": "-7617.376465 14411.277344 13947.343750",
+    "angles": "8.980151 263.120575 -3.149826",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2620"
   },
@@ -29818,7 +29818,7 @@
         "target": "[PR#]caidanfantele 3",
         "input": "Enable",
         "param": "",
-        "delay": 27,
+        "delay": 29,
         "limit": -1
       },
       {
@@ -29833,7 +29833,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u50F5\u5C3826\u79D2\u540E\u4F20\u9001",
+        "param": "say \u50F5\u5C3830\u79D2\u540E\u4F20\u9001",
         "delay": 1,
         "limit": 1
       }
@@ -29887,14 +29887,14 @@
         "target": "[PR#]caidanfantele 4",
         "input": "Enable",
         "param": "",
-        "delay": 29,
-        "limit": -1
+        "delay": 30,
+        "limit": 1
       },
       {
         "output": "OnStartTouch",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u50F5\u5C3828\u79D2\u540E\u4F20\u9001",
+        "param": "say \u50F5\u5C3831\u79D2\u540E\u4F20\u9001",
         "delay": 1,
         "limit": 1
       }
@@ -29940,7 +29940,7 @@
         "target": "[PR#]caidanfantele 5",
         "input": "Enable",
         "param": "",
-        "delay": 33,
+        "delay": 35,
         "limit": -1
       },
       {
@@ -29955,7 +29955,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u50F5\u5C3832\u79D2\u540E\u4F20\u9001",
+        "param": "say \u50F5\u5C3834\u79D2\u540E\u4F20\u9001",
         "delay": 1,
         "limit": 1
       }
@@ -29971,7 +29971,7 @@
     "vscripts": "",
     "targetname": "[PR#]caidanfan man6",
     "classname": "info_teleport_destination",
-    "origin": "11019.000000 4345.000000 -13313.853516",
+    "origin": "11567.985352 4874.720703 -13313.853516",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2070"
@@ -30001,7 +30001,7 @@
         "target": "[PR#]caidanfantele 6",
         "input": "Enable",
         "param": "",
-        "delay": 30,
+        "delay": 34,
         "limit": -1
       },
       {
@@ -30016,7 +30016,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say \u50F5\u5C3829\u79D2\u540E\u4F20\u9001",
+        "param": "say \u50F5\u5C3835\u79D2\u540E\u4F20\u9001",
         "delay": 1,
         "limit": 1
       }
