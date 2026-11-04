@@ -61,7 +61,7 @@
     "animgraph2_identifier": "",
     "add_modifier": "",
     "add_attribute": "",
-    "disableshadows": "0",
+    "disableshadows": "1",
     "bodygroups": "",
     "skin": "default",
     "clientSideEntity": "0",

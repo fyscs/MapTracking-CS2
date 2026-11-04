@@ -35,5 +35,14 @@
             <Label class="ZombieItemLockText" text="Mother zombies get first priority" hittest="false" />
             <Label id="zombie_item_lock_countdown" class="ZombieItemLockText" text="{s:zombie_item_lock_time}" hittest="false" />
         </Panel>
+        <Panel id="collective_vip_denied" class="VipDenied" hittest="false">
+            <Label class="VipDeniedText" text="[NO VIP STATUS]" hittest="false" />
+            <Label class="VipDeniedText" text="Possible reasons:" hittest="false" />
+            <Label class="VipDeniedText" text="1) You're not a patron/vip" hittest="false" />
+            <Label class="VipDeniedText" text="2) You need to rejoin the server" hittest="false" />
+            <Label class="VipDeniedText" text="3) This server isn't running CS2Fixes (or its SteamID naming is off)" hittest="false" />
+            <Label class="VipDeniedText" text="(the map can only read your SteamID through CS2Fixes)" hittest="false" />
+        </Panel>
+        <Panel id="collective_vip_flash" class="VipFlash" hittest="false" />
     </Panel>
 </root>
