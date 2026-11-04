@@ -8,9 +8,9 @@
 //    僵尸（T）在**局中**转成 CT 时，给他
 //      · 切阵营后 0.3 秒（BOOST_DELAY）才真正生效，避免被换队/重生流程覆盖
 //      · 前 10 秒：速度倍率 2.0（这 10 秒从"生效时刻"起算，不因延迟缩水）
-//      · 之后    ：速度倍率 1.4（一直保持）
+//      · 之后    ：速度倍率 1.6（一直保持，掉速本身再延迟 FADE_DELAY 0.3s 生效）
 //    重力：加速期间该玩家重力倍率 0.9（跳得更高、落得更慢），只影响他自己。
-//          10 秒后速度降为 1.4，重力**仍是 0.9**，一路保持到本回合结束。
+//          10 秒后速度降为 1.6（再延 0.3s 投递），重力**仍是 0.9**，一路保持到本回合结束。
 //    还原：只在开局（OnRoundStart）重置一次 —— 把**全房间**的速度和重力都写回 1.0。
 //          那一刻很多人还没重生，所以 RESET_SWEEP_SEC（1.5s）后同一个值再写一遍，
 //          作用对象是重生出来的新 pawn；写 1.0 到本来就是 1.0 的人等于空操作。
@@ -91,7 +91,7 @@ const ANNOUNCE_END = false;
 const SPEED_BOOST = 2.0;
 
 /** 之后一直用这个倍率 */
-const SPEED_AFTER = 1.4;
+const SPEED_AFTER = 1.6;
 
 /** 加速持续多久（秒） */
 const BOOST_SEC = 10.0;
@@ -102,6 +102,14 @@ const BOOST_SEC = 10.0;
  * 这 0.3s **不计入** BOOST_SEC —— 计时起点已经同步往后挪了（见 StartBoost）。
  */
 const BOOST_DELAY = 0.3;
+
+/**
+ * 从 SPEED_BOOST 降到 SPEED_AFTER 的过渡延迟（秒）。
+ * 到期后不立刻写 1.6，而是让引擎在 0.3s 后再投递，避免掉速那一下太"硬"。
+ * 这 0.3s 内条目仍留在 boosted 里：如果玩家死亡重生（pawn 被换掉），
+ * 心跳会给他补写一次 1.6，不会出现"2.0 卡到回合结束"。
+ */
+const FADE_DELAY = 0.3;
 
 /**
  * 脚本初始开关状态：**默认关**。
@@ -175,6 +183,9 @@ let tickArmed = false;
 
 /** 开局补扫的到期时刻；-1 表示没有待补扫的任务 */
 let sweepAt = -1;
+
+/** TAB 提示条是否已经报过一次错（避免每 0.1s 刷屏） */
+let tipErrorLogged = false;
 
 function Log(msg) {
 	Instance.Msg(`[revive_speed] ${msg}`);
@@ -376,6 +387,10 @@ function SetEnabled(on, why) {
 			const pawn = entry.pawn;
 			if (pawn && pawn.IsValid()) {
 				RestoreNormal(pawn);
+				// 如果正好处在掉速那 0.3s 里，已排队的 1.6 取消不掉，补一次 1.0 盖回来
+				if (entry.fading) {
+					SetPlayerSpeed(pawn, SPEED_NORMAL, FADE_DELAY + TICK_SEC);
+				}
 				Log(`${PlayerTag(pawn)} 因开关关闭，速度和重力恢复 ${SPEED_NORMAL}`);
 			}
 		}
@@ -409,11 +424,20 @@ function StartBoost(pawn) {
 
 	// 计时起点也要跟着往后挪 BOOST_DELAY，保证"生效之后"还有完整 BOOST_SEC 秒
 	const startAt = Instance.GetGameTime() + BOOST_DELAY;
+	// 记下槽位：pawn 会在死亡/重生时被换掉，心跳里靠槽位找回"当前这个人"
+	const slot = PlayerSlot(pawn);
 
 	// 已经在加速里就重新计时，不重复入表
 	for (const entry of boosted) {
-		if (entry.pawn === pawn) {
+		if (entry.slot === slot) {
+			entry.pawn = pawn;
 			entry.until = startAt + BOOST_SEC;
+			if (entry.fading) {
+				// 掉速那 0.3s 里又触发了：已经排队的 1.6 取消不掉，
+				// 就在它落地之后再补一次 2.0，把它盖回去
+				entry.fading = false;
+				SetPlayerSpeed(pawn, SPEED_BOOST, FADE_DELAY + BOOST_DELAY);
+			}
 			const again = `${PlayerTag(pawn)} 又从僵尸变回了人类，${BOOST_DELAY}s 后重新开始 ${BOOST_SEC}s 的 ${SPEED_BOOST} 倍速！`;
 			Log(again);
 			Say(again);
@@ -421,7 +445,7 @@ function StartBoost(pawn) {
 		}
 	}
 
-	boosted.push({ pawn: pawn, until: startAt + BOOST_SEC });
+	boosted.push({ pawn: pawn, slot: slot, until: startAt + BOOST_SEC });
 	const announce = `${PlayerTag(pawn)} 从僵尸变回了人类，${BOOST_DELAY}s 后获得 ${BOOST_SEC}s 的 ${SPEED_BOOST} 倍速！`;
 	Log(announce);
 	Say(announce);
@@ -441,43 +465,88 @@ function ArmTick() {
 function OnTick() {
 	const now = Instance.GetGameTime();
 
-	PollTip();
+	try {
+		// 提示条自己出问题不该拖累加速逻辑，单独兜一层
+		try {
+			PollTip();
+		} catch (e) {
+			if (!tipErrorLogged) {
+				tipErrorLogged = true;
+				Log(`⚠ TAB 提示条轮询出错（不影响加速）：${e}`);
+			}
+		}
 
-	// 开局补扫：等重生把新 pawn 造出来之后，再统一写一遍 1.0
-	if (sweepAt >= 0 && now >= sweepAt) {
-		sweepAt = -1;
-		const n = RestoreEveryoneNow(0);
-		Log(`开局补扫：已把 ${n} 名玩家的速度和重力还原为 ${SPEED_NORMAL}`);
-	}
+		// 开局补扫：等重生把新 pawn 造出来之后，再统一写一遍 1.0
+		if (sweepAt >= 0 && now >= sweepAt) {
+			sweepAt = -1;
+			const n = RestoreEveryoneNow(0);
+			Log(`开局补扫：已把 ${n} 名玩家的速度和重力还原为 ${SPEED_NORMAL}`);
+		}
 
-	for (let i = boosted.length - 1; i >= 0; i--) {
-		const entry = boosted[i];
-		const pawn = entry.pawn;
+		for (let i = boosted.length - 1; i >= 0; i--) {
+			const entry = boosted[i];
 
-		if (!pawn || !pawn.IsValid()) {
+			// pawn 可能因为死亡/重生被换掉，所以按槽位重新找"当前这个人"
+			let pawn = entry.pawn;
+			if (!pawn || !pawn.IsValid()) {
+				pawn = PawnOfSlot(entry.slot);
+				if (!pawn) {
+					// 人断了/换图了：条目留着没意义，丢掉（避免心跳永远关不掉）
+					const controller = Instance.GetPlayerController(entry.slot);
+					if (!controller || !controller.IsValid() || !controller.IsConnected()) {
+						boosted.splice(i, 1);
+					}
+					continue;      // 还连着只是死了/没重生：计时留着，等他回来
+				}
+				entry.pawn = pawn;  // 换成新 pawn（速度倍率本来就挂在控制器上）
+			}
+
+			// 阶段一：10 秒到点，排一条 0.3s 后投递的 1.6，并留在表里等它落地
+			if (!entry.fading) {
+				if (now < entry.until) {
+					continue;
+				}
+				SetPlayerSpeed(pawn, SPEED_AFTER, FADE_DELAY);
+				SetPlayerGravity(pawn, GRAVITY_VALUE);
+				Log(`${PlayerTag(pawn)} 加速结束，${FADE_DELAY}s 后速度改为 ${SPEED_AFTER}`);
+				if (ANNOUNCE_END) {
+					Say(`${PlayerTag(pawn)} 的加速结束了，速度变为 ${SPEED_AFTER}`);
+				}
+				entry.fading = true;
+				entry.fadePawn = pawn;
+				entry.fadeAt = now + FADE_DELAY + TICK_SEC;   // 再多等一拍，确保投递已完成
+				continue;
+			}
+
+			// 阶段二：等那条延迟投递落地后再收尾
+			if (now < entry.fadeAt) {
+				continue;
+			}
+			// 这 0.3s 里如果换了 pawn（死亡重生），旧投递打空了，补给新 pawn 一次
+			if (entry.fadePawn !== pawn) {
+				SetPlayerSpeed(pawn, SPEED_AFTER);
+				Log(`${PlayerTag(pawn)} 掉速期间换了 pawn（死亡重生），已补写 ${SPEED_AFTER}`);
+			}
 			boosted.splice(i, 1);
-			continue;
 		}
-		if (now < entry.until) {
-			continue;
+	} catch (e) {
+		Log(`⚠ 心跳异常：${e}（下一拍照常继续）`);
+	} finally {
+		// 关键：放在 finally 里，上面抛任何异常都不会让心跳断掉，
+		// 否则一次报错就会让 2.0 永久停住、再也不降到 SPEED_AFTER。
+		if (boosted.length > 0 || enabled || sweepAt >= 0) {
+			Instance.SetNextThink(now + TICK_SEC);
+		} else {
+			tickArmed = false;
 		}
-
-		// 到点了：落到常驻倍率，重力**继续**保持 0.9（只由开局统一重置，这里不还原）
-		SetPlayerSpeed(pawn, SPEED_AFTER);
-		SetPlayerGravity(pawn, GRAVITY_VALUE);
-		Log(`${PlayerTag(pawn)} 加速结束，速度改为 ${SPEED_AFTER}`);
-		if (ANNOUNCE_END) {
-			Say(`${PlayerTag(pawn)} 的加速结束了，速度变为 ${SPEED_AFTER}`);
-		}
-		boosted.splice(i, 1);
 	}
+}
 
-	// 开关开着（要按 TAB 判断）、有人在加速、或还有开局补扫没做，就继续跑心跳
-	if (boosted.length > 0 || enabled || sweepAt >= 0) {
-		Instance.SetNextThink(now + TICK_SEC);
-	} else {
-		tickArmed = false;
-	}
+/** 取某个槽位现在活着的 pawn；没有（死亡/断线）就返回 undefined */
+function PawnOfSlot(slot) {
+	const controller = Instance.GetPlayerController(slot);
+	const pawn = controller ? controller.GetPlayerPawn() : undefined;
+	return pawn && pawn.IsValid() ? pawn : undefined;
 }
 
 /** 这个玩家算不算"局中切过来"的 */
@@ -518,7 +587,7 @@ Instance.OnRoundStart(() => {
 	boosted.length = 0;      // 新回合清空加速名单
 
 	// 开局还原：全房间的速度和重力都回到 1.0
-	// 先立刻扫一遍，清掉上一回合可能残留的 1.4 / 0.9 重力；
+	// 先立刻扫一遍，清掉上一回合可能残留的 1.6 / 0.9 重力；
 	// 这一刻很多人还没重生（pawn 会被换掉），所以再排一次补扫。
 	const n = RestoreEveryoneNow(0);
 	sweepAt = Instance.GetGameTime() + RESET_SWEEP_SEC;
