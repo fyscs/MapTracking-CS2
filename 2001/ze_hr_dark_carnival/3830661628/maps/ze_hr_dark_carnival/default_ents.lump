@@ -123,7 +123,7 @@
         "output": "OnTrigger",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say **\u6682\u65F6\u4EC5\u6709c2m1\u5355\u5173\u6218\u5F79**",
+        "param": "say **\u6682\u65F6\u4EC5\u6709c2m1\u4E0Ec2m2\u6218\u5F79**",
         "delay": 1,
         "limit": -1
       },
@@ -142,6 +142,22 @@
         "param": "say **\u795D\u4F60\u73A9\u5F97\u6109\u5FEB**",
         "delay": 3,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]start_zombie_tp",
+        "input": "Enable",
+        "param": "",
+        "delay": 20,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say **\u50F5\u5C38\u5C06\u572810\u79D2\u540E\u51FA\u73B0**",
+        "delay": 10,
+        "limit": -1
       }
     ]
   },
@@ -156,7 +172,49 @@
     "origin": "112.000000 80.000000 -4152.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "23"
+    "hammerUniqueId": "23",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]start_zombie_tp",
+        "input": "Enable",
+        "param": "",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say **\u50F5\u5C38\u5C06\u572810\u79D2\u540E\u51FA\u73B0**",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart1",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart2",
+        "input": "StartSound",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart_fadeout",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 30,
+        "limit": -1
+      }
+    ]
   },
   {
     "autoactivate": "1",
@@ -183,7 +241,49 @@
     "origin": "112.000000 64.000000 -4152.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "28"
+    "hammerUniqueId": "28",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]start_zombie_tp",
+        "input": "Enable",
+        "param": "",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say **\u50F5\u5C38\u5C06\u572810\u79D2\u540E\u51FA\u73B0**",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart1",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart2",
+        "input": "StartSound",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart_fadeout",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 30,
+        "limit": -1
+      }
+    ]
   },
   {
     "autoactivate": "1",
@@ -210,7 +310,49 @@
     "origin": "112.000008 48.000000 -4152.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "33"
+    "hammerUniqueId": "33",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]start_zombie_tp",
+        "input": "Enable",
+        "param": "",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say **\u50F5\u5C38\u5C06\u572810\u79D2\u540E\u51FA\u73B0**",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart1",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart2",
+        "input": "StartSound",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart_fadeout",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 30,
+        "limit": -1
+      }
+    ]
   },
   {
     "autoactivate": "1",
@@ -2566,14 +2708,6 @@
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]zombie_spawn_manager_script",
-        "input": "RunScriptInput",
-        "param": "Activate",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]infected_manager_script",
         "input": "RunScriptInput",
         "param": "Activate",
@@ -2607,7 +2741,49 @@
     "origin": "112.000008 32.000000 -4152.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "368"
+    "hammerUniqueId": "368",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]start_zombie_tp",
+        "input": "Enable",
+        "param": "",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say **\u50F5\u5C38\u5C06\u572810\u79D2\u540E\u51FA\u73B0**",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart1",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart2",
+        "input": "StartSound",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_cpstart_fadeout",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 30,
+        "limit": -1
+      }
+    ]
   },
   {
     "worldGroupID": "skyboxWorldGroup0",

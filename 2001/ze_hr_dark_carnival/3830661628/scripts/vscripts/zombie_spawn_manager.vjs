@@ -11,20 +11,19 @@ const CONFIG = {
     RESPAWN_DELAY_ADDITION_PER_ZOMBIE: 0.3,
     RESPAWN_DELAY_BASE: 1,
     ZOMBAT_RESPAWN_DELAY: 1,
-    ZOMBAT_DURATION: 10
 }
 
 let mainTaskId = 0;
-let currentStageSlot = 1;
 /** @type {Entity[]} */
 let allPtps = [];
 /** @type {Entity[]} */
 let activatePtps = [];
 let isZombat = false;
+let isZombatInfinity = false;
 let zombatDelayTaskId = 0;
 
 Instance.OnScriptInput("Activate", () => {
-    allPtps = Instance.FindEntitiesByName("m" + currentStageSlot + "_zombie_spawn_ptp_cs2_ze");
+    allPtps = Instance.FindEntitiesByName("m*_zombie_spawn_ptp_cs2_ze");
     mainTaskId = Delay(0, Main);
 });
 
@@ -36,15 +35,47 @@ Instance.OnScriptInput("Spawn", (inputData) => {
     Instance.EntFireAtTarget({ target: ptp, input: "Teleport", activator: player });
 });
 
-Instance.OnScriptInput("Zombat", () => {
+Instance.OnScriptInput("Zombat(10)", () => Zombat(10));
+Instance.OnScriptInput("Zombat(15)", () => Zombat(15));
+
+/**
+ * 尸潮
+ * @param {number} duration 
+ */
+function Zombat(duration) {
     if (isZombat) {
-        RescheduleDelay(zombatDelayTaskId, CONFIG.ZOMBAT_DURATION);
+        RescheduleDelay(zombatDelayTaskId, duration);
         return;
     }
     isZombat = true;
-    zombatDelayTaskId = Delay(CONFIG.ZOMBAT_DURATION, () => {
+    if (!isZombatInfinity) {
+        Instance.EntFireAtName({ name: "bgm_mobincoming", input: "StartSound" });
+        Instance.EntFireAtName({ name: "sound_control_script", input: "RunScriptInput", value: "StartSoundZombat", delay: 1 });
+    }
+    zombatDelayTaskId = Delay(duration, () => {
         isZombat = false;
+        if (!isZombatInfinity) Instance.EntFireAtName({ name: "bgm_zombat_fadeout", input: "FireUser1", delay: 1 });
     });
+}
+
+Instance.OnScriptInput("ZombatOn", () => {
+    isZombatInfinity = true;
+    if (!isZombat) {
+        Instance.EntFireAtName({ name: "bgm_mobincoming", input: "StartSound" });
+        Instance.EntFireAtName({ name: "sound_control_script", input: "RunScriptInput", value: "StartSoundZombat", delay: 1 });
+    }
+});
+
+Instance.OnScriptInput("ZombatOnNoBgm", () => {
+    isZombatInfinity = true;
+    if (!isZombat) {
+        Instance.EntFireAtName({ name: "bgm_mobincoming", input: "StartSound" });
+    }
+});
+
+Instance.OnScriptInput("ZombatOff", () => {
+    isZombatInfinity = false;
+    if (!isZombat) Instance.EntFireAtName({ name: "bgm_zombat_fadeout", input: "FireUser1", delay: 1 });
 });
 
 Instance.OnRoundStart(() => {
@@ -53,6 +84,7 @@ Instance.OnRoundStart(() => {
     allPtps.length = 0;
     activatePtps.length = 0;
     isZombat = false;
+    isZombatInfinity = false;
 });
 
 function Main() {
@@ -65,7 +97,7 @@ function Main() {
  * 设置僵尸复活间隔
  */
 function ApplyRespawnDelay() {
-    if (isZombat) {
+    if (isZombatInfinity || isZombat) {
         Console.ServerCommand("zr_respawn_delay " + CONFIG.ZOMBAT_RESPAWN_DELAY);
         return;
     }

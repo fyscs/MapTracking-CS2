@@ -92,8 +92,9 @@ Instance.OnScriptInput("c2m4", () => { currentStageIndex = 3; Console.ServerComm
 Instance.OnScriptInput("c2m5", () => { currentStageIndex = 4; Console.ServerCommand("mp_restartgame 1"); });
 
 Instance.OnScriptInput("Next", () => {
-    if (currentStageIndex >= stageList.length - 1) currentStageIndex = 0;
-    else currentStageIndex++;
+    // if (currentStageIndex < stageList.length - 1) currentStageIndex++;
+    if (currentStageIndex < 1) currentStageIndex++;
+    else currentStageIndex = 0;
 });
 
 Instance.OnScriptInput("StartTeleport", (inputData) => {
@@ -307,9 +308,8 @@ function StageInit(stage) {
     Instance.EntFireAtName({ name: "*_skybox_branch", input: "SetValueTest", value: 0 });
     Instance.EntFireAtName({ name: stage + "_skybox_branch", input: "SetValueTest", value: 1 });
     Instance.EntFireAtName({ name: "dynamic_light_fix_script", input: "RunScriptInput", value: "LightFix" });
+    Instance.EntFireAtName({ name: "zombie_spawn_manager_script", input: "RunScriptInput", value: "Activate" });
     Instance.EntFireAtName({ name: "stage_" + stage + "_init_relay", input: "Trigger" });
-    Instance.EntFireAtName({ name: "start_zombie_tp", input: "Enable", delay: 20 });
-    Console.ServerCommand("say **僵尸将在20秒后出现**");
     for (const player of Instance.FindEntitiesByClass("player")) {
         if (!player.IsValid() || !player.IsAlive() || player.GetTeamNumber() !== 3) continue;
         Instance.EntFireAtName({ name: `m${stageSlot}_start_tp_case_cs2_ze`, input: "PickRandomShuffle", activator: player });

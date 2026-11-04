@@ -433,7 +433,7 @@
     "volstart": "0",
     "preset": "0",
     "health": "10",
-    "message": "Car.Alarm",
+    "message": "car_alarm",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
@@ -930,7 +930,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]InstanceAuto12-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -1652,7 +1652,7 @@
     "spawnflags": "2",
     "spotlightlength": "256",
     "spotlightwidth": "32",
-    "targetname": "[PR#]InstanceAuto12-caralarm_headlights1",
+    "targetname": "[PR#]_InstanceAuto12-caralarm_headlights1",
     "classname": "info_particle_system",
     "origin": "-657.559998 -1714.530029 -1049.020020",
     "angles": "0.000000 248.000000 0.000000",
@@ -2123,7 +2123,7 @@
     "spawnflags": "2",
     "spotlightlength": "256",
     "spotlightwidth": "32",
-    "targetname": "[PR#]InstanceAuto12-caralarm_headlights1",
+    "targetname": "[PR#]_InstanceAuto12-caralarm_headlights1",
     "classname": "info_particle_system",
     "origin": "-603.786987 -1736.250000 -1049.010010",
     "angles": "0.000000 248.000000 0.000000",
@@ -2416,7 +2416,7 @@
       {
         "output": "OnTimer",
         "target": "[PR#]InstanceAuto12-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0.5,
         "limit": -1
@@ -2424,7 +2424,7 @@
       {
         "output": "OnTimer",
         "target": "[PR#]InstanceAuto12-caralarm_headlights1",
-        "input": "LightOn",
+        "input": "Enable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -5579,8 +5579,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-1632.212891 -2555.419434 -1082.702515",
-    "angles": "88.346474 10.383345 -18.475330",
+    "origin": "-1632.212769 -2555.419189 -1082.703369",
+    "angles": "88.350792 10.378525 -18.480474",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8709"
   },
@@ -5667,8 +5667,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-1626.446045 -2555.405273 -1070.602051",
-    "angles": "77.556686 0.011229 -74.983604",
+    "origin": "-1626.446167 -2555.405273 -1070.602173",
+    "angles": "77.555954 0.011094 -74.984306",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8710"
   },
@@ -9561,7 +9561,7 @@
       {
         "output": "OnCarAlarmEnd",
         "target": "[PR#]InstanceAuto12-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -9581,6 +9581,22 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTakeDamage",
+        "target": "[PR#]InstanceAuto12-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "[PR#]1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTakeDamage",
+        "target": "[PR#]InstanceAuto12-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "0",
+        "delay": 16,
+        "limit": 1
       }
     ]
   },
@@ -12280,7 +12296,7 @@
       {
         "output": "OnCarAlarmEnd",
         "target": "[PR#]carkillsurvival2-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -12300,6 +12316,22 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTakeDamage",
+        "target": "[PR#]carkillsurvival2-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "[PR#]1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTakeDamage",
+        "target": "[PR#]carkillsurvival2-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "0",
+        "delay": 16,
+        "limit": 1
       }
     ]
   },
@@ -12483,7 +12515,7 @@
       {
         "output": "OnCarAlarmEnd",
         "target": "[PR#]carkillsurvival-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -12503,6 +12535,22 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTakeDamage",
+        "target": "[PR#]carkillsurvival-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "[PR#]1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTakeDamage",
+        "target": "[PR#]carkillsurvival-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "0",
+        "delay": 16,
+        "limit": 1
       }
     ]
   },
@@ -29654,8 +29702,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "5123.458496 7779.991699 -699.391357",
-    "angles": "89.982132 359.994934 0.000000",
+    "origin": "5123.458008 7779.998047 -699.389954",
+    "angles": "89.994255 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8535"
   },
@@ -29742,8 +29790,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "5122.998535 7779.975098 -690.291565",
-    "angles": "89.964020 359.996826 0.000000",
+    "origin": "5122.995117 7779.992188 -690.286682",
+    "angles": "89.988815 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8534"
   },
@@ -38545,7 +38593,7 @@
     ]
   },
   {
-    "filterteam": "2",
+    "filterteam": "3",
     "filterclass": "",
     "Negated": "0",
     "clientSideEntity": "0",
@@ -38834,7 +38882,7 @@
       {
         "output": "OnTimer",
         "target": "[PR#]carkillsurvival2-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0.5,
         "limit": -1
@@ -38842,7 +38890,7 @@
       {
         "output": "OnTimer",
         "target": "[PR#]carkillsurvival2-caralarm_headlights1",
-        "input": "LightOn",
+        "input": "Enable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -39038,7 +39086,7 @@
     "spawnflags": "2",
     "spotlightlength": "256",
     "spotlightwidth": "32",
-    "targetname": "[PR#]carkillsurvival2-caralarm_headlights1",
+    "targetname": "[PR#]_carkillsurvival2-caralarm_headlights1",
     "classname": "info_particle_system",
     "origin": "1446.209961 4288.660156 -945.393982",
     "angles": "0.000000 211.500000 0.000000",
@@ -39067,7 +39115,7 @@
         "limit": -1
       },
       {
-        "output": "_OnTrigger",
+        "output": "OnTrigger",
         "target": "[PR#]carkillsurvival-caralarm_car1",
         "input": "Disable",
         "param": "",
@@ -39117,7 +39165,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]carkillsurvival-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -39277,7 +39325,7 @@
     "hammerUniqueId": "594"
   },
   {
-    "filterteam": "2",
+    "filterteam": "3",
     "filterclass": "",
     "Negated": "0",
     "clientSideEntity": "0",
@@ -39622,7 +39670,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]carkillsurvival2-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -40157,7 +40205,7 @@
     "spawnflags": "2",
     "spotlightlength": "256",
     "spotlightwidth": "32",
-    "targetname": "[PR#]carkillsurvival-caralarm_headlights1",
+    "targetname": "[PR#]_carkillsurvival-caralarm_headlights1",
     "classname": "info_particle_system",
     "origin": "1619.209961 5383.490234 -945.380005",
     "angles": "0.000000 121.500000 0.000000",
@@ -40453,7 +40501,7 @@
     "spawnflags": "2",
     "spotlightlength": "256",
     "spotlightwidth": "32",
-    "targetname": "[PR#]carkillsurvival2-caralarm_headlights1",
+    "targetname": "[PR#]_carkillsurvival2-caralarm_headlights1",
     "classname": "info_particle_system",
     "origin": "1476.510010 4239.209961 -945.380005",
     "angles": "0.000000 211.500000 0.000000",
@@ -41111,7 +41159,7 @@
     "spawnflags": "2",
     "spotlightlength": "256",
     "spotlightwidth": "32",
-    "targetname": "[PR#]carkillsurvival-caralarm_headlights1",
+    "targetname": "[PR#]_carkillsurvival-caralarm_headlights1",
     "classname": "info_particle_system",
     "origin": "1668.660034 5413.790039 -945.393982",
     "angles": "0.000000 121.500000 0.000000",
@@ -43159,7 +43207,7 @@
       {
         "output": "OnTimer",
         "target": "[PR#]carkillsurvival-caralarm_headlights1",
-        "input": "LightOff",
+        "input": "Disable",
         "param": "",
         "delay": 0.5,
         "limit": -1
@@ -43167,7 +43215,7 @@
       {
         "output": "OnTimer",
         "target": "[PR#]carkillsurvival-caralarm_headlights1",
-        "input": "LightOn",
+        "input": "Enable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -45549,7 +45597,7 @@
     "volstart": "0",
     "preset": "0",
     "health": "10",
-    "message": "Car.Alarm",
+    "message": "car_alarm",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
@@ -45694,7 +45742,7 @@
     "volstart": "0",
     "preset": "0",
     "health": "10",
-    "message": "Car.Alarm",
+    "message": "car_alarm",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
@@ -45834,7 +45882,7 @@
     "selfillumscale": "5.000000",
     "colortint": "224 162 44",
     "scale": "0.500000",
-    "start_active": "1",
+    "start_active": "0",
     "effect_textureOverride": "materials/sprites/glow.vtex",
     "effect_name": "particles/env_particle_glow_light.vpcf",
     "clientSideEntity": "0",
@@ -46610,7 +46658,7 @@
     "selfillumscale": "5.000000",
     "colortint": "255 13 19",
     "scale": "0.500000",
-    "start_active": "1",
+    "start_active": "0",
     "effect_textureOverride": "materials/sprites/glow.vtex",
     "effect_name": "particles/env_particle_glow_light.vpcf",
     "clientSideEntity": "0",
@@ -46686,7 +46734,7 @@
     "selfillumscale": "5.000000",
     "colortint": "224 162 44",
     "scale": "0.500000",
-    "start_active": "1",
+    "start_active": "0",
     "effect_textureOverride": "materials/sprites/glow.vtex",
     "effect_name": "particles/env_particle_glow_light.vpcf",
     "clientSideEntity": "0",
@@ -46802,7 +46850,7 @@
     "selfillumscale": "5.000000",
     "colortint": "255 13 19",
     "scale": "0.500000",
-    "start_active": "1",
+    "start_active": "0",
     "effect_textureOverride": "materials/sprites/glow.vtex",
     "effect_name": "particles/env_particle_glow_light.vpcf",
     "clientSideEntity": "0",
@@ -59424,7 +59472,7 @@
     "parentAttachmentName": "",
     "parentname": "[PR#]carkillsurvival-caralarm_car1",
     "vscripts": "",
-    "targetname": "[PR#]carkillsurvival-caralarm_headlights1",
+    "targetname": "[PR#]carkillsurvival2-caralarm_headlights1",
     "classname": "light_barn",
     "origin": "1469.688843 4235.029785 -945.380005",
     "angles": "0.000000 211.500000 0.000000",
@@ -59494,7 +59542,7 @@
     "parentAttachmentName": "",
     "parentname": "[PR#]carkillsurvival-caralarm_car1",
     "vscripts": "",
-    "targetname": "[PR#]carkillsurvival-caralarm_headlights1",
+    "targetname": "[PR#]carkillsurvival2-caralarm_headlights1",
     "classname": "light_barn",
     "origin": "1439.388794 4284.479980 -945.393982",
     "angles": "0.000000 211.500000 0.000000",
@@ -59564,7 +59612,7 @@
     "parentAttachmentName": "",
     "parentname": "[PR#]carkillsurvival-caralarm_car1",
     "vscripts": "",
-    "targetname": "[PR#]carkillsurvival-caralarm_headlights1",
+    "targetname": "[PR#]InstanceAuto12-caralarm_headlights1",
     "classname": "light_barn",
     "origin": "-606.783813 -1743.667480 -1049.010010",
     "angles": "0.000000 248.000000 0.000000",
@@ -59634,7 +59682,7 @@
     "parentAttachmentName": "",
     "parentname": "[PR#]carkillsurvival-caralarm_car1",
     "vscripts": "",
-    "targetname": "[PR#]carkillsurvival-caralarm_headlights1",
+    "targetname": "[PR#]InstanceAuto12-caralarm_headlights1",
     "classname": "light_barn",
     "origin": "-660.556824 -1721.947510 -1049.020020",
     "angles": "0.000000 248.000000 0.000000",
@@ -64497,6 +64545,516 @@
         "input": "RunScriptInput",
         "param": "Speed(2.0, 0)",
         "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "InitialValue": "0",
+    "vscripts": "",
+    "targetname": "[PR#]carkillsurvival-caralarm_branch_cs2_ze",
+    "classname": "logic_branch",
+    "origin": "1720.000000 5296.000000 -904.000000",
+    "angles": "0.000000 121.500000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9278",
+    "connections": [
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival-alarmtimer1",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival-caralarm1",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival-caralarm_glass1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival-caralarm_glass1_off",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-alarmtimer1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-caralarm1",
+        "input": "StopSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-relay_caralarm_off",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-caralarm_light1",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-caralarm_headlights1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-caralarm_game_event",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-remark_caralarm",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]zombie_spawn_manager_script",
+        "input": "RunScriptInput",
+        "param": "Zombat(15)",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival-caralarm_light1",
+        "input": "Stop",
+        "param": "",
+        "delay": 0.699999988079071,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival-carchirp1",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival-caralarm_light1",
+        "input": "Start",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]carkillsurvival-caralarm_trigger_cs2_ze",
+    "vscripts": "",
+    "classname": "trigger_once",
+    "origin": "1697.460938 5312.391113 -916.001465",
+    "angles": "0.000000 30.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9282",
+    "model": "maps/stages/c2m1_highway/entities/carkillsurvival-caralarm_trigger_cs2_ze_9282.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]carkillsurvival-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "[PR#]1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]carkillsurvival-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "0",
+        "delay": 16,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "InitialValue": "0",
+    "vscripts": "",
+    "targetname": "[PR#]carkillsurvival2-caralarm_branch_cs2_ze",
+    "classname": "logic_branch",
+    "origin": "1568.000000 4352.000000 -896.000000",
+    "angles": "0.000000 211.500000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9283",
+    "connections": [
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-caralarm_light1",
+        "input": "Stop",
+        "param": "",
+        "delay": 0.699999988079071,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-alarmtimer1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-caralarm1",
+        "input": "StopSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-relay_caralarm_off",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-caralarm_light1",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-caralarm_headlights1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-caralarm_game_event",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]carkillsurvival2-remark_caralarm",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival2-carchirp1",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival2-caralarm_light1",
+        "input": "Start",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival2-alarmtimer1",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival2-caralarm1",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival2-caralarm_glass1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]carkillsurvival2-caralarm_glass1_off",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]zombie_spawn_manager_script",
+        "input": "RunScriptInput",
+        "param": "Zombat(15)",
+        "delay": 1,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]carkillsurvival2-caralarm_trigger_cs2_ze",
+    "vscripts": "",
+    "classname": "trigger_once",
+    "origin": "1547.108154 4319.600098 -911.996582",
+    "angles": "0.000000 30.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9285",
+    "model": "maps/stages/c2m1_highway/entities/carkillsurvival2-caralarm_trigger_cs2_ze_9285.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]carkillsurvival2-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "[PR#]1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]carkillsurvival2-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "0",
+        "delay": 16,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "InitialValue": "0",
+    "vscripts": "",
+    "targetname": "[PR#]InstanceAuto12-caralarm_branch_cs2_ze",
+    "classname": "logic_branch",
+    "origin": "-592.000000 -1592.000000 -1008.000000",
+    "angles": "0.000000 248.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9286",
+    "connections": [
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-caralarm_light1",
+        "input": "Stop",
+        "param": "",
+        "delay": 0.699999988079071,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-alarmtimer1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-caralarm1",
+        "input": "StopSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-relay_caralarm_off",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-caralarm_light1",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-caralarm_headlights1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-caralarm_game_event",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFalse",
+        "target": "[PR#]InstanceAuto12-remark_caralarm",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]InstanceAuto12-carchirp1",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]InstanceAuto12-caralarm_light1",
+        "input": "Start",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]InstanceAuto12-alarmtimer1",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]InstanceAuto12-caralarm1",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]InstanceAuto12-caralarm_glass1",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]InstanceAuto12-caralarm_glass1_off",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]zombie_spawn_manager_script",
+        "input": "RunScriptInput",
+        "param": "Zombat(15)",
+        "delay": 1,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]InstanceAuto12-caralarm_trigger_cs2_ze",
+    "vscripts": "",
+    "classname": "trigger_once",
+    "origin": "-594.258484 -1631.672852 -1019.999756",
+    "angles": "0.000000 248.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "9288",
+    "model": "maps/stages/c2m1_highway/entities/instanceauto12-caralarm_trigger_cs2_ze_9288.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]InstanceAuto12-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "[PR#]1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]InstanceAuto12-caralarm_branch_cs2_ze",
+        "input": "SetValueTest",
+        "param": "0",
+        "delay": 16,
         "limit": -1
       }
     ]

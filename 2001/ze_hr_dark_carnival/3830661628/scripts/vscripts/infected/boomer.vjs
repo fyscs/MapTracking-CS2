@@ -93,7 +93,7 @@ function CheckGlow(player, isExplode = false) {
         glowPlayers.delete(player);
         Instance.EntFireAtName({ name: "glow_script", input: "RunScriptInput", value: "Unglow", activator: player });
     });
-    Instance.EntFireAtName({ name: "zombie_spawn_manager_script", input: "RunScriptInput", value: "Zombat" });
+    Instance.EntFireAtName({ name: "zombie_spawn_manager_script", input: "RunScriptInput", value: "Zombat(10)" });
     if (isMainRunning) return;
     isMainRunning = true;
     Main();
