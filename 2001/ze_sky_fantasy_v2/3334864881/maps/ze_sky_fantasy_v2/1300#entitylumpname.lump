@@ -60,9 +60,9 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "64",
+    "damagetype": "0",
     "damagecap": "20",
-    "damage": "99999999",
+    "damage": "99999",
     "master": "",
     "filtername": "",
     "spawnflags": "4097",
@@ -82,7 +82,17 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1285",
     "model": "maps/ze_sky_fantasy_v2/entities/lvl3_final_misaka_hurt2_1285.vmdl",
-    "_template_lump_ent_index": "1"
+    "_template_lump_ent_index": "1",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "health 0",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "PassthroughCaller": "0",

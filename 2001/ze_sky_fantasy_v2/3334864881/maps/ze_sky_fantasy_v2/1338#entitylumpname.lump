@@ -132,9 +132,9 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "64",
+    "damagetype": "0",
     "damagecap": "20",
-    "damage": "999999999",
+    "damage": "99999",
     "master": "",
     "filtername": "",
     "spawnflags": "4097",
@@ -154,7 +154,17 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1324",
     "model": "maps/ze_sky_fantasy_v2/entities/lvl3_final_normal_beam_h_1324.vmdl",
-    "_template_lump_ent_index": "2"
+    "_template_lump_ent_index": "2",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "health 0",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "cpoint7_parent": "0",
