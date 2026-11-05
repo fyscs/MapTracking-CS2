@@ -131,7 +131,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "400",
+    "speed": "300",
     "pushdir": "0.000000 270.000000 0.000000",
     "filtername": "[PR#]Filter_Human",
     "spawnflags": "4097",
@@ -158,7 +158,7 @@
   },
   {
     "triggeronstarttouch": "0",
-    "speed": "400",
+    "speed": "300",
     "pushdir": "0.000000 90.000000 0.000000",
     "filtername": "[PR#]Filter_Human",
     "spawnflags": "4097",
