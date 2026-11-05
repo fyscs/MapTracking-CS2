@@ -783,14 +783,6 @@
     "connections": [
       {
         "output": "OnUser1",
-        "target": "[PR#]extreme_summon",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0.03999999910593033,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
         "target": "[PR#]extreme_asedio",
         "input": "KeyValues",
         "param": "angles 0 0 0",
@@ -30594,19 +30586,6 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1472"
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "0",
-    "StartDisabled": "0",
-    "vscripts": "",
-    "targetname": "[PR#]extreme_summon",
-    "classname": "logic_relay",
-    "origin": "10288.000000 464.000000 10089.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1473"
   },
   {
     "PassthroughCaller": "0",
