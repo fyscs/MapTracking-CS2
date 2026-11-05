@@ -261,7 +261,7 @@
     "disableshadows": "0",
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
-    "skin": "default",
+    "skin": "1",
     "model": "models/props_unique/subwaycar_cheap.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
