@@ -25,7 +25,7 @@ Instance.OnScriptInput(`Speed(1.25, 0)`, ({ activator, caller }) => Speed(activa
 Instance.OnRoundStart(() => {
     players.forEach((state, player) => {
         state.tasks.forEach((taskId, caller) => CancelDelay(taskId));
-        Instance.EntFireAtTarget({ target: player, input: "KeyValue", value: "speed 1" });
+        player.FireInput({ input: "KeyValue", value: "speed 1" });
     });
     players.clear();
 });
@@ -38,7 +38,7 @@ Instance.OnPlayerKill((event) => {
         CancelDelay(taskId);
         state.tasks.delete(caller);
     });
-    Instance.EntFireAtTarget({ target: event.player, input: "KeyValue", value: "speed 1" });
+    event.player.FireInput({ input: "KeyValue", value: "speed 1" });
 });
 
 /**
@@ -54,16 +54,16 @@ function Speed(player, caller, mulit, duration) {
     const state = /** @type {State} */ (players.get(player));
     if (duration === 0) {
         state.speed *= mulit;
-        Instance.EntFireAtTarget({ target: player, input: "KeyValue", value: "speed " + state.speed.toFixed(2) });
+        player.FireInput({ input: "KeyValue", value: "speed " + state.speed.toFixed(2) });
     } else {
         if (!caller || !caller.IsValid()) return;
         if (state.tasks.has(caller)) RescheduleDelay(/** @type {number} */(state.tasks.get(caller)), duration);
         else {
             state.speed *= mulit;
-            Instance.EntFireAtTarget({ target: player, input: "KeyValue", value: "speed " + state.speed.toFixed(2) });
+            player.FireInput({ input: "KeyValue", value: "speed " + state.speed.toFixed(2) });
             state.tasks.set(caller, Delay(duration, () => {
                 state.speed /= mulit;
-                Instance.EntFireAtTarget({ target: player, input: "KeyValue", value: "speed " + state.speed.toFixed(2) });
+                player.FireInput({ input: "KeyValue", value: "speed " + state.speed.toFixed(2) });
                 state.tasks.delete(caller);
             }));
         }

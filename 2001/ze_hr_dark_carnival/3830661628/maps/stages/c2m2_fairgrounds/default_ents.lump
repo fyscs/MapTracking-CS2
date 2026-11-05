@@ -15895,7 +15895,7 @@
     "master": "",
     "lip": "0",
     "_minlight": "",
-    "wait": "3.000000",
+    "wait": "0.500000",
     "glow": "[PR#]carousel_gate_button_model",
     "speed": "5",
     "movedir": "0.000000 0.000000 0.000000",
@@ -15930,70 +15930,6 @@
     "model": "maps/stages/c2m2_fairgrounds/entities/carousel_gate_button_266.vmdl",
     "connections": [
       {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_start_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_gate_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_game_event",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_gate_button_model",
-        "input": "SetAnimationNoResetNotLooping",
-        "param": "on",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_gate_button_model",
-        "input": "StopGlowing",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_button2_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_gate_button_sound",
-        "input": "StartSound",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_gate_button",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.25,
-        "limit": 1
-      },
-      {
         "output": "_OnPressed",
         "target": "[PR#]carousel_instruct_timer",
         "input": "Kill",
@@ -16003,11 +15939,11 @@
       },
       {
         "output": "OnPressed",
-        "target": "!activator",
-        "input": "SpeakResponseConcept",
-        "param": "c2m2CarouselStart",
+        "target": "[PR#]carousel_gate_button_filter_cs2_ze",
+        "input": "TestActivator",
+        "param": "",
         "delay": 0,
-        "limit": 1
+        "limit": -1
       }
     ]
   },
@@ -16149,7 +16085,7 @@
     "master": "",
     "lip": "0",
     "_minlight": "",
-    "wait": "3.000000",
+    "wait": "0.500000",
     "glow": "[PR#]carousel_lever_model",
     "speed": "5",
     "movedir": "0.000000 0.000000 0.000000",
@@ -16185,83 +16121,11 @@
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]carousel_stop_relay",
-        "input": "Trigger",
+        "target": "[PR#]carousel_button_filter_cs2_ze",
+        "input": "TestActivator",
         "param": "",
         "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel2_game_event",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_lever_base_model",
-        "input": "StopGlowing",
-        "param": "",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_lever_model",
-        "input": "StopGlowing",
-        "param": "",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_lever_model",
-        "input": "SetAnimation",
-        "param": "on",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_lever_sound",
-        "input": "StartSound",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_button",
-        "input": "Kill",
-        "param": "",
-        "delay": 0.25,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "!activator",
-        "input": "SpeakResponseConcept",
-        "param": "c2m2CarouselEnd",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]zombie_spawn_manager_script",
-        "input": "RunScriptInput",
-        "param": "ZombatOff",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
-        "target": "[PR#]carousel_instruct_timer",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
+        "limit": -1
       }
     ]
   },
@@ -41662,8 +41526,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-3999.855957 -1440.056030 -127.225143",
-    "angles": "-1.667400 0.002520 0.000000",
+    "origin": "-3999.800537 -1440.054932 -127.226128",
+    "angles": "-1.664914 359.982666 0.001132",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12075"
   },
@@ -42894,8 +42758,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-3970.420410 -1426.252808 -90.674240",
-    "angles": "0.000000 92.772240 76.177849",
+    "origin": "-3970.356934 -1426.249634 -90.675140",
+    "angles": "0.000000 92.753540 76.169319",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12089"
   },
@@ -43243,8 +43107,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-3992.025146 -1355.779663 -127.900421",
-    "angles": "0.000000 7.217805 0.009140",
+    "origin": "-3992.024902 -1355.784058 -127.900757",
+    "angles": "0.000000 7.211133 0.008476",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12093"
   },
@@ -83799,8 +83663,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2752.131348 561.185425 24.100698",
-    "angles": "-0.059210 7.310092 -0.013039",
+    "origin": "2752.138184 561.172546 24.099266",
+    "angles": "-0.045064 7.303732 -0.019420",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12559"
   },
@@ -83887,8 +83751,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2751.783447 574.842651 24.098328",
-    "angles": "-0.042802 15.325103 -0.015022",
+    "origin": "2751.797363 574.829712 24.101374",
+    "angles": "-0.069680 15.312660 -0.025306",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12560"
   },
@@ -83975,8 +83839,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2751.878418 568.029968 55.489422",
-    "angles": "-0.173603 14.022924 -0.063801",
+    "origin": "2751.869629 567.981689 55.486206",
+    "angles": "-0.146910 14.002631 -0.027201",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12561"
   },
@@ -84063,8 +83927,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2752.142090 449.169525 24.094681",
-    "angles": "-0.014006 7.337367 -0.019213",
+    "origin": "2752.132324 449.172913 24.095179",
+    "angles": "-0.005895 7.322278 -0.012837",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12562"
   },
@@ -84151,8 +84015,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2751.816162 462.829102 24.096325",
-    "angles": "-0.026716 15.320566 -0.023460",
+    "origin": "2751.819336 462.832306 24.097151",
+    "angles": "-0.035963 15.323076 -0.026194",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12563"
   },
@@ -84239,8 +84103,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2751.971191 456.011505 55.481792",
-    "angles": "-0.093687 13.994461 0.018869",
+    "origin": "2751.979980 455.959930 55.482204",
+    "angles": "-0.065342 14.022245 0.044170",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12564"
   },
@@ -84591,8 +84455,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2687.834229 456.022705 55.490471",
-    "angles": "-0.193245 13.935082 -0.049231",
+    "origin": "2687.912109 456.030487 55.485645",
+    "angles": "-0.149615 14.023205 -0.044798",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12568"
   },
@@ -84679,8 +84543,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2687.770264 462.825867 24.101532",
-    "angles": "-0.070549 15.307204 -0.024701",
+    "origin": "2687.789307 462.838745 24.095982",
+    "angles": "-0.020112 15.320486 -0.004578",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12569"
   },
@@ -84767,8 +84631,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2688.083984 449.164032 24.100697",
-    "angles": "-0.062715 7.294009 -0.021497",
+    "origin": "2688.113037 449.177460 24.098330",
+    "angles": "-0.037918 7.303850 -0.010831",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12570"
   },
@@ -111256,5 +111120,205 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13059"
+  },
+  {
+    "Filter10": "",
+    "Filter09": "",
+    "Filter08": "",
+    "Filter07": "",
+    "Filter06": "",
+    "Filter05": "",
+    "Filter04": "",
+    "Filter03": "",
+    "Filter02": "",
+    "Filter01": "[PR#]human",
+    "filtertype": "0",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]carousel_gate_button_filter_cs2_ze",
+    "vscripts": "",
+    "classname": "filter_multi",
+    "origin": "-2888.000000 -5408.000000 -120.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13060",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_start_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_gate_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_game_event",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_gate_button_model",
+        "input": "SetAnimationNoResetNotLooping",
+        "param": "on",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_gate_button_model",
+        "input": "StopGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_gate_button_sound",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "SpeakResponseConcept",
+        "param": "c2m2CarouselStart",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_gate_button",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.25,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_button2_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "Filter10": "",
+    "Filter09": "",
+    "Filter08": "",
+    "Filter07": "",
+    "Filter06": "",
+    "Filter05": "",
+    "Filter04": "",
+    "Filter03": "",
+    "Filter02": "",
+    "Filter01": "[PR#]human",
+    "filtertype": "0",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "targetname": "[PR#]carousel_button_filter_cs2_ze",
+    "vscripts": "",
+    "classname": "filter_multi",
+    "origin": "-2120.000000 -6024.000000 -104.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13061",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_stop_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel2_game_event",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_lever_model",
+        "input": "SetAnimation",
+        "param": "on",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_lever_sound",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "SpeakResponseConcept",
+        "param": "c2m2CarouselEnd",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_instruct_timer",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_button",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.25,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_lever_base_model",
+        "input": "StopGlowing",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]carousel_lever_model",
+        "input": "StopGlowing",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]zombie_spawn_manager_script",
+        "input": "RunScriptInput",
+        "param": "ZombatOff",
+        "delay": 1,
+        "limit": 1
+      }
+    ]
   }
 ]
