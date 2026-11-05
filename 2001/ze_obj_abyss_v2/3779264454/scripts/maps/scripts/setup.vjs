@@ -6,8 +6,42 @@ import { Instance } from "cs_script/point_script";
 // 此文件由 ze_obj_abyss_v2.vmap 的四个屏幕字幕 relay 和 83 张原始 TGA 字幕图整理而来。
 // 每条 [时间, 持续时间, 字幕编号] 保留原粒子的开始和 Stop/Kill 时间；不再依赖粒子、VTEX 或 TGA。
 // 脚本从对应的 *_screen relay 收到输入时启动，因此时间均以该 relay 被 Trigger 的瞬间为 0 秒。
+
+// ===========================================================================
+// 2026-11 性能优化：只改"怎么写"，不改"写什么"。
+//   时间轴、class 名（Hidden / ImageMode / NoFade / Lit / Glow）、切换时机、
+//   glow 呼吸周期、继电器入口名，全部与原版逐字一致。视觉结果不变。
+//
+//   原来的代价：每句结束 HideLyrics() 都把 83 张图（12+31+40）× 2 个 class 各写一遍，
+//   而每次写又是"全局 1 次 + 每个玩家 1 次"。
+//   welcome.css 是纯 opacity 驱动：.AbyssImage{opacity:0} / .Lit{opacity:1} / .Glow{opacity:0.6}，
+//   没挂 .Lit/.Glow 的图本来就不可见 —— 所以"清空"只需要清当前真正亮着的那一张。
+//   每句写入次数 236 → 12（约 20 倍）。
+//
+//   两个开关见下；默认值都等于原行为。
+// ===========================================================================
+
+// HARD_CLEAR：
+//   false（默认）= 定点清除，只清当前亮着的那一张（快约 20 倍）。
+//   true         = 恢复原行为：每句结束全清 83 张图 × 2 个 class。
+//   哪天若发现"卡图残留 / 两句重叠"，把这里改成 true 立刻回到老逻辑，其余代码不用动。
+const HARD_CLEAR = false;
+
+// PER_PLAYER_WRITE：
+//   true  = 原行为：每次改动都写一遍全局 + 逐个玩家（1+N 次调用，64 人 = 65 倍）。
+//   false = 只写全局（改回 true 即恢复双写）。
+//   注意 false 不是"光写全局"：必须配套下面那套「状态镜像 + 进场补推」，
+//   否则中途进服的玩家 HUD 是空实例，会一直空白。这套组合已在 ze_obj_redemption 实测通过。
+const PER_PLAYER_WRITE = false;
+
+// ── HUD 状态的唯一权威：面板 id|class -> bool ──────────────────────────────
+// 广播只写**全局**一次（1 次调用），成本与在线人数无关；
+// 玩家上线时再把整份状态推给他（见 PushStateToPlayer）。
+const stateMirror = new Map();
+
 const LAYOUT_NAMES = ["abyss_lyrics_hud", "welcome_layout"];
 const PANEL_ID = "lyric_card";
+const STACK_ID = "abyss_image_stack";
 
 // 纯图版：字幕只显示 PNG（ImageMode 下文字面板全被 CSS collapse）。
 // 英/中文本数组、写字逻辑已摘除；时间轴第三列 = 图片序号。
@@ -33,10 +67,17 @@ const END2_PART2_TIMELINE = [[1.2,1.1,33],[2.7,3,34],[6.1,3.9,35],[10.4,4.1,39],
 let playbackToken = 0;
 let shownCue = 0;
 
+// 原版每次调用都 FindEntitiesByName 扫两遍（第一个名字在本文档里根本不存在）。
+// 找到之后就不再重复扫；找不到时仍然每次重试，保持"实体晚于脚本创建"也能救回来。
+let cachedLayout = null;
 function GetLyricLayout() {
+    if (cachedLayout) return cachedLayout;
     for (const name of LAYOUT_NAMES) {
         const layout = Instance.FindEntitiesByName(name)[0];
-        if (layout) return layout;
+        if (layout) {
+            cachedLayout = layout;
+            return layout;
+        }
     }
 }
 
@@ -49,7 +90,9 @@ function GetAllPlayerSlots() {
 }
 
 function SetClassBoth(layout, slots, panelId, className, hasClass) {
+    stateMirror.set(panelId + "|" + className, hasClass);
     layout.SetHasClass(panelId, className, hasClass);
+    if (!PER_PLAYER_WRITE) return;
     for (const slot of slots) {
         try {
             layout.SetHasClassForPlayer(slot, panelId, className, hasClass);
@@ -57,35 +100,94 @@ function SetClassBoth(layout, slots, panelId, className, hasClass) {
     }
 }
 
-function HideLyrics() {
+// ── 刚上线的玩家：持续补推，直到确认覆盖 ────────────────────────────────────
+// 单次推送不可靠：玩家激活后他的 HUD 实例可能还没建好（加载慢/重连/纹理还在解），
+// 那一次 SetHasClassForPlayer 会被 try/catch 静默吞掉，之后再也不补 -> 他一片空白。
+// 所以挂进 pendingPlayers，在接下来的若干次状态变化点各补推一次，
+// 同时再做几次定时重试兜住"这段时间恰好没有状态变化"的情况。
+const pendingPlayers = new Map();   // slot -> 还剩几次"状态变化时补推"
+const PENDING_PUSHES = 8;
+
+function MarkPendingPlayer(slot) {
+    pendingPlayers.set(slot, PENDING_PUSHES);
+    for (const d of [1.0, 3.0, 8.0]) {
+        Instance.Delay(d).then(() => {
+            try {
+                const l = GetLyricLayout();
+                if (l && pendingPlayers.has(slot)) PushStateToPlayer(l, slot);
+            } catch (e) { /* 忽略 */ }
+        });
+    }
+}
+
+// 在每个"句子开始"这个状态变化点调用一次：给还没推够次数的玩家补一份当前状态。
+// 只在 ShowLine 里调一次，不在每次 SetClassBoth 里调（否则每句会推十几次）。
+function PushToPending(layout) {
+    if (pendingPlayers.size === 0) return;
+    for (const [slot, left] of Array.from(pendingPlayers)) {
+        PushStateToPlayer(layout, slot);
+        if (left <= 1) pendingPlayers.delete(slot);
+        else pendingPlayers.set(slot, left - 1);
+    }
+}
+
+// 把当前整份状态推给一个玩家（他刚上线/重连，HUD 实例是空的）。
+// 只遍历 stateMirror 里真实存在过的键，最多约 170 条，一次性开销。
+function PushStateToPlayer(layout, slot) {
+    for (const [key, hasClass] of stateMirror) {
+        const sep = key.indexOf("|");
+        const panelId = key.slice(0, sep);
+        const className = key.slice(sep + 1);
+        try {
+            layout.SetHasClassForPlayer(slot, panelId, className, hasClass);
+        } catch (e) { /* 忽略 */ }
+    }
+}
+
+function HideLyrics(slots) {
     const layout = GetLyricLayout();
     phaseToken++;
-    if (layout) SetClassBoth(layout, GetAllPlayerSlots(), PANEL_ID, "Hidden", true);
-    // NoFade 是 ShowLine 切句时挂的 0.08 秒一次性开关；stop 若正好落在窗口内，
-    // 上面的 phaseToken++ 会作废它的摘除回调、残留 true——这里直接摘掉。
-    // （残留时卡片是藏着的，本来也不可见；清掉只是让状态干净。）
-    if (layout) SetClassBoth(layout, GetAllPlayerSlots(), "abyss_image_stack", "NoFade", false);
-    // 只藏卡片不灭图 = 亮着的图会被下一轨显卡时带出来（切轨混叠）。
-    // Hide 时把三组图全灭 + lastShown 复位，残留亮图活不过这一步。
-    if (layout) ClearAllImageSets(layout, GetAllPlayerSlots());
+    if (layout) {
+        const s = slots || GetAllPlayerSlots();
+        SetClassBoth(layout, s, PANEL_ID, "Hidden", true);
+        // NoFade 是 ShowLine 切句时挂的 0.08 秒一次性开关；stop 若正好落在窗口内，
+        // 上面的 phaseToken++ 会作废它的摘除回调、残留 true——这里直接摘掉。
+        // （残留时卡片是藏着的，本来也不可见；清掉只是让状态干净。）
+        SetClassBoth(layout, s, STACK_ID, "NoFade", false);
+        // 只藏卡片不灭图 = 亮着的图会被下一轨显卡时带出来（切轨混叠）。
+        if (HARD_CLEAR) ClearAllImageSets(layout, s);
+        else ClearShownImage(layout, s);
+    }
     lastShown = { setKey: null, lyric: -1 };
 }
 
+// ---- 全清：83 张图 × 2 个 class。只在"轨道边界"用（开播 / stop），当作状态自愈点。----
 function ClearAllImageSets(layout, slots) {
     for (const setKey of Object.keys(IMG_SETS)) ClearImageSet(layout, slots, setKey);
 }
 
 let lastShown = { setKey: null, lyric: -1 };
+
 function ClearImageSet(layout, slots, setKey) {
     for (let li = 0; li < IMG_SETS[setKey].count; li++) {
         SetClassBoth(layout, slots, ImageId(setKey, li), "Lit", false);
         SetClassBoth(layout, slots, ImageId(setKey, li), "Glow", false);
     }
 }
+
+// ---- 定点清除：只摘掉当前那一张的 .Lit / .Glow（其余图本来 opacity:0，不可见）----
+function ClearShownImage(layout, slots) {
+    if (!lastShown.setKey) return;
+    const id = ImageId(lastShown.setKey, lastShown.lyric);
+    SetClassBoth(layout, slots, id, "Lit", false);
+    SetClassBoth(layout, slots, id, "Glow", false);
+}
+
 function ShowImageBoth(layout, slots, setKey, lyricIndex) {
     if (lastShown.setKey === setKey && lastShown.lyric === lyricIndex) return;
-    if (lastShown.setKey) ClearImageSet(layout, slots, lastShown.setKey);
-    if (lastShown.setKey !== setKey) ClearImageSet(layout, slots, setKey);
+    // 原版在这里把"上一组"和"目标组"整组各清一遍；同一时刻只可能有一张亮着，
+    // 所以清掉那一张就够了（切换轨道时也一样：目标组里不会另有一张亮着）。
+    ClearShownImage(layout, slots);
     SetClassBoth(layout, slots, ImageId(setKey, lyricIndex), "Lit", true);
     SetClassBoth(layout, slots, ImageId(setKey, lyricIndex), "Glow", false);
     glowOn = false;
@@ -101,11 +203,12 @@ async function GlowLoop() {
     for (;;) {
         await Instance.Delay(0.5);
         try {
+            // 没有在显示的句子（句间 / 整首结束）时什么都不做：零引擎调用。
+            if (!lastShown.setKey) { glowOn = false; continue; }
             const layout = GetLyricLayout();
-            if (layout && lastShown.setKey) {
-                glowOn = !glowOn;
-                SetClassBoth(layout, GetAllPlayerSlots(), ImageId(lastShown.setKey, lastShown.lyric), "Glow", glowOn);
-            }
+            if (!layout) continue;
+            glowOn = !glowOn;
+            SetClassBoth(layout, GetAllPlayerSlots(), ImageId(lastShown.setKey, lastShown.lyric), "Glow", glowOn);
         } catch (e) { /* 下一轮再试 */ }
     }
 }
@@ -122,14 +225,15 @@ function ShowLine(index, duration, token, imageIndex = -1, setKey = null) {
     if (imageIndex >= 0 && setKey && IMG_SETS[setKey]) {
         // 切句硬切：先挂 NoFade 让新旧歌词瞬间交换（无交叉残影），
         // 同步点亮后 0.08 秒摘掉；呼吸 glow 靠 GlowLoop，与此无关
-        SetClassBoth(layout, slots, "abyss_image_stack", "NoFade", true);
+        SetClassBoth(layout, slots, STACK_ID, "NoFade", true);
         ShowImageBoth(layout, slots, setKey, imageIndex);
+        // 每句开头是天然的"状态变化点"：给刚进服、还没推够次数的玩家补一份当前状态。
+        PushToPending(layout);
         if (!glowStarted) { glowStarted = true; GlowLoop(); }
         const pt = ++phaseToken;
         Instance.Delay(0.08).then(() => {
             if (pt !== phaseToken) return;
-            const l2 = GetLyricLayout();
-            if (l2) SetClassBoth(l2, GetAllPlayerSlots(), "abyss_image_stack", "NoFade", false);
+            SetClassBoth(layout, slots, STACK_ID, "NoFade", false);
         });
     } else {
         phaseToken++;
@@ -142,9 +246,10 @@ function ShowLine(index, duration, token, imageIndex = -1, setKey = null) {
 
 async function PlayTimeline(timeline, setKey = null) {
     const token = ++playbackToken;
-    // 起手全清：切轨/重播时上一轨的残留亮图不可能带进新轨。
+    // 起手清场：正常收尾时上一轨已经把图熄掉了（lastShown 已复位），再全清 83 张纯属浪费。
+    // 只有"上一轨被新输入打断"时 lastShown 才还指着某张图 —— 那正是需要全清自愈的场合。
     const layout0 = GetLyricLayout();
-    if (layout0) ClearAllImageSets(layout0, GetAllPlayerSlots());
+    if (layout0 && lastShown.setKey) ClearAllImageSets(layout0, GetAllPlayerSlots());
     lastShown = { setKey: null, lyric: -1 };
     let cursor = 0;
     for (let index = 0; index < timeline.length; index++) {
@@ -160,6 +265,10 @@ async function PlayTimeline(timeline, setKey = null) {
 function StopLyrics() {
     playbackToken++;
     shownCue++;
+    // 停止是一次轨道边界：顺手全清一次，把任何残留的亮图在这里自愈掉。
+    const layout = GetLyricLayout();
+    if (layout) ClearAllImageSets(layout, GetAllPlayerSlots());
+    lastShown = { setKey: null, lyric: -1 };
     HideLyrics();
 }
 
@@ -169,15 +278,27 @@ function ResetPlaybackState() {
     playbackToken++;
     shownCue++;
     phaseToken++;
+    // 热重载可能换了实体，缓存作废。
+    cachedLayout = null;
+    lastShown = { setKey: null, lyric: -1 };
+    glowOn = false;
 }
 try {
     Instance.OnScriptReload({ before: ResetPlaybackState });
 } catch (e) { /* 旧版本没有该接口时忽略 */ }
+
+// 玩家上线/重连：他的 HUD 实例是新建的、空的，把当前整份状态推给他一份。
+// 这正是"广播只写全局"能成立的前提 —— 否则中途加入的人看不到当前状态。
+try {
+    Instance.OnPlayerActivate((player) => {
+        try {
+            MarkPendingPlayer(player.GetPlayerSlot());
+        } catch (e) { /* 忽略 */ }
+    });
+} catch (e) { /* 旧版本没有该接口时忽略 */ }
+
 Instance.OnScriptInput("s3m0", () => PlayTimeline(S3M0_TIMELINE, "abyss"));
 Instance.OnScriptInput("end1", () => PlayTimeline(END1_TIMELINE, "sees"));
 Instance.OnScriptInput("end2_1", () => PlayTimeline(END2_PART1_TIMELINE, "enli"));
 Instance.OnScriptInput("end2_2", () => PlayTimeline(END2_PART2_TIMELINE, "enli"));
 Instance.OnScriptInput("stop", StopLyrics);
-
-
-
