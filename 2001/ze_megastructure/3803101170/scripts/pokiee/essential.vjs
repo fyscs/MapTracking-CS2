@@ -2,7 +2,7 @@
 // https://github.com/Kxnrl
 
 //@ts-nocheck
-import { CSDamageFlags, CSDamageTypes, CSWeaponBase, CSWeaponType, Instance } from 'cs_script/point_script';
+import { Console, CSDamageFlags, CSDamageTypes, Entities, Instance } from 'cs_script/point_script';
 
 Instance.OnScriptInput("lost", ({ activator }) => {
     if (!activator || !activator.IsValid()) return;
@@ -20,21 +20,21 @@ Instance.OnScriptInput("lost", ({ activator }) => {
             damageTypes: CSDamageTypes.GENERIC,
             damageFlags: CSDamageFlags.IGNORE_ARMOR,
         });
-        Instance.EntFireAtName({ name: "console", input: "Command", value: `say ${playerName} lost forever!` });
+        Console.ServerCommand(`say ${playerName} lost forever!`);
     } else {
-        const zmtp = Instance.FindEntityByName("zmtp");
+        const zmtp = Entities.FindByName("zmtp")[0];
         activator.Teleport({ position: zmtp.GetAbsOrigin(), angles: zmtp.GetAbsAngles() });
     }
 });
 
 Instance.OnScriptInput("checkglock", ({ caller, activator }) => {
     if (activator.GetClassName() === "weapon_glock") {
-        Instance.EntFireAtTarget({ target: caller, input: "FireUser1" });
+        caller?.FireInput({ input: "FireUser1" });
     }
 });
 
 Instance.OnScriptInput("slayct", () => {
-    const players = Instance.FindEntitiesByClass("player");
+    const players = Entities.FindByClass("player");
     for (const player of players) {
         if (player.GetTeamNumber() === 2) continue;
         player.TakeDamage({
@@ -47,7 +47,7 @@ Instance.OnScriptInput("slayct", () => {
 
 
 Instance.OnScriptInput("slayt", () => {
-    const players = Instance.FindEntitiesByClass("player");
+    const players = Entities.FindByClass("player");
     for (const player of players) {
         if (player.GetTeamNumber() === 3) continue;
         player.TakeDamage({
