@@ -910,7 +910,7 @@
         "target": "[PR#][HORROR]MATH",
         "input": "GetValue",
         "param": "",
-        "delay": 7,
+        "delay": 10,
         "limit": 1
       },
       {
@@ -971,14 +971,6 @@
       },
       {
         "output": "OnMapSpawn",
-        "target": "[PR#][HORROR]SCREEN_BLOOD",
-        "input": "DestroyImmediately",
-        "param": "",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnMapSpawn",
         "target": "[PR#][BGM]kokoro_no_kagero",
         "input": "StopSound",
         "param": "",
@@ -1023,6 +1015,22 @@
         "input": "RunScriptInput",
         "param": "ResetItemHUD",
         "delay": 0.019999999552965164,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "HideCounterHUD",
+        "delay": 0.029999999329447746,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "ResetCounter01",
+        "delay": 0.029999999329447746,
         "limit": -1
       }
     ]
@@ -1267,6 +1275,14 @@
         "input": "RunScriptInput",
         "param": "ShowLocation01",
         "delay": 35,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "ShowCounter01",
+        "delay": 30,
         "limit": -1
       }
     ]
@@ -13109,6 +13125,14 @@
         "param": "Title02",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 2,
+        "limit": -1
       }
     ]
   },
@@ -13467,6 +13491,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -13542,6 +13574,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -13609,6 +13649,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -13684,6 +13732,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -13759,6 +13815,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -13873,6 +13937,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -14128,6 +14200,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -14239,6 +14319,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -14300,7 +14388,7 @@
     "color": "0 0 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u767A\u751F\u3057\u3066\u3044\u308B\u602A\u5947\u73FE\u8C61 : ",
+    "message": "\u767A\u751F\u3057\u3066\u3044\u308B\u602A\u7570 : ",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -14320,7 +14408,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-1101.194336 -2404.500000 110.432434",
+    "origin": "-1101.194336 -2432.000000 110.432434",
     "angles": "0.000000 270.000122 90.000008",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9606"
@@ -14336,7 +14424,7 @@
     "color": "255 255 255",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u767A\u751F\u3057\u3066\u3044\u308B\u602A\u5947\u73FE\u8C61 : ",
+    "message": "\u767A\u751F\u3057\u3066\u3044\u308B\u602A\u7570 : ",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -14356,7 +14444,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-1102.194336 -2403.500000 111.432434",
+    "origin": "-1102.194336 -2431.000000 111.432434",
     "angles": "0.000000 270.000122 90.000008",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9607"
@@ -14372,7 +14460,7 @@
     "color": "0 0 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "Fear Phenomenon Occurring",
+    "message": "Anomalies",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -14392,7 +14480,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-1101.194336 -2384.000000 89.329262",
+    "origin": "-1101.194336 -2433.000000 95.000000",
     "angles": "0.000000 270.000122 90.000008",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9614"
@@ -14408,7 +14496,7 @@
     "color": "255 255 255",
     "fullbright": "1",
     "enabled": "1",
-    "message": "Fear Phenomenon Occurring",
+    "message": "Anomalies",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -14428,7 +14516,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-1102.194336 -2383.000000 90.329262",
+    "origin": "-1102.194336 -2432.000000 96.000000",
     "angles": "0.000000 270.000122 90.000008",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9615"
@@ -15419,6 +15507,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -15699,6 +15795,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -15766,6 +15870,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -19536,6 +19648,14 @@
         "param": "",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -49893,6 +50013,14 @@
         "param": "1",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -50077,6 +50205,14 @@
         "param": "",
         "delay": 1,
         "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -50180,8 +50316,16 @@
         "target": "[PR#][HORROR]MATH",
         "input": "Add",
         "param": "1",
-        "delay": 1,
+        "delay": 4,
         "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]hmn_counter_script",
+        "input": "RunScriptInput",
+        "param": "AddCounter01",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -52043,5 +52187,24 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17456"
+  },
+  {
+    "observable": "1",
+    "layout": "panorama/layout/custom_game/hmn_counter_hud.xml",
+    "targetname": "[PR#]hmn_counter_hud",
+    "classname": "custom_hud_layout",
+    "origin": "-2068.000000 700.000000 560.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "17500"
+  },
+  {
+    "cs_script": "maps/scripts/hmn_counter_hud.vjs",
+    "targetname": "[PR#]hmn_counter_script",
+    "classname": "point_script",
+    "origin": "-2068.000000 684.000000 560.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "17501"
   }
 ]
