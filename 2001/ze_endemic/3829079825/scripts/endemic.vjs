@@ -2445,7 +2445,7 @@ function platformDoorsOpen(index)
 		Fire("tp_sp_" + pos, "Disable");
 		// Enable teleport at waiting room
 		//Fire("tp_sp_wait", "KeyValue", "target dest_sp_" + pos);  // CS2 doesn't support multi destination
-		Fire("tp_sp_wait" + pos, "Enable", "", 0.02);
+		Fire("tp_sp_wait_" + pos, "Enable", "", 0.02);
 		const linear_left = Entities.FindByName("sp_doors_" + pos + "_left" + sp_door_index[0])[0];
 		const linear_right = Entities.FindByName("sp_doors_" + pos + "_right" + sp_door_index[2])[0];
 		for (const d of doors_left)
@@ -2476,7 +2476,7 @@ function platformDoorsClose(index)
 	// Teleport people inside the train to waiting room
 	Fire("tp_sp_" + pos, "Enable", "", 3.0);
 	Fire("tp_spawn_postmz", "KeyValue", "target dest_spwait", 3.0);
-	Fire("tp_sp_wait" + pos, "Disable", "", 3.0);
+	Fire("tp_sp_wait_" + pos, "Disable", "", 3.0);
 	// Kill all detailed model trains at the platform
 	Fire("train_prop_detailed", "KillHierarchy", "", 3.0);
 	Fire("train_prop_door_moveleft", "Kill", "", 3.0);
