@@ -11,7 +11,7 @@
     "startsound": "",
     "blockdamage": "0.000000",
     "movedistance": "3000.000000",
-    "speed": "1650",
+    "speed": "1450",
     "MoveWithoutPushingBlockers": "0",
     "NoInterpolate": "0",
     "authoredposition": "0",
