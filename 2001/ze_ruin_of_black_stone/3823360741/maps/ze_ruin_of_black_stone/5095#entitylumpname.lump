@@ -264,7 +264,7 @@
     "vscripts": "",
     "targetname": "[PR#]item_snow_particle",
     "classname": "info_particle_system",
-    "origin": "47.000000 0.000000 0.000000",
+    "origin": "47.000000 0.000000 10.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "882",

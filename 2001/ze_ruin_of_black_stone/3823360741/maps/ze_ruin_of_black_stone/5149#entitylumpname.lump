@@ -255,7 +255,7 @@
     "vscripts": "",
     "targetname": "[PR#]item_holy_particle",
     "classname": "info_particle_system",
-    "origin": "41.000000 6.000000 2.000000",
+    "origin": "44.000000 6.000000 11.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "880",

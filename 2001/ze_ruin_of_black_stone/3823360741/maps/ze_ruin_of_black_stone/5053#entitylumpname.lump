@@ -275,7 +275,7 @@
     "vscripts": "",
     "targetname": "[PR#]item_zmgravity_particle",
     "classname": "info_particle_system",
-    "origin": "55.000000 0.000000 6.000000",
+    "origin": "55.000000 0.000000 16.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "875",

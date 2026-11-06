@@ -27400,6 +27400,134 @@
         "param": "*** Dr.X is using Ultimate Fire ***",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 9,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 11,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 12,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 13,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 14,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 15,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 16,
+        "limit": -1
       }
     ]
   },
@@ -27753,10 +27881,66 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]red_text_hud_script",
-        "input": "RunScriptInput",
-        "param": "HideRedtexthud",
-        "delay": 9,
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 8,
         "limit": -1
       }
     ]
@@ -28020,6 +28204,62 @@
         "input": "StopGlowing",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 7,
         "limit": -1
       }
     ]
@@ -28321,6 +28561,62 @@
         "param": "HideRedtexthud",
         "delay": 8,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 7,
+        "limit": -1
       }
     ]
   },
@@ -28503,6 +28799,78 @@
         "input": "RunScriptInput",
         "param": "HideRedtexthud",
         "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 9,
         "limit": -1
       }
     ]
@@ -29117,6 +29485,134 @@
         "input": "RunScriptInput",
         "param": "HideRedtexthud",
         "delay": 9,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 10,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 9,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 11,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 12,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 13,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 14,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 15,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 16,
         "limit": -1
       }
     ]
@@ -43540,6 +44036,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]111",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -47474,7 +47978,7 @@
     "vscripts": "",
     "targetname": "[PR#]npc_eyeboss_thrust_vasakule23",
     "classname": "phys_thruster",
-    "origin": "9991.000000 4253.000000 -276.000000",
+    "origin": "9991.000000 4253.000000 -301.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6135"
@@ -47487,7 +47991,7 @@
     "vscripts": "",
     "targetname": "[PR#]npc_eyeboss_thrust_vasakule22",
     "classname": "phys_thruster",
-    "origin": "9992.000000 4252.000000 -276.000000",
+    "origin": "9992.000000 4252.000000 -301.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6136"
@@ -47500,7 +48004,7 @@
     "vscripts": "",
     "targetname": "[PR#]npc_eyeboss_thrust_paremale22",
     "classname": "phys_thruster",
-    "origin": "9992.000000 4188.000000 -276.000000",
+    "origin": "9992.000000 4188.000000 -301.000000",
     "angles": "0.000000 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6137"
@@ -47513,7 +48017,7 @@
     "vscripts": "",
     "targetname": "[PR#]npc_eyeboss_thrust_paremale23",
     "classname": "phys_thruster",
-    "origin": "9991.000000 4187.000000 -276.000000",
+    "origin": "9991.000000 4187.000000 -301.000000",
     "angles": "0.000000 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6138"
@@ -47579,7 +48083,7 @@
     "vscripts": "",
     "targetname": "[PR#]npc_first_boss_physic2",
     "classname": "func_physbox",
-    "origin": "9960.000000 4220.000000 -276.000000",
+    "origin": "9960.000000 4220.000000 -299.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6139",
@@ -47593,7 +48097,7 @@
     "vscripts": "",
     "targetname": "[PR#]npc_eyeboss_thrust_otse2",
     "classname": "phys_thruster",
-    "origin": "9976.000000 4220.000000 -276.000000",
+    "origin": "9976.000000 4220.000000 -301.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6141"
@@ -47606,7 +48110,7 @@
     "vscripts": "",
     "targetname": "[PR#]npc_eyeboss_keepupright2",
     "classname": "phys_keepupright",
-    "origin": "9960.000000 4220.000000 -276.000000",
+    "origin": "9960.000000 4220.000000 -301.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6142"

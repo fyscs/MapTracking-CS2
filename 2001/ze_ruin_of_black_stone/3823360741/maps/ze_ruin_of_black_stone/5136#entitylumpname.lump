@@ -341,7 +341,7 @@
     "vscripts": "",
     "targetname": "[PR#]item_wind_particle",
     "classname": "info_particle_system",
-    "origin": "48.000000 -2.000000 2.000000",
+    "origin": "48.000000 -2.000000 12.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "892",

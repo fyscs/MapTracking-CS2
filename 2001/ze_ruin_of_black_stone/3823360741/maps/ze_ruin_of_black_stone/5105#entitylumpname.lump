@@ -264,7 +264,7 @@
     "vscripts": "",
     "targetname": "[PR#]item_wall_particle",
     "classname": "info_particle_system",
-    "origin": "47.000000 0.000000 -9.000000",
+    "origin": "47.000000 0.000000 9.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "885",
@@ -329,6 +329,22 @@
         "input": "Break",
         "param": "",
         "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "DisableMotion",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]npc_first_boss_physic2",
+        "input": "EnableMotion",
+        "param": "",
+        "delay": 6.099999904632568,
         "limit": -1
       }
     ]
@@ -440,7 +456,7 @@
     "targetname": "[PR#]item_wall_show",
     "vscripts": "",
     "classname": "point_worldtext",
-    "origin": "52.897705 50.696655 -9.055420",
+    "origin": "52.897705 45.000000 -9.055420",
     "angles": "-0.000000 -90.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6008",
@@ -477,7 +493,7 @@
     "vscripts": "",
     "targetname": "[PR#]item_wall_show",
     "classname": "point_worldtext",
-    "origin": "52.897705 -0.417053 -5.828430",
+    "origin": "52.897705 -6.000000 -5.828430",
     "angles": "-0.000000 -90.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6009",
