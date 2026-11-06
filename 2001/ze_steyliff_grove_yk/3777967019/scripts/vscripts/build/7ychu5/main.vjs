@@ -1086,7 +1086,7 @@ class ItemManager {
         for (const e of this.items)
             fn(e);
     }
-    tickAll() {
+       tickAll() {
         var _a, _b, _c;
         for (const entry of this.items) {
             if (entry.owner) {
@@ -1094,7 +1094,13 @@ class ItemManager {
                     this.removeOwner(entry.module, entry.owner);
                     continue;
                 }
-                if (Input.justPressed(entry.owner, CSInputs.ATTACK2)) {
+
+                // 👇 新加的：僵尸直接跳过，不处理右键
+                if (entry.owner.getTeam() === 2) {
+                    continue;
+                }
+
+                if (Input.justPressed(entry.owner, CSInputs.ATTACK2)) { // 这是你截图里 1094 行的代码
                     if (!entry.module.enabled || !this._itemsEnabled)
                         return;
                     (_c = (_b = entry.module).onUse) === null || _c === void 0 ? void 0 : _c.call(_b, entry.owner);

@@ -168383,7 +168383,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Item_maker",
         "input": "KeyValues",
-        "param": "EntityTemplate Item_Zombie_Ward_Template",
+        "param": "EntityTemplate Item_Human_HolySword_Template",
         "delay": 1.100000023841858,
         "limit": 1
       },
@@ -168431,7 +168431,7 @@
         "output": "OnTrigger",
         "target": "[PR#]Item_maker",
         "input": "KeyValues",
-        "param": "EntityTemplate Item_Human_HolySword_Template",
+        "param": "EntityTemplate Item_Zombie_Ward_Template",
         "delay": 1.7000000476837158,
         "limit": 1
       },
@@ -168549,9 +168549,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]S1_Item_Origin",
-        "input": "PickRandomShuffle",
-        "param": "",
+        "target": "[PR#]Item_maker",
+        "input": "KeyValues",
+        "param": "origin 1920 -1520 -240",
         "delay": 1.7000000476837158,
         "limit": 1
       },
@@ -168578,6 +168578,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Item_maker",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 1.75,
+        "limit": 1
       }
     ]
   },
@@ -184676,7 +184684,7 @@
     "Template30": "",
     "Template29": "",
     "Template28": "",
-    "Template27": "",
+    "Template27": "[PR#]Item_Zombie_Ward_branch",
     "Template26": "[PR#]Item_Zombie_Ward_Relay",
     "Template25": "[PR#]Item_Zombie_Ward_Number_Text",
     "Template24": "[PR#]Item_Zombie_Ward_Text2",
@@ -188339,7 +188347,7 @@
         "output": "OnCase13",
         "target": "[PR#]Item_maker",
         "input": "KeyValues",
-        "param": "origin 1920 -1520 -240",
+        "param": "origin 5216 -13192 544",
         "delay": 0,
         "limit": 1
       },
@@ -188372,14 +188380,6 @@
         "target": "[PR#]Item_maker",
         "input": "KeyValues",
         "param": "origin 7168 -14424 104",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase18",
-        "target": "[PR#]Item_maker",
-        "input": "KeyValues",
-        "param": "origin 5216 -13192 544",
         "delay": 0,
         "limit": 1
       },
@@ -188513,14 +188513,6 @@
       },
       {
         "output": "OnCase17",
-        "target": "[PR#]Item_maker",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      },
-      {
-        "output": "OnCase18",
         "target": "[PR#]Item_maker",
         "input": "ForceSpawn",
         "param": "",
