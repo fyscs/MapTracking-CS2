@@ -23290,6 +23290,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]bgm6",
+        "input": "StartSound",
+        "param": "",
+        "delay": 85,
+        "limit": 1
       }
     ]
   },
@@ -24571,7 +24579,7 @@
     "vscripts": "",
     "targetname": "[PR#]feinai_skin",
     "classname": "trigger_multiple",
-    "origin": "-12228.935547 6066.833496 109.307312",
+    "origin": "-12238.000000 6066.833496 109.307312",
     "angles": "0.000000 224.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1820",
@@ -24797,6 +24805,726 @@
     "hammerUniqueId": "1826"
   },
   {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/feidudu/feidudu.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-108.000000 -10779.000000 -631.000000",
+    "angles": "0.000000 180.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1827"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]CT",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feidudu_skin",
+    "classname": "trigger_multiple",
+    "origin": "-100.000000 -10779.999023 -592.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1828",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feidudu_skin_1828.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/feidudu/feidudu.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "255 187 0",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u6211\u662F\u80A5\u561F\u561F\uFF0C\u4F60\u7684\u80C6\u5B50\u771F\u7684\u662F\u80A5\u561F\u561F\u7684\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-102.000000 -10777.000000 -548.000000",
+    "angles": "0.000000 270.000061 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1830"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]zomble_skin",
+    "classname": "trigger_multiple",
+    "origin": "-818.000000 -10868.000000 -592.000000",
+    "angles": "0.000000 179.999969 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1831",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/zomble_skin_1831.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-811.000244 -10868.998047 -639.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1833"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "220 20 60",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003E\u50F5\u5C38\u76AE\u80A4\uFF0C\u636E\u8BF4\u4F1A\u98DE\u6251\u002B\u95EA\u7075\uFF1F\u3002\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-816.000000 -10866.000000 -550.000000",
+    "angles": "0.000000 270.000061 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1834"
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/luff/feidudu/feidudu.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-11013.533203 -9532.858398 -130.000000",
+    "angles": "0.000000 135.000015 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1835"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]CT",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]feidudu_skin",
+    "classname": "trigger_multiple",
+    "origin": "-11004.340820 -9534.979492 -91.000000",
+    "angles": "0.000000 315.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1836",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/feidudu_skin_1836.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/luff/feidudu/feidudu.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-11998.480469 -10281.763672 1.000000",
+    "angles": "0.000000 22.500002 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1839"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]zomble_skin",
+    "classname": "trigger_multiple",
+    "origin": "-12005.330078 -10283.520508 48.000000",
+    "angles": "0.000000 202.499939 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1840",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/zomble_skin_1840.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "1",
+    "justify_vertical": "0",
+    "justify_horizontal": "1",
+    "font_name": "Arial Black",
+    "font_size": "150.000000",
+    "world_units_per_pixel": "0.050000",
+    "color": "220 20 60",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u003E\u003EZOMBLE SKIN\u003C\u003C",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-11986.000000 -10273.000000 91.000000",
+    "angles": "0.000000 157.500046 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1842"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]zomble_skin",
+    "classname": "trigger_multiple",
+    "origin": "-12155.000000 6096.908203 111.000000",
+    "angles": "0.000000 89.999916 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1843",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/zomble_skin_1843.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-12155.997070 6089.907227 64.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1845"
+  },
+  {
+    "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "15291.000000 693.666016 -1024.000000",
+    "angles": "0.000000 270.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1846"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]T",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]zomble_skin",
+    "classname": "trigger_multiple",
+    "origin": "15291.998047 700.666016 -977.000000",
+    "angles": "0.000000 89.999931 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1847",
+    "model": "maps/ze_sun_kingdom_stage1_2/entities/zomble_skin_1847.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetModel",
+        "param": "characters/models/exg/djhl/browncoat_zombie/browncoat_zombie1.vmdl",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
     "precomputedsubfrusta": "6",
     "precomputedobbextent5": "799.305420 589.657227 616.202148",
     "precomputedobbangles5": "45.000000 0.000000 -1.000000",
@@ -24882,7 +25610,7 @@
     "origin": "-8752.000000 976.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1829"
+    "hammerUniqueId": "1851"
   },
   {
     "precomputedsubfrusta": "6",
@@ -24970,7 +25698,7 @@
     "origin": "-8720.000000 976.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1830"
+    "hammerUniqueId": "1852"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25058,7 +25786,7 @@
     "origin": "-8720.000000 1008.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1831"
+    "hammerUniqueId": "1853"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25146,7 +25874,7 @@
     "origin": "-8752.000000 1008.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1832"
+    "hammerUniqueId": "1854"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25234,7 +25962,7 @@
     "origin": "-9728.000000 -3584.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1835"
+    "hammerUniqueId": "1857"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25322,7 +26050,7 @@
     "origin": "-9696.000000 -3584.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1836"
+    "hammerUniqueId": "1858"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25410,7 +26138,7 @@
     "origin": "-9696.000000 -3552.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1837"
+    "hammerUniqueId": "1859"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25498,7 +26226,7 @@
     "origin": "-9728.000000 -3552.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1838"
+    "hammerUniqueId": "1860"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25586,7 +26314,7 @@
     "origin": "-11270.000000 6522.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1841"
+    "hammerUniqueId": "1863"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25674,7 +26402,7 @@
     "origin": "-11238.000000 6522.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1842"
+    "hammerUniqueId": "1864"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25762,7 +26490,7 @@
     "origin": "-11238.000000 6554.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1843"
+    "hammerUniqueId": "1865"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25850,7 +26578,7 @@
     "origin": "-11270.000000 6554.000000 344.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1844"
+    "hammerUniqueId": "1866"
   },
   {
     "precomputedsubfrusta": "6",
@@ -25938,7 +26666,7 @@
     "origin": "-8224.000000 -1056.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1847"
+    "hammerUniqueId": "1869"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26026,7 +26754,7 @@
     "origin": "-8192.000000 -1056.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1848"
+    "hammerUniqueId": "1870"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26114,7 +26842,7 @@
     "origin": "-8192.000000 -1024.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1849"
+    "hammerUniqueId": "1871"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26202,7 +26930,7 @@
     "origin": "-8224.000000 -1024.000000 376.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1850"
+    "hammerUniqueId": "1872"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26290,7 +27018,7 @@
     "origin": "-12608.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1853"
+    "hammerUniqueId": "1875"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26378,7 +27106,7 @@
     "origin": "-12576.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1854"
+    "hammerUniqueId": "1876"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26466,7 +27194,7 @@
     "origin": "-12576.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1855"
+    "hammerUniqueId": "1877"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26554,7 +27282,7 @@
     "origin": "-12608.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1856"
+    "hammerUniqueId": "1878"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26642,7 +27370,7 @@
     "origin": "-7664.000000 -9328.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1859"
+    "hammerUniqueId": "1881"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26730,7 +27458,7 @@
     "origin": "-7632.000000 -9328.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1860"
+    "hammerUniqueId": "1882"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26818,7 +27546,7 @@
     "origin": "-7632.000000 -9296.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1861"
+    "hammerUniqueId": "1883"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26906,7 +27634,7 @@
     "origin": "-7664.000000 -9296.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1862"
+    "hammerUniqueId": "1884"
   },
   {
     "precomputedsubfrusta": "6",
@@ -26994,7 +27722,7 @@
     "origin": "-11297.000000 513.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1865"
+    "hammerUniqueId": "1887"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27082,7 +27810,7 @@
     "origin": "-11265.000000 513.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1866"
+    "hammerUniqueId": "1888"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27170,7 +27898,7 @@
     "origin": "-11265.000000 545.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1867"
+    "hammerUniqueId": "1889"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27258,7 +27986,7 @@
     "origin": "-11297.000000 545.000000 152.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1868"
+    "hammerUniqueId": "1890"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27346,7 +28074,7 @@
     "origin": "-12128.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1871"
+    "hammerUniqueId": "1893"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27434,7 +28162,7 @@
     "origin": "-12096.000000 -1280.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1872"
+    "hammerUniqueId": "1894"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27522,7 +28250,7 @@
     "origin": "-12096.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1873"
+    "hammerUniqueId": "1895"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27610,7 +28338,7 @@
     "origin": "-12128.000000 -1248.000000 -88.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1874"
+    "hammerUniqueId": "1896"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27698,7 +28426,7 @@
     "origin": "-9328.000000 -8816.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1877"
+    "hammerUniqueId": "1899"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27786,7 +28514,7 @@
     "origin": "-9296.000000 -8816.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1878"
+    "hammerUniqueId": "1900"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27874,7 +28602,7 @@
     "origin": "-9296.000000 -8784.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1879"
+    "hammerUniqueId": "1901"
   },
   {
     "precomputedsubfrusta": "6",
@@ -27962,7 +28690,7 @@
     "origin": "-9328.000000 -8784.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1880"
+    "hammerUniqueId": "1902"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28050,7 +28778,7 @@
     "origin": "-7216.000000 -7664.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1883"
+    "hammerUniqueId": "1905"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28138,7 +28866,7 @@
     "origin": "-7184.000000 -7664.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1884"
+    "hammerUniqueId": "1906"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28226,7 +28954,7 @@
     "origin": "-7184.000000 -7632.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1885"
+    "hammerUniqueId": "1907"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28314,7 +29042,7 @@
     "origin": "-7216.000000 -7632.000000 248.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1886"
+    "hammerUniqueId": "1908"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28402,7 +29130,7 @@
     "origin": "-9328.000000 -8112.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1889"
+    "hammerUniqueId": "1911"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28490,7 +29218,7 @@
     "origin": "-9296.000000 -8112.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1890"
+    "hammerUniqueId": "1912"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28578,7 +29306,7 @@
     "origin": "-9296.000000 -8080.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1891"
+    "hammerUniqueId": "1913"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28666,7 +29394,7 @@
     "origin": "-9328.000000 -8080.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1892"
+    "hammerUniqueId": "1914"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28754,7 +29482,7 @@
     "origin": "-6696.000000 -6008.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1895"
+    "hammerUniqueId": "1917"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28842,7 +29570,7 @@
     "origin": "-6664.000000 -6008.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1896"
+    "hammerUniqueId": "1918"
   },
   {
     "precomputedsubfrusta": "6",
@@ -28930,7 +29658,7 @@
     "origin": "-6664.000000 -5976.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1897"
+    "hammerUniqueId": "1919"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29018,7 +29746,7 @@
     "origin": "-6696.000000 -5976.000000 72.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1898"
+    "hammerUniqueId": "1920"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29106,7 +29834,7 @@
     "origin": "-8176.000000 -7664.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1901"
+    "hammerUniqueId": "1923"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29194,7 +29922,7 @@
     "origin": "-8144.000000 -7664.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1902"
+    "hammerUniqueId": "1924"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29282,7 +30010,7 @@
     "origin": "-8144.000000 -7632.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1903"
+    "hammerUniqueId": "1925"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29370,7 +30098,7 @@
     "origin": "-8176.000000 -7632.000000 248.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1904"
+    "hammerUniqueId": "1926"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29458,7 +30186,7 @@
     "origin": "-5168.000000 -5616.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1907"
+    "hammerUniqueId": "1929"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29546,7 +30274,7 @@
     "origin": "-5136.000000 -5616.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1908"
+    "hammerUniqueId": "1930"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29634,7 +30362,7 @@
     "origin": "-5136.000000 -5584.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1909"
+    "hammerUniqueId": "1931"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29722,7 +30450,7 @@
     "origin": "-5168.000000 -5584.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1910"
+    "hammerUniqueId": "1932"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29810,7 +30538,7 @@
     "origin": "-5480.000000 -4136.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1913"
+    "hammerUniqueId": "1935"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29898,7 +30626,7 @@
     "origin": "-5448.000000 -4136.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1914"
+    "hammerUniqueId": "1936"
   },
   {
     "precomputedsubfrusta": "6",
@@ -29986,7 +30714,7 @@
     "origin": "-5448.000000 -4104.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1915"
+    "hammerUniqueId": "1937"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30074,7 +30802,7 @@
     "origin": "-5480.000000 -4104.000000 280.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1916"
+    "hammerUniqueId": "1938"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30162,7 +30890,7 @@
     "origin": "-7208.000000 -6008.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1919"
+    "hammerUniqueId": "1941"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30250,7 +30978,7 @@
     "origin": "-7176.000000 -6008.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1920"
+    "hammerUniqueId": "1942"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30338,7 +31066,7 @@
     "origin": "-7176.000000 -5976.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1921"
+    "hammerUniqueId": "1943"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30426,7 +31154,7 @@
     "origin": "-7208.000000 -5976.000000 392.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1922"
+    "hammerUniqueId": "1944"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30514,7 +31242,7 @@
     "origin": "-6180.000000 -8188.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1925"
+    "hammerUniqueId": "1947"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30602,7 +31330,7 @@
     "origin": "-6148.000000 -8188.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1926"
+    "hammerUniqueId": "1948"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30690,7 +31418,7 @@
     "origin": "-6148.000000 -8156.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1927"
+    "hammerUniqueId": "1949"
   },
   {
     "precomputedsubfrusta": "6",
@@ -30778,7 +31506,7 @@
     "origin": "-6180.000000 -8156.000000 24.250000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1928"
+    "hammerUniqueId": "1950"
   },
   {
     "snapshot_mesh": "0",
@@ -30804,7 +31532,7 @@
     "origin": "7616.000000 -128.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1930"
+    "hammerUniqueId": "1952"
   },
   {
     "snapshot_mesh": "0",
@@ -30830,7 +31558,7 @@
     "origin": "7616.000000 -128.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1931"
+    "hammerUniqueId": "1953"
   },
   {
     "snapshot_mesh": "0",
@@ -30856,7 +31584,7 @@
     "origin": "7616.000000 -128.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1932"
+    "hammerUniqueId": "1954"
   },
   {
     "snapshot_mesh": "0",
@@ -30882,7 +31610,7 @@
     "origin": "8000.000000 -128.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1934"
+    "hammerUniqueId": "1956"
   },
   {
     "snapshot_mesh": "0",
@@ -30908,7 +31636,7 @@
     "origin": "8000.000000 -128.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1935"
+    "hammerUniqueId": "1957"
   },
   {
     "snapshot_mesh": "0",
@@ -30934,7 +31662,7 @@
     "origin": "8000.000000 -128.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1936"
+    "hammerUniqueId": "1958"
   },
   {
     "snapshot_mesh": "0",
@@ -30960,7 +31688,7 @@
     "origin": "8000.000000 256.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1938"
+    "hammerUniqueId": "1960"
   },
   {
     "snapshot_mesh": "0",
@@ -30986,7 +31714,7 @@
     "origin": "8000.000000 256.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1939"
+    "hammerUniqueId": "1961"
   },
   {
     "snapshot_mesh": "0",
@@ -31012,7 +31740,7 @@
     "origin": "8000.000000 256.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1940"
+    "hammerUniqueId": "1962"
   },
   {
     "snapshot_mesh": "0",
@@ -31038,7 +31766,7 @@
     "origin": "7616.000000 256.000000 -1220.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1942"
+    "hammerUniqueId": "1964"
   },
   {
     "snapshot_mesh": "0",
@@ -31064,7 +31792,7 @@
     "origin": "7616.000000 256.000000 -1252.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1943"
+    "hammerUniqueId": "1965"
   },
   {
     "snapshot_mesh": "0",
@@ -31090,7 +31818,7 @@
     "origin": "7616.000000 256.000000 -1284.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1944"
+    "hammerUniqueId": "1966"
   },
   {
     "precomputedsubfrusta": "6",
@@ -31175,7 +31903,7 @@
     "origin": "-13544.000000 -528.000000 -48.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1946"
+    "hammerUniqueId": "1968"
   },
   {
     "precomputedsubfrusta": "6",
@@ -31260,7 +31988,7 @@
     "origin": "-13544.000000 -528.000000 -112.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1948"
+    "hammerUniqueId": "1970"
   },
   {
     "precomputedsubfrusta": "6",
@@ -31345,7 +32073,7 @@
     "origin": "-13544.000000 -336.000000 -48.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1950"
+    "hammerUniqueId": "1972"
   },
   {
     "precomputedsubfrusta": "6",
@@ -31430,7 +32158,7 @@
     "origin": "-13544.000000 -336.000000 -112.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1952"
+    "hammerUniqueId": "1974"
   },
   {
     "precomputedsubfrusta": "6",
@@ -31515,7 +32243,7 @@
     "origin": "-13544.000000 -144.000000 -112.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1954"
+    "hammerUniqueId": "1976"
   },
   {
     "precomputedsubfrusta": "6",
@@ -31600,6 +32328,6 @@
     "origin": "-13544.000000 -144.000000 -48.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1956"
+    "hammerUniqueId": "1978"
   }
 ]
