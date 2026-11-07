@@ -2,7 +2,15 @@
 // https://github.com/Kxnrl
 
 // @ts-nocheck
-import { Instance } from "cs_script/point_script";
+import { Instance, Entities, Console, CSDamageFlags, CSDamageTypes } from "cs_script/point_script";
+
+const registeredScriptInputs = new Set();
+function RegisterScriptInput(name, handler) {
+    const key = name.toLowerCase();
+    if (registeredScriptInputs.has(key)) return;
+    registeredScriptInputs.add(key);
+    Instance.OnScriptInput(name, handler);
+}
 
 let AMOUNT_MAIN_CAP = 40000;
 let AMOUNT_FINAL_HOLD = 5000;
@@ -14,6 +22,244 @@ let AMOUNT_HOLD_FINALEPREVENTION = 5;
 let AMOUNT_VINEWALL_HP = 10;
 let AMOUNT_EDGECAP = 10000;
 const ORIGIN_X = -12852;
+
+let runtimeEpoch = 0;
+let roundActive = false;
+let scheduled = [];
+let taskSerial = 0;
+let buildRequests = [];
+let activeBuild = null;
+let stageConfigured = false;
+let startedEpoch = -1;
+let buildSerial = 0;
+let legacyEntityState = new Map();
+
+function EntityValid(entity) {
+    return !!entity && entity.IsValid();
+}
+
+function FireEntityInput({ target, ...config }) {
+    if (!EntityValid(target)) return;
+    if (config.caller && !EntityValid(config.caller)) delete config.caller;
+    if (config.activator && !EntityValid(config.activator)) delete config.activator;
+    target.FireInput(config);
+}
+
+function EntityState(entity) {
+    let state = legacyEntityState.get(entity);
+    if (!state) legacyEntityState.set(entity, state = {});
+    return state;
+}
+
+function RootParent(entity) {
+    if (!EntityValid(entity)) return null;
+    const seen = new Set();
+    while (EntityValid(entity) && !seen.has(entity)) {
+        seen.add(entity);
+        const parent = entity.GetParent();
+        if (!EntityValid(parent)) return entity;
+        entity = parent;
+    }
+    return null;
+}
+
+function RunAfter(delay, callback, key = undefined) {
+    if (!roundActive) return;
+    if (key !== undefined) scheduled = scheduled.filter(task => task.key !== key);
+    scheduled.push({ due: Instance.GetGameTime() + Math.max(0, delay), callback, key, epoch: runtimeEpoch, serial: ++taskSerial });
+    ArmThink();
+}
+
+function ArmThink() {
+    if (scheduled.length > 0) {
+        Instance.SetNextThink(Math.max(Instance.GetGameTime(), Math.min(...scheduled.map(task => task.due))));
+    }
+}
+
+Instance.SetThink(() => {
+    const now = Instance.GetGameTime();
+    const ready = scheduled.filter(task => task.due <= now + 0.001).sort((a, b) => a.due - b.due || a.serial - b.serial);
+    scheduled = scheduled.filter(task => task.due > now + 0.001);
+    try {
+        for (const task of ready) {
+            if (roundActive && task.epoch === runtimeEpoch) task.callback();
+        }
+    } finally {
+        ArmThink();
+    }
+});
+
+function ScheduleBuildTick(delay = 0.10) {
+    if (routePlanning || routeCommitting) return;
+    if (building && roundActive) RunAfter(delay, Tick, "build_tick");
+}
+
+function StopRuntime() {
+    routePlanning = false;
+    routeCommitting = false;
+    routePlanFailed = false;
+    routePlan = [];
+    routeOccupied = [];
+    routePlanInitial = null;
+    ClearMapHud();
+    runtimeEpoch++;
+    roundActive = false;
+    scheduled = [];
+    buildRequests = [];
+    activeBuild = null;
+    waiting_for_build = false;
+    building = false;
+    tick_lock = false;
+    winnerCheck = null;
+    winnerZones.clear();
+}
+
+const ROAD_LIGHT_DEFAULTS = {"clientSideEntity":"0","brightness_units":"1","brightness_candelas":"80","brightness_nits":"9816","brightness":"0","brightness_legacy":"1","enabled":"1","directlight":"2","colormode":"0","color":"255 210 130 255","colortemperature":"4756","brightness_lumens":"1000","range":"1598.485962","skirt":"0","bouncelight":"-1","bouncescale":"1.0","shape":"0","size_params":"2.0 24.0 0.15","outer_angle":"180.0","inner_angle":"180.0","lightcookie":"","bakespeculartocubemaps":"0","bakespeculartocubemaps_scale":"1.0","minroughness":"0","castshadows":"2","shadowmapsize":"-1","shadowpriority":"-1","pvs_modify_entity":"0","shadowfade_size_start":".10","shadowfade_size_end":".05","brightnessscale":"1.0","rendertocubemaps":"1","showlight":"0","fade_size_start":".05","fade_size_end":".025","transmit_always":"0","light_style":"","light_style_output_event0":"","light_style_output_event1":"","light_style_output_event2":"","light_style_output_event3":"","light_style_target0":"","light_style_target1":"","light_style_target2":"","light_style_target3":""};
+const ROAD_LIGHTS = {"s_builder_librarywall_light":[{"parent":"i_builder_librarywall","offset":[2048.0,-224.05,512.0],"bindings":[{"classname":"func_physbox","offset":[2048.0,-224.05,512.0]},{"classname":"func_physbox","offset":[-739.0,-194.0,102.0]},{"classname":"func_physbox","offset":[287.0,-421.0,219.0]},{"classname":"func_physbox","offset":[-607.0,-1344.5,-39.0]},{"classname":"func_physbox","offset":[830.5,-616.5,67.0]}],"source":[-5681.0,-5856.0,10460.0],"values":{}},{"parent":"i_builder_librarywall","offset":[1024.0,223.95,512.0],"bindings":[{"classname":"func_physbox","offset":[1024.0,223.95,512.0]},{"classname":"func_physbox","offset":[-291.0,830.0,102.0]},{"classname":"func_physbox","offset":[-737.0,27.0,219.0]},{"classname":"func_physbox","offset":[-159.0,-320.5,-39.0]},{"classname":"func_physbox","offset":[-193.5,-168.5,67.0]}],"source":[-6705.0,-5408.0,10460.0],"values":{}},{"parent":"i_builder_librarywall","offset":[1024.0,-224.05,512.0],"bindings":[{"classname":"func_physbox","offset":[1024.0,-224.05,512.0]},{"classname":"func_physbox","offset":[-739.0,830.0,102.0]},{"classname":"func_physbox","offset":[-737.0,-421.0,219.0]},{"classname":"func_physbox","offset":[-607.0,-320.5,-39.0]},{"classname":"func_physbox","offset":[-193.5,-616.5,67.0]}],"source":[-6705.0,-5856.0,10460.0],"values":{}},{"parent":"i_builder_librarywall","offset":[384.0,-0.05,96.0],"bindings":[{"classname":"func_physbox","offset":[384.0,-0.05,96.0]},{"classname":"func_physbox","offset":[-515.0,1470.0,-314.0]},{"classname":"func_physbox","offset":[-1377.0,-197.0,-197.0]},{"classname":"func_physbox","offset":[-383.0,319.5,-455.0]},{"classname":"func_physbox","offset":[-833.5,-392.5,-349.0]}],"source":[-7345.0,-5632.0,10044.0],"values":{}},{"parent":"i_builder_librarywall","offset":[2304.0,-0.05,1280.0],"bindings":[{"classname":"func_physbox","offset":[2304.0,-0.05,1280.0]},{"classname":"func_physbox","offset":[-515.0,-450.0,870.0]},{"classname":"func_physbox","offset":[543.0,-197.0,987.0]},{"classname":"func_physbox","offset":[-383.0,-1600.5,729.0]},{"classname":"func_physbox","offset":[1086.5,-392.5,835.0]}],"source":[-5425.0,-5632.0,11228.0],"values":{"brightness_candelas":"119","brightness_nits":"14723","brightness":"0.585938","brightness_legacy":"1.5","color":"100 255 250 255","colortemperature":"6600","brightness_lumens":"1500"}},{"parent":"i_builder_librarywall","offset":[768.0,-0.05,1280.0],"bindings":[{"classname":"func_physbox","offset":[768.0,-0.05,1280.0]},{"classname":"func_physbox","offset":[-515.0,1086.0,870.0]},{"classname":"func_physbox","offset":[-993.0,-197.0,987.0]},{"classname":"func_physbox","offset":[-383.0,-64.5,729.0]},{"classname":"func_physbox","offset":[-449.5,-392.5,835.0]}],"source":[-6961.0,-5632.0,11228.0],"values":{"brightness_candelas":"119","brightness_nits":"14723","brightness":"0.585938","brightness_legacy":"1.5","color":"100 255 250 255","colortemperature":"6600","brightness_lumens":"1500"}},{"parent":"i_builder_librarywall","offset":[1664.0,175.95,120.0],"bindings":[{"classname":"func_physbox","offset":[1664.0,175.95,120.0]},{"classname":"func_physbox","offset":[-339.0,190.0,-290.0]},{"classname":"func_physbox","offset":[-97.0,-21.0,-173.0]},{"classname":"func_physbox","offset":[-207.0,-960.5,-431.0]},{"classname":"func_physbox","offset":[446.5,-216.5,-325.0]}],"source":[-6065.0,-5456.0,10068.0],"values":{}},{"parent":"i_builder_librarywall","offset":[2048.0,223.95,512.0],"bindings":[{"classname":"func_physbox","offset":[2048.0,223.95,512.0]},{"classname":"func_physbox","offset":[-291.0,-194.0,102.0]},{"classname":"func_physbox","offset":[287.0,27.0,219.0]},{"classname":"func_physbox","offset":[-159.0,-1344.5,-39.0]},{"classname":"func_physbox","offset":[830.5,-168.5,67.0]}],"source":[-5681.0,-5408.0,10460.0],"values":{}}],"s_builder_ladder_light":[{"parent":"i_builder_ladder","offset":[160.0,0.0,224.0],"bindings":[{"classname":"func_physbox","offset":[160.0,0.0,224.0]},{"classname":"func_physbox","offset":[-79.09,2.72,185.58]}],"source":[-10385.0,-128.0,10172.0],"values":{"brightness_candelas":"13","brightness_nits":"1600","brightness":"-2.61719","brightness_legacy":"0.164062","color":"100 255 150 255","colortemperature":"6600","brightness_lumens":"163"}},{"parent":"i_builder_ladder","offset":[224.0,0.0,896.0],"bindings":[{"classname":"func_physbox","offset":[224.0,0.0,896.0]},{"classname":"func_physbox","offset":[-15.09,2.72,857.58]}],"source":[-10321.0,-128.0,10844.0],"values":{"brightness_candelas":"13","brightness_nits":"1600","brightness":"-2.61719","brightness_legacy":"0.164062","color":"100 255 150 255","colortemperature":"6600","brightness_lumens":"163"}},{"parent":"i_builder_ladder","offset":[160.0,0.0,512.0],"bindings":[{"classname":"func_physbox","offset":[160.0,0.0,512.0]},{"classname":"func_physbox","offset":[-79.09,2.72,473.58]}],"source":[-10385.0,-128.0,10460.0],"values":{"brightness_candelas":"13","brightness_nits":"1600","brightness":"-2.61719","brightness_legacy":"0.164062","color":"100 255 150 255","colortemperature":"6600","brightness_lumens":"163"}}],"s_builder_stairsmall_light":[{"parent":"i_builder_stairsmall","offset":[128.0,0.0,208.0],"bindings":[{"classname":"func_physbox","offset":[128.0,0.0,208.0]}],"source":[-12209.0,-896.0,10156.0],"values":{"color":"255 225 100 255"}}],"s_builder_pillarfallen_light":[{"parent":"","offset":[0,0,0],"bindings":[],"source":[-13452.0,544.0,10053.0],"values":{"brightness_candelas":"24","brightness_nits":"2945","brightness":"-1.73828","brightness_legacy":"0.300781","colormode":"1","color":"255 252 246","colortemperature":"6343","brightness_lumens":"300"}},{"parent":"","offset":[0,0,0],"bindings":[],"source":[-13288.0,544.0,10043.0],"values":{"brightness_candelas":"24","brightness_nits":"2945","brightness":"-1.73828","brightness_legacy":"0.300781","colormode":"1","color":"255 252 246","colortemperature":"6343","brightness_lumens":"300"}},{"parent":"","offset":[0,0,0],"bindings":[],"source":[-13297.0,736.0,10028.0],"values":{"brightness_candelas":"24","brightness_nits":"2945","brightness":"-1.73828","brightness_legacy":"0.300781","colormode":"1","color":"255 252 246","colortemperature":"6343","brightness_lumens":"300"}},{"parent":"","offset":[0,0,0],"bindings":[],"source":[-13452.0,736.0,10053.0],"values":{"brightness_candelas":"24","brightness_nits":"2945","brightness":"-1.73828","brightness_legacy":"0.300781","colormode":"1","color":"255 252 246","colortemperature":"6343","brightness_lumens":"300"}}],"s_builder_stairdown_light":[{"parent":"i_builder_stairdown","offset":[576.0,0.0,-176.0],"bindings":[{"classname":"func_physbox","offset":[576.0,0.0,-176.0]}],"source":[-11057.0,-896.0,10156.0],"values":{"color":"255 225 100 255"}},{"parent":"i_builder_stairdown","offset":[192.0,0.0,48.0],"bindings":[{"classname":"func_physbox","offset":[192.0,0.0,48.0]}],"source":[-11441.0,-896.0,10380.0],"values":{"color":"255 225 100 255"}}],"s_builder_straight_light":[{"parent":"i_builder_straight","offset":[128.0,0.0,128.0],"bindings":[{"classname":"func_physbox","offset":[128.0,0.0,128.0]}],"source":[-12209.0,-128.0,10076.0],"values":{"brightness_candelas":"41","brightness_nits":"5075","brightness":"-0.953125","brightness_legacy":"0.515625","color":"255 225 100 255","brightness_lumens":"517"}}],"s_builder_waterrooml_light":[{"parent":"i_builder_waterrooml","offset":[0.0,0.0,5105.0],"bindings":[{"classname":"func_physbox","offset":[0.0,0.0,5105.0]},{"classname":"func_button","offset":[3.5,-6.0,274.25]},{"classname":"func_water","offset":[3.5,-6.0,274.25]}],"source":[-9201.0,1024.0,10269.0],"values":{"brightness_candelas":"91","brightness_nits":"11249","brightness":"0.195312","brightness_legacy":"1.14453","color":"100 255 250 255","colortemperature":"6600","brightness_lumens":"1146"}},{"parent":"i_builder_waterrooml","offset":[0.0,576.0,5104.0],"bindings":[{"classname":"func_physbox","offset":[0.0,576.0,5104.0]},{"classname":"func_button","offset":[3.5,570.0,273.25]},{"classname":"func_water","offset":[3.5,570.0,273.25]}],"source":[-9201.0,1600.0,10268.0],"values":{"brightness_candelas":"40","brightness_nits":"4908","brightness":"-1","brightness_legacy":"0.5","color":"100 255 250 255","brightness_lumens":"500"}},{"parent":"i_builder_waterrooml","offset":[0.0,-576.0,5104.0],"bindings":[{"classname":"func_physbox","offset":[0.0,-576.0,5104.0]},{"classname":"func_button","offset":[3.5,-582.0,273.25]},{"classname":"func_water","offset":[3.5,-582.0,273.25]}],"source":[-9201.0,448.0,10268.0],"values":{"brightness_candelas":"40","brightness_nits":"4908","brightness":"-1","brightness_legacy":"0.5","color":"100 255 250 255","brightness_lumens":"500"}}],"s_builder_clocktower_light":[{"parent":"i_builder_clocktower","offset":[160.0,-336.0,2208.0],"bindings":[{"classname":"func_physbox","offset":[160.0,-336.0,2208.0]},{"classname":"func_physbox","offset":[31.0,-3.93,392.55]}],"source":[-7185.0,-464.0,12156.0],"values":{"color":"255 75 75 255","colortemperature":"2590"}},{"parent":"i_builder_clocktower","offset":[512.0,0.0,-2944.0],"bindings":[{"classname":"func_physbox","offset":[512.0,0.0,-2944.0]},{"classname":"func_physbox","offset":[383.0,332.07,-4759.45]}],"source":[-6833.0,-128.0,7004.0],"values":{"colormode":"1","color":"255 255 255","colortemperature":"6600"}},{"parent":"i_builder_clocktower","offset":[512.0,0.0,512.0],"bindings":[{"classname":"func_physbox","offset":[512.0,0.0,512.0]},{"classname":"func_physbox","offset":[383.0,332.07,-1303.45]}],"source":[-6833.0,-128.0,10460.0],"values":{"color":"100 255 250 255","colortemperature":"6600"}},{"parent":"i_builder_clocktower","offset":[512.0,0.0,1280.0],"bindings":[{"classname":"func_physbox","offset":[512.0,0.0,1280.0]},{"classname":"func_physbox","offset":[383.0,332.07,-535.45]}],"source":[-6833.0,-128.0,11228.0],"values":{"color":"100 255 250 255","colortemperature":"6600"}},{"parent":"i_builder_clocktower","offset":[512.0,0.0,2816.0],"bindings":[{"classname":"func_physbox","offset":[512.0,0.0,2816.0]},{"classname":"func_physbox","offset":[383.0,332.07,1000.55]}],"source":[-6833.0,-128.0,12764.0],"values":{"colormode":"1","color":"255 224 199","colortemperature":"4813"}},{"parent":"i_builder_clocktower","offset":[512.0,0.0,2048.0],"bindings":[{"classname":"func_physbox","offset":[512.0,0.0,2048.0]},{"classname":"func_physbox","offset":[383.0,332.07,232.55]}],"source":[-6833.0,-128.0,11996.0],"values":{"color":"100 255 250 255","colortemperature":"6600"}},{"parent":"i_builder_clocktower","offset":[512.0,0.0,2360.0],"bindings":[{"classname":"func_physbox","offset":[512.0,0.0,2360.0]},{"classname":"func_physbox","offset":[383.0,332.07,544.55]}],"source":[-6833.0,-128.0,12308.0],"values":{"colormode":"1","color":"255 255 255","colortemperature":"6600"}},{"parent":"i_builder_clocktower","offset":[160.0,-336.0,1120.0],"bindings":[{"classname":"func_physbox","offset":[160.0,-336.0,1120.0]},{"classname":"func_physbox","offset":[31.0,-3.93,-695.45]}],"source":[-7185.0,-464.0,11068.0],"values":{"color":"255 75 75 255","colortemperature":"2590"}},{"parent":"i_builder_clocktower","offset":[160.0,-336.0,32.0],"bindings":[{"classname":"func_physbox","offset":[160.0,-336.0,32.0]},{"classname":"func_physbox","offset":[31.0,-3.93,-1783.45]}],"source":[-7185.0,-464.0,9980.0],"values":{"color":"255 75 75 255","colortemperature":"2590"}}],"i_builder_fort_light":[{"parent":"i_builder_fort","offset":[2096.0,0.0,336.0],"bindings":[{"classname":"func_physbox","offset":[2096.0,0.0,336.0]},{"classname":"func_physbox","offset":[144.0,364.42,15.64]}],"source":[-4865.0,-1536.0,10284.0],"values":{"color":"255 230 130 255","colortemperature":"6600"}},{"parent":"i_builder_fort","offset":[224.0,0.0,128.0],"bindings":[{"classname":"func_physbox","offset":[224.0,0.0,128.0]},{"classname":"func_physbox","offset":[-1728.0,364.42,-192.36]}],"source":[-6737.0,-1536.0,10076.0],"values":{"color":"130 200 255 255","colortemperature":"6600"}},{"parent":"i_builder_fort","offset":[2080.0,304.0,336.0],"bindings":[{"classname":"func_physbox","offset":[2080.0,304.0,336.0]},{"classname":"func_physbox","offset":[128.0,668.42,15.64]}],"source":[-4881.0,-1232.0,10284.0],"values":{"color":"130 255 230 255","colortemperature":"6600"}},{"parent":"i_builder_fort","offset":[2080.0,-304.0,336.0],"bindings":[{"classname":"func_physbox","offset":[2080.0,-304.0,336.0]},{"classname":"func_physbox","offset":[128.0,60.42,15.64]}],"source":[-4881.0,-1840.0,10284.0],"values":{"color":"255 230 130 255","colortemperature":"6600","transmit_always":"1"}},{"parent":"i_builder_fort","offset":[2000.0,-368.0,766.0],"bindings":[{"classname":"func_physbox","offset":[2000.0,-368.0,766.0]},{"classname":"func_physbox","offset":[48.0,-3.58,445.64]}],"source":[-4961.0,-1904.0,10714.0],"values":{"color":"255 70 70 255","colortemperature":"6600"}},{"parent":"i_builder_fort","offset":[1376.0,160.0,320.0],"bindings":[{"classname":"func_physbox","offset":[1376.0,160.0,320.0]},{"classname":"func_physbox","offset":[-576.0,524.42,-0.36]}],"source":[-5585.0,-1376.0,10268.0],"values":{"colormode":"1","color":"255 255 255","colortemperature":"6600"}}],"i_builder_3waytower_light":[{"parent":"i_builder_3waytower","offset":[1152.0,0.0,128.0],"bindings":[{"classname":"func_physbox","offset":[1152.0,0.0,128.0]},{"classname":"func_physbox","offset":[-353.0,-2.0,-549.42]},{"classname":"func_physbox","offset":[64.0,295.95,-294.42]},{"classname":"func_physbox","offset":[68.0,-302.0,-294.42]}],"source":[-8881.0,-2432.0,10076.0],"values":{"color":"255 165 50 255"}},{"parent":"i_builder_3waytower","offset":[1152.0,0.0,1088.0],"bindings":[{"classname":"func_physbox","offset":[1152.0,0.0,1088.0]},{"classname":"func_physbox","offset":[-353.0,-2.0,410.58]},{"classname":"func_physbox","offset":[64.0,295.95,665.58]},{"classname":"func_physbox","offset":[68.0,-302.0,665.58]}],"source":[-8881.0,-2432.0,11036.0],"values":{"colormode":"1","color":"255 223 197"}},{"parent":"i_builder_3waytower","offset":[416.0,0.0,173.0],"bindings":[{"classname":"func_physbox","offset":[416.0,0.0,173.0]},{"classname":"func_physbox","offset":[-1089.0,-2.0,-504.42]},{"classname":"func_physbox","offset":[-672.0,295.95,-249.42]},{"classname":"func_physbox","offset":[-668.0,-302.0,-249.42]}],"source":[-9617.0,-2432.0,10121.0],"values":{"color":"100 255 250 255"}},{"parent":"i_builder_3waytower","offset":[1152.0,0.0,576.0],"bindings":[{"classname":"func_physbox","offset":[1152.0,0.0,576.0]},{"classname":"func_physbox","offset":[-353.0,-2.0,-101.42]},{"classname":"func_physbox","offset":[64.0,295.95,153.58]},{"classname":"func_physbox","offset":[68.0,-302.0,153.58]}],"source":[-8881.0,-2432.0,10524.0],"values":{"color":"100 255 250 255"}}],"s_builder_stair_light":[{"parent":"","offset":[0,0,0],"bindings":[],"source":[-11825.0,-512.0,10380.0],"values":{"color":"255 225 100 255"}},{"parent":"","offset":[0,0,0],"bindings":[],"source":[-12209.0,-512.0,10156.0],"values":{"color":"255 225 100 255"}}],"s_builder_roof_light":[{"parent":"i_builder_roof","offset":[448.0,0.0,102.0],"bindings":[{"classname":"func_physbox","offset":[448.0,0.0,102.0]},{"classname":"func_physbox","offset":[-321.0,0.5,489.5]},{"classname":"func_physbox","offset":[-1951.0,866.0,1255.0]},{"classname":"func_physbox","offset":[-322.0,1325.0,2539.5]},{"classname":"func_physbox","offset":[-322.0,2428.0,2539.5]},{"classname":"func_physbox","offset":[-3392.0,380.0,489.5]}],"source":[-4977.0,-3392.0,10818.0],"values":{"color":"100 255 250 255","colortemperature":"6600"}},{"parent":"i_builder_roof","offset":[4160.0,-384.0,306.0],"bindings":[{"classname":"func_physbox","offset":[4160.0,-384.0,306.0]},{"classname":"func_physbox","offset":[3391.0,-383.5,693.5]},{"classname":"func_physbox","offset":[1761.0,482.0,1459.0]},{"classname":"func_physbox","offset":[-706.0,-2387.0,2743.5]},{"classname":"func_physbox","offset":[-706.0,-1284.0,2743.5]},{"classname":"func_physbox","offset":[320.0,-4.0,693.5]}],"source":[-1265.0,-3776.0,11022.0],"values":{"color":"100 255 250 255","colortemperature":"6600"}}],"s_builder_lavaroom_light":[{"parent":"i_builder_lavaroom","offset":[416.0,0.0,-704.0],"bindings":[{"classname":"func_physbox","offset":[416.0,0.0,-704.0]}],"source":[-11953.0,-2432.0,9244.0],"values":{"color":"255 165 50 255","colortemperature":"6600"}},{"parent":"i_builder_lavaroom","offset":[1056.0,0.0,-704.0],"bindings":[{"classname":"func_physbox","offset":[1056.0,0.0,-704.0]}],"source":[-11313.0,-2432.0,9244.0],"values":{"color":"255 165 50 255","colortemperature":"6600"}},{"parent":"i_builder_lavaroom","offset":[416.0,0.0,512.0],"bindings":[{"classname":"func_physbox","offset":[416.0,0.0,512.0]}],"source":[-11953.0,-2432.0,10460.0],"values":{"color":"155 255 250 255"}},{"parent":"i_builder_lavaroom","offset":[1696.0,0.0,512.0],"bindings":[{"classname":"func_physbox","offset":[1696.0,0.0,512.0]}],"source":[-10673.0,-2432.0,10460.0],"values":{"color":"155 255 250 255"}},{"parent":"i_builder_lavaroom","offset":[1056.0,0.0,512.0],"bindings":[{"classname":"func_physbox","offset":[1056.0,0.0,512.0]}],"source":[-11313.0,-2432.0,10460.0],"values":{"color":"155 255 250 255"}},{"parent":"i_builder_lavaroom","offset":[1696.0,0.0,-704.0],"bindings":[{"classname":"func_physbox","offset":[1696.0,0.0,-704.0]}],"source":[-10673.0,-2432.0,9244.0],"values":{"color":"255 165 50 255","colortemperature":"6600"}}],"s_builder_room3r_light":[{"parent":"i_builder_room3r","offset":[288.0,0.0,61.0],"bindings":[{"classname":"func_physbox","offset":[288.0,0.0,61.0]}],"source":[-10161.0,384.0,10009.0],"values":{"brightness_candelas":"153","brightness_nits":"18846","brightness":"0.941406","brightness_legacy":"1.92188","color":"100 255 250 255","colortemperature":"15000","brightness_lumens":"1920"}}],"s_builder_wall_light":[{"parent":"","offset":[0,0,0],"bindings":[],"source":[-12721.0,-128.0,10076.0],"values":{"colormode":"1","color":"255 255 255","colortemperature":"6600"}}],"s_builder_widehallway_light":[{"parent":"i_builder_widehallway","offset":[421.0,0.0,61.0],"bindings":[{"classname":"func_physbox","offset":[421.0,0.0,61.0]}],"source":[-11948.0,-1536.0,10009.0],"values":{"brightness_candelas":"133","brightness_nits":"16451","brightness":"0.746094","brightness_legacy":"1.67578","color":"255 165 50 255","colortemperature":"3228","brightness_lumens":"1676"}}],"s_builder_tjunc_light":[{"parent":"i_builder_tjunc","offset":[160.0,0.0,128.0],"bindings":[{"classname":"func_physbox","offset":[160.0,0.0,128.0]}],"source":[-10929.0,-128.0,10076.0],"values":{"brightness_candelas":"41","brightness_nits":"5075","brightness":"-0.953125","brightness_legacy":"0.515625","color":"255 225 100 255","brightness_lumens":"517"}}],"s_builder_waterroomr_light":[{"parent":"i_builder_waterroomr","offset":[0.0,0.0,5026.0],"bindings":[{"classname":"func_physbox","offset":[0.0,0.0,5026.0]},{"classname":"func_button","offset":[10.0,-6.0,195.25]},{"classname":"func_water","offset":[10.0,-6.0,195.25]}],"source":[-8177.0,1024.0,10190.0],"values":{"brightness_candelas":"91","brightness_nits":"11249","brightness":"0.195312","brightness_legacy":"1.14453","color":"100 255 250 255","colortemperature":"6600","brightness_lumens":"1146"}},{"parent":"i_builder_waterroomr","offset":[0.0,576.0,5036.0],"bindings":[{"classname":"func_physbox","offset":[0.0,576.0,5036.0]},{"classname":"func_button","offset":[10.0,570.0,205.25]},{"classname":"func_water","offset":[10.0,570.0,205.25]}],"source":[-8177.0,1600.0,10200.0],"values":{"brightness_candelas":"40","brightness_nits":"4908","brightness":"-1","brightness_legacy":"0.5","color":"100 255 250 255","brightness_lumens":"500"}},{"parent":"i_builder_waterroomr","offset":[0.0,-576.0,5036.0],"bindings":[{"classname":"func_physbox","offset":[0.0,-576.0,5036.0]},{"classname":"func_button","offset":[10.0,-582.0,205.25]},{"classname":"func_water","offset":[10.0,-582.0,205.25]}],"source":[-8177.0,448.0,10200.0],"values":{"brightness_candelas":"40","brightness_nits":"4908","brightness":"-1","brightness_legacy":"0.5","color":"100 255 250 255","brightness_lumens":"500"}}],"s_builder_finalroom_light":[{"parent":"i_builder_finalroom","offset":[320.0,0.0,336.0],"bindings":[{"classname":"func_physbox","offset":[320.0,0.0,336.0]},{"classname":"func_physbox","offset":[387.0,2.0,737.0]},{"classname":"func_physbox","offset":[386.0,2.0,737.0]}],"source":[-7921.0,-544.0,10284.0],"values":{"color":"130 255 240 255","colortemperature":"6600"}},{"parent":"i_builder_finalroom","offset":[320.0,0.0,31.0],"bindings":[{"classname":"func_physbox","offset":[320.0,0.0,31.0]},{"classname":"func_physbox","offset":[387.0,2.0,432.0]},{"classname":"func_physbox","offset":[386.0,2.0,432.0]}],"source":[-7921.0,-544.0,9979.0],"values":{"color":"255 255 110 255","colortemperature":"3871"}}],"s_builder_outerforttower_light":[{"parent":"i_builder_outerforttower","offset":[896.0,0.0,144.0],"bindings":[{"classname":"func_physbox","offset":[896.0,0.0,144.0]}],"source":[-7473.0,-2560.0,10092.0],"values":{"brightness_candelas":"57","brightness_nits":"7057","brightness":"-0.476562","brightness_legacy":"0.71875","color":"100 255 250 255","colortemperature":"6600","brightness_lumens":"719"}}],"s_builder_room3l_light":[{"parent":"i_builder_room3l","offset":[288.0,0.0,61.0],"bindings":[{"classname":"func_physbox","offset":[288.0,0.0,61.0]}],"source":[-10801.0,384.0,10009.0],"values":{"brightness_candelas":"153","brightness_nits":"18846","brightness":"0.941406","brightness_legacy":"1.92188","color":"100 255 250 255","colortemperature":"15000","brightness_lumens":"1920"}}],"s_builder_right_light":[{"parent":"i_builder_right","offset":[160.0,0.0,128.0],"bindings":[{"classname":"func_physbox","offset":[160.0,0.0,128.0]}],"source":[-11441.0,-128.0,10076.0],"values":{"brightness_candelas":"41","brightness_nits":"5075","brightness":"-0.953125","brightness_legacy":"0.515625","color":"255 225 100 255","brightness_lumens":"517"}}],"s_builder_room3f_light":[{"parent":"i_builder_room3f","offset":[288.0,0.0,61.0],"bindings":[{"classname":"func_physbox","offset":[288.0,0.0,61.0]}],"source":[-11441.0,384.0,10009.0],"values":{"brightness_candelas":"131","brightness_nits":"16127","brightness":"0.714844","brightness_legacy":"1.64453","color":"100 255 250 255","colortemperature":"15000","brightness_lumens":"1643"}}],"s_builder_left_light":[{"parent":"i_builder_left","offset":[160.0,0.0,128.0],"bindings":[{"classname":"func_physbox","offset":[160.0,0.0,128.0]}],"source":[-11825.0,-128.0,10076.0],"values":{"brightness_candelas":"41","brightness_nits":"5075","brightness":"-0.953125","brightness_legacy":"0.515625","color":"255 225 100 255","brightness_lumens":"517"}}]};
+
+function ReplaceRoadLights(members, skipSources = false) {
+    const replaced = [];
+    for (const old of members) {
+        if (!EntityValid(old) || old.GetClassName() !== "light_omni2" || old.__drakelordRuntimeLight) continue;
+        const name = old.GetEntityName();
+        const base = Object.keys(ROAD_LIGHTS).find(key => name === key || name.startsWith(key + "_"));
+        if (!base) continue;
+        const parent = old.GetParent();
+        const parentValid = EntityValid(parent);
+        const position = old.GetAbsOrigin(), angles = old.GetAbsAngles();
+        const profiles = ROAD_LIGHTS[base].filter(profile => parentValid ? profile.parent && (parent.GetEntityName() === profile.parent || parent.GetEntityName().startsWith(profile.parent + "_")) : !profile.parent);
+        if (!profiles.length) continue;
+        if (!parentValid && skipSources && profiles.some(profile => Math.hypot(position.x-profile.source[0], position.y-profile.source[1], position.z-profile.source[2]) < 1)) continue;
+        const anchor = parentValid ? parent.GetAbsOrigin() : position;
+        const yaw = parentValid ? parent.GetAbsAngles().yaw * Math.PI / 180 : 0;
+        const dx = position.x - anchor.x, dy = position.y - anchor.y;
+        const local = { x: dx * Math.cos(yaw) + dy * Math.sin(yaw), y: -dx * Math.sin(yaw) + dy * Math.cos(yaw), z: position.z - anchor.z };
+        const distance = profile => parentValid ? Math.min(...profile.bindings.filter(binding => binding.classname === parent.GetClassName()).map(binding => Math.hypot(local.x - binding.offset[0], local.y - binding.offset[1], local.z - binding.offset[2]))) : 0;
+        profiles.sort((a, b) => distance(a) - distance(b));
+        const profile = profiles[0];
+        if (!profile || (parentValid && distance(profile) > 1)) continue;
+        let replacement;
+        try {
+            [replacement] = Entities.Spawn([{ ...ROAD_LIGHT_DEFAULTS, ...profile.values, classname: "light_omni2", targetname: name, origin: position, angles, precomputedfieldsvalid: 0 }]);
+            if (!EntityValid(replacement)) continue;
+            if (parentValid) replacement.FireInput({ input: "SetParent", value: "!activator", activator: parent, caller: parent });
+            replacement.Teleport({ position, angles });
+            replacement.__drakelordRuntimeLight = true;
+            old.Remove();
+            replaced.push(replacement);
+        } catch (error) {
+            if (EntityValid(replacement)) replacement.Remove();
+            Console.Log("[builder] Could not refresh room light " + name + ": " + error);
+        }
+    }
+    return replaced;
+}
+
+function RefreshExistingRoadLights() {
+    ReplaceRoadLights(Entities.FindByClass("light_omni2"), true);
+}
+
+
+function SpawnTemplateAt(template, pos, rot) {
+    if (!EntityValid(template)) return false;
+    template.Teleport({ position: pos, angles: QAng(rot) });
+    if (template.GetClassName() === "env_entity_maker") {
+        template.FireInput({ input: "ForceSpawn" });
+        return true;
+    }
+    if (template.GetClassName() !== "point_template") return false;
+    const created = template.ForceSpawn(pos, QAng(rot));
+    if (Array.isArray(created)) ReplaceRoadLights(created);
+    return Array.isArray(created) && created.length > 0;
+}
+
+function Build(template, pos, rot, mainpath = null) {
+    if (!roundActive) return;
+    if (routePlanning && !RouteTemplateFits(template, pos, rot)) { routePlanFailed = true; return; }
+    buildRequests.push({ template, pos: { ...pos }, rot: { ...rot }, mainpath: mainpath !== null ? mainpath : !main_done });
+    ProcessBuildQueue();
+}
+
+function ProcessBuildQueue() {
+    if (!roundActive || activeBuild || buildRequests.length === 0) return;
+    const request = buildRequests.shift();
+    activeBuild = { ...request, serial: ++buildSerial, spawned: false };
+    ProcessBuild(request.template, request.pos, request.rot, request.mainpath);
+}
+
+function FinishQueuedBuild() {
+    activeBuild = null;
+    waiting_for_build = false;
+    if (buildRequests.length > 0) ProcessBuildQueue();
+    else ScheduleBuildTick();
+}
+
+function PostSpawn() {
+    if (!waiting_for_build && !activeBuild) ScheduleBuildTick();
+}
+
+function FailBuild(name) {
+    StopRuntime();
+    Console.Log("[builder] Could not spawn required template: " + name);
+}
+
+const STAGE_TITLES = ["", "STAGE 1 - The outer castle", "STAGE 2 - Hold 'em hard", "STAGE 3 - The insane mine maze", "STAGE 4 - Traps everywhere", "STAGE 5 - The endurance"];
+let hudGeneration = new Map();
+
+function MapHud() {
+    return Entities.FindByName("drakelord_hud").find(EntityValid);
+}
+
+function ClearMapHud() {
+    hudGeneration.clear();
+    const hud = MapHud();
+    if (!hud) return;
+    for (const id of ["stage", "author"]) {
+        hud.SetHasClass(id, "Cleared", true);
+        hud.SetHasClass(id, "Visible", false);
+        hud.SetHasClass(id, "Fading", false);
+        hud.SetDialogVariableString(id, "message", "");
+    }
+}
+
+function ShowMapText(id, message, fadeIn, hold, fadeOut) {
+    if (!roundActive) return;
+    const hud = MapHud();
+    if (!hud) return;
+    const token = {};
+    hudGeneration.set(id, token);
+    hud.SetHasClass(id, "Cleared", true);
+    hud.SetHasClass(id, "Visible", false);
+    hud.SetHasClass(id, "Fading", false);
+    hud.SetDialogVariableString(id, "message", message);
+    RunAfter(0.02, () => {
+        if (hudGeneration.get(id) !== token || !EntityValid(hud)) return;
+        hud.SetHasClass(id, "Cleared", false);
+        hud.SetHasClass(id, "Visible", true);
+    });
+    RunAfter(fadeIn + hold + 0.02, () => {
+        if (hudGeneration.get(id) !== token || !EntityValid(hud)) return;
+        hud.SetHasClass(id, "Visible", false);
+        hud.SetHasClass(id, "Fading", true);
+    });
+    RunAfter(fadeIn + hold + fadeOut + 0.02, () => {
+        if (hudGeneration.get(id) !== token || !EntityValid(hud)) return;
+        hud.SetHasClass(id, "Cleared", true);
+        hud.SetDialogVariableString(id, "message", "");
+        hudGeneration.delete(id);
+    });
+}
+
+function ShowStageHud(stage) {
+    ShowMapText("stage", STAGE_TITLES[stage] || "", 1.5, 15, 0.5);
+}
+
+function ShowAuthorHud() {
+    ShowMapText("author", "Map by Luffaren", 1.5, 15, 0.5);
+}
+
+RegisterScriptInput("HudAuthor", ShowAuthorHud);
+for (let stage = 1; stage <= 5; stage++) RegisterScriptInput("HudStage" + stage, () => ShowStageHud(stage));
 
 const SLOTMACHINE_CHANCE = [20.00, 10.00, 2.00, 8.00]; //(buff / debuff / reward / death / rest=nothing)
 
@@ -74,8 +320,8 @@ function AddSlotmachinePosition(pos) {
 function TryBuildSlotmachineAt(n, pos, rot) {
     if (!IsSlotmachinePositionUsed(pos)) {
         AddSlotmachinePosition(pos);
-        const bsEnt = Instance.FindEntityByName("builder_script");
-        if (bsEnt) bsEnt.Teleport({ position: pos, angles: rot });
+        const bsEnt = Entities.FindByName("builder_script")[0];
+        if (bsEnt) bsEnt.Teleport({ position: pos, angles: QAng(rot) });
         Build(new B_SLOTMACHINE(), pos, rot);
         return true;
     }
@@ -740,7 +986,6 @@ let next_list = [];
 let buildlist = [];
 let Cpos = Vector(-12852, 0, -2340);
 let Crot = Vector(0, 0, 0);
-let flashlight_registered = false;
 let push = null;
 let han = null;
 let slotmachineBindings = new Map();
@@ -761,6 +1006,10 @@ function NormalizeRotation(rot) {
     let ry = rot.y % 360;
     if (ry < 0) ry += 360;
     return { x: rot.x, y: ry, z: rot.z };
+}
+
+function QAng(v) {
+    return { pitch: v.x, yaw: v.y, roll: v.z };
 }
 
 function SnapToGrid(val) {
@@ -918,7 +1167,21 @@ function BuildRandom(pos, rot) {
 
     let allowed = false;
     let attempts = 100;
-    let ctt = classlist[RandomInt(0, classlist.length - 1)];
+    if (classlist.length === 0) { FailBuild("empty class list"); return; }
+    const axes = GetVectorsFromRotation(rot);
+    let bestDistance = Infinity;
+    let aligned = [];
+    for (const candidate of classlist) {
+        if (candidate.exits.length === 0) continue;
+        const exit = candidate.exits[0].pos;
+        const x = pos.x + axes.fw.x * exit.x - axes.lf.x * exit.y;
+        const y = pos.y + axes.fw.y * exit.x - axes.lf.y * exit.y;
+        const distance = Math.abs(x - SnapToGrid(x)) + Math.abs(y - SnapToGrid(y));
+        if (distance < bestDistance - 0.001) { bestDistance = distance; aligned = []; }
+        if (Math.abs(distance - bestDistance) <= 0.001) aligned.push(candidate);
+    }
+    const choices = aligned.length ? aligned : classlist;
+    let ctt = choices[RandomInt(0, choices.length - 1)];
 
     while (!allowed) {
         attempts--;
@@ -926,6 +1189,10 @@ function BuildRandom(pos, rot) {
             if (turning < 0) { ctt = new B_RIGHT(); }
             else if (turning > 0) { ctt = new B_LEFT(); }
             else { ctt = new B_STRAIGHT(); }
+            if (routePlanning && !RouteTemplateFits(ctt, pos, rot)) {
+                ctt = [new B_STRAIGHT(), new B_LEFT(), new B_RIGHT()].find(candidate => RouteTemplateFits(candidate, pos, rot));
+                if (!ctt) { routePlanFailed = true; return; }
+            }
             allowed = true;
             break;
         }
@@ -989,13 +1256,17 @@ function BuildRandom(pos, rot) {
         if (Cpos.x < -13000 && turning === 1) ctt = new B_LEFT();
         if (Cpos.x > 13000 && turning === -1) ctt = new B_RIGHT();
         if (Cpos.y < -AMOUNT_EDGECAP && turning === 1) ctt = new B_LEFT();
+        if (allowed && !RouteTemplateFits(ctt, pos, rot)) {
+            allowed = false;
+            ctt = choices[RandomInt(0, choices.length - 1)];
+        }
         if (Cpos.y > AMOUNT_EDGECAP && turning === -1) ctt = new B_RIGHT();
     }
 
     Build(ctt, pos, rot);
 }
 
-function Build(template, _pos, _rot, _mainpath = null) {
+function ProcessBuild(template, _pos, _rot, _mainpath = null) {
     if (template.turn) turnedlast = true;
     else turnedlast = false;
 
@@ -1040,48 +1311,175 @@ function Build(template, _pos, _rot, _mainpath = null) {
         if (finale) AMOUNT_FINAL_HOLD -= tlen;
     }
 
-    const selfEntity = Instance.FindEntityByName("builder_script");
-    if (selfEntity) {
-        selfEntity.Teleport({
-            position: { x: _pos.x, y: _pos.y, z: _pos.z },
-            angles: { pitch: _rot.x, yaw: _rot.y, roll: _rot.z }
-        });
+    if (routePlanning) {
+        RecordPlannedRoad(template, snappedPos, normalizedRot, isMainPath);
+        activeBuild.spawned = true;
+        BuildBuffer();
+        return;
     }
-
-    const templateEnt = Instance.FindEntityByName(template.name);
-    if (templateEnt) {
-        templateEnt.Teleport({
-            position: { x: _pos.x, y: _pos.y, z: _pos.z },
-            angles: { pitch: _rot.x, yaw: _rot.y, roll: _rot.z }
-        });
-        Instance.EntFireAtName({ name: template.name, input: "ForceSpawn", delay: 0.05 });
-    }
-
+    const selfEntity = Entities.FindByName("builder_script")[0];
+    if (EntityValid(selfEntity)) selfEntity.Teleport({ position: snappedPos, angles: QAng(normalizedRot) });
+    const templateEnt = Entities.FindByName(template.name)[0];
+    if (!EntityValid(templateEnt)) { FailBuild(template.name); return; }
+    const request = activeBuild;
+    request.pos = { ...snappedPos };
+    request.rot = { ...normalizedRot };
     waiting_for_build = true;
-    Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "BuildBuffer", delay: 0.10 });
+    RunAfter(0.05, () => {
+        if (activeBuild !== request) return;
+        if (!SpawnTemplateAt(templateEnt, request.pos, request.rot)) { FailBuild(template.name); return; }
+        request.spawned = true;
+        RunAfter(0.05, BuildBuffer, "build_buffer");
+    }, "build_spawn");
 }
 
-function BuildFinalRoom(_pos, _rot) {
-    const template = new B_FINALROOM();
-    const snappedPos = Vector(SnapToGrid(_pos.x), SnapToGrid(_pos.y), SnapToGrid(_pos.z));
-    const normalizedRot = NormalizeRotation(_rot);
-    
-    const templateEnt = Instance.FindEntityByName(template.name);
-    if (templateEnt) {
-        templateEnt.Teleport({
-            position: snappedPos,
-            angles: { pitch: normalizedRot.x, yaw: normalizedRot.y, roll: normalizedRot.z }
-        });
-        Instance.EntFireAtName({ name: template.name, input: "ForceSpawn", delay: 0.05 });
-    }
-
-    used_deco_positions.push({ pos: snappedPos, rot: normalizedRot });
-
+function BuildFinalRoom(pos, rot) {
+    Build(new B_FINALROOM(), pos, rot, true);
+    finale = false;
     main_done = true;
-    waiting_for_build = false;
-    
+}
+
+const ROUTE_BOUNDS = {"s_builder_straight":[[0,-160,-10240],[256,160,288]],"s_builder_left":[[0,-160,-10240],[320,160,288]],"s_builder_right":[[0,-160,-10240],[320,160,288]],"s_builder_tjunc":[[0,-160,-10240],[320,160,288]],"s_builder_stair":[[0,-160,-10240],[704,160,672]],"s_builder_stairdown":[[0,-160,-10624],[704,160,288]],"s_builder_stairsmall":[[0,-160,-10240],[320,160,416]],"s_builder_room3f":[[0,-288,-10240],[576,288,296]],"s_builder_room3l":[[0,-288,-10240],[576,288,296]],"s_builder_room3r":[[0,-288,-10240],[576,288,296]],"s_builder_3waytower":[[0,-384,-10240],[1536,384,2560.1100000000006]],"s_builder_widehallway":[[0,-288,-10240],[832,288,296]],"s_builder_lavaroom":[[0,-480,-11008],[2112,448,1408.1000000000004]],"s_builder_ladder":[[-28,-160,-10240],[512,160,1056]],"s_builder_bridgelong":[[0,-160,-10240],[2176,160,16]],"s_builder_bridge":[[0,-128,-10240],[1152,128,16]],"s_builder_bridgesmall":[[0,-128,-10240],[640,128,16]],"s_builder_bridgeup":[[0,-128,-10240],[1152,128,523.6399999999994]],"s_builder_bridgeupsmall":[[0,-128,-10240],[640,128,352]],"s_builder_outerplatform":[[1,-383,-10240],[1023,383,1]],"s_builder_outerplatformsmall":[[1,-255,-10240],[1023,255,1]],"s_builder_waterroomr":[[-64,-1824,-10368],[768,288,1056.0499999999993]],"s_builder_waterrooml":[[-64,-288,-10368],[704,1824,1408]],"s_builder_finalroom":[[-5,-288,-10240],[712,288,768]],"s_builder_clocktower":[[0,-768,-10240],[1024,768,5120]],"s_builder_fort":[[0,-576,-10240],[2560,576,1664]],"s_builder_outerfort":[[0,-640,-9984],[2176,576,2560.0300000000007]],"s_builder_roof":[[0,-1216,-11008],[4609,704,3328]],"s_builder_outerforttower":[[-13.25,-576,-10240],[1805.25,576,1280]],"s_builder_librarywall":[[-128,-896,-10240],[3584,896.1000000000004,3072]],"s_builder_wall":[[-4,-164,-36],[36,164,292]]};
+let routePlanning = false;
+let routeCommitting = false;
+let routePlanFailed = false;
+let routePlanAttempt = 0;
+let routePlan = [];
+let routeOccupied = [];
+let routePlanInitial = null;
+
+function RouteBounds(template, pos, rot) {
+    const local = ROUTE_BOUNDS[template.name];
+    if (!local) return null;
+    const a = rot.y * Math.PI / 180, c = Math.cos(a), s = Math.sin(a);
+    const lo = [Infinity, Infinity, pos.z + local[0][2]];
+    const hi = [-Infinity, -Infinity, pos.z + local[1][2]];
+    for (const x of [local[0][0], local[1][0]]) for (const y of [local[0][1], local[1][1]]) {
+        const xx = pos.x + c * x - s * y, yy = pos.y + s * x + c * y;
+        lo[0] = Math.min(lo[0], xx); lo[1] = Math.min(lo[1], yy);
+        hi[0] = Math.max(hi[0], xx); hi[1] = Math.max(hi[1], yy);
+    }
+    return [lo, hi];
+}
+
+function RouteTemplateFits(template, position, rotation) {
+    if (!routePlanning) return true;
+    const pos = Vector(SnapToGrid(position.x), SnapToGrid(position.y), SnapToGrid(position.z));
+    const rot = NormalizeRotation(rotation), box = RouteBounds(template, pos, rot);
+    if (!box) return false;
+    for (const placed of routeOccupied) {
+        if (placed.exits.some(exit => PositionsMatch(exit.pos, pos) && RotationsMatch(exit.rot, rot))) continue;
+        let overlaps = true;
+        for (let axis = 0; axis < 3; axis++) {
+            if (Math.min(box[1][axis], placed.box[1][axis]) - Math.max(box[0][axis], placed.box[0][axis]) <= 2) {
+                overlaps = false;
+                break;
+            }
+        }
+        if (overlaps) return false;
+    }
+    return true;
+}
+
+function RecordPlannedRoad(template, pos, rot, mainpath) {
+    const axes = GetVectorsFromRotation(rot);
+    routeOccupied.push({ name: template.name, mainpath, pos: { ...pos }, rot: { ...rot }, box: RouteBounds(template, pos, rot), exits: template.exits.map(exit => ({
+        pos: Vector(SnapToGrid(pos.x + axes.fw.x * exit.pos.x - axes.lf.x * exit.pos.y), SnapToGrid(pos.y + axes.fw.y * exit.pos.x - axes.lf.y * exit.pos.y), SnapToGrid(pos.z + exit.pos.z)),
+        rot: NormalizeRotation(Vector(0, rot.y + exit.rot.y, 0))
+    })) });
+    routePlan.push({ template, pos: { ...pos }, rot: { ...rot }, mainpath });
+}
+
+function BeginRoutePlanAttempt() {
+    routePlanAttempt++;
+    routePlanFailed = false;
+    routePlan = [];
+    routeOccupied = [];
+    buildRequests = [];
+    activeBuild = null;
     next_list = [];
-    needs_deco_after_final = true;
+    buildlist = [];
+    buffer = null;
+    waiting_for_build = false;
+    tick_lock = false;
+    building = true;
+    main_done = false;
+    sub_done = false;
+    finale = false;
+    finale_count = 0;
+    turnedlast = false;
+    turning = 0;
+    hit_t_randomize = false;
+    stop_subpath = false;
+    firstsub = true;
+    voidspace = 99999999;
+    voidspace_biggestwidth = 0;
+    Cpos = { ...routePlanInitial.pos };
+    Crot = { ...routePlanInitial.rot };
+    AMOUNT_FINAL_HOLD = routePlanInitial.finalHold;
+    build_count = AMOUNT_MAIN_CAP;
+    amount_sub_current = AMOUNT_SUB_CAP;
+    holdamount = AMOUNT_HOLD;
+    Build(new B_STRAIGHT(), Cpos, Crot);
+    build_count = AMOUNT_MAIN_CAP;
+}
+
+function StartRoutePlanning() {
+    routePlanning = true;
+    routeCommitting = false;
+    routePlanAttempt = 0;
+    routePlanInitial = { pos: { ...Cpos }, rot: { ...Crot }, finalHold: AMOUNT_FINAL_HOLD };
+    BeginRoutePlanAttempt();
+    RunAfter(0.01, PumpRoutePlan, "route_plan");
+}
+
+function RoutePlanConnected() {
+    const unsealed = new Set(["s_builder_outerplatformsmall", "s_builder_outerplatform", "s_builder_bridgesmall", "s_builder_bridge", "s_builder_bridgelong"]);
+    const next = routeOccupied.map(() => []);
+    for (let i = 0; i < routeOccupied.length; i++) {
+        const road = routeOccupied[i];
+        for (const exit of road.exits) {
+            const target = routeOccupied.findIndex((other, j) => j !== i && PositionsMatch(exit.pos, other.pos) && RotationsMatch(exit.rot, other.rot));
+            if (target >= 0) next[i].push(target);
+            else if (!unsealed.has(road.name)) return false;
+        }
+    }
+    const seen = new Set([0]), queue = [0];
+    for (let i = 0; i < queue.length; i++) for (const j of next[queue[i]]) if (!seen.has(j)) { seen.add(j); queue.push(j); }
+    return seen.size === routeOccupied.length && routeOccupied.some((road, i) => road.name === "s_builder_finalroom" && seen.has(i));
+}
+
+function PumpRoutePlan() {
+    if (!roundActive || !routePlanning) return;
+    for (let step = 0; step < 64; step++) {
+        if (routePlanFailed || (!next_list.length && !main_done && !activeBuild)) {
+            if (routePlanAttempt >= 256) { FailBuild("collision-free route plan"); return; }
+            BeginRoutePlanAttempt();
+        }
+        if (main_done && !next_list.length && !activeBuild) {
+            if (!RoutePlanConnected()) { routePlanFailed = true; continue; }
+            routePlanning = false;
+            routeCommitting = true;
+            CommitPlannedRoad(0);
+            return;
+        }
+        Tick();
+    }
+    RunAfter(0.01, PumpRoutePlan, "route_plan");
+}
+
+function CommitPlannedRoad(index) {
+    if (!roundActive || !routeCommitting) return;
+    if (index >= routePlan.length) {
+        routeCommitting = false;
+        routePlan = [];
+        routeOccupied = [];
+        ScheduleBuildTick();
+        return;
+    }
+    const road = routePlan[index], template = Entities.FindByName(road.template.name)[0];
+    if (!EntityValid(template) || !SpawnTemplateAt(template, road.pos, road.rot)) { FailBuild(road.template.name); return; }
+    RunAfter(0.05, () => CommitPlannedRoad(index + 1), "route_commit");
 }
 
 let decorationTemplateCache = new Map();
@@ -1089,8 +1487,8 @@ let decorationTemplateCache = new Map();
 function GetBladeTrapPosition(n) {
     const bladetrapExits = {
         "s_builder_straight": { exits: [{ x: 0, y: 0, z: 0, rotOffset: 0 }] },
-        "s_builder_left": { exits: [{ x: 0, y: 0, z: 0, rotOffset: 90 }] },
-        "s_builder_right": { exits: [{ x: 0, y: 0, z: 0, rotOffset: 270 }] },
+        "s_builder_left": { exits: [{ x: 160, y: 160, z: 0, rotOffset: 90 }] },
+        "s_builder_right": { exits: [{ x: 160, y: -160, z: 0, rotOffset: 270 }] },
         "s_builder_tjunc": { exits: [{ x: 0, y: 0, z: 0, rotOffset: 0 }] }
     };
 
@@ -1108,7 +1506,8 @@ function GetBladeTrapPosition(n) {
         const bladetrapRotY = (n.rot.y + exit.rotOffset + 360) % 360;
         const normalizedRot = Vector(0, bladetrapRotY, 0);
 
-        if (!IsDecoPositionOccupied(snappedPos, normalizedRot)) {
+        const bladeReserved = used_deco_positions.some(deco => deco.pending !== undefined && PositionsMatch(deco.pos, snappedPos));
+        if (!bladeReserved && !IsDecoPositionOccupied(snappedPos, normalizedRot)) {
             const reservationId = snappedPos.x + "," + snappedPos.y + "," + snappedPos.z + "," + bladetrapRotY;
             used_deco_positions.push({ pos: snappedPos, rot: normalizedRot, pending: reservationId });
             return { pos: snappedPos, rot: normalizedRot, found: true, preReserved: true, reservationId: reservationId };
@@ -1132,136 +1531,137 @@ function GenerateDecorationsForNode(n) {
             if (Rand(SPAWNRATIO_spiketrap)) {
             if (Rand(SPAWNRATIO_spiketrapinsanity)) {
                 let ssr = Vector(0, n.rot.y, 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
+                const bsEnt = Entities.FindByName("builder_script")[0];
 
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 128));
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAP(), ssp, ssr);
 
                 ssp = VectorAdd(n.pos, VectorMul(n.fw, 48));
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAPx(), ssp, ssr);
 
                 ssp = VectorAdd(n.pos, VectorMul(n.fw, 208));
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAPxx(), ssp, ssr);
             } else {
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 128));
                 let ssr = Vector(0, n.rot.y, 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAP(), ssp, ssr);
             }
         } else if (Rand(SPAWNRATIO_bladetrap)) {
             const bladePos = GetBladeTrapPosition(n);
             if (bladePos.found) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: bladePos.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: QAng(bladePos.rot) });
                 Build(new B_BLADETRAP(), bladePos.pos, bladePos.rot);
             }
         } else if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         }
         const canSpawnRooftower = n.mainpath && !LARGE_PLATFORMS.includes(n.type);
         if (Rand(SPAWNRATIO_rooftower) && canSpawnRooftower) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, 128)), VectorMul(n.up, 288));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_ROOFTOWER(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_framenotex)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
         }
         if (Rand(SPAWNRATIO_vinewall)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
         }
         const rrr = RandomInt(0, 100);
         let vinePos = VectorAdd(n.pos, VectorMul(n.fw, 128));
         let vineRot = Vector(0, RandomInt(0, 360), 0);
-        const bsEnt2 = Instance.FindEntityByName("builder_script");
-        if (bsEnt2) bsEnt2.Teleport({ position: vinePos, angles: vineRot });
+        const bsEnt2 = Entities.FindByName("builder_script")[0];
+        if (bsEnt2) bsEnt2.Teleport({ position: vinePos, angles: QAng(vineRot) });
         if (rrr >= 0 && rrr < 10) BuildDecoration(new B_VINE1(), vinePos, vineRot);
         else if (rrr >= 10 && rrr < 20) BuildDecoration(new B_VINE2(), vinePos, vineRot);
         else if (rrr >= 20 && rrr < 30) BuildDecoration(new B_VINE3(), vinePos, vineRot);
     } else if (n.type === "s_builder_room3f") {
+            // No vine decorations in room3f (large building)
         if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_crushceiling)) {
             let ssp = VectorAdd(n.pos, VectorMul(n.fw, 288));
             let ssr = Vector(0, 0, 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_CRUSHCEILING(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_pizza)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_PIZZA(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_framenotex)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
         }
         if (Rand(SPAWNRATIO_vinewall)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
         }
         if (Rand(SPAWNRATIO_slotmachine)) {
@@ -1288,69 +1688,70 @@ function GenerateDecorationsForNode(n) {
             }
         }
     } else if (n.type === "s_builder_room3r" || n.type === "s_builder_room3l") {
+            // No vine decorations in room3r/room3l (large buildings)
         if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_crushceiling)) {
             let ssp = VectorAdd(n.pos, VectorMul(n.fw, 288));
             let ssr = Vector(0, 0, 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_CRUSHCEILING(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_pizza)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_PIZZA(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_framenotex)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
         }
         if (Rand(SPAWNRATIO_vinewall)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
         }
         if (Rand(SPAWNRATIO_slotmachine)) {
             let ssp = VectorAdd(n.pos, VectorMul(n.fw, 536));
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(n.rot) });
             Build(new B_SLOTMACHINE(), ssp, n.rot);
         }
     } else if (n.type === "s_builder_widehallway") {
         if (Rand(SPAWNRATIO_ironmaiden)) {
             let ssp = VectorAdd(n.pos, VectorMul(n.fw, 416));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_IRONMAIDEN(), ssp, ssr);
             if (Rand(SPAWNRATIO_ironmaiden_pizza)) {
                 Build(new B_PIZZA(), ssp, ssr);
@@ -1359,52 +1760,52 @@ function GenerateDecorationsForNode(n) {
         if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_pizza)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_PIZZA(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_framenotex)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
         }
         if (Rand(SPAWNRATIO_vinewall)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
         }
         const rrr = RandomInt(0, 100);
         const vineDeco = GetDecoPosition(n, 128, 704, 0, 0, 0);
-        const bsEnt3 = Instance.FindEntityByName("builder_script");
-        if (bsEnt3) bsEnt3.Teleport({ position: vineDeco.pos, angles: vineDeco.rot });
+        const bsEnt3 = Entities.FindByName("builder_script")[0];
+        if (bsEnt3) bsEnt3.Teleport({ position: vineDeco.pos, angles: QAng(vineDeco.rot) });
         if (rrr >= 0 && rrr < 10) BuildDecoration(new B_VINE1(), vineDeco.pos, vineDeco.rot);
         else if (rrr >= 10 && rrr < 20) BuildDecoration(new B_VINE2(), vineDeco.pos, vineDeco.rot);
         else if (rrr >= 20 && rrr < 30) BuildDecoration(new B_VINE3(), vineDeco.pos, vineDeco.rot);
@@ -1434,40 +1835,40 @@ function GenerateDecorationsForNode(n) {
         if (Rand(SPAWNRATIO_bladetrap)) {
             const bladePos = GetBladeTrapPosition(n);
             if (bladePos.found) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: bladePos.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: QAng(bladePos.rot) });
                 Build(new B_BLADETRAP(), bladePos.pos, bladePos.rot);
             }
         } else if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
         const rrr = RandomInt(0, 100);
         let vinePos = VectorAdd(n.pos, VectorMul(n.fw, 128));
         let vineRot = Vector(0, RandomInt(0, 360), 0);
-        const bsEnt4 = Instance.FindEntityByName("builder_script");
-        if (bsEnt4) bsEnt4.Teleport({ position: vinePos, angles: vineRot });
+        const bsEnt4 = Entities.FindByName("builder_script")[0];
+        if (bsEnt4) bsEnt4.Teleport({ position: vinePos, angles: QAng(vineRot) });
         if (rrr >= 0 && rrr < 10) BuildDecoration(new B_VINE1(), vinePos, vineRot);
         else if (rrr >= 10 && rrr < 20) BuildDecoration(new B_VINE2(), vinePos, vineRot);
         else if (rrr >= 20 && rrr < 30) BuildDecoration(new B_VINE3(), vinePos, vineRot);
@@ -1475,91 +1876,91 @@ function GenerateDecorationsForNode(n) {
         if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
     } else if (n.type === "s_builder_outerplatformsmall") {
         if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
     } else if (n.type === "s_builder_left" || n.type === "s_builder_right") {
         if (Rand(SPAWNRATIO_bladetrap)) {
             const bladePos = GetBladeTrapPosition(n);
             if (bladePos.found) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: bladePos.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: QAng(bladePos.rot) });
                 Build(new B_BLADETRAP(), bladePos.pos, bladePos.rot);
             }
         } else if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         } else if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
     }
@@ -1575,47 +1976,47 @@ function GenerateDecorationsForNode(n) {
         if (Rand(SPAWNRATIO_box64)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(512, 1024))), VectorMul(n.lf, RandomInt(-128, 128)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_BOX64(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_pillarfallen)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(512, 1024))), VectorMul(n.lf, RandomInt(-128, 128)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_mine)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(512, 1024))), VectorMul(n.lf, RandomInt(-128, 128)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             Build(new B_MINE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_rubble)) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(512, 1024))), VectorMul(n.lf, RandomInt(-128, 128)));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_RUBBLE(), ssp, ssr);
         }
         if (Rand(SPAWNRATIO_framenotex)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
         }
         if (Rand(SPAWNRATIO_vinewall)) {
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
             BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
         }
         const canSpawnRooftower2 = n.mainpath && !LARGE_PLATFORMS.includes(n.type);
         if (Rand(SPAWNRATIO_rooftower) && canSpawnRooftower2) {
             let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.up, 640)), VectorMul(n.fw, 256));
             let ssr = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt = Instance.FindEntityByName("builder_script");
-            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+            const bsEnt = Entities.FindByName("builder_script")[0];
+            if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
             BuildDecoration(new B_ROOFTOWER(), ssp, ssr);
         }
     }
@@ -1660,35 +2061,21 @@ function BuildDecoration(template, _pos, _rot, skipSnap = false, preReserved = f
         }
     }
 
-    const templateEnt = Instance.FindEntityByName(template.name);
-    if (templateEnt) {
-        templateEnt.Teleport({
-            position: snappedPos,
-            angles: { pitch: normalizedRot.x, yaw: normalizedRot.y, roll: normalizedRot.z }
-        });
-        Instance.EntFireAtName({ name: template.name, input: "ForceSpawn", delay: 0.05 });
-    }
+    const templateEnt = Entities.FindByName(template.name)[0];
+    if (!EntityValid(templateEnt)) return false;
+    RunAfter(0.05, () => SpawnTemplateAt(templateEnt, snappedPos, normalizedRot));
     return true;
 }
 
 function BuildBuffer() {
-    const selfEntity = Instance.FindEntityByName("builder_script");
+    if (!roundActive || !activeBuild || !activeBuild.spawned) return;
+    const selfEntity = Entities.FindByName("builder_script")[0];
     if (!selfEntity || !buffer || classlist.length === 0) {
-        waiting_for_build = false;
+        FailBuild(activeBuild.template.name);
         return;
     }
 
-    let fw, lf, up;
-    if (selfEntity.GetForwardVector) {
-        fw = selfEntity.GetForwardVector();
-        lf = selfEntity.GetLeftVector();
-        up = selfEntity.GetUpVector();
-    } else {
-        const result = GetVectorsFromRotation(Crot);
-        fw = result.fw;
-        lf = result.lf;
-        up = result.up;
-    }
+    const { fw, lf, up } = GetVectorsFromRotation(Crot);
 
     let blen = 0;
     if (buffer.exits.length > 0) {
@@ -1738,46 +2125,36 @@ function BuildBuffer() {
         }
     }
 
-    waiting_for_build = false;
-    Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "Tick", delay: 0.10 });
+    FinishQueuedBuild();
+}
+
+function SetRainEnabled(enabled) {
+    if (enabled) {
+        Entities.FireInput({ name: "rain_volume", input: "Enable", delay: 0.00 });
+        Entities.FireInput({ name: "rain", input: "Start", delay: 0.00 });
+        Entities.FireInput({ name: "music_rain", input: "StartSound", delay: 0.00 });
+    } else {
+        Entities.FireInput({ name: "rain", input: "Stop", delay: 0.00 });
+        Entities.FireInput({ name: "music_rain", input: "StopSound", delay: 0.00 });
+        Entities.FireInput({ name: "rain_volume", input: "Disable", delay: 0.00 });
+    }
 }
 
 function Start() {
-    if (!Rand(SPAWNRATIO_rain)) {
-        Instance.EntFireAtName({ name: "music_rain", input: "StopSound", delay: 0.00 });
-        Instance.EntFireAtName({ name: "rain", input: "Kill", delay: 0.00 });
-    }
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "20.0", delay: 0.00 });
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "17.0", delay: 20.00 });
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "14.0", delay: 20.50 });
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "12.0", delay: 21.00 });
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "9.0", delay: 21.50 });
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "6.0", delay: 22.00 });
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "4.0", delay: 22.50 });
-    Instance.EntFireAtName({ name: "tonemap", input: "setbloomscale", value: "2.5", delay: 23.00 });
+    if (!roundActive || startedEpoch === runtimeEpoch) return;
+    startedEpoch = runtimeEpoch;
+    SetRainEnabled(Rand(SPAWNRATIO_rain));
 }
 
-function TickFlashlight() {
-    const players = Instance.FindEntitiesByClass("player");
-    for (const p of players) {
-        if (p.IsValid() && p.GetClassName() === "player" && p.GetHealth() > 0) {
-            Instance.EntFireAtTarget({ target: p, input: "KeyValue", value: "effects 0" });
-        }
-    }
 
-    if (!flashlight_registered) {
-        Instance.SetNextThink(Instance.GetGameTime() + 2);
-        Instance.SetThink(TickFlashlight);
-        flashlight_registered = true;
-    }
-}
 
 function CheckStage() {
-    let stg = Instance.FindEntityByName("stage_1");
-    if (!stg) stg = Instance.FindEntityByName("stage_2");
-    if (!stg) stg = Instance.FindEntityByName("stage_3");
-    if (!stg) stg = Instance.FindEntityByName("stage_4");
-    if (!stg) stg = Instance.FindEntityByName("stage_5");
+    if (stageConfigured && EntityValid(stage_handle)) return;
+    let stg = Entities.FindByName("stage_1")[0];
+    if (!stg) stg = Entities.FindByName("stage_2")[0];
+    if (!stg) stg = Entities.FindByName("stage_3")[0];
+    if (!stg) stg = Entities.FindByName("stage_4")[0];
+    if (!stg) stg = Entities.FindByName("stage_5")[0];
 
     stage_handle = stg;
 
@@ -1790,18 +2167,63 @@ function CheckStage() {
         else if (stageName === "stage_5") stage_index = 5;
     }
 
+    stageConfigured = true;
     SetStage(stage_index);
 }
 
+function BuildCornerDecorations(n) {
+    const place = (template, forward, left, up, rotation) => {
+        const position = VectorAdd(VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, forward)), VectorMul(n.lf, left)), VectorMul(n.up, up));
+        Build(template, position, rotation);
+    };
+    const randomRotation = () => Vector(0, RandomInt(0, 360), 0);
+
+    if (Rand(SPAWNRATIO_bladetrap)) {
+        const bladePos = GetBladeTrapPosition(n);
+        if (bladePos.found) {
+            Build(new B_BLADETRAP(), bladePos.pos, bladePos.rot);
+        }
+    } else if (Rand(SPAWNRATIO_box64)) {
+        place(new B_BOX64(), RandomInt(64, 128), RandomInt(-96, 96), 0, randomRotation());
+    } else if (Rand(SPAWNRATIO_pillarfallen)) {
+        place(new B_PILLARFALLEN(), RandomInt(64, 128), RandomInt(-96, 96), 0, randomRotation());
+    }
+    if (Rand(SPAWNRATIO_rooftower) && n.mainpath) {
+        place(new B_ROOFTOWER(), 128, 0, 288, randomRotation());
+    }
+    if (Rand(SPAWNRATIO_mine)) {
+        place(new B_MINE(), RandomInt(64, 128), RandomInt(-96, 96), 200, randomRotation());
+    }
+    if (Rand(SPAWNRATIO_rubble)) {
+        place(new B_RUBBLE(), RandomInt(64, 128), RandomInt(-96, 96), 0, randomRotation());
+    }
+    if (Rand(SPAWNRATIO_framenotex)) {
+        place(new B_FRAMENOTEX(), 0, 0, 0, n.rot);
+    }
+    if (Rand(SPAWNRATIO_vinewall)) {
+        place(new B_VINEWALL(), 0, 0, 0, n.rot);
+    }
+    const vineRoll = RandomInt(0, 100);
+    if (vineRoll >= 0 && vineRoll < 10) {
+        place(new B_VINE1(), 128, 0, 0, randomRotation());
+    } else if (vineRoll >= 10 && vineRoll < 20) {
+        place(new B_VINE2(), 128, 0, 0, randomRotation());
+    } else if (vineRoll >= 20 && vineRoll < 30) {
+        place(new B_VINE3(), 128, 0, 0, randomRotation());
+    }
+}
+
+
 function Tick() {
+    if (!roundActive || routeCommitting || (routePlanning && routePlanFailed)) return;
     last_deco_frame++;
 
     if (!building) {
         if (needs_deco_after_final) {
             needs_deco_after_final = false;
         }
-        if (buildlist.length === 0) {
-            Instance.EntFireAtName({ name: "spawndoor", input: "Open", delay: 3.00 });
+        if (buildlist.length === 0 && buildRequests.length === 0 && !activeBuild) {
+            Entities.FireInput({ name: "spawndoor", input: "Open", delay: 3.00 });
         }
 
         return;
@@ -1813,7 +2235,7 @@ function Tick() {
     tick_lock = true;
 
     if (waiting_for_build && !needs_deco_after_final) {
-        Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "Tick", delay: 0.10 });
+        ScheduleBuildTick();
         tick_lock = false;
         return;
     }
@@ -1849,7 +2271,6 @@ function Tick() {
             if (AMOUNT_FINAL_HOLD <= 0) {
                 finale_count++;
                 Build(new B_FINALROOM(), n.pos, n.rot);
-                next_list = [];
                 finale = false;
                 main_done = true;
             } else {
@@ -1868,7 +2289,7 @@ function Tick() {
             const maxDist = 16;
             for (const b of buildlist) {
                 const dist = GetDistanceXY(n.pos, b.pos);
-                if (dist < maxDist && RotationsMatch(n.rot, b.rot)) {
+                if (dist < maxDist && Math.abs(n.pos.z - b.pos.z) < ALIGN_TOLERANCE && RotationsMatch(n.rot, b.rot)) {
                     skipThis = true;
                     break;
                 }
@@ -1878,7 +2299,7 @@ function Tick() {
         if (!skipThis) {
             for (const deco of used_deco_positions) {
                 const dist = GetDistanceXY(n.pos, deco.pos);
-                if (dist < 128) {
+                if (dist < 128 && Math.abs(n.pos.z - deco.pos.z) < ALIGN_TOLERANCE) {
                     skipThis = true;
                     break;
                 }
@@ -1913,7 +2334,7 @@ function Tick() {
             } else {
                 BuildRandom(n.pos, n.rot);
             }
-        } else {
+        } else if (!skipThis) {
             BuildRandom(n.pos, n.rot);
         }
     } else if (buildlist.length > 0) {
@@ -1924,7 +2345,7 @@ function Tick() {
         }
 
         if (waiting_for_build) {
-            Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "Tick", delay: 0.10 });
+            ScheduleBuildTick();
             tick_lock = false;
             return;
         }
@@ -1935,7 +2356,7 @@ function Tick() {
         if (!skipfirstframe) {
             skipfirstframe = true;
             holdamount = AMOUNT_HOLD * 2;
-            Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "Tick", delay: 0.10 });
+            ScheduleBuildTick();
             tick_lock = false;
             return;
         }
@@ -1946,11 +2367,11 @@ function Tick() {
             const snappedPos = Vector(SnapToGrid(n.pos.x), SnapToGrid(n.pos.y), SnapToGrid(n.pos.z));
             const normalizedRot = NormalizeRotation(n.rot);
             hold_positions.push({ pos: snappedPos, rot: normalizedRot });
-            if (buildlist.length === 0) {
+            if (buildlist.length === 0 && buildRequests.length === 0 && !activeBuild) {
                 building = false;
-                Instance.EntFireAtName({ name: "spawndoor", input: "Open", delay: 3.00 });
+                Entities.FireInput({ name: "spawndoor", input: "Open", delay: 3.00 });
             }
-            Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "Tick", delay: 0.10 });
+            ScheduleBuildTick();
             tick_lock = false;
             return;
         }
@@ -1959,46 +2380,47 @@ function Tick() {
             if (Rand(SPAWNRATIO_spiketrap)) {
             if (Rand(SPAWNRATIO_spiketrapinsanity)) {
                 let ssr = Vector(0, n.rot.y, 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
+                const bsEnt = Entities.FindByName("builder_script")[0];
 
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 128));
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAP(), ssp, ssr);
 
                 ssp = VectorAdd(n.pos, VectorMul(n.fw, 48));
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAPx(), ssp, ssr);
 
                 ssp = VectorAdd(n.pos, VectorMul(n.fw, 208));
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAPxx(), ssp, ssr);
             } else {
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 128));
                 let ssr = Vector(0, n.rot.y, 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_SPIKETRAP(), ssp, ssr);
             }
-        } else if (Rand(SPAWNRATIO_bladetrap)) {
+            }
+            if (Rand(SPAWNRATIO_bladetrap)) {
                 const bladePos = GetBladeTrapPosition(n);
                 if (bladePos.found) {
 
 
-                    const bsEnt = Instance.FindEntityByName("builder_script");
-                    if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: bladePos.rot });
+                    const bsEnt = Entities.FindByName("builder_script")[0];
+                    if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: QAng(bladePos.rot) });
                     Build(new B_BLADETRAP(), bladePos.pos, bladePos.rot);
                 }
             } else if (Rand(SPAWNRATIO_box64)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_BOX64(), ssp, ssr);
             } else if (Rand(SPAWNRATIO_pillarfallen)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
             }
             
@@ -2006,94 +2428,93 @@ function Tick() {
             if (Rand(SPAWNRATIO_rooftower) && canSpawnRooftower) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, 128)), VectorMul(n.up, 288));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_ROOFTOWER(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_mine)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_MINE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rubble)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_RUBBLE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_framenotex)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
             }
             if (Rand(SPAWNRATIO_vinewall)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
             }
             const rrr = RandomInt(0, 100);
             let vinePos = VectorAdd(n.pos, VectorMul(n.fw, 128));
             let vineRot = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt2 = Instance.FindEntityByName("builder_script");
-            if (bsEnt2) bsEnt2.Teleport({ position: vinePos, angles: vineRot });
+            const bsEnt2 = Entities.FindByName("builder_script")[0];
+            if (bsEnt2) bsEnt2.Teleport({ position: vinePos, angles: QAng(vineRot) });
             if (rrr >= 0 && rrr < 10) BuildDecoration(new B_VINE1(), vinePos, vineRot);
             else if (rrr >= 10 && rrr < 20) BuildDecoration(new B_VINE2(), vinePos, vineRot);
             else if (rrr >= 20 && rrr < 30) BuildDecoration(new B_VINE3(), vinePos, vineRot);
         } else if (n.type === "s_builder_room3f") {
-            // No vine decorations in room3f (large building)
             if (Rand(SPAWNRATIO_box64)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_BOX64(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_crushceiling)) {
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 288));
                 let ssr = Vector(0, 0, 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_CRUSHCEILING(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pizza)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_PIZZA(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pillarfallen)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_mine)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_MINE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rubble)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_RUBBLE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_framenotex)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
             }
             if (Rand(SPAWNRATIO_vinewall)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
             }
             if (Rand(SPAWNRATIO_slotmachine)) {
@@ -2123,51 +2544,50 @@ function Tick() {
             if (Rand(SPAWNRATIO_box64)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_BOX64(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_crushceiling)) {
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 288));
                 let ssr = Vector(0, 0, 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_CRUSHCEILING(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pizza)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_PIZZA(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pillarfallen)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_mine)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_MINE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rubble)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 512))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_RUBBLE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_framenotex)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
             }
-            // No vine decorations in room3r/room3l (large buildings)
             if (Rand(SPAWNRATIO_slotmachine)) {
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 536));
                 if (!TryBuildSlotmachineAt(n, ssp, n.rot)) {
@@ -2182,8 +2602,8 @@ function Tick() {
             if (Rand(SPAWNRATIO_ironmaiden)) {
                 let ssp = VectorAdd(n.pos, VectorMul(n.fw, 416));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_IRONMAIDEN(), ssp, ssr);
                 if (Rand(SPAWNRATIO_ironmaiden_pizza)) {
                     Build(new B_PIZZA(), ssp, ssr);
@@ -2192,52 +2612,52 @@ function Tick() {
             if (Rand(SPAWNRATIO_box64)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_BOX64(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pizza)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_PIZZA(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pillarfallen)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_mine)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_MINE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rubble)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 768))), VectorMul(n.lf, RandomInt(-224, 224)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_RUBBLE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_framenotex)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
             }
             if (Rand(SPAWNRATIO_vinewall)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
             }
             const rrr = RandomInt(0, 100);
             const vineDeco = GetDecoPosition(n, 128, 704, 0, 0, 0);
-            const bsEnt2 = Instance.FindEntityByName("builder_script");
-            if (bsEnt2) bsEnt2.Teleport({ position: vineDeco.pos, angles: vineDeco.rot });
+            const bsEnt2 = Entities.FindByName("builder_script")[0];
+            if (bsEnt2) bsEnt2.Teleport({ position: vineDeco.pos, angles: QAng(vineDeco.rot) });
             if (rrr >= 0 && rrr < 10) BuildDecoration(new B_VINE1(), vineDeco.pos, vineDeco.rot);
             else if (rrr >= 10 && rrr < 20) BuildDecoration(new B_VINE2(), vineDeco.pos, vineDeco.rot);
             else if (rrr >= 20 && rrr < 30) BuildDecoration(new B_VINE3(), vineDeco.pos, vineDeco.rot);
@@ -2267,155 +2687,123 @@ function Tick() {
             if (Rand(SPAWNRATIO_bladetrap)) {
                 const bladePos = GetBladeTrapPosition(n);
                 if (bladePos.found) {
-                    const bsEnt = Instance.FindEntityByName("builder_script");
-                    if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: bladePos.rot });
+                    const bsEnt = Entities.FindByName("builder_script")[0];
+                    if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: QAng(bladePos.rot) });
                     Build(new B_BLADETRAP(), bladePos.pos, bladePos.rot);
                 }
             } else if (Rand(SPAWNRATIO_box64)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_BOX64(), ssp, ssr);
             } else if (Rand(SPAWNRATIO_pillarfallen)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rooftower) && n.mainpath) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, 128)), VectorMul(n.up, 288));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_ROOFTOWER(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_mine)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_MINE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rubble)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_RUBBLE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_framenotex)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_FRAMENOTEX(), n.pos, n.rot);
             }
             if (Rand(SPAWNRATIO_vinewall)) {
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: n.rot });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: n.pos, angles: QAng(n.rot) });
                 BuildDecoration(new B_VINEWALL(), n.pos, n.rot);
             }
             const rrr = RandomInt(0, 100);
             let vinePos = VectorAdd(n.pos, VectorMul(n.fw, 128));
             let vineRot = Vector(0, RandomInt(0, 360), 0);
-            const bsEnt2 = Instance.FindEntityByName("builder_script");
-            if (bsEnt2) bsEnt2.Teleport({ position: vinePos, angles: vineRot });
+            const bsEnt2 = Entities.FindByName("builder_script")[0];
+            if (bsEnt2) bsEnt2.Teleport({ position: vinePos, angles: QAng(vineRot) });
             if (rrr >= 0 && rrr < 10) BuildDecoration(new B_VINE1(), vinePos, vineRot);
             else if (rrr >= 10 && rrr < 20) BuildDecoration(new B_VINE2(), vinePos, vineRot);
             else if (rrr >= 20 && rrr < 30) BuildDecoration(new B_VINE3(), vinePos, vineRot);
         } else if (n.type === "s_builder_left" || n.type === "s_builder_right") {
+            BuildCornerDecorations(n);
         } else if (n.type === "s_builder_outerplatform") {
             if (Rand(SPAWNRATIO_box64)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_BOX64(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pillarfallen)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_mine)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_MINE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rubble)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-192, 192)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_RUBBLE(), ssp, ssr);
             }
         } else if (n.type === "s_builder_outerplatformsmall") {
             if (Rand(SPAWNRATIO_box64)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_BOX64(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_pillarfallen)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_mine)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 Build(new B_MINE(), ssp, ssr);
             }
             if (Rand(SPAWNRATIO_rubble)) {
                 let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 960))), VectorMul(n.lf, RandomInt(-172, 172)));
                 let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
+                const bsEnt = Entities.FindByName("builder_script")[0];
+                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: QAng(ssr) });
                 BuildDecoration(new B_RUBBLE(), ssp, ssr);
             }
-        } else if (n.type === "s_builder_left" || n.type === "s_builder_right") {
-            if (Rand(SPAWNRATIO_bladetrap)) {
-                const bladePos = GetBladeTrapPosition(n);
-                if (bladePos.found) {
-                    const bsEnt = Instance.FindEntityByName("builder_script");
-                    if (bsEnt) bsEnt.Teleport({ position: bladePos.pos, angles: bladePos.rot });
-                    Build(new B_BLADETRAP(), bladePos.pos, bladePos.rot);
-                }
-            } else if (Rand(SPAWNRATIO_box64)) {
-                let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
-                let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
-                BuildDecoration(new B_BOX64(), ssp, ssr);
-            } else if (Rand(SPAWNRATIO_pillarfallen)) {
-                let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
-                let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
-                BuildDecoration(new B_PILLARFALLEN(), ssp, ssr);
-            } else if (Rand(SPAWNRATIO_mine)) {
-                let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
-                let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
-                Build(new B_MINE(), ssp, ssr);
-            } else if (Rand(SPAWNRATIO_rubble)) {
-                let ssp = VectorAdd(VectorAdd(n.pos, VectorMul(n.fw, RandomInt(64, 128))), VectorMul(n.lf, RandomInt(-96, 96)));
-                let ssr = Vector(0, RandomInt(0, 360), 0);
-                const bsEnt = Instance.FindEntityByName("builder_script");
-                if (bsEnt) bsEnt.Teleport({ position: ssp, angles: ssr });
-                BuildDecoration(new B_RUBBLE(), ssp, ssr);
-            }
-        }
+        } 
 
         if (n.type === "s_builder_3waytower") {
             let stairRot0 = Vector(0, n.rot.y + 270, 0);
@@ -2517,21 +2905,21 @@ function Tick() {
                 }
             }
         }
-        if (buildlist.length === 0) {
+        if (buildlist.length === 0 && buildRequests.length === 0 && !activeBuild) {
             building = false;
-            Instance.EntFireAtName({ name: "spawndoor", input: "Open", delay: 3.00 });
+            Entities.FireInput({ name: "spawndoor", input: "Open", delay: 3.00 });
         } else {
-            const selfEntity = Instance.FindEntityByName("builder_script");
+            const selfEntity = Entities.FindByName("builder_script")[0];
             if (selfEntity) {
-                Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "Tick", delay: 0.10 });
+                ScheduleBuildTick();
             }
             tick_lock = false;
             return;
         }
     }
-    const selfEntity = Instance.FindEntityByName("builder_script");
+    const selfEntity = Entities.FindByName("builder_script")[0];
     if (selfEntity) {
-        Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "Tick", delay: 0.10 });
+        ScheduleBuildTick();
     }
     tick_lock = false;
 }
@@ -2553,26 +2941,26 @@ function QueueTP(inputData) {
     const callerOrigin = caller.GetAbsOrigin();
     lastTPPosition = { x: callerOrigin.x, y: callerOrigin.y, z: callerOrigin.z };
 
-    const teslaMaker = Instance.FindEntityByName("tp_tesla");
+    const teslaMaker = Entities.FindByName("tp_tesla")[0];
     if (teslaMaker && teslaMaker.IsValid()) {
         teslaMaker.Teleport({ position: lastTPPosition });
     }
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 0.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 60.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 65.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 66.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 67.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 68.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 69.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 69.50 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 69.75 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 70.00 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 70.25 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 70.50 });
-    Instance.EntFireAtName({ name: "tp_tesla", input: "ForceSpawn", delay: 70.75 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 0.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 60.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 65.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 66.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 67.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 68.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 69.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 69.50 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 69.75 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 70.00 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 70.25 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 70.50 });
+    Entities.FireInput({ name: "tp_tesla", input: "ForceSpawn", delay: 70.75 });
     tpCooldown = true;
     DoExpire(70.75);
-    Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "SyncTeleportDest", delay: 70.75 });
+    Entities.FireInput({ name: "builder_script", input: "RunScriptInput", value: "SyncTeleportDest", delay: 70.75 });
 }
 
 function QueuedTeleportTP(inputData) {
@@ -2580,18 +2968,18 @@ function QueuedTeleportTP(inputData) {
     if (!caller) return;
     if (tpCooldown) return;
 
-    const teslaMaker = Instance.FindEntityByName("tp_tesla");
+    const teslaMaker = Entities.FindByName("tp_tesla")[0];
     if (!teslaMaker || !teslaMaker.IsValid()) return;
 
     const teslaPos = teslaMaker.GetAbsOrigin();
-    const teleportDest = Instance.FindEntityByName("teleport_destination");
+    const teleportDest = Entities.FindByName("teleport_destination")[0];
     if (teleportDest && teleportDest.IsValid()) {
         teleportDest.Teleport({ position: { x: teslaPos.x, y: teslaPos.y, z: teslaPos.z } });
     }
 }
 
 function DoExpire(delay) {
-    Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "TPCooldownExpire", delay: delay });
+    Entities.FireInput({ name: "builder_script", input: "RunScriptInput", value: "TPCooldownExpire", delay: delay });
 }
 
 function TPCooldownExpire(inputData) {
@@ -2599,11 +2987,11 @@ function TPCooldownExpire(inputData) {
 }
 
 function SyncTeleportDest(inputData) {
-    const teslaMaker = Instance.FindEntityByName("tp_tesla");
+    const teslaMaker = Entities.FindByName("tp_tesla")[0];
     if (!teslaMaker || !teslaMaker.IsValid()) return;
 
     const teslaPos = teslaMaker.GetAbsOrigin();
-    const teleportDest = Instance.FindEntityByName("teleport_destination");
+    const teleportDest = Entities.FindByName("teleport_destination")[0];
     if (teleportDest && teleportDest.IsValid()) {
         teleportDest.Teleport({ position: { x: teslaPos.x, y: teslaPos.y, z: teslaPos.z } });
     }
@@ -2614,233 +3002,142 @@ function SetVinewallHP(inputData) {
     if (!caller) return;
 
     let newhp = 1;
-    const players = Instance.FindEntitiesByClass("player");
+    const players = Entities.FindByClass("player");
     for (const p of players) {
         if (p.IsValid() && p.GetClassName() === "player" && p.GetHealth() > 0 && p.GetTeamNumber() === 3) {
             newhp += AMOUNT_VINEWALL_HP;
         }
     }
-    Instance.EntFireAtTarget({ target: caller, input: "SetHealth", value: newhp.toString() });
+    FireEntityInput({ target: caller, input: "SetHealth", value: newhp.toString() });
+}
+
+function RestorePlayerMovement(pawn, retryDelay = 0.20) {
+    if (!pawn || !pawn.IsValid()) return;
+    FireEntityInput({ target: pawn, input: "KeyValue", value: "speed 1.00", delay: 0.00 });
+    FireEntityInput({ target: pawn, input: "KeyValue", value: "gravity 1.00", delay: 0.00 });
+    if (retryDelay > 0) {
+        FireEntityInput({ target: pawn, input: "KeyValue", value: "speed 1.00", delay: retryDelay });
+        FireEntityInput({ target: pawn, input: "KeyValue", value: "gravity 1.00", delay: retryDelay });
+    }
 }
 
 function ResetPlayers() {
-    const players = Instance.FindEntitiesByClass("player");
+    const players = Entities.FindByClass("player");
     for (const p of players) {
         if (p.IsValid() && p.GetClassName() === "player") {
-            Instance.EntFireAtTarget({ target: p, input: "KeyValue", value: "gravity 1.0" });
+            RestorePlayerMovement(p, 0.20);
         }
     }
 }
 
-let winnerlist = [];
-let winnerlistSlots = new Set();
-let t_players_in_buffer = [];
-let winnerlistfirst = false;
-let ct_reached_winner_zone = false;
+let winnerZones = new Map();
+let winnerCheck = null;
 
-function CheckWinnerBuffer(inputData) {
-    const activator = inputData.activator;
-    if (activator && activator.IsValid() && activator.GetClassName() === "player" && activator.GetHealth() > 0) {
-        let slot = null;
-        if (activator.GetPlayerSlot) {
-            slot = activator.GetPlayerSlot();
-        } else if (activator.GetPlayerController) {
-            const controller = activator.GetPlayerController();
-            if (controller) slot = controller.GetPlayerSlot();
-        }
+function PawnSlot(pawn) {
+    if (!EntityValid(pawn)) return null;
+    const controller = pawn.GetPlayerController();
+    return EntityValid(controller) ? controller.GetPlayerSlot() : null;
+}
 
-        if (activator.GetTeamNumber() === 3) {
-            if (slot !== null && !winnerlistSlots.has(slot)) {
-                winnerlist.push(activator);
-                winnerlistSlots.add(slot);
-                ct_reached_winner_zone = true;
-            }
-        } else if (activator.GetTeamNumber() === 2) {
-            if (!t_players_in_buffer.includes(activator)) {
-                t_players_in_buffer.push(activator);
-            }
+function WinnerPawnValid(pawn, team) {
+    return EntityValid(pawn) && pawn.GetClassName() === "player" && pawn.IsAlive() && pawn.GetHealth() > 0 && pawn.GetTeamNumber() === team;
+}
+
+function WinnerZoneMembers(zone) {
+    const members = winnerZones.get(zone) || new Set();
+    for (const pawn of members) {
+        if (!WinnerPawnValid(pawn, 2) && !WinnerPawnValid(pawn, 3)) members.delete(pawn);
+    }
+    return [...members];
+}
+
+function CheckWinnerBuffer({ caller, activator } = {}) {
+    if (!EntityValid(caller) || (!WinnerPawnValid(activator, 2) && !WinnerPawnValid(activator, 3))) return;
+    let members = winnerZones.get(caller);
+    if (!members) winnerZones.set(caller, members = new Set());
+    members.add(activator);
+}
+
+function RemoveCheckWinnerBuffer({ caller, activator } = {}) {
+    winnerZones.get(caller)?.delete(activator);
+}
+
+function FindWinnerZone(caller) {
+    if (!EntityValid(caller)) return undefined;
+    const name = caller.GetEntityName();
+    if (name.startsWith("i_builder_finalroom_checker")) return caller;
+    if (!name.startsWith("i_builder_finalroom_door")) return undefined;
+    return Entities.FindByName(name.replace("i_builder_finalroom_door", "i_builder_finalroom_checker")).find(EntityValid);
+}
+
+function CheckWinner({ caller } = {}) {
+    if (!roundActive || winnerCheck) return;
+    const zone = FindWinnerZone(caller);
+    if (!zone) return;
+    winnerCheck = { zone, finished: false, announced: false };
+    winnerZones.set(zone, new Set());
+    zone.FireInput({ input: "Disable" });
+    RunAfter(0.02, () => {
+        if (EntityValid(zone)) zone.FireInput({ input: "Enable" });
+    }, "winner_enable");
+    RunAfter(0.20, CheckWinnerContinue, "winner_check");
+}
+
+function SlayForStage(pawn) {
+    if (!EntityValid(pawn) || !pawn.IsAlive()) return;
+    pawn.TakeDamage({
+        damage: Math.max(pawn.GetHealth(), pawn.GetMaxHealth(), 1) + 1,
+        damageTypes: CSDamageTypes.GENERIC,
+        damageFlags: CSDamageFlags.FORCE_DEATH | CSDamageFlags.IGNORE_ARMOR
+    });
+}
+
+function StageMessage(text) {
+    for (let i = 0; i < 3; i++) Console.ServerCommand("say ***" + text + "***");
+}
+
+function CheckWinnerContinue() {
+    const check = winnerCheck;
+    if (!roundActive || !check || check.finished || !EntityValid(check.zone)) return;
+    const members = WinnerZoneMembers(check.zone);
+    const humans = new Set(members.filter(pawn => WinnerPawnValid(pawn, 3)));
+    const zombies = members.filter(pawn => WinnerPawnValid(pawn, 2));
+    if (humans.size === 0) {
+        check.finished = true;
+        for (const pawn of Entities.FindByClass("player")) if (WinnerPawnValid(pawn, 3)) SlayForStage(pawn);
+        StageMessage("NO HUMANS MADE IT TO THE END");
+        return;
+    }
+    if (zombies.length === 0) {
+        check.finished = true;
+        if (EntityValid(stage_handle)) {
+            const next = stage_index >= 5 ? 1 : stage_index + 1;
+            stage_handle.SetEntityName("stage_" + next);
         }
+        for (const pawn of Entities.FindByClass("player")) {
+            if ((WinnerPawnValid(pawn, 2) || WinnerPawnValid(pawn, 3)) && !humans.has(pawn)) SlayForStage(pawn);
+        }
+        StageMessage("STAGE COMPLETED");
+        return;
+    }
+    for (const pawn of Entities.FindByClass("player")) {
+        if (WinnerPawnValid(pawn, 2) && pawn.GetHealth() > 1000) pawn.SetHealth(1000);
+    }
+    if (!check.announced) {
+        Console.ServerCommand("say ***KILL THE REMAINING ZOMBIES***");
+        check.announced = true;
+    }
+    RunAfter(0.20, CheckWinnerContinue, "winner_check");
+}
+
+function PruneWinnerSlots(slot) {
+    for (const members of winnerZones.values()) {
+        for (const pawn of members) if (PawnSlot(pawn) === slot || !EntityValid(pawn)) members.delete(pawn);
     }
 }
 
-function RemoveCheckWinnerBuffer(inputData) {
-    const activator = inputData.activator;
-    if (!activator || !activator.IsValid()) return;
-
-    let slot = null;
-    if (activator.GetPlayerSlot) {
-        slot = activator.GetPlayerSlot();
-    } else if (activator.GetPlayerController) {
-        const controller = activator.GetPlayerController();
-        if (controller) slot = controller.GetPlayerSlot();
-    }
-
-    if (slot !== null && winnerlistSlots.has(slot)) {
-        const index = winnerlist.indexOf(activator);
-        if (index !== -1) {
-            winnerlist.splice(index, 1);
-        }
-        winnerlistSlots.delete(slot);
-    }
-
-    const tIndex = t_players_in_buffer.indexOf(activator);
-    if (tIndex !== -1) {
-        t_players_in_buffer.splice(tIndex, 1);
-    }
-}
-
-function CheckWinner(inputData) {
-    const activator = inputData.activator;
-    winnerlistfirst = true;
-    CheckWinnerContinue(activator);
-}
-
-function CheckWinnerContinue(caller) {
-    function getPlayerSlot(p) {
-        if (p.GetPlayerSlot) return p.GetPlayerSlot();
-        if (p.GetPlayerController) {
-            const ctrl = p.GetPlayerController();
-            return ctrl ? ctrl.GetPlayerSlot() : null;
-        }
-        return null;
-    }
-
-    const allWinners = [...winnerlist, ...t_players_in_buffer];
-
-    if (ct_reached_winner_zone && winnerlist.length > 0 && t_players_in_buffer.length === 0) {
-        const players = Instance.FindEntitiesByClass("player");
-        for (const p of players) {
-            if (!p.IsValid() || p.GetClassName() !== "player" || p.GetHealth() <= 0) continue;
-            const slot = getPlayerSlot(p);
-            if (slot !== null && !winnerlistSlots.has(slot) && !t_players_in_buffer.includes(p)) {
-                Instance.EntFireAtTarget({ target: p, input: "SetHealth", value: "0" });
-            }
-        }
-        Instance.ServerCommand("say ***STAGE COMPLETED***");
-        Instance.ServerCommand("say ***STAGE COMPLETED***");
-        Instance.ServerCommand("say ***STAGE COMPLETED***");
-
-        if (stage_handle) {
-            const stageName = stage_handle.GetEntityName ? stage_handle.GetEntityName() : "";
-            let newStageName = "stage_1";
-            if (stageName === "stage_1") newStageName = "stage_2";
-            else if (stageName === "stage_2") newStageName = "stage_3";
-            else if (stageName === "stage_3") newStageName = "stage_4";
-            else if (stageName === "stage_4") newStageName = "stage_5";
-            else if (stageName === "stage_5") newStageName = "stage_1";
-            Instance.EntFireAtTarget({ target: stage_handle, input: "KeyValue", value: `targetname ${newStageName}` });
-        }
-
-        winnerlist = [];
-        winnerlistSlots = new Set();
-        t_players_in_buffer = [];
-        ct_reached_winner_zone = false;
-    } else if (winnerlist.length === 0 && t_players_in_buffer.length === 0) {
-        const players = Instance.FindEntitiesByClass("player");
-        for (const p of players) {
-            if (!p.IsValid() || p.GetClassName() !== "player" || p.GetHealth() <= 0) continue;
-            const slot = getPlayerSlot(p);
-            if (slot !== null && !winnerlistSlots.has(slot)) {
-                Instance.EntFireAtTarget({ target: p, input: "SetHealth", value: "0" });
-            }
-        }
-        Instance.ServerCommand("say ***NO HUMANS MADE IT TO THE END***");
-        Instance.ServerCommand("say ***NO HUMANS MADE IT TO THE END***");
-        Instance.ServerCommand("say ***NO HUMANS MADE IT TO THE END***");
-
-        winnerlist = [];
-        winnerlistSlots = new Set();
-        t_players_in_buffer = [];
-        ct_reached_winner_zone = false;
-    } else {
-        let allTDead = true;
-        for (const tPlayer of t_players_in_buffer) {
-            if (tPlayer && tPlayer.IsValid() && tPlayer.GetHealth() > 0) {
-                allTDead = false;
-                break;
-            }
-        }
-
-        if (allTDead) {
-            if (ct_reached_winner_zone && t_players_in_buffer.length === 0) {
-                const players = Instance.FindEntitiesByClass("player");
-                for (const p of players) {
-                    if (!p.IsValid() || p.GetClassName() !== "player" || p.GetHealth() <= 0) continue;
-                    const slot = getPlayerSlot(p);
-                    if (slot !== null && !winnerlistSlots.has(slot)) {
-                        Instance.EntFireAtTarget({ target: p, input: "SetHealth", value: "0" });
-                    }
-                }
-                Instance.ServerCommand("say ***STAGE COMPLETED***");
-                Instance.ServerCommand("say ***STAGE COMPLETED***");
-                Instance.ServerCommand("say ***STAGE COMPLETED***");
-
-                if (stage_handle) {
-                    const stageName = stage_handle.GetEntityName ? stage_handle.GetEntityName() : "";
-                    let newStageName = "stage_1";
-                    if (stageName === "stage_1") newStageName = "stage_2";
-                    else if (stageName === "stage_2") newStageName = "stage_3";
-                    else if (stageName === "stage_3") newStageName = "stage_4";
-                    else if (stageName === "stage_4") newStageName = "stage_5";
-                    else if (stageName === "stage_5") newStageName = "stage_1";
-                    Instance.EntFireAtTarget({ target: stage_handle, input: "KeyValue", value: `targetname ${newStageName}` });
-                }
-
-                winnerlist = [];
-                winnerlistSlots = new Set();
-                t_players_in_buffer = [];
-                ct_reached_winner_zone = false;
-            } else {
-                const players = Instance.FindEntitiesByClass("player");
-                for (const p of players) {
-                    if (!p.IsValid() || p.GetClassName() !== "player" || p.GetHealth() <= 0) continue;
-                    const slot = getPlayerSlot(p);
-                    if (slot !== null && !winnerlistSlots.has(slot)) {
-                        Instance.EntFireAtTarget({ target: p, input: "SetHealth", value: "0" });
-                    }
-                }
-                Instance.ServerCommand("say ***NO HUMANS MADE IT TO THE END***");
-                Instance.ServerCommand("say ***NO HUMANS MADE IT TO THE END***");
-                Instance.ServerCommand("say ***NO HUMANS MADE IT TO THE END***");
-
-                winnerlist = [];
-                winnerlistSlots = new Set();
-                t_players_in_buffer = [];
-                ct_reached_winner_zone = false;
-            }
-        } else {
-            for (const tPlayer of t_players_in_buffer) {
-                if (tPlayer && tPlayer.IsValid() && tPlayer.GetHealth() > 0) {
-                    Instance.EntFireAtTarget({ target: tPlayer, input: "SetHealth", value: "1000" });
-                }
-            }
-
-            const players = Instance.FindEntitiesByClass("player");
-            for (const p of players) {
-                if (!p.IsValid() || p.GetClassName() !== "player" || p.GetHealth() <= 0) continue;
-                const slot = getPlayerSlot(p);
-                if (slot !== null && !winnerlistSlots.has(slot) && !t_players_in_buffer.includes(p)) {
-                    Instance.EntFireAtTarget({ target: p, input: "SetHealth", value: "0" });
-                }
-            }
-
-            Instance.ServerCommand("say ***KILL THE REMAINING ZOMBIES***");
-
-            if (caller) {
-                Instance.EntFireAtTarget({ target: caller, input: "Enable" });
-                Instance.SetNextThink(Instance.GetGameTime() + 0.10);
-                Instance.SetThink(() => {
-                    if (caller) Instance.EntFireAtTarget({ target: caller, input: "Disable" });
-                });
-            }
-        }
-    }
-}
-
-function ChangeLevel(_st) {
-    if (stage_handle) {
-        Instance.EntFireAtTarget({ target: stage_handle, input: "KeyValue", value: `targetname stage_${_st.toString()}` });
-    }
+function ChangeLevel(stage) {
+    if (EntityValid(stage_handle) && Number.isInteger(stage) && stage >= 1 && stage <= 5) stage_handle.SetEntityName("stage_" + stage);
 }
 
 function CountMainPath() {
@@ -2855,10 +3152,10 @@ function SetIronMaidenPush(inputData) {
     const caller = inputData.caller;
     if (!caller) return;
 
-    const modelEntities = Instance.FindEntitiesByName("i_builder_ironmaiden_model*");
-    const pushEntities = Instance.FindEntitiesByName("i_builder_ironmaiden_push*");
-    const push2Entities = Instance.FindEntitiesByName("i_builder_ironmaiden_push2*");
-    const push3Entities = Instance.FindEntitiesByName("i_builder_ironmaiden_push3*");
+    const modelEntities = Entities.FindByName("i_builder_ironmaiden_model*");
+    const pushEntities = Entities.FindByName("i_builder_ironmaiden_push*");
+    const push2Entities = Entities.FindByName("i_builder_ironmaiden_push2*");
+    const push3Entities = Entities.FindByName("i_builder_ironmaiden_push3*");
 
     const allPushEntities = [...pushEntities, ...push2Entities, ...push3Entities];
 
@@ -2889,7 +3186,7 @@ function SetIronMaidenPush(inputData) {
                 }
             }
 
-            Instance.EntFireAtTarget({
+            FireEntityInput({
                 target: model,
                 input: "RunScriptInput",
                 value: "SetCaller",
@@ -2904,10 +3201,10 @@ function pushless(inputData) {
     const caller = inputData.caller;
     if (!caller) return;
 
-    const callers = Instance.FindEntitiesByName("i_builder_ironmaiden_model*");
+    const callers = Entities.FindByName("i_builder_ironmaiden_model*");
     for (const p of callers) {
         if (p.IsValid()) {
-            Instance.EntFireAtTarget({ target: p, input: "RunScriptInput", value: "SetCaller" });
+            FireEntityInput({ target: p, input: "RunScriptInput", value: "SetCaller" });
         }
     }
 }
@@ -2916,9 +3213,9 @@ function SetCaller(inputData) {
     const caller = inputData.caller;
     if (!caller) return;
 
-    const pushEntities = Instance.FindEntitiesByName("i_builder_ironmaiden_push*");
-    const push2Entities = Instance.FindEntitiesByName("i_builder_ironmaiden_push2*");
-    const push3Entities = Instance.FindEntitiesByName("i_builder_ironmaiden_push3*");
+    const pushEntities = Entities.FindByName("i_builder_ironmaiden_push*");
+    const push2Entities = Entities.FindByName("i_builder_ironmaiden_push2*");
+    const push3Entities = Entities.FindByName("i_builder_ironmaiden_push3*");
     const allPushEntities = [...pushEntities, ...push2Entities, ...push3Entities];
 
     const callerOrigin = caller.GetAbsOrigin();
@@ -2939,16 +3236,16 @@ function SetCaller(inputData) {
             nearbyPushes.push(p);
             p.Teleport({
                 position: callerOrigin,
-                angles: { pitch: 0, yaw: callerAngles.y - 90, roll: 0 }
+                angles: { pitch: 0, yaw: callerAngles.yaw - 90, roll: 0 }
             });
         }
     }
 
-    const scope = caller.GetScriptScope?.() || {};
+    const scope = EntityState(caller);
     scope.pushes = nearbyPushes;
 
     for (const p of nearbyPushes) {
-        Instance.EntFireAtTarget({ target: p, input: "Enable" });
+        FireEntityInput({ target: p, input: "Enable" });
     }
 }
 
@@ -2959,9 +3256,9 @@ function SetIronMaidenPushState(inputData) {
     const value = inputData.value;
     const state = value === "true" || value === "1" || value === "1.0";
 
-    const pushEntities = Instance.FindEntitiesByName("i_builder_ironmaiden_push*");
-    const push2Entities = Instance.FindEntitiesByName("i_builder_ironmaiden_push2*");
-    const push3Entities = Instance.FindEntitiesByName("i_builder_ironmaiden_push3*");
+    const pushEntities = Entities.FindByName("i_builder_ironmaiden_push*");
+    const push2Entities = Entities.FindByName("i_builder_ironmaiden_push2*");
+    const push3Entities = Entities.FindByName("i_builder_ironmaiden_push3*");
     const allPushEntities = [...pushEntities, ...push2Entities, ...push3Entities];
 
     const callerOrigin = caller.GetAbsOrigin();
@@ -2979,9 +3276,9 @@ function SetIronMaidenPushState(inputData) {
 
             if (distance <= 64) {
                 if (state) {
-                    Instance.EntFireAtTarget({ target: p, input: "Enable" });
+                    FireEntityInput({ target: p, input: "Enable" });
                 } else {
-                    Instance.EntFireAtTarget({ target: p, input: "Disable" });
+                    FireEntityInput({ target: p, input: "Disable" });
                 }
             }
         }
@@ -2997,7 +3294,7 @@ function SetIronMaidenPushStatefalse(inputData) {
 }
 
 function SetHan(inputData) {
-    han = inputData.caller?.GetRootMoveParent() || null;
+    han = RootParent(inputData.caller);
 }
 
 function hanset(inputData) {
@@ -3005,15 +3302,15 @@ function hanset(inputData) {
 }
 
 function DamageActivator(dmg, inputData) {
-    const activator = inputData.activator;
-    if (activator && activator.IsValid() && activator.GetClassName() === "player" && activator.GetHealth() > 0) {
-        const newHealth = activator.GetHealth() - dmg;
-        if (newHealth <= 0) {
-            Instance.EntFireAtTarget({ target: activator, input: "SetHealth", value: "-1" });
-        } else {
-            activator.SetHealth(newHealth);
-        }
-    }
+    const activator = inputData && inputData.activator;
+    if (!activator || !activator.IsValid()) return;
+    if (activator.GetClassName() !== "player") return;
+    if (activator.GetHealth() <= 0) return;
+    activator.TakeDamage({
+        damage: dmg,
+        damageTypes: CSDamageTypes.GENERIC,
+        damageFlags: CSDamageFlags.IGNORE_ARMOR
+    });
 }
 
 function DamageActivator99(inputData) {
@@ -3054,7 +3351,7 @@ function SlotmachinePressed(heart, inputData) {
     if (!activator || !caller) return;
 
     if (activator.IsValid() && activator.GetClassName() === "player" && activator.GetTeamNumber() === 3 && activator.GetHealth() > 0) {
-        Instance.EntFireAtTarget({ target: caller, input: "FireUser1" });
+        FireEntityInput({ target: caller, input: "FireUser1" });
 
         const boundModel = slotmachineBindings.get(caller);
         const playerName = GetActivatorName(activator);
@@ -3082,46 +3379,46 @@ function SlotmachinePressed(heart, inputData) {
         const res = Rands(chance);
 
         if (res === 0) {
-            if (boundModel) Instance.EntFireAtTarget({ target: boundModel, input: "Skin", value: "1", delay: 1.00 });
-            if (boundModel) Instance.EntFireAtTarget({ target: boundModel, input: "SetAnimation", value: "buff", delay: 1.00 });
-            if (boundModel) Instance.EntFireAtTarget({ target: boundModel, input: "SetDefaultAnimation", value: "buff", delay: 1.02 });
+            if (boundModel) FireEntityInput({ target: boundModel, input: "Skin", value: "1", delay: 1.00 });
+            if (boundModel) FireEntityInput({ target: boundModel, input: "SetAnimationNotLooping", value: "buff", delay: 1.00 });
+            if (boundModel) FireEntityInput({ target: boundModel, input: "SetIdleAnimationLooping", value: "buff", delay: 1.02 });
         } else if (res === 1) {
-            if (boundModel) Instance.EntFireAtTarget({ target: boundModel, input: "FireUser1", delay: 0.90 });
+            if (boundModel) FireEntityInput({ target: boundModel, input: "FireUser1", delay: 0.90 });
             const act = Rands([50.00, 30.00, 20.00]);
             if (act === 1) {
-                Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: `health ${activator.GetHealth() + 100}`, delay: 1.00 });
-                Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** BUFF --- ${playerName} health +100 **`, delay: 0.90 });
+                FireEntityInput({ target: activator, input: "KeyValue", value: `health ${activator.GetHealth() + 100}`, delay: 1.00 });
+                FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** BUFF --- ${playerName} health +100 **`, delay: 0.90 });
             } else if (act === 2) {
-                Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: "speed 1.50", delay: 1.00 });
-                Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** BUFF --- ${playerName} speed up (1.50) **`, delay: 0.90 });
+                FireEntityInput({ target: activator, input: "KeyValue", value: "speed 1.50", delay: 1.00 });
+                FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** BUFF --- ${playerName} speed up (1.50) **`, delay: 0.90 });
             } else if (act === 3) {
-                Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: "gravity 0.40", delay: 1.00 });
-                Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** BUFF --- ${playerName} gravity low (0.40) **`, delay: 0.90 });
+                FireEntityInput({ target: activator, input: "KeyValue", value: "gravity 0.40", delay: 1.00 });
+                FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** BUFF --- ${playerName} gravity low (0.40) **`, delay: 0.90 });
             }
         } else if (res === 2) {
-            if (boundModel) Instance.EntFireAtTarget({ target: boundModel, input: "FireUser2", delay: 1.00 });
+            if (boundModel) FireEntityInput({ target: boundModel, input: "FireUser2", delay: 1.00 });
             const act = Rands([50.00, 30.00, 20.00]);
             if (act === 1) {
-                Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: "health 1", delay: 1.00 });
-                Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** DEBUFF --- ${playerName} health 1 **`, delay: 1.00 });
+                FireEntityInput({ target: activator, input: "KeyValue", value: "health 1", delay: 1.00 });
+                FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** DEBUFF --- ${playerName} health 1 **`, delay: 1.00 });
             } else if (act === 2) {
-                Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: "speed 0.50", delay: 1.00 });
-                Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** DEBUFF --- ${playerName} speed down (0.50) **`, delay: 1.00 });
+                FireEntityInput({ target: activator, input: "KeyValue", value: "speed 0.50", delay: 1.00 });
+                FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** DEBUFF --- ${playerName} speed down (0.50) **`, delay: 1.00 });
             } else if (act === 3) {
-                Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: "gravity 1.50", delay: 1.00 });
-                Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** DEBUFF --- ${playerName} gravity high (1.50) **`, delay: 1.00 });
+                FireEntityInput({ target: activator, input: "KeyValue", value: "gravity 1.50", delay: 1.00 });
+                FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** DEBUFF --- ${playerName} gravity high (1.50) **`, delay: 1.00 });
             }
         } else if (res === 3) {
-            if (boundModel) Instance.EntFireAtTarget({ target: boundModel, input: "FireUser3", delay: 1.05 });
-            Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** REWARD --- ${playerName} health +300, speed 2.00, gravity 0.30 **`, delay: 1.05 });
-            Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: `health ${activator.GetHealth() + 300}`, delay: 1.00 });
-            Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: "speed 2.00", delay: 1.00 });
-            Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: "gravity 0.30", delay: 1.00 });
+            if (boundModel) FireEntityInput({ target: boundModel, input: "FireUser3", delay: 1.05 });
+            FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** REWARD --- ${playerName} health +300, speed 2.00, gravity 0.30 **`, delay: 1.05 });
+            FireEntityInput({ target: activator, input: "KeyValue", value: `health ${activator.GetHealth() + 300}`, delay: 1.00 });
+            FireEntityInput({ target: activator, input: "KeyValue", value: "speed 2.00", delay: 1.00 });
+            FireEntityInput({ target: activator, input: "KeyValue", value: "gravity 0.30", delay: 1.00 });
         } else if (res === 4) {
-            if (boundModel) Instance.EntFireAtTarget({ target: boundModel, input: "FireUser4", delay: 1.10 });
-            Instance.EntFireAtTarget({ target: Instance.FindEntityByName("server"), input: "Command", value: `say ** DEATH --- ${playerName} health ${Math.floor(activator.GetHealth() / 2)}, ignited **`, delay: 1.10 });
-            Instance.EntFireAtTarget({ target: activator, input: "KeyValue", value: `health ${Math.floor(activator.GetHealth() / 2)}`, delay: 1.00 });
-            Instance.EntFireAtTarget({ target: activator, input: "IgniteLifetime", value: "100", delay: 1.00 });
+            if (boundModel) FireEntityInput({ target: boundModel, input: "FireUser4", delay: 1.10 });
+            FireEntityInput({ target: Entities.FindByName("server")[0], input: "Command", value: `say ** DEATH --- ${playerName} health ${Math.floor(activator.GetHealth() / 2)}, ignited **`, delay: 1.10 });
+            FireEntityInput({ target: activator, input: "KeyValue", value: `health ${Math.floor(activator.GetHealth() / 2)}`, delay: 1.00 });
+            FireEntityInput({ target: activator, input: "IgniteLifetime", value: "100", delay: 1.00 });
         }
     }
 }
@@ -3130,7 +3427,7 @@ function bindbutton(inputData) {
     const button = inputData.caller;
     if (!button) return;
 
-    const models = Instance.FindEntitiesByName("i_builder_slotmachine_model*");
+    const models = Entities.FindByName("i_builder_slotmachine_model*");
     let nearestModel = null;
     let nearestDist = 999999;
 
@@ -3150,7 +3447,7 @@ function bindbutton(inputData) {
     if (nearestModel) {
         slotmachineBindings.set(button, nearestModel);
 
-        const allButtons = Instance.FindEntitiesByName("i_builder_slotmachine_button*");
+        const allButtons = Entities.FindByName("i_builder_slotmachine_button*");
         for (const otherButton of allButtons) {
             if (!otherButton.IsValid() || otherButton === button) continue;
             const dist = Math.sqrt(
@@ -3216,11 +3513,10 @@ function ValidPlayer(handle, team) {
 
 function SetStage(stage_index) {
     if (stage_index === 1) {
-        Instance.EntFireAtName({ name: "text_stage1", input: "Start", delay: 1.00 });
-        Instance.EntFireAtName({ name: "text_stage1", input: "Stop", delay: 3.05 });
-        Instance.EntFireAtName({ name: "music_1", input: "StartSound", delay: 20.00 });
-        Instance.EntFireAtName({ name: "music_1", input: "StopSound", delay: 180.00 });
-        Instance.EntFireAtName({ name: "music_2", input: "StartSound", delay: 190.00 });
+        RunAfter(1.00, () => ShowStageHud(1), "stage_hud");
+        Entities.FireInput({ name: "music_1", input: "StartSound", delay: 20.00 });
+        Entities.FireInput({ name: "music_1", input: "StopSound", delay: 180.00 });
+        Entities.FireInput({ name: "music_2", input: "StartSound", delay: 190.00 });
 
         AMOUNT_MAIN_CAP = 30000;
         AMOUNT_FINAL_HOLD = 5000;
@@ -3280,11 +3576,10 @@ function SetStage(stage_index) {
         for (let i = 0; i < 5; i++) classlist.push(new B_LIBRARYWALL());
         for (let i = 0; i < 20; i++) classlist.push(new B_WIDEHALLWAY());
     } else if (stage_index === 2) {
-        Instance.EntFireAtName({ name: "text_stage2", input: "Start", delay: 1.00 });
-        Instance.EntFireAtName({ name: "text_stage2", input: "Stop", delay: 3.05 });
-        Instance.EntFireAtName({ name: "music_1", input: "StartSound", delay: 20.00 });
-        Instance.EntFireAtName({ name: "music_1", input: "StopSound", delay: 180.00 });
-        Instance.EntFireAtName({ name: "music_2", input: "StartSound", delay: 190.00 });
+        RunAfter(1.00, () => ShowStageHud(2), "stage_hud");
+        Entities.FireInput({ name: "music_1", input: "StartSound", delay: 20.00 });
+        Entities.FireInput({ name: "music_1", input: "StopSound", delay: 180.00 });
+        Entities.FireInput({ name: "music_2", input: "StartSound", delay: 190.00 });
 
         AMOUNT_MAIN_CAP = 20000;
         AMOUNT_FINAL_HOLD = 5000;
@@ -3324,11 +3619,10 @@ function SetStage(stage_index) {
         for (let i = 0; i < 40; i++) classlist.push(new B_ROOM3F());
         for (let i = 0; i < 40; i++) classlist.push(new B_WIDEHALLWAY());
     } else if (stage_index === 3) {
-        Instance.EntFireAtName({ name: "text_stage3", input: "Start", delay: 1.00 });
-        Instance.EntFireAtName({ name: "text_stage3", input: "Stop", delay: 3.05 });
-        Instance.EntFireAtName({ name: "music_1", input: "StartSound", delay: 20.00 });
-        Instance.EntFireAtName({ name: "music_1", input: "StopSound", delay: 180.00 });
-        Instance.EntFireAtName({ name: "music_2", input: "StartSound", delay: 190.00 });
+        RunAfter(1.00, () => ShowStageHud(3), "stage_hud");
+        Entities.FireInput({ name: "music_1", input: "StartSound", delay: 20.00 });
+        Entities.FireInput({ name: "music_1", input: "StopSound", delay: 180.00 });
+        Entities.FireInput({ name: "music_2", input: "StartSound", delay: 190.00 });
 
         AMOUNT_MAIN_CAP = 15000;
         AMOUNT_FINAL_HOLD = 5000;
@@ -3373,11 +3667,10 @@ function SetStage(stage_index) {
         for (let i = 0; i < 3; i++) classlist.push(new B_WATERROOML());
         for (let i = 0; i < 50; i++) classlist.push(new B_WIDEHALLWAY());
     } else if (stage_index === 4) {
-        Instance.EntFireAtName({ name: "text_stage4", input: "Start", delay: 1.00 });
-        Instance.EntFireAtName({ name: "text_stage4", input: "Stop", delay: 3.05 });
-        Instance.EntFireAtName({ name: "music_1", input: "StartSound", delay: 20.00 });
-        Instance.EntFireAtName({ name: "music_1", input: "StopSound", delay: 180.00 });
-        Instance.EntFireAtName({ name: "music_2", input: "StartSound", delay: 190.00 });
+        RunAfter(1.00, () => ShowStageHud(4), "stage_hud");
+        Entities.FireInput({ name: "music_1", input: "StartSound", delay: 20.00 });
+        Entities.FireInput({ name: "music_1", input: "StopSound", delay: 180.00 });
+        Entities.FireInput({ name: "music_2", input: "StartSound", delay: 190.00 });
 
         AMOUNT_MAIN_CAP = 15000;
         AMOUNT_FINAL_HOLD = 5000;
@@ -3434,11 +3727,10 @@ function SetStage(stage_index) {
     }
 
     else if (stage_index === 5) {
-        Instance.EntFireAtName({ name: "text_stage5", input: "Start", delay: 1.00 });
-        Instance.EntFireAtName({ name: "text_stage5", input: "Stop", delay: 3.05 });
-        Instance.EntFireAtName({ name: "music_1", input: "StartSound", delay: 20.00 });
-        Instance.EntFireAtName({ name: "music_1", input: "StopSound", delay: 180.00 });
-        Instance.EntFireAtName({ name: "music_2", input: "StartSound", delay: 190.00 });
+        RunAfter(1.00, () => ShowStageHud(5), "stage_hud");
+        Entities.FireInput({ name: "music_1", input: "StartSound", delay: 20.00 });
+        Entities.FireInput({ name: "music_1", input: "StopSound", delay: 180.00 });
+        Entities.FireInput({ name: "music_2", input: "StartSound", delay: 190.00 });
 
         AMOUNT_MAIN_CAP = 40000;
         AMOUNT_FINAL_HOLD = 5000;
@@ -3500,39 +3792,37 @@ function SetStage(stage_index) {
     }
 }
 
-Instance.OnScriptInput("QueueTP", QueueTP);
-Instance.OnScriptInput("queuetpteleport", QueuedTeleportTP);
-Instance.OnScriptInput("TPCooldownExpire", TPCooldownExpire);
-Instance.OnScriptInput("SyncTeleportDest", SyncTeleportDest);
-Instance.OnScriptInput("SetVinewallHP", SetVinewallHP);
-Instance.OnScriptInput("CheckWinnerBuffer", CheckWinnerBuffer);
-Instance.OnScriptInput("RemoveCheckWinnerBuffer", RemoveCheckWinnerBuffer);
-Instance.OnScriptInput("CheckWinner", CheckWinner);
-Instance.OnScriptInput("SetIronMaidenPush", SetIronMaidenPush);
-Instance.OnScriptInput("pushless", pushless);
-Instance.OnScriptInput("SetCaller", SetCaller);
-Instance.OnScriptInput("SetIronMaidenPushState", SetIronMaidenPushState);
-Instance.OnScriptInput("SetIronMaidenPushStatetrue", SetIronMaidenPushStatetrue);
-Instance.OnScriptInput("SetIronMaidenPushStatefalse", SetIronMaidenPushStatefalse);
-Instance.OnScriptInput("SetHan", SetHan);
-Instance.OnScriptInput("hanset", hanset);
-Instance.OnScriptInput("DamageActivator99", DamageActivator99);
-Instance.OnScriptInput("DamageActivator15", DamageActivator15);
-Instance.OnScriptInput("DamageActivator60", DamageActivator60);
-Instance.OnScriptInput("SlotmachinePressed1", SlotmachinePressed1);
-Instance.OnScriptInput("SlotmachinePressed2", SlotmachinePressed2);
-Instance.OnScriptInput("SlotmachinePressed3", SlotmachinePressed3);
-Instance.OnScriptInput("bindbutton", bindbutton);
-Instance.OnScriptInput("BuildBuffer", BuildBuffer);
-Instance.OnScriptInput("Start", Start);
-Instance.OnScriptInput("CheckStage", CheckStage);
-Instance.OnScriptInput("BuildBuffer", BuildBuffer);
-Instance.OnScriptInput("Tick", Tick);
-Instance.OnScriptInput("OnEventFiredEVENT_PLAYER_SAY", OnEventFiredEVENT_PLAYER_SAY);
-Instance.OnScriptInput("OnEventFiredEVENT_PLAYER_DISCONNECT", OnEventFiredEVENT_PLAYER_DISCONNECT);
-Instance.OnScriptInput("OnEventFiredEVENT_PLAYER_CONNECT", OnEventFiredEVENT_PLAYER_CONNECT);
-Instance.OnScriptInput("OnEventFiredEVENT_DOOR_MOVING", OnEventFiredEVENT_DOOR_MOVING);
-Instance.OnScriptInput("ReRecordPlayerTeams", ReRecordPlayerTeams);
+RegisterScriptInput("QueueTP", QueueTP);
+RegisterScriptInput("queuetpteleport", QueuedTeleportTP);
+RegisterScriptInput("TPCooldownExpire", TPCooldownExpire);
+RegisterScriptInput("SyncTeleportDest", SyncTeleportDest);
+RegisterScriptInput("SetVinewallHP", SetVinewallHP);
+RegisterScriptInput("CheckWinnerBuffer", CheckWinnerBuffer);
+RegisterScriptInput("RemoveCheckWinnerBuffer", RemoveCheckWinnerBuffer);
+RegisterScriptInput("CheckWinner", CheckWinner);
+RegisterScriptInput("SetIronMaidenPush", SetIronMaidenPush);
+RegisterScriptInput("pushless", pushless);
+RegisterScriptInput("SetCaller", SetCaller);
+RegisterScriptInput("SetIronMaidenPushState", SetIronMaidenPushState);
+RegisterScriptInput("SetIronMaidenPushStatetrue", SetIronMaidenPushStatetrue);
+RegisterScriptInput("SetIronMaidenPushStatefalse", SetIronMaidenPushStatefalse);
+RegisterScriptInput("SetHan", SetHan);
+RegisterScriptInput("hanset", hanset);
+RegisterScriptInput("DamageActivator99", DamageActivator99);
+RegisterScriptInput("DamageActivator15", DamageActivator15);
+RegisterScriptInput("DamageActivator60", DamageActivator60);
+RegisterScriptInput("SlotmachinePressed1", SlotmachinePressed1);
+RegisterScriptInput("SlotmachinePressed2", SlotmachinePressed2);
+RegisterScriptInput("SlotmachinePressed3", SlotmachinePressed3);
+RegisterScriptInput("bindbutton", bindbutton);
+RegisterScriptInput("BuildBuffer", BuildBuffer);
+RegisterScriptInput("post", PostSpawn);
+RegisterScriptInput("Start", Start);
+RegisterScriptInput("rainon", () => SetRainEnabled(true));
+RegisterScriptInput("rainoff", () => SetRainEnabled(false));
+RegisterScriptInput("CheckStage", CheckStage);
+RegisterScriptInput("Tick", Tick);
+RegisterScriptInput("ReRecordPlayerTeams", ReRecordPlayerTeams);
 
 Instance.OnPlayerReset((event) => {
     const pawn = event.player;
@@ -3544,12 +3834,21 @@ Instance.OnPlayerReset((event) => {
     const currentTeam = controller.GetTeamNumber();
     const previousTeam = playerPreviousTeams.get(pawn);
 
-    if (previousTeam === 3 && currentTeam === 2) {
-        Instance.EntFireAtTarget({ target: pawn, input: "KeyValue", value: "speed 1.00", delay: 0.00 });
-        Instance.EntFireAtTarget({ target: pawn, input: "KeyValue", value: "gravity 1.00", delay: 0.00 });
+    if (previousTeam !== undefined && previousTeam !== currentTeam) {
+        RestorePlayerMovement(pawn, 0.20);
     }
 
     playerPreviousTeams.set(pawn, currentTeam);
+});
+
+Instance.OnPlayerTeamChanged((event) => {
+    const pawn = event && event.player;
+    if (!pawn || !pawn.IsValid()) return;
+    RestorePlayerMovement(pawn, 0.20);
+    const controller = pawn.GetPlayerController();
+    if (controller && controller.IsValid()) {
+        playerPreviousTeams.set(pawn, controller.GetTeamNumber());
+    }
 });
 
 function ReRecordPlayerTeams(inputData) {
@@ -3565,6 +3864,14 @@ function ReRecordPlayerTeams(inputData) {
 }
 
 Instance.OnRoundStart(() => {
+    StopRuntime();
+    roundActive = true;
+    stageConfigured = false;
+    startedEpoch = -1;
+    needs_deco_after_final = false;
+    decorationTemplateCache.clear();
+    legacyEntityState.clear();
+    RunAfter(0.10, ShowAuthorHud, "author_hud");
     nomoreholds = false;
     amount_sub_current = AMOUNT_SUB_CAP;
     holdamount = AMOUNT_HOLD;
@@ -3589,10 +3896,6 @@ Instance.OnRoundStart(() => {
     Crot = Vector(0, 0, 0);
     voidspace = 99999999;
     voidspace_biggestwidth = 0;
-    winnerlist = [];
-    winnerlistSlots = new Set();
-    t_players_in_buffer = [];
-    winnerlistfirst = false;
     used_deco_positions = [];
     hold_positions = [];
     last_deco_frame = 0;
@@ -3604,54 +3907,23 @@ Instance.OnRoundStart(() => {
     slotmachineBindings = new Map();
     skip_first_hold = true;
 
-    Instance.EntFireAtName({ name: "builder_script", input: "RunScriptInput", value: "ReRecordPlayerTeams", delay: 20.00 });
+    Entities.FireInput({ name: "builder_script", input: "RunScriptInput", value: "ReRecordPlayerTeams", delay: 20.00 });
 
     CheckStage();
 
-    Build(new B_STRAIGHT(), Cpos, Crot);
-    build_count = AMOUNT_MAIN_CAP;
-    amount_sub_current = AMOUNT_SUB_CAP;
-    holdamount = AMOUNT_HOLD;
+    StartRoutePlanning();
     ResetPlayers();
-    TickFlashlight();
+    Start();
 });
 
-Instance.OnBeginRoundRestart(() => {
-    building = false;
-});
+Instance.OnBeginRoundRestart(StopRuntime);
+Instance.OnRoundEnd(StopRuntime);
 
 let onPlayerSayCallbacks = [];
 let onPlayerDisconnectCallbacks = [];
 let onPlayerConnectCallbacks = [];
 
-onPlayerDisconnectCallbacks.push((event) => {
-    const slot = event.playerSlot;
-
-    if (winnerlistSlots.has(slot)) {
-        function getPlayerSlot(p) {
-            if (p && p.IsValid && p.IsValid()) {
-                if (p.GetPlayerSlot) return p.GetPlayerSlot();
-                if (p.GetPlayerController) {
-                    const ctrl = p.GetPlayerController();
-                    return ctrl ? ctrl.GetPlayerSlot() : null;
-                }
-            }
-            return null;
-        }
-
-        for (let i = winnerlist.length - 1; i >= 0; i--) {
-            const p = winnerlist[i];
-            const pSlot = getPlayerSlot(p);
-            if (pSlot === slot) {
-                winnerlist.splice(i, 1);
-                break;
-            } else if (!p || !p.IsValid || !p.IsValid()) {
-                winnerlist.splice(i, 1);
-            }
-        }
-        winnerlistSlots.delete(slot);
-    }
-});
+onPlayerDisconnectCallbacks.push(event => PruneWinnerSlots(event.playerSlot));
 
 Instance.OnPlayerChat((event) => {
     for (const cb of onPlayerSayCallbacks) {
@@ -3680,17 +3952,20 @@ Instance.OnPlayerActivate((event) => {
 });
 
 function OnEventFiredEVENT_PLAYER_SAY(callback) {
-    onPlayerSayCallbacks.push(callback);
+    if (typeof callback === "function") onPlayerSayCallbacks.push(callback);
 }
 
 function OnEventFiredEVENT_PLAYER_DISCONNECT(callback) {
-    onPlayerDisconnectCallbacks.push(callback);
+    if (typeof callback === "function") onPlayerDisconnectCallbacks.push(callback);
 }
 
 function OnEventFiredEVENT_PLAYER_CONNECT(callback) {
-    onPlayerConnectCallbacks.push(callback);
+    if (typeof callback === "function") onPlayerConnectCallbacks.push(callback);
 }
 
 function OnEventFiredEVENT_DOOR_MOVING(callback) {
 }
 
+
+Instance.OnScriptReload({ before: StopRuntime, after: () => { StopRuntime(); RefreshExistingRoadLights(); } });
+Instance.OnActivate(RefreshExistingRoadLights);
