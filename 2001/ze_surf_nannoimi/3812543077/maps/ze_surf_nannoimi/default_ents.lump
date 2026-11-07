@@ -1511,31 +1511,6 @@
     "filtername": "",
     "spawnflags": "4097",
     "globalname": "",
-    "StartDisabled": "1",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "[PR#]zd1",
-    "vscripts": "",
-    "classname": "trigger_teleport",
-    "origin": "-13692.311523 14015.000000 10490.876953",
-    "angles": "0.000000 180.000031 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "259",
-    "model": "maps/ze_surf_nannoimi/entities/zd1_259.vmdl"
-  },
-  {
-    "check_if_dest_clear_for_player": "0",
-    "mirror_player": "0",
-    "use_landmark_angles": "0",
-    "landmark": "",
-    "target": "[PR#]d1",
-    "filtername": "",
-    "spawnflags": "4097",
-    "globalname": "",
     "StartDisabled": "0",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -3001,7 +2976,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "435",
-    "model": "maps/ze_surf_nannoimi/entities/zt1_435.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/zt1_435.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -3026,68 +3027,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "436",
-    "model": "maps/ze_surf_nannoimi/entities/ht1_436.vmdl"
-  },
-  {
-    "depth_render_offset": "0.125000",
-    "reorient_mode": "0",
-    "justify_vertical": "0",
-    "justify_horizontal": "0",
-    "font_name": "Arial Black",
-    "font_size": "20.000000",
-    "world_units_per_pixel": "1.000000",
-    "color": "255 255 255",
-    "fullbright": "0",
-    "enabled": "1",
-    "message": "\u6211\u89C9\u5F97\u6211\u53C8\u884C\u4E86",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "point_worldtext",
-    "origin": "-9123.500000 12605.125000 10301.500000",
-    "angles": "0.000000 90.000000 90.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "440"
-  },
-  {
-    "check_if_dest_clear_for_player": "0",
-    "mirror_player": "0",
-    "use_landmark_angles": "0",
-    "landmark": "",
-    "target": "[PR#]d2",
-    "filtername": "",
-    "spawnflags": "4097",
-    "globalname": "",
-    "StartDisabled": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "[PR#]retry1",
-    "vscripts": "",
-    "classname": "trigger_teleport",
-    "origin": "-9105.500000 12660.625000 10286.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "442",
-    "model": "maps/ze_surf_nannoimi/entities/retry1_442.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/ht1_436.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -3112,7 +3078,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "445",
-    "model": "maps/ze_surf_nannoimi/entities/ht2_445.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/ht2_445.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -3152,7 +3144,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "447",
-    "model": "maps/ze_surf_nannoimi/entities/zt2_447.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/zt2_447.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -3217,7 +3235,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "478",
-    "model": "maps/ze_surf_nannoimi/entities/ct2_478.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/ct2_478.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -3316,67 +3360,6 @@
     "angles": "0.000000 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "527"
-  },
-  {
-    "depth_render_offset": "0.125000",
-    "reorient_mode": "0",
-    "justify_vertical": "0",
-    "justify_horizontal": "0",
-    "font_name": "Arial Black",
-    "font_size": "20.000000",
-    "world_units_per_pixel": "1.000000",
-    "color": "255 255 255",
-    "fullbright": "0",
-    "enabled": "1",
-    "message": "\u6211\u89C9\u5F97\u6211\u53C8\u884C\u4E86",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "point_worldtext",
-    "origin": "534.000000 14050.000000 10311.375977",
-    "angles": "0.000000 90.000000 90.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "528"
-  },
-  {
-    "check_if_dest_clear_for_player": "0",
-    "mirror_player": "0",
-    "use_landmark_angles": "0",
-    "landmark": "",
-    "target": "[PR#]d5",
-    "filtername": "",
-    "spawnflags": "4097",
-    "globalname": "",
-    "StartDisabled": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "trigger_teleport",
-    "origin": "552.000000 14101.500000 10295.875977",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "530",
-    "model": "maps/ze_surf_nannoimi/entities/unnamed_530.vmdl"
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -5670,7 +5653,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1181",
-    "model": "maps/ze_surf_nannoimi/entities/ht3_1181.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/ht3_1181.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -5695,7 +5704,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1183",
-    "model": "maps/ze_surf_nannoimi/entities/zt3_1183.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/zt3_1183.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "wait": "1.000000",
@@ -6030,7 +6065,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1195",
-    "model": "maps/ze_surf_nannoimi/entities/zt4_1195.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/zt4_1195.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -6120,7 +6181,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1237",
-    "model": "maps/ze_surf_nannoimi/entities/ct4_1237.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/ct4_1237.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -7128,67 +7215,6 @@
     "angles": "0.000000 90.000000 0.000000",
     "scales": "0.696696 0.696696 0.696696",
     "hammerUniqueId": "1394"
-  },
-  {
-    "depth_render_offset": "0.125000",
-    "reorient_mode": "0",
-    "justify_vertical": "0",
-    "justify_horizontal": "0",
-    "font_name": "Arial Black",
-    "font_size": "20.000000",
-    "world_units_per_pixel": "1.000000",
-    "color": "255 255 255",
-    "fullbright": "0",
-    "enabled": "1",
-    "message": "\u6211\u89C9\u5F97\u6211\u53C8\u884C\u4E86",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "point_worldtext",
-    "origin": "7586.863770 4162.000000 9349.000000",
-    "angles": "0.000000 90.000000 90.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1407"
-  },
-  {
-    "check_if_dest_clear_for_player": "0",
-    "mirror_player": "0",
-    "use_landmark_angles": "0",
-    "landmark": "",
-    "target": "[PR#]d9",
-    "filtername": "",
-    "spawnflags": "4097",
-    "globalname": "",
-    "StartDisabled": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "trigger_teleport",
-    "origin": "7604.863770 4213.500000 9333.500000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1408",
-    "model": "maps/ze_surf_nannoimi/entities/unnamed_1408.vmdl"
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -8406,7 +8432,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1476",
-    "model": "maps/ze_surf_nannoimi/entities/zt6_1476.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/zt6_1476.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -8431,7 +8483,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1477",
-    "model": "maps/ze_surf_nannoimi/entities/ht5_1477.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/ht5_1477.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "wait": "1.000000",
@@ -10333,49 +10411,6 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1799"
-  },
-  {
-    "NoInterpolate": "0",
-    "ScriptedMovement": "0",
-    "solidbsp": "0",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AlwaysSolidIgnoreNav": "0",
-    "invert_exclusion": "0",
-    "excludednpc": "",
-    "Solidity": "1",
-    "_minlight": "",
-    "add_attribute": "",
-    "spawnflags": "2",
-    "disableshadows": "0",
-    "StartDisabled": "0",
-    "InputFilter": "0",
-    "globalname": "",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "vscripts": "",
-    "classname": "func_brush",
-    "origin": "-9110.625000 12659.625000 10269.500000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1805",
-    "model": "maps/ze_surf_nannoimi/entities/unnamed_1805.vmdl"
   },
   {
     "NoInterpolate": "0",
@@ -13773,7 +13808,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2036",
-    "model": "maps/ze_surf_nannoimi/entities/end1at1_2036.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end1at1_2036.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -13798,7 +13859,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2037",
-    "model": "maps/ze_surf_nannoimi/entities/end1at2_2037.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end1at2_2037.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -13823,7 +13910,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2039",
-    "model": "maps/ze_surf_nannoimi/entities/end1at3_2039.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end1at3_2039.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -13848,7 +13961,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2042",
-    "model": "maps/ze_surf_nannoimi/entities/end1at4_2042.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end1at4_2042.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -13903,7 +14042,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2048",
-    "model": "maps/ze_surf_nannoimi/entities/end1at5_2048.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end1at5_2048.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "thinkalways": "0",
@@ -14068,7 +14233,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2062",
-    "model": "maps/ze_surf_nannoimi/entities/teledoor3_2062.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/teledoor3_2062.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "AllowMovableNavMeshDockingOnEntireEntity": "0",
@@ -14991,7 +15182,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2179",
-    "model": "maps/ze_surf_nannoimi/entities/end2at1_2179.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end2at1_2179.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "depth_render_offset": "0.125000",
@@ -15067,7 +15284,33 @@
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2186",
-    "model": "maps/ze_surf_nannoimi/entities/end2at2_2186.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end2at2_2186.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -15092,7 +15335,33 @@
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2187",
-    "model": "maps/ze_surf_nannoimi/entities/end2at3_2187.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end2at3_2187.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "depth_render_offset": "0.125000",
@@ -18020,6 +18289,30 @@
         "param": "120",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
       }
     ]
   },
@@ -18345,7 +18638,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2409",
-    "model": "maps/ze_surf_nannoimi/entities/end2at4_2409.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/end2at4_2409.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "InitialDelay": "0.000000",
@@ -18728,7 +19047,7 @@
     "connections": [
       {
         "output": "OnStartTouch",
-        "target": "[PR#]round_count_success",
+        "target": "[PR#]round_count_scusses",
         "input": "add",
         "param": "1",
         "delay": 2,
@@ -18736,7 +19055,7 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]round_count_success",
+        "target": "[PR#]round_count_scusses",
         "input": "Enable",
         "param": "",
         "delay": 0,
@@ -22248,31 +22567,6 @@
     "hammerUniqueId": "2829"
   },
   {
-    "check_if_dest_clear_for_player": "0",
-    "mirror_player": "0",
-    "use_landmark_angles": "0",
-    "landmark": "",
-    "target": "[PR#]kz1",
-    "filtername": "[PR#]zombie",
-    "spawnflags": "4097",
-    "globalname": "",
-    "StartDisabled": "1",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]zombiejinlu",
-    "classname": "trigger_teleport",
-    "origin": "1696.000000 12420.000000 9286.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "2830",
-    "model": "maps/ze_surf_nannoimi/entities/zombiejinlu_2830.vmdl"
-  },
-  {
     "depth_render_offset": "0.125000",
     "reorient_mode": "0",
     "justify_vertical": "0",
@@ -24162,30 +24456,6 @@
         "param": "",
         "delay": 0,
         "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Enable",
-        "param": "",
-        "delay": 2.200000047683716,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": -1
       }
     ]
   },
@@ -24214,30 +24484,6 @@
         "output": "OnStartTouch",
         "target": "[PR#]stage_1_tp_human",
         "input": "TeleportToCurrentPos",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Enable",
-        "param": "",
-        "delay": 2.200000047683716,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!self",
-        "input": "FireUser1",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -24473,6 +24719,22 @@
         "input": "Enable",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]tp_to_stage_1_zombie",
+        "input": "Disable",
+        "param": "",
+        "delay": 100,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]tp_to_stage_1_human",
+        "input": "Disable",
+        "param": "",
+        "delay": 100,
         "limit": -1
       }
     ]
@@ -24749,7 +25011,7 @@
     "vscripts": "",
     "targetname": "[PR#]tiaodao2",
     "classname": "info_teleport_destination",
-    "origin": "9289.000000 -11595.000000 10713.000000",
+    "origin": "9289.000000 -11595.000000 10729.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2910"
@@ -24777,7 +25039,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2914",
-    "model": "maps/ze_surf_nannoimi/entities/stage_3_human_tp_1_2914.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/stage_3_human_tp_1_2914.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "triggeronstarttouch": "0",
@@ -25131,7 +25419,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2934",
-    "model": "maps/ze_surf_nannoimi/entities/stage_3_tiaodao_tp_2934.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/stage_3_tiaodao_tp_2934.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -25156,7 +25470,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2939",
-    "model": "maps/ze_surf_nannoimi/entities/stage_3_zombie_tp_2939.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/stage_3_zombie_tp_2939.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "local.scales": "0.000000 0.000000 0.000000",
@@ -25168,7 +25508,7 @@
     "vscripts": "",
     "targetname": "[PR#]tiaodao3",
     "classname": "info_teleport_destination",
-    "origin": "9289.000000 -11585.000000 10944.000000",
+    "origin": "9289.000000 -11585.000000 10914.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2941"
@@ -25196,7 +25536,33 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2943",
-    "model": "maps/ze_surf_nannoimi/entities/stage_3_zombie_tp_2_2943.vmdl"
+    "model": "maps/ze_surf_nannoimi/entities/stage_3_zombie_tp_2_2943.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
   },
   {
     "Template64": "",
@@ -25824,6 +26190,143 @@
         "target": "!activator",
         "input": "SetDamageFilter",
         "param": "[PR#]notzombie",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "check_if_dest_clear_for_player": "0",
+    "mirror_player": "0",
+    "use_landmark_angles": "0",
+    "landmark": "",
+    "target": "[PR#]d1",
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]zd1",
+    "vscripts": "",
+    "classname": "trigger_teleport",
+    "origin": "-13692.311523 14015.000000 10490.876953",
+    "angles": "0.000000 180.000031 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "259",
+    "model": "maps/ze_surf_nannoimi/entities/zd1_259.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]human_god_disable",
+    "vscripts": "",
+    "classname": "trigger_multiple",
+    "origin": "8344.000000 -10980.000000 7950.032227",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2988",
+    "model": "maps/ze_surf_nannoimi/entities/human_god_disable_2988.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetDamageFilter",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!self",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 4,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]human_god_disable1",
+    "classname": "trigger_multiple",
+    "origin": "8344.000000 -10980.000000 7951.032227",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "2989",
+    "model": "maps/ze_surf_nannoimi/entities/human_god_disable1_2989.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "SetDamageFilter",
+        "param": "",
         "delay": 0,
         "limit": -1
       }
