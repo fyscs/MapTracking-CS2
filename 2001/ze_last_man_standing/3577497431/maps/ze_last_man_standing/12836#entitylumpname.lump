@@ -308,7 +308,7 @@
         "output": "OnCase03",
         "target": "[PR#]stage_x_lower_door_5",
         "input": "AddOutput",
-        "param": "OnFullyOpen\u003ESpawn_Tank_Teleport_stage_5\u003ETeleport\u003E\u003E0\u003E1",
+        "param": "OnFullyOpen\u003Elms_ax_manager\u003ERunScriptInput\u003EMapStage5Spawn147\u003E0\u003E1",
         "delay": 2,
         "limit": 1
       },
@@ -316,7 +316,7 @@
         "output": "OnCase03",
         "target": "[PR#]stage_x_lower_door_5",
         "input": "AddOutput",
-        "param": "OnFullyOpen\u003Ev_model1\u003EEnableMotion\u003E\u003E0.1\u003E1",
+        "param": "OnFullyOpen\u003Elms_ax_manager\u003ERunScriptInput\u003EMapWake147\u003E0.1\u003E1",
         "delay": 2,
         "limit": 1
       },
@@ -324,7 +324,7 @@
         "output": "OnCase03",
         "target": "[PR#]stage_x_lower_door_5",
         "input": "AddOutput",
-        "param": "OnFullyOpen\u003Ev_model1\u003EDisableMotion\u003E\u003E2\u003E1",
+        "param": "OnFullyOpen\u003Elms_ax_manager\u003ERunScriptInput\u003EMapPark147\u003E2\u003E1",
         "delay": 2,
         "limit": 1
       },
@@ -332,7 +332,7 @@
         "output": "OnCase03",
         "target": "[PR#]stage_5_helper",
         "input": "AddOutput",
-        "param": "OnStartTouch\u003Estage5_tank_teleport_fix\u003ETeleport\u003E\u003E0\u003E1",
+        "param": "OnStartTouch\u003Elms_ax_manager\u003ERunScriptInput\u003EMapStage5Lift147\u003E0\u003E1",
         "delay": 1,
         "limit": 1
       }
@@ -666,9 +666,9 @@
       },
       {
         "output": "OnCase01",
-        "target": "[PR#]Stage_4_Spawn_Tank_Teleport_2",
-        "input": "Teleport",
-        "param": "",
+        "target": "[PR#]lms_ax_manager",
+        "input": "RunScriptInput",
+        "param": "MapStage4Spawn147",
         "delay": 2,
         "limit": 1
       }

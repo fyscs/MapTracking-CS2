@@ -47,18 +47,18 @@
     "_template_lump_ent_index": "0",
     "connections": [
       {
-        "output": "OnUser4",
-        "target": "[PR#]Weapon_Mine_HasAmmo",
-        "input": "Trigger",
-        "param": "",
+        "output": "OnPressed",
+        "target": "[PR#]LMS_Mine_Manager150",
+        "input": "RunScriptInput",
+        "param": "Place",
         "delay": 0,
         "limit": -1
       },
       {
-        "output": "OnPressed",
-        "target": "[PR#]context_mine",
-        "input": "TestActivator",
-        "param": "",
+        "output": "OnUser4",
+        "target": "[PR#]LMS_Mine_Manager150",
+        "input": "RunScriptInput",
+        "param": "Place",
         "delay": 0,
         "limit": -1
       }
@@ -234,80 +234,6 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "369",
-    "_template_lump_ent_index": "3",
-    "connections": [
-      {
-        "output": "OnEntitySpawned",
-        "target": "[PR#]Weapon_Mine_Ammo",
-        "input": "Subtract",
-        "param": "1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnEntitySpawned",
-        "target": "[PR#]Weapon_Mine_Ammo",
-        "input": "GetValue",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "max": "99",
-    "min": "0",
-    "startvalue": "16",
-    "StartDisabled": "0",
-    "vscripts": "",
-    "targetname": "[PR#]Weapon_Mine_Ammo",
-    "classname": "math_counter",
-    "origin": "0.000000 -16.000000 0.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "372",
-    "_template_lump_ent_index": "4",
-    "connections": [
-      {
-        "output": "OnHitMin",
-        "target": "[PR#]Weapon_Mine_HasAmmo",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMin",
-        "target": "[PR#]Weapon_Mine_Model",
-        "input": "TurnOff",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "0",
-    "StartDisabled": "0",
-    "vscripts": "",
-    "targetname": "[PR#]Weapon_Mine_HasAmmo",
-    "classname": "logic_relay",
-    "origin": "16.000000 0.000000 0.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "374",
-    "_template_lump_ent_index": "5",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Weapon_Mine_Projectile_Spawner",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "3"
   }
 ]

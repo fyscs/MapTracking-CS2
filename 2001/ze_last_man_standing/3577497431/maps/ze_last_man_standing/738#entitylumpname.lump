@@ -64,17 +64,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "736",
     "model": "maps/ze_last_man_standing/entities/weapon_mine_projectile_physbox_736.vmdl",
-    "_template_lump_ent_index": "0",
-    "connections": [
-      {
-        "output": "OnBreak",
-        "target": "[PR#]Weapon_Mine_Projectile_Model\u00260000",
-        "input": "FireUser4",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "0"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -150,41 +140,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "739",
-    "_template_lump_ent_index": "1",
-    "connections": [
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Weapon_Mine_Projectile_Physbox\u00260000",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Weapon_Mine_Projectile_Logic\u00260000",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser4",
-        "target": "[PR#]Global_Maker_Explosion",
-        "input": "FireUser2",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser4",
-        "target": "[PR#]Global_Maker_Explosion",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!caller",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "1"
   },
   {
     "PassthroughCaller": "0",
@@ -198,33 +154,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "735",
-    "_template_lump_ent_index": "2",
-    "connections": [
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Weapon_Mine_Projectile_Physbox\u00260000",
-        "input": "DisableMotion",
-        "param": "",
-        "delay": 1.5,
-        "limit": -1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Weapon_Mine_Projectile_Trigger\u00260000",
-        "input": "Enable",
-        "param": "",
-        "delay": 1.5,
-        "limit": -1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Weapon_Mine_Projectile_Trigger_Pickup\u00260000",
-        "input": "Enable",
-        "param": "",
-        "delay": 1.5,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "2"
   },
   {
     "filtername": "[PR#]team_filter_zombies",
@@ -245,20 +175,11 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "733",
     "model": "maps/ze_last_man_standing/entities/weapon_mine_projectile_trigger_733.vmdl",
-    "_template_lump_ent_index": "3",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]Weapon_Mine_Projectile_Physbox\u00260000",
-        "input": "Break",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "3"
   },
   {
-    "filtername": "[PR#]Weapon_Mine_Projectile_PickupFilter",
+    "wait": "1.000000",
+    "filtername": "",
     "spawnflags": "1",
     "globalname": "",
     "StartDisabled": "1",
@@ -270,46 +191,12 @@
     "parentname": "[PR#]Weapon_Mine_Projectile_Physbox\u00260000",
     "vscripts": "",
     "targetname": "[PR#]Weapon_Mine_Projectile_Trigger_Pickup\u00260000",
-    "classname": "trigger_once",
+    "classname": "trigger_multiple",
     "origin": "0.000000 0.000000 12.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "731",
     "model": "maps/ze_last_man_standing/entities/weapon_mine_projectile_trigger_pickup_731.vmdl",
-    "_template_lump_ent_index": "4",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Weapon_Mine_Model",
-        "input": "TurnOn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Weapon_Mine_Projectile_Model\u00260000",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Weapon_Mine_Ammo",
-        "input": "Add",
-        "param": "1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Weapon_Mine_HasAmmo",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "4"
   }
 ]

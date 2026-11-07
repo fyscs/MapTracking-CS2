@@ -46,9 +46,9 @@
       },
       {
         "output": "OnPlayerOutZone",
-        "target": "[PR#]driver1",
-        "input": "SetHealth",
-        "param": "-1",
+        "target": "[PR#]lms_ax_manager",
+        "input": "RunScriptInput",
+        "param": "MapKillHumanCrew147",
         "delay": 0,
         "limit": 1
       },
