@@ -68,20 +68,20 @@
   },
   {
     "vscripts": "",
-    "targetname": "[PR#]stage_count",
+    "targetname": "[PR#]round_count",
     "StartDisabled": "0",
     "startvalue": "0",
     "min": "0",
     "max": "0",
     "classname": "math_counter",
-    "origin": "236.000000 -788.000000 0.000000",
+    "origin": "0.000000 0.000000 0.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3",
     "connections": [
       {
         "output": "OnGetValue",
-        "target": "[PR#]laver_case",
+        "target": "[PR#]round_case",
         "input": "InValue",
         "param": "",
         "delay": 0,
@@ -109,9 +109,6 @@
     "hammerUniqueId": "4"
   },
   {
-    "bakedshadowindex": "0",
-    "light_map_uniqueid": "-252956304",
-    "light_path_uniqueid": "-786417491",
     "brightness_legacy": "-nan(ind)",
     "brightness_lumens": "0",
     "fademaxdist": "",
@@ -149,7 +146,7 @@
     "castshadows": "1",
     "bouncescale": "1.000000",
     "rendertocubemaps": "1",
-    "directlight": "3",
+    "directlight": "2",
     "brightness": "1.000000",
     "color": "255 255 255",
     "enabled": "1",
@@ -158,5 +155,74 @@
     "angles": "45.000000 45.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "5"
+  },
+  {
+    "targetname": "[PR#]stage_count",
+    "vscripts": "",
+    "StartDisabled": "0",
+    "startvalue": "1",
+    "min": "1",
+    "max": "3",
+    "classname": "math_counter",
+    "origin": "0.000000 0.000000 0.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "6",
+    "connections": [
+      {
+        "output": "OnGetValue",
+        "target": "[PR#]stage_case",
+        "input": "InValue",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "targetname": "[PR#]round_count_scusses",
+    "vscripts": "",
+    "StartDisabled": "0",
+    "startvalue": "0",
+    "min": "0",
+    "max": "0",
+    "classname": "math_counter",
+    "origin": "0.000000 0.000000 0.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "7",
+    "connections": [
+      {
+        "output": "OnGetValue",
+        "target": "[PR#]round_case_success",
+        "input": "InValue",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "targetname": "[PR#]round_count_fail",
+    "vscripts": "",
+    "StartDisabled": "0",
+    "startvalue": "0",
+    "min": "0",
+    "max": "0",
+    "classname": "math_counter",
+    "origin": "0.000000 0.000000 0.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "8",
+    "connections": [
+      {
+        "output": "OnGetValue",
+        "target": "[PR#]round_case_fail",
+        "input": "InValue",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]
