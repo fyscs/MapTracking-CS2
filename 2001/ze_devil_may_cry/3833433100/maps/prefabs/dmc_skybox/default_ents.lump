@@ -17132,5 +17132,151 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "targetname": "[PR#]WPYZ",
+    "vscripts": "",
+    "ResponseContext": "",
+    "add_attribute": "",
+    "add_modifier": "",
+    "clientSideEntity": "0",
+    "Negated": "0",
+    "filterattribute": "76561199091400644",
+    "classname": "filter_activator_attribute_int",
+    "origin": "859.000000 -546.000000 378.881134",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "633",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "sper2:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]supporter_script",
+        "input": "RunScriptInput",
+        "param": "supporter_wpyz",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]souls_script",
+        "input": "RunScriptInput",
+        "param": "rs_add_me",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Global_Filter_Counter",
+        "input": "Add",
+        "param": "1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "SperNero:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "SperDante:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "SperVergil:1",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "filterattribute": "76561199019745237",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]ZQ",
+    "classname": "filter_activator_attribute_int",
+    "origin": "881.000000 -546.000000 378.881134",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "634",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "sper2:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]supporter_script",
+        "input": "RunScriptInput",
+        "param": "supporter_zq",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]souls_script",
+        "input": "RunScriptInput",
+        "param": "rs_add_me",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Global_Filter_Counter",
+        "input": "Add",
+        "param": "1",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "SperNero:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "SperDante:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "SperVergil:1",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]

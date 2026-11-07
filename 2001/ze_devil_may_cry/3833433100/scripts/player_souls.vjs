@@ -5,7 +5,7 @@ import { Instance, CSPlayerPawn, CSMoveType, CSInputs, CSGearSlot, CSWeaponType 
 
 // ==================== 配置 ====================
 const HIT_COUNT_TO_REWARD = 5;
-const CT_HIT_COUNT_TO_REWARD = 15;
+const CT_HIT_COUNT_TO_REWARD = 13;
 const SOULS_HUD_NAME = "souls_hud";
 const SHOP_HUD_NAME = "shop_hud";
 const EXO_DASH_SPEED = 800;
@@ -16,10 +16,10 @@ const DASH_IMMUNITY_DURATION = 0.5;
 const GLOBAL_THINK_INTERVAL = 0.1;
 const CELL_HEAL_AMOUNT = 1;
 
-const PRICE_ARMOR = 120;
-const PRICE_EXO = 100;
-const PRICE_BACKPACK = 180;
-const PRICE_CELL = 150;
+const PRICE_ARMOR = 110;
+const PRICE_EXO = 90;
+const PRICE_BACKPACK = 150;
+const PRICE_CELL = 130;
 
 const COOLDOWN_UI_INTERVAL = 0.5;
 const CLEANUP_INTERVAL = 5.0;

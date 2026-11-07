@@ -308882,6 +308882,14 @@
         "param": "act5_dialog2",
         "delay": 25,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Item_Punchline_A_Button",
+        "input": "Kill",
+        "param": "",
+        "delay": 20,
+        "limit": 1
       }
     ]
   },
@@ -380419,6 +380427,22 @@
         "param": "",
         "delay": 1,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]WPYZ",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]ZQ",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 1,
+        "limit": -1
       }
     ]
   },
@@ -384846,7 +384870,7 @@
         "limit": -1
       },
       {
-        "output": "OnTrigger",
+        "output": "X",
         "target": "!activator",
         "input": "Keyvalue",
         "param": "speed 1",
@@ -384854,7 +384878,7 @@
         "limit": -1
       },
       {
-        "output": "OnTrigger",
+        "output": "X",
         "target": "!activator",
         "input": "Keyvalue",
         "param": "speed 0",
