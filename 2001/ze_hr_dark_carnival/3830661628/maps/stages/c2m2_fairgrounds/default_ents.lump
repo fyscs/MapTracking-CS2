@@ -41526,8 +41526,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-3999.800537 -1440.054932 -127.226128",
-    "angles": "-1.664914 359.982666 0.001132",
+    "origin": "-3999.826416 -1440.049316 -127.227455",
+    "angles": "-1.661533 0.033403 0.001162",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12075"
   },
@@ -42758,8 +42758,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-3970.356934 -1426.249634 -90.675140",
-    "angles": "0.000000 92.753540 76.169319",
+    "origin": "-3970.388916 -1426.245361 -90.676598",
+    "angles": "0.000000 92.804611 76.154716",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12089"
   },
@@ -43107,8 +43107,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-3992.024902 -1355.784058 -127.900757",
-    "angles": "0.000000 7.211133 0.008476",
+    "origin": "-3992.026611 -1355.775757 -127.900024",
+    "angles": "0.000000 7.220677 0.009590",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12093"
   },
@@ -83927,8 +83927,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2752.132324 449.172913 24.095179",
-    "angles": "-0.005895 7.322278 -0.012837",
+    "origin": "2752.132568 449.172668 24.095076",
+    "angles": "-0.008592 7.334251 -0.008643",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12562"
   },
@@ -84015,8 +84015,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2751.819336 462.832306 24.097151",
-    "angles": "-0.035963 15.323076 -0.026194",
+    "origin": "2751.813232 462.831970 24.095730",
+    "angles": "-0.022669 15.323966 -0.020145",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12563"
   },
@@ -84103,8 +84103,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2751.979980 455.959930 55.482204",
-    "angles": "-0.065342 14.022245 0.044170",
+    "origin": "2751.975586 456.028198 55.479305",
+    "angles": "-0.077130 13.988291 -0.008327",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12564"
   },
@@ -84191,8 +84191,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2688.073975 561.210754 24.111403",
-    "angles": "-0.131633 7.286641 0.017534",
+    "origin": "2688.102539 561.196411 24.105202",
+    "angles": "-0.099915 7.303205 -0.031427",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12565"
   },
@@ -84279,8 +84279,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2687.755859 568.109253 55.498840",
-    "angles": "-0.217388 13.920897 -0.087551",
+    "origin": "2687.802002 568.062744 55.495186",
+    "angles": "-0.261636 14.031871 -0.060884",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12566"
   },
@@ -84367,8 +84367,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2687.729980 574.864868 24.105118",
-    "angles": "-0.084687 15.342689 -0.024774",
+    "origin": "2687.758789 574.854309 24.103245",
+    "angles": "-0.078515 15.348566 -0.033792",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12567"
   },
@@ -84455,8 +84455,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2687.912109 456.030487 55.485645",
-    "angles": "-0.149615 14.023205 -0.044798",
+    "origin": "2687.867188 456.008820 55.482712",
+    "angles": "-0.111546 13.980558 -0.011333",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12568"
   },
@@ -84543,8 +84543,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2687.789307 462.838745 24.095982",
-    "angles": "-0.020112 15.320486 -0.004578",
+    "origin": "2687.787109 462.832794 24.099052",
+    "angles": "-0.044923 15.322236 -0.017613",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12569"
   },
@@ -84631,8 +84631,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "2688.113037 449.177460 24.098330",
-    "angles": "-0.037918 7.303850 -0.010831",
+    "origin": "2688.098389 449.171844 24.097864",
+    "angles": "-0.039008 7.292154 -0.017059",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12570"
   },
@@ -111086,6 +111086,14 @@
         "param": "DetectWin",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say **\u8BF7\u5168\u4F53\u4EBA\u7C7B\u5FEB\u901F\u8FDB\u5165\u5B89\u5168\u5C4B\uFF0C\u957F\u65F6\u95F4\u5728\u5B89\u5168\u5C4B\u5916\u5C06\u5F3A\u5236\u9AD8\u4EAE\u663E\u793A**",
+        "delay": 2,
+        "limit": 1
       }
     ]
   },
@@ -111320,5 +111328,28 @@
         "limit": 1
       }
     ]
+  },
+  {
+    "triggeronstarttouch": "0",
+    "speed": "500",
+    "pushdir": "0.000000 0.000000 0.000000",
+    "filtername": "[PR#]pre_special_infected_filter",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]checkpoint_infected_push_cs2_ze",
+    "classname": "trigger_push",
+    "origin": "-4288.000000 -5512.000000 -8.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13062",
+    "model": "maps/stages/c2m2_fairgrounds/entities/checkpoint_infected_push_cs2_ze_13062.vmdl"
   }
 ]

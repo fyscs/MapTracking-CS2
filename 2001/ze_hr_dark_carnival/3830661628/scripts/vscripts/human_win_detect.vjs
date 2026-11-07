@@ -6,20 +6,24 @@ import { Console, Instance, Entities } from "cs_script/point_script";
 const CONFIG = {
     CHECKPOINT_OPEN_SPEED_BASE: 1,
     CHECKPOINT_OPEN_SPEED_PER_HUMAN: 0.2,
-    CHECKPOINT_OPEN_MAX_SCHEDULE: 200
+    CHECKPOINT_OPEN_MAX_SCHEDULE: 200,
+    CHECKPOINT_FORCE_GLOW_TIMES: 10
 }
 
 let checkpointOpenSchedule = 0;
 let checkpointZoneHumans = new Set();
 let isCheckpointOpenScheduleRunning = false;
+let detectWinTimes = 0;
 
 Instance.OnRoundStart(() => {
     checkpointOpenSchedule = 0;
     checkpointZoneHumans.clear();
     isCheckpointOpenScheduleRunning = false;
+    detectWinTimes = 0;
 });
 
 Instance.OnScriptInput("DetectWin", () => {
+    detectWinTimes++;
     const target1 = Entities.FindByName("human_win_detect_target1_cs2_ze")[0];
     if (!target1 || !target1) throw "错误：目标点丢失";
     const target2 = Entities.FindByName("human_win_detect_target2_cs2_ze")[0];
@@ -28,13 +32,27 @@ Instance.OnScriptInput("DetectWin", () => {
     const pos2 = target2.GetAbsOrigin();
     const players = Entities.FindByClass("player");
     let zombies = [];
+    let notCheckpointHumans = [];
+    let checkpointHumans = [];
     for (const player of players) {
         if (!player.IsValid() || !player.IsAlive()) continue;
         if (player.GetTeamNumber() === 3) {
-            if (!IsPointInBox(player.GetAbsOrigin(), pos1, pos2)) return;
+            if (IsPointInBox(player.GetAbsOrigin(), pos1, pos2)) checkpointHumans.push(player);
+            else notCheckpointHumans.push(player);
         } else if (player.GetTeamNumber() === 2) {
             zombies.push(player);
         }
+    }
+    if (notCheckpointHumans.length > 0) {
+        if (detectWinTimes >= CONFIG.CHECKPOINT_FORCE_GLOW_TIMES) {
+            for (const player of notCheckpointHumans) {
+                Entities.FireInput({ name: "glow_script", input: "RunScriptInput", value: "Glow(0, 0, 0)", activator: player });
+            }
+            for (const player of checkpointHumans) {
+                Entities.FireInput({ name: "glow_script", input: "RunScriptInput", value: "Unglow", activator: player });
+            }
+        }
+        return;
     }
     for (const player of zombies) {
         if (!IsPointInBox(player.GetAbsOrigin(), pos1, pos2)) {

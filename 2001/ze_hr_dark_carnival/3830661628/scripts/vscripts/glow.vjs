@@ -14,6 +14,7 @@ const players = new Map();
 const Colors = [
     { r: 255, g: 0, b: 0 },
     { r: 255, g: 150, b: 0 },
+    { r: 0, g: 0, b: 0 },
 ];
 
 for (const color of Colors) {

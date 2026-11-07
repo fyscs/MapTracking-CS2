@@ -12,7 +12,7 @@ import { Entity, Instance, Entities } from "cs_script/point_script";
 const CONFIG = {
     duration: 5,
     cd: 20,
-    damage: 40
+    damage: 20
 }
 
 let boomer = /** @type {Entity|undefined} */ (undefined);
