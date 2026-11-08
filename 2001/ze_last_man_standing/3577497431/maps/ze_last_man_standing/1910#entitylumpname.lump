@@ -136,7 +136,7 @@
         "target": "[PR#]Spawn_Nuke_Hurt\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.6000000238418579,
         "limit": -1
       },
       {
@@ -168,7 +168,7 @@
         "target": "[PR#]Spawn_Nuke_Hurt_Phys\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.6000000238418579,
         "limit": -1
       },
       {

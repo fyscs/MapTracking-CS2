@@ -109,7 +109,7 @@
         "target": "[PR#]Spawn_Projectile_Logic_Damage_All\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.75,
         "limit": 1
       },
       {
@@ -117,7 +117,7 @@
         "target": "[PR#]Spawn_Projectile_Shake\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.75,
         "limit": 1
       },
       {
@@ -125,7 +125,7 @@
         "target": "[PR#]Spawn_Projectile_Thruster\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.75,
         "limit": 1
       },
       {
@@ -133,7 +133,7 @@
         "target": "[PR#]Spawn_Projectile_Logic\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.75,
         "limit": 1
       },
       {
@@ -141,7 +141,7 @@
         "target": "!self",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.75,
         "limit": 1
       },
       {
@@ -149,7 +149,7 @@
         "target": "[PR#]Spawn_Projectile_Model\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.75,
         "limit": 1
       }
     ]
