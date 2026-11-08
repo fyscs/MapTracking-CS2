@@ -10,15 +10,7 @@ let titleHud = null;
 // 現在表示するタイトル情報
 // ============================================================
 
-let currentTitle = {
-    english: "CELESTIAL OPS",
-    japanese: "セレスティアル作戦",
-    description01: "NOV. 6TH, 1968 : COLD WAR",
-    description02: "The unconscious that resides within a person fills an empty vessel.",
-    description03: "This is my will.",
-    specialThanks: "SPECIAL THANKS",
-    serverName: "LUPERCALIA SERVER"
-};
+let currentTitle = null;
 
 // ============================================================
 // タイトルHUDを取得
