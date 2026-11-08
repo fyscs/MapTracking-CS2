@@ -10625,9 +10625,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Template_Vehicle_Car1",
-        "input": "ForceSpawn",
-        "param": "",
+        "target": "[PR#]LMS_Pickup_Controller",
+        "input": "RunScriptInput",
+        "param": "EnsurePickupSpawn188",
         "delay": 2,
         "limit": -1
       }
@@ -11506,9 +11506,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Template_Vehicle_Car1",
-        "input": "ForceSpawn",
-        "param": "",
+        "target": "[PR#]LMS_Pickup_Controller",
+        "input": "RunScriptInput",
+        "param": "EnsurePickupSpawn188",
         "delay": 2,
         "limit": -1
       }
@@ -21603,11 +21603,11 @@
     "precomputedobbextent0": "163.729004 170.704102 126.617188",
     "precomputedobbangles0": "0.000000 -45.000004 0.000000",
     "precomputedobborigin0": "-7395.607422 12127.634766 -12321.574219",
-    "precomputedboundsmaxs": "-7290.660156 12464.026367 -12127.859375",
+    "precomputedboundsmaxs": "-7290.660156 12464.026367 -12127.860352",
     "precomputedboundsmins": "-7960.105469 11882.508789 -12448.192383",
-    "precomputedobbextent": "302.546387 318.853027 160.166504",
+    "precomputedobbextent": "302.546387 318.853027 160.166016",
     "precomputedobbangles": "-0.000000 36.000000 0.000000",
-    "precomputedobborigin": "-7610.389648 12158.880859 -12288.025391",
+    "precomputedobborigin": "-7610.389648 12158.880859 -12288.026367",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
@@ -42381,6 +42381,438 @@
     "hammerUniqueId": "14582"
   },
   {
+    "cs_script": "scripts/car.vjs",
+    "targetname": "[PR#]LMS_Pickup_Controller",
+    "classname": "point_script",
+    "origin": "-2724.000000 1024.000000 -14900.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000180"
+  },
+  {
+    "Filter10": "",
+    "Filter09": "",
+    "Filter08": "",
+    "Filter07": "",
+    "Filter06": "",
+    "Filter05": "",
+    "Filter04": "",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "Filter01": "[PR#]team_filter_zombies",
+    "Filter02": "[PR#]filter_physics",
+    "Filter03": "[PR#]filter_physics_multiplayer",
+    "filtertype": "1",
+    "Negated": "0",
+    "targetname": "[PR#]lms_pu144_zombies_or_physics",
+    "classname": "filter_multi",
+    "origin": "-4948.000000 3416.000000 -14664.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000196"
+  },
+  {
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "filterclass": "func_physbox_multiplayer",
+    "Negated": "0",
+    "targetname": "[PR#]filter_physics_multiplayer",
+    "classname": "filter_activator_class",
+    "origin": "-4932.000000 3384.000000 -14664.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000197"
+  },
+  {
+    "entityIndexSelection": "0",
+    "sourceEntityAttachment": "",
+    "saveAndRestore": "0",
+    "sourceEntityName": "",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "toLocalPlayer": "0",
+    "stopOnNew": "1",
+    "startOnSpawn": "0",
+    "soundName": "lms.pickup.explosion_distant",
+    "targetname": "[PR#]LMS_Pickup_Explosion_Distant",
+    "classname": "point_soundevent",
+    "origin": "-5164.000000 3472.000000 -14664.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000198"
+  },
+  {
+    "Template64": "",
+    "Template63": "",
+    "Template62": "",
+    "Template61": "",
+    "Template60": "",
+    "Template59": "",
+    "Template58": "",
+    "Template57": "",
+    "Template56": "",
+    "Template55": "",
+    "Template54": "",
+    "Template53": "",
+    "Template52": "",
+    "Template51": "",
+    "Template50": "",
+    "Template49": "",
+    "Template48": "",
+    "Template47": "",
+    "Template46": "",
+    "Template45": "",
+    "Template44": "",
+    "Template43": "",
+    "Template42": "",
+    "Template41": "",
+    "Template40": "",
+    "Template39": "",
+    "Template38": "",
+    "Template37": "",
+    "Template36": "",
+    "Template35": "",
+    "Template34": "",
+    "Template33": "",
+    "Template32": "",
+    "Template31": "",
+    "Template30": "",
+    "Template29": "",
+    "Template28": "",
+    "Template27": "",
+    "Template26": "",
+    "Template25": "",
+    "Template24": "",
+    "Template23": "",
+    "Template22": "",
+    "Template21": "",
+    "Template20": "",
+    "Template19": "",
+    "Template18": "",
+    "Template17": "",
+    "Template16": "",
+    "Template15": "",
+    "Template14": "",
+    "Template13": "",
+    "Template12": "",
+    "Template11": "",
+    "Template10": "",
+    "Template09": "",
+    "Template08": "",
+    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
+    "entityFilterName": "",
+    "timeoutInterval": "0.000000",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
+    "asynchronous": "0",
+    "spawnflags": "0",
+    "targetname": "[PR#]LMS_Pickup_Small_Template",
+    "Template01": "[PR#]LMS_Pickup_Small_Particle",
+    "Template02": "[PR#]LMS_Pickup_Small_Shake",
+    "Template03": "[PR#]LMS_Pickup_Small_Logic",
+    "Template04": "[PR#]LMS_Pickup_Small_Sound",
+    "Template05": "[PR#]LMS_Pickup_Small_Damage",
+    "Template06": "[PR#]LMS_Pickup_Small_Damage_H",
+    "Template07": "[PR#]LMS_Pickup_Small_Damage_Phys",
+    "classname": "point_template",
+    "origin": "-4924.000000 3224.000000 -14664.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000201",
+    "worldName": "maps\\ze_last_man_standing",
+    "entityLumpName": "1000201#entityLumpName",
+    "TemplateFixup": "1"
+  },
+  {
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "EntityTemplate": "[PR#]LMS_Pickup_Small_Template",
+    "PostSpawnDirection": "0.000000 0.000000 0.000000",
+    "PostSpawnDirectionVariance": "0.150000",
+    "PostSpawnInheritAngles": "0",
+    "PostSpawnSpeed": "0.000000",
+    "spawnflags": "0",
+    "targetname": "[PR#]LMS_Pickup_Explosion_Maker",
+    "classname": "env_entity_maker",
+    "origin": "-4812.000000 3496.000000 -14664.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000202"
+  },
+  {
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "floatValue": "0.500000",
+    "parameterName": "volume",
+    "targetname": "[PR#]LMS_Pickup_Gas_Volume",
+    "classname": "snd_event_param",
+    "origin": "-2700.000000 1024.000000 -15068.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000203"
+  },
+  {
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "floatValue": "0.500000",
+    "parameterName": "volume",
+    "targetname": "[PR#]LMS_Pickup_Nogas_Volume",
+    "classname": "snd_event_param",
+    "origin": "-2684.000000 1024.000000 -15068.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000204"
+  },
+  {
+    "StartDisabled": "0",
+    "vscripts": "",
+    "max": "0",
+    "min": "0",
+    "startvalue": "0",
+    "targetname": "[PR#]LMS_Pickup_Guard_Request",
+    "classname": "math_counter",
+    "origin": "-2680.000000 1024.000000 -14900.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000211"
+  },
+  {
+    "StartDisabled": "0",
+    "vscripts": "",
+    "max": "0",
+    "min": "0",
+    "startvalue": "0",
+    "targetname": "[PR#]LMS_Pickup_Guard_Reply",
+    "classname": "math_counter",
+    "origin": "-2648.000000 1024.000000 -14900.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000212"
+  },
+  {
+    "Template64": "",
+    "Template63": "",
+    "Template62": "",
+    "Template61": "",
+    "Template60": "",
+    "Template59": "",
+    "Template58": "",
+    "Template57": "",
+    "Template56": "",
+    "Template55": "",
+    "Template54": "",
+    "Template53": "",
+    "Template52": "",
+    "Template51": "",
+    "Template50": "",
+    "Template49": "",
+    "Template48": "",
+    "Template47": "",
+    "Template46": "",
+    "Template45": "",
+    "Template44": "",
+    "Template43": "",
+    "Template42": "",
+    "Template41": "",
+    "Template40": "",
+    "Template39": "",
+    "Template38": "",
+    "Template37": "",
+    "Template36": "",
+    "Template35": "",
+    "Template34": "",
+    "Template33": "",
+    "Template32": "",
+    "Template31": "",
+    "Template30": "",
+    "Template29": "",
+    "Template28": "",
+    "Template27": "",
+    "Template26": "",
+    "Template25": "",
+    "Template24": "",
+    "Template23": "",
+    "Template22": "",
+    "Template21": "",
+    "Template20": "",
+    "Template19": "",
+    "Template18": "",
+    "Template17": "",
+    "Template06": "",
+    "Template05": "",
+    "Template04": "",
+    "Template03": "",
+    "Template02": "",
+    "Template01": "",
+    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
+    "entityFilterName": "",
+    "timeoutInterval": "0.000000",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
+    "asynchronous": "0",
+    "spawnflags": "2",
+    "Template16": "[PR#]Vehicle_Car1_Sound_Start",
+    "Template15": "[PR#]Vehicle_Car1_Sound_Nogas",
+    "Template14": "[PR#]Vehicle_Car1_Sound_Horn",
+    "Template13": "[PR#]Vehicle_Car1_Sound_Gas",
+    "Template12": "[PR#]Vehicle_Car1_Sound_Brake",
+    "Template11": "[PR#]Vehicle_Car1_Model",
+    "Template10": "[PR#]Vehicle_Car1_Hurt",
+    "Template09": "[PR#]Vehicle_Car1_Glass_Model",
+    "Template08": "[PR#]Vehicle_Car1_Explosion_Particle",
+    "Template07": "[PR#]Vehicle_Car1_Explosion_Hurt",
+    "targetname": "[PR#]LMS_Pickup_Aux_Template146",
+    "classname": "point_template",
+    "origin": "-2668.000000 1024.000000 -15052.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000213",
+    "worldName": "maps\\ze_last_man_standing",
+    "entityLumpName": "1000213#entityLumpName",
+    "connections": [
+      {
+        "output": "OnEntitySpawned",
+        "target": "[PR#]LMS_Pickup_Controller",
+        "input": "RunScriptInput",
+        "param": "PickupSpawned146",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "Template64": "",
+    "Template62": "",
+    "Template61": "",
+    "Template60": "",
+    "Template59": "",
+    "Template58": "",
+    "Template56": "",
+    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
+    "entityFilterName": "",
+    "timeoutInterval": "0.000000",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
+    "asynchronous": "0",
+    "spawnflags": "2",
+    "Template63": "[PR#]Vehicle_Car1_Exit_Position",
+    "Template57": "[PR#]Vehicle_Car1_Entrance_Teleport_Mech",
+    "Template55": "[PR#]Vehicle_Car1_Entrance_Position_Passager5",
+    "Template54": "[PR#]Vehicle_Car1_Entrance_Position_Passager4",
+    "Template53": "[PR#]Vehicle_Car1_Entrance_Position_Passager3",
+    "Template52": "[PR#]Vehicle_Car1_Entrance_Position_Passager2",
+    "Template51": "[PR#]Vehicle_Car1_Entrance_Position_Passager1",
+    "Template50": "[PR#]Vehicle_Car1_Entrance_Position_Mech",
+    "Template49": "[PR#]Vehicle_Car1_Entrance_Position_Driver",
+    "Template48": "[PR#]Vehicle_Car1_Dust_FRWheel",
+    "Template47": "[PR#]Vehicle_Car1_Dust_FLWheel",
+    "Template46": "[PR#]Vehicle_Car1_Dust_BRWheel",
+    "Template45": "[PR#]Vehicle_Car1_Dust_BLWheel",
+    "Template44": "[PR#]Vehicle_Car1_Button_Passager5",
+    "Template43": "[PR#]Vehicle_Car1_Button_Passager4",
+    "Template42": "[PR#]Vehicle_Car1_Button_Passager3",
+    "Template41": "[PR#]Vehicle_Car1_Button_Passager2",
+    "Template40": "[PR#]Vehicle_Car1_Button_Passager1",
+    "Template39": "[PR#]Vehicle_Car1_Button_Driver",
+    "Template38": "[PR#]Vehicle_Car1_Thruster_Y",
+    "Template37": "[PR#]Vehicle_Car1_Thruster_X",
+    "Template36": "[PR#]Vehicle_Car1_Sound_Gas_Low",
+    "Template35": "[PR#]Vehicle_Car1_Sound_Gas_High",
+    "Template34": "[PR#]Vehicle_Car1_Keepupright_FRWheel",
+    "Template33": "[PR#]Vehicle_Car1_Keepupright_FLWheel",
+    "Template32": "[PR#]Vehicle_Car1_Keepupright_BRWheel",
+    "Template31": "[PR#]Vehicle_Car1_Keepupright_BLWheel",
+    "Template30": "[PR#]Vehicle_Car1_Keep_FRWheel",
+    "Template29": "[PR#]Vehicle_Car1_Keep_FLWheel",
+    "Template28": "[PR#]Vehicle_Car1_Keep_BRWheel",
+    "Template27": "[PR#]Vehicle_Car1_Keep_BLWheel",
+    "Template26": "[PR#]Vehicle_Car1_Hinge_FRWheel",
+    "Template25": "[PR#]Vehicle_Car1_Hinge_FLWheel",
+    "Template24": "[PR#]Vehicle_Car1_Hinge_BRWheel",
+    "Template23": "[PR#]Vehicle_Car1_Hinge_BLWheel",
+    "Template22": "[PR#]Vehicle_Car1_FRWheel_Holder",
+    "Template21": "[PR#]Vehicle_Car1_FRWheel",
+    "Template20": "[PR#]Vehicle_Car1_FLWheel_Holder",
+    "Template19": "[PR#]Vehicle_Car1_FLWheel",
+    "Template18": "[PR#]Vehicle_Car1_Constrain_FRWheel",
+    "Template17": "[PR#]Vehicle_Car1_Constrain_FLWheel",
+    "Template16": "[PR#]Vehicle_Car1_Constrain_BRWheel",
+    "Template15": "[PR#]Vehicle_Car1_Constrain_BLWheel",
+    "Template14": "[PR#]Vehicle_Car1_Collision_FRWheel_Holder",
+    "Template13": "[PR#]Vehicle_Car1_Collision_FRWheel",
+    "Template12": "[PR#]Vehicle_Car1_Collision_FLWheel_Holder",
+    "Template11": "[PR#]Vehicle_Car1_Collision_FLWheel",
+    "Template10": "[PR#]Vehicle_Car1_Collision_BRWheel_Holder",
+    "Template09": "[PR#]Vehicle_Car1_Collision_BRWheel",
+    "Template08": "[PR#]Vehicle_Car1_Collision_BLWheel_Holder",
+    "Template07": "[PR#]Vehicle_Car1_Collision_BLWheel",
+    "Template06": "[PR#]Vehicle_Car1_Brake",
+    "Template05": "[PR#]Vehicle_Car1_Body",
+    "Template04": "[PR#]Vehicle_Car1_BRWheel_Holder",
+    "Template03": "[PR#]Vehicle_Car1_BRWheel",
+    "Template02": "[PR#]Vehicle_Car1_BLWheel_Holder",
+    "Template01": "[PR#]Vehicle_Car1_BLWheel",
+    "targetname": "[PR#]Template_Vehicle_Car1",
+    "classname": "point_template",
+    "origin": "-2700.000000 1024.000000 -15052.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "1000214",
+    "worldName": "maps\\ze_last_man_standing",
+    "entityLumpName": "1000214#entityLumpName",
+    "connections": [
+      {
+        "output": "OnEntitySpawned",
+        "target": "[PR#]LMS_Pickup_Aux_Template146",
+        "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
     "skipPreSettle": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -43068,54 +43500,6 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2000009"
-  },
-  {
-    "spawnflags": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]lms_ax_01_driver_seat_review",
-    "classname": "info_target",
-    "origin": "-8864.573242 11326.308594 -12584.440430",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "2000010"
-  },
-  {
-    "spawnflags": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]lms_ax_01_gunner_seat_review",
-    "classname": "info_target",
-    "origin": "-8916.573242 11304.308594 -12558.040039",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "2000011"
-  },
-  {
-    "spawnflags": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]lms_ax_01_muzzle_review",
-    "classname": "info_target",
-    "origin": "-8695.373047 11326.308594 -12556.639648",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "2000012"
   },
   {
     "touchoutputperentitydelay": "0.000000",
@@ -45654,438 +46038,6 @@
     "hammerUniqueId": "4120305"
   },
   {
-    "cs_script": "scripts/car.vjs",
-    "targetname": "[PR#]LMS_Pickup_Controller",
-    "classname": "point_script",
-    "origin": "-2740.000000 1024.000000 -14900.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120419"
-  },
-  {
-    "floatValue": "0.500000",
-    "parameterName": "volume",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Gas_Volume",
-    "classname": "snd_event_param",
-    "origin": "-2700.000000 1024.000000 -15068.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120426"
-  },
-  {
-    "floatValue": "0.500000",
-    "parameterName": "volume",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Nogas_Volume",
-    "classname": "snd_event_param",
-    "origin": "-2684.000000 1024.000000 -15068.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120427"
-  },
-  {
-    "max": "0",
-    "min": "0",
-    "startvalue": "0",
-    "StartDisabled": "0",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Guard_Request",
-    "classname": "math_counter",
-    "origin": "-2680.000000 1024.000000 -14900.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120434"
-  },
-  {
-    "max": "0",
-    "min": "0",
-    "startvalue": "0",
-    "StartDisabled": "0",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Guard_Reply",
-    "classname": "math_counter",
-    "origin": "-2648.000000 1024.000000 -14900.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120435"
-  },
-  {
-    "Template64": "",
-    "Template63": "",
-    "Template62": "",
-    "Template61": "",
-    "Template60": "",
-    "Template59": "",
-    "Template58": "",
-    "Template57": "",
-    "Template56": "",
-    "Template55": "",
-    "Template54": "",
-    "Template53": "",
-    "Template52": "",
-    "Template51": "",
-    "Template50": "",
-    "Template49": "",
-    "Template48": "",
-    "Template47": "",
-    "Template46": "",
-    "Template45": "",
-    "Template44": "",
-    "Template43": "",
-    "Template42": "",
-    "Template41": "",
-    "Template40": "",
-    "Template39": "",
-    "Template38": "",
-    "Template37": "",
-    "Template36": "",
-    "Template35": "",
-    "Template34": "",
-    "Template33": "",
-    "Template32": "",
-    "Template31": "",
-    "Template30": "",
-    "Template29": "",
-    "Template28": "",
-    "Template27": "",
-    "Template26": "",
-    "Template25": "",
-    "Template24": "",
-    "Template23": "",
-    "Template22": "",
-    "Template21": "",
-    "Template20": "",
-    "Template19": "",
-    "Template18": "",
-    "Template17": "",
-    "Template16": "[PR#]Vehicle_Car1_Sound_Start",
-    "Template15": "[PR#]Vehicle_Car1_Sound_Nogas",
-    "Template14": "[PR#]Vehicle_Car1_Sound_Horn",
-    "Template13": "[PR#]Vehicle_Car1_Sound_Gas",
-    "Template12": "[PR#]Vehicle_Car1_Sound_Brake",
-    "Template11": "[PR#]Vehicle_Car1_Model",
-    "Template10": "[PR#]Vehicle_Car1_Hurt",
-    "Template09": "[PR#]Vehicle_Car1_Glass_Model",
-    "Template08": "[PR#]Vehicle_Car1_Explosion_Particle",
-    "Template07": "[PR#]Vehicle_Car1_Explosion_Hurt",
-    "Template06": "[PR#]Vehicle_Car1_Exit_Teleport_Passager5",
-    "Template05": "[PR#]Vehicle_Car1_Exit_Teleport_Passager4",
-    "Template04": "[PR#]Vehicle_Car1_Exit_Teleport_Passager3",
-    "Template03": "[PR#]Vehicle_Car1_Exit_Teleport_Passager2",
-    "Template02": "[PR#]Vehicle_Car1_Exit_Teleport_Passager1",
-    "Template01": "[PR#]Vehicle_Car1_Exit_Teleport_Mech",
-    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
-    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
-    "entityFilterName": "",
-    "timeoutInterval": "0.000000",
-    "asynchronous": "0",
-    "spawnflags": "2",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Aux_Template146",
-    "classname": "point_template",
-    "origin": "-2668.000000 1024.000000 -15052.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120436",
-    "worldName": "maps\\ze_last_man_standing",
-    "entityLumpName": "4120436#entityLumpName",
-    "connections": [
-      {
-        "output": "OnEntitySpawned",
-        "target": "[PR#]LMS_Pickup_Controller",
-        "input": "RunScriptInput",
-        "param": "PickupSpawned146",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "Template64": "[PR#]Vehicle_Car1_Exit_Teleport_Driver",
-    "Template63": "[PR#]Vehicle_Car1_Exit_Position",
-    "Template62": "[PR#]Vehicle_Car1_Entrance_Teleport_Passager5",
-    "Template61": "[PR#]Vehicle_Car1_Entrance_Teleport_Passager4",
-    "Template60": "[PR#]Vehicle_Car1_Entrance_Teleport_Passager3",
-    "Template59": "[PR#]Vehicle_Car1_Entrance_Teleport_Passager2",
-    "Template58": "[PR#]Vehicle_Car1_Entrance_Teleport_Passager1",
-    "Template57": "[PR#]Vehicle_Car1_Entrance_Teleport_Mech",
-    "Template56": "[PR#]Vehicle_Car1_Entrance_Teleport_Driver",
-    "Template55": "[PR#]Vehicle_Car1_Entrance_Position_Passager5",
-    "Template54": "[PR#]Vehicle_Car1_Entrance_Position_Passager4",
-    "Template53": "[PR#]Vehicle_Car1_Entrance_Position_Passager3",
-    "Template52": "[PR#]Vehicle_Car1_Entrance_Position_Passager2",
-    "Template51": "[PR#]Vehicle_Car1_Entrance_Position_Passager1",
-    "Template50": "[PR#]Vehicle_Car1_Entrance_Position_Mech",
-    "Template49": "[PR#]Vehicle_Car1_Entrance_Position_Driver",
-    "Template48": "[PR#]Vehicle_Car1_Dust_FRWheel",
-    "Template47": "[PR#]Vehicle_Car1_Dust_FLWheel",
-    "Template46": "[PR#]Vehicle_Car1_Dust_BRWheel",
-    "Template45": "[PR#]Vehicle_Car1_Dust_BLWheel",
-    "Template44": "[PR#]Vehicle_Car1_Button_Passager5",
-    "Template43": "[PR#]Vehicle_Car1_Button_Passager4",
-    "Template42": "[PR#]Vehicle_Car1_Button_Passager3",
-    "Template41": "[PR#]Vehicle_Car1_Button_Passager2",
-    "Template40": "[PR#]Vehicle_Car1_Button_Passager1",
-    "Template39": "[PR#]Vehicle_Car1_Button_Driver",
-    "Template38": "[PR#]Vehicle_Car1_Thruster_Y",
-    "Template37": "[PR#]Vehicle_Car1_Thruster_X",
-    "Template36": "[PR#]Vehicle_Car1_Sound_Gas_Low",
-    "Template35": "[PR#]Vehicle_Car1_Sound_Gas_High",
-    "Template34": "[PR#]Vehicle_Car1_Keepupright_FRWheel",
-    "Template33": "[PR#]Vehicle_Car1_Keepupright_FLWheel",
-    "Template32": "[PR#]Vehicle_Car1_Keepupright_BRWheel",
-    "Template31": "[PR#]Vehicle_Car1_Keepupright_BLWheel",
-    "Template30": "[PR#]Vehicle_Car1_Keep_FRWheel",
-    "Template29": "[PR#]Vehicle_Car1_Keep_FLWheel",
-    "Template28": "[PR#]Vehicle_Car1_Keep_BRWheel",
-    "Template27": "[PR#]Vehicle_Car1_Keep_BLWheel",
-    "Template26": "[PR#]Vehicle_Car1_Hinge_FRWheel",
-    "Template25": "[PR#]Vehicle_Car1_Hinge_FLWheel",
-    "Template24": "[PR#]Vehicle_Car1_Hinge_BRWheel",
-    "Template23": "[PR#]Vehicle_Car1_Hinge_BLWheel",
-    "Template22": "[PR#]Vehicle_Car1_FRWheel_Holder",
-    "Template21": "[PR#]Vehicle_Car1_FRWheel",
-    "Template20": "[PR#]Vehicle_Car1_FLWheel_Holder",
-    "Template19": "[PR#]Vehicle_Car1_FLWheel",
-    "Template18": "[PR#]Vehicle_Car1_Constrain_FRWheel",
-    "Template17": "[PR#]Vehicle_Car1_Constrain_FLWheel",
-    "Template16": "[PR#]Vehicle_Car1_Constrain_BRWheel",
-    "Template15": "[PR#]Vehicle_Car1_Constrain_BLWheel",
-    "Template14": "[PR#]Vehicle_Car1_Collision_FRWheel_Holder",
-    "Template13": "[PR#]Vehicle_Car1_Collision_FRWheel",
-    "Template12": "[PR#]Vehicle_Car1_Collision_FLWheel_Holder",
-    "Template11": "[PR#]Vehicle_Car1_Collision_FLWheel",
-    "Template10": "[PR#]Vehicle_Car1_Collision_BRWheel_Holder",
-    "Template09": "[PR#]Vehicle_Car1_Collision_BRWheel",
-    "Template08": "[PR#]Vehicle_Car1_Collision_BLWheel_Holder",
-    "Template07": "[PR#]Vehicle_Car1_Collision_BLWheel",
-    "Template06": "[PR#]Vehicle_Car1_Brake",
-    "Template05": "[PR#]Vehicle_Car1_Body",
-    "Template04": "[PR#]Vehicle_Car1_BRWheel_Holder",
-    "Template03": "[PR#]Vehicle_Car1_BRWheel",
-    "Template02": "[PR#]Vehicle_Car1_BLWheel_Holder",
-    "Template01": "[PR#]Vehicle_Car1_BLWheel",
-    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
-    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
-    "entityFilterName": "",
-    "timeoutInterval": "0.000000",
-    "asynchronous": "0",
-    "spawnflags": "2",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]Template_Vehicle_Car1",
-    "classname": "point_template",
-    "origin": "-2700.000000 1024.000000 -15052.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120437",
-    "worldName": "maps\\ze_last_man_standing",
-    "entityLumpName": "4120437#entityLumpName",
-    "connections": [
-      {
-        "output": "OnEntitySpawned",
-        "target": "[PR#]LMS_Pickup_Aux_Template146",
-        "input": "ForceSpawn",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "Filter10": "",
-    "Filter09": "",
-    "Filter08": "",
-    "Filter07": "",
-    "Filter06": "",
-    "Filter05": "",
-    "Filter04": "",
-    "Filter03": "[PR#]filter_physics_multiplayer",
-    "Filter02": "[PR#]filter_physics",
-    "Filter01": "[PR#]team_filter_zombies",
-    "filtertype": "1",
-    "Negated": "0",
-    "clientSideEntity": "0",
-    "vscripts": "",
-    "targetname": "[PR#]lms_pu144_zombies_or_physics",
-    "classname": "filter_multi",
-    "origin": "-4948.000000 3416.000000 -14664.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120453"
-  },
-  {
-    "filterclass": "func_physbox_multiplayer",
-    "Negated": "0",
-    "clientSideEntity": "0",
-    "vscripts": "",
-    "targetname": "[PR#]filter_physics_multiplayer",
-    "classname": "filter_activator_class",
-    "origin": "-4932.000000 3384.000000 -14664.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120454"
-  },
-  {
-    "entityIndexSelection": "0",
-    "sourceEntityAttachment": "",
-    "saveAndRestore": "0",
-    "stopOnNew": "1",
-    "toLocalPlayer": "0",
-    "startOnSpawn": "0",
-    "sourceEntityName": "",
-    "soundName": "lms.pickup.explosion_distant",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Explosion_Distant",
-    "classname": "point_soundevent",
-    "origin": "-5164.000000 3472.000000 -14664.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120455"
-  },
-  {
-    "Template64": "",
-    "Template63": "",
-    "Template62": "",
-    "Template61": "",
-    "Template60": "",
-    "Template59": "",
-    "Template58": "",
-    "Template57": "",
-    "Template56": "",
-    "Template55": "",
-    "Template54": "",
-    "Template53": "",
-    "Template52": "",
-    "Template51": "",
-    "Template50": "",
-    "Template49": "",
-    "Template48": "",
-    "Template47": "",
-    "Template46": "",
-    "Template45": "",
-    "Template44": "",
-    "Template43": "",
-    "Template42": "",
-    "Template41": "",
-    "Template40": "",
-    "Template39": "",
-    "Template38": "",
-    "Template37": "",
-    "Template36": "",
-    "Template35": "",
-    "Template34": "",
-    "Template33": "",
-    "Template32": "",
-    "Template31": "",
-    "Template30": "",
-    "Template29": "",
-    "Template28": "",
-    "Template27": "",
-    "Template26": "",
-    "Template25": "",
-    "Template24": "",
-    "Template23": "",
-    "Template22": "",
-    "Template21": "",
-    "Template20": "",
-    "Template19": "",
-    "Template18": "",
-    "Template17": "",
-    "Template16": "",
-    "Template15": "",
-    "Template14": "",
-    "Template13": "",
-    "Template12": "",
-    "Template11": "",
-    "Template10": "",
-    "Template09": "",
-    "Template08": "",
-    "Template07": "[PR#]LMS_Pickup_Small_Damage_Phys",
-    "Template06": "[PR#]LMS_Pickup_Small_Damage_H",
-    "Template05": "[PR#]LMS_Pickup_Small_Damage",
-    "Template04": "[PR#]LMS_Pickup_Small_Sound",
-    "Template03": "[PR#]LMS_Pickup_Small_Logic",
-    "Template02": "[PR#]LMS_Pickup_Small_Shake",
-    "Template01": "[PR#]LMS_Pickup_Small_Particle",
-    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
-    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
-    "entityFilterName": "",
-    "timeoutInterval": "0.000000",
-    "asynchronous": "0",
-    "spawnflags": "0",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Small_Template",
-    "classname": "point_template",
-    "origin": "-4924.000000 3224.000000 -14664.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120458",
-    "worldName": "maps\\ze_last_man_standing",
-    "entityLumpName": "4120458#entityLumpName",
-    "TemplateFixup": "1"
-  },
-  {
-    "PostSpawnInheritAngles": "0",
-    "PostSpawnDirectionVariance": "0.150000",
-    "PostSpawnDirection": "0.000000 0.000000 0.000000",
-    "PostSpawnSpeed": "0.000000",
-    "EntityTemplate": "[PR#]LMS_Pickup_Small_Template",
-    "spawnflags": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]LMS_Pickup_Explosion_Maker",
-    "classname": "env_entity_maker",
-    "origin": "-4812.000000 3496.000000 -14664.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120459"
-  },
-  {
     "precomputedsubfrusta": "5",
     "precomputedobbextent4": "192.400391 265.962891 188.029297",
     "precomputedobbangles4": "-0.000000 45.000004 0.000000",
@@ -46166,7 +46118,7 @@
     "origin": "-6464.000000 11810.703125 -12074.250000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120462"
+    "hammerUniqueId": "4120308"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46176,9 +46128,9 @@
     "precomputedobbextent3": "163.836182 187.586914 4.751465",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "-6413.534180 11622.178711 -12068.560547",
-    "precomputedobbextent2": "694.658203 382.291016 22.993652",
+    "precomputedobbextent2": "694.657227 382.291016 22.993652",
     "precomputedobbangles2": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin2": "-5702.570312 12031.578125 -12050.318359",
+    "precomputedobborigin2": "-5702.571289 12031.578125 -12050.318359",
     "precomputedobbextent1": "56.199951 111.855469 3.049805",
     "precomputedobbangles1": "-0.000000 0.000000 0.000000",
     "precomputedobborigin1": "-6521.137695 11810.495117 -12070.262695",
@@ -46249,7 +46201,7 @@
     "origin": "-6464.000000 11810.703125 -12073.250000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120463"
+    "hammerUniqueId": "4120309"
   },
   {
     "cpoint7_parent": "0",
@@ -46345,7 +46297,7 @@
     "origin": "-6468.000000 11870.703125 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120464"
+    "hammerUniqueId": "4120310"
   },
   {
     "cpoint7_parent": "0",
@@ -46441,7 +46393,7 @@
     "origin": "-6467.943359 11744.713867 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120465"
+    "hammerUniqueId": "4120311"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46524,7 +46476,7 @@
     "origin": "-6464.000000 12226.703125 -12074.250000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120468"
+    "hammerUniqueId": "4120314"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46607,7 +46559,7 @@
     "origin": "-6464.000000 12226.703125 -12073.250000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120469"
+    "hammerUniqueId": "4120315"
   },
   {
     "cpoint7_parent": "0",
@@ -46703,7 +46655,7 @@
     "origin": "-6468.000000 12286.703125 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120470"
+    "hammerUniqueId": "4120316"
   },
   {
     "cpoint7_parent": "0",
@@ -46799,7 +46751,7 @@
     "origin": "-6467.943359 12160.713867 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120471"
+    "hammerUniqueId": "4120317"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46882,7 +46834,7 @@
     "origin": "-6464.000000 12642.703125 -12074.250000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120474"
+    "hammerUniqueId": "4120320"
   },
   {
     "precomputedsubfrusta": "5",
@@ -46965,7 +46917,7 @@
     "origin": "-6464.000000 12642.703125 -12073.250000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120475"
+    "hammerUniqueId": "4120321"
   },
   {
     "cpoint7_parent": "0",
@@ -47061,7 +47013,7 @@
     "origin": "-6468.000000 12702.703125 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120476"
+    "hammerUniqueId": "4120322"
   },
   {
     "cpoint7_parent": "0",
@@ -47157,7 +47109,7 @@
     "origin": "-6467.943359 12576.713867 -12088.250000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120477"
+    "hammerUniqueId": "4120323"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47240,7 +47192,7 @@
     "origin": "-5583.870117 12960.603516 -12494.349609",
     "angles": "0.000000 270.000000 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120480"
+    "hammerUniqueId": "4120326"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47323,7 +47275,7 @@
     "origin": "-5583.870117 12961.603516 -12494.349609",
     "angles": "0.000000 90.000000 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120481"
+    "hammerUniqueId": "4120327"
   },
   {
     "cpoint7_parent": "0",
@@ -47419,7 +47371,7 @@
     "origin": "-5579.870117 12946.603516 -12434.349609",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120482"
+    "hammerUniqueId": "4120328"
   },
   {
     "cpoint7_parent": "0",
@@ -47515,7 +47467,7 @@
     "origin": "-5579.926758 12946.603516 -12560.338867",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120483"
+    "hammerUniqueId": "4120329"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47598,7 +47550,7 @@
     "origin": "-5584.129883 11444.802734 -12494.349609",
     "angles": "0.000000 90.000046 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120486"
+    "hammerUniqueId": "4120332"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47681,7 +47633,7 @@
     "origin": "-5584.129883 11443.802734 -12494.349609",
     "angles": "0.000000 270.000061 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120487"
+    "hammerUniqueId": "4120333"
   },
   {
     "cpoint7_parent": "0",
@@ -47777,7 +47729,7 @@
     "origin": "-5588.129883 11458.802734 -12434.349609",
     "angles": "89.999969 180.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120488"
+    "hammerUniqueId": "4120334"
   },
   {
     "cpoint7_parent": "0",
@@ -47873,7 +47825,7 @@
     "origin": "-5588.073242 11458.801758 -12560.338867",
     "angles": "89.999969 180.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120489"
+    "hammerUniqueId": "4120335"
   },
   {
     "precomputedsubfrusta": "5",
@@ -47956,7 +47908,7 @@
     "origin": "-6941.879883 11810.703125 -12296.129883",
     "angles": "0.000000 0.000000 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120492"
+    "hammerUniqueId": "4120338"
   },
   {
     "precomputedsubfrusta": "5",
@@ -48039,7 +47991,7 @@
     "origin": "-6942.879395 11810.703125 -12296.129883",
     "angles": "0.000000 180.000015 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120493"
+    "hammerUniqueId": "4120339"
   },
   {
     "cpoint7_parent": "0",
@@ -48135,7 +48087,7 @@
     "origin": "-6927.879883 11814.703125 -12236.129883",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120494"
+    "hammerUniqueId": "4120340"
   },
   {
     "cpoint7_parent": "0",
@@ -48231,7 +48183,7 @@
     "origin": "-6927.880371 11814.646484 -12362.119141",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120495"
+    "hammerUniqueId": "4120341"
   },
   {
     "precomputedsubfrusta": "5",
@@ -48314,7 +48266,7 @@
     "origin": "-6941.879883 12594.703125 -12296.129883",
     "angles": "0.000000 0.000000 90.000023",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120498"
+    "hammerUniqueId": "4120344"
   },
   {
     "precomputedsubfrusta": "5",
@@ -48397,7 +48349,7 @@
     "origin": "-6942.879395 12594.703125 -12296.129883",
     "angles": "0.000000 180.000015 -90.000130",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120499"
+    "hammerUniqueId": "4120345"
   },
   {
     "cpoint7_parent": "0",
@@ -48493,7 +48445,7 @@
     "origin": "-6927.879883 12598.703125 -12236.129883",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120500"
+    "hammerUniqueId": "4120346"
   },
   {
     "cpoint7_parent": "0",
@@ -48589,7 +48541,7 @@
     "origin": "-6927.880371 12598.646484 -12362.119141",
     "angles": "89.999969 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120501"
+    "hammerUniqueId": "4120347"
   },
   {
     "precomputedsubfrusta": "5",
@@ -48672,7 +48624,7 @@
     "origin": "-7776.000000 11975.703125 -12424.000000",
     "angles": "0.000000 0.000000 -89.999977",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120588"
+    "hammerUniqueId": "4120434"
   },
   {
     "precomputedsubfrusta": "5",
@@ -48755,7 +48707,7 @@
     "origin": "-7774.999512 11975.701172 -12424.000000",
     "angles": "0.000000 180.000107 -90.000038",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120589"
+    "hammerUniqueId": "4120435"
   },
   {
     "precomputedsubfrusta": "5",
@@ -48838,7 +48790,7 @@
     "origin": "-7775.000000 12431.000000 -12424.000000",
     "angles": "0.000000 0.000000 -89.999977",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120592"
+    "hammerUniqueId": "4120438"
   },
   {
     "precomputedsubfrusta": "5",
@@ -48921,7 +48873,7 @@
     "origin": "-7773.999512 12430.998047 -12424.000000",
     "angles": "0.000000 180.000107 -90.000038",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120593"
+    "hammerUniqueId": "4120439"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49010,7 +48962,7 @@
     "origin": "-7320.000000 11933.000000 -12150.000000",
     "angles": "0.000000 90.000046 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120596"
+    "hammerUniqueId": "4120442"
   },
   {
     "cpoint7_parent": "0",
@@ -49106,7 +49058,7 @@
     "origin": "-7320.000000 11942.000000 -12150.975586",
     "angles": "0.000000 180.000061 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120597"
+    "hammerUniqueId": "4120443"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49195,7 +49147,7 @@
     "origin": "-5515.750000 12012.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120600"
+    "hammerUniqueId": "4120446"
   },
   {
     "cpoint7_parent": "0",
@@ -49291,13 +49243,13 @@
     "origin": "-5524.750000 12012.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120601"
+    "hammerUniqueId": "4120447"
   },
   {
     "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "179.719482 162.393066 29.496094",
+    "precomputedobbextent5": "179.719482 162.393555 29.496094",
     "precomputedobbangles5": "37.999996 9.999998 6.000000",
-    "precomputedobborigin5": "-5364.217773 12275.526367 -12562.168945",
+    "precomputedobborigin5": "-5364.217773 12275.525391 -12562.168945",
     "precomputedobbextent4": "243.651367 328.083496 316.200195",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
     "precomputedobborigin4": "-5575.452148 11972.793945 -12324.232422",
@@ -49380,7 +49332,7 @@
     "origin": "-5515.750000 12376.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120604"
+    "hammerUniqueId": "4120450"
   },
   {
     "cpoint7_parent": "0",
@@ -49476,7 +49428,7 @@
     "origin": "-5524.750000 12376.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120605"
+    "hammerUniqueId": "4120451"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49565,7 +49517,7 @@
     "origin": "-5519.350586 12300.552734 -12423.129883",
     "angles": "0.000000 180.000031 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120608"
+    "hammerUniqueId": "4120454"
   },
   {
     "cpoint7_parent": "0",
@@ -49661,7 +49613,7 @@
     "origin": "-5528.350586 12301.528320 -12423.129883",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120609"
+    "hammerUniqueId": "4120455"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49750,7 +49702,7 @@
     "origin": "-5519.350586 12092.563477 -12424.780273",
     "angles": "0.000000 180.000031 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120612"
+    "hammerUniqueId": "4120458"
   },
   {
     "cpoint7_parent": "0",
@@ -49846,7 +49798,7 @@
     "origin": "-5528.350586 12093.539062 -12424.780273",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120613"
+    "hammerUniqueId": "4120459"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49935,7 +49887,7 @@
     "origin": "-4403.750000 12376.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120616"
+    "hammerUniqueId": "4120462"
   },
   {
     "cpoint7_parent": "0",
@@ -50031,7 +49983,7 @@
     "origin": "-4412.750000 12376.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120617"
+    "hammerUniqueId": "4120463"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50120,7 +50072,7 @@
     "origin": "-4403.750000 12012.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120620"
+    "hammerUniqueId": "4120466"
   },
   {
     "cpoint7_parent": "0",
@@ -50216,7 +50168,7 @@
     "origin": "-4412.750000 12012.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120621"
+    "hammerUniqueId": "4120467"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50305,7 +50257,7 @@
     "origin": "-4403.750000 12192.983398 -12438.759766",
     "angles": "0.000000 180.000015 180.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120624"
+    "hammerUniqueId": "4120470"
   },
   {
     "cpoint7_parent": "0",
@@ -50401,7 +50353,7 @@
     "origin": "-4412.750000 12192.983398 -12437.784180",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120625"
+    "hammerUniqueId": "4120471"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50490,7 +50442,7 @@
     "origin": "-6008.000000 12922.703125 -12373.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120628"
+    "hammerUniqueId": "4120474"
   },
   {
     "cpoint7_parent": "0",
@@ -50586,7 +50538,7 @@
     "origin": "-6008.000000 12913.703125 -12373.975586",
     "angles": "0.000000 0.000000 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120629"
+    "hammerUniqueId": "4120475"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50675,7 +50627,7 @@
     "origin": "-6920.000000 12266.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120632"
+    "hammerUniqueId": "4120478"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50764,7 +50716,7 @@
     "origin": "-7184.000000 12266.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120635"
+    "hammerUniqueId": "4120481"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50853,7 +50805,7 @@
     "origin": "-7184.000000 12138.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120638"
+    "hammerUniqueId": "4120484"
   },
   {
     "precomputedsubfrusta": "6",
@@ -50942,13 +50894,13 @@
     "origin": "-7464.000000 12138.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120641"
+    "hammerUniqueId": "4120487"
   },
   {
     "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "256.038574 127.647461 160.226074",
+    "precomputedobbextent5": "256.038574 127.646973 160.226074",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin5": "-7464.027832 12395.288086 -12287.982422",
+    "precomputedobborigin5": "-7464.027832 12395.287109 -12287.982422",
     "precomputedobbextent4": "203.657715 226.409424 160.279785",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
     "precomputedobborigin4": "-7768.014648 12250.614258 -12287.996094",
@@ -51031,7 +50983,7 @@
     "origin": "-7464.000000 12266.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120644"
+    "hammerUniqueId": "4120490"
   },
   {
     "precomputedsubfrusta": "6",
@@ -51120,7 +51072,7 @@
     "origin": "-6920.000000 12138.703125 -12284.000000",
     "angles": "0.000000 270.000061 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120647"
+    "hammerUniqueId": "4120493"
   },
   {
     "precomputedsubfrusta": "6",
@@ -51136,9 +51088,9 @@
     "precomputedobbextent2": "308.696045 62.907227 218.582275",
     "precomputedobbangles2": "0.000000 0.000000 -45.000004",
     "precomputedobborigin2": "-6007.755859 11593.077148 -12174.044922",
-    "precomputedobbextent1": "267.293457 191.642578 93.140686",
+    "precomputedobbextent1": "267.293213 191.642578 93.140686",
     "precomputedobbangles1": "-10.999998 7.999999 -36.999992",
-    "precomputedobborigin1": "-6009.380859 11575.341797 -12554.841797",
+    "precomputedobborigin1": "-6009.380371 11575.341797 -12554.841797",
     "precomputedobbextent0": "328.061523 328.083984 336.378418",
     "precomputedobbangles0": "-0.000000 45.000004 0.000000",
     "precomputedobborigin0": "-6008.015625 11946.875000 -12304.015625",
@@ -51209,7 +51161,7 @@
     "origin": "-6008.000000 11482.999023 -12373.000000",
     "angles": "0.000000 89.999947 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120650"
+    "hammerUniqueId": "4120496"
   },
   {
     "cpoint7_parent": "0",
@@ -51305,7 +51257,7 @@
     "origin": "-6008.000000 11491.999023 -12373.975586",
     "angles": "0.000000 179.999939 -90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120651"
+    "hammerUniqueId": "4120497"
   },
   {
     "precomputedsubfrusta": "6",
@@ -51394,7 +51346,7 @@
     "origin": "-5730.437500 12950.675781 -12127.341797",
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120654"
+    "hammerUniqueId": "4120500"
   },
   {
     "precomputedsubfrusta": "6",
@@ -51483,7 +51435,7 @@
     "origin": "-7248.000000 11934.000000 -12170.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120657"
+    "hammerUniqueId": "4120503"
   },
   {
     "precomputedsubfrusta": "5",
@@ -51493,9 +51445,9 @@
     "precomputedobbextent3": "253.502930 390.997070 129.571777",
     "precomputedobbangles3": "-1.000000 0.000000 0.000000",
     "precomputedobborigin3": "-5283.155273 12579.934570 -12199.801758",
-    "precomputedobbextent2": "94.635010 190.082520 95.009277",
+    "precomputedobbextent2": "94.635254 190.082520 95.009277",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "-5126.427734 12188.017578 -12166.947266",
+    "precomputedobborigin2": "-5126.427246 12188.017578 -12166.947266",
     "precomputedobbextent1": "84.625000 170.123047 85.093262",
     "precomputedobbangles1": "-0.000000 0.000000 0.000000",
     "precomputedobborigin1": "-5307.562500 12188.007812 -12157.031250",
@@ -51566,7 +51518,7 @@
     "origin": "-5222.000000 12188.000000 -12072.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120660"
+    "hammerUniqueId": "4120506"
   },
   {
     "precomputedsubfrusta": "5",
@@ -51649,7 +51601,7 @@
     "origin": "-5222.000000 12188.000000 -12071.000000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120661"
+    "hammerUniqueId": "4120507"
   },
   {
     "cpoint7_parent": "0",
@@ -51745,7 +51697,7 @@
     "origin": "-5226.000000 12248.000000 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120662"
+    "hammerUniqueId": "4120508"
   },
   {
     "cpoint7_parent": "0",
@@ -51841,7 +51793,7 @@
     "origin": "-5225.943359 12122.010742 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120663"
+    "hammerUniqueId": "4120509"
   },
   {
     "precomputedsubfrusta": "5",
@@ -51851,10 +51803,10 @@
     "precomputedobbextent3": "180.223877 135.000977 124.153320",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "-5212.007812 12835.938477 -12196.091797",
-    "precomputedobbextent2": "94.635010 190.082520 95.009277",
+    "precomputedobbextent2": "94.635254 190.082520 95.009277",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "-5126.427734 12700.017578 -12166.947266",
-    "precomputedobbextent1": "640.700928 319.437500 116.068848",
+    "precomputedobborigin2": "-5126.427246 12700.017578 -12166.947266",
+    "precomputedobbextent1": "640.700928 319.437500 116.069092",
     "precomputedobbangles1": "-29.999996 20.999994 -10.999998",
     "precomputedobborigin1": "-5780.701172 12693.687500 -12446.939453",
     "precomputedobbextent0": "164.107910 247.952148 154.912598",
@@ -51924,7 +51876,7 @@
     "origin": "-5222.000000 12700.000000 -12072.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120666"
+    "hammerUniqueId": "4120512"
   },
   {
     "precomputedsubfrusta": "5",
@@ -52007,7 +51959,7 @@
     "origin": "-5222.000000 12700.000000 -12071.000000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120667"
+    "hammerUniqueId": "4120513"
   },
   {
     "cpoint7_parent": "0",
@@ -52103,7 +52055,7 @@
     "origin": "-5226.000000 12760.000000 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120668"
+    "hammerUniqueId": "4120514"
   },
   {
     "cpoint7_parent": "0",
@@ -52199,7 +52151,7 @@
     "origin": "-5225.943359 12634.010742 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120669"
+    "hammerUniqueId": "4120515"
   },
   {
     "precomputedsubfrusta": "5",
@@ -52209,9 +52161,9 @@
     "precomputedobbextent3": "205.768555 646.981445 124.401855",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "-5237.325195 12323.918945 -12196.339844",
-    "precomputedobbextent2": "94.635010 190.082520 95.009277",
+    "precomputedobbextent2": "94.635254 190.082520 95.009277",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "-5126.427734 11676.017578 -12166.947266",
+    "precomputedobborigin2": "-5126.427246 11676.017578 -12166.947266",
     "precomputedobbextent1": "644.111328 316.993164 116.047119",
     "precomputedobbangles1": "-29.999996 -20.999994 10.999998",
     "precomputedobborigin1": "-5780.053711 11696.366211 -12446.078125",
@@ -52282,7 +52234,7 @@
     "origin": "-5222.000000 11676.000000 -12072.000000",
     "angles": "89.999992 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120672"
+    "hammerUniqueId": "4120518"
   },
   {
     "precomputedsubfrusta": "5",
@@ -52365,7 +52317,7 @@
     "origin": "-5222.000000 11676.000000 -12071.000000",
     "angles": "-89.999985 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120673"
+    "hammerUniqueId": "4120519"
   },
   {
     "cpoint7_parent": "0",
@@ -52461,7 +52413,7 @@
     "origin": "-5226.000000 11736.000000 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120674"
+    "hammerUniqueId": "4120520"
   },
   {
     "cpoint7_parent": "0",
@@ -52557,6 +52509,6 @@
     "origin": "-5225.943359 11610.010742 -12086.000000",
     "angles": "0.000000 270.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4120675"
+    "hammerUniqueId": "4120521"
   }
 ]

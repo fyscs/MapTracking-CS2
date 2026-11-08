@@ -1241,7 +1241,7 @@ class LanguageManager extends BaseSystem {
         Instance.OnScriptInput("ChsLang", () => { if (!this.isChinese) { this.isChinese = true; this.welcome(); } });
         Instance.OnScriptInput("EngLang", () => { if (this.isChinese) { this.isChinese = false; this.welcome(); } });
         Instance.OnScriptInput("CheckLang", () => this.welcome());
-        Instance.OnActivate(() => { Instance.Precache({resources:["maps/ze_last_man_standing_160/entities/900infectsetter_13977.vmdl", "maps/ze_last_man_standing_160/entities/mzombies_zone_14279.vmdl"]}); this.welcome(); this.controller.subsystems.get("alex_hud")?.bind(); });
+        Instance.OnActivate(() => { Instance.Precache({resources:["maps/ze_last_man_standing/entities/900infectsetter_13977.vmdl", "maps/ze_last_man_standing/entities/mzombies_zone_14279.vmdl"]}); this.welcome(); this.controller.subsystems.get("alex_hud")?.bind(); });
 
         // 收集所有Key
         const allKeys = new Set([
