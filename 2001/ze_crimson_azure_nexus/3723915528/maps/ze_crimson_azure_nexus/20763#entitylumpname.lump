@@ -15,7 +15,7 @@
     "NoInterpolate": "0",
     "authoredposition": "0",
     "startposition": "0.000000",
-    "spawnflags": "0",
+    "spawnflags": "8",
     "movedir": "0.000000 0.000000 0.000000",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -226,6 +226,14 @@
         "input": "SetSpeed",
         "param": "1450",
         "delay": 1.25,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]king_laser_move",
+        "input": "KillHierarchy",
+        "param": "",
+        "delay": 2.5,
         "limit": -1
       }
     ]

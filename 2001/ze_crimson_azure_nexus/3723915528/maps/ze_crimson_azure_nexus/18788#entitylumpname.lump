@@ -88,7 +88,7 @@
         "target": "!activator",
         "input": "Ignitelifetime",
         "param": "1",
-        "delay": 2,
+        "delay": 1.5,
         "limit": -1
       },
       {
@@ -104,7 +104,7 @@
         "target": "!activator",
         "input": "Keyvalue",
         "param": "speed 1",
-        "delay": 2,
+        "delay": 1.5,
         "limit": -1
       }
     ]

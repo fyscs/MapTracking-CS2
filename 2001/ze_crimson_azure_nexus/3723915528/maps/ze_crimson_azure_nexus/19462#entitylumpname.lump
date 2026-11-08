@@ -189,7 +189,7 @@
         "target": "[PR#]item_human_health_hurt",
         "input": "Disable",
         "param": "",
-        "delay": 5,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -221,7 +221,7 @@
         "target": "[PR#]item_human_health_par",
         "input": "Stop",
         "param": "",
-        "delay": 5,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -237,7 +237,7 @@
         "target": "[PR#]item_human_health_hurt1",
         "input": "Disable",
         "param": "",
-        "delay": 5,
+        "delay": 8,
         "limit": -1
       },
       {
@@ -246,6 +246,38 @@
         "input": "StartSound",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]z_dm_hurt",
+        "input": "SetDamage",
+        "param": "140",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]z_lz_hurt",
+        "input": "SetDamage",
+        "param": "140",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]z_dm_hurt",
+        "input": "SetDamage",
+        "param": "1400",
+        "delay": 8,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]z_lz_hurt",
+        "input": "SetDamage",
+        "param": "1400",
+        "delay": 8,
         "limit": -1
       }
     ]

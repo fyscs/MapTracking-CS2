@@ -315,7 +315,7 @@
     "vscripts": "",
     "targetname": "[PR#]item_human_wind_lv3_par",
     "classname": "info_particle_system",
-    "origin": "-98.925781 2.011719 -85.448273",
+    "origin": "-98.925781 2.011719 -86.448273",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15829",
