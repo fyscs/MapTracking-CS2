@@ -10,15 +10,7 @@ let titleHud = null;
 // 現在表示するタイトル情報
 // ============================================================
 
-let currentTitle = {
-    english: "CRY THUNDER",
-    japanese: "紅蓮の憂鬱",
-    description01: "家族に頼まれていたお使いを終わらせ、渓谷橋に辿り着いた元勇者。",
-    description02: "だがこの大橋は危険故に夜の渡橋が許されていない。",
-    description03: "しかし、今の彼には疲労でそんなことも考える時間もないようだ...",
-    specialThanks: "SPECIAL THANKS",
-    serverName: "LUPERCALIA SERVER"
-};
+let currentTitle = null;
 
 // ============================================================
 // タイトルHUDを取得
