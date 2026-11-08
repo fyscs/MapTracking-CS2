@@ -352,7 +352,7 @@
     "renderfx": "0",
     "rendermode": "10",
     "shadowdepthnocache": "0",
-    "spawnflags": "3072",
+    "spawnflags": "19456",
     "spawnobject": "0",
     "targetname": "[PR#]Vehicle_Car1_Body",
     "classname": "func_physbox",
