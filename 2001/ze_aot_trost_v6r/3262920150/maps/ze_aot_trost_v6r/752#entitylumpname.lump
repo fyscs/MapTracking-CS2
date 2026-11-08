@@ -165,7 +165,7 @@
         "output": "OnStartTouch",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 0.1",
+        "param": "speed 0.05",
         "delay": 0,
         "limit": -1
       }

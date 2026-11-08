@@ -144,6 +144,30 @@
         "param": "movetype 2",
         "delay": 8,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.9",
+        "delay": 8.050000190734863,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.95",
+        "delay": 8.100000381469727,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 8.100000381469727,
+        "limit": -1
       }
     ]
   },
