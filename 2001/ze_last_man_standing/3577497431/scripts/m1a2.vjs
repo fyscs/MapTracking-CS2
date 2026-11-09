@@ -40,7 +40,7 @@ class CrewRegistry {
   }
 }
 
-const TANK_COMBAT = { spawnLockSeconds:5, entryCooldown:3, reloadSeconds:12, blastRadius:1000, magnitude:150, durability:{2:800,3:12},repairSeconds:10,repairRadius:200 };
+const TANK_COMBAT = { spawnLockSeconds:5, entryCooldown:3, reloadSeconds:12, blastRadius:1000, triggerDamage:200000, damageType:64, durability:{2:800,3:12},repairSeconds:10,repairRadius:200 };
 class DualCrewTank {
   constructor(id, registry, options = {}) {
     this.id = id; this.registry = registry;
@@ -1394,14 +1394,72 @@ function updateCrewStatus(hud,seat,tank,time) {
   }
 }
 
-return {updateCrewStatus};
+// R200: team-wide repair information. No damage, health or timer mutations.
+class RepairBroadcast200 {
+  constructor(hud){this.hud=hud;this.slots=new Map();this.next=0;this.lastTime=null;}
+  hide(slot){
+    const old=this.slots.get(slot);
+    if(!old)return;
+    this.hud.SetHasClassForPlayer(slot,'CTRepairBroadcast','Visible',false);
+    if(old.progress!==undefined)this.hud.SetHasClassForPlayer(slot,'CTRepairFill','P'+old.progress,false);
+    this.slots.delete(slot);
+  }
+  // Called only after the existing whole-HUD ResetForPlayer has run.
+  invalidate(slot){this.slots.delete(slot);this.next=0;}
+  clear(){for(const slot of [...this.slots.keys()])this.hide(slot);this.next=0;this.lastTime=null;}
+  update(controllers,tank,time,active=true){
+    if(!this.hud)return;
+    if(!active||tank.destroyed||tank.durabilityTeam!==3||tank.hullHP[3]!==0||!Number.isFinite(time)){
+      this.clear();return;
+    }
+    if(this.lastTime!==null&&time<this.lastTime)this.clear();
+    this.lastTime=time;
+    // Controller team remains meaningful for dead CTs and during pawn respawn.
+    const targets=new Map();
+    for(const c of controllers){
+      if(!c.IsConnected()||c.GetTeamNumber()!==3)continue;
+      const slot=c.GetPlayerSlot();
+      if(Number.isInteger(slot)&&slot>=0)targets.set(slot,c);
+    }
+    for(const [slot,old] of this.slots)if(targets.get(slot)!==old.controller)this.hide(slot);
+    if(time<this.next&&[...targets.keys()].every(slot=>this.slots.has(slot)))return;
+    this.next=time+0.1;
+    const automatic=tank.repairRequired===0;
+    const running=tank.repairAt!==null;
+    const remaining=running?Math.max(0,Math.min(TANK_COMBAT.repairSeconds,tank.repairAt-time)):TANK_COMBAT.repairSeconds;
+    const progress=running?Math.min(20,Math.floor((1-remaining/TANK_COMBAT.repairSeconds)*20+1e-6)):0;
+    const values={
+      CTRepairCount:['repaircount200',automatic?'最后幸存者':tank.repairNear+' / '+tank.repairRequired+' 人'],
+      CTRepairState:['repairstate200',running?(Math.ceil(remaining*10)/10).toFixed(1)+' 秒后恢复驾驶':'等待维修人员 · 进度已清零']
+    };
+    for(const [slot,controller] of targets){
+      let cache=this.slots.get(slot);
+      const fresh=!cache;
+      if(!cache){cache={controller,text:{}};this.slots.set(slot,cache);}
+      for(const [panel,[key,value]] of Object.entries(values))if(cache.text[panel]!==value){
+        this.hud.SetDialogVariableStringForPlayer(slot,panel,key,value);cache.text[panel]=value;
+      }
+      if(cache.automatic!==automatic){
+        this.hud.SetHasClassForPlayer(slot,'CTRepairAuto','Shown',automatic);cache.automatic=automatic;
+      }
+      if(cache.progress!==progress){
+        if(cache.progress!==undefined)this.hud.SetHasClassForPlayer(slot,'CTRepairFill','P'+cache.progress,false);
+        this.hud.SetHasClassForPlayer(slot,'CTRepairFill','P'+progress,true);cache.progress=progress;
+      }
+      if(fresh)this.hud.SetHasClassForPlayer(slot,'CTRepairBroadcast','Visible',true);
+    }
+  }
+  status(){return {revision:200,visibleSlots:[...this.slots.keys()]};}
+}
+
+return {updateCrewStatus,RepairBroadcast200};
 })();
 const __axp_5 = (()=>{
 // Unarmed independent laboratory. Native API injected by the entry point.
 const {basis,localToWorldDirection,worldToLocalDirection,forward,TANK_COMBAT} = __axp_0;
 const {BORE_VIEW,boreViewPose} = __axp_2;
 const {DualSightHud} = __axp_3;
-const {updateCrewStatus} = __axp_4;
+const {updateCrewStatus,RepairBroadcast200} = __axp_4;
 const CREW_PROBE=false;
 const CREW_SEATS={driver:{x:62,y:-28,z:108},gunner:{x:-48,y:32,z:123}};
 const CREW_ENTRY={driver:{x:180,y:0,z:56},gunner:{x:-16,y:-16,z:108}};
@@ -1462,6 +1520,7 @@ class CrewBinding {
     Object.assign(this,{engine,api,tank,root,report,hud,frame,getBodyAngles});this.mounted=new Map();this.edges=new Map();this.active=false;this.override=null;
     this.vehicleParts=new Set([root,frame,...sightIgnoreEntities]);
     this.sight=new DualSightHud(engine,hud,[root,...sightIgnoreEntities]);
+    this.repairBroadcast=new RepairBroadcast200(hud);
   }
   world(local){return add(this.root.GetAbsOrigin(),localToWorldDirection(local,this.getBodyAngles()));}
   speed(){const v=this.root.GetAbsVelocity();return Math.hypot(v.x,v.y,v.z);}
@@ -1576,12 +1635,22 @@ class CrewBinding {
     try {
       p.SetMoveType(this.api.CSMoveType.NONE);p.Teleport({position:seat,velocity:zero()});
       this.protectSeat(saved);
+      this.setNativeGunnerHud195(saved,true); // AC195 native HUD scope
       this.thirdPerson(saved);
       updateCrewStatus(this.hud,saved,this.tank,this.engine.GetGameTime());
-      if(a.team===2)this.tank.repairAt=null;
+      if(a.team===2){this.tank.repairAt=null;this.repairBroadcast.clear();}
       this.log('entered',role,'ok',p);return admitted;
     } catch(e) {this.release(p,'mount_failed',true,saved.entry);this.log('error',role,String(e),p);return {ok:false,reason:'mount_failed'};}
   }
+  // BEGIN AC195 TANK NATIVE HUD PATCH
+  setNativeGunnerHud195(s,hidden){
+    if(s.role!=='gunner'||!!s.nativeHudHidden===hidden)return;
+    // Native entity I/O changes this pawn's HUD only, never a saved client cvar.
+    // There is no public mask getter; release restores normal visible HUD.
+    if(s.p?.IsValid())this.engine.EntFireAtTarget({target:s.p,input:'SetHUDVisibility',value:hidden?'0':'1'});
+    s.nativeHudHidden=hidden;
+  }
+  // END AC195 TANK NATIVE HUD PATCH
   setSeatFilter(p,name){
     this.engine.EntFireAtTarget({target:p,input:'SetDamageFilter',value:name});
   }
@@ -1671,7 +1740,8 @@ class CrewBinding {
       // Forced cleanup restores control on the validated roof seat if no safe side exit exists.
     }
     const errors=[];const attempt=f=>{try{f();}catch(e){errors.push(String(e));}};
-    attempt(()=>{if(this.hud)this.hud.ResetForPlayer(s.slot);s.reticle=false;});
+    attempt(()=>{if(this.hud)this.hud.ResetForPlayer(s.slot);this.repairBroadcast.invalidate(s.slot);s.reticle=false;});
+    attempt(()=>this.setNativeGunnerHud195(s,false)); // AC195 native HUD scope
     this.sight.forget(s.slot);
     if(!stockGuard181.ownsView(p))attempt(()=>s.camera.SetMode(this.api.CustomCameraMode.DISABLED));
     if(valid&&s.filterApplied)attempt(()=>this.setSeatFilter(p,''));
@@ -1682,8 +1752,8 @@ class CrewBinding {
     this.tank.leave(s.role,reason,this.engine.GetGameTime());this.mounted.delete(p);this.edges.set(p,true);
     this.log('left',s.role,reason+(errors.length?':'+errors.join('|'):''),p);return {ok:true};
   }
-  clear(reason){for(const p of [...this.mounted.keys()])this.release(p,reason,true);this.override=null;this.sight.clear();if(this.hud)this.hud.Reset();}
-  disconnect(slot){for(const [p,s] of [...this.mounted])if(s.slot===slot)this.release(p,'disconnect',true);}
+  clear(reason){for(const p of [...this.mounted.keys()])this.release(p,reason,true);this.override=null;this.sight.clear();this.repairBroadcast.clear();if(this.hud)this.hud.Reset();}
+  disconnect(slot){for(const [p,s] of [...this.mounted])if(s.slot===slot)this.release(p,'disconnect',true);this.repairBroadcast.hide(slot);}
   tick(time){
     const snapshots=new Map(),present=new Set();
     for(const c of this.engine.GetAllPlayerControllers()){
@@ -1717,6 +1787,7 @@ class CrewBinding {
       const counts=countRepairCrew(present,this.mounted,this.root.GetAbsOrigin(),bodyAngles);
       this.tank.updateRepair(time,counts.near,counts.alive);
     }
+    this.repairBroadcast.update(this.engine.GetAllPlayerControllers(),this.tank,time);
     for(const s of this.mounted.values())updateCrewStatus(this.hud,s,this.tank,time);
     for(const s of this.mounted.values()){
       if(s.view==='bore')this.updateBore(s);
@@ -2362,18 +2433,24 @@ class CourseProbe {
 return {COURSE_PROBE,CourseProbe};
 })();
 const __axp_13 = (()=>{
-// Independent test vehicle. Straight swept flight matches the sight ray. The map's
-// repeatable env_explosion handles radius, damage, occlusion and effects on impact.
+// R203: the original CS2 trigger_hurt branches supply damage=200000 / BLAST64.
+// CT uses filter_zombies_or_physics; T also enables the original unfiltered H branch.
+// Native trigger timing/armor/filtering determine HP loss; this is not a fixed-HP script hit.
+// The repeatable env_explosion is visual/audio only (NoDamage|Repeatable=3).
+// Preserve the original short enable/kill window; do not extend it into repeated hits.
 const speed=4096, lifetime=8;
 const along=(p,d,s)=>({x:p.x+d.x*s,y:p.y+d.y*s,z:p.z+d.z*s});
 class TankShell {
-  constructor(engine,blast,ignore,distant=null,impactTemplate=null){
-    this.impactTemplate=impactTemplate;
+  constructor(engine,blast,ignore,distant=null,impactTemplate=null,damageTemplate=null){
+    this.impactTemplate=impactTemplate;this.damageTemplate=damageTemplate;
+    if(!damageTemplate?.IsValid()||typeof damageTemplate.ForceSpawn!=='function')throw Error('Missing native tank damage template203');
+    this.damageZones=new Map();
     this.engine=engine;this.blast=blast;this.ignore=ignore;this.distant=distant;this.active=null;
+    this.pending=null;this.lastBlast=null;this.recent=[];this.diagnostics=false;
   }
   launch(shot,ray,breech,crew){
-    if(this.active)throw Error('Shell already in flight');
-    const shell={id:shot.id,shooter:shot.shooterId,position:ray.origin,direction:ray.direction,
+    if(this.active||this.pending)throw Error('Shell already in flight');
+    const shell={id:shot.id,shooter:shot.shooterId,team:shot.team,position:ray.origin,direction:ray.direction,
       ignore:[...this.ignore,...crew],time:shot.time,deadline:shot.time+lifetime};
     this.active=shell;
     // A protruding barrel may have crossed a thin obstruction.
@@ -2381,6 +2458,25 @@ class TankShell {
     if(trace.startedInSolid||trace.didHit)this.detonate(trace.startedInSolid?breech:along(trace.end,ray.direction,-1));
   }
   tick(time){
+    this.finishObservation(time);
+    for(const [entity,state] of this.damageZones)if(time-state.spawnedAt>1)this.damageZones.delete(entity);
+    if(this.pending&&time>=this.pending.readyAt){
+      const p=this.pending;this.pending=null;
+      if(this.blast.IsValid()){
+        p.record.firedAt=time;this.lastBlast=p.record;
+        const owner=p.owner?.IsValid()?p.owner:undefined;
+        this.blast.SetOwner(owner);
+        this.spawnNativeDamage(p,time);
+        // NoDamage is compiled into this entity; only its original sound/visual runs.
+        // No queued delayed I/O survives reset; this input is emitted once only.
+        this.engine.EntFireAtTarget({target:this.blast,input:'Explode',activator:owner});
+        this.playImpact(p.position,p.record.id);
+        if(this.distant?.IsValid()){
+          this.distant.Teleport({position:p.position});
+          this.engine.EntFireAtTarget({target:this.distant,input:'StartSound'});
+        }
+      }else p.record.cancelled='blast_entity_removed';
+    }
     const s=this.active;if(!s||time<=s.time)return;
     const end=along(s.position,s.direction,(Math.min(time,s.deadline)-s.time)*speed);
     s.ignore=s.ignore.filter(e=>e.IsValid());
@@ -2390,15 +2486,94 @@ class TankShell {
     if(time>=s.deadline)this.detonate(end);
   }
   detonate(position){
-    const s=this.active;this.active=null;
+    const s=this.active;if(!s)return;this.active=null;
     const owner=s.shooter?.IsValid()?s.shooter:undefined;
+    const time=this.engine.GetGameTime();
+    const record={id:s.id,position:{...position},scheduledAt:time,firedAt:null,
+      revision:203,damageSource:'trigger_hurt',nativeTriggerDamage:200000,damageType:64,nativeRadius:1000,shotTeam:s.team,settleSeconds:0.02,damageEvents:[],nearby:[]};
+    this.recent.push(record);if(this.recent.length>8)this.recent.shift();
+    if(!this.blast.IsValid()){record.cancelled='blast_entity_removed';return;}
     this.blast.Teleport({position});this.blast.SetOwner(owner);
-    this.engine.EntFireAtTarget({target:this.blast,input:'Explode',activator:owner});
-    this.playImpact(position,s.id);
-    if(this.distant?.IsValid()){
-      this.distant.Teleport({position});
-      this.engine.EntFireAtTarget({target:this.distant,input:'StartSound'});
+    this.pending={owner,position:{...position},readyAt:time+0.02,record};
+    // This read-only snapshot does not decide damage or clear map filters.
+    // Telemetry failure must never consume a shot or disable vehicle Think.
+    try {
+    record.shooterSlot=owner?.GetPlayerController()?.GetPlayerSlot();
+    record.shooterTeam=owner?.GetTeamNumber();
+    for(const c of this.engine.GetAllPlayerControllers()){
+      try {
+      const p=c.IsConnected()?c.GetPlayerPawn():undefined;
+      if(!p?.IsValid()||!p.IsAlive())continue;
+      const o=p.GetAbsOrigin(),eye=p.GetEyePosition(),center={x:o.x,y:o.y,z:(o.z+eye.z)/2};
+      const distance=Math.hypot(center.x-position.x,center.y-position.y,center.z-position.z);
+      if(distance<=1100)record.nearby.push({slot:c.GetPlayerSlot(),team:p.GetTeamNumber(),distance,
+        healthBefore:p.GetHealth()});
+      }catch(error){record.telemetryError=String(error);}
     }
+    }catch(error){record.telemetryError=String(error);}
+  }
+  spawnNativeDamage(p,time){
+    let spawned=[];
+    try{
+      if(!this.damageTemplate.IsValid())throw Error('Native damage template was removed');
+      spawned=this.damageTemplate.ForceSpawn(p.position,{pitch:0,yaw:0,roll:0})||[];
+      const zones=spawned.filter(e=>e.IsValid()&&e.GetClassName()==='trigger_hurt');
+      // ForceSpawn uses _<spawn serial> in the current CS2 runtime (verified on 27028).
+      const named=suffix=>zones.filter(e=>e.GetEntityName().replace(/^\[PR#\]/,'').split('&')[0].replace(/_\d+$/,'')===suffix);
+      const base=named('LMS203_TankDamage'),human=named('LMS203_TankDamageH');
+      if(zones.length!==2||base.length!==1||human.length!==1)throw Error('Expected exactly the two native damage branches');
+      if(p.record.shotTeam!==2&&p.record.shotTeam!==3)throw Error('Invalid shot team snapshot');
+      const owner=p.owner?.IsValid()?p.owner:undefined;
+      p.record.branches=[];
+      // Original H Enable is hit+.05, while the small template is born at hit+.02.
+      for(const [entity,branch,enableDelay] of [[base[0],'filtered',0.01],[human[0],'all',0.03]]){
+        const enabled=branch==='filtered'||p.record.shotTeam===2;
+        // Original CS2 damage triggers have no shooter owner. Preserve that attribution.
+        entity.SetOwner(undefined);
+        this.damageZones.set(entity,{record:p.record,branch,spawnedAt:time});
+        p.record.branches.push({branch,enabled,enableDelay:enabled?enableDelay:null,killDelay:0.15});
+        // Register every inflictor before scheduling native Enable. No shared-name wildcard I/O.
+        if(enabled)this.engine.EntFireAtTarget({target:entity,input:'Enable',activator:owner,delay:enableDelay});
+        this.engine.EntFireAtTarget({target:entity,input:'Kill',delay:0.15});
+      }
+    }catch(error){
+      for(const e of spawned)if(e.IsValid()){
+        this.engine.EntFireAtTarget({target:e,input:'Disable'});
+        this.engine.EntFireAtTarget({target:e,input:'Kill'});this.damageZones.delete(e);
+      }
+      p.record.damageError=String(error);
+      try{this.engine.Msg('[TANK203_DAMAGE_ERROR] '+String(error));}catch(_){}
+    }
+  }
+  observeDamage(event,phase,crewProtected=false){
+    const zone=this.damageZones.get(event.inflictor),r=zone?.record;
+    if(!r||this.engine.GetGameTime()-zone.spawnedAt>1)return;
+    try {
+      r.damageEvents.push({phase,branch:zone.branch,slot:event.player.GetPlayerController()?.GetPlayerSlot(),
+        damage:event.damage,damageTypes:event.damageTypes,crewProtected,
+        health:event.player.GetHealth(),armor:event.player.GetArmor?.()});
+    }catch(error){r.telemetryError=String(error);}
+  }
+  finishObservation(time){
+    const r=this.lastBlast;
+    if(!r||r.finishedAt!==undefined||time-r.firedAt<0.2)return;
+    r.finishedAt=time;
+    // Exact trigger instance attribution keeps the two original branches separate.
+    // Missing events are not proof of a timer failure. Console output is non-critical.
+    if(this.diagnostics)try{this.engine.Msg('[TANK196_BLAST] '+JSON.stringify(r));}catch(error){}
+  }
+  cancel(reason){
+    for(const [entity,state] of this.damageZones){
+      state.record.cancelled=reason;
+      if(entity.IsValid()){
+        this.engine.EntFireAtTarget({target:entity,input:'Disable'});
+        this.engine.EntFireAtTarget({target:entity,input:'Kill'});
+      }
+    }
+    this.damageZones.clear();
+    this.active=null;
+    if(this.pending)this.pending.record.cancelled=reason;
+    this.pending=null;this.lastBlast=null;
   }
   playImpact(position,id){
     // The impact has its own networked particle entity. Delay Start by two ticks so
@@ -2742,13 +2917,14 @@ function reset(newRound=true){
     }
   }
   wreckFx.clear();
-  if(shells)shells.active=null;
+  if(shells)shells.cancel('round_reset');
   if(crew){crew.clear('round_reset');crew.active=roundActive;}
   commands.clear();physics.stop();visuals.resetRound(newRound);previewYaw=0;previewPitch=0;sweep=false;lastTime=null;
   // Keep the current physical pose. Restoring a spawn pose while hinges are alive is not attempted.
   if(ready){tank.localPitch=2;previewPitch=2;physics.motion(roundActive);draw(now());}
 }
 function activate(){
+  ac195VehiclePause.reset();
   resetBackend164();
   try{
     if(crew){crew.active=false;crew.clear('reactivate');}
@@ -2773,7 +2949,7 @@ function activate(){
     cannonSound=sounds[0];
     const distant=Instance.FindEntitiesByName('m1_145_shell_distant');
     if(distant.length!==1||!distant[0].IsValid())throw Error('Missing original distant shell sound');
-    shells=new TankShell(Instance,blast[0],[...Object.values(binding.parts),...Object.values(physics.entities)],distant[0],Instance.FindEntityByName('LMS173_ShellFX_Template'));
+    shells=new TankShell(Instance,blast[0],[...Object.values(binding.parts),...Object.values(physics.entities)],distant[0],Instance.FindEntityByName('LMS173_ShellFX_Template'),Instance.FindEntityByName('LMS203_TankDamageTemplate'));
     anchor.SetHealth(1000000);
     ready=true;roundActive=true;reset();
     if(spawnRoot!==anchor){tank.lockSpawn(now());spawnRoot=anchor;}
@@ -2788,7 +2964,50 @@ function lab(action){
   try{action(now());}catch(error){stop(error);}
 }
 Instance.OnActivate(activate);
+// BEGIN AC195 VEHICLE CINEMA PATCH
+// Embedded unchanged in the two CURRENT R194 vehicle scripts. Native map-only
+// cooperation; no server plugin change and no alteration of normal seat rules.
+function createVehicleCinemaPause195(api){
+  let saved=null;
+  const copy=v=>({...v}),valid=e=>!!e?.IsValid();
+  function paused(){
+    const markers=api.FindEntitiesByName('AC188_CinemaActive').filter(valid);
+    return markers.length===1&&markers[0].GetHealth()===1;
+  }
+  return {
+    paused,reset(){saved=null;},
+    yield(bodies,stop,resume=()=>{}){
+      const live=[...new Set(bodies)].filter(valid);
+      if(!live.length){saved=null;return false;}
+      if(paused()){
+        if(!saved||saved.root!==live[0])saved={root:live[0],parts:live.map(entity=>({entity,
+          position:copy(entity.GetAbsOrigin()),angles:copy(entity.GetAbsAngles()),
+          velocity:copy(entity.GetAbsVelocity()),angularVelocity:copy(entity.GetAbsAngularVelocity())}))};
+        stop();
+        // Freeze every constrained physical body. Freezing only the root lets
+        // gravity displace wheels/supports and strains their surviving joints.
+        for(const p of saved.parts)if(valid(p.entity))p.entity.Teleport({position:p.position,angles:p.angles,
+          velocity:{x:0,y:0,z:0},angularVelocity:{x:0,y:0,z:0}});
+        api.SetNextThink(api.GetGameTime()+1/64);return true;
+      }
+      if(saved){
+        const previous=saved;saved=null;
+        if(previous.root===live[0]){
+          for(const p of previous.parts)if(valid(p.entity)&&live.includes(p.entity))
+            p.entity.Teleport({velocity:p.velocity,angularVelocity:p.angularVelocity});
+          resume();
+        }
+      }
+      return false;
+    }
+  };
+}
+
+const ac195VehiclePause=createVehicleCinemaPause195(Instance);
+// END AC195 VEHICLE CINEMA PATCH
+
 Instance.SetThink(()=>{
+    if(ac195VehiclePause.yield(ready&&anchor?.IsValid()&&!mapRetired?['root','front','rear'].map(k=>physics.entities[k]):[],()=>{commands.clear();physics.stop();},()=>{lastTime=now();physics.sampleTime=null;}))return;
   if(!ready)return;
   try{
     const time=now();if(!anchor.IsValid()&&!mapRetired)retireForMap();
@@ -2810,8 +3029,8 @@ Instance.SetThink(()=>{
 });
 // Round restart replaces prop entities while the point_script may survive.
 Instance.OnRoundStart(activate);
-Instance.OnRoundEnd(()=>{guard147.clear();roundActive=false;entryMarkers?.sync(tank,false);wreckFx.clear();if(crew){crew.active=false;crew.clear('round_end');}sweep=false;commands.clear();physics.stop();});
-Instance.OnScriptReload({before:()=>{stop('script_reload');return {};},after:()=>activate()});
+Instance.OnRoundEnd(()=>{shells?.cancel('round_end');ac195VehiclePause.reset();guard147.clear();roundActive=false;entryMarkers?.sync(tank,false);wreckFx.clear();if(crew){crew.active=false;crew.clear('round_end');}sweep=false;commands.clear();physics.stop();});
+Instance.OnScriptReload({before:()=>{ac195VehiclePause.reset();stop('script_reload');return {};},after:()=>activate()});
 for(const name of ['DriveForward','DriveReverse','DriveLeft','DriveRight','DriveStop'])Instance.OnScriptInput(name,()=>lab(time=>{
   if(tank.destroyed)return;commands.request(name,time);if(name==='DriveStop')physics.stop();
   if(probe)Instance.Msg('[AX_INPUT] '+JSON.stringify({name,time}));
@@ -2842,7 +3061,7 @@ function retireForMap(){
   if(!ready||!roundActive||mapRetired)return;
   mapRetired=true;guard147.clear();
   const time=now();
-  commands.clear();physics.stop();sweep=false;shells.active=null;tank.repairAt=null;
+  commands.clear();physics.stop();sweep=false;shells.cancel('map_retire');tank.repairAt=null;
   if(anchor.IsValid())lastPose=readPose();
   crew?.clear('map_retire');
   for(const key of ['root','front','rear']){
@@ -2884,9 +3103,21 @@ for(const [name,role] of [['EnterDriver','driver'],['EnterGunner','gunner']])Ins
 });
 for(const event of ['OnPlayerReset','OnPlayerTeamChanged','OnPlayerKill'])Instance[event](({player})=>crew?.release(player,event,true));
 // The map I/O filter is queued. Cover the admission frame with the native pre-damage callback.
-Instance.OnModifyPlayerDamage(({player})=>{if(crew?.mounted.has(player))return {abort:true};});
+Instance.OnModifyPlayerDamage(event=>{
+  const protectedCrew=!!crew?.mounted.has(event.player);
+  shells?.observeDamage(event,'before_armor',protectedCrew);
+  if(protectedCrew)return {abort:true};
+});
+Instance.OnPlayerDamage(event=>shells?.observeDamage(event,'health_lost'));
+Console.RegisterCheatCommand('ax_shell_diagnostics196',args=>{
+  if(shells)shells.diagnostics=args.trim()==='1';
+  Instance.Msg('[TANK196_DIAGNOSTICS] '+JSON.stringify({enabled:!!shells?.diagnostics}));
+});
+Console.RegisterCheatCommand('ax_shell_status196',()=>Instance.Msg('[TANK196_STATUS] '+JSON.stringify({
+  pending:shells?.pending?.record.id??null,recent:shells?.recent??[],
+  revision:203,note:'Original CS2 trigger_hurt branches: damage200000, BLAST64; HP loss is native. env_explosion has NoDamage.'})));
 Instance.OnPlayerDisconnect(({playerSlot})=>crew?.disconnect(playerSlot));
-Instance.OnBeginRoundRestart(()=>{guard147.clear();ready=false;roundActive=false;entryMarkers?.sync(tank,false);wreckFx.clear();if(crew){crew.active=false;crew.clear('round_restart');}commands.clear();physics.stop();});
+Instance.OnBeginRoundRestart(()=>{shells?.cancel('round_restart');guard147.clear();ready=false;roundActive=false;entryMarkers?.sync(tank,false);wreckFx.clear();if(crew){crew.active=false;crew.clear('round_restart');}commands.clear();physics.stop();});
 Instance.OnPlayerChat(({player,text})=>{
   if(!crew||!player)return;const p=player.GetPlayerPawn();
   if(text==='/tank driver')crew.enter('driver',p);
@@ -2898,6 +3129,7 @@ Console.RegisterCheatCommand('m1_drive_sample',args=>lab(time=>{
   if (['DriveForward','DriveReverse','DriveLeft','DriveRight','DriveForwardLeft','DriveForwardRight','DriveNeutral','DriveStop'].includes(name)) commands.request(name,time);
   Instance.Msg('[M1_DRIVE] '+JSON.stringify({time,pos:anchor.GetAbsOrigin(),angles:physics.bodyAngles(),velocity:anchor.GetAbsVelocity(),front:physics.entities.front.GetAbsOrigin(),rear:physics.entities.rear.GetAbsOrigin(),scale:physics.lastPlan}));
 }));
+Console.RegisterCheatCommand('ax_repair_hud200_status',()=>Instance.Msg('[AX_REPAIR200] '+JSON.stringify({ready,roundActive,mapRetired,hp:tank.hullHP[3],durabilityTeam:tank.durabilityTeam,near:tank.repairNear,required:tank.repairRequired,next:tank.repairAt,...crew?.repairBroadcast.status()})));
 Console.RegisterCheatCommand('ax_crew_status',()=>{
   if(!crew||!ready||!anchor?.IsValid())return;
   Instance.Msg('[AX_CREW_STATUS] '+JSON.stringify({driveRevision:147,story:story147.status(),mapRetired,spawnLockSeconds:__axp_0.TANK_COMBAT.spawnLockSeconds,spawnUnlockAt:tank.spawnUnlockAt,spawnLockRemaining:Math.max(0,tank.spawnUnlockAt-now()),hullHP:tank.hullHP,repair:{near:tank.repairNear,required:tank.repairRequired,alive:tank.repairAlive,next:tank.repairAt},entryCooldownSeconds:__axp_0.TANK_COMBAT.entryCooldown,entryUnlockAt:tank.entryUnlockAt,seatResetSeconds:0.1,entryMarkers:entryMarkers?.visible,rollSupport:'tracks',exitInput:'jump',precisionAim:'player',gunnerPitchRate:tank.config.pitchRate,time:now(),seats:crew.status(),root:anchor.GetAbsOrigin(),angles:physics.bodyAngles(),yaw:previewYaw,pitch:previewPitch,
@@ -2929,6 +3161,34 @@ Console.RegisterCheatCommand('ax_crew_probe',args=>{
     const start=now(),duration=Math.min(3,Math.max(0,Number(slotText)||0));
     crew.override=(seat,_p,time)=>time-start<duration?(seat==='driver'?{forward:true,left:role==='turn',back:false,right:false}:{aim:{x:0,y:1,z:.3},firePressed:time-start<.04}):{forward:false,back:false,left:false,right:false,firePressed:false};
   }
+});
+
+
+// R203 controlled blast validation. Explicit lab opt-in and zero human clients are mandatory.
+Console.RegisterCheatCommand('ax_shell_probe203',args=>{
+  if(!localTestEnabled173||!ready||!roundActive||!shells)return;
+  const clients=Instance.GetAllPlayerControllers().filter(c=>c.IsConnected());
+  if(clients.some(c=>!c.IsBot()))throw Error('Bot-only shell probe refuses human clients');
+  const [action,slotText,...values]=args.trim().split(/\s+/);
+  const c=clients.find(c=>c.GetPlayerSlot()===Number(slotText)),p=c?.GetPlayerPawn();
+  if(!p?.IsValid()||!p.IsAlive())throw Error('Live diagnostic bot required');
+  const numbers=values.map(Number);
+  if(action==='target'){
+    if(numbers.length!==4||numbers.some(n=>!Number.isFinite(n))||numbers.slice(0,3).some(n=>Math.abs(n)>16000))throw Error('Expected x y z armor');
+    if(numbers[3]!==0&&numbers[3]!==100)throw Error('Armor must be 0 or 100');
+    p.Teleport({position:{x:numbers[0],y:numbers[1],z:numbers[2]},velocity:{x:0,y:0,z:0}});
+    p.SetMaxHealth(1000000);p.SetHealth(1000000);p.SetArmor(numbers[3]);
+    Instance.EntFireAtTarget({target:p,input:'SetDamageFilter',value:''});
+  }else if(action==='fire'){
+    if(numbers.length!==3||numbers.some(n=>!Number.isFinite(n)||Math.abs(n)>16000))throw Error('Expected x y z');
+    const at={x:numbers[0],y:numbers[1],z:numbers[2]};
+    if(shells.active||shells.pending)throw Error('Shell is already in flight');
+    shells.diagnostics=true;
+    shells.launch({id:'probe203:'+now(),time:now(),shooterId:p,team:p.GetTeamNumber()},
+      {origin:at,direction:{x:0,y:0,z:1}},at,[]);
+    if(shells.active)shells.detonate(at);
+  }else if(action!=='status')throw Error('Unknown shell probe action');
+  Instance.Msg('[TANK203_BOT] '+JSON.stringify({slot:c.GetPlayerSlot(),team:p.GetTeamNumber(),health:p.GetHealth(),armor:p.GetArmor(),position:p.GetAbsOrigin()}));
 });
 
 // R163 diagnostics do not grant admission or change health/physics.

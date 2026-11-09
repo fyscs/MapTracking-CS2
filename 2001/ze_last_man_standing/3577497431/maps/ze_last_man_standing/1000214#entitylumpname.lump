@@ -63,7 +63,7 @@
     "renderfx": "0",
     "rendermode": "0",
     "shadowdepthnocache": "0",
-    "spawnflags": "0",
+    "spawnflags": "16384",
     "spawnobject": "0",
     "targetname": "[PR#]Vehicle_Car1_BLWheel",
     "classname": "func_physbox",

@@ -222,7 +222,7 @@
     "Case04": "stage_4_ultralisk_dies",
     "Case03": "stage_4_tank_escapes",
     "Case02": "stage_4_juggernaut_escapes",
-    "Case01": "stage_4_apache_escapes",
+    "Case01": "",
     "vscripts": "",
     "targetname": "[PR#]Case_Events_Stage_5",
     "classname": "logic_case",
@@ -253,14 +253,6 @@
         "target": "[PR#]Human_Item_Mech_Model",
         "input": "SetDefaultAnimation",
         "param": "run",
-        "delay": 2,
-        "limit": 1
-      },
-      {
-        "output": "OnCase01",
-        "target": "[PR#]stage_x_maker_apache",
-        "input": "AddOutput",
-        "param": "OnUser1\u003E!self\u003EFireUser2\u003E\u003E0\u003E1",
         "delay": 2,
         "limit": 1
       },

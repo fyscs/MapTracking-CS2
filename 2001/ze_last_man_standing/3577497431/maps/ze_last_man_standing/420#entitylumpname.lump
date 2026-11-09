@@ -156,7 +156,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Shake\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.5,
+        "delay": 0.10000000149011612,
         "limit": 1
       },
       {
@@ -164,7 +164,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Particle\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.5,
+        "delay": 0.10000000149011612,
         "limit": 1
       },
       {
@@ -180,7 +180,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Damage\u00260000",
         "input": "Enable",
         "param": "",
-        "delay": 0.019999999552965164,
+        "delay": 0.009999999776482582,
         "limit": 1
       },
       {
@@ -188,7 +188,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Damage\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.6000000238418579,
+        "delay": 0.15000000596046448,
         "limit": 1
       },
       {
@@ -196,7 +196,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Sound\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.6000000238418579,
+        "delay": 0.15000000596046448,
         "limit": 1
       },
       {
@@ -204,7 +204,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Damage_H\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.6000000238418579,
+        "delay": 0.15000000596046448,
         "limit": 1
       },
       {
@@ -212,7 +212,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Damage_Phys\u00260000",
         "input": "Explode",
         "param": "",
-        "delay": 0.019999999552965164,
+        "delay": 0.009999999776482582,
         "limit": 1
       },
       {
@@ -220,7 +220,7 @@
         "target": "[PR#]Spawn_Explosion_Small_Damage_Phys\u00260000",
         "input": "Kill",
         "param": "",
-        "delay": 0.6000000238418579,
+        "delay": 0.15000000596046448,
         "limit": 1
       }
     ]
