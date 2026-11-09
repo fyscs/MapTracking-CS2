@@ -50890,6 +50890,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]lyrics script",
+        "input": "RunScriptInput",
+        "param": "EnableEnglish",
+        "delay": 0.009999999776482582,
+        "limit": -1
       }
     ]
   },
@@ -50972,6 +50980,14 @@
         "input": "Lock",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]lyrics script",
+        "input": "RunScriptInput",
+        "param": "EnableJapanese",
+        "delay": 0.009999999776482582,
         "limit": -1
       }
     ]

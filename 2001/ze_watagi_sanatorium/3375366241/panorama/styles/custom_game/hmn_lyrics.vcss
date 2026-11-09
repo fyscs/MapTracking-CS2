@@ -24,6 +24,23 @@
     font-size: 20px;
     color: #61f538;
     text-shadow: 0px 2px 4px #000000;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.6s;
+}
+.SongTitle.FadeIn {
+    opacity: 1;
+}
+.SongTitle.FadeOut {
+    opacity: 0;
+}
+.LyricsDivider {
+    width: 420px;
+    height: 1px;
+    horizontal-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: gradient( linear, 0% 0%, 100% 0%, from(rgba(115, 152, 181, 0)), color-stop(0.5, rgba(183, 217, 242, 0.8)), to(rgba(115, 152, 181, 0)) );
 }
 .Lyrics {
     horizontal-align: center;
@@ -33,4 +50,75 @@
     color: white;
     text-align: center;
     text-shadow: 0px 2px 4px #000000, 0px 0px 8px #000000;
+    opacity: 0;
+    transition-property: opacity;
+}
+.Lyrics.FadeIn {
+    opacity: 1;
+}
+.Lyrics.FadeOut {
+    opacity: 0;
+}
+.Lyrics.FadeDuration0 {
+    transition-duration: 0s;
+}
+.Lyrics.FadeDuration1 {
+    transition-duration: 0.1s;
+}
+.Lyrics.FadeDuration2 {
+    transition-duration: 0.2s;
+}
+.Lyrics.FadeDuration3 {
+    transition-duration: 0.3s;
+}
+.Lyrics.FadeDuration4 {
+    transition-duration: 0.4s;
+}
+.Lyrics.FadeDuration5 {
+    transition-duration: 0.5s;
+}
+.Lyrics.FadeDuration6 {
+    transition-duration: 0.6s;
+}
+.Lyrics.FadeDuration7 {
+    transition-duration: 0.7s;
+}
+.Lyrics.FadeDuration8 {
+    transition-duration: 0.8s;
+}
+.Lyrics.FadeDuration9 {
+    transition-duration: 0.9s;
+}
+.Lyrics.FadeDuration10 {
+    transition-duration: 1.0s;
+}
+.Lyrics.FadeDuration11 {
+    transition-duration: 1.1s;
+}
+.Lyrics.FadeDuration12 {
+    transition-duration: 1.2s;
+}
+.Lyrics.FadeDuration13 {
+    transition-duration: 1.3s;
+}
+.Lyrics.FadeDuration14 {
+    transition-duration: 1.4s;
+}
+.Lyrics.FadeDuration15 {
+    transition-duration: 1.5s;
+}
+.Lyrics.FadeDuration16 {
+    transition-duration: 1.6s;
+}
+.Lyrics.FadeDuration17 {
+    transition-duration: 1.7s;
+}
+.Lyrics.FadeDuration18 {
+    transition-duration: 1.8s;
+}
+.Lyrics.FadeDuration19 {
+    transition-duration: 1.9s;
+}
+.Lyrics.FadeDuration20 {
+    transition-duration: 2.0s;
 }

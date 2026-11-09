@@ -3,21 +3,277 @@
 
 import { Instance, Entities } from "cs_script/point_script";
 
+
+// ==================================================
+// 楽曲設定
+// ==================================================
+
+const SONG_CONFIG = {
+
+    // 曲名
+    titleJapanese: "♪ 心のカゲロウ",
+    titleEnglish: "♪ KOKORO NO KAGEROU",
+
+    // 歌詞データ
+    // start   : 表示開始時間
+    // end     : 表示終了時間
+    // fadeIn  : 個別フェードイン時間
+    // fadeOut : 個別フェードアウト時間
+
+    lyrics: [
+
+        // --------------------------------------------------
+        // イントロ
+        // --------------------------------------------------
+
+        {
+            start: 0.0,
+            end: 5.0,
+            japanese: "歌詞: Hmn | 曲: Suno AI",
+            english: "Lyrics: Hmn | Music: Suno AI"
+        },
+
+        // --------------------------------------------------
+        // 1番
+        // --------------------------------------------------
+
+        {
+            start: 5.0,
+            end: 7.2,
+            japanese: "風がざわめく",
+            english: "The wind begins to stir"
+        },
+        {
+            start: 7.2,
+            end: 9.7,
+            japanese: "闇がどよめく",
+            english: "The darkness starts to rumble"
+        },
+        {
+            start: 9.7,
+            end: 14.9,
+            japanese: "響く足音　ここから始まる",
+            english: "Echoing footsteps, our story begins."
+        },
+        {
+            start: 14.9,
+            end: 18.1,
+            japanese: "閉まったドア　明かりのない廊下",
+            english: "A closed door, a hallway without light"
+        },
+        {
+            start: 18.1,
+            end: 22.6,
+            japanese: "隙間から覗く　瞳のよう...",
+            english: "Like eyes peering through the cracks..."
+        },
+        {
+            start: 22.6,
+            end: 25.6,
+            japanese: "触れたての手は　夢みたいに",
+            english: "The touch of your hand feels like a dream"
+        },
+        {
+            start: 25.6,
+            end: 29.4,
+            japanese: "ささやく君の　声に導かれ...",
+            english: "Led by the sound of your whisper..."
+        },
+        {
+            start: 29.4,
+            end: 31.4,
+            japanese: "（信じたい　シンジタイ）",
+            english: "(I want to believe, I want to believe.)"
+        },
+        {
+            start: 31.4,
+            end: 35.0,
+            japanese: "不安と恐怖　超えて進む",
+            english: "Moving forward, beyond fear and doubt."
+        },
+        {
+            start: 35.0,
+            end: 37.1,
+            japanese: "心のかげろう (カゲロウ)",
+            english: "Mirage of the heart"
+        },
+        {
+            start: 37.1,
+            end: 40.6,
+            japanese: "共に探す (サガス)",
+            english: "Searching together."
+        },
+        {
+            start: 40.6,
+            end: 45.1,
+            japanese: "謎と光が　交わる夜へ",
+            english: "Into the night where mystery meets light."
+        },
+        {
+            start: 45.1,
+            end: 47.6,
+            japanese: "呪いのような (ノロイノヨウナ)",
+            english: "Like a curse..."
+        },
+        {
+            start: 47.6,
+            end: 50.4,
+            japanese: "力を抱いて (チカラヲダイテ)",
+            english: "Embracing its power."
+        },
+        {
+            start: 50.4,
+            end: 57.8,
+            japanese: "明日を知るの　私の旅...",
+            english: "My journey, to discover tomorrow..."
+        },
+
+        // --------------------------------------------------
+        // 2番
+        // --------------------------------------------------
+
+        {
+            start: 57.8,
+            end: 60.6,
+            japanese: "迷い込む　まだ見ぬSpot",
+            english: "Lost within an unknown place"
+        },
+        {
+            start: 60.6,
+            end: 63.4,
+            japanese: "そこだけにある　乾き切ったTruth",
+            english: "A truth, barren and found nowhere else."
+        },
+        {
+            start: 63.4,
+            end: 66.2,
+            japanese: "不思議なキミと　出会ったとき",
+            english: "The moment I met someone like you"
+        },
+        {
+            start: 66.2,
+            end: 68.9,
+            japanese: "もう戻れない　時の狭間へ...",
+            english: "There's no turning back, into the rift of time..."
+        },
+        {
+            start: 68.9,
+            end: 70.9,
+            japanese: "（いっしょに　イッショニ）",
+            english: "(Together, forever together.)"
+        },
+        {
+            start: 70.9,
+            end: 78.1,
+            japanese: "二人で見つける　安静と希望",
+            english: "Together, we'll find peace and hope."
+        },
+        {
+            start: 78.1,
+            end: 80.2,
+            japanese: "心のかげろう (カゲロウ)",
+            english: "Mirage of the heart"
+        },
+        {
+            start: 80.2,
+            end: 83.7,
+            japanese: "キミと共に (トモニ)",
+            english: "Together with you"
+        },
+        {
+            start: 83.7,
+            end: 88.0,
+            japanese: "恐怖の先に　待ってる光",
+            english: "A light awaits beyond the fear."
+        },
+        {
+            start: 88.0,
+            end: 90.5,
+            japanese: "ゆめかげぼうし (ユメカゲボウシ)",
+            english: "A shadow cast by dreams"
+        },
+        {
+            start: 90.5,
+            end: 93.0,
+            japanese: "おしまい？ (オシマイ？)",
+            english: "Is this the end?"
+        },
+        {
+            start: 93.0,
+            end: 97.3,
+            japanese: "永遠の思い出　ここから始まる",
+            english: "An everlasting memory begins here."
+        },
+        {
+            start: 97.3,
+            end: 99.5,
+            japanese: "（はじまり　ハジマリ）",
+            english: "(The beginning, a new beginning.)"
+        },
+        {
+            start: 99.5,
+            end: 102.2,
+            japanese: "暗闇を超えて",
+            english: "Beyond the darkness"
+        },
+        {
+            start: 102.2,
+            end: 107.2,
+            japanese: "私の物語...",
+            english: "This is my story..."
+        }
+    ]
+};
+
+
+// ==================================================
+// フェード設定
+// ==================================================
+
+// 個別設定がない場合の標準フェード時間
+const DEFAULT_FADE_IN = 0.4;
+const DEFAULT_FADE_OUT = 0.5;
+
+// フェード時間の最小・最大値
+const MIN_FADE_DURATION = 0.0;
+const MAX_FADE_DURATION = 2.0;
+
+// タイトルを先行表示する時間
+const TITLE_LEAD_TIME = 0.2;
+
+
 // ==================================================
 // Custom HUD
 // ==================================================
 
+const HUD_NAME = "hmn_lyrics_hud";
+
 let lyricsHud = null;
 
-// 現在の歌詞再生セッション
+// 再生セッション管理
 let lyricsSession = 0;
 
+// 現在の表示言語
+let lyricsLanguage = "Japanese";
+
+// 現在表示中の歌詞番号
+let currentLyricsIndex = -1;
+
+// 現在の歌詞のフェードアウト開始状態
+let fadeOutStarted = false;
+
+
+// ==================================================
+// HUD取得
+// ==================================================
+
 function GetLyricsHud() {
+
     if (lyricsHud && lyricsHud.IsValid()) {
         return lyricsHud;
     }
 
-    const entities = Entities.FindByName("hmn_lyrics_hud");
+    const entities = Entities.FindByName(HUD_NAME);
 
     if (entities.length > 0) {
         lyricsHud = entities[0];
@@ -25,6 +281,7 @@ function GetLyricsHud() {
 
     return lyricsHud;
 }
+
 
 // ==================================================
 // 全プレイヤー取得
@@ -34,87 +291,465 @@ function GetPlayers() {
     return Instance.GetAllPlayerControllers();
 }
 
+
 // ==================================================
-// 1人のプレイヤーに歌詞を表示
+// フェード時間取得
 // ==================================================
 
-function SetLyricsForPlayer(playerSlot, text) {
+function GetFadeDuration(value, defaultValue) {
+
+    let duration = Number(value);
+
+    if (!Number.isFinite(duration)) {
+        duration = defaultValue;
+    }
+
+    duration = Math.max(
+        MIN_FADE_DURATION,
+        Math.min(MAX_FADE_DURATION, duration)
+    );
+
+    // 0.1秒単位に丸める
+    return Math.round(duration * 10) / 10;
+}
+
+
+// ==================================================
+// フェード用クラス名取得
+// ==================================================
+
+function GetFadeDurationClass(duration) {
+
+    const value = GetFadeDuration(
+        duration,
+        DEFAULT_FADE_IN
+    );
+
+    const index = Math.round(value * 10);
+
+    return "FadeDuration" + index;
+}
+
+
+// ==================================================
+// 言語別テキスト取得
+// ==================================================
+
+function GetCurrentLyricsText(lyric) {
+
+    if (lyricsLanguage === "English") {
+        return lyric.english || lyric.japanese || "";
+    }
+
+    return lyric.japanese || lyric.english || "";
+}
+
+
+// ==================================================
+// 歌詞のフェードイン時間取得
+// ==================================================
+
+function GetLyricFadeIn(lyric) {
+
+    return GetFadeDuration(
+        lyric.fadeIn,
+        DEFAULT_FADE_IN
+    );
+}
+
+
+// ==================================================
+// 歌詞のフェードアウト時間取得
+// ==================================================
+
+function GetLyricFadeOut(lyric) {
+
+    return GetFadeDuration(
+        lyric.fadeOut,
+        DEFAULT_FADE_OUT
+    );
+}
+
+
+// ==================================================
+// プレイヤーのフェードクラス設定
+// ==================================================
+
+function SetLyricsFadeClass(
+    playerSlot,
+    fadeClass,
+    enabled
+) {
+
     const hud = GetLyricsHud();
 
     if (!hud) {
         return;
     }
 
-    // HUDを表示
-    hud.SetHasClassForPlayer(playerSlot, "lyrics_container", "Hidden", false);
-    hud.SetHasClassForPlayer(playerSlot, "lyrics_container", "Visible", true);
-
-    // 曲名
-    hud.SetDialogVariableStringForPlayer(
+    hud.SetHasClassForPlayer(
         playerSlot,
-        "song_title",
-        "song_title",
-        "♪ 心のカゲロウ"
+        "lyrics",
+        fadeClass,
+        enabled
     );
-
-    // 歌詞
-    hud.SetDialogVariableStringForPlayer(playerSlot, "lyrics", "lyrics", text);
 }
 
+
 // ==================================================
-// 全プレイヤーに歌詞を表示
+// タイトル専用フェードクラス
 // ==================================================
 
-function SetLyricsForAllPlayers(text) {
+function SetSongTitleFadeClass(
+    playerSlot,
+    fadeClass,
+    enabled
+) {
+
+    const hud = GetLyricsHud();
+
+    if (!hud) {
+        return;
+    }
+
+    hud.SetHasClassForPlayer(
+        playerSlot,
+        "song_title",
+        fadeClass,
+        enabled
+    );
+}
+
+
+// ==================================================
+// 全プレイヤーのタイトルをフェード前状態にする
+// ==================================================
+
+function PrepareSongTitleFadeForAllPlayers() {
+
     const players = GetPlayers();
 
     for (const controller of players) {
+
         if (!controller) {
             continue;
         }
 
         const playerSlot = controller.GetPlayerSlot();
-        SetLyricsForPlayer(playerSlot, text);
+
+        SetSongTitleFadeClass(
+            playerSlot,
+            "FadeIn",
+            false
+        );
+
+        SetSongTitleFadeClass(
+            playerSlot,
+            "FadeOut",
+            true
+        );
     }
 }
+
+
+// ==================================================
+// 全プレイヤーのタイトルをフェードイン
+// ==================================================
+
+function FadeInSongTitleForAllPlayers() {
+
+    const players = GetPlayers();
+
+    for (const controller of players) {
+
+        if (!controller) {
+            continue;
+        }
+
+        const playerSlot = controller.GetPlayerSlot();
+
+        SetSongTitleFadeClass(
+            playerSlot,
+            "FadeOut",
+            false
+        );
+
+        SetSongTitleFadeClass(
+            playerSlot,
+            "FadeIn",
+            true
+        );
+    }
+}
+
+
+// ==================================================
+// フェード時間クラス変更
+// ==================================================
+
+function SetLyricsFadeDuration(playerSlot, duration) {
+
+    const hud = GetLyricsHud();
+
+    if (!hud) {
+        return;
+    }
+
+    // 古い時間クラスを削除
+    for (let i = 0; i <= 20; i++) {
+
+        hud.SetHasClassForPlayer(
+            playerSlot,
+            "lyrics",
+            "FadeDuration" + i,
+            false
+        );
+    }
+
+    // 新しい時間クラスを設定
+    hud.SetHasClassForPlayer(
+        playerSlot,
+        "lyrics",
+        GetFadeDurationClass(duration),
+        true
+    );
+}
+
+
+// ==================================================
+// 1人のプレイヤーに歌詞を表示
+// ==================================================
+
+function SetLyricsForPlayer(
+    playerSlot,
+    text,
+    lyric
+) {
+
+    const hud = GetLyricsHud();
+
+    if (!hud) {
+        return;
+    }
+
+    // HUD表示
+    hud.SetHasClassForPlayer(
+        playerSlot,
+        "lyrics_container",
+        "Hidden",
+        false
+    );
+
+    hud.SetHasClassForPlayer(
+        playerSlot,
+        "lyrics_container",
+        "Visible",
+        true
+    );
+
+    // 曲名
+    const songTitle =
+        lyricsLanguage === "English"
+            ? SONG_CONFIG.titleEnglish
+            : SONG_CONFIG.titleJapanese;
+
+    hud.SetDialogVariableStringForPlayer(
+        playerSlot,
+        "song_title",
+        "song_title",
+        songTitle
+    );
+
+    // 歌詞
+    hud.SetDialogVariableStringForPlayer(
+        playerSlot,
+        "lyrics",
+        "lyrics",
+        text
+    );
+
+    // フェードイン時間
+    SetLyricsFadeDuration(
+        playerSlot,
+        GetLyricFadeIn(lyric)
+    );
+
+    // いったん透明状態にする
+    SetLyricsFadeClass(
+        playerSlot,
+        "FadeIn",
+        false
+    );
+
+    SetLyricsFadeClass(
+        playerSlot,
+        "FadeOut",
+        true
+    );
+}
+
+
+// ==================================================
+// 全プレイヤーに歌詞を表示
+// ==================================================
+
+function SetLyricsForAllPlayers(text, lyric) {
+
+    const players = GetPlayers();
+
+    for (const controller of players) {
+
+        if (!controller) {
+            continue;
+        }
+
+        const playerSlot = controller.GetPlayerSlot();
+
+        SetLyricsForPlayer(
+            playerSlot,
+            text,
+            lyric
+        );
+    }
+}
+
+
+// ==================================================
+// 全プレイヤーのフェードイン
+// ==================================================
+
+function FadeInLyricsForAllPlayers() {
+
+    const players = GetPlayers();
+
+    for (const controller of players) {
+
+        if (!controller) {
+            continue;
+        }
+
+        const playerSlot = controller.GetPlayerSlot();
+
+        SetLyricsFadeClass(
+            playerSlot,
+            "FadeOut",
+            false
+        );
+
+        SetLyricsFadeClass(
+            playerSlot,
+            "FadeIn",
+            true
+        );
+    }
+}
+
+
+// ==================================================
+// 全プレイヤーのフェードアウト
+// ==================================================
+
+function FadeOutLyricsForAllPlayers(lyric) {
+
+    const players = GetPlayers();
+
+    for (const controller of players) {
+
+        if (!controller) {
+            continue;
+        }
+
+        const playerSlot = controller.GetPlayerSlot();
+
+        // フェードアウト時間を設定
+        SetLyricsFadeDuration(
+            playerSlot,
+            GetLyricFadeOut(lyric)
+        );
+
+        SetLyricsFadeClass(
+            playerSlot,
+            "FadeIn",
+            false
+        );
+
+        SetLyricsFadeClass(
+            playerSlot,
+            "FadeOut",
+            true
+        );
+    }
+}
+
 
 // ==================================================
 // 1人のHUDを非表示
 // ==================================================
 
 function HideLyricsForPlayer(playerSlot) {
+
     const hud = GetLyricsHud();
 
     if (!hud) {
         return;
     }
 
-    hud.SetHasClassForPlayer(playerSlot, "lyrics_container", "Visible", false);
-    hud.SetHasClassForPlayer(playerSlot, "lyrics_container", "Hidden", true);
+    hud.SetHasClassForPlayer(
+        playerSlot,
+        "lyrics_container",
+        "Visible",
+        false
+    );
+
+    hud.SetHasClassForPlayer(
+        playerSlot,
+        "lyrics_container",
+        "Hidden",
+        true
+    );
+
+    // フェード状態を初期化
+    SetLyricsFadeClass(
+        playerSlot,
+        "FadeIn",
+        false
+    );
+
+    SetLyricsFadeClass(
+        playerSlot,
+        "FadeOut",
+        true
+    );
 }
+
 
 // ==================================================
 // 全プレイヤーのHUDを非表示
 // ==================================================
 
 function HideLyricsForAllPlayers() {
+
     const players = GetPlayers();
 
     for (const controller of players) {
+
         if (!controller) {
             continue;
         }
 
         const playerSlot = controller.GetPlayerSlot();
+
         HideLyricsForPlayer(playerSlot);
     }
 }
+
 
 // ==================================================
 // 全プレイヤーのHUDをリセット
 // ==================================================
 
 function ResetLyricsForAllPlayers() {
+
     const hud = GetLyricsHud();
 
     if (!hud) {
@@ -124,6 +759,7 @@ function ResetLyricsForAllPlayers() {
     const players = GetPlayers();
 
     for (const controller of players) {
+
         if (!controller) {
             continue;
         }
@@ -131,295 +767,326 @@ function ResetLyricsForAllPlayers() {
         const playerSlot = controller.GetPlayerSlot();
 
         // 非表示
-        hud.SetHasClassForPlayer(playerSlot, "lyrics_container", "Visible", false);
-        hud.SetHasClassForPlayer(playerSlot, "lyrics_container", "Hidden", true);
+        hud.SetHasClassForPlayer(
+            playerSlot,
+            "lyrics_container",
+            "Visible",
+            false
+        );
 
-        // 歌詞をクリア
-        hud.SetDialogVariableStringForPlayer(playerSlot, "lyrics", "lyrics", "");
+        hud.SetHasClassForPlayer(
+            playerSlot,
+            "lyrics_container",
+            "Hidden",
+            true
+        );
 
-        // 曲名をクリア
-        hud.SetDialogVariableStringForPlayer(playerSlot, "song_title", "song_title", "");
+        // 歌詞のフェード状態を初期化
+        hud.SetHasClassForPlayer(
+            playerSlot,
+            "lyrics",
+            "FadeIn",
+            false
+        );
+
+        hud.SetHasClassForPlayer(
+            playerSlot,
+            "lyrics",
+            "FadeOut",
+            true
+        );
+
+        // 歌詞クリア
+        hud.SetDialogVariableStringForPlayer(
+            playerSlot,
+            "lyrics",
+            "lyrics",
+            ""
+        );
+
+        // タイトルのフェード状態を初期化
+        hud.SetHasClassForPlayer(
+            playerSlot,
+            "song_title",
+            "FadeIn",
+            false
+        );
+
+        hud.SetHasClassForPlayer(
+            playerSlot,
+            "song_title",
+            "FadeOut",
+            true
+        );
+
+        // 曲名クリア
+        hud.SetDialogVariableStringForPlayer(
+            playerSlot,
+            "song_title",
+            "song_title",
+            ""
+        );
     }
 }
+
+
+// ==================================================
+// 現在の言語設定で歌詞を再表示
+// ==================================================
+
+function RefreshCurrentLyrics() {
+
+    if (currentLyricsIndex < 0) {
+        return;
+    }
+
+    const lyric = SONG_CONFIG.lyrics[currentLyricsIndex];
+
+    if (!lyric) {
+        return;
+    }
+
+    const hud = GetLyricsHud();
+
+    if (!hud) {
+        return;
+    }
+
+    const players = GetPlayers();
+
+    const text = GetCurrentLyricsText(lyric);
+
+    const songTitle =
+        lyricsLanguage === "English"
+            ? SONG_CONFIG.titleEnglish
+            : SONG_CONFIG.titleJapanese;
+
+    for (const controller of players) {
+
+        if (!controller) {
+            continue;
+        }
+
+        const playerSlot = controller.GetPlayerSlot();
+
+        // 曲名
+        hud.SetDialogVariableStringForPlayer(
+            playerSlot,
+            "song_title",
+            "song_title",
+            songTitle
+        );
+
+        // 歌詞
+        hud.SetDialogVariableStringForPlayer(
+            playerSlot,
+            "lyrics",
+            "lyrics",
+            text
+        );
+    }
+}
+
 
 // ==================================================
 // 歌詞再生
 // ==================================================
 
 async function StartLyrics() {
-    // 新しい歌詞再生セッション
+
+    // 新しい再生セッション
     lyricsSession++;
+
     const mySession = lyricsSession;
 
-    // 1
-    SetLyricsForAllPlayers("歌詞 : Hmn 曲 : Suno AI");
+    // 表示番号リセット
+    currentLyricsIndex = -1;
 
-    await Instance.Delay(5.0);
+    // フェードアウト状態リセット
+    fadeOutStarted = false;
+
+    // 再生開始時刻
+    const startTime = Date.now();
+
+    // タイトルをフェード前の状態にする
+    PrepareSongTitleFadeForAllPlayers();
+
+    // タイトルのフェード開始管理
+    let titleFadeStarted = false;
+
+    // 歌詞データ
+    const lyrics = SONG_CONFIG.lyrics;
+
+    // 再生時間管理
+    while (mySession === lyricsSession) {
+
+        // 楽曲開始からの経過秒数
+        const elapsed = (Date.now() - startTime) / 1000;
+
+        // 現在表示する歌詞を検索
+        let targetIndex = -1;
+
+        for (let i = 0; i < lyrics.length; i++) {
+
+            const lyric = lyrics[i];
+
+            if (
+                elapsed >= lyric.start &&
+                elapsed < lyric.end
+            ) {
+                targetIndex = i;
+                break;
+            }
+        }
+
+        // 歌詞が切り替わった場合
+        if (targetIndex !== currentLyricsIndex) {
+
+            currentLyricsIndex = targetIndex;
+
+            // 新しい歌詞のフェードアウト状態を解除
+            fadeOutStarted = false;
+
+            if (targetIndex >= 0) {
+
+                const lyric = lyrics[targetIndex];
+
+                // 歌詞を一括表示
+                SetLyricsForAllPlayers(
+                    GetCurrentLyricsText(lyric),
+                    lyric
+                );
+
+                // 画面上で透明状態を反映させるため少し待つ
+                await Instance.Delay(0.03);
+
+                // 待機中にリセット・再スタートされていないか確認
+                if (
+                    mySession !== lyricsSession ||
+                    currentLyricsIndex !== targetIndex
+                ) {
+                    return;
+                }
+
+                // タイトルは曲の再生中に一度だけフェードイン
+                if (!titleFadeStarted) {
+
+                    titleFadeStarted = true;
+
+                    // 先にタイトルをフェードイン
+                    FadeInSongTitleForAllPlayers();
+
+                    // タイトルを少し先行させる
+                    await Instance.Delay(TITLE_LEAD_TIME);
+
+                    // 待機中にリセット・再スタートされていないか確認
+                    if (
+                        mySession !== lyricsSession ||
+                        currentLyricsIndex !== targetIndex
+                    ) {
+                        return;
+                    }
+                }
+
+                // 歌詞のフェードイン開始
+                FadeInLyricsForAllPlayers();
+
+            } else {
+
+                // 歌詞がない時間帯
+                HideLyricsForAllPlayers();
+            }
+        }
+
+        // 現在の歌詞がある場合
+        if (targetIndex >= 0) {
+
+            const lyric = lyrics[targetIndex];
+
+            const fadeOutDuration = Math.min(
+                GetLyricFadeOut(lyric),
+                lyric.end - lyric.start
+            );
+
+            // 終了時刻より前にフェードアウトを開始
+            if (
+                !fadeOutStarted &&
+                fadeOutDuration > 0 &&
+                elapsed >= lyric.end - fadeOutDuration
+            ) {
+
+                fadeOutStarted = true;
+
+                FadeOutLyricsForAllPlayers(lyric);
+            }
+        }
+
+        // 全歌詞終了
+        if (elapsed >= lyrics[lyrics.length - 1].end) {
+            break;
+        }
+
+        // 約30ms間隔で時間確認
+        await Instance.Delay(0.03);
+    }
+
+    // 別セッションに切り替わっていたら終了
     if (mySession !== lyricsSession) {
         return;
     }
 
-    // 2
-    SetLyricsForAllPlayers("風がざわめく");
+    // 再生終了
+    currentLyricsIndex = -1;
+    fadeOutStarted = false;
 
-    await Instance.Delay(2.2);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 3
-    SetLyricsForAllPlayers("闇がどよめく");
-
-    await Instance.Delay(2.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 4
-    SetLyricsForAllPlayers("響く足音　ここから始まる");
-
-    await Instance.Delay(5.2);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 5
-    SetLyricsForAllPlayers("閉まったドア　明かりのない廊下");
-
-    await Instance.Delay(3.2);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 6
-    SetLyricsForAllPlayers("隙間から覗く　瞳のよう...");
-
-    await Instance.Delay(4.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 7
-    SetLyricsForAllPlayers("触れたての手は　夢みたいに");
-
-    await Instance.Delay(3.0);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 8
-    SetLyricsForAllPlayers("ささやく君の　声に導かれ...");
-
-    await Instance.Delay(3.8);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 9
-    SetLyricsForAllPlayers("（信じたい　シンジタイ）");
-
-    await Instance.Delay(2.0);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 10
-    SetLyricsForAllPlayers("不安と恐怖　超えて進む");
-
-    await Instance.Delay(3.6);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 11
-    SetLyricsForAllPlayers("心のかげろう (カゲロウ)");
-
-    await Instance.Delay(2.1);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 12
-    SetLyricsForAllPlayers("共に探す (サガス)");
-
-    await Instance.Delay(3.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 13
-    SetLyricsForAllPlayers("謎と光が　交わる夜へ");
-
-    await Instance.Delay(4.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 14
-    SetLyricsForAllPlayers("呪いのような (ノロイノヨウナ)");
-
-    await Instance.Delay(2.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 15
-    SetLyricsForAllPlayers("力を抱いて (チカラヲダイテ)");
-
-    await Instance.Delay(2.8);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 16
-    SetLyricsForAllPlayers("明日を知るの　私の旅...");
-
-    await Instance.Delay(7.4);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 17
-    SetLyricsForAllPlayers("迷い込む　まだ見ぬSpot");
-
-    await Instance.Delay(2.8);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 18
-    SetLyricsForAllPlayers("そこだけにある　乾き切ったTruth");
-
-    await Instance.Delay(2.8);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 19
-    SetLyricsForAllPlayers("不思議なキミと　出会ったとき");
-
-    await Instance.Delay(2.8);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 20
-    SetLyricsForAllPlayers("もう戻れない　時の狭間へ...");
-
-    await Instance.Delay(2.7);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 21
-    SetLyricsForAllPlayers("（いっしょに　イッショニ）");
-
-    await Instance.Delay(2.0);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 22
-    SetLyricsForAllPlayers("二人で見つける　安静と希望");
-
-    await Instance.Delay(7.2);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 23
-    SetLyricsForAllPlayers("心のかげろう (カゲロウ)");
-
-    await Instance.Delay(2.1);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 24
-    SetLyricsForAllPlayers("キミと共に (トモニ)");
-
-    await Instance.Delay(3.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 25
-    SetLyricsForAllPlayers("恐怖の先に　待ってる光");
-
-    await Instance.Delay(4.3);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 26
-    SetLyricsForAllPlayers("ゆめかげぼうし (ユメカゲボウシ)");
-
-    await Instance.Delay(2.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 27
-    SetLyricsForAllPlayers("おしまい？ (オシマイ？)");
-
-    await Instance.Delay(2.5);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 28
-    SetLyricsForAllPlayers("永遠の思い出　ここから始まる");
-
-    await Instance.Delay(4.3);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 29
-    SetLyricsForAllPlayers("（はじまり　ハジマリ）");
-
-    await Instance.Delay(2.2);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 30
-    SetLyricsForAllPlayers("暗闇を超えて");
-
-    await Instance.Delay(2.7);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 31
-    SetLyricsForAllPlayers("私の物語...");
-
-    await Instance.Delay(5.0);
-    if (mySession !== lyricsSession) {
-        return;
-    }
-
-    // 終了
     HideLyricsForAllPlayers();
 }
+
 
 // ==================================================
 // Hammer → RunScriptInput
 // ==================================================
 
+// 歌詞再生開始
 Instance.OnScriptInput("StartLyrics", (inputData) => {
-    // 誰が押したかは関係なく、全プレイヤーで歌詞を開始
+
     StartLyrics();
 });
 
+
+// 日本語に切り替え
+Instance.OnScriptInput("EnableJapanese", (inputData) => {
+
+    lyricsLanguage = "Japanese";
+
+    RefreshCurrentLyrics();
+});
+
+
+// 英語に切り替え
+Instance.OnScriptInput("EnableEnglish", (inputData) => {
+
+    lyricsLanguage = "English";
+
+    RefreshCurrentLyrics();
+});
+
+
 // ==================================================
-// ラウンド開始・リセット
+// 再生停止・リセット
 // ==================================================
 
 Instance.OnScriptInput("ResetLyrics", (inputData) => {
-    // 現在進行中の歌詞再生を無効化
+
+    // 再生セッション無効化
     lyricsSession++;
 
-    // 全プレイヤーのHUDをリセット
+    // 表示番号リセット
+    currentLyricsIndex = -1;
+
+    // フェードアウト状態リセット
+    fadeOutStarted = false;
+
+    // 全HUDリセット
     ResetLyricsForAllPlayers();
 });
