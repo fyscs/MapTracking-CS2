@@ -47,12 +47,12 @@
     transform: scale3d(0.96, 0.96, 1.0);
 }
 .LocationLine {
-    width: 650px;
+    width: 720px;
     height: 2px;
     horizontal-align: center;
     margin-top: 10px;
     margin-bottom: 6px;
-    background-color: #FFFFFFFF;
+    background-color: gradient( linear, 0% 0%, 100% 0%, from(#FFFFFF00), color-stop(0.2, #FFFFFFFF), color-stop(0.8, #FFFFFFFF), to(#FFFFFF00) );
     opacity: 1.0;
     transform: scaleX(1.0);
     transition-property: opacity, transform;
