@@ -3,7 +3,7 @@
 <!-- xml reconstructed from compiled AST -->
 <root>
     <styles>
-        <include src="s2r://panorama/styles/custom_game/boss_hp.vcss_c" />
+        <include src="s2r://panorama/styles/custom_game/boss_hp.vcss" />
     </styles>
     <Panel class="Root">
         <Panel id="boss_top_damage_container" class="TopDamageList TopDamageHidden">
