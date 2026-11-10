@@ -93,7 +93,7 @@ Instance.OnScriptInput("c2m5", () => { currentStageIndex = 4; Console.ServerComm
 
 Instance.OnScriptInput("Next", () => {
     // if (currentStageIndex < stageList.length - 1) currentStageIndex++;
-    if (currentStageIndex < 1) currentStageIndex++;
+    if (currentStageIndex < 2) currentStageIndex++;
     else currentStageIndex = 0;
 });
 

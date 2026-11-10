@@ -123,7 +123,7 @@
         "output": "OnTrigger",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say **\u6682\u65F6\u4EC5\u6709c2m1\u4E0Ec2m2\u6218\u5F79**",
+        "param": "say **\u90E8\u5206\u6218\u5F79\u4ECD\u5728\u5236\u4F5C\u4E2D**",
         "delay": 1,
         "limit": -1
       },

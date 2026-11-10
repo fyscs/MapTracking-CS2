@@ -24,6 +24,7 @@ let zombatDelayTaskId = 0;
 
 Instance.OnScriptInput("Activate", () => {
     allPtps = Entities.FindByName("m*_zombie_spawn_ptp_cs2_ze");
+    CancelDelay(mainTaskId);
     mainTaskId = Delay(0, Main);
 });
 

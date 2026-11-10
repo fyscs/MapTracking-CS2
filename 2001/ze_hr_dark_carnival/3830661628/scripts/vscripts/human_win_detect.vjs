@@ -55,10 +55,12 @@ Instance.OnScriptInput("DetectWin", () => {
         return;
     }
     for (const player of zombies) {
-        if (!IsPointInBox(player.GetAbsOrigin(), pos1, pos2)) {
+        if (IsPointInBox(player.GetAbsOrigin(), pos1, pos2)) {
             Console.ServerCommand("say **有僵尸进入了安全屋，清理掉他们才能关闭安全屋**");
             return;
         }
+    }
+    for (const player of zombies) {
         player.Kill();
     }
     Console.ServerCommand("say **我们安全了，暂时......**");
