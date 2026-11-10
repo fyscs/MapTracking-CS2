@@ -91,9 +91,14 @@ const SUPPORTERS = {
         styleClass: "sper_dante",   
     },
     supporter_zq: {
-        text: ">起源与终结 笨笨ziqi 加入了魔界小队.<",     
+        text: ">传奇恶魔猎人 梓喵 加入了狩魔小队.<",     
         duration: 4.0,                 
-        styleClass: "sper_vergil",   
+        styleClass: "sper_dante",   
+    },
+    supporter_asada: {
+        text: ">传奇恶魔猎人 Asada ShinoQWQ 加入了狩魔小队.<",     
+        duration: 4.0,                 
+        styleClass: "sper_dante",   
     },
     supporter3: {
         text: "test",

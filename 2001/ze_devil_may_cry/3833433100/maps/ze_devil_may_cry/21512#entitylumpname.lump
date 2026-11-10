@@ -416,41 +416,6 @@
     "_template_lump_ent_index": "4"
   },
   {
-    "wait": "0.100000",
-    "filtername": "[PR#]Filter_Human",
-    "spawnflags": "4097",
-    "globalname": "",
-    "StartDisabled": "1",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
-    "vscripts": "",
-    "targetname": "[PR#]Boss_Vergil_SFX_GR_Metor_Tri",
-    "classname": "trigger_multiple",
-    "origin": "-20.000000 -1.500000 37.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "21466",
-    "model": "maps/ze_devil_may_cry/entities/boss_vergil_sfx_gr_metor_tri_21466.vmdl",
-    "_template_lump_ent_index": "5",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Boss_Vergil_SFX_GR_Metor_Maker",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!activator",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
     "wait": "1.000000",
     "filtername": "[PR#]Filter_Human",
     "spawnflags": "4097",
@@ -473,7 +438,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21468",
     "model": "maps/ze_devil_may_cry/entities/boss_vergil_sfx_gr_metor_tri2_21468.vmdl",
-    "_template_lump_ent_index": "6",
+    "_template_lump_ent_index": "5",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -516,7 +481,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21454",
     "model": "maps/ze_devil_may_cry/entities/boss_vergil_sfx_vworld_rot_21454.vmdl",
-    "_template_lump_ent_index": "7",
+    "_template_lump_ent_index": "6",
     "connections": [
       {
         "output": "OnIn",
@@ -605,7 +570,7 @@
     "angles": "-0.000000 90.000023 0.000000",
     "scales": "40.500000 40.500000 40.500000",
     "hammerUniqueId": "21450",
-    "_template_lump_ent_index": "8",
+    "_template_lump_ent_index": "7",
     "connections": [
       {
         "output": "OnUser1",
@@ -982,7 +947,7 @@
     "angles": "89.999947 90.000023 0.000000",
     "scales": "40.500000 40.500000 40.500000",
     "hammerUniqueId": "21449",
-    "_template_lump_ent_index": "9"
+    "_template_lump_ent_index": "8"
   },
   {
     "AllowMovableNavMeshDockingOnEntireEntity": "0",
@@ -1026,7 +991,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21452",
     "model": "maps/ze_devil_may_cry/entities/boss_vergil_sfx_vworld_mover_21452.vmdl",
-    "_template_lump_ent_index": "10",
+    "_template_lump_ent_index": "9",
     "connections": [
       {
         "output": "OnFullyOpen",
@@ -1141,7 +1106,7 @@
         "limit": 1
       },
       {
-        "output": "OnFullyOpen",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_GR_Metor_Tri",
         "input": "Kill",
         "param": "",
@@ -1505,7 +1470,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21473",
-    "_template_lump_ent_index": "11"
+    "_template_lump_ent_index": "10"
   },
   {
     "SourceEntityName": "",
@@ -1542,7 +1507,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21471",
-    "_template_lump_ent_index": "12"
+    "_template_lump_ent_index": "11"
   },
   {
     "SourceEntityName": "",
@@ -1579,7 +1544,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21472",
-    "_template_lump_ent_index": "13"
+    "_template_lump_ent_index": "12"
   },
   {
     "clothScale": "1.000000",
@@ -1650,7 +1615,7 @@
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "50.000000 50.000000 50.000000",
     "hammerUniqueId": "21459",
-    "_template_lump_ent_index": "14",
+    "_template_lump_ent_index": "13",
     "connections": [
       {
         "output": "OnUser1",
@@ -2040,7 +2005,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21460",
-    "_template_lump_ent_index": "15"
+    "_template_lump_ent_index": "14"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -2065,7 +2030,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21490",
-    "_template_lump_ent_index": "16"
+    "_template_lump_ent_index": "15"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -2090,7 +2055,7 @@
     "angles": "-0.000000 45.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21491",
-    "_template_lump_ent_index": "17"
+    "_template_lump_ent_index": "16"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -2115,7 +2080,7 @@
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21492",
-    "_template_lump_ent_index": "18"
+    "_template_lump_ent_index": "17"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -2140,7 +2105,7 @@
     "angles": "-0.000000 135.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21493",
-    "_template_lump_ent_index": "19"
+    "_template_lump_ent_index": "18"
   },
   {
     "PostSpawnInheritAngles": "0",
@@ -2165,7 +2130,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21511",
-    "_template_lump_ent_index": "20"
+    "_template_lump_ent_index": "19"
   },
   {
     "cpoint7_parent": "0",
@@ -2265,7 +2230,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21478",
-    "_template_lump_ent_index": "21"
+    "_template_lump_ent_index": "20"
   },
   {
     "cpoint7_parent": "0",
@@ -2365,6 +2330,6 @@
     "angles": "-0.000000 0.000000 -60.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21515",
-    "_template_lump_ent_index": "22"
+    "_template_lump_ent_index": "21"
   }
 ]

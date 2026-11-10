@@ -50512,13 +50512,13 @@
     "add_attribute": "",
     "ResponseContext": "",
     "vscripts": "",
-    "targetname": "[PR#]Boss_Goliath_Wall_Outside",
+    "targetname": "",
     "classname": "func_wall_toggle",
     "origin": "-583.382812 -12325.264648 -13263.636719",
     "angles": "0.000000 225.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7329",
-    "model": "maps/ze_devil_may_cry/entities/boss_goliath_wall_outside_7329.vmdl"
+    "model": "maps/ze_devil_may_cry/entities/unnamed_7329.vmdl"
   },
   {
     "spawnflags": "0",
@@ -62425,7 +62425,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Lobby_ZmItem_Case_Act1",
+        "target": "[PR#]Lobby_ZmItem_Case_Act23",
         "input": "FireUser1",
         "param": "",
         "delay": 0,
@@ -317304,6 +317304,14 @@
         "param": "cinema_close",
         "delay": 10,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Act5_AfkTp_S",
+        "input": "Enable",
+        "param": "",
+        "delay": 5,
+        "limit": 1
       }
     ]
   },
@@ -318303,7 +318311,7 @@
         "target": "!self",
         "input": "Disable",
         "param": "",
-        "delay": 0.10000000149011612,
+        "delay": 0.15000000596046448,
         "limit": -1
       },
       {
@@ -323556,6 +323564,14 @@
         "param": "speed 1.1",
         "delay": 15,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Alpha",
+        "param": "255",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -328014,6 +328030,14 @@
         "input": "RunScriptInput",
         "param": "act5_title",
         "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Act3_Boss_Artmis_Physbox",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -360823,6 +360847,22 @@
         "param": "",
         "delay": 1.2000000476837158,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Item_Skin_Nero_But_Upper",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Item_Skin_Dante_But_Upper",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -380443,6 +380483,14 @@
         "param": "",
         "delay": 1,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]ASADA",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 1,
+        "limit": -1
       }
     ]
   },
@@ -391843,7 +391891,7 @@
     "Template09": "[PR#]Boss_Vergil_SFX_VWorld_Model_V1",
     "Template08": "[PR#]Boss_Vergil_SFX_VWorld_Rot",
     "Template07": "[PR#]Boss_Vergil_SFX_GR_Metor_Tri2",
-    "Template06": "[PR#]Boss_Vergil_SFX_GR_Metor_Tri",
+    "Template06": "",
     "Template05": "[PR#]Boss_Vergil_SFX_VWorld_Part_Flash",
     "Template04": "[PR#]Boss_Vergil_SFX_VWorld_S_Flash",
     "Template03": "[PR#]Boss_Vergil_SFX_VWorld_R",
@@ -403643,5 +403691,93 @@
     "angles": "-15.281708 61.272530 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21905"
+  },
+  {
+    "_minlight": "",
+    "spawnflags": "1",
+    "disableshadows": "0",
+    "globalname": "",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "targetname": "[PR#]Act0_Final_Wall",
+    "vscripts": "",
+    "classname": "func_wall_toggle",
+    "origin": "-1694.017944 -10658.393555 -13405.000000",
+    "angles": "0.000000 30.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21907",
+    "model": "maps/ze_devil_may_cry/entities/act0_final_wall_21907.vmdl"
+  },
+  {
+    "wait": "0.100000",
+    "filtername": "[PR#]Filter_Human",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Boss_Vergil_SFX_GR_Metor_Tri",
+    "classname": "trigger_multiple",
+    "origin": "10011.208984 -5152.000000 -11553.337891",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21908",
+    "model": "maps/ze_devil_may_cry/entities/boss_vergil_sfx_gr_metor_tri_21908.vmdl",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_GR_Metor_Maker",
+        "input": "ForceSpawnAtEntityOrigin",
+        "param": "!activator",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "_minlight": "",
+    "spawnflags": "0",
+    "disableshadows": "0",
+    "globalname": "",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "targetname": "",
+    "vscripts": "",
+    "classname": "func_wall_toggle",
+    "origin": "-1435.969727 -11050.279297 -13201.163086",
+    "angles": "0.000000 300.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21911",
+    "model": "maps/ze_devil_may_cry/entities/unnamed_21911.vmdl"
   }
 ]
