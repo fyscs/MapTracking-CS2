@@ -60019,8 +60019,8 @@
     "Case19": "",
     "Case18": "PressedDuck",
     "Case17": "PressedSpeed",
-    "Case16": "16",
-    "Case15": "15",
+    "Case16": "16.0",
+    "Case15": "15.0",
     "Case14": "PressedMoveRight",
     "Case13": "PressedBack",
     "Case12": "PressedMoveLeft",
@@ -60047,14 +60047,6 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4971",
     "connections": [
-      {
-        "output": "OnCase01",
-        "target": "[PR#]level_teleport",
-        "input": "KeyValues",
-        "param": "target level_one_spawn",
-        "delay": 0,
-        "limit": 1
-      },
       {
         "output": "OnCase02",
         "target": "[PR#]Server",
@@ -60102,14 +60094,6 @@
         "param": "target level_four_spawn",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnCase16",
-        "target": "[PR#]warm_up_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": -1
       },
       {
         "output": "OnCase04",
@@ -60222,6 +60206,22 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnCase16",
+        "target": "[PR#]warm_up_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]level_teleport",
+        "input": "KeyValues",
+        "param": "target level_one_spawn",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -60611,7 +60611,7 @@
     "Case19": "",
     "Case18": "PressedDuck",
     "Case17": "PressedSpeed",
-    "Case16": "16",
+    "Case16": "16.0",
     "Case15": "PressedAttack",
     "Case14": "PressedMoveRight",
     "Case13": "PressedBack",
@@ -61347,7 +61347,7 @@
     "Case19": "",
     "Case18": "PressedDuck",
     "Case17": "PressedSpeed",
-    "Case16": "16",
+    "Case16": "16.0",
     "Case15": "PressedAttack",
     "Case14": "PressedMoveRight",
     "Case13": "PressedBack",
@@ -62303,7 +62303,7 @@
     "Case19": "",
     "Case18": "PressedDuck",
     "Case17": "PressedSpeed",
-    "Case16": "16",
+    "Case16": "16.0",
     "Case15": "PressedAttack",
     "Case14": "PressedMoveRight",
     "Case13": "PressedBack",
