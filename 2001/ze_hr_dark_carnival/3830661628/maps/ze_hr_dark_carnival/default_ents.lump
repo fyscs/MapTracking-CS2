@@ -5045,5 +5045,14 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "cs_script": "scripts/vscripts/weapon_spawn.vjs",
+    "targetname": "[PR#]weapon_spawn_script",
+    "classname": "point_script",
+    "origin": "128.000000 304.000000 -4152.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "599"
   }
 ]

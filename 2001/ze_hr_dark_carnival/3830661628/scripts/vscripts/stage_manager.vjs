@@ -310,6 +310,7 @@ function StageInit(stage) {
     Entities.FireInput({ name: "dynamic_light_fix_script", input: "RunScriptInput", value: "LightFix" });
     Entities.FireInput({ name: "zombie_spawn_manager_script", input: "RunScriptInput", value: "Activate" });
     Entities.FireInput({ name: "stage_" + stage + "_init_relay", input: "Trigger" });
+    Entities.FireInput({ name: "weapon_spawn_script", input: "RunScriptInput", value: "SpawnWeapons" });
     for (const player of Entities.FindByClass("player")) {
         if (!player.IsValid() || !player.IsAlive() || player.GetTeamNumber() !== 3) continue;
         Entities.FireInput({ name: `m${stageSlot}_start_tp_case_cs2_ze`, input: "PickRandomShuffle", activator: player });
