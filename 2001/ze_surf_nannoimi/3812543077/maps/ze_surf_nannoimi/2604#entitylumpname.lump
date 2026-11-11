@@ -108,18 +108,18 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]player",
-        "input": "removecontext",
-        "param": "player_fire",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "addcontext",
         "param": "player_fire:1",
         "delay": 0.10000000149011612,
+        "limit": -1
+      },
+      {
+        "output": "OnPlayerPickup",
+        "target": "[PR#]player",
+        "input": "removecontext",
+        "param": "player_fire",
+        "delay": 0,
         "limit": -1
       }
     ]

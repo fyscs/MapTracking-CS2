@@ -415,14 +415,6 @@
       },
       {
         "output": "OnPlayerPickup",
-        "target": "[PR#]player",
-        "input": "removecontext",
-        "param": "player_heal",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPlayerPickup",
         "target": "!activator",
         "input": "addcontext",
         "param": "player_heal:1",
