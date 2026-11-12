@@ -20328,7 +20328,7 @@
         "target": "[PR#]lv2_bgm1",
         "input": "StopSound",
         "param": "",
-        "delay": 133,
+        "delay": 63.5,
         "limit": 1
       },
       {
@@ -20336,7 +20336,7 @@
         "target": "[PR#]lv2_bgm2",
         "input": "PlaySound",
         "param": "",
-        "delay": 133,
+        "delay": 63.5,
         "limit": 1
       },
       {
