@@ -137,9 +137,9 @@
     "connections": [
       {
         "output": "OnStartTouch",
-        "target": "[PR#]human_item_equip",
-        "input": "use",
-        "param": "",
+        "target": "[PR#]item_manage",
+        "input": "RunScriptInput",
+        "param": "StripKnife",
         "delay": 0,
         "limit": 1
       },
