@@ -14892,6 +14892,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_counter",
+        "input": "add",
+        "param": "1",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -15705,9 +15713,17 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]round_counter",
-        "input": "add",
-        "param": "2",
+        "input": "Subtract",
+        "param": "5",
         "delay": 74,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say round_counter add 5",
+        "delay": 65,
         "limit": 1
       }
     ]
@@ -16790,6 +16806,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_counter",
+        "input": "add",
+        "param": "1",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -17565,6 +17589,14 @@
         "target": "[PR#]ex_tianqian_timer",
         "input": "Enable",
         "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_counter",
+        "input": "add",
+        "param": "1",
         "delay": 0,
         "limit": 1
       }
@@ -20296,7 +20328,7 @@
         "target": "[PR#]lv2_bgm1",
         "input": "StopSound",
         "param": "",
-        "delay": 174,
+        "delay": 133,
         "limit": 1
       },
       {
@@ -20304,7 +20336,15 @@
         "target": "[PR#]lv2_bgm2",
         "input": "PlaySound",
         "param": "",
-        "delay": 174,
+        "delay": 133,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_counter",
+        "input": "add",
+        "param": "1",
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -25160,14 +25200,6 @@
         "input": "Stop",
         "param": "",
         "delay": 13,
-        "limit": -1
-      },
-      {
-        "output": "OnMapSpawn",
-        "target": "[PR#]round_counter",
-        "input": "add",
-        "param": "1",
-        "delay": 40,
         "limit": -1
       },
       {
