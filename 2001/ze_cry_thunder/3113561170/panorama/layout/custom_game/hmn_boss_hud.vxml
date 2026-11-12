@@ -9,7 +9,7 @@
         <Panel id="boss_flash" class="BossFlash Hidden" />
         <Panel id="boss_container" class="BossContainer Hidden">
             <Panel id="boss_content" class="BossContent">
-                <Image id="boss_emblem" src="s2r://panorama/images/custom_game/boss_emblem_png.vtex" />
+                <Image id="boss_emblem" src="s2r://panorama/images/custom_game/boss_emblem/boss_emblem_png.vtex" />
                 <Panel id="boss_text" class="BossText">
                     <Label id="boss_name" class="BossName DialogueHidden" text="{s:boss_name}" />
                     <Panel id="boss_line" class="BossLine DialogueHidden" />

@@ -10,12 +10,12 @@
             <Panel id="dialogue_viewport" class="DialogueViewport">
                 <Panel id="dialogue_track" class="DialogueTrack">
                     <Panel id="dialogue_slot_01" class="DialogueSlot Slot01 DialogueStaging">
-                        <Image id="portrait_a_01" class="Portrait PortraitA" src="s2r://panorama/images/custom_game/character_a_png.vtex" />
-                        <Image id="portrait_b_01" class="Portrait PortraitB" src="s2r://panorama/images/custom_game/character_b_png.vtex" />
-                        <Image id="portrait_c_01" class="Portrait PortraitC" src="s2r://panorama/images/custom_game/character_c_png.vtex" />
-                        <Image id="portrait_d_01" class="Portrait PortraitD" src="s2r://panorama/images/custom_game/character_d_png.vtex" />
-                        <Image id="portrait_e_01" class="Portrait PortraitE" src="s2r://panorama/images/custom_game/character_e_png.vtex" />
-                        <Image id="portrait_f_01" class="Portrait PortraitF" src="s2r://panorama/images/custom_game/character_f_png.vtex" />
+                        <Image id="portrait_a_01" class="Portrait PortraitA" src="s2r://panorama/images/custom_game/hud_character/character_a_png.vtex" />
+                        <Image id="portrait_b_01" class="Portrait PortraitB" src="s2r://panorama/images/custom_game/hud_character/character_b_png.vtex" />
+                        <Image id="portrait_c_01" class="Portrait PortraitC" src="s2r://panorama/images/custom_game/hud_character/character_c_png.vtex" />
+                        <Image id="portrait_d_01" class="Portrait PortraitD" src="s2r://panorama/images/custom_game/hud_character/character_d_png.vtex" />
+                        <Image id="portrait_e_01" class="Portrait PortraitE" src="s2r://panorama/images/custom_game/hud_character/character_e_png.vtex" />
+                        <Image id="portrait_f_01" class="Portrait PortraitF" src="s2r://panorama/images/custom_game/hud_character/character_f_png.vtex" />
                         <Panel class="DialogueText">
                             <Label id="name_01" class="Name" text="{s:name_01}" />
                             <Panel class="NameLine" />
@@ -23,12 +23,12 @@
                         </Panel>
                     </Panel>
                     <Panel id="dialogue_slot_02" class="DialogueSlot Slot02 DialogueStaging">
-                        <Image id="portrait_a_02" class="Portrait PortraitA" src="s2r://panorama/images/custom_game/character_a_png.vtex" />
-                        <Image id="portrait_b_02" class="Portrait PortraitB" src="s2r://panorama/images/custom_game/character_b_png.vtex" />
-                        <Image id="portrait_c_02" class="Portrait PortraitC" src="s2r://panorama/images/custom_game/character_c_png.vtex" />
-                        <Image id="portrait_d_02" class="Portrait PortraitD" src="s2r://panorama/images/custom_game/character_d_png.vtex" />
-                        <Image id="portrait_e_02" class="Portrait PortraitE" src="s2r://panorama/images/custom_game/character_e_png.vtex" />
-                        <Image id="portrait_f_02" class="Portrait PortraitF" src="s2r://panorama/images/custom_game/character_f_png.vtex" />
+                        <Image id="portrait_a_02" class="Portrait PortraitA" src="s2r://panorama/images/custom_game/hud_character/character_a_png.vtex" />
+                        <Image id="portrait_b_02" class="Portrait PortraitB" src="s2r://panorama/images/custom_game/hud_character/character_b_png.vtex" />
+                        <Image id="portrait_c_02" class="Portrait PortraitC" src="s2r://panorama/images/custom_game/hud_character/character_c_png.vtex" />
+                        <Image id="portrait_d_02" class="Portrait PortraitD" src="s2r://panorama/images/custom_game/hud_character/character_d_png.vtex" />
+                        <Image id="portrait_e_02" class="Portrait PortraitE" src="s2r://panorama/images/custom_game/hud_character/character_e_png.vtex" />
+                        <Image id="portrait_f_02" class="Portrait PortraitF" src="s2r://panorama/images/custom_game/hud_character/character_f_png.vtex" />
                         <Panel class="DialogueText">
                             <Label id="name_02" class="Name" text="{s:name_02}" />
                             <Panel class="NameLine" />
@@ -36,12 +36,12 @@
                         </Panel>
                     </Panel>
                     <Panel id="dialogue_slot_03" class="DialogueSlot Slot03 DialogueStaging">
-                        <Image id="portrait_a_03" class="Portrait PortraitA" src="s2r://panorama/images/custom_game/character_a_png.vtex" />
-                        <Image id="portrait_b_03" class="Portrait PortraitB" src="s2r://panorama/images/custom_game/character_b_png.vtex" />
-                        <Image id="portrait_c_03" class="Portrait PortraitC" src="s2r://panorama/images/custom_game/character_c_png.vtex" />
-                        <Image id="portrait_d_03" class="Portrait PortraitD" src="s2r://panorama/images/custom_game/character_d_png.vtex" />
-                        <Image id="portrait_e_03" class="Portrait PortraitE" src="s2r://panorama/images/custom_game/character_e_png.vtex" />
-                        <Image id="portrait_f_03" class="Portrait PortraitF" src="s2r://panorama/images/custom_game/character_f_png.vtex" />
+                        <Image id="portrait_a_03" class="Portrait PortraitA" src="s2r://panorama/images/custom_game/hud_character/character_a_png.vtex" />
+                        <Image id="portrait_b_03" class="Portrait PortraitB" src="s2r://panorama/images/custom_game/hud_character/character_b_png.vtex" />
+                        <Image id="portrait_c_03" class="Portrait PortraitC" src="s2r://panorama/images/custom_game/hud_character/character_c_png.vtex" />
+                        <Image id="portrait_d_03" class="Portrait PortraitD" src="s2r://panorama/images/custom_game/hud_character/character_d_png.vtex" />
+                        <Image id="portrait_e_03" class="Portrait PortraitE" src="s2r://panorama/images/custom_game/hud_character/character_e_png.vtex" />
+                        <Image id="portrait_f_03" class="Portrait PortraitF" src="s2r://panorama/images/custom_game/hud_character/character_f_png.vtex" />
                         <Panel class="DialogueText">
                             <Label id="name_03" class="Name" text="{s:name_03}" />
                             <Panel class="NameLine" />

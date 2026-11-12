@@ -10,11 +10,11 @@
             <Panel id="title_fade" class="TitleFade" />
             <Panel id="title_content" class="TitleContent">
                 <Panel id="title_background_main_view" class="TitleBackgroundMainView">
-                    <Image id="title_background_main" class="TitleBackgroundMainImage" src="s2r://panorama/images/custom_game/title_background_main_png.vtex" />
+                    <Image id="title_background_main" class="TitleBackgroundMainImage" src="s2r://panorama/images/custom_game/hud_title/title_background_main_png.vtex" />
                 </Panel>
                 <Panel id="title_background_view" class="TitleBackgroundView">
                     <Panel id="title_background_panel" class="TitleBackgroundPanel">
-                        <Image id="title_background" class="TitleBackgroundImage" src="s2r://panorama/images/custom_game/title_background_png.vtex" />
+                        <Image id="title_background" class="TitleBackgroundImage" src="s2r://panorama/images/custom_game/hud_title/title_background_png.vtex" />
                     </Panel>
                 </Panel>
                 <Panel id="title_text" class="TitleText">

@@ -178,22 +178,6 @@
     "connections": [
       {
         "output": "OnPass",
-        "target": "[PR#][CONSOLE]",
-        "input": "Command",
-        "param": "say \u003C!\u003E \u6B21\u30E9\u30A6\u30F3\u30C9\u304C\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8\u306B\u306A\u308B\uFF01 \u003C!\u003E",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPass",
-        "target": "[PR#][SE]CURSOR",
-        "input": "PlaySound",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnPass",
         "target": "[PR#][STAGE]Counter",
         "input": "SetValueNoFire",
         "param": "4",
