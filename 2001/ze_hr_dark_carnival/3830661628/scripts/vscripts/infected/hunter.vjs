@@ -54,7 +54,7 @@ Instance.OnScriptInput("BecomeHunter", (inputData) => {
 
 Instance.OnScriptInput("Attack", (inputData) => {
     const player = /** @type {CSPlayerPawn|undefined} */ (inputData.activator);
-    if (!player || !player.IsValid() || !hunter || !hunter.IsValid()) return;
+    if (!player || !player.IsValid() || !hunter || !hunter.IsValid() || !hunter.IsAlive()) return;
     const playerEyePosition = player.GetEyePosition();
     const playerPosition = player.GetAbsOrigin();
     const hunterEyePosition = hunter.GetEyePosition();

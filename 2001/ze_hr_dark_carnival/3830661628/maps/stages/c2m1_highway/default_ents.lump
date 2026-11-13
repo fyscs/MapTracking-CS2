@@ -5532,8 +5532,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-1632.212891 -2555.419434 -1082.702515",
-    "angles": "88.346474 10.383345 -18.475330",
+    "origin": "-1632.212769 -2555.419189 -1082.703369",
+    "angles": "88.350792 10.378525 -18.480474",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8709"
   },
@@ -5620,8 +5620,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-1626.446045 -2555.405273 -1070.602051",
-    "angles": "77.556686 0.011229 -74.983604",
+    "origin": "-1626.446167 -2555.405273 -1070.602173",
+    "angles": "77.555954 0.011094 -74.984306",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8710"
   },
@@ -37679,6 +37679,7 @@
     "hammerUniqueId": "147"
   },
   {
+    "frostenabled": "0",
     "AdrenalineDensity": "1.251000",
     "AmmoDensity": "0.814000",
     "ChainsawDensity": "0.425000",

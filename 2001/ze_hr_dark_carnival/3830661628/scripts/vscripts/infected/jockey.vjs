@@ -45,7 +45,7 @@ Instance.OnScriptInput("BecomeJockey", (inputData) => {
 
 Instance.OnScriptInput("Attack", (inputData) => {
     const player = /** @type {CSPlayerPawn|undefined} */ (inputData.activator);
-    if (!player || !player.IsValid() || !jockey || !jockey.IsValid()) return;
+    if (!player || !player.IsValid() || !jockey || !jockey.IsValid() || !jockey.IsAlive()) return;
     const playerEyePosition = player.GetEyePosition();
     const playerPosition = player.GetAbsOrigin();
     const jockeyEyePosition = jockey.GetEyePosition();

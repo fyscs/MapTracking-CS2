@@ -46,7 +46,7 @@ Instance.OnScriptInput("BecomeCharger", (inputData) => {
 
 Instance.OnScriptInput("Attack", (inputData) => {
     const player = /** @type {CSPlayerPawn|undefined} */ (inputData.activator);
-    if (!player || !player.IsValid() || !charger || !charger.IsValid()) return;
+    if (!player || !player.IsValid() || !charger || !charger.IsValid() || !charger.IsAlive()) return;
     const playerEyePosition = player.GetEyePosition();
     const playerPosition = player.GetAbsOrigin();
     const chargerEyePosition = charger.GetEyePosition();

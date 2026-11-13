@@ -16,13 +16,21 @@ Instance.OnModifyPlayerDamage((event) => {
     if (!deinfectSwitch || !event.weapon) return;
 
     const attacker = event.attacker;
-    if (!attacker || !attacker.IsValid() || attacker.GetClassName() !== "player" || attacker.GetTeamNumber() !== 2) return;
+    if (!attacker || !attacker.IsValid() || attacker.GetClassName() !== "player") return;
 
     const player = event.player;
-    if (!player || !player.IsValid() || player.GetTeamNumber() === 2) return;
+    if (!player || !player.IsValid()) return;
 
-    player.TakeDamage({ attacker, damage: 40, damageTypes: 512, damageFlags: CSDamageFlags.SUPPRESS_DAMAGE_MODIFICATION });
-    return { abort: true };
+    const attackerTeam = attacker.GetTeamNumber();
+    const playerTeam = player.GetTeamNumber();
+    if (attackerTeam === 2 && playerTeam === 3) {
+        player.TakeDamage({ attacker, damage: 40, damageTypes: 512, damageFlags: CSDamageFlags.SUPPRESS_DAMAGE_MODIFICATION });
+        return { abort: true };
+    } else if (attackerTeam === 3 && playerTeam === 2) {
+        if (event.weapon.GetData().GetName() === "weapon_knife" && event.damage > 4200) {
+            return { damage: 4200 };
+        }
+    }
 });
 
 Instance.OnScriptInput("Enable", () => {
