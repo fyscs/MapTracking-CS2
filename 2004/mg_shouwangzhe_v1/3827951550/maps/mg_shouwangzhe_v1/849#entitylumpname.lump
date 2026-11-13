@@ -21,7 +21,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "850",
-    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5165\u573A\u4F20\u9001\u95E8\u89E6\u53D1\u5668\u5B9E\u4F8B_850.vmdl",
+    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5165\u573A\u4F20\u9001\u95E8\u89E6\u53D1\u5668\u5B9E\u4F8B_850.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -181,7 +181,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5165\u573A\u4F20\u9001\u95E8\u5730\u677F\u5B9E\u4F8B_852.vmdl",
+    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5165\u573A\u4F20\u9001\u95E8\u5730\u677F\u5B9E\u4F8B_852.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
