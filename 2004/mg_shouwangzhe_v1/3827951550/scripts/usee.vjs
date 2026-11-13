@@ -182,6 +182,7 @@ Instance.OnRoundStart( () => {
 	falldamageMultiply = 1;
 	Instance.ServerCommand("sv_gravity 800");
 	Instance.ServerCommand("sv_falldamage_scale 1");
+	forceSetFalldamageMultiply = true;	//true == 某些地图或生成物情况下，系统可强制设置摔伤（非锁定玩家自定义）
 	Instance.Msg("====初始化，重力值=800（默认），摔伤=1====");
 	
 	//伤害位置倍率
@@ -395,8 +396,8 @@ falldamageSelect.forEach(n => {
 		const SetFalldamage = falldamageMultiply + n;
 		falldamageMultiply = SetFalldamage;
 		
-		if (0.05 >= SetFalldamage) {
-		falldamageMultiply = 0.05;		//下限值
+		if (0.02 >= SetFalldamage) {
+		falldamageMultiply = 0.02;		//下限值
 		}
 		
 		if (3 <= SetFalldamage) {
@@ -414,6 +415,11 @@ falldamageSelect.forEach(n => {
 Instance.OnScriptInput("确认设置摔伤", (inputData) => {
 	Instance.ServerCommand(`sv_falldamage_scale ${falldamageMultiply}`);
 	Instance.ServerCommand(`say 玩家设置摔伤:${falldamageMultiply}倍`);
+});
+//是否锁定玩家自定义设置摔伤
+let forceSetFalldamageMultiply = true;	//true == 某些地图或生成物情况下，系统可强制设置摔伤（非锁定玩家自定义）
+Instance.OnScriptInput("锁定玩家自定义设置摔伤", (inputData) => {
+	forceSetFalldamageMultiply = false;
 });
 
 
@@ -819,6 +825,15 @@ async function mapTeleport(){
 		input: "Break"
 	});
 	
+	if(forceSetFalldamageMultiply){
+		//检查是否有生成加速板，检查出生点加速板、出生点加速板电击枪、生成队列数组：横向：${spawnEntQueue[4*4 + 1]}，竖向：${spawnEntQueue[4*4 + 2]}，随机角度：${spawnEntQueue[4*4 + 3]}，个加速板实体
+		if(spawnPushEnt || spawnTaserPushEnt || spawnEntQueue[4*4 + 1] || spawnEntQueue[4*4 + 2] || spawnEntQueue[4*4 + 3]){
+			falldamageMultiply = 0.02;
+			Instance.ServerCommand(`sv_falldamage_scale ${falldamageMultiply}`);			
+			await Instance.Delay(1);	//等待上一条消息发完
+			Instance.ServerCommand(`say 检测到有加速板生成，且选图时没有锁定摔伤，所以强制设置摔伤:${falldamageMultiply}倍`);
+		}
+	}
 }
 
 //设置玩家地图技能
@@ -1658,7 +1673,7 @@ async function SpawnMine(pawn, state) {	//
 }
 
 //TNT爆炸
-function DetonateTNT(ownerPawn, state) {
+async function DetonateTNT(ownerPawn, state) {
 	
 	const tntEntity = state.skillEnt;
 	const spawnPos = tntEntity.GetAbsOrigin();		//确定生成位置
@@ -1676,8 +1691,42 @@ function DetonateTNT(ownerPawn, state) {
     //const down = { x, y, z: z - 100 };        // Z轴负方向（下）
 	//手雷生成并立刻爆炸并指定手雷拥有者
 	
+	Instance.FindEntityByName("实例TNT爆炸模板").ForceSpawn(spawnPos);	
+	
 	const distance = 300;	//TNT杀伤半径 = 手雷杀死半径 + distance
 	const distanceH = distance/2;
+	const distanceHH = distance/4;
+
+	await Instance.Delay(0.1);
+	DetonateMineWithGrenade({ x, y, z },ownerPawn);		//爆炸里层
+	DetonateMineWithGrenade({ x: x + distanceHH, y, z },ownerPawn);	
+	DetonateMineWithGrenade({ x: x - distanceHH, y, z },ownerPawn);
+	DetonateMineWithGrenade({ x, y: y + distanceHH, z },ownerPawn);
+	DetonateMineWithGrenade({ x, y: y - distanceHH, z },ownerPawn);
+	DetonateMineWithGrenade({ x, y, z: z + distanceHH },ownerPawn);
+	DetonateMineWithGrenade({ x, y, z: z - distanceHH },ownerPawn);
+	
+	await Instance.Delay(0.1);
+	DetonateMineWithGrenade({ x, y, z },ownerPawn);	//爆炸中层
+	/*
+	DetonateMineWithGrenade({ x: x + distanceH, y: y + distanceH, z: z + distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x - distanceH, y: y + distanceH, z: z + distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x, y: y - distanceH, z: z + distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x + distanceH, y: y - distanceH, z: z - distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x - distanceH, y: y - distanceH, z: z - distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x, y: y + distanceH, z: z - distanceH },ownerPawn);
+	//三角爆炸爆炸布置，杀伤力小了，改用另外一种
+	*/
+	DetonateMineWithGrenade({ x: x + distanceH, y: y + distanceH, z: z + distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x + distanceH, y: y + distanceH, z: z - distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x + distanceH, y: y - distanceH, z: z + distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x + distanceH, y: y - distanceH, z: z - distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x - distanceH, y: y + distanceH, z: z + distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x - distanceH, y: y + distanceH, z: z - distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x - distanceH, y: y - distanceH, z: z + distanceH },ownerPawn);
+	DetonateMineWithGrenade({ x: x - distanceH, y: y - distanceH, z: z - distanceH },ownerPawn);
+	
+	await Instance.Delay(0.1);	//爆炸外层
 	DetonateMineWithGrenade({ x, y, z },ownerPawn);	
 	DetonateMineWithGrenade({ x: x + distance, y, z },ownerPawn);	
 	DetonateMineWithGrenade({ x: x - distance, y, z },ownerPawn);
@@ -1685,13 +1734,7 @@ function DetonateTNT(ownerPawn, state) {
 	DetonateMineWithGrenade({ x, y: y - distance, z },ownerPawn);
 	DetonateMineWithGrenade({ x, y, z: z + distance },ownerPawn);
 	DetonateMineWithGrenade({ x, y, z: z - distance },ownerPawn);
-	DetonateMineWithGrenade({ x: x + distanceH, y: y + distanceH, z: z + distanceH },ownerPawn);
-	DetonateMineWithGrenade({ x: x - distanceH, y: y + distanceH, z: z + distanceH },ownerPawn);
-	DetonateMineWithGrenade({ x, y: y - distanceH, z: z + distanceH },ownerPawn);
-	DetonateMineWithGrenade({ x: x + distanceH, y: y - distanceH, z: z - distanceH },ownerPawn);
-	DetonateMineWithGrenade({ x: x - distanceH, y: y - distanceH, z: z - distanceH },ownerPawn);
-	DetonateMineWithGrenade({ x, y: y + distanceH, z: z - distanceH },ownerPawn);
-	Instance.FindEntityByName("实例TNT爆炸模板").ForceSpawn(spawnPos);	
+
 	Instance.FindEntityByName("实例大焦痕模板").ForceSpawn(spawnPos);
 	Instance.FindEntityByName("实例硝烟模板").ForceSpawn(spawnPos);
 }

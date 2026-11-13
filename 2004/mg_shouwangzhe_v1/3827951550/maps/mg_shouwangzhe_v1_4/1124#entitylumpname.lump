@@ -40,14 +40,14 @@
     "useLocalOffset": "0",
     "parentAttachmentName": "",
     "parentname": "",
-    "targetname": "[PR#]\u51FA\u751F\u70B9\u73BB\u7483\u623F\u95F4\u5B9E\u4F8B",
+    "targetname": "[PR#]\u5899\u5B9E\u4F8B",
     "vscripts": "",
     "classname": "func_breakable",
-    "origin": "0.000000 0.000000 -14.000000",
+    "origin": "0.000000 -12.000000 -28.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1073",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u51FA\u751F\u70B9\u73BB\u7483\u623F\u95F4\u5B9E\u4F8B_1073.vmdl",
+    "hammerUniqueId": "1127",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u5899\u5B9E\u4F8B_1127.vmdl",
     "_template_lump_ent_index": "0"
   }
 ]

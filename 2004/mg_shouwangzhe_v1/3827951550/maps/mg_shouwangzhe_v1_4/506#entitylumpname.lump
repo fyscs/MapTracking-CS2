@@ -15,13 +15,23 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "trigger_test.lua",
-    "targetname": "[PR#]\u5B9E\u4F8B\u89E6\u53D1\u5668",
+    "targetname": "[PR#]\u5B9E\u4F8B\u9632\u78B0\u649E\u89E6\u53D1\u5668",
     "classname": "trigger_multiple",
     "origin": "0.000000 0.000000 -4.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "521",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u5B9E\u4F8B\u89E6\u53D1\u5668_521.vmdl",
-    "_template_lump_ent_index": "0"
+    "hammerUniqueId": "507",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u5B9E\u4F8B\u9632\u78B0\u649E\u89E6\u53D1\u5668_507.vmdl",
+    "_template_lump_ent_index": "0",
+    "connections": [
+      {
+        "output": "OnEndTouchAll",
+        "target": "[PR#]\u5B9E\u4F8B\u5730\u96F7",
+        "input": "SetEnableCollisions",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]

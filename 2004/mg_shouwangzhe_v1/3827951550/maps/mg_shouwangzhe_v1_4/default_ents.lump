@@ -60,7 +60,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1",
-    "worldname": "mg_shouwangzhe_v1",
+    "worldname": "mg_shouwangzhe_v1_4",
     "mapUsageType": "standard"
   },
   {
@@ -114,7 +114,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "33",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_33.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_33.vmdl"
   },
   {
     "bomb_damage_power": "3000.000000",
@@ -134,7 +134,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "34",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_34.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_34.vmdl"
   },
   {
     "enabled": "1",
@@ -179,7 +179,7 @@
   },
   {
     "bakedshadowindex": "0",
-    "light_map_uniqueid": "-1380264569",
+    "light_map_uniqueid": "1143577976",
     "light_path_uniqueid": "234409723",
     "brightness_legacy": "-nan(ind)",
     "brightness_lumens": "0",
@@ -753,7 +753,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "263",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_263.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_263.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -850,7 +850,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "284",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_284.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_284.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -901,7 +901,7 @@
     "angles": "89.999962 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "332",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_332.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_332.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1061,7 +1061,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "338",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_338.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_338.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1112,7 +1112,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "340",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_340.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_340.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1163,7 +1163,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "342",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_342.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_342.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1358,7 +1358,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "349",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_349.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_349.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1445,7 +1445,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "352",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_352.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_352.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1532,7 +1532,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "355",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_355.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_355.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1619,7 +1619,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "358",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_358.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_358.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1706,7 +1706,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "361",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_361.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_361.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1829,7 +1829,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "365",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_365.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_365.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -1916,7 +1916,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "368",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_368.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_368.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2003,7 +2003,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "371",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_371.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_371.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2126,7 +2126,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "375",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_375.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_375.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2213,7 +2213,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "378",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_378.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_378.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2336,7 +2336,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "382",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u968F\u673A\u7EDF\u4E00\u7684\u751F\u547D\u503C\u548C\u8EAB\u4F53\u4F24\u5BB3\u500D\u7387\u6309\u94AE_382.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u968F\u673A\u7EDF\u4E00\u7684\u751F\u547D\u503C\u548C\u8EAB\u4F53\u4F24\u5BB3\u500D\u7387\u6309\u94AE_382.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2423,7 +2423,7 @@
     "angles": "89.999954 180.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "385",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u968F\u673A\u9009\u62E9\u5730\u56FE\u6309\u94AE_385.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u968F\u673A\u9009\u62E9\u5730\u56FE\u6309\u94AE_385.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2518,7 +2518,7 @@
     "angles": "89.999954 180.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "388",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u968F\u673A\u7684\u91CD\u529B\u6454\u4F24\u6309\u94AE_388.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u968F\u673A\u7684\u91CD\u529B\u6454\u4F24\u6309\u94AE_388.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2605,7 +2605,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "391",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_391.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_391.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -2717,7 +2717,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "453",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_453.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_453.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -3570,7 +3570,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "505",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "505#entityLumpName"
   },
   {
@@ -3658,7 +3658,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "506",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "506#entityLumpName"
   },
   {
@@ -3746,7 +3746,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "509",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "509#entityLumpName"
   },
   {
@@ -3834,7 +3834,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "511",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "511#entityLumpName"
   },
   {
@@ -3922,7 +3922,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "514",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "514#entityLumpName"
   },
   {
@@ -4010,7 +4010,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "515",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "515#entityLumpName"
   },
   {
@@ -4098,7 +4098,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "517",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "517#entityLumpName"
   },
   {
@@ -4186,7 +4186,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "519",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "519#entityLumpName"
   },
   {
@@ -4274,7 +4274,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "523",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "523#entityLumpName"
   },
   {
@@ -4362,7 +4362,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "524",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "524#entityLumpName"
   },
   {
@@ -4450,7 +4450,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "530",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "530#entityLumpName"
   },
   {
@@ -4538,7 +4538,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "531",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "531#entityLumpName"
   },
   {
@@ -4626,7 +4626,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "532",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "532#entityLumpName"
   },
   {
@@ -4714,7 +4714,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "533",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "533#entityLumpName"
   },
   {
@@ -4802,7 +4802,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "536",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "536#entityLumpName"
   },
   {
@@ -4890,7 +4890,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "2.912085 2.912085 2.912085",
     "hammerUniqueId": "539",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "539#entityLumpName"
   },
   {
@@ -4932,7 +4932,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "541",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_541.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_541.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5091,7 +5091,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "546",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_546.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_546.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5178,7 +5178,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "549",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_549.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_549.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5209,7 +5209,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "551",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_551.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_551.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5240,7 +5240,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "553",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_553.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_553.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5271,7 +5271,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "557",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_557.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_557.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5302,7 +5302,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "559",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_559.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_559.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5333,7 +5333,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "561",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_561.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_561.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5364,7 +5364,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "563",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_563.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_563.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5395,7 +5395,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "565",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_565.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_565.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5426,7 +5426,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "567",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_567.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_567.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5513,7 +5513,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "570",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_570.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_570.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5572,7 +5572,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "575",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_575.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_575.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5695,7 +5695,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "580",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_580.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_580.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5782,7 +5782,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "583",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_583.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_583.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5869,7 +5869,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "586",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_586.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_586.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -5956,7 +5956,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "589",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_589.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_589.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6079,7 +6079,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "593",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_593.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_593.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6166,7 +6166,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "596",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_596.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_596.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6253,7 +6253,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "599",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_599.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_599.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6340,7 +6340,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "602",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_602.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_602.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6427,7 +6427,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "605",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_605.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_605.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6478,7 +6478,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "607",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_607.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_607.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6565,7 +6565,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "610",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_610.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_610.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6652,7 +6652,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "613",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_613.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_613.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6775,7 +6775,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "617",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_617.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_617.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -6934,7 +6934,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "626",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_626.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_626.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -7562,7 +7562,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "664",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_664.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_664.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -7593,7 +7593,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "665",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4F20\u9001\u9009\u67AA\u533A\u57DF\u6302\u673A\u7684\u73A9\u5BB6_665.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4F20\u9001\u9009\u67AA\u533A\u57DF\u6302\u673A\u7684\u73A9\u5BB6_665.vmdl",
     "connections": [
       {
         "output": "OnTrigger",
@@ -7959,7 +7959,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "686",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_686.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_686.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -8357,7 +8357,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "786",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5730\u56FE\u5927\u65B9\u5757_786.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5730\u56FE\u5927\u65B9\u5757_786.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -8404,7 +8404,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "787",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5730\u56FE\u5927\u65B9\u5757_787.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5730\u56FE\u5927\u65B9\u5757_787.vmdl"
   },
   {
     "skipPreSettle": "0",
@@ -8566,7 +8566,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "792",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_792.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_792.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -8661,7 +8661,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "797",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_797.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_797.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -8792,7 +8792,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "801",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_801.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_801.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -8995,7 +8995,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "808",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_808.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_808.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -9082,7 +9082,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "811",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_811.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_811.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -9169,7 +9169,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "814",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_814.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_814.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -9262,7 +9262,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "818",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5730\u56FE\u5C0F\u65B9\u5757_818.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5730\u56FE\u5C0F\u65B9\u5757_818.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -9309,7 +9309,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "820",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5730\u56FE\u5C0F\u65B9\u5757_820.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5730\u56FE\u5C0F\u65B9\u5757_820.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -9356,7 +9356,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "822",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5730\u56FE\u4E2D\u65B9\u5757_822.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5730\u56FE\u4E2D\u65B9\u5757_822.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -9403,7 +9403,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "830",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u5730\u56FE\u4E2D\u65B9\u5757_830.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u5730\u56FE\u4E2D\u65B9\u5757_830.vmdl"
   },
   {
     "wait": "1.000000",
@@ -9424,7 +9424,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "833",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_833.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_833.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -9663,7 +9663,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u7B2C\u4E00\u4E2At\u5165\u53E3\u5730\u677F\u6807\u5FD7_837.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u7B2C\u4E00\u4E2At\u5165\u53E3\u5730\u677F\u6807\u5FD7_837.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -9734,7 +9734,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "840",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_840.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_840.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -10006,7 +10006,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u7B2C\u4E00\u4E2Act\u5165\u53E3\u5730\u677F\u6807\u5FD7_845.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u7B2C\u4E00\u4E2Act\u5165\u53E3\u5730\u677F\u6807\u5FD7_845.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -10041,7 +10041,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "847",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_847.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_847.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -10170,7 +10170,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "849",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "849#entityLumpName"
   },
   {
@@ -10717,7 +10717,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "902",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u968F\u673A\u6B66\u5668\u7C7B\u578B\u6309\u94AE_902.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u968F\u673A\u6B66\u5668\u7C7B\u578B\u6309\u94AE_902.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -10768,7 +10768,7 @@
     "angles": "89.999962 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "904",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_904.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_904.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -10930,7 +10930,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "908",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u539F\u5730\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_908.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u539F\u5730\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_908.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -10977,7 +10977,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "909",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u539F\u5730\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_909.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u539F\u5730\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_909.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -11024,7 +11024,7 @@
     "angles": "0.000000 89.999977 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "920",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u56FEct\u51FA\u751F\u70B9_920.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u56FEct\u51FA\u751F\u70B9_920.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -11071,7 +11071,7 @@
     "angles": "0.000000 269.999939 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "922",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u56FEt\u51FA\u751F\u70B9_922.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u56FEt\u51FA\u751F\u70B9_922.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -11118,7 +11118,7 @@
     "angles": "0.000000 180.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "925",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u56FEct\u6218\u6597\u4F4D\u7F6E_925.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u56FEct\u6218\u6597\u4F4D\u7F6E_925.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -11165,7 +11165,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "926",
-    "model": "maps/mg_shouwangzhe_v1/entities/1v1\u56FEt\u6218\u6597\u4F4D\u7F6E_926.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/1v1\u56FEt\u6218\u6597\u4F4D\u7F6E_926.vmdl"
   },
   {
     "depth_render_offset": "0.125000",
@@ -11258,7 +11258,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_740.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_740.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -11293,7 +11293,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "742",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_742.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_742.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -11360,7 +11360,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD71_738.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD71_738.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -11395,7 +11395,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "731",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56681_731.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56681_731.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -11535,7 +11535,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_931.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_931.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -11570,7 +11570,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "933",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_933.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_933.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -11637,7 +11637,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD70_935.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD70_935.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -11672,7 +11672,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "937",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56680_937.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56680_937.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -11812,7 +11812,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD73_942.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD73_942.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -11847,7 +11847,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "944",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56683_944.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56683_944.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -11914,7 +11914,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_946.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_946.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -11949,7 +11949,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "948",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_948.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_948.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -12089,7 +12089,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_953.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_953.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -12124,7 +12124,7 @@
     "angles": "0.000000 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "955",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_955.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_955.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -12191,7 +12191,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD72_957.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u6807\u5FD72_957.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -12226,7 +12226,7 @@
     "angles": "0.000000 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "959",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56682_959.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u4E0B\u68CB\u5165\u53E3\u89E6\u53D1\u56682_959.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -12360,7 +12360,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1068",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1068#entityLumpName"
   },
   {
@@ -12448,7 +12448,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1080",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1080#entityLumpName"
   },
   {
@@ -12536,7 +12536,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1065",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1065#entityLumpName"
   },
   {
@@ -12624,7 +12624,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1072",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1072#entityLumpName"
   },
   {
@@ -12666,7 +12666,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1081",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1081.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1081.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -12825,7 +12825,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1088",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1088.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1088.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -12876,7 +12876,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1090",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1090.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1090.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13035,7 +13035,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1095",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1095.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1095.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13086,7 +13086,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1097",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1097.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1097.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13137,7 +13137,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1099",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1099.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1099.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13296,7 +13296,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1104",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1104.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1104.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13347,7 +13347,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1106",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1106.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1106.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13434,7 +13434,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1109",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1109.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1109.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13557,7 +13557,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1113",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1113.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1113.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13644,7 +13644,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1116",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1116.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1116.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13695,7 +13695,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1118",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1118.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1118.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13746,7 +13746,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1120",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1120.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1120.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13797,7 +13797,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1122",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1122.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1122.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -13894,7 +13894,7 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1124",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1124#entityLumpName"
   },
   {
@@ -13982,7 +13982,7 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1128",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1128#entityLumpName"
   },
   {
@@ -14070,7 +14070,7 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1131",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1131#entityLumpName"
   },
   {
@@ -14158,7 +14158,7 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1138",
-    "worldName": "maps\\mg_shouwangzhe_v1",
+    "worldName": "maps\\mg_shouwangzhe_v1_4",
     "entityLumpName": "1138#entityLumpName"
   },
   {
@@ -14236,7 +14236,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1153",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1153.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1153.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -14328,8 +14328,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-6720.002441 -959.954956 416.983734",
-    "angles": "0.000000 270.000000 0.052864",
+    "origin": "-6730.997559 -849.955261 416.983643",
+    "angles": "0.000000 270.000000 0.049397",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1220"
   },
@@ -14493,7 +14493,7 @@
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1309",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1309.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1309.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -14594,7 +14594,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "915",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u968F\u673A\u5730\u5F62\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_915.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u968F\u673A\u5730\u5F62\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_915.vmdl"
   },
   {
     "depth_render_offset": "0.125000",
@@ -14678,7 +14678,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "918",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u968F\u673A\u5730\u5F62\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_918.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u968F\u673A\u5730\u5F62\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_918.vmdl"
   },
   {
     "target": "!activator",
@@ -14762,7 +14762,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1314",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6751\u5E84\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1314.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6751\u5E84\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1314.vmdl"
   },
   {
     "target": "!activator",
@@ -14846,7 +14846,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1317",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6751\u5E84\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1317.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6751\u5E84\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1317.vmdl"
   },
   {
     "target": "!activator",
@@ -14930,7 +14930,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1322",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6C991\u56FEct\u51FA\u751F\u70B9_1322.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6C991\u56FEct\u51FA\u751F\u70B9_1322.vmdl"
   },
   {
     "target": "!activator",
@@ -15014,7 +15014,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1325",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6C991\u56FEt\u51FA\u751F\u70B9_1325.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6C991\u56FEt\u51FA\u751F\u70B9_1325.vmdl"
   },
   {
     "target": "!activator",
@@ -15211,7 +15211,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1337",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1337.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1337.vmdl"
   },
   {
     "local.scales": "1.000000 1.000000 1.000000",
@@ -15227,7 +15227,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1339",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1339.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1339.vmdl"
   },
   {
     "local.scales": "1.000000 1.000000 1.000000",
@@ -15243,7 +15243,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1340",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1340.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1340.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -15290,7 +15290,7 @@
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1411",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6C992\u56FEct\u51FA\u751F\u70B9_1411.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6C992\u56FEct\u51FA\u751F\u70B9_1411.vmdl"
   },
   {
     "target": "!activator",
@@ -15374,7 +15374,7 @@
     "angles": "0.000000 89.999954 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1414",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6C992\u56FEt\u51FA\u751F\u70B9_1414.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6C992\u56FEt\u51FA\u751F\u70B9_1414.vmdl"
   },
   {
     "target": "!activator",
@@ -15488,7 +15488,7 @@
     "angles": "89.999954 180.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1418",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1418.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1418.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -15547,7 +15547,7 @@
     "angles": "89.999954 180.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1306",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1306.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1306.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -15686,7 +15686,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "913",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u6B65\u67AA\u56FEt\u4F20\u9001\u70B9_913.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u6B65\u67AA\u56FEt\u4F20\u9001\u70B9_913.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -15733,7 +15733,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "914",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u6B65\u67AA\u56FEct\u4F20\u9001\u70B9_914.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u6B65\u67AA\u56FEct\u4F20\u9001\u70B9_914.vmdl"
   },
   {
     "target": "!activator",
@@ -15854,7 +15854,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1434",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u72D9\u51FB\u67AA\u56FEt\u4F20\u9001\u70B9_1434.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u72D9\u51FB\u67AA\u56FEt\u4F20\u9001\u70B9_1434.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -15901,7 +15901,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1436",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u72D9\u51FB\u67AA\u56FEct\u4F20\u9001\u70B9_1436.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u72D9\u51FB\u67AA\u56FEct\u4F20\u9001\u70B9_1436.vmdl"
   },
   {
     "target": "!activator",
@@ -16022,7 +16022,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1441",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u51B2\u950B\u67AA\u56FEt\u4F20\u9001\u70B9_1441.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u51B2\u950B\u67AA\u56FEt\u4F20\u9001\u70B9_1441.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -16069,7 +16069,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1443",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u51B2\u950B\u67AA\u56FEct\u4F20\u9001\u70B9_1443.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u51B2\u950B\u67AA\u56FEct\u4F20\u9001\u70B9_1443.vmdl"
   },
   {
     "target": "!activator",
@@ -16190,7 +16190,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1455",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u9730\u5F39\u67AA\u56FEt\u4F20\u9001\u70B9_1455.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u9730\u5F39\u67AA\u56FEt\u4F20\u9001\u70B9_1455.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -16237,7 +16237,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1457",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u9730\u5F39\u67AA\u56FEct\u4F20\u9001\u70B9_1457.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u9730\u5F39\u67AA\u56FEct\u4F20\u9001\u70B9_1457.vmdl"
   },
   {
     "target": "!activator",
@@ -16358,7 +16358,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1462",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u624B\u67AA\u56FEt\u4F20\u9001\u70B9_1462.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u624B\u67AA\u56FEt\u4F20\u9001\u70B9_1462.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -16405,7 +16405,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1464",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u624B\u67AA\u56FEct\u4F20\u9001\u70B9_1464.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u624B\u67AA\u56FEct\u4F20\u9001\u70B9_1464.vmdl"
   },
   {
     "target": "!activator",
@@ -16526,7 +16526,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1469",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u5361\u6C60\u67AA\u56FEt\u4F20\u9001\u70B9_1469.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u5361\u6C60\u67AA\u56FEt\u4F20\u9001\u70B9_1469.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -16573,7 +16573,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1471",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u9009\u62E9\u5361\u6C60\u67AA\u56FEct\u4F20\u9001\u70B9_1471.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u9009\u62E9\u5361\u6C60\u67AA\u56FEct\u4F20\u9001\u70B9_1471.vmdl"
   },
   {
     "entityIndexSelection": "0",
@@ -16637,7 +16637,7 @@
     "angles": "89.999977 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1537",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1537.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1537.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -16760,7 +16760,7 @@
     "angles": "89.999977 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1545",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1545.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1545.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -16790,7 +16790,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1556",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1556.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1556.vmdl"
   },
   {
     "bomb_damage_power": "3000.000000",
@@ -16810,7 +16810,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1558",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1558.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1558.vmdl"
   },
   {
     "skipPreSettle": "0",
@@ -16942,7 +16942,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1598",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u5BF9\u6218\u56FEct\u51FA\u751F\u70B9_1598.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u5BF9\u6218\u56FEct\u51FA\u751F\u70B9_1598.vmdl"
   },
   {
     "target": "!activator",
@@ -17026,7 +17026,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1601",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u5BF9\u6218\u56FEt\u51FA\u751F\u70B9_1601.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u5BF9\u6218\u56FEt\u51FA\u751F\u70B9_1601.vmdl"
   },
   {
     "target": "!activator",
@@ -17104,7 +17104,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1595",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1595.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1595.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -17163,7 +17163,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1593",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1593.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1593.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -17222,7 +17222,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1591",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1591.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1591.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -17281,7 +17281,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1589",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1589.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1589.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -17556,7 +17556,7 @@
     "angles": "89.999962 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1581",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1581.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1581.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -17787,7 +17787,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1480",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1480.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1480.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -17818,7 +17818,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1482",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1482.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1482.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -17849,7 +17849,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1486",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1486.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1486.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -17880,7 +17880,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1484",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1484.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1484.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -17911,7 +17911,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1488",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1488.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1488.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -17942,7 +17942,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1490",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1490.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1490.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -17973,7 +17973,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1492",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1492.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1492.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18004,7 +18004,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1494",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1494.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1494.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18035,7 +18035,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1496",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1496.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1496.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18066,7 +18066,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1498",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1498.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1498.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18097,7 +18097,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1500",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1500.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1500.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18128,7 +18128,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1502",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1502.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1502.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18159,7 +18159,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1504",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1504.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1504.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18190,7 +18190,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1506",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1506.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1506.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18221,7 +18221,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1508",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1508.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1508.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18252,7 +18252,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1510",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1510.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1510.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18283,7 +18283,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1512",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1512.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1512.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18314,7 +18314,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1514",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1514.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1514.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18345,7 +18345,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1516",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1516.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1516.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18376,7 +18376,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1518",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1518.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1518.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18407,7 +18407,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1520",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1520.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1520.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18438,7 +18438,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1522",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1522.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1522.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18469,7 +18469,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1524",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1524.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1524.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18500,7 +18500,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1526",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1526.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1526.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18531,7 +18531,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1530",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1530.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1530.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18562,7 +18562,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1532",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1532.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1532.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18593,7 +18593,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1420",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1420.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1420.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18624,7 +18624,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1422",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1422.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1422.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18655,7 +18655,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1424",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1424.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1424.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18686,7 +18686,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1426",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1426.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1426.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18717,7 +18717,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1428",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1428.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1428.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18748,7 +18748,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1160",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1160.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1160.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18779,7 +18779,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "875",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_875.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_875.vmdl",
     "connections": [
       {
         "output": "OnEndTouch",
@@ -18836,7 +18836,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1617",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u96EA\u5730\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1617.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u96EA\u5730\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1617.vmdl"
   },
   {
     "target": "!activator",
@@ -18920,7 +18920,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1620",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u96EA\u5730\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1620.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u96EA\u5730\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1620.vmdl"
   },
   {
     "target": "!activator",
@@ -19229,7 +19229,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1648",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1648.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1648.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -19286,7 +19286,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1650",
-    "model": "maps/mg_shouwangzhe_v1/entities/123\u6ED1\u96EA\u5C71\u56FEct\u51FA\u751F\u70B9_1650.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/123\u6ED1\u96EA\u5C71\u56FEct\u51FA\u751F\u70B9_1650.vmdl"
   },
   {
     "target": "!activator",
@@ -19370,7 +19370,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1653",
-    "model": "maps/mg_shouwangzhe_v1/entities/123\u6ED1\u96EA\u5C71\u56FEt\u51FA\u751F\u70B9_1653.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/123\u6ED1\u96EA\u5C71\u56FEt\u51FA\u751F\u70B9_1653.vmdl"
   },
   {
     "target": "!activator",
@@ -19484,7 +19484,7 @@
     "angles": "89.999962 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1657",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1657.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1657.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -19543,7 +19543,7 @@
     "angles": "89.999962 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1659",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1659.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1659.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -19638,7 +19638,7 @@
     "angles": "89.999962 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1662",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1662.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1662.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -20028,7 +20028,7 @@
     "angles": "89.999962 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1681",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1681.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1681.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -20159,7 +20159,7 @@
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1685",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1685.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1685.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -20224,7 +20224,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1701",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u732A\u5708\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1701.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u732A\u5708\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1701.vmdl"
   },
   {
     "target": "!activator",
@@ -20308,7 +20308,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1704",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u732A\u5708\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1704.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u732A\u5708\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1704.vmdl"
   },
   {
     "target": "!activator",
@@ -20392,7 +20392,7 @@
     "angles": "0.000000 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1717",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u8D85\u7EA7\u5854\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1717.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u8D85\u7EA7\u5854\u5BF9\u67AA\u56FEct\u51FA\u751F\u70B9_1717.vmdl"
   },
   {
     "target": "!activator",
@@ -20476,7 +20476,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1720",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u8D85\u7EA7\u5854\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1720.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u8D85\u7EA7\u5854\u5BF9\u67AA\u56FEt\u51FA\u751F\u70B9_1720.vmdl"
   },
   {
     "target": "!activator",
@@ -20692,7 +20692,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1742",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1742.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1742.vmdl"
   },
   {
     "bomb_damage_power": "3000.000000",
@@ -20712,7 +20712,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1746",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1746.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1746.vmdl"
   },
   {
     "spawnflags": "1024",
@@ -20753,7 +20753,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1767",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1767.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1767.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -20842,7 +20842,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1771",
-    "model": "maps/mg_shouwangzhe_v1/entities/unnamed_1771.vmdl",
+    "model": "maps/mg_shouwangzhe_v1_4/entities/unnamed_1771.vmdl",
     "connections": [
       {
         "output": "OnPressed",
@@ -64354,8 +64354,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64365,7 +64365,7 @@
     "box_maxs": "1071.000000 1840.000000 121.000000",
     "box_mins": "-796.000000 -2211.000000 -498.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64380,7 +64380,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3569",
-    "handshake": "218186970",
+    "handshake": "2079113119",
     "light_probe_size_x": "39",
     "light_probe_size_y": "85",
     "light_probe_size_z": "13",
@@ -64392,8 +64392,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64403,7 +64403,7 @@
     "box_maxs": "793.000000 1391.000000 258.000000",
     "box_mins": "-829.000000 -1283.000000 -207.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64418,7 +64418,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3568",
-    "handshake": "218186971",
+    "handshake": "2079113120",
     "light_probe_size_x": "34",
     "light_probe_size_y": "56",
     "light_probe_size_z": "10",
@@ -64430,8 +64430,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64441,7 +64441,7 @@
     "box_maxs": "1466.000000 962.000000 1787.000000",
     "box_mins": "-1228.000000 -769.000000 -596.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64456,7 +64456,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3573",
-    "handshake": "218186972",
+    "handshake": "2079113121",
     "light_probe_size_x": "57",
     "light_probe_size_y": "37",
     "light_probe_size_z": "50",
@@ -64468,8 +64468,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64479,7 +64479,7 @@
     "box_maxs": "3591.000000 1478.000000 903.000000",
     "box_mins": "-3437.000000 -1363.000000 -92.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64494,7 +64494,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3579",
-    "handshake": "218186973",
+    "handshake": "2079113122",
     "light_probe_size_x": "128",
     "light_probe_size_y": "52",
     "light_probe_size_z": "18",
@@ -64506,8 +64506,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -64517,7 +64517,7 @@
     "box_maxs": "190.000000 274.000000 903.000000",
     "box_mins": "-212.000000 -160.000000 -92.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64532,7 +64532,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3578",
-    "handshake": "218186974",
+    "handshake": "2079113123",
     "light_probe_size_x": "9",
     "light_probe_size_y": "10",
     "light_probe_size_z": "21",
@@ -64544,8 +64544,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -64555,7 +64555,7 @@
     "box_maxs": "190.000000 274.000000 436.000000",
     "box_mins": "-212.000000 -160.000000 -44.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64570,7 +64570,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3577",
-    "handshake": "218186975",
+    "handshake": "2079113124",
     "light_probe_size_x": "9",
     "light_probe_size_y": "10",
     "light_probe_size_z": "10",
@@ -64582,8 +64582,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -64593,7 +64593,7 @@
     "box_maxs": "190.000000 274.000000 764.000000",
     "box_mins": "-212.000000 -160.000000 -92.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64608,7 +64608,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3576",
-    "handshake": "218186976",
+    "handshake": "2079113125",
     "light_probe_size_x": "9",
     "light_probe_size_y": "10",
     "light_probe_size_z": "18",
@@ -64620,8 +64620,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64631,7 +64631,7 @@
     "box_maxs": "1716.000000 1571.000000 1372.000000",
     "box_mins": "-1834.000000 -1549.000000 -596.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64646,7 +64646,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3575",
-    "handshake": "218186977",
+    "handshake": "2079113126",
     "light_probe_size_x": "74",
     "light_probe_size_y": "65",
     "light_probe_size_z": "41",
@@ -64658,8 +64658,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64669,7 +64669,7 @@
     "box_maxs": "1716.000000 1571.000000 1372.000000",
     "box_mins": "-1834.000000 -1549.000000 -596.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64684,7 +64684,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3574",
-    "handshake": "218186978",
+    "handshake": "2079113127",
     "light_probe_size_x": "74",
     "light_probe_size_y": "65",
     "light_probe_size_z": "41",
@@ -64696,8 +64696,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64707,7 +64707,7 @@
     "box_maxs": "233.000000 732.000000 287.000000",
     "box_mins": "-414.000000 -519.000000 -212.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64722,7 +64722,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3571",
-    "handshake": "218186979",
+    "handshake": "2079113128",
     "light_probe_size_x": "14",
     "light_probe_size_y": "27",
     "light_probe_size_z": "11",
@@ -64734,8 +64734,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64745,7 +64745,7 @@
     "box_maxs": "423.000000 732.000000 287.000000",
     "box_mins": "-225.000000 -519.000000 -212.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64760,7 +64760,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3572",
-    "handshake": "218186980",
+    "handshake": "2079113129",
     "light_probe_size_x": "14",
     "light_probe_size_y": "27",
     "light_probe_size_z": "11",
@@ -64772,8 +64772,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64783,7 +64783,7 @@
     "box_maxs": "548.000000 294.000000 211.000000",
     "box_mins": "-463.000000 -286.000000 -207.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64798,7 +64798,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3582",
-    "handshake": "218186981",
+    "handshake": "2079113130",
     "light_probe_size_x": "22",
     "light_probe_size_y": "13",
     "light_probe_size_z": "9",
@@ -64810,8 +64810,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64821,7 +64821,7 @@
     "box_maxs": "709.000000 711.000000 242.000000",
     "box_mins": "-699.000000 -697.000000 -334.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64836,7 +64836,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3583",
-    "handshake": "218186982",
+    "handshake": "2079113131",
     "light_probe_size_x": "30",
     "light_probe_size_y": "30",
     "light_probe_size_z": "12",
@@ -64848,8 +64848,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64859,7 +64859,7 @@
     "box_maxs": "1290.000000 84.000000 1036.000000",
     "box_mins": "-560.000000 -623.000000 -913.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64874,7 +64874,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3584",
-    "handshake": "218186983",
+    "handshake": "2079113132",
     "light_probe_size_x": "39",
     "light_probe_size_y": "15",
     "light_probe_size_z": "41",
@@ -64886,8 +64886,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64897,7 +64897,7 @@
     "box_maxs": "525.000000 947.000000 384.000000",
     "box_mins": "-511.000000 -903.000000 -282.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64912,7 +64912,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3604",
-    "handshake": "218186984",
+    "handshake": "2079113133",
     "light_probe_size_x": "22",
     "light_probe_size_y": "39",
     "light_probe_size_z": "14",
@@ -64924,8 +64924,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64935,7 +64935,7 @@
     "box_maxs": "1248.000000 1550.000000 2565.000000",
     "box_mins": "-1535.000000 -2099.000000 -652.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64950,7 +64950,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3605",
-    "handshake": "218186985",
+    "handshake": "2079113134",
     "light_probe_size_x": "58",
     "light_probe_size_y": "77",
     "light_probe_size_z": "68",
@@ -64962,8 +64962,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -64973,7 +64973,7 @@
     "box_maxs": "431.000000 1550.000000 2304.000000",
     "box_mins": "-1536.000000 -2099.000000 -1266.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -64988,7 +64988,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3606",
-    "handshake": "218186986",
+    "handshake": "2079113135",
     "light_probe_size_x": "41",
     "light_probe_size_y": "77",
     "light_probe_size_z": "75",
@@ -65000,8 +65000,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65011,7 +65011,7 @@
     "box_maxs": "310.000000 194.000000 157.000000",
     "box_mins": "-606.000000 -475.000000 -131.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65026,7 +65026,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3607",
-    "handshake": "218186987",
+    "handshake": "2079113136",
     "light_probe_size_x": "20",
     "light_probe_size_y": "14",
     "light_probe_size_z": "6",
@@ -65038,8 +65038,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65049,7 +65049,7 @@
     "box_maxs": "310.000000 119.000000 187.000000",
     "box_mins": "-606.000000 -437.000000 -111.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65064,7 +65064,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3609",
-    "handshake": "218186988",
+    "handshake": "2079113137",
     "light_probe_size_x": "20",
     "light_probe_size_y": "12",
     "light_probe_size_z": "7",
@@ -65076,8 +65076,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65087,7 +65087,7 @@
     "box_maxs": "1636.000000 817.000000 116.000000",
     "box_mins": "-1153.000000 -1150.000000 -389.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65102,7 +65102,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3610",
-    "handshake": "218186989",
+    "handshake": "2079113138",
     "light_probe_size_x": "59",
     "light_probe_size_y": "41",
     "light_probe_size_z": "11",
@@ -65114,8 +65114,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65125,7 +65125,7 @@
     "box_maxs": "1636.000000 558.000000 253.000000",
     "box_mins": "-732.000000 -1303.000000 -389.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65140,7 +65140,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3612",
-    "handshake": "218186990",
+    "handshake": "2079113139",
     "light_probe_size_x": "50",
     "light_probe_size_y": "39",
     "light_probe_size_z": "14",
@@ -65152,8 +65152,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65163,7 +65163,7 @@
     "box_maxs": "1236.000000 641.000000 305.000000",
     "box_mins": "-1085.000000 -684.000000 -341.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65178,7 +65178,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3614",
-    "handshake": "218186991",
+    "handshake": "2079113140",
     "light_probe_size_x": "49",
     "light_probe_size_y": "28",
     "light_probe_size_z": "14",
@@ -65190,8 +65190,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65201,7 +65201,7 @@
     "box_maxs": "935.000000 641.000000 305.000000",
     "box_mins": "-1705.000000 -1306.000000 -341.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65216,7 +65216,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3615",
-    "handshake": "218186992",
+    "handshake": "2079113141",
     "light_probe_size_x": "55",
     "light_probe_size_y": "41",
     "light_probe_size_z": "14",
@@ -65228,8 +65228,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65239,7 +65239,7 @@
     "box_maxs": "639.000000 400.000000 390.000000",
     "box_mins": "-808.000000 -729.000000 -341.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65254,7 +65254,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3617",
-    "handshake": "218186993",
+    "handshake": "2079113142",
     "light_probe_size_x": "31",
     "light_probe_size_y": "24",
     "light_probe_size_z": "16",
@@ -65266,8 +65266,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65277,7 +65277,7 @@
     "box_maxs": "1110.000000 167.000000 305.000000",
     "box_mins": "-564.000000 -938.000000 -341.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65292,7 +65292,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3618",
-    "handshake": "218186994",
+    "handshake": "2079113143",
     "light_probe_size_x": "35",
     "light_probe_size_y": "24",
     "light_probe_size_z": "14",
@@ -65304,8 +65304,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65315,7 +65315,7 @@
     "box_maxs": "774.000000 469.000000 311.000000",
     "box_mins": "-1153.000000 -874.000000 -389.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65330,7 +65330,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3619",
-    "handshake": "218186995",
+    "handshake": "2079113144",
     "light_probe_size_x": "41",
     "light_probe_size_y": "28",
     "light_probe_size_z": "15",
@@ -65342,8 +65342,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65353,7 +65353,7 @@
     "box_maxs": "585.000000 272.000000 303.000000",
     "box_mins": "-531.000000 -236.000000 -352.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65368,7 +65368,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3613",
-    "handshake": "218186996",
+    "handshake": "2079113145",
     "light_probe_size_x": "24",
     "light_probe_size_y": "11",
     "light_probe_size_z": "14",
@@ -65380,8 +65380,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65391,7 +65391,7 @@
     "box_maxs": "403.000000 299.000000 98.000000",
     "box_mins": "-446.000000 -474.000000 -352.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65406,7 +65406,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3616",
-    "handshake": "218186997",
+    "handshake": "2079113146",
     "light_probe_size_x": "18",
     "light_probe_size_y": "17",
     "light_probe_size_z": "10",
@@ -65418,8 +65418,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65429,7 +65429,7 @@
     "box_maxs": "403.000000 627.000000 98.000000",
     "box_mins": "-436.000000 -1044.000000 -352.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65444,7 +65444,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3620",
-    "handshake": "218186998",
+    "handshake": "2079113147",
     "light_probe_size_x": "18",
     "light_probe_size_y": "35",
     "light_probe_size_z": "10",
@@ -65456,8 +65456,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65467,7 +65467,7 @@
     "box_maxs": "1054.000000 783.000000 284.000000",
     "box_mins": "-980.000000 -1755.000000 -389.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65482,7 +65482,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3622",
-    "handshake": "218186999",
+    "handshake": "2079113148",
     "light_probe_size_x": "43",
     "light_probe_size_y": "53",
     "light_probe_size_z": "15",
@@ -65494,8 +65494,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65505,7 +65505,7 @@
     "box_maxs": "534.000000 1240.000000 284.000000",
     "box_mins": "-980.000000 -1236.000000 -389.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65520,7 +65520,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3624",
-    "handshake": "218187000",
+    "handshake": "2079113149",
     "light_probe_size_x": "32",
     "light_probe_size_y": "52",
     "light_probe_size_z": "15",
@@ -65532,8 +65532,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65543,7 +65543,7 @@
     "box_maxs": "392.000000 1240.000000 284.000000",
     "box_mins": "-470.000000 -740.000000 -178.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65558,7 +65558,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3625",
-    "handshake": "218187001",
+    "handshake": "2079113150",
     "light_probe_size_x": "18",
     "light_probe_size_y": "42",
     "light_probe_size_z": "10",
@@ -65570,8 +65570,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65581,7 +65581,7 @@
     "box_maxs": "741.000000 1240.000000 284.000000",
     "box_mins": "-639.000000 -717.000000 -178.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65596,7 +65596,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3626",
-    "handshake": "218187002",
+    "handshake": "2079113151",
     "light_probe_size_x": "29",
     "light_probe_size_y": "41",
     "light_probe_size_z": "10",
@@ -65608,8 +65608,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65619,7 +65619,7 @@
     "box_maxs": "615.000000 1755.000000 284.000000",
     "box_mins": "-1127.000000 -631.000000 -336.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65634,7 +65634,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3627",
-    "handshake": "218187003",
+    "handshake": "2079113152",
     "light_probe_size_x": "37",
     "light_probe_size_y": "50",
     "light_probe_size_z": "13",
@@ -65646,8 +65646,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "0",
@@ -65657,7 +65657,7 @@
     "box_maxs": "1240.000000 901.000000 284.000000",
     "box_mins": "-971.000000 -1574.000000 -336.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65672,7 +65672,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3628",
-    "handshake": "218187004",
+    "handshake": "2079113153",
     "light_probe_size_x": "47",
     "light_probe_size_y": "52",
     "light_probe_size_z": "13",
@@ -65684,8 +65684,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65695,7 +65695,7 @@
     "box_maxs": "904.000000 239.000000 121.000000",
     "box_mins": "-275.000000 -251.000000 -336.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65710,7 +65710,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3629",
-    "handshake": "218187005",
+    "handshake": "2079113154",
     "light_probe_size_x": "25",
     "light_probe_size_y": "11",
     "light_probe_size_z": "10",
@@ -65722,8 +65722,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65733,7 +65733,7 @@
     "box_maxs": "661.000000 253.000000 121.000000",
     "box_mins": "-336.000000 -232.000000 -336.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65748,7 +65748,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3631",
-    "handshake": "218187006",
+    "handshake": "2079113155",
     "light_probe_size_x": "21",
     "light_probe_size_y": "11",
     "light_probe_size_z": "10",
@@ -65760,8 +65760,8 @@
   {
     "lightprobetexture_sh2_l1": "",
     "lightprobetexture_sh2_dc": "",
-    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
-    "lightprobetexture": "maps/mg_shouwangzhe_v1/lightmaps/env_light_probe_volume_atlas.vtex",
+    "lightprobetexture_dlshd": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas_dlshd.vtex",
+    "lightprobetexture": "maps/mg_shouwangzhe_v1_4/lightmaps/env_light_probe_volume_atlas.vtex",
     "clientSideEntity": "1",
     "edge_fade_dists": "0.000000 0.000000 0.000000",
     "indoor_outdoor_level": "1",
@@ -65771,7 +65771,7 @@
     "box_maxs": "445.000000 1286.000000 89.000000",
     "box_mins": "-647.000000 -785.000000 -336.000000",
     "bakefarz": "4096.000000",
-    "cubemaptexture": "maps/mg_shouwangzhe_v1/cubemaps/env_cubemap_array.vtex",
+    "cubemaptexture": "maps/mg_shouwangzhe_v1_4/cubemaps/env_cubemap_array.vtex",
     "StartDisabled": "0",
     "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -65786,7 +65786,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3632",
-    "handshake": "218187007",
+    "handshake": "2079113156",
     "light_probe_size_x": "23",
     "light_probe_size_y": "44",
     "light_probe_size_z": "9",
@@ -67615,7 +67615,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1569",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F\u526F\u672C_1569.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F\u526F\u672C_1569.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67662,7 +67662,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1564",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F\u526F\u672C_1564.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F\u526F\u672C_1564.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67709,7 +67709,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1578",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E0B\u65B9\u6321\u677F_1578.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E0B\u65B9\u6321\u677F_1578.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67756,7 +67756,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1579",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E0A\u65B9\u6321\u677F_1579.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E0A\u65B9\u6321\u677F_1579.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67803,7 +67803,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3673",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3673.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3673.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67850,7 +67850,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3674",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3674.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3674.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67897,7 +67897,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3675",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3675.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3675.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67944,7 +67944,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3676",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3676.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3676.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -67991,7 +67991,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3677",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3677.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3677.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68038,7 +68038,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3678",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3678.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3678.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68085,7 +68085,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3679",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3679.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u4E2D\u95F4\u6321\u677F_3679.vmdl"
   },
   {
     "solidbsp": "0",
@@ -68122,7 +68122,7 @@
     "angles": "0.000000 90.000000 89.999985",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3672",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F\u8F74_3672.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F\u8F74_3672.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68169,7 +68169,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3680",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3680.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3680.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68216,7 +68216,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3681",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3681.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3681.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68263,7 +68263,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3682",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3682.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3682.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68310,7 +68310,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3683",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3683.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3683.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68357,7 +68357,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3684",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3684.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3684.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68404,7 +68404,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3685",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3685.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3685.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68451,7 +68451,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3686",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3686.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3686.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68498,7 +68498,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3687",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3687.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3687.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68545,7 +68545,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3688",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3688.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3688.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68592,7 +68592,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3689",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3689.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3689.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68639,7 +68639,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3690",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3690.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3690.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68686,7 +68686,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3691",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3691.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3691.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68733,7 +68733,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3692",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3692.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3692.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68780,7 +68780,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3693",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3693.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3693.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68827,7 +68827,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3694",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3694.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3694.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68874,7 +68874,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3695",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3695.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3695.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68921,7 +68921,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3696",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3696.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3696.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -68968,7 +68968,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3697",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3697.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3697.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -69015,7 +69015,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3698",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3698.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3698.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -69062,7 +69062,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3699",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3699.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3699.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -69109,7 +69109,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3700",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3700.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3700.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -69156,7 +69156,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3701",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3701.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3701.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -69203,7 +69203,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3702",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3702.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3702.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -69250,7 +69250,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3703",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3703.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3703.vmdl"
   },
   {
     "physdamagescale": "1.000000",
@@ -69297,7 +69297,7 @@
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3704",
-    "model": "maps/mg_shouwangzhe_v1/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3704.vmdl"
+    "model": "maps/mg_shouwangzhe_v1_4/entities/\u6295\u63B7\u7269\u8F6C\u76D8\u6321\u677F_3704.vmdl"
   },
   {
     "precomputedsubfrusta": "6",
