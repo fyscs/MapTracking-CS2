@@ -240,9 +240,6 @@
     "_template_lump_ent_index": "2"
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
     "spawnflags": "17408",
     "forcenpcexclude": "0",
     "override_anticipation_name": "",
@@ -255,7 +252,7 @@
     "movedir": "0.000000 0.000000 0.000000",
     "unlocked_sound": "0",
     "locked_sound": "0",
-    "use_sound": "",
+    "use_sound": "Item_use",
     "displaytext": "",
     "damagefilter": "",
     "lightmapstatic": "0",

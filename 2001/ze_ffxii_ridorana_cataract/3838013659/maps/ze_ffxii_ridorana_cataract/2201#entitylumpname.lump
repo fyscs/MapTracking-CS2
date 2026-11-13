@@ -531,9 +531,6 @@
     "_template_lump_ent_index": "11"
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
     "triggeronstarttouch": "0",
     "speed": "1000",
     "pushdir": "0.000000 225.000000 0.000000",

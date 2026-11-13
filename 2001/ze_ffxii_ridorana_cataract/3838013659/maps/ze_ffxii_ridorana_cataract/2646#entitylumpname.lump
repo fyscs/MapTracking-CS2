@@ -271,7 +271,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "NoInterpolate": "0",
-    "PerformanceMode": "1",
+    "PerformanceMode": "PM_NORMAL",
     "ExplodeRadius": "0.000000",
     "ExplodeDamage": "0.000000",
     "disableshadows": "0",
@@ -279,7 +279,7 @@
     "vscripts": "",
     "targetname": "[PR#]Hashmel_Hitbox",
     "classname": "func_physbox",
-    "origin": "5.000000 34.000000 78.000000",
+    "origin": "5.000000 34.000000 82.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2098",
@@ -871,7 +871,7 @@
         "target": "[PR#]Hashmel_Holy_Hurt",
         "input": "Enable",
         "param": "",
-        "delay": 1.399999976158142,
+        "delay": 1,
         "limit": -1
       },
       {
@@ -6215,7 +6215,7 @@
         "target": "[PR#]Hashmel_Hitbox",
         "input": "SetDamageFilter",
         "param": "[PR#]Humans_Filter",
-        "delay": 0,
+        "delay": 0.10000000149011612,
         "limit": -1
       },
       {

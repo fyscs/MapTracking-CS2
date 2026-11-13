@@ -132,9 +132,9 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]guard_beam_case",
-        "input": "FireUser1",
-        "param": "",
+        "target": "[PR#]guard_beam_random_script",
+        "input": "RunScriptInput",
+        "param": "StartSequence",
         "delay": 1,
         "limit": 1
       },
@@ -144,6 +144,22 @@
         "input": "Enable",
         "param": "",
         "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]S_Stage_4_3D_Sky_Lighning_Timer",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]S_Stage_4_3D_Sky_Clouds",
+        "input": "Start",
+        "param": "",
+        "delay": 0.5,
         "limit": 1
       }
     ]

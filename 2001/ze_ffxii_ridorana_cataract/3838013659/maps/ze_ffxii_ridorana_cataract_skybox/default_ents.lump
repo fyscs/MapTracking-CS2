@@ -573,9 +573,6 @@
     ]
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
     "InitialDelay": "0.000000",
     "RefireTime": "0.000000",
     "UpperRandomBound": "5.000000",
@@ -899,9 +896,6 @@
     "hammerUniqueId": "47"
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
     "InitialDelay": "0.000000",
     "RefireTime": "0.000000",
     "UpperRandomBound": "3.500000",
