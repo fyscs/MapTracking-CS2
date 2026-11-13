@@ -8966,7 +8966,6 @@
     "parentAttachmentName": "",
     "parentname": "",
     "rendertocubemaps": "0",
-    "lodlevel": "-1",
     "lightingorigin": "",
     "disableshadows": "0",
     "solid": "6",
@@ -9037,7 +9036,6 @@
     "parentAttachmentName": "",
     "parentname": "",
     "rendertocubemaps": "0",
-    "lodlevel": "-1",
     "lightingorigin": "",
     "disableshadows": "0",
     "solid": "6",
@@ -9108,7 +9106,6 @@
     "parentAttachmentName": "",
     "parentname": "",
     "rendertocubemaps": "0",
-    "lodlevel": "-1",
     "lightingorigin": "",
     "disableshadows": "0",
     "solid": "6",
@@ -37322,6 +37319,22 @@
         "output": "OnHitMax",
         "target": "[PR#]Boss_Vergil_R_Death",
         "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "X",
+        "target": "[PR#]BossHpBar_Counter_Vergil",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "X",
+        "target": "[PR#]THISISHARD",
+        "input": "Test",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -71628,58 +71641,6 @@
     ]
   },
   {
-    "filtername": "",
-    "CreateNavObstacle": "1",
-    "movedir": "0 0 0",
-    "loopmovesound": "0",
-    "_minlight": "",
-    "spawnflags": "1024",
-    "spawnpos": "0",
-    "unlocked_sound": "",
-    "locked_sound": "",
-    "health": "0",
-    "message": "",
-    "ignoredebris": "0",
-    "forceclosed": "0",
-    "dmg": "0",
-    "lip": "0",
-    "wait": "4",
-    "closesound": "",
-    "startclosesound": "",
-    "noise2": "",
-    "noise1": "",
-    "master": "",
-    "speed": "100",
-    "disableshadows": "0",
-    "globalname": "",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0",
-    "fademindist": "-1",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "local.scales": "",
-    "local.angles": "",
-    "local.origin": "",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
-    "targetname": "",
-    "vscripts": "",
-    "classname": "i",
-    "origin": "4034.375000 -9553.250000 5533.687500",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "8328"
-  },
-  {
     "_minlight": "",
     "spawnflags": "0",
     "disableshadows": "0",
@@ -71700,7 +71661,7 @@
     "targetname": "",
     "vscripts": "",
     "classname": "func_wall_toggle",
-    "origin": "4033.750000 -9556.250000 5533.687500",
+    "origin": "4033.750000 -9556.250000 5542.687500",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8329",
@@ -71723,7 +71684,7 @@
     "targetname": "[PR#]Lobby_ZmItem_Tps_Empusa",
     "vscripts": "",
     "classname": "point_teleport",
-    "origin": "4034.938477 -9557.125000 5521.250000",
+    "origin": "4034.938477 -9557.125000 5554.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8330"
@@ -72865,7 +72826,7 @@
     "vscripts": "",
     "targetname": "[PR#]Lobby_ZmItem_Tps_GEmpusa",
     "classname": "point_teleport",
-    "origin": "4062.688477 -9813.875000 5571.937500",
+    "origin": "4062.688477 -9813.875000 5595.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8362"
@@ -73701,7 +73662,7 @@
     "vscripts": "",
     "targetname": "[PR#]Lobby_ZmItem_Tps_Antenora",
     "classname": "point_teleport",
-    "origin": "4051.724609 -10111.578125 5528.125000",
+    "origin": "4051.724609 -10111.578125 5557.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8379"
@@ -73727,7 +73688,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "func_wall_toggle",
-    "origin": "4050.536133 -10110.703125 5540.562500",
+    "origin": "4050.536133 -10110.703125 5545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8380",
@@ -74416,7 +74377,7 @@
     "vscripts": "",
     "targetname": "[PR#]Lobby_ZmItem_Tps_Caina",
     "classname": "point_teleport",
-    "origin": "4031.337646 -10316.375000 5531.125000",
+    "origin": "4031.337646 -10316.375000 5560.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8397"
@@ -74442,7 +74403,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "func_wall_toggle",
-    "origin": "4030.149170 -10315.500000 5543.562500",
+    "origin": "4030.149170 -10315.500000 5550.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8398",
@@ -75523,7 +75484,7 @@
     "vscripts": "",
     "targetname": "[PR#]Lobby_ZmItem_Tps_Queen",
     "classname": "point_teleport",
-    "origin": "4305.535156 -10766.375000 5510.750000",
+    "origin": "4305.535156 -10766.375000 5547.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8421"
@@ -75549,7 +75510,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "func_wall_toggle",
-    "origin": "4304.346680 -10765.500000 5523.187500",
+    "origin": "4304.346680 -10765.500000 5536.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8422",
@@ -83021,8 +82982,8 @@
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]Item_Skin_Nero_Branch_RQ_HeatDetect",
-        "input": "Test",
+        "target": "[PR#]Skin_Nero_Filter_A",
+        "input": "TestActivator",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -88081,7 +88042,7 @@
     "Template27": "",
     "Template26": "",
     "Template25": "",
-    "Template24": "",
+    "Template24": "[PR#]Item_Punchline_A_Buttonteest",
     "Template23": "",
     "Template22": "[PR#]Item_Punchline_B_Button",
     "Template21": "[PR#]Item_Punchline_A_Branch",
@@ -308884,7 +308845,7 @@
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "X",
         "target": "[PR#]Item_Punchline_A_Button",
         "input": "Kill",
         "param": "",
@@ -309013,7 +308974,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "func_wall_toggle",
-    "origin": "9788.630859 -6898.082031 -10602.059570",
+    "origin": "9573.750000 -7357.000000 -9843.625000",
     "angles": "0.000000 12.182189 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18626",
@@ -317312,6 +317273,14 @@
         "param": "",
         "delay": 5,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_End_Tp_Fix2",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -319331,6 +319300,30 @@
         "input": "RunScriptInput",
         "param": "bury_stop",
         "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_End_Tp_Fix",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_End_Tp_Fix",
+        "input": "Disable",
+        "param": "",
+        "delay": 0.30000001192092896,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_End_Tp_Fix2",
+        "input": "Disable",
+        "param": "",
+        "delay": 5,
         "limit": 1
       }
     ]
@@ -321427,7 +321420,7 @@
     "Template15": "",
     "Template14": "",
     "Template13": "",
-    "Template12": "",
+    "Template12": "[PR#]Boss_Vergil_SFX_WalkerDC_R2",
     "Template11": "[PR#]Boss_Vergil_SFX_WalkerDC_Part3",
     "Template10": "[PR#]Boss_Vergil_SFX_WalkerDC_Shake",
     "Template09": "[PR#]Boss_Vergil_SFX_WalkerDC_Part",
@@ -346032,8 +346025,8 @@
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]Item_Zombie_Vergil_Compare_Rapid",
-        "input": "Compare",
+        "target": "[PR#]Filter_Vergil_A",
+        "input": "TestActivator",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -346086,8 +346079,8 @@
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]Item_Zombie_Vergil_Compare_Rising",
-        "input": "Compare",
+        "target": "[PR#]Filter_Vergil_B",
+        "input": "TestActivator",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -352670,7 +352663,7 @@
     "vscripts": "",
     "targetname": "[PR#]Lobby_ZmItem_Tps_Juddeca",
     "classname": "point_teleport",
-    "origin": "4095.188477 -12475.096680 5539.562500",
+    "origin": "4095.188477 -12475.096680 5563.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20148"
@@ -352692,7 +352685,7 @@
     "vscripts": "",
     "targetname": "[PR#]Lobby_ZmItem_Tps_Hellbat",
     "classname": "point_teleport",
-    "origin": "3996.281738 -12716.694336 5585.000000",
+    "origin": "3996.281738 -12716.694336 5597.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20149"
@@ -352741,37 +352734,10 @@
     "vscripts": "",
     "targetname": "[PR#]Lobby_ZmItem_Tps_Fury",
     "classname": "point_teleport",
-    "origin": "4064.666748 -13002.518555 5587.438477",
+    "origin": "4064.666748 -13002.518555 5592.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20155"
-  },
-  {
-    "spawnflags": "0",
-    "_minlight": "",
-    "disableshadows": "0",
-    "globalname": "",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "func_wall_toggle",
-    "origin": "4063.478271 -13001.643555 5599.875977",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20156",
-    "model": "maps/ze_devil_may_cry/entities/unnamed_20156.vmdl"
   },
   {
     "filtername": "[PR#]Item_Zombie_Juddeca_*",
@@ -363940,8 +363906,8 @@
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]Item_Skin_Nero_Compare_Upper",
-        "input": "Compare",
+        "target": "[PR#]Skin_Nero_Filter_B",
+        "input": "TestActivator",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -364084,8 +364050,8 @@
     "connections": [
       {
         "output": "OnPressed",
-        "target": "[PR#]Item_Skin_Dante_Compare_Upper",
-        "input": "Compare",
+        "target": "[PR#]Skin_Dante_Filter_B",
+        "input": "TestActivator",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -372215,7 +372181,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase05",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372223,7 +372189,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase06",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372231,7 +372197,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase07",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372239,7 +372205,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase08",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372247,7 +372213,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase09",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372594,7 +372560,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase05",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372602,7 +372568,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase06",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372610,7 +372576,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase07",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372618,7 +372584,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase08",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -372626,7 +372592,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase09",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -373008,7 +372974,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase05",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -373016,7 +372982,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase06",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -373024,7 +372990,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase07",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -373032,7 +372998,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase08",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -373040,7 +373006,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase09",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -378716,7 +378682,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase05",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -378724,7 +378690,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase06",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -378732,7 +378698,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase07",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -378740,7 +378706,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase08",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -378748,7 +378714,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase09",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -380238,7 +380204,7 @@
         "target": "!activator",
         "input": "Keyvalue",
         "param": "movetype 2",
-        "delay": 5,
+        "delay": 5.5,
         "limit": -1
       },
       {
@@ -403779,5 +403745,330 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21911",
     "model": "maps/ze_devil_may_cry/entities/unnamed_21911.vmdl"
+  },
+  {
+    "clothScale": "1.000000",
+    "StartDisabled": "0",
+    "forcenpcexclude": "0",
+    "CreateNavObstacle": "0",
+    "lightingorigin": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "AnimateOnServer": "0",
+    "LagCompensate": "0",
+    "randomizecycle": "0",
+    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
+    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
+    "use_animgraph": "1",
+    "disablelowviolence": "0",
+    "solid": "6",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "animgraph2_identifier": "",
+    "disableshadows": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "models/arcade_icecar.vmdl",
+    "globalname": "",
+    "clientSideEntity": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "",
+    "classname": "prop_dynamic",
+    "origin": "-11616.000000 -3393.000244 6054.770020",
+    "angles": "0.000000 30.000067 0.000000",
+    "scales": "2.000000 2.000000 2.000000",
+    "hammerUniqueId": "21918"
+  },
+  {
+    "_minlight": "",
+    "spawnflags": "0",
+    "disableshadows": "0",
+    "globalname": "",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "targetname": "",
+    "vscripts": "",
+    "classname": "func_wall_toggle",
+    "origin": "9462.000000 -7330.000000 -9609.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21920",
+    "model": "maps/ze_devil_may_cry/entities/unnamed_21920.vmdl"
+  },
+  {
+    "check_if_dest_clear_for_player": "0",
+    "mirror_player": "0",
+    "use_landmark_angles": "1",
+    "landmark": "",
+    "target": "[PR#]Act5_Boss_ZMCage_Tps",
+    "filtername": "[PR#]Filter_Zombie",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Boss_Vergil_End_Tp_Fix",
+    "classname": "trigger_teleport",
+    "origin": "9978.408203 -4978.207031 -9929.434570",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21921",
+    "model": "maps/ze_devil_may_cry/entities/boss_vergil_end_tp_fix_21921.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Alpha",
+        "param": "255",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "spawnflags": "0",
+    "_minlight": "",
+    "disableshadows": "0",
+    "globalname": "",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "func_wall_toggle",
+    "origin": "4063.478271 -13001.643555 5599.875977",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20156",
+    "model": "maps/ze_devil_may_cry/entities/unnamed_20156.vmdl"
+  },
+  {
+    "check_if_dest_clear_for_player": "0",
+    "mirror_player": "0",
+    "use_landmark_angles": "1",
+    "landmark": "",
+    "target": "[PR#]Act5_Boss_ZMCage_Tps",
+    "filtername": "[PR#]Filter_Zombie",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Boss_Vergil_End_Tp_Fix2",
+    "classname": "trigger_teleport",
+    "origin": "9978.408203 -4978.207031 -9929.434570",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21926",
+    "model": "maps/ze_devil_may_cry/entities/boss_vergil_end_tp_fix2_21926.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Alpha",
+        "param": "255",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "filtername": "[PR#]Filter_Skin_Nero",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Skin_Nero_Filter_A",
+    "classname": "filter_activator_name",
+    "origin": "7331.164062 -9980.000000 5566.620117",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21928",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Item_Skin_Nero_Branch_RQ_HeatDetect",
+        "input": "Test",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "filtername": "[PR#]Filter_Skin_Nero",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Skin_Nero_Filter_B",
+    "classname": "filter_activator_name",
+    "origin": "7331.164062 -9961.000000 5566.620117",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21929",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Item_Skin_Nero_Compare_Upper",
+        "input": "Compare",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "filtername": "[PR#]Filter_Skin_Dante",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Skin_Dante_Filter_B",
+    "classname": "filter_activator_name",
+    "origin": "6328.145020 -12995.000000 6116.128906",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21931",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Item_Skin_Dante_Compare_Upper",
+        "input": "Compare",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "filtername": "[PR#]ZombieSkin_Vergil",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Filter_Vergil_A",
+    "classname": "filter_activator_name",
+    "origin": "5497.000000 -9653.901367 5525.500488",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21932",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Item_Zombie_Vergil_Compare_Rapid",
+        "input": "Compare",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "filtername": "[PR#]ZombieSkin_Vergil",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Filter_Vergil_B",
+    "classname": "filter_activator_name",
+    "origin": "5483.000000 -9653.901367 5525.500488",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21933",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Item_Zombie_Vergil_Compare_Rising",
+        "input": "Compare",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]

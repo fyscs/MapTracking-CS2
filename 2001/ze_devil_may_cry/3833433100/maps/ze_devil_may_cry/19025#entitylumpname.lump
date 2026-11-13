@@ -133,6 +133,30 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnFullyClosed",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFullyOpen",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnFullyOpen",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R\u00260000",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 5,
+        "limit": 1
       }
     ]
   },
@@ -198,8 +222,8 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R\u00260000",
-        "input": "FireUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+        "input": "Trigger",
         "param": "",
         "delay": 2,
         "limit": 1
@@ -662,6 +686,22 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Model\u00260000",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
       }
     ]
   },
@@ -820,6 +860,14 @@
         "input": "Open",
         "param": "",
         "delay": 0.20000000298023224,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -1048,5 +1096,131 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19147",
     "_template_lump_ent_index": "10"
+  },
+  {
+    "spawnflags": "0",
+    "health": "0",
+    "target": "",
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+    "classname": "logic_relay",
+    "origin": "41.921875 -5.254883 7.823242",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21925",
+    "_template_lump_ent_index": "11",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverF\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Part2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Part\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Hurt\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Tri\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Hurt2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Shake\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Part3\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Part2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Model\u00260000",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
   }
 ]

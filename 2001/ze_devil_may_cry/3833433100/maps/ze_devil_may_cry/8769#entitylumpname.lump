@@ -1501,7 +1501,7 @@
         "target": "[PR#]Item_Rawhide_B_Part",
         "input": "Stop",
         "param": "",
-        "delay": 5,
+        "delay": 5.5,
         "limit": -1
       },
       {

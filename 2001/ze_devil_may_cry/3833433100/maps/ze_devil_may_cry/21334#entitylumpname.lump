@@ -73,7 +73,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase04",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -153,7 +153,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase04",
+        "output": "X",
         "target": "[PR#]X",
         "input": "Command",
         "param": "say 4",
@@ -161,7 +161,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase05",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -169,7 +169,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase06",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -177,7 +177,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase07",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
@@ -185,7 +185,7 @@
         "limit": -1
       },
       {
-        "output": "OnCase08",
+        "output": "X",
         "target": "[PR#]Nope",
         "input": "",
         "param": "",
