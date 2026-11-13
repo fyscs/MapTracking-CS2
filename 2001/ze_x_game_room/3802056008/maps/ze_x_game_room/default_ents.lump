@@ -26976,7 +26976,7 @@
     "forcetoenablemotion": "0.000000",
     "damagetoenablemotion": "0",
     "buoyancyScale": "1.000000",
-    "massScale": "100.000000",
+    "massScale": "1000.000000",
     "inertiaScale": "1.000000",
     "acceptdamagefromheldobjects": "0",
     "nodamageforces": "0",
