@@ -4,6 +4,10 @@
 [
   {
     "InitialValue": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
     "targetname": "[PR#]Perm_Branch",
     "classname": "logic_branch",
     "origin": "-16.000000 16.000000 0.000000",
