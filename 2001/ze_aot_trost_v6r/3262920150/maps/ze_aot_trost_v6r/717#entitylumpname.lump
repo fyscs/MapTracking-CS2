@@ -168,6 +168,54 @@
         "param": "speed 1",
         "delay": 8.100000381469727,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "gravity 5",
+        "delay": 8.199999809265137,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "gravity 1",
+        "delay": 9,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "gravity 5",
+        "delay": 8.399999618530273,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "gravity 5",
+        "delay": 8.600000381469727,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "gravity 5",
+        "delay": 8.800000190734863,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "absvelocity 0 0 0",
+        "delay": 8.010000228881836,
+        "limit": -1
       }
     ]
   },

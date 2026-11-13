@@ -355,6 +355,78 @@
     ]
   },
   {
+    "alternateticksfix": "0",
+    "FallingSpeedThreshold": "-150",
+    "triggeronstarttouch": "0",
+    "speed": "500",
+    "pushdir": "0.000000 0.000000 0.000000",
+    "filtername": "[PR#]wind_multi_filter",
+    "spawnflags": "9",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "[PR#]wind_elite",
+    "vscripts": "",
+    "targetname": "[PR#]wind_push",
+    "classname": "trigger_push",
+    "origin": "162.000000 899.000000 138.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12657",
+    "model": "maps/ze_aot_trost_v6r/entities/wind_push_12657.vmdl",
+    "_template_lump_ent_index": "7",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]monkey_ball",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "FallingSpeedThreshold": "-150",
+    "alternateticksfix": "0",
+    "triggeronstarttouch": "0",
+    "speed": "500",
+    "pushdir": "0.000000 180.000000 0.000000",
+    "filtername": "[PR#]wind_multi_filter",
+    "spawnflags": "9",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "[PR#]wind_elite",
+    "vscripts": "",
+    "targetname": "[PR#]wind_push",
+    "classname": "trigger_push",
+    "origin": "162.000000 -271.000000 138.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12659",
+    "model": "maps/ze_aot_trost_v6r/entities/wind_push_12659.vmdl",
+    "_template_lump_ent_index": "8",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]monkey_ball",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
     "steamaudio_geometry_mode": "0",
     "expand_render_bounds_to_include_cloth": "0",
     "animgraph2_identifier": "",
@@ -433,7 +505,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "765",
-    "_template_lump_ent_index": "7"
+    "_template_lump_ent_index": "9"
   },
   {
     "SourceEntityName": "[PR#]wind_mdl",
@@ -467,6 +539,6 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "761",
-    "_template_lump_ent_index": "8"
+    "_template_lump_ent_index": "10"
   }
 ]
