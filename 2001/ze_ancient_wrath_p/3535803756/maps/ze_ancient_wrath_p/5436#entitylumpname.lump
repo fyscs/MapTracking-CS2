@@ -4,9 +4,17 @@
 [
   {
     "wait": "1.000000",
+    "filtername": "",
     "spawnflags": "4097",
+    "globalname": "",
     "StartDisabled": "0",
     "useLocalOffset": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
     "targetname": "[PR#]boss_quad_arena_target_trigger",
     "classname": "trigger_multiple",
     "origin": "-880.000000 848.000000 91.750000",
