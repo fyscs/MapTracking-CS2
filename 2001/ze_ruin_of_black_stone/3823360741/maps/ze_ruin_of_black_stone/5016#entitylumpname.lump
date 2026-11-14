@@ -360,8 +360,6 @@
     "_template_lump_ent_index": "3"
   },
   {
-    "fadescale": "1",
-    "health": "0",
     "spawnflags": "17409",
     "forcenpcexclude": "0",
     "override_anticipation_name": "",
@@ -419,7 +417,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1",
+    "damagetype": "0",
     "damagecap": "-400",
     "damage": "-400",
     "master": "",
@@ -444,7 +442,7 @@
     "_template_lump_ent_index": "5",
     "connections": [
       {
-        "output": "OnStartTouch",
+        "output": "OnHurtPlayer",
         "target": "!activator",
         "input": "Keyvalue",
         "param": "max_health 200",
@@ -452,7 +450,7 @@
         "limit": -1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnHurtPlayer",
         "target": "!activator",
         "input": "SetDamageFilter",
         "param": "[PR#]nfd",
@@ -460,7 +458,7 @@
         "limit": -1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnHurtPlayer",
         "target": "!activator",
         "input": "SetDamageFilter",
         "param": "[PR#]god",

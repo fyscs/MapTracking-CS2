@@ -25852,7 +25852,7 @@
         "target": "[PR#]ex2_win_trigger",
         "input": "Enable",
         "param": "",
-        "delay": 18.5,
+        "delay": 20,
         "limit": 1
       },
       {
@@ -25860,7 +25860,7 @@
         "target": "[PR#]ex2_zm_check",
         "input": "Enable",
         "param": "",
-        "delay": 17.5,
+        "delay": 20,
         "limit": 1
       },
       {
@@ -25892,7 +25892,7 @@
         "target": "[PR#]zr_toggle_respawn",
         "input": "trigger",
         "param": "",
-        "delay": 17,
+        "delay": 20,
         "limit": -1
       },
       {
