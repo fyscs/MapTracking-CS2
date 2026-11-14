@@ -154,6 +154,7 @@
                     </Panel>
                 </Panel>
                 <Label id="ly_top" class="gt-ly-top" text="{s:gt_text}" />
+                <Label id="ly_translation" class="gt-ly-translation" text="{s:gt_translation}" />
             </Panel>
         </Panel>
     </Panel>

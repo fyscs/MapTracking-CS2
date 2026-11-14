@@ -4968,3 +4968,12 @@ to {
 .gt-rbgap12 {
     margin-bottom: -12px;
 }
+.gt-ly-translation {
+    width: fit-children;
+    max-width: 100%;
+    horizontal-align: center;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: shrink;
+    margin-top: 5px;
+}
