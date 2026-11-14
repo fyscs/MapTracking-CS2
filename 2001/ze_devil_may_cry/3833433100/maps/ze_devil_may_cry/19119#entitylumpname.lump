@@ -1521,6 +1521,22 @@
         "param": "bury_unpause",
         "delay": 7.800000190734863,
         "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Boss_Vergil_SFX_SlayAll_Tri2",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Boss_Vergil_SFX_SlayAll_Tri2",
+        "input": "Kill",
+        "param": "",
+        "delay": 1,
+        "limit": 1
       }
     ]
   },
@@ -5800,5 +5816,96 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19130",
     "_template_lump_ent_index": "78"
+  },
+  {
+    "wait": "1.000000",
+    "filtername": "[PR#]Filter_Human",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Boss_Vergil_SFX_SlayAll_Tri2",
+    "classname": "trigger_multiple",
+    "origin": "-32.500000 22.639648 342.500000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21934",
+    "model": "maps/ze_devil_may_cry/entities/boss_vergil_sfx_slayall_tri2_21934.vmdl",
+    "_template_lump_ent_index": "79",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.9",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.2",
+        "delay": 3.5,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.8",
+        "delay": 0.4000000059604645,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.7",
+        "delay": 0.6000000238418579,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.6",
+        "delay": 0.800000011920929,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.5",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.4",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "Keyvalue",
+        "param": "speed 0.3",
+        "delay": 3,
+        "limit": -1
+      }
+    ]
   }
 ]

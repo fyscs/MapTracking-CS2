@@ -323,7 +323,7 @@
   {
     "DamageType": "512",
     "DamageDelay": "0.000000",
-    "Damage": "40",
+    "Damage": "55",
     "DamageRadius": "0.000000",
     "DamageTarget": "!activator",
     "add_modifier": "",

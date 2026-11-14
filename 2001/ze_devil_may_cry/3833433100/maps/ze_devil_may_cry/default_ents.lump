@@ -321814,7 +321814,7 @@
     "Template30": "",
     "Template29": "",
     "Template28": "",
-    "Template27": "",
+    "Template27": "[PR#]Boss_Vergil_SFX_SlayAll_Tri2",
     "Template26": "",
     "Template25": "[PR#]Boss_Vergil_SFX_SlayAll_TMaker1",
     "Template24": "[PR#]Boss_Vergil_SFX_SlayAll_TMaker2",
@@ -388888,7 +388888,7 @@
         "target": "[PR#]player",
         "input": "RemoveContext",
         "param": "Sper_FIX",
-        "delay": 8,
+        "delay": 5,
         "limit": -1
       },
       {
@@ -388896,7 +388896,7 @@
         "target": "[PR#]Act1_VSpawn_Tri3",
         "input": "Kill",
         "param": "",
-        "delay": 8,
+        "delay": 5,
         "limit": 1
       }
     ]

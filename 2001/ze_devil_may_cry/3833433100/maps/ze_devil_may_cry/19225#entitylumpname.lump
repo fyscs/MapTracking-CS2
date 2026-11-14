@@ -638,8 +638,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "512",
-    "damagecap": "100",
-    "damage": "100",
+    "damagecap": "150",
+    "damage": "150",
     "master": "",
     "filtername": "[PR#]Filter_Human",
     "spawnflags": "4097",
@@ -1038,7 +1038,113 @@
     "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19215",
-    "_template_lump_ent_index": "20"
+    "_template_lump_ent_index": "20",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon3_Hurt",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon3_S",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon3_S2",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon3_S_Warn",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon2_Rot",
+        "input": "Stop",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon2_Part",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0.5,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon3_Track",
+        "input": "Kill",
+        "param": "",
+        "delay": 1,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon3_P*",
+        "input": "Kill",
+        "param": "",
+        "delay": 2.0999999046325684,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon2_Model*",
+        "input": "Enable",
+        "param": "",
+        "delay": 1.5,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon2_Part",
+        "input": "Start",
+        "param": "",
+        "delay": 1.5,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon2_Rot",
+        "input": "SetSpeed",
+        "param": "0.2",
+        "delay": 1.5,
+        "limit": 1
+      },
+      {
+        "output": "X",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon2_Rot",
+        "input": "StartForward",
+        "param": "",
+        "delay": 1.5,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Boss_Vergil_SFX_Dragon2_Timer",
+        "input": "Enable",
+        "param": "",
+        "delay": 1.5,
+        "limit": -1
+      }
+    ]
   },
   {
     "orientationtype": "1",
@@ -1101,7 +1207,7 @@
     "_template_lump_ent_index": "22",
     "connections": [
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon3_Track",
         "input": "Kill",
         "param": "",
@@ -1109,7 +1215,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon3_P*",
         "input": "Kill",
         "param": "",
@@ -1117,7 +1223,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon3_Hurt",
         "input": "Kill",
         "param": "",
@@ -1125,7 +1231,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon3_S",
         "input": "Kill",
         "param": "",
@@ -1133,7 +1239,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon3_S2",
         "input": "Kill",
         "param": "",
@@ -1141,7 +1247,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon3_S_Warn",
         "input": "Kill",
         "param": "",
@@ -1149,7 +1255,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon2_Rot",
         "input": "Stop",
         "param": "",
@@ -1157,7 +1263,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon2_Part",
         "input": "FireUser1",
         "param": "",
@@ -1165,7 +1271,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon2_Model*",
         "input": "Enable",
         "param": "",
@@ -1173,7 +1279,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon2_Part",
         "input": "Start",
         "param": "",
@@ -1181,7 +1287,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon2_Rot",
         "input": "SetSpeed",
         "param": "0.2",
@@ -1197,7 +1303,7 @@
         "limit": 1
       },
       {
-        "output": "OnPass",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_Dragon2_Timer",
         "input": "Enable",
         "param": "",
