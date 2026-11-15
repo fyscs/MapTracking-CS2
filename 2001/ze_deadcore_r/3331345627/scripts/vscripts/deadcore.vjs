@@ -129,3 +129,23 @@ Instance.OnScriptInput("Reset", () => {
     skipC = false;
     skipD = false;
 });
+
+// ============================================================
+// Fix Bug
+// ============================================================
+
+Instance.OnRoundStart(() => {
+    Entities.FireInput({
+        name: "radiation_beam_timer*",
+        input: "AddOutput",
+        value: "OnTimer>radiation_beam_rotate_case>PickRandom>>0.0>-1",
+        delay: 1.0
+    });
+
+    Entities.FireInput({
+        name: "radiation_beam_maker1",
+        input: "AddOutput",
+        value: "OnEntitySpawned>radiation_beam1*>Start>>0.0>-1",
+        delay: 1.0
+    });
+})
