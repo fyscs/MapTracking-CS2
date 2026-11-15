@@ -12,7 +12,7 @@
 //
 //  两套容器，同时只显示一个：
 //    mv_line   横排：日文大字 + 中文小字
-//    mv_plate  竖排：黑底金字，逐字堆叠，只放日文（横排 10 个锚点 + 竖排 2 个）
+//    mv_plate  竖排/底部：纯金字，逐字堆叠，只放日文（横排 10 个锚点 + 竖排 2 个）
 //
 //  曲目：Awake Now / 雄之助 feat. 初音ミク
 //    · LRC  36 句，[00:25.00] → [03:11.00]（已剔除开头的曲名/词曲署名行）
@@ -156,7 +156,7 @@ const ZH_SUFFIX = "<<";
 const ANCHOR_PREFIX = "Pos";
 const ANCHOR_COUNT = 12;
 
-/** 竖排锚点（黑底金字那个容器），只有 11 / 12 两个 */
+/** 竖排锚点（纯金字那个容器），只有 11 / 12 两个 */
 const VERTICAL_ANCHORS = [11, 12];
 
 /**
@@ -167,7 +167,7 @@ const VERTICAL_ANCHORS = [11, 12];
 const HORIZONTAL_ORDER = [1, 5, 8, 3, 10, 6, 2, 9, 4, 7];
 
 /**
- * 哪些句子用阴纹（黑底金字）。1 起的行号闭区间，不在区间里的句子走横排锚点。
+ * 哪些句子用阴纹（纯金字）。1 起的行号闭区间，不在区间里的句子走横排锚点。
  *
  * 现在填三段：第 1–9 句（00:25–00:56 前奏+主歌）、第 16–22 句
  * （01:32–01:47 Promise…見せつけてあげるわ）、第 27–30 句（02:22–02:41 第二段主歌）。
@@ -199,7 +199,7 @@ const PLATE_SIZE_CLASSES = ["SizeS", "SizeXs", "SizeXxs"];
 const PLATE_COL_CHARS = PLATE_MAX_CHARS;
 
 /**
- * 带英文的句子落这个锚点：屏幕中间下方的横排阴纹字幕（黑底金字一行）。
+ * 带英文的句子落这个锚点：屏幕中间下方的横排阴纹字幕（纯金字一行）。
  * 竖排里拉丁词只能整词堆叠，读起来别扭，所以这类句子不走竖排。
  */
 const PLATE_FLAT_ANCHOR = 13;
@@ -393,13 +393,26 @@ function IsVerticalAnchor(anchor) {
 	return VERTICAL_ANCHORS.indexOf(anchor) >= 0;
 }
 
-/** 摘掉旧锚点、挂上新锚点（同一面板同一个锚点就不动，省两次 SetHasClass） */
+/**
+ * 摘掉旧锚点、挂上新锚点（同一面板同一个锚点就不动，省两次 SetHasClass）
+ *
+ * ⚠ shownAnchor === 0 表示"这一次是本次启动后的第一句"：此时面板上还留着
+ *   XML 里写死的初始 PosN（.MvLine 是 Pos1、.MvPlate 是 Pos11）。不清掉它们，
+ *   新锚点就会和初始锚点叠加 —— 例如第一句落在 Pos13（居中贴底），却同时
+ *   带着 Pos11 的 margin-left: 96px，于是整句被右推 96px，看起来就是"错位"。
+ */
 function ApplyAnchor(layout, panel, anchor) {
 	// 换锚点意味着"这次换位是有意义的"，把还没执行的 ClearAnchorSoon 作废
 	anchorEpoch++;
 
 	if (shownAnchor !== 0 && (shownPanel !== panel || shownAnchor !== anchor)) {
 		layout.SetHasClass(shownPanel, ANCHOR_PREFIX + shownAnchor, false);
+	}
+	if (shownAnchor === 0) {
+		for (let i = 1; i <= ANCHOR_COUNT; i++) {
+			layout.SetHasClass(LINE_PANEL, ANCHOR_PREFIX + i, false);
+			layout.SetHasClass(PLATE_PANEL, ANCHOR_PREFIX + i, false);
+		}
 	}
 	layout.SetHasClass(panel, ANCHOR_PREFIX + anchor, true);
 	shownPanel = panel;
@@ -415,9 +428,23 @@ function ApplyAnchor(layout, panel, anchor) {
  *   「已经完全透明」的那一帧把 PosN 换掉（见 ShowLine / ApplyAnchor）。
  */
 function HideAll(layout) {
+	HideTextPanels(layout);
+	// 气泡条也一起收：间奏清屏、stop、回合重启都走这里
+	HideBubbles(layout);
+}
+
+/** 只收三块文字面板（阴纹 / 横排 / 底部译文），不动气泡条 —— 气泡句之间要保留下面的历史 */
+function HideTextPanels(layout) {
 	layout.SetHasClass(LINE_PANEL, HIDDEN_CLASS, true);
 	layout.SetHasClass(PLATE_PANEL, HIDDEN_CLASS, true);
 	layout.SetHasClass(ZH_SUB_PANEL, HIDDEN_CLASS, true);
+}
+
+/** 收气泡条并清空历史；同时把正在打字的那一句作废 */
+function HideBubbles(layout) {
+	layout.SetHasClass(BUBBLE_STACK_PANEL, HIDDEN_CLASS, true);
+	bubbleToken++;
+	bubbleLines = [];
 }
 
 /** 淡出已经结束之后再摘锚点类（stop / 播放结束 / 重载 用） */
@@ -469,6 +496,14 @@ function ShowZhSub(layout, zh) {
  * 跨完 tick 之后再查一次 token：stop / 换歌正好落在这 0.22 秒里时不能再写。
  */
 async function ShowLine(layout, lineIndex, ja, zh, token) {
+	// 气泡模式只接管「阴纹段」（第 1–9 / 16–22 / 27–30 句）：
+	// 这几句换成左下角的白胶囊气泡，其余句子照旧走倾斜横排锚点，一个字都不变。
+	if (bubbleMode && WantsPlate(lineIndex + 1)) {
+		HideTextPanels(layout); // 上一句若是横排锚点，先把大字收掉；气泡历史保留
+		PushBubble(layout, ja, zh);
+		return PLATE_FLAT_ANCHOR;
+	}
+
 	const anchor = NextAnchor(lineIndex, ja);
 	const onPlate = IsVerticalAnchor(anchor) || anchor === PLATE_FLAT_ANCHOR;
 	const panel = onPlate ? PLATE_PANEL : LINE_PANEL;
@@ -633,7 +668,8 @@ async function StartLyrics() {
 		if (token !== runToken) {
 			return;
 		}
-		Log(`第 ${i + 1} 句 → 锚点 ${anchor}`);
+		const toBubble = bubbleMode && WantsPlate(i + 1);
+		Log(toBubble ? `第 ${i + 1} 句 → 气泡` : `第 ${i + 1} 句 → 锚点 ${anchor}`);
 
 		// 这一句最多摆 MAX_HOLD_SEC；间奏比这长就先收起来，屏幕留空
 		const nextTime = i + 1 < lines.length
@@ -893,7 +929,146 @@ function ToggleCard() {
 }
 
 // ============================================================================
-//  七、事件接线
+//  七、聊天气泡（LINE 式）
+// ============================================================================
+
+const BUBBLE_STACK_PANEL = "bubble_stack";
+const BUBBLE_SLOTS = ["bubble_1", "bubble_2", "bubble_3"];
+const BUBBLE_JA_PANELS = ["bubble_ja_1", "bubble_ja_2", "bubble_ja_3"];
+const BUBBLE_ZH_PANELS = ["bubble_zh_1", "bubble_zh_2", "bubble_zh_3"];
+const BUBBLE_JA_VARIABLE = "bja";
+const BUBBLE_ZH_VARIABLE = "bzh";
+
+/** 同时留几条：第 1 条在最下面，新的把旧的往上顶 */
+const BUBBLE_COUNT = 3;
+/** 新气泡进场：先保持隐藏一帧，再摘 Hidden 触发「上浮 + 淡入」过渡 */
+const BUBBLE_RISE_TICK = 0.03;
+/** 一行最多放几个字宽（超了折行）；46px 字号下 820px 大约 17 个汉字 */
+const BUBBLE_MAX_UNITS = 26;
+
+const BUBBLE_EMPTY_CLASS = "BubbleEmpty";
+const BUBBLE_INPUT_ON = "bubble_on";
+const BUBBLE_INPUT_OFF = "bubble_off";
+const BUBBLE_CHEAT_PREFIX = "bubble_test";
+
+let bubbleMode = true;
+let bubbleLines = [];
+let bubbleToken = 0;
+
+/** 一个排版单位占几个字宽：拉丁词按字母估、空格算半格、其余算一格 */
+function BubbleUnitCost(unit) {
+	if (/^[A-Za-z0-9'’]/.test(unit)) {
+		return Math.max(2, Math.ceil(unit.length * 0.56));
+	}
+	if (unit.trim() === "") {
+		return 0.5;
+	}
+	return 1;
+}
+
+/** 切成排版单位：拉丁词整体保留（不拆成单个字母），其余逐字 */
+function BubbleUnits(text) {
+	const units = [];
+	let word = "";
+	for (const ch of String(text)) {
+		if (/[A-Za-z0-9'’]/.test(ch)) {
+			word += ch;
+			continue;
+		}
+		if (word !== "") {
+			units.push(word);
+			word = "";
+		}
+		units.push(ch);
+	}
+	if (word !== "") {
+		units.push(word);
+	}
+	return units;
+}
+
+/** 按字宽预算折行，返回带 \n 的整句；打字过程中布局不会跳 */
+function WrapBubbleText(text, maxUnits) {
+	const lines = [];
+	let current = "";
+	let used = 0;
+	for (const unit of BubbleUnits(text)) {
+		const cost = BubbleUnitCost(unit);
+		if (used + cost > maxUnits && current !== "") {
+			lines.push(current);
+			current = "";
+			used = 0;
+			if (unit.trim() === "") {
+				continue;
+			}
+		}
+		current += unit;
+		used += cost;
+	}
+	if (current !== "") {
+		lines.push(current);
+	}
+	return lines.join("\n");
+}
+
+/**
+ * 把 3 个槽位整体重画一遍：旧的在上、新的在下。
+ * 最新的那条先挂 Hidden 写好字，下一帧再摘掉 —— 只有跨帧才会跑过渡。
+ */
+function RenderBubbles(layout, newestSlot) {
+	const offset = BUBBLE_COUNT - bubbleLines.length;
+	for (let i = 0; i < BUBBLE_COUNT; i++) {
+		const entry = bubbleLines[i - offset];
+		if (!entry) {
+			layout.SetHasClass(BUBBLE_SLOTS[i], BUBBLE_EMPTY_CLASS, true);
+			layout.SetHasClass(BUBBLE_SLOTS[i], HIDDEN_CLASS, true);
+			continue;
+		}
+		layout.SetDialogVariableString(BUBBLE_JA_PANELS[i], BUBBLE_JA_VARIABLE, entry.ja);
+		layout.SetDialogVariableString(BUBBLE_ZH_PANELS[i], BUBBLE_ZH_VARIABLE, entry.zh);
+		layout.SetHasClass(BUBBLE_SLOTS[i], BUBBLE_EMPTY_CLASS, false);
+		// 新来的那条先挂住隐藏，老气泡直接到位（不重播动画）
+		layout.SetHasClass(BUBBLE_SLOTS[i], HIDDEN_CLASS, i === newestSlot);
+	}
+}
+
+/** 让刚放好的新气泡浮上来：等一帧，再摘 Hidden */
+async function RiseBubble(layout, slot, token) {
+	await Instance.Delay(BUBBLE_RISE_TICK);
+	if (token !== bubbleToken) {
+		return;
+	}
+	layout.SetHasClass(BUBBLE_SLOTS[slot], HIDDEN_CLASS, false);
+}
+
+/** 新来一句：进列表 → 重画（旧的就位、新的先隐藏）→ 下一帧浮起淡入，不阻塞时间轴 */
+function PushBubble(layout, ja, zh) {
+	const wrapped = WrapBubbleText(ja, BUBBLE_MAX_UNITS);
+	bubbleLines.push({ ja: wrapped, zh: BracketZh(zh) });
+	while (bubbleLines.length > BUBBLE_COUNT) {
+		bubbleLines.shift();
+	}
+
+	const token = ++bubbleToken;
+	const newest = BUBBLE_COUNT - 1;
+	RenderBubbles(layout, newest);
+	layout.SetHasClass(BUBBLE_STACK_PANEL, HIDDEN_CLASS, false);
+	RiseBubble(layout, newest, token);
+}
+
+/** bubble_on / bubble_off：切换后从下一句开始生效 */
+function SetBubbleMode(on) {
+	bubbleMode = on;
+	const layout = GetLayout();
+	if (layout) {
+		HideAll(layout);
+		ClearAnchorSoon(layout);
+	}
+	Log(on ? "歌词改为 LINE 气泡条显示" : "歌词改回锚点显示");
+}
+
+// ============================================================================
+//  八、事件接线
 // ============================================================================
 
 Instance.OnActivate(() => {
@@ -930,6 +1105,14 @@ Instance.OnScriptInput(PING_INPUT, () => {
 	ShowPing(7);
 });
 
+// 歌词显示方式：气泡条 / 锚点
+Instance.OnScriptInput(BUBBLE_INPUT_ON, () => {
+	SetBubbleMode(true);
+});
+Instance.OnScriptInput(BUBBLE_INPUT_OFF, () => {
+	SetBubbleMode(false);
+});
+
 Instance.OnBeginRoundRestart(() => {
 	StopLyrics();
 	HidePlayer();
@@ -963,6 +1146,14 @@ Instance.RegisterCheatCommand(PLAYER_CHEAT_PREFIX + "_hide", () => {
 });
 Instance.RegisterCheatCommand(PLAYER_CHEAT_PREFIX + "_toggle", () => {
 	ToggleCard();
+});
+
+// 气泡条 / 锚点 两种显示方式
+Instance.RegisterCheatCommand(BUBBLE_CHEAT_PREFIX + "_on", () => {
+	SetBubbleMode(true);
+});
+Instance.RegisterCheatCommand(BUBBLE_CHEAT_PREFIX + "_off", () => {
+	SetBubbleMode(false);
 });
 
 Instance.OnScriptReload({

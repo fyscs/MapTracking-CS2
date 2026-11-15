@@ -41,7 +41,6 @@
     flow-children: right;
     width: fit-children;
     height: fit-children;
-    background-color: #000000F0;
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 10px;
@@ -102,7 +101,6 @@
     horizontal-align: center;
     width: 1200px;
     margin-top: 140px;
-    transform: rotatez(-3deg);
 }
 .MvLine.Pos1 .MvJa {
     font-size: 58px;
@@ -122,7 +120,7 @@
     width: 900px;
     margin-right: 150px;
     margin-top: 250px;
-    transform: rotatez(5deg);
+    transform: rotatez(-2deg);
 }
 .MvLine.Pos3 .MvJa {
     font-size: 50px;
@@ -131,7 +129,6 @@
     horizontal-align: center;
     width: 1250px;
     margin-top: 350px;
-    transform: rotatez(1.5deg);
 }
 .MvLine.Pos4 .MvJa {
     font-size: 62px;
@@ -151,7 +148,7 @@
     width: 820px;
     margin-right: 230px;
     margin-top: 470px;
-    transform: rotatez(8.5deg);
+    transform: rotatez(-2.5deg);
 }
 .MvLine.Pos6 .MvJa {
     font-size: 46px;
@@ -160,7 +157,6 @@
     horizontal-align: center;
     width: 1300px;
     margin-top: 555px;
-    transform: rotatez(-1deg);
 }
 .MvLine.Pos7 .MvJa {
     font-size: 66px;
@@ -183,7 +179,7 @@
     width: 950px;
     margin-right: 130px;
     margin-top: 655px;
-    transform: rotatez(-9.5deg);
+    transform: rotatez(-3deg);
 }
 .MvLine.Pos9 .MvJa {
     font-size: 52px;
@@ -192,7 +188,6 @@
     horizontal-align: center;
     width: 1100px;
     margin-top: 735px;
-    transform: rotatez(2.5deg);
 }
 .MvLine.Pos10 .MvJa {
     font-size: 44px;
@@ -209,4 +204,76 @@
     horizontal-align: right;
     margin-right: 96px;
     margin-top: 300px;
+}
+.BubbleStack {
+    horizontal-align: left;
+    vertical-align: bottom;
+    margin-left: 74px;
+    margin-bottom: 210px;
+    width: fit-children;
+    height: fit-children;
+    flow-children: down;
+    opacity: 1.0;
+    transition: opacity 0.2s linear 0.0s;
+}
+.BubbleStack.Hidden {
+    opacity: 0.0;
+}
+.BubbleSlot {
+    width: fit-children;
+    height: fit-children;
+    margin-top: 16px;
+    opacity: 1.0;
+    transform: translate3d(0px, 0px, 0px);
+    transition: opacity 0.26s linear 0.0s, transform 0.26s ease-out 0.0s;
+}
+.BubbleSlot.Hidden {
+    opacity: 0.0;
+    transform: translate3d(0px, 18px, 0px);
+}
+.BubbleSlot.BubbleEmpty {
+    height: 0px;
+    margin-top: 0px;
+    opacity: 0.0;
+}
+.BubbleBody {
+    horizontal-align: left;
+    margin-left: 11px;
+    width: fit-children;
+    max-width: 848px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #FFFFFFF7;
+    border-radius: 44px;
+    flow-children: down;
+}
+.BubbleTail {
+    width: 14px;
+    height: 24px;
+    horizontal-align: left;
+    vertical-align: bottom;
+    margin-bottom: 19px;
+    background-image: url("s2r://panorama/images/player/tail_png.vtex");
+    background-size: 100% 100%;
+}
+.BubbleJa {
+    font-family: "Noto Sans JP";
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    color: #1A1E24FF;
+    max-width: 808px;
+    white-space: normal;
+}
+.BubbleZh {
+    font-family: "Noto Sans SC";
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #606C7CFF;
+    margin-top: 5px;
+    max-width: 808px;
+    white-space: normal;
 }

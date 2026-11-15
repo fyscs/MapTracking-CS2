@@ -17,6 +17,29 @@
             <Label id="mv_vja_3" class="MvVJa" text="{s:vja}" />
         </Panel>
         <Label id="mv_zh_sub" class="MvZhSub Hidden" text="{s:zhsub}" />
+        <Panel id="bubble_stack" class="BubbleStack Hidden">
+            <Panel id="bubble_1" class="BubbleSlot Hidden BubbleEmpty">
+                <Panel class="BubbleBody">
+                    <Label id="bubble_ja_1" class="BubbleJa" text="{s:bja}" />
+                    <Label id="bubble_zh_1" class="BubbleZh" text="{s:bzh}" />
+                </Panel>
+                <Panel class="BubbleTail" />
+            </Panel>
+            <Panel id="bubble_2" class="BubbleSlot Hidden BubbleEmpty">
+                <Panel class="BubbleBody">
+                    <Label id="bubble_ja_2" class="BubbleJa" text="{s:bja}" />
+                    <Label id="bubble_zh_2" class="BubbleZh" text="{s:bzh}" />
+                </Panel>
+                <Panel class="BubbleTail" />
+            </Panel>
+            <Panel id="bubble_3" class="BubbleSlot Hidden BubbleEmpty">
+                <Panel class="BubbleBody">
+                    <Label id="bubble_ja_3" class="BubbleJa" text="{s:bja}" />
+                    <Label id="bubble_zh_3" class="BubbleZh" text="{s:bzh}" />
+                </Panel>
+                <Panel class="BubbleTail" />
+            </Panel>
+        </Panel>
         <Panel class="PlayerRoot">
             <Panel id="player_card" class="PlayerCard Hidden">
                 <Panel id="player_disc" class="PlayerDisc Rot0" />
