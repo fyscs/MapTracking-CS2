@@ -191,8 +191,24 @@
         "target": "[PR#]zr_toggle_respawn",
         "input": "Enable",
         "param": "",
-        "delay": 16,
+        "delay": 18,
         "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Holy_Fade_in",
+        "input": "Fade",
+        "param": "",
+        "delay": 14,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Holy_Fade_out",
+        "input": "Fade",
+        "param": "",
+        "delay": 15.5,
+        "limit": -1
       }
     ]
   }

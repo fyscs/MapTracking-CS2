@@ -103,9 +103,6 @@
     "_template_lump_ent_index": "0"
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
     "thinkalways": "0",
     "damageforce": "0.000000 0.000000 0.000000",
     "nodmgforce": "0",

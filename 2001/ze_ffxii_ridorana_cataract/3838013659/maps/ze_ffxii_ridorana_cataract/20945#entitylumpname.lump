@@ -196,6 +196,22 @@
         "param": "",
         "delay": 26,
         "limit": 1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Holy_Fade_in",
+        "input": "Fade",
+        "param": "",
+        "delay": 24,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Holy_Fade_out",
+        "input": "Fade",
+        "param": "",
+        "delay": 25.5,
+        "limit": -1
       }
     ]
   }
