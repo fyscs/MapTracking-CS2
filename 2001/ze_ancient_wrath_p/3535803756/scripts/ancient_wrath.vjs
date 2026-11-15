@@ -49,7 +49,7 @@ Instance.OnRoundStart(() => {
     for (const player of Entities.FindByClass("player")) {
         if (player instanceof CSPlayerPawn) {
             const pistol = player.FindWeaponBySlot(CSGearSlot.PISTOL);
-            if (pistol.GetClassName() === "weapon_deagle") {
+            if (pistol !== undefined && pistol.GetClassName() === "weapon_deagle") {
                 player.DestroyWeapon(pistol);
                 player.GiveNamedItem("weapon_deagle", true);
             }
