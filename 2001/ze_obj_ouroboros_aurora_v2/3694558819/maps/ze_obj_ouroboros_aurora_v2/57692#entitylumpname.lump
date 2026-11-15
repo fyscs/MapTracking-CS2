@@ -10,7 +10,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "20",
-    "damage": "20",
+    "damage": "40",
     "master": "",
     "filtername": "[PR#]ctf",
     "spawnflags": "4097",

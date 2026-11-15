@@ -529,14 +529,6 @@
         "param": "",
         "delay": 3,
         "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]soundtrack_hellsoundfinal",
-        "input": "PlaySound",
-        "param": "",
-        "delay": 2,
-        "limit": 1
       }
     ]
   }

@@ -52,7 +52,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "20",
-    "damage": "90",
+    "damage": "100",
     "filtername": "[PR#]ctf",
     "globalname": "",
     "StartDisabled": "1",
