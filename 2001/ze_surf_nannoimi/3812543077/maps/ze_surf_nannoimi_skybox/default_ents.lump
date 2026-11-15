@@ -109,6 +109,9 @@
     "hammerUniqueId": "4"
   },
   {
+    "bakedshadowindex": "0",
+    "light_map_uniqueid": "-252956304",
+    "light_path_uniqueid": "-786417491",
     "brightness_legacy": "-nan(ind)",
     "brightness_lumens": "0",
     "fademaxdist": "",
@@ -146,7 +149,7 @@
     "castshadows": "1",
     "bouncescale": "1.000000",
     "rendertocubemaps": "1",
-    "directlight": "2",
+    "directlight": "3",
     "brightness": "1.000000",
     "color": "255 255 255",
     "enabled": "1",

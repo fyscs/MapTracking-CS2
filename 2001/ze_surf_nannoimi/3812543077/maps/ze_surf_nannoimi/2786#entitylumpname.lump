@@ -30,8 +30,8 @@
       },
       {
         "output": "OnTimer",
-        "target": "[PR#]danmu_tp_fix",
-        "input": "ForceSpawn",
+        "target": "[PR#]danmu_spawn_single",
+        "input": "Trigger",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -377,14 +377,6 @@
         "input": "TeleportToCurrentPos",
         "param": "",
         "delay": 0.10000000149011612,
-        "limit": 1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0",
-        "delay": 0,
         "limit": 1
       },
       {

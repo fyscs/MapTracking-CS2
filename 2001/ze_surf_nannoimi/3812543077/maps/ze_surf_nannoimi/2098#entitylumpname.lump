@@ -104,6 +104,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]laser_sound",
+        "input": "StartSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   }

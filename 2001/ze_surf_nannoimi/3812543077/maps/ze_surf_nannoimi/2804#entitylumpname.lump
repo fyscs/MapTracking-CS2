@@ -33,14 +33,6 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnStartTouch",
         "target": "!self",
         "input": "Disable",
         "param": "",
