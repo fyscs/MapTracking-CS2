@@ -8,5 +8,5 @@ Instance.OnScriptInput("AddMoney", (inputData) => {
     if (!player || !player.IsValid()) return;
     const controller = player.GetPlayerController();
     if (!controller || !controller.IsValid()) return;
-    controller.AddMoneySpendableNow(200);
+    controller.AddMoneySpendableNow(50);
 });

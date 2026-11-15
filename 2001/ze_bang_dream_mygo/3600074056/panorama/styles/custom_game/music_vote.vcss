@@ -941,11 +941,20 @@
 .CoverImage.cc_aethercrestastralcelestial {
     background-image: url("s2r://panorama/images/map_icons/aethercrestastralcelestial_png.vtex");
 }
+.CoverImage.cc_ambiguous {
+    background-image: url("s2r://panorama/images/map_icons/ambiguous_png.vtex");
+}
 .CoverImage.cc_aonosumika {
     background-image: url("s2r://panorama/images/map_icons/aonosumika_png.vtex");
 }
 .CoverImage.cc_apollo {
     background-image: url("s2r://panorama/images/map_icons/apollo_png.vtex");
+}
+.CoverImage.cc_avid {
+    background-image: url("s2r://panorama/images/map_icons/avid_png.vtex");
+}
+.CoverImage.cc_badappletetsuyakomuroremix {
+    background-image: url("s2r://panorama/images/map_icons/badappletetsuyakomuroremix_png.vtex");
 }
 .CoverImage.cc_bangyoudejiu {
     background-image: url("s2r://panorama/images/map_icons/bangyoudejiu_png.vtex");
@@ -968,11 +977,17 @@
 .CoverImage.cc_bye {
     background-image: url("s2r://panorama/images/map_icons/bye_png.vtex");
 }
+.CoverImage.cc_connect {
+    background-image: url("s2r://panorama/images/map_icons/connect_png.vtex");
+}
 .CoverImage.cc_cornerstonecorolla {
     background-image: url("s2r://panorama/images/map_icons/cornerstonecorolla_png.vtex");
 }
 .CoverImage.cc_cutiemewmewmagic {
     background-image: url("s2r://panorama/images/map_icons/cutiemewmewmagic_png.vtex");
+}
+.CoverImage.cc_dadada {
+    background-image: url("s2r://panorama/images/map_icons/dadada_png.vtex");
 }
 .CoverImage.cc_dadongbei {
     background-image: url("s2r://panorama/images/map_icons/dadongbei_png.vtex");
@@ -1007,6 +1022,9 @@
 .CoverImage.cc_encoder {
     background-image: url("s2r://panorama/images/map_icons/encoder_png.vtex");
 }
+.CoverImage.cc_endtime {
+    background-image: url("s2r://panorama/images/map_icons/endtime_png.vtex");
+}
 .CoverImage.cc_entrancetothechaos {
     background-image: url("s2r://panorama/images/map_icons/entrancetothechaos_png.vtex");
 }
@@ -1025,6 +1043,12 @@
 .CoverImage.cc_firebird {
     background-image: url("s2r://panorama/images/map_icons/firebird_png.vtex");
 }
+.CoverImage.cc_fractureray {
+    background-image: url("s2r://panorama/images/map_icons/fractureray_png.vtex");
+}
+.CoverImage.cc_ganbarekumokosannotheme {
+    background-image: url("s2r://panorama/images/map_icons/ganbarekumokosannotheme_png.vtex");
+}
 .CoverImage.cc_gessou {
     background-image: url("s2r://panorama/images/map_icons/gessou_png.vtex");
 }
@@ -1037,17 +1061,26 @@
 .CoverImage.cc_gris {
     background-image: url("s2r://panorama/images/map_icons/gris_png.vtex");
 }
+.CoverImage.cc_halo {
+    background-image: url("s2r://panorama/images/map_icons/halo_png.vtex");
+}
 .CoverImage.cc_haruhikage {
     background-image: url("s2r://panorama/images/map_icons/haruhikage_png.vtex");
 }
 .CoverImage.cc_hatedbylife {
     background-image: url("s2r://panorama/images/map_icons/hatedbylife_png.vtex");
 }
+.CoverImage.cc_hiirogekkakyousainozetsu {
+    background-image: url("s2r://panorama/images/map_icons/hiirogekkakyousainozetsu_png.vtex");
+}
 .CoverImage.cc_hitoshizuku {
     background-image: url("s2r://panorama/images/map_icons/hitoshizuku_png.vtex");
 }
 .CoverImage.cc_huayuyuetandaotui20nian {
     background-image: url("s2r://panorama/images/map_icons/huayuyuetandaotui20nian_png.vtex");
+}
+.CoverImage.cc_hydra {
+    background-image: url("s2r://panorama/images/map_icons/hydra_png.vtex");
 }
 .CoverImage.cc_ialwaysdo {
     background-image: url("s2r://panorama/images/map_icons/ialwaysdo_png.vtex");
@@ -1073,8 +1106,14 @@
 .CoverImage.cc_jericho {
     background-image: url("s2r://panorama/images/map_icons/jericho_png.vtex");
 }
+.CoverImage.cc_kamui {
+    background-image: url("s2r://panorama/images/map_icons/kamui_png.vtex");
+}
 .CoverImage.cc_kimitoatsumatteseizaninaretara {
     background-image: url("s2r://panorama/images/map_icons/kimitoatsumatteseizaninaretara_png.vtex");
+}
+.CoverImage.cc_latentkingdom {
+    background-image: url("s2r://panorama/images/map_icons/latentkingdom_png.vtex");
 }
 .CoverImage.cc_littlesilentsnow {
     background-image: url("s2r://panorama/images/map_icons/littlesilentsnow_png.vtex");
@@ -1084,6 +1123,9 @@
 }
 .CoverImage.cc_louder {
     background-image: url("s2r://panorama/images/map_icons/louder_png.vtex");
+}
+.CoverImage.cc_luantanpipaqu {
+    background-image: url("s2r://panorama/images/map_icons/luantanpipaqu_png.vtex");
 }
 .CoverImage.cc_malefemale {
     background-image: url("s2r://panorama/images/map_icons/malefemale_png.vtex");
@@ -1097,8 +1139,14 @@
 .CoverImage.cc_mayoiuta {
     background-image: url("s2r://panorama/images/map_icons/mayoiuta_png.vtex");
 }
+.CoverImage.cc_meikyourekka {
+    background-image: url("s2r://panorama/images/map_icons/meikyourekka_png.vtex");
+}
 .CoverImage.cc_miiro {
     background-image: url("s2r://panorama/images/map_icons/miiro_png.vtex");
+}
+.CoverImage.cc_mirror {
+    background-image: url("s2r://panorama/images/map_icons/mirror_png.vtex");
 }
 .CoverImage.cc_mortalwithyou {
     background-image: url("s2r://panorama/images/map_icons/mortalwithyou_png.vtex");
@@ -1139,6 +1187,9 @@
 .CoverImage.cc_noobj {
     background-image: url("s2r://panorama/images/map_icons/noobj_png.vtex");
 }
+.CoverImage.cc_npst {
+    background-image: url("s2r://panorama/images/map_icons/npst_png.vtex");
+}
 .CoverImage.cc_oborozuki {
     background-image: url("s2r://panorama/images/map_icons/oborozuki_png.vtex");
 }
@@ -1148,8 +1199,14 @@
 .CoverImage.cc_originalme {
     background-image: url("s2r://panorama/images/map_icons/originalme_png.vtex");
 }
+.CoverImage.cc_oshamascramble {
+    background-image: url("s2r://panorama/images/map_icons/oshamascramble_png.vtex");
+}
 .CoverImage.cc_pupa {
     background-image: url("s2r://panorama/images/map_icons/pupa_png.vtex");
+}
+.CoverImage.cc_quadruplicity {
+    background-image: url("s2r://panorama/images/map_icons/quadruplicity_png.vtex");
 }
 .CoverImage.cc_ragestrikes {
     background-image: url("s2r://panorama/images/map_icons/ragestrikes_png.vtex");
@@ -1169,20 +1226,38 @@
 .CoverImage.cc_reloaded {
     background-image: url("s2r://panorama/images/map_icons/reloaded_png.vtex");
 }
+.CoverImage.cc_renegade {
+    background-image: url("s2r://panorama/images/map_icons/renegade_png.vtex");
+}
 .CoverImage.cc_reverie {
     background-image: url("s2r://panorama/images/map_icons/reverie_png.vtex");
+}
+.CoverImage.cc_reviver {
+    background-image: url("s2r://panorama/images/map_icons/reviver_png.vtex");
 }
 .CoverImage.cc_rivenpilgrimage {
     background-image: url("s2r://panorama/images/map_icons/rivenpilgrimage_png.vtex");
 }
+.CoverImage.cc_rokuchounentoichiyamonogatari {
+    background-image: url("s2r://panorama/images/map_icons/rokuchounentoichiyamonogatari_png.vtex");
+}
 .CoverImage.cc_rrharil {
     background-image: url("s2r://panorama/images/map_icons/rrharil_png.vtex");
+}
+.CoverImage.cc_sakazuki {
+    background-image: url("s2r://panorama/images/map_icons/sakazuki_png.vtex");
 }
 .CoverImage.cc_sargasso {
     background-image: url("s2r://panorama/images/map_icons/sargasso_png.vtex");
 }
+.CoverImage.cc_secretillumination {
+    background-image: url("s2r://panorama/images/map_icons/secretillumination_png.vtex");
+}
 .CoverImage.cc_seeyouagain {
     background-image: url("s2r://panorama/images/map_icons/seeyouagain_png.vtex");
+}
+.CoverImage.cc_shakeandswaydjremix {
+    background-image: url("s2r://panorama/images/map_icons/shakeandswaydjremix_png.vtex");
 }
 .CoverImage.cc_shinwa {
     background-image: url("s2r://panorama/images/map_icons/shinwa_png.vtex");
@@ -1205,6 +1280,9 @@
 .CoverImage.cc_suihua {
     background-image: url("s2r://panorama/images/map_icons/suihua_png.vtex");
 }
+.CoverImage.cc_suito {
+    background-image: url("s2r://panorama/images/map_icons/suito_png.vtex");
+}
 .CoverImage.cc_takerisshu {
     background-image: url("s2r://panorama/images/map_icons/takerisshu_png.vtex");
 }
@@ -1214,11 +1292,17 @@
 .CoverImage.cc_tengokujigokuguni {
     background-image: url("s2r://panorama/images/map_icons/tengokujigokuguni_png.vtex");
 }
+.CoverImage.cc_tenshinifuretayo {
+    background-image: url("s2r://panorama/images/map_icons/tenshinifuretayo_png.vtex");
+}
 .CoverImage.cc_terrasphere {
     background-image: url("s2r://panorama/images/map_icons/terrasphere_png.vtex");
 }
 .CoverImage.cc_thefarsidestarsfarewell {
     background-image: url("s2r://panorama/images/map_icons/thefarsidestarsfarewell_png.vtex");
+}
+.CoverImage.cc_theking {
+    background-image: url("s2r://panorama/images/map_icons/theking_png.vtex");
 }
 .CoverImage.cc_theotherside {
     background-image: url("s2r://panorama/images/map_icons/theotherside_png.vtex");
@@ -1231,6 +1315,9 @@
 }
 .CoverImage.cc_thetempest {
     background-image: url("s2r://panorama/images/map_icons/thetempest_png.vtex");
+}
+.CoverImage.cc_thisgame {
+    background-image: url("s2r://panorama/images/map_icons/thisgame_png.vtex");
 }
 .CoverImage.cc_tianzhendexiangpi {
     background-image: url("s2r://panorama/images/map_icons/tianzhendexiangpi_png.vtex");
@@ -1259,11 +1346,17 @@
 .CoverImage.cc_xodus {
     background-image: url("s2r://panorama/images/map_icons/xodus_png.vtex");
 }
+.CoverImage.cc_yorunikakeru {
+    background-image: url("s2r://panorama/images/map_icons/yorunikakeru_png.vtex");
+}
 .CoverImage.cc_yuaisifengban {
     background-image: url("s2r://panorama/images/map_icons/yuaisifengban_png.vtex");
 }
 .CoverImage.cc_yukinoshizukuamenooto {
     background-image: url("s2r://panorama/images/map_icons/yukinoshizukuamenooto_png.vtex");
+}
+.CoverImage.cc_zankyousanka {
+    background-image: url("s2r://panorama/images/map_icons/zankyousanka_png.vtex");
 }
 .CoverImage.cc_zattoubokuranomachi {
     background-image: url("s2r://panorama/images/map_icons/zattoubokuranomachi_png.vtex");

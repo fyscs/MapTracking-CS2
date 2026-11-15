@@ -1400,13 +1400,13 @@ const apollo = new Note({
     title: "Apollo",
     musicAuthor: "Tj.hangneil",
     noteAuthor: "☬",
-    difficulty: 3,
+    difficulty: 4,
     date: RegDate(2026, 10, 28),
-    tags: ["???"],
+    tags: [],
     isRandom: false,
     revie: RevieState.ALPHA,
     isSingle: false,
-    speed: 1.5,
+    speed: 2,
     health: 100,
 });
 
@@ -1466,7 +1466,7 @@ const entranceToTheChaos = new Note({
     isRandom: false,
     revie: RevieState.ALPHA,
     isSingle: false,
-    speed: 2.5,
+    speed: 3,
     health: 250,
 });
 
@@ -1481,7 +1481,7 @@ const exoplanetaryMirage = new Note({
     isRandom: false,
     revie: RevieState.ALPHA,
     isSingle: false,
-    speed: 2.5,
+    speed: 3,
     health: 250,
 });
 
@@ -1510,7 +1510,7 @@ const littleSilentSnow = new Note({
     isRandom: false,
     revie: RevieState.ALPHA,
     isSingle: false,
-    speed: 1.3,
+    speed: 1.5,
     health: 100,
 });
 
@@ -1540,7 +1540,7 @@ const rainOfConflictInARadiantAbyss = new Note({
     isRandom: false,
     revie: RevieState.ALPHA,
     isSingle: false,
-    speed: 1.5,
+    speed: 2.5,
     health: 150,
 });
 
@@ -1570,7 +1570,7 @@ const sargasso = new Note({
     revie: RevieState.ALPHA,
     isSingle: false,
     speed: 2,
-    health: 100,
+    health: 200,
 });
 
 const smokeInside = new Note({
@@ -1622,13 +1622,13 @@ const tsukuyomiNiNaru = new Note({
     title: "月詠に鳴る",
     musicAuthor: "Feryquitous feat. 藍月なくる",
     noteAuthor: "Lastims",
-    difficulty: 3,
+    difficulty: 4,
     date: RegDate(2026, 10, 28),
     tags: ["CHUNITHM", "艺核", "Feryquitous"],
     isRandom: false,
     revie: RevieState.ALPHA,
     isSingle: false,
-    speed: 1,
+    speed: 2,
     health: 100,
 });
 
@@ -1643,7 +1643,7 @@ const shinwa = new Note({
     isRandom: false,
     revie: RevieState.ALPHA,
     isSingle: false,
-    speed: 1,
+    speed: 1.5,
     health: 100,
 });
 
@@ -1691,7 +1691,467 @@ const aoNoSumika = new Note({
     health: 100,
 });
 
-const musicList = [haruhikage, encoder, namaeNoNaiKaibutsu, theTempest, tengokuJigokuguni, mayoiuta, hitoshizuku, beepBeepImASheep, theOtherSide, myDemons, mujinku, rrharil, terrasphere, dossolesHoliday, silhouetteDance, cornerstoneCorolla, refrain, imprisonedXII, tanebi, internetOverdose, feastOfMouse, hatedByLife, seeYouAgain, musicaCaelestis, kimitoatsumatteSeizaninaretara, jericho, oborozuki, tVsShark, yukiNoShizukuAmeNoOto, beethovenVirus, lOUDER, namelessPassion, daDongBei, maleFemale, iAlwaysDo, rageStrikes, distortedFate, takeRisshu, neoAspect, universalCollapse, miiro, mortalWithYou, nceSBurn, shukuseiLoliKamiRequiem, odysseus, fireBird, songIAm, braveShine, internetYamero, dearYou, gongXiFaCai, newYorkBackRaise, theFarSideStarSFarewell, theTaleOfACruelWorld, umapyoiDensetsu, raiseUpYourBat, suiHua, daKeJian, noMore, duvet, utakotoba, reverie, bye, ray, dieForYou, maWaRe, gris, sinosDeNatal, marenol, reloaded, welkius, goodForTune, bokuNoWaFuu, noObj, originalMe, gessou, barricades, cutieMewMewMagic, felysFinalRemix, nightDancer, pupa, theOtherSideOfParadise, tracenOndo, everythingWillFreeze, infinityHeaven1125x, inhuman, tianZhenDeXiangPi, zongZhuLianXieJi, bangYouDeJiu, aetherCrestAstralCelestial, apollo, deinosPhainein, designant, desultorySignals, entranceToTheChaos, exoplanetaryMirage, infiniteStrife, littleSilentSnow, liveFastDieYoung, rainOfConflictInARadiantAbyss, rivenPilgrimage, sargasso, smokeInside, xodus, huaYuYueTanDaoTui20Nian, tsukuyomiNiNaru, shinwa, zattouBokuraNoMachi, yuAiSiFengBan, aoNoSumika];
+const avid = new Note({
+    name: "Avid",
+    title: "Avid",
+    musicAuthor: "澤野弘之",
+    noteAuthor: "Ayume",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["86-不存在的战区-（b站-不存在的番剧）"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.4,
+    health: 100,
+});
+
+const badAppleTetsuyaKomuroRemix = new Note({
+    name: "BadAppleTetsuyaKomuroRemix",
+    title: "Bad Apple!! feat.nomico (Tetsuya Komuro Remix)",
+    musicAuthor: "Masayoshi Minoshima × 小室哲哉",
+    noteAuthor: "HPZ",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["东方project", "东方弹幕神乐", "吃一堑吃一堑吃一堑吃一堑"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.3,
+    health: 100,
+});
+
+const daDaDa = new Note({
+    name: "DaDaDa",
+    title: "Da Da Da (大 大 大)",
+    musicAuthor: "Tanir / Tyomcha / Mikis / DoggieB",
+    noteAuthor: "La La La",
+    difficulty: 2,
+    date: RegDate(2026, 11, 15),
+    tags: ["一眼丁真", "理塘王", "冰冰冰"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1,
+    health: 100,
+});
+
+const endTime = new Note({
+    name: "EndTime",
+    title: "End Time",
+    musicAuthor: "Cres.",
+    noteAuthor: "深海之远",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["BOF", "双人", "楼梯"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 3,
+    health: 100,
+});
+
+const fractureRay = new Note({
+    name: "FractureRay",
+    title: "Fracture Ray",
+    musicAuthor: "削除Sakuzyo",
+    noteAuthor: "Paradox Zero",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["Arcaea", "位移", "爆发", "骨折光"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 3,
+    health: 100,
+});
+
+const halo = new Note({
+    name: "Halo",
+    title: "Halo",
+    noteAuthor: "VIVIT-R",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["多人", "Man！", "坠机现场"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.3,
+    health: 100,
+});
+
+const hydra = new Note({
+    name: "Hydra",
+    title: "Hydra",
+    musicAuthor: "Akira Complex / James Landino",
+    noteAuthor: "Lastims",
+    difficulty: 4,
+    date: RegDate(2026, 11, 15),
+    tags: ["Cytus II", "综合", "多押"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2,
+    health: 100,
+});
+
+const latentKingdom = new Note({
+    name: "LatentKingdom",
+    title: "Latent Kingdom",
+    musicAuthor: "Laur vs 大国奏音",
+    noteAuthor: "深海之远",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["maimai", "中二节奏", "我售卖东北竹笋", "曲师打架"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 3,
+    health: 100,
+});
+
+const mirror = new Note({
+    name: "Mirror",
+    title: "Mirror",
+    musicAuthor: "安田レイ",
+    noteAuthor: "白与西瓜棉花糖",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["二次元", "动漫", "魔法科高校の劣等生"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.4,
+    health: 100,
+});
+
+const nPST = new Note({
+    name: "NPST",
+    title: "NPST",
+    noteAuthor: "wj59",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["NPST", "OBJ", "长征", "缺最后首", "原版"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2.5,
+    health: 100,
+});
+
+const oshamaScramble = new Note({
+    name: "OshamaScramble",
+    title: "Oshama Scramble!",
+    musicAuthor: "t+pazolite",
+    noteAuthor: "深海之远",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["双人", "maimai", "舞萌dx", "牛奶"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 3,
+    health: 100,
+});
+
+const quadruplicity = new Note({
+    name: "Quadruplicity",
+    title: "Quadruplicity",
+    musicAuthor: "LucaProject / NeLiME",
+    noteAuthor: "Lastims",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["Rotaeno", "全押", "凯尔特", "四合星座"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2,
+    health: 100,
+});
+
+const reviver = new Note({
+    name: "Reviver",
+    title: "REVIVER",
+    musicAuthor: "MY FIRST STORY",
+    noteAuthor: "白与西瓜棉花糖",
+    difficulty: 4,
+    date: RegDate(2026, 11, 15),
+    tags: ["摇滚", "j-rock"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2.2,
+    health: 100,
+});
+
+const renegade = new Note({
+    name: "Renegade",
+    title: "Renegade",
+    musicAuthor: "sky_delta",
+    noteAuthor: "Lastims",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["Arcaea", "艺核"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2,
+    health: 100,
+});
+
+const secretIllumination = new Note({
+    name: "SecretIllumination",
+    title: "Secret Illumination",
+    musicAuthor: "Yooh",
+    noteAuthor: "Lastims",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["Rotaeno", "凯尔特", "DnB"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2,
+    health: 100,
+});
+
+const shakeAndSwayDjRemix = new Note({
+    name: "ShakeAndSwayDjRemix",
+    title: "Shake and sway (DJ remix)",
+    noteAuthor: "药寮",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["光州の小曲", "倒斗", "耐力", "合作"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.2,
+    health: 100,
+});
+
+const theKing = new Note({
+    name: "TheKing",
+    title: "The King",
+    noteAuthor: "Ayume",
+    difficulty: 4,
+    date: RegDate(2026, 11, 15),
+    tags: ["PVZ（最后攻势の小曲）"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.5,
+    health: 100,
+});
+
+const ambiguous = new Note({
+    name: "Ambiguous",
+    title: "ambiguous",
+    musicAuthor: "GARNiDELiA",
+    noteAuthor: "白与西瓜棉花糖",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["二次元", "动漫", "斩服少女"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.6,
+    health: 100,
+});
+
+const thisGame = new Note({
+    name: "ThisGame",
+    title: "This game",
+    musicAuthor: "鈴木このみ",
+    noteAuthor: "张爱丽official",
+    difficulty: 4,
+    date: RegDate(2026, 11, 15),
+    tags: ["【鱼！好大的鱼！】", "【虎纹鲨鱼】", "【游戏人生】"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2,
+    health: 100,
+});
+
+const connect = new Note({
+    name: "Connect",
+    title: "コネクト",
+    musicAuthor: "ClariS",
+    noteAuthor: "张爱丽official",
+    difficulty: 4,
+    date: RegDate(2026, 11, 15),
+    tags: ["魔法少女小圆"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.5,
+    health: 100,
+});
+
+const luanTanPiPaQu = new Note({
+    name: "LuanTanPiPaQu",
+    title: "⚡️乱 弹 琵 琶 曲⚡️",
+    noteAuthor: "张爱丽official",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["拼好歌3.0", "琵琶曲", "魔音绕耳"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.8,
+    health: 100,
+});
+
+const rokuchounenToIchiyaMonogatari = new Note({
+    name: "RokuchounenToIchiyaMonogatari",
+    title: "六兆年と一夜物語",
+    musicAuthor: "kemu / IA",
+    noteAuthor: "Lastims",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["术力口", "经典老歌", "耐力"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2.5,
+    health: 100,
+});
+
+const yoruNiKakeru = new Note({
+    name: "YoruNiKakeru",
+    title: "夜に駆ける",
+    musicAuthor: "yoasobi",
+    noteAuthor: "张爱丽official",
+    difficulty: 4,
+    date: RegDate(2026, 11, 15),
+    tags: ["J-Pop"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.6,
+    health: 100,
+});
+
+const tenshiNiFuretaYo = new Note({
+    name: "TenshiNiFuretaYo",
+    title: "天使にふれたよ！",
+    musicAuthor: "放課後ティータイム",
+    noteAuthor: "一只呆唯.",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["K-ON!"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.2,
+    health: 100,
+});
+
+const meikyouRekka = new Note({
+    name: "MeikyouRekka",
+    title: "明鏡烈火",
+    musicAuthor: "Reku Mochizuki / M-UE",
+    noteAuthor: "Lastims",
+    difficulty: 4,
+    date: RegDate(2026, 11, 15),
+    tags: ["Phigros", "和风", "电子", "爆发"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 3,
+    health: 100,
+});
+
+const zankyouSanka = new Note({
+    name: "ZankyouSanka",
+    title: "残響散歌",
+    musicAuthor: "Aimer",
+    noteAuthor: "Laplace",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["鬼灭之刃游郭篇"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2,
+    health: 100,
+});
+
+const kamui = new Note({
+    name: "Kamui",
+    title: "神威",
+    musicAuthor: "TJ.hangneil",
+    noteAuthor: "深海之远",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["sasakure.UK"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 3,
+    health: 100,
+});
+
+const hiiroGekkaKyousaiNoZetsu = new Note({
+    name: "HiiroGekkaKyousaiNoZetsu",
+    title: "緋色月下、狂咲ノ絶",
+    musicAuthor: "EastNewSound",
+    noteAuthor: "HPZ",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["东方project", "无粉键", "八字病曲", "禁忌「四重存在」"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 1.3,
+    health: 100,
+});
+
+const suito = new Note({
+    name: "Suito",
+    title: "翠杜",
+    musicAuthor: "庭師 / Aoi",
+    noteAuthor: "Lastims",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["Rotaeno", "位移", "耐力"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2.5,
+    health: 100,
+});
+
+const ganbareKumokoSanNoTheme = new Note({
+    name: "GanbareKumokoSanNoTheme",
+    title: "がんばれ!蜘蛛子さんのテーマ",
+    musicAuthor: "悠木碧",
+    noteAuthor: "张爱丽official",
+    difficulty: 5,
+    date: RegDate(2026, 11, 15),
+    tags: ["转生成蜘蛛又怎样！", "ed", "真人演唱"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 3,
+    health: 100,
+});
+
+const sakazuki = new Note({
+    name: "Sakazuki",
+    title: "逆月",
+    musicAuthor: "濵田有共 feat. Kuroa*",
+    noteAuthor: "Th1nkings",
+    difficulty: 3,
+    date: RegDate(2026, 11, 15),
+    tags: ["SDVX"],
+    isRandom: false,
+    revie: RevieState.ALPHA,
+    isSingle: false,
+    speed: 2.5,
+    health: 100,
+});
+
+const musicList = [haruhikage, encoder, namaeNoNaiKaibutsu, theTempest, tengokuJigokuguni, mayoiuta, hitoshizuku, beepBeepImASheep, theOtherSide, myDemons, mujinku, rrharil, terrasphere, dossolesHoliday, silhouetteDance, cornerstoneCorolla, refrain, imprisonedXII, tanebi, internetOverdose, feastOfMouse, hatedByLife, seeYouAgain, musicaCaelestis, kimitoatsumatteSeizaninaretara, jericho, oborozuki, tVsShark, yukiNoShizukuAmeNoOto, beethovenVirus, lOUDER, namelessPassion, daDongBei, maleFemale, iAlwaysDo, rageStrikes, distortedFate, takeRisshu, neoAspect, universalCollapse, miiro, mortalWithYou, nceSBurn, shukuseiLoliKamiRequiem, odysseus, fireBird, songIAm, braveShine, internetYamero, dearYou, gongXiFaCai, newYorkBackRaise, theFarSideStarSFarewell, theTaleOfACruelWorld, umapyoiDensetsu, raiseUpYourBat, suiHua, daKeJian, noMore, duvet, utakotoba, reverie, bye, ray, dieForYou, maWaRe, gris, sinosDeNatal, marenol, reloaded, welkius, goodForTune, bokuNoWaFuu, noObj, originalMe, gessou, barricades, cutieMewMewMagic, felysFinalRemix, nightDancer, pupa, theOtherSideOfParadise, tracenOndo, everythingWillFreeze, infinityHeaven1125x, inhuman, tianZhenDeXiangPi, zongZhuLianXieJi, bangYouDeJiu, aetherCrestAstralCelestial, apollo, deinosPhainein, designant, desultorySignals, entranceToTheChaos, exoplanetaryMirage, infiniteStrife, littleSilentSnow, liveFastDieYoung, rainOfConflictInARadiantAbyss, rivenPilgrimage, sargasso, smokeInside, xodus, huaYuYueTanDaoTui20Nian, tsukuyomiNiNaru, shinwa, zattouBokuraNoMachi, yuAiSiFengBan, aoNoSumika, avid, badAppleTetsuyaKomuroRemix, daDaDa, endTime, fractureRay, halo, hydra, latentKingdom, mirror, nPST, oshamaScramble, quadruplicity, reviver, renegade, secretIllumination, shakeAndSwayDjRemix, theKing, ambiguous, thisGame, connect, luanTanPiPaQu, rokuchounenToIchiyaMonogatari, yoruNiKakeru, tenshiNiFuretaYo, meikyouRekka, zankyouSanka, kamui, hiiroGekkaKyousaiNoZetsu, suito, ganbareKumokoSanNoTheme, sakazuki];
 
 // 排序序列在脚本初始化时自动计算一次并填入
 // 注意：cs_script VM 不支持 localeCompare（会触发 ICU error），改用纯字符串比较
