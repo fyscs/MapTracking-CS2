@@ -8,7 +8,6 @@
     "steamaudio_customdata_occlusion_reflection_bounces": "8",
     "steamaudio_customdata_occlusion_reflection_rays": "8192",
     "steamaudio_customdata_occlusion_reflection": "0",
-    "steamaudio_customdata_occlusion_pathing": "1",
     "steamaudio_customdata_bake_materials": "0",
     "steamaudio_customdata_bake_dimensions": "0",
     "steamaudio_customdata_bake_occlusion": "0",
@@ -9632,7 +9631,15 @@
         "target": "[PR#]level_counter",
         "input": "SetValueNoFire",
         "param": "2.0",
-        "delay": 10,
+        "delay": 60,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]zr_toggle_respawn",
+        "input": "Disable",
+        "param": "",
+        "delay": 60,
         "limit": 1
       }
     ]
