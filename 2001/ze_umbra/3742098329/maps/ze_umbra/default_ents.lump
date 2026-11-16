@@ -167378,7 +167378,7 @@
         "target": "[PR#]s2_tp_spawn",
         "input": "FireUser1",
         "param": "",
-        "delay": 7,
+        "delay": 17,
         "limit": 1
       },
       {
@@ -168044,9 +168044,9 @@
     "connections": [
       {
         "output": "OnPass",
-        "target": "!activator",
-        "input": "keyvalue",
-        "param": "health -1",
+        "target": "[PR#]stage12_hurt",
+        "input": "Hurt",
+        "param": "",
         "delay": 0,
         "limit": -1
       }
@@ -168093,5 +168093,22 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "DamageType": "512",
+    "DamageDelay": "0.000000",
+    "Damage": "5000",
+    "DamageRadius": "0.000000",
+    "DamageTarget": "!activator",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "targetname": "[PR#]stage12_hurt",
+    "vscripts": "",
+    "classname": "point_hurt",
+    "origin": "-3212.000000 -7999.000000 -108.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "15877"
   }
 ]
