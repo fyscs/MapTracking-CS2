@@ -60152,6 +60152,14 @@
         "param": "",
         "delay": 43,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Act0_Defend_Wall_Hurt",
+        "input": "Enable",
+        "param": "",
+        "delay": 76,
+        "limit": 1
       }
     ]
   },
@@ -375515,7 +375523,7 @@
         "output": "OnPass",
         "target": "!activator",
         "input": "Keyvalue",
-        "param": "max_health 100000",
+        "param": "max_health 100",
         "delay": 0,
         "limit": -1
       },
@@ -375523,7 +375531,7 @@
         "output": "OnPass",
         "target": "!activator",
         "input": "Keyvalue",
-        "param": "health 100000",
+        "param": "health 100",
         "delay": 0,
         "limit": -1
       }
@@ -404070,5 +404078,65 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "check_if_dest_clear_for_player": "0",
+    "mirror_player": "0",
+    "use_landmark_angles": "1",
+    "landmark": "",
+    "target": "[PR#]Global_Spawn_Tps",
+    "StartDisabled": "0",
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "targetname": "[PR#]Act5_Teleport_Fall",
+    "vscripts": "",
+    "classname": "trigger_teleport",
+    "origin": "5766.500000 11800.500000 -14517.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21937",
+    "model": "maps/ze_devil_may_cry/entities/act5_teleport_fall_21937.vmdl"
+  },
+  {
+    "thinkalways": "0",
+    "damageforce": "0.000000 0.000000 0.000000",
+    "nodmgforce": "0",
+    "forgivedelay": "3.000000",
+    "damagemodel": "0",
+    "damagetype": "512",
+    "damagecap": "99999999",
+    "damage": "99999999",
+    "StartDisabled": "1",
+    "filtername": "[PR#]Filter_Zombie",
+    "spawnflags": "4097",
+    "master": "",
+    "globalname": "",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "targetname": "[PR#]Act0_Defend_Wall_Hurt",
+    "vscripts": "",
+    "classname": "trigger_hurt",
+    "origin": "-1418.999023 -11070.101562 -14011.565430",
+    "angles": "0.000000 30.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21939",
+    "model": "maps/ze_devil_may_cry/entities/act0_defend_wall_hurt_21939.vmdl"
   }
 ]

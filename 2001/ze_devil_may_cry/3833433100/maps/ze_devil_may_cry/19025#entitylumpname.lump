@@ -112,7 +112,7 @@
       },
       {
         "output": "OnFullyClosed",
-        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R\u00260000",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 1.5,
@@ -152,10 +152,106 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R\u00260000",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
         "input": "FireUser1",
         "param": "",
         "delay": 5,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverF\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Part2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Part\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Hurt\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Tri\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Hurt2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Shake\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Part3\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Model\u00260000",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser1",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.10000000149011612,
         "limit": 1
       }
     ]
@@ -823,7 +919,7 @@
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnTrigger",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverF\u00260000",
         "input": "SetSpeed",
         "param": "0",
@@ -831,7 +927,7 @@
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnTrigger",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Model\u00260000",
         "input": "SetAnimation",
         "param": "pl0300_attack_rasen_walker",
@@ -839,7 +935,7 @@
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnTrigger",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Hurt\u00260000",
         "input": "Disable",
         "param": "",
@@ -847,15 +943,15 @@
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnTrigger",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_Tri\u00260000",
-        "input": "Disable",
+        "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnTrigger",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
         "input": "Open",
         "param": "",
@@ -863,11 +959,19 @@
         "limit": 1
       },
       {
-        "output": "OnStartTouch",
+        "output": "OnTrigger",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_R2\u00260000",
         "input": "Kill",
         "param": "",
         "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
+        "input": "ClearParent",
+        "param": "",
+        "delay": 0.10999999940395355,
         "limit": 1
       }
     ]
