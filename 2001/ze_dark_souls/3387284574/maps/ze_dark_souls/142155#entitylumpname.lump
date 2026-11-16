@@ -208,7 +208,7 @@
     "vscripts": "",
     "targetname": "[PR#]Item_EF_Pic",
     "classname": "info_particle_system",
-    "origin": "40.996582 2.000488 40.000244",
+    "origin": "40.996582 2.000488 30.000244",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "144099",
