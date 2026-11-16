@@ -3,7 +3,7 @@
 <!-- xml reconstructed from compiled AST -->
 <root>
     <styles>
-        <include src="s2r://panorama/styles/custom_game/kaf/aoraitsuhud_entwatch.vcss_c" />
+        <include src="s2r://panorama/styles/custom_game/kaf/aoraitsuhud_entwatch.vcss" />
     </styles>
     <Panel class="Root">
         <Panel id="artifact_list" class="Hidden">

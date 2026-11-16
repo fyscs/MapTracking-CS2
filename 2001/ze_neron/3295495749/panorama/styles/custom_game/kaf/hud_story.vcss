@@ -71,6 +71,7 @@
     width: 100%;
     height: 460px;
     flow-children: right-wrap;
+    overflow: squish scroll;
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.1s;
@@ -189,6 +190,32 @@
 }
 #back_button:active {
     brightness: 0.7;
+}
+#story_sublist {
+    width: 100%;
+    height: 460px;
+    flow-children: down;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.1s;
+}
+#story_sublist.Hidden {
+    opacity: 0;
+    visibility: collapse;
+}
+#story_sub_buttons {
+    width: 100%;
+    height: 220px;
+    flow-children: right-wrap;
+}
+#sub_back_button {
+    width: 1000px;
+    height: 46px;
+    margin-top: 190px;
+    padding: 8px 22px;
+    background-color: #1b3048ee;
+    border: 1px solid #678db1;
+    border-radius: 4px;
 }
 .BackText {
     horizontal-align: center;

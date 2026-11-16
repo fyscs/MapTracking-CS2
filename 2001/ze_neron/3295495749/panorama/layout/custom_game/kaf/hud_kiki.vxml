@@ -3,7 +3,7 @@
 <!-- xml reconstructed from compiled AST -->
 <root>
     <styles>
-        <include src="s2r://panorama/styles/custom_game/kaf/hud_kiki.vcss_c" />
+        <include src="s2r://panorama/styles/custom_game/kaf/hud_kiki.vcss" />
     </styles>
     <Panel class="Root">
         <Panel id="kiki_hud" class="Hidden">
