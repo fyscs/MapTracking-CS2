@@ -3235,7 +3235,8 @@
     "hammerUniqueId": "1602"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1577329128",
     "precomputedboundsmaxs": "-1849.817017 -6785.300293 1123.460571",
@@ -3243,7 +3244,7 @@
     "precomputedobbextent": "357.446167 280.481934 287.750000",
     "precomputedobbangles": "44.000000 -8.000000 -11.000001",
     "precomputedobborigin": "-2143.837402 -7118.461914 738.595093",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
     "forceshadowsenabled": "0",
@@ -3287,7 +3288,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "5.625000",
     "brightness": "2.492190",
@@ -3305,8 +3306,7 @@
     "origin": "-2174.238770 -6797.000000 1111.000000",
     "angles": "43.865902 267.337280 -9.285554",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "1604",
-    "precomputed_vis_clusters": "31 35 48 49 53 61 63 121 122 127 131 132 133 135 137 138 139 144 150 160 167 177 179 181 183 256 263 274 282 289 297 298 301 302 304"
+    "hammerUniqueId": "1604"
   },
   {
     "lightprobetexture_sh2_l1": "",
@@ -8934,7 +8934,7 @@
     "precomputedobbangles0": "-32.000004 12.000001 15.999999",
     "precomputedobborigin0": "-2586.230713 -4101.708984 -750.632568",
     "precomputedboundsmaxs": "-2167.537109 -3874.850098 -306.638489",
-    "precomputedboundsmins": "-2926.598877 -4479.753906 -770.508545",
+    "precomputedboundsmins": "-2926.598877 -4481.458008 -770.508545",
     "precomputedobbextent": "387.175415 233.146851 276.256470",
     "precomputedobbangles": "7.000000 3.999999 -20.999998",
     "precomputedobborigin": "-2525.853516 -4191.271973 -534.230103",
@@ -11552,7 +11552,8 @@
     "hammerUniqueId": "3014"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "981302061",
     "precomputedsubfrusta": "6",
@@ -11579,7 +11580,7 @@
     "precomputedobbextent": "184.941895 185.037964 313.677887",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "-2648.325195 -3652.500000 275.365387",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -11617,7 +11618,7 @@
     "colortemperature": "6501.000000",
     "color": "255 254 250",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.042969",
     "brightness": "-4.539060",
@@ -11637,12 +11638,10 @@
     "origin": "-2514.000000 -3602.020264 189.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3017",
-    "precomputed_vis_clusters": "707 709 713 760 771 784"
+    "hammerUniqueId": "3017"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1355056289",
     "precomputedsubfrusta": "6",
@@ -11669,7 +11668,7 @@
     "precomputedobbextent": "184.948242 185.036621 386.747253",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "-2648.328369 -3652.505615 232.773575",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -11707,7 +11706,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.042969",
     "brightness": "-4.539060",
@@ -11727,7 +11726,8 @@
     "origin": "-2791.999756 -3702.000244 225.000000",
     "angles": "89.999992 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3018"
+    "hammerUniqueId": "3018",
+    "precomputed_vis_clusters": "696 698 703 743 776 777"
   },
   {
     "precomputedsubfrusta": "6",
@@ -15591,7 +15591,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3273",
-    "precomputed_vis_clusters": "891 893 948 954 956 957 960 963 990"
+    "precomputed_vis_clusters": "894 896 952 958 961 962 965 968 999"
   },
   {
     "bakedshadowindex": "1",
@@ -15680,7 +15680,7 @@
     "angles": "89.999985 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3274",
-    "precomputed_vis_clusters": "886 887 891 940 954"
+    "precomputed_vis_clusters": "887 889 894 939 958"
   },
   {
     "bakedshadowindex": "-1",
@@ -16036,7 +16036,7 @@
     "angles": "89.999969 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3317",
-    "precomputed_vis_clusters": "931 932 3364 3365"
+    "precomputed_vis_clusters": "934 935 3357 3358"
   },
   {
     "bakedshadowindex": "2",
@@ -16125,7 +16125,7 @@
     "angles": "89.999962 240.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3331",
-    "precomputed_vis_clusters": "809 811 895 919 925"
+    "precomputed_vis_clusters": "799 801 897 898 915 920 927"
   },
   {
     "precomputedsubfrusta": "6",
@@ -18723,7 +18723,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3501",
-    "precomputed_vis_clusters": "963 990 1001 1002 1003 1004"
+    "precomputed_vis_clusters": "968 999 1012 1013 1015 1016"
   },
   {
     "bakedshadowindex": "3",
@@ -18812,7 +18812,7 @@
     "angles": "89.999977 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3505",
-    "precomputed_vis_clusters": "941 945 956 982 983 985 986 989 990"
+    "precomputed_vis_clusters": "943 948 961 989 990 992 993 995 998 999 1000"
   },
   {
     "precomputedsubfrusta": "6",
@@ -20219,7 +20219,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3711",
-    "precomputed_vis_clusters": "873 877 879 883 884 886 890 891 892 893 894 919 920 921 923 925 930 931 932 936 940 948 954 957 960"
+    "precomputed_vis_clusters": "875 879 881 885 887 890 892 893 894 895 896 920 923 924 925 927 933 934 935 937 939 952 958 962 965"
   },
   {
     "precomputedsubfrusta": "6",
@@ -20864,7 +20864,8 @@
     "hammerUniqueId": "3794"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1135857623",
     "precomputedboundsmaxs": "-2053.830566 -5248.719238 1336.062500",
@@ -20872,7 +20873,7 @@
     "precomputedobbextent": "468.996216 265.430298 850.415771",
     "precomputedobbangles": "-8.000000 1.000000 45.999996",
     "precomputedobborigin": "-2569.643555 -5959.681641 605.836426",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "forceshadowsenabled": "0",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -20916,7 +20917,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.957031",
     "brightness": "-0.062500",
@@ -20934,8 +20935,7 @@
     "origin": "-2798.000000 -6382.000000 1336.000000",
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3795",
-    "precomputed_vis_clusters": "100 171 209 217 223 451 453 500 515 529 534 541 548 565 574 585 591 594 599 604 607"
+    "hammerUniqueId": "3795"
   },
   {
     "precomputedsubfrusta": "6",
@@ -21193,8 +21193,7 @@
     "hammerUniqueId": "3831"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1641381206",
     "precomputedboundsmaxs": "-1789.014160 -5248.871094 1336.062500",
@@ -21202,7 +21201,7 @@
     "precomputedobbextent": "592.609375 594.185303 600.059753",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "-2381.623535 -5843.056641 736.002747",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "forceshadowsenabled": "0",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -21246,7 +21245,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.957031",
     "brightness": "-0.062500",
@@ -21264,7 +21263,8 @@
     "origin": "-2039.670044 -5994.000000 1336.000000",
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3833"
+    "hammerUniqueId": "3833",
+    "precomputed_vis_clusters": "202 211 221 224 227 233 362 365 373 448 511 513 514 518 538 555 575 580 581 585 587 590 592 595 597 600 601 603 610"
   },
   {
     "bakedshadowindex": "3",
@@ -21338,7 +21338,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3835",
-    "precomputed_vis_clusters": "70 207 209 219 223 225 236 238 367 450 451 452 453 456 500 508 515 517 529 533 534 535 539 541 548 565 574 585 591 594 599 604 607 614"
+    "precomputed_vis_clusters": "78 202 207 211 221 224 227 233 362 443 447 448 449 450 496 503 511 512 513 514 518 525 528 538 555 575 580 581 585 590 600 601 603"
   },
   {
     "precomputedsubfrusta": "6",
@@ -21582,7 +21582,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3839",
-    "precomputed_vis_clusters": "219 225 238 367 377 451 508 515 517 520 526 529 533 534 535 541 548 565 566 574 581 591 594 599 601 604 607 612 617 620"
+    "precomputed_vis_clusters": "211 221 227 362 373 448 503 510 511 512 513 514 518 528 529 538 555 557 572 580 581 585 590 592 597 600 601 606 610"
   },
   {
     "bakedshadowindex": "-1",
@@ -22301,7 +22301,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3974",
-    "precomputed_vis_clusters": "767 793 797 805 806 814 899"
+    "precomputed_vis_clusters": "758 786 789 797 803 809 810 811 902"
   },
   {
     "bakedshadowindex": "-1",
@@ -23841,7 +23841,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "4568",
-    "precomputed_vis_clusters": "707 709 713 714 715 760 766 771 782"
+    "precomputed_vis_clusters": "696 698 699 702 703 743 756 768 777"
   },
   {
     "precomputedsubfrusta": "6",
@@ -23998,77 +23998,6 @@
     "angles": "-0.059497 180.001236 -1.206298",
     "scales": "1.270000 1.270000 1.270000",
     "hammerUniqueId": "4587"
-  },
-  {
-    "steamaudio_geometry_mode": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "clothScale": "1.000000",
-    "StartDisabled": "0",
-    "forcenpcexclude": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "1",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "targetname": "",
-    "vscripts": "",
-    "animgraph2_identifier": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "bodygroups": "",
-    "skin": "default",
-    "model": "models/props_marines/prc77_radio.vmdl",
-    "globalname": "",
-    "clientSideEntity": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "classname": "prop_dynamic",
-    "origin": "-2570.167725 -4352.000000 -722.755920",
-    "angles": "-1.993709 0.001481 1.010256",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "4592"
   },
   {
     "expand_render_bounds_to_include_cloth": "0",
@@ -26112,7 +26041,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "9596",
-    "precomputed_vis_clusters": "633 713 715 771 775 776 777 778 786 845"
+    "precomputed_vis_clusters": "623 702 703 763 764 765 770 777 781 829"
   },
   {
     "physdamagescale": "1.000000",
@@ -32002,7 +31931,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11069",
-    "precomputed_vis_clusters": "1246 1257 1284 1297 1309 1327 1368"
+    "precomputed_vis_clusters": "1251 1262 1289 1302 1314 1332 1373"
   },
   {
     "precomputedboundsmaxs": "1675.808716 -6394.353516 960.416870",
@@ -33260,7 +33189,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11104",
-    "precomputed_vis_clusters": "1279 1332 1337 1341 1347 1349 1353 1363 1371 1376 1429"
+    "precomputed_vis_clusters": "1284 1337 1342 1346 1352 1353 1357 1367 1376 1381 1433"
   },
   {
     "bakedshadowindex": "1",
@@ -33349,7 +33278,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11108",
-    "precomputed_vis_clusters": "1257 1275 1279 1280 1303 1326 1332 1336 1337 1341 1344 1347 1349 1353 1354 1355 1371 1376 1429"
+    "precomputed_vis_clusters": "1262 1280 1284 1285 1308 1331 1337 1341 1342 1346 1349 1352 1353 1357 1358 1359 1376 1381 1433"
   },
   {
     "bakedshadowindex": "2",
@@ -33438,7 +33367,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11110",
-    "precomputed_vis_clusters": "1349 1353 1371 1376 1429"
+    "precomputed_vis_clusters": "1353 1357 1376 1381 1433"
   },
   {
     "precomputedsubfrusta": "5",
@@ -33591,7 +33520,7 @@
     "angles": "0.000000 149.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11113",
-    "precomputed_vis_clusters": "1257 1267 1278 1279 1280 1291 1296 1298 1300 1303 1307 1308 1312 1314 1316 1319 1321 1322 1324 1326 1353"
+    "precomputed_vis_clusters": "1262 1272 1283 1284 1285 1296 1301 1303 1305 1308 1312 1313 1317 1319 1321 1323 1325 1327 1329 1331 1357"
   },
   {
     "precomputedsubfrusta": "6",
@@ -34239,7 +34168,7 @@
     "angles": "0.000000 29.999966 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11131",
-    "precomputed_vis_clusters": "1264 1265 1269 1271 1308 1314 1316 1319 1321 1322 1325 1357 1358 1366 1381 1386"
+    "precomputed_vis_clusters": "1269 1270 1274 1276 1313 1319 1321 1323 1325 1327 1330 1361 1362 1371 1386 1391"
   },
   {
     "precomputedsubfrusta": "5",
@@ -34732,7 +34661,7 @@
     "angles": "0.000000 164.999954 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11146",
-    "precomputed_vis_clusters": "1030 1033 1035 1037 1046 1050 1054 1314 1323 1357 1386 1387 1390 1391 1403 1408 1409 1411 1412 1413"
+    "precomputed_vis_clusters": "1035 1036 1042 1046 1051 1055 1056 1059 1319 1328 1361 1391 1392 1395 1396 1411 1413 1414 1416 1417 1418"
   },
   {
     "precomputedsubfrusta": "5",
@@ -34985,7 +34914,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11154",
-    "precomputed_vis_clusters": "1037 1043 1044 1046 1050 1054 1059 1060 1063 1069 1072 1073 1075 1077 1078 1082 1083 1391 1399 1411 1413 1414 1416 1418"
+    "precomputed_vis_clusters": "1051 1055 1056 1059 1066 1067 1073 1074 1077 1083 1086 1087 1089 1091 1092 1095 1096 1396 1403 1416 1418 1419 1421 1423"
   },
   {
     "precomputedsubfrusta": "6",
@@ -35159,7 +35088,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11159",
-    "precomputed_vis_clusters": "1381 1382 1383 1385 1387 1388 1391 1393 1395 1396 1399 1401"
+    "precomputed_vis_clusters": "1386 1387 1388 1390 1392 1393 1396 1398 1400 1401 1403 1406"
   },
   {
     "precomputedboundsmaxs": "3225.878174 -6792.882324 1251.093384",
@@ -37332,7 +37261,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11241",
-    "precomputed_vis_clusters": "1454 1455 1460 1464 1465 1466 1468 1471 1472 1473 1477 1479 1480 1482 1484 1485 1489"
+    "precomputed_vis_clusters": "1457 1458 1463 1467 1468 1469 1471 1474 1475 1476 1480 1482 1483 1485 1487 1488 1491"
   },
   {
     "precomputedsubfrusta": "6",
@@ -37506,11 +37435,10 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11246",
-    "precomputed_vis_clusters": "1477 1479 1480 1481 1482 1484 1485 1487"
+    "precomputed_vis_clusters": "1480 1482 1483 1484 1485 1487 1488 1489"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "62809489",
     "precomputedsubfrusta": "6",
@@ -37537,7 +37465,7 @@
     "precomputedobbextent": "250.704224 114.333374 85.137672",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "2420.623047 -2766.227051 268.620148",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -37575,7 +37503,7 @@
     "colortemperature": "5093.000000",
     "color": "255 230 209",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.070312",
     "brightness": "-3.816410",
@@ -37595,7 +37523,8 @@
     "origin": "2529.000000 -2707.000000 321.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11247"
+    "hammerUniqueId": "11247",
+    "precomputed_vis_clusters": "1482 1483 1484 1485 1486 1487 1488 1490"
   },
   {
     "bakedshadowindex": "3",
@@ -37684,7 +37613,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11252",
-    "precomputed_vis_clusters": "1487 1493 1507 1508 1510"
+    "precomputed_vis_clusters": "1489 1495 1508 1509 1511"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -38065,18 +37994,18 @@
     "precomputedobbextent4": "180.035156 163.605103 115.475540",
     "precomputedobbangles4": "-0.000000 45.000004 0.000000",
     "precomputedobborigin4": "2584.129639 -1766.902100 274.595886",
-    "precomputedobbextent3": "158.515747 180.057129 115.075050",
+    "precomputedobbextent3": "158.515747 180.057129 115.073593",
     "precomputedobbangles3": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin3": "2610.979492 -1284.681152 274.997437",
-    "precomputedobbextent2": "94.783813 180.061401 115.077888",
+    "precomputedobborigin3": "2610.979492 -1284.681152 274.998901",
+    "precomputedobbextent2": "94.783813 180.061401 115.077568",
     "precomputedobbangles2": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin2": "2790.003662 -1463.699341 274.995514",
+    "precomputedobborigin2": "2790.003662 -1463.699341 274.995819",
     "precomputedobbextent1": "180.021362 171.515381 115.077507",
     "precomputedobbangles1": "-0.000000 45.000004 0.000000",
     "precomputedobborigin1": "2347.261230 -1530.014648 274.993713",
-    "precomputedobbextent0": "169.042358 169.036621 84.071434",
+    "precomputedobbextent0": "169.036743 169.036621 84.071358",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "2595.722656 -1523.980469 243.991058",
+    "precomputedobborigin0": "2595.717285 -1523.980469 243.991150",
     "precomputedboundsmaxs": "2933.559326 -1185.020386 390.072479",
     "precomputedboundsmins": "2235.834961 -1884.044189 159.129654",
     "precomputedobbextent": "315.051514 353.083130 115.471413",
@@ -38141,7 +38070,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11374",
-    "precomputed_vis_clusters": "1511 1530 1532 1533 1534 1536 1537 1541 1543 1544 1545 1632"
+    "precomputed_vis_clusters": "1512 1531 1533 1534 1535 1537 1538 1542 1544 1545 1546 1637"
   },
   {
     "bakedshadowindex": "1",
@@ -38230,7 +38159,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11375",
-    "precomputed_vis_clusters": "1507 1508 1509 1510 1511 1532 1533 1534 1535 1536 1632 1633"
+    "precomputed_vis_clusters": "1508 1509 1510 1511 1512 1533 1534 1535 1536 1537 1637 1638"
   },
   {
     "precomputedsubfrusta": "6",
@@ -38524,8 +38453,7 @@
     "hammerUniqueId": "11433"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-603150008",
     "precomputedsubfrusta": "6",
@@ -38552,7 +38480,7 @@
     "precomputedobbextent": "192.219727 197.580688 73.600815",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "2329.873047 -977.496826 92.017273",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -38590,7 +38518,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.101562",
     "brightness": "-3.320310",
@@ -38610,7 +38538,8 @@
     "origin": "2328.930176 -1121.000000 46.293419",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11504"
+    "hammerUniqueId": "11504",
+    "precomputed_vis_clusters": "1540 1548 1554 1555 1559"
   },
   {
     "bakedshadowindex": "2",
@@ -38699,7 +38628,7 @@
     "angles": "89.999992 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11505",
-    "precomputed_vis_clusters": "1538 1539 1547 1553 1555 1558"
+    "precomputed_vis_clusters": "1539 1540 1548 1554 1555 1559"
   },
   {
     "bakedshadowindex": "1",
@@ -38709,9 +38638,9 @@
     "precomputedobbextent5": "37.055054 37.058777 18.064377",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
     "precomputedobborigin5": "2502.001465 -1134.000488 312.001892",
-    "precomputedobbextent4": "41.058105 27.640656 111.538391",
+    "precomputedobbextent4": "41.058105 27.640656 111.537994",
     "precomputedobbangles4": "0.000000 0.000000 -45.000004",
-    "precomputedobborigin4": "2502.004150 -1232.326050 233.675385",
+    "precomputedobborigin4": "2502.004150 -1232.325684 233.675659",
     "precomputedobbextent3": "210.631958 188.334106 61.087173",
     "precomputedobbangles3": "0.000000 0.000000 -25.000000",
     "precomputedobborigin3": "2437.103516 -964.324585 210.236832",
@@ -38721,9 +38650,9 @@
     "precomputedobbextent1": "134.572845 196.075928 85.075180",
     "precomputedobbangles1": "-0.000000 45.000004 0.000000",
     "precomputedobborigin1": "2268.284180 -1090.510498 244.993668",
-    "precomputedobbextent0": "105.049438 133.020477 66.068901",
+    "precomputedobbextent0": "105.049438 132.941132 66.068901",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "2474.025879 -1133.962891 225.993591",
+    "precomputedobborigin0": "2474.025879 -1133.883545 225.993591",
     "precomputedboundsmaxs": "2648.876465 -779.922546 330.068176",
     "precomputedboundsmins": "2137.678223 -1317.068115 159.921646",
     "precomputedobbextent": "227.338867 280.089600 85.073265",
@@ -38788,7 +38717,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11512",
-    "precomputed_vis_clusters": "1532 1538 1540 1543 1544 1545 1555 1556 1558 1564"
+    "precomputed_vis_clusters": "1533 1539 1541 1544 1545 1546 1550 1554 1559 1567"
   },
   {
     "precomputedsubfrusta": "6",
@@ -38876,7 +38805,8 @@
     "hammerUniqueId": "11514"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "345943308",
     "precomputedboundsmaxs": "2631.147949 -779.924072 549.596069",
@@ -38884,7 +38814,7 @@
     "precomputedobbextent": "246.747437 197.587463 198.842331",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "2384.400391 -977.511536 350.753723",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "forceshadowsenabled": "0",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -38928,7 +38858,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.636719",
     "brightness": "-0.648438",
@@ -38946,8 +38876,7 @@
     "origin": "2626.945068 -805.081299 237.479996",
     "angles": "0.000000 195.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11516",
-    "precomputed_vis_clusters": "1538 1540 1542 1543 1545 1547 1555 1556 1558 1564"
+    "hammerUniqueId": "11516"
   },
   {
     "precomputedboundsmaxs": "2828.705322 -779.903870 549.575989",
@@ -39311,10 +39240,10 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11568",
-    "precomputed_vis_clusters": "1560 1568 1572 1575 1576 1577 1579 1581 1583 1589 1602 1603"
+    "precomputed_vis_clusters": "1563 1571 1572 1573 1577 1580 1581 1584 1587 1594 1605"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-356326404",
     "precomputedsubfrusta": "6",
@@ -39400,10 +39329,10 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11570",
-    "precomputed_vis_clusters": "1560 1568 1572 1575 1576 1577 1579 1581 1583 1589 1602"
+    "precomputed_vis_clusters": "1563 1571 1572 1573 1577 1580 1581 1584 1587 1605"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-110726400",
     "precomputedsubfrusta": "6",
@@ -39489,7 +39418,7 @@
     "angles": "89.999992 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11571",
-    "precomputed_vis_clusters": "1560 1575 1579 1581 1583 1589 1602 1603"
+    "precomputed_vis_clusters": "1563 1571 1573 1580 1587 1594 1605"
   },
   {
     "cpoint7_parent": "0",
@@ -42175,7 +42104,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11639",
-    "precomputed_vis_clusters": "1502"
+    "precomputed_vis_clusters": "1452"
   },
   {
     "bakedshadowindex": "2",
@@ -42264,7 +42193,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11640",
-    "precomputed_vis_clusters": "1448 1502"
+    "precomputed_vis_clusters": "1452"
   },
   {
     "bakedshadowindex": "1",
@@ -42353,7 +42282,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11641",
-    "precomputed_vis_clusters": "1234 1448"
+    "precomputed_vis_clusters": "1239 1452"
   },
   {
     "bakedshadowindex": "2",
@@ -42442,7 +42371,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11642",
-    "precomputed_vis_clusters": "1448"
+    "precomputed_vis_clusters": "1452"
   },
   {
     "bakedshadowindex": "1",
@@ -42531,7 +42460,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11643",
-    "precomputed_vis_clusters": "1187 1188 1191 1193 1234 1237 1239"
+    "precomputed_vis_clusters": "1197 1198 1200 1201 1239 1242 1244"
   },
   {
     "bakedshadowindex": "2",
@@ -42620,7 +42549,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11644",
-    "precomputed_vis_clusters": "1234 1239"
+    "precomputed_vis_clusters": "1239 1244"
   },
   {
     "precomputedsubfrusta": "6",
@@ -42794,7 +42723,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11651",
-    "precomputed_vis_clusters": "1041 1057 1065 1070 1074 1076 1106 1112 1119 1141 1145 1146 1151 1152 1154 1155 1156 1157 1158 1162 1163 1165 1166 1169 1170 1171 1172 1173 1174 1179 1184"
+    "precomputed_vis_clusters": "1053 1071 1079 1084 1088 1090 1119 1125 1132 1150 1157 1158 1159 1162 1164 1165 1166 1167 1171 1172 1174 1175 1177 1179 1182 1183 1184 1185 1191"
   },
   {
     "precomputedsubfrusta": "6",
@@ -43528,78 +43457,6 @@
     "hammerUniqueId": "11683"
   },
   {
-    "clothScale": "1.000000",
-    "StartDisabled": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "1",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "steamaudio_geometry_mode": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "allowobstacleconvexhullmerging": "1",
-    "forcenpcexclude": "0",
-    "interactAs": "",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "animgraph2_identifier": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "bodygroups": "",
-    "skin": "default",
-    "model": "models/props_vehicles/cara_82hatchback_wrecked.vmdl",
-    "clientSideEntity": "0",
-    "globalname": "",
-    "targetname": "",
-    "vscripts": "",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "classname": "prop_dynamic",
-    "origin": "3186.060547 -5399.000000 -450.390961",
-    "angles": "-0.685619 329.930054 2.188625",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "11689"
-  },
-  {
     "precomputedsubfrusta": "6",
     "precomputedobbextent5": "40.055908 40.065430 19.567398",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
@@ -43607,23 +43464,23 @@
     "precomputedobbextent4": "120.459961 199.840576 90.114990",
     "precomputedobbangles4": "0.000000 -26.999998 0.000000",
     "precomputedobborigin4": "3433.791992 -5671.159180 -363.011353",
-    "precomputedobbextent3": "96.343994 199.129883 90.109344",
+    "precomputedobbextent3": "96.343994 199.129883 90.103561",
     "precomputedobbangles3": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin3": "3370.319336 -5242.300293 -363.009735",
+    "precomputedobborigin3": "3370.319336 -5242.300293 -363.003967",
     "precomputedobbextent2": "22.069092 45.045166 42.566406",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
     "precomputedobborigin2": "3466.006592 -5451.144531 -315.494019",
-    "precomputedobbextent1": "198.587402 194.111206 121.379456",
+    "precomputedobbextent1": "198.587402 194.111206 121.374420",
     "precomputedobbangles1": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin1": "3165.408691 -5447.978516 -331.743530",
-    "precomputedobbextent0": "92.551758 140.012939 69.579865",
+    "precomputedobborigin1": "3165.408691 -5447.978516 -331.738495",
+    "precomputedobbextent0": "92.551758 140.012939 69.578094",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "3395.532959 -5451.166016 -383.517365",
-    "precomputedboundsmaxs": "3497.787109 -5165.531250 -211.921692",
+    "precomputedobborigin0": "3395.532959 -5451.166016 -383.515594",
+    "precomputedboundsmaxs": "3497.787109 -5165.655273 -211.921692",
     "precomputedboundsmins": "3042.937988 -5850.064941 -453.118347",
-    "precomputedobbextent": "225.062500 344.745117 120.598328",
+    "precomputedobbextent": "225.062500 344.728516 120.598328",
     "precomputedobbangles": "-0.000000 1.000000 0.000000",
-    "precomputedobborigin": "3269.037109 -5508.692871 -332.520020",
+    "precomputedobborigin": "3269.037354 -5508.709473 -332.520020",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -43706,9 +43563,9 @@
     "precomputedobborigin0": "3442.991943 -5690.993164 -383.517365",
     "precomputedboundsmaxs": "3648.075439 -5290.938965 -251.935135",
     "precomputedboundsmins": "3042.937988 -5850.103516 -453.114136",
-    "precomputedobbextent": "301.389160 276.497314 100.589500",
-    "precomputedobbangles": "-0.000000 25.000000 0.000000",
-    "precomputedobborigin": "3309.290771 -5618.994629 -352.524628",
+    "precomputedobbextent": "302.613525 277.127197 99.845192",
+    "precomputedobbangles": "1.000000 25.999996 2.000000",
+    "precomputedobborigin": "3309.464844 -5620.066895 -361.453888",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -43791,9 +43648,9 @@
     "precomputedobborigin0": "3090.194336 -5242.000000 -434.838196",
     "precomputedboundsmaxs": "3488.071777 -5102.624023 -118.610077",
     "precomputedboundsmins": "2690.138184 -5642.040039 -487.002625",
-    "precomputedobbextent": "399.108154 252.921631 172.388474",
+    "precomputedobbextent": "399.108154 252.820557 172.388474",
     "precomputedobbangles": "-2.000000 5.000000 -1.000000",
-    "precomputedobborigin": "3097.818359 -5386.958984 -297.688446",
+    "precomputedobborigin": "3097.809570 -5386.857910 -297.690216",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -43947,23 +43804,23 @@
     "precomputedobbextent4": "150.060059 150.058228 97.143677",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
     "precomputedobborigin4": "3064.000977 -5744.669922 -355.974487",
-    "precomputedobbextent3": "150.058228 150.962646 127.297455",
-    "precomputedobbangles3": "-0.000000 45.000000 -1.000000",
-    "precomputedobborigin3": "3064.820068 -5321.236328 -329.155518",
-    "precomputedobbextent2": "150.061401 150.060303 125.561073",
-    "precomputedobbangles2": "-0.000000 45.000004 0.000000",
+    "precomputedobbextent3": "150.058228 151.931152 126.228165",
+    "precomputedobbangles3": "0.000000 45.000000 -2.000000",
+    "precomputedobborigin3": "3065.695801 -5322.112305 -330.649445",
+    "precomputedobbextent2": "150.060547 150.061401 125.561073",
+    "precomputedobbangles2": "0.000000 -45.000004 0.000000",
     "precomputedobborigin2": "3276.129639 -5532.541504 -327.552094",
     "precomputedobbextent1": "150.061829 150.058594 121.964859",
     "precomputedobbangles1": "-0.000000 45.000004 0.000000",
     "precomputedobborigin1": "2851.870850 -5532.544434 -365.580811",
-    "precomputedobbextent0": "139.828857 140.021484 69.579193",
+    "precomputedobbextent0": "139.828857 140.013184 69.579193",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "3064.237549 -5532.557129 -383.516693",
+    "precomputedobborigin0": "3064.237549 -5532.565430 -383.516693",
     "precomputedboundsmaxs": "3363.228027 -5232.480957 -198.448944",
     "precomputedboundsmins": "2788.254639 -5832.592773 -484.215637",
-    "precomputedobbextent": "287.335571 300.039551 126.898155",
-    "precomputedobbangles": "-4.000000 0.000000 2.000000",
-    "precomputedobborigin": "3078.172607 -5531.395508 -345.068176",
+    "precomputedobbextent": "287.335571 300.014404 126.602531",
+    "precomputedobbangles": "-4.000000 0.000000 3.000000",
+    "precomputedobborigin": "3078.292480 -5530.761719 -346.784210",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -45403,7 +45260,7 @@
     "hammerUniqueId": "11977"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1636869286",
     "precomputedsubfrusta": "6",
@@ -45427,9 +45284,9 @@
     "precomputedobborigin0": "2191.808105 -960.356262 -481.643158",
     "precomputedboundsmaxs": "2361.778320 -410.941284 -271.903107",
     "precomputedboundsmins": "2090.905762 -1166.079712 -505.097992",
-    "precomputedobbextent": "135.436279 384.524323 109.813675",
-    "precomputedobbangles": "0.000000 0.000000 -3.999999",
-    "precomputedobborigin": "2226.342041 -787.880798 -376.305573",
+    "precomputedobbextent": "135.436279 385.973328 110.698990",
+    "precomputedobbangles": "0.000000 0.000000 -5.000000",
+    "precomputedobborigin": "2226.342041 -787.691223 -375.927124",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -45489,10 +45346,10 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11997",
-    "precomputed_vis_clusters": "1517 1520 1546 1548 1549 1552 1554 1557"
+    "precomputed_vis_clusters": "1518 1521 1547 1549 1552 1553 1557 1558 1560 1562"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-176345929",
     "precomputedsubfrusta": "6",
@@ -45502,9 +45359,9 @@
     "precomputedobbextent4": "80.005859 89.907715 90.335556",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
     "precomputedobborigin4": "2183.136719 -1131.058838 -362.249084",
-    "precomputedobbextent3": "100.096313 248.397781 95.991394",
-    "precomputedobbangles3": "0.000000 0.000000 -3.999999",
-    "precomputedobborigin3": "2191.000488 -764.422729 -364.112305",
+    "precomputedobbextent3": "100.096313 249.356506 99.942230",
+    "precomputedobbangles3": "0.000000 0.000000 -7.000000",
+    "precomputedobborigin3": "2191.000488 -764.906006 -365.454071",
     "precomputedobbextent2": "51.633423 100.907837 135.226807",
     "precomputedobbangles2": "-45.000004 0.000000 0.000000",
     "precomputedobborigin2": "2322.180176 -1010.991821 -376.109497",
@@ -45515,10 +45372,10 @@
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "2208.282715 -1010.992432 -385.260620",
     "precomputedboundsmaxs": "2437.075439 -517.880127 -271.906952",
-    "precomputedboundsmins": "2090.906982 -1166.077026 -474.816681",
-    "precomputedobbextent": "173.084229 326.124298 98.428604",
-    "precomputedobbangles": "0.000000 0.000000 -2.000000",
-    "precomputedobborigin": "2263.991211 -843.002747 -365.643585",
+    "precomputedboundsmins": "2090.906982 -1166.077026 -490.536224",
+    "precomputedobbextent": "173.084229 326.992676 104.877075",
+    "precomputedobbangles": "0.000000 0.000000 -3.000000",
+    "precomputedobborigin": "2263.991211 -843.734497 -369.741760",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -45578,7 +45435,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "11998",
-    "precomputed_vis_clusters": "1520 1546 1548 1549 1552 1554 1557"
+    "precomputed_vis_clusters": "1521 1547 1549 1552 1553 1557 1558 1560 1562"
   },
   {
     "precomputedsubfrusta": "6",
@@ -46799,10 +46656,10 @@
   },
   {
     "precomputedboundsmaxs": "2819.005615 -1246.911011 331.644379",
-    "precomputedboundsmins": "2474.796875 -1506.252563 159.918442",
-    "precomputedobbextent": "182.422852 129.670776 77.177017",
+    "precomputedboundsmins": "2474.796875 -1506.252563 159.923553",
+    "precomputedobbextent": "182.422852 129.670776 77.155136",
     "precomputedobbangles": "-15.000001 0.000000 0.000000",
-    "precomputedobborigin": "2662.644043 -1376.581787 210.312225",
+    "precomputedobborigin": "2662.638184 -1376.581787 210.333374",
     "precomputedfieldsvalid": "1",
     "forceshadowsenabled": "0",
     "light_style_target3": "",
@@ -49711,7 +49568,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12696",
-    "precomputed_vis_clusters": "1573 1622 1662 1690 1699 1700 1701 1720 1727 2467 2549"
+    "precomputed_vis_clusters": "1591 1627 1659 1693 1697 1700 1702 1718 1721 2466 2540"
   },
   {
     "precomputedsubfrusta": "6",
@@ -49885,7 +49742,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12751",
-    "precomputed_vis_clusters": "1382 1385 1387 1391 1395 1396 1399 1401"
+    "precomputed_vis_clusters": "1387 1390 1392 1396 1400 1401 1403 1406"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -51904,7 +51761,7 @@
     "rendercolor": "255 255 255",
     "model": "models/prop_kuojian/prop_kuojiandilei.vmdl",
     "classname": "prop_dynamic",
-    "origin": "-2010.500732 -6589.000000 565.999512",
+    "origin": "-1995.500732 -6553.000000 565.999512",
     "angles": "0.000000 89.999931 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13335"
@@ -55932,7 +55789,7 @@
     "hammerUniqueId": "13981"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "432692897",
     "precomputedsubfrusta": "6",
@@ -56018,7 +55875,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13994",
-    "precomputed_vis_clusters": "6 12 27 50 83 101 185"
+    "precomputed_vis_clusters": "13 24 56 70 74 87 129"
   },
   {
     "cpoint7_parent": "0",
@@ -56213,7 +56070,7 @@
     "hammerUniqueId": "13996"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1606919271",
     "precomputedsubfrusta": "6",
@@ -56299,7 +56156,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "13997",
-    "precomputed_vis_clusters": "6 12 27 50 83 101 119 185"
+    "precomputed_vis_clusters": "13 24 56 70 74 87 117 129"
   },
   {
     "cpoint7_parent": "0",
@@ -56583,7 +56440,7 @@
     "hammerUniqueId": "14000"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1411779656",
     "precomputedsubfrusta": "6",
@@ -56669,7 +56526,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14001",
-    "precomputed_vis_clusters": "83 101 185 202 221 228 229 319"
+    "precomputed_vis_clusters": "74 87 129 212 213 220 226 285"
   },
   {
     "cpoint7_parent": "0",
@@ -56953,7 +56810,7 @@
     "hammerUniqueId": "14004"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-242403494",
     "precomputedsubfrusta": "6",
@@ -57039,7 +56896,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14005",
-    "precomputed_vis_clusters": "27 50 185 228 284 319"
+    "precomputed_vis_clusters": "56 70 129 226 277 285"
   },
   {
     "cpoint7_parent": "0",
@@ -57138,7 +56995,7 @@
     "hammerUniqueId": "14006"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1126869903",
     "precomputedsubfrusta": "6",
@@ -57224,11 +57081,10 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14007",
-    "precomputed_vis_clusters": "6 12 27 50 185 284"
+    "precomputed_vis_clusters": "13 24 56 70 129 277"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "433270397",
     "precomputedsubfrusta": "6",
@@ -57255,7 +57111,7 @@
     "precomputedobbextent": "306.635498 356.965088 172.319885",
     "precomputedobbangles": "-3.000000 -10.999998 0.000000",
     "precomputedobborigin": "-2059.331055 -7024.887207 -2073.209473",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -57293,7 +57149,7 @@
     "colortemperature": "6600.000000",
     "color": "178 34 34",
     "colormode": "0",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.339844",
     "brightness": "-1.554690",
@@ -57313,7 +57169,8 @@
     "origin": "-1972.151367 -7044.362305 -1992.177246",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14008"
+    "hammerUniqueId": "14008",
+    "precomputed_vis_clusters": "33 50 70 129 157 172 225 226 248 264 302 306"
   },
   {
     "cpoint7_parent": "0",
@@ -57498,7 +57355,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14010",
-    "precomputed_vis_clusters": "2 6 42 50 57 151 185 254 271 291"
+    "precomputed_vis_clusters": "10 13 33 50 70 129 157 248 264 302"
   },
   {
     "cpoint7_parent": "0",
@@ -57779,7 +57636,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14016",
-    "precomputed_vis_clusters": "57 151 165 185 221 228 232 237 291 306"
+    "precomputed_vis_clusters": "50 129 157 172 212 225 226 232 302 306"
   },
   {
     "bakedshadowindex": "-1",
@@ -58063,7 +57920,8 @@
     "hammerUniqueId": "14021"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1188976387",
     "precomputedsubfrusta": "6",
@@ -58090,7 +57948,7 @@
     "precomputedobbextent": "334.392700 331.424316 178.160522",
     "precomputedobbangles": "3.000000 -33.999996 0.000000",
     "precomputedobborigin": "-2783.799561 -6576.458496 -2072.968506",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -58128,7 +57986,7 @@
     "colortemperature": "6600.000000",
     "color": "178 34 34",
     "colormode": "0",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.339844",
     "brightness": "-1.554690",
@@ -58148,8 +58006,7 @@
     "origin": "-2796.825928 -6485.770996 -1992.177246",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14022",
-    "precomputed_vis_clusters": "59 75 83 102 103 115 151 165 185 206 216 221 228 232"
+    "hammerUniqueId": "14022"
   },
   {
     "bakedshadowindex": "-1",
@@ -58337,7 +58194,7 @@
     "hammerUniqueId": "14024"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1112697721",
     "precomputedsubfrusta": "6",
@@ -58423,7 +58280,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14027",
-    "precomputed_vis_clusters": "2 6 17 18 23 42 50 57 59 83 151 185"
+    "precomputed_vis_clusters": "5 10 13 18 25 33 50 57 70 87 129 157"
   },
   {
     "cpoint7_parent": "0",
@@ -58522,7 +58379,7 @@
     "hammerUniqueId": "14028"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-985720351",
     "precomputedsubfrusta": "6",
@@ -58608,7 +58465,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14030",
-    "precomputed_vis_clusters": "6 17 23 59 75 83 102 103 115 116 119 151 185 216 221 228"
+    "precomputed_vis_clusters": "5 13 25 57 80 87 100 101 113 114 117 129 157 208 212 226"
   },
   {
     "cpoint7_parent": "0",
@@ -58707,7 +58564,7 @@
     "hammerUniqueId": "14031"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "378622270",
     "precomputedsubfrusta": "6",
@@ -58793,7 +58650,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14032",
-    "precomputed_vis_clusters": "6 12 83 101 111 119 185 202 221 228"
+    "precomputed_vis_clusters": "13 24 74 87 109 117 129 212 213 226"
   },
   {
     "cpoint7_parent": "0",
@@ -59738,8 +59595,7 @@
     "light_probe_atlas_Z": "1"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-389224852",
     "precomputedsubfrusta": "6",
@@ -59766,7 +59622,7 @@
     "precomputedobbextent": "330.259399 288.487061 116.913086",
     "precomputedobbangles": "19.000000 -5.000000 2.000000",
     "precomputedobborigin": "-2971.904297 -6875.282715 -2063.790283",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -59804,7 +59660,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.515625",
     "brightness": "-0.953125",
@@ -59824,7 +59680,8 @@
     "origin": "-3089.759277 -6813.516602 -1939.411743",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14103"
+    "hammerUniqueId": "14103",
+    "precomputed_vis_clusters": "5 13 57 80 87 100 101 113 114 117 208 212"
   },
   {
     "cpoint7_parent": "0",
@@ -62195,7 +62052,7 @@
     "hammerUniqueId": "14141"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "962682876",
     "precomputedsubfrusta": "6",
@@ -62281,7 +62138,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14142",
-    "precomputed_vis_clusters": "210 211 213 215 221 240 446 447 449"
+    "precomputed_vis_clusters": "199 201 206 210 212 235 442 444 445"
   },
   {
     "precomputedsubfrusta": "6",
@@ -62646,7 +62503,7 @@
     "hammerUniqueId": "14149"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-32876755",
     "precomputedsubfrusta": "6",
@@ -62732,7 +62589,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14150",
-    "precomputed_vis_clusters": "224 228 234 363 365 366 378 547 597 600"
+    "precomputed_vis_clusters": "219 226 230 358 360 361 374 540 588 591"
   },
   {
     "cpoint7_parent": "0",
@@ -62831,7 +62688,7 @@
     "hammerUniqueId": "14151"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1431778526",
     "precomputedsubfrusta": "6",
@@ -62917,7 +62774,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14153",
-    "precomputed_vis_clusters": "224 228 234 363 365 366 378 547 597 600"
+    "precomputed_vis_clusters": "219 226 230 358 360 361 374 540 588 591"
   },
   {
     "cpoint7_parent": "0",
@@ -63112,7 +62969,7 @@
     "hammerUniqueId": "14157"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1475874446",
     "precomputedsubfrusta": "6",
@@ -63198,7 +63055,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14158",
-    "precomputed_vis_clusters": "210 211 213 215 221 224 240 241 446 447 448 449"
+    "precomputed_vis_clusters": "199 201 206 210 212 219 235 236 442 444 445"
   },
   {
     "cpoint7_parent": "0",
@@ -63383,7 +63240,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14161",
-    "precomputed_vis_clusters": "6 9 11 14 27 109 186 197 198 199 200 201"
+    "precomputed_vis_clusters": "6 13 14 17 56 107 183 194 195 196 197 198"
   },
   {
     "cpoint7_parent": "0",
@@ -63568,7 +63425,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14164",
-    "precomputed_vis_clusters": "6 9 11 14 186 197 198 200 201"
+    "precomputed_vis_clusters": "6 13 14 17 183 194 195 197 198"
   },
   {
     "cpoint7_parent": "0",
@@ -63753,7 +63610,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14167",
-    "precomputed_vis_clusters": "27 65 66 196 252 264 279 285 324 325 326 327"
+    "precomputed_vis_clusters": "51 56 71 193 246 257 272 278 318 319 320 321"
   },
   {
     "cpoint7_parent": "0",
@@ -63938,7 +63795,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14170",
-    "precomputed_vis_clusters": "27 65 66 196 264 279 285 324 325 326 327"
+    "precomputed_vis_clusters": "51 56 71 193 257 272 278 318 319 320 321"
   },
   {
     "bakedshadowindex": "1",
@@ -64027,7 +63884,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14172",
-    "precomputed_vis_clusters": "6 9 11 101 105 108 109 110 112 113 117 186 188 189 190 191 192 193 194 197 199"
+    "precomputed_vis_clusters": "6 13 17 74 104 106 107 108 110 111 115 183 185 186 187 188 189 190 191 194 196"
   },
   {
     "cpoint7_parent": "0",
@@ -64677,7 +64534,7 @@
     "hammerUniqueId": "14182"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-2041680454",
     "precomputedsubfrusta": "6",
@@ -64763,7 +64620,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14184",
-    "precomputed_vis_clusters": "27 52 65 185 224 228 233 279 285 286 307 322 335 337 341 344 347 363 378"
+    "precomputed_vis_clusters": "41 51 56 129 219 226 234 272 278 281 299 301 325 326 327 332 334 338 358 374"
   },
   {
     "cpoint7_parent": "0",
@@ -65047,8 +64904,7 @@
     "hammerUniqueId": "14188"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-72198768",
     "precomputedsubfrusta": "6",
@@ -65075,7 +64931,7 @@
     "precomputedobbextent": "493.355469 197.628174 75.095764",
     "precomputedobbangles": "-0.000000 8.000000 0.000000",
     "precomputedobborigin": "-1254.407227 -6951.314453 -1117.015869",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -65113,7 +64969,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.101562",
     "brightness": "-3.320310",
@@ -65133,7 +64989,8 @@
     "origin": "-1248.000000 -6949.000000 -1072.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14190"
+    "hammerUniqueId": "14190",
+    "precomputed_vis_clusters": "281 299 301 325 326 327 334 335 338 345 348 349 350 354 356"
   },
   {
     "cpoint7_parent": "0",
@@ -65232,7 +65089,8 @@
     "hammerUniqueId": "14191"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-446364166",
     "precomputedsubfrusta": "6",
@@ -65259,7 +65117,7 @@
     "precomputedobbextent": "496.124268 315.090088 76.877380",
     "precomputedobbangles": "0.000000 0.000000 -1.000000",
     "precomputedobborigin": "-1028.937134 -6769.258789 -1120.635864",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -65297,7 +65155,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.101562",
     "brightness": "-3.320310",
@@ -65317,8 +65175,7 @@
     "origin": "-1025.000000 -6949.000000 -1072.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "14193",
-    "precomputed_vis_clusters": "286 307 332 337 341 344 347 350 353 354 355 357 359 361 362 379 388 412 420 425 436 437 443"
+    "hammerUniqueId": "14193"
   },
   {
     "cpoint7_parent": "0",
@@ -65602,7 +65459,7 @@
     "hammerUniqueId": "14197"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "785273628",
     "precomputedsubfrusta": "6",
@@ -65688,7 +65545,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14199",
-    "precomputed_vis_clusters": "337 344 350 353 354 355 357 359 360 362"
+    "precomputed_vis_clusters": "326 327 345 348 349 350 352 354 355"
   },
   {
     "cpoint7_parent": "0",
@@ -70608,7 +70465,7 @@
     "hammerUniqueId": "14543"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1701202037",
     "precomputedsubfrusta": "6",
@@ -70694,7 +70551,7 @@
     "angles": "89.999954 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14545",
-    "precomputed_vis_clusters": "342 352 379 386 393 429 433 442"
+    "precomputed_vis_clusters": "340 347 376 384 387 416 427 432"
   },
   {
     "cpoint7_parent": "0",
@@ -70879,7 +70736,7 @@
     "angles": "89.999954 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14548",
-    "precomputed_vis_clusters": "336 351 395 400 403 417 442"
+    "precomputed_vis_clusters": "331 346 392 399 401 414 416"
   },
   {
     "cpoint7_parent": "0",
@@ -73640,9 +73497,9 @@
     "precomputedobbextent2": "17.540283 35.988892 34.530701",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
     "precomputedobborigin2": "-2956.477783 -3177.012207 692.463684",
-    "precomputedobbextent1": "235.677551 250.058350 170.070190",
+    "precomputedobbextent1": "235.082275 250.058350 170.070190",
     "precomputedobbangles1": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin1": "-2594.621338 -3166.831299 699.024841",
+    "precomputedobborigin1": "-2595.042236 -3166.410400 699.024841",
     "precomputedobbextent0": "33.059204 33.055664 16.064911",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "-2938.004395 -3176.998535 673.997559",
@@ -74777,7 +74634,7 @@
     "hammerUniqueId": "15338"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "852804840",
     "precomputedsubfrusta": "6",
@@ -74863,7 +74720,7 @@
     "angles": "89.999947 270.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15340",
-    "precomputed_vis_clusters": "345 346 349 379 382 384 388 390 396 399 402 404 405 408 410 411 412 413 415 416 417 419 420 421 422 423 424 425 426 429 432 433 437 439 440 442 443"
+    "precomputed_vis_clusters": "330 337 344 376 377 380 382 388 393 394 398 400 402 405 406 408 409 410 412 413 414 415 416 417 418 419 420 421 422 423 426 427 430 432 435 437 439"
   },
   {
     "cpoint7_parent": "0",
@@ -75048,7 +74905,7 @@
     "angles": "89.999947 270.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15343",
-    "precomputed_vis_clusters": "339 342 346 352 358 379 384 386 390 391 392 393 395 396 398 399 400 402 404 405 408 409 410 411 413 415 416 417 419 420 421 422 423 424 425 426 429 432 433 438 439 440 441 442 443"
+    "precomputed_vis_clusters": "330 339 340 347 353 376 382 384 385 387 388 390 392 393 394 396 398 399 400 402 405 406 407 408 410 412 413 414 415 416 417 418 419 420 421 422 423 426 427 430 432 436 437 438 439"
   },
   {
     "cpoint7_parent": "0",
@@ -75147,7 +75004,7 @@
     "hammerUniqueId": "15344"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1818594328",
     "precomputedsubfrusta": "6",
@@ -75233,7 +75090,7 @@
     "angles": "89.999947 270.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15346",
-    "precomputed_vis_clusters": "339 342 352 379 380 384 385 386 391 392 393 394 395 396 398 400 403 404 405 407 408 409 410 411 415 417 420 422 423 424 426 429 430 431 432 433 438 439 440 441 442 443"
+    "precomputed_vis_clusters": "339 340 347 376 378 382 383 384 385 387 390 391 392 393 396 399 400 401 402 403 405 406 407 408 410 414 415 416 418 420 421 423 426 427 428 429 430 432 436 437 438 439"
   },
   {
     "cpoint7_parent": "0",
@@ -75702,8 +75559,7 @@
     "hammerUniqueId": "15353"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "557252745",
     "precomputedsubfrusta": "6",
@@ -75730,7 +75586,7 @@
     "precomputedobbextent": "284.679626 197.065186 241.739990",
     "precomputedobbangles": "-0.000000 1.000000 -22.999996",
     "precomputedobborigin": "-1042.301514 -6465.731445 110.232178",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -75768,7 +75624,7 @@
     "colortemperature": "6496.000000",
     "color": "255 254 250",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.339844",
     "brightness": "-1.550780",
@@ -75788,7 +75644,8 @@
     "origin": "-1041.999878 -6328.695312 223.000000",
     "angles": "89.999947 270.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "15355"
+    "hammerUniqueId": "15355",
+    "precomputed_vis_clusters": "343 351 376 378 381 383 386 389 390 391 392 395 399 401 403 404 414 416 418 421 425 427 428 429 432 433 436"
   },
   {
     "cpoint7_parent": "0",
@@ -75983,7 +75840,8 @@
     "hammerUniqueId": "15358"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "725248955",
     "precomputedsubfrusta": "6",
@@ -76010,7 +75868,7 @@
     "precomputedobbextent": "409.628052 453.046143 188.371521",
     "precomputedobbangles": "0.000000 0.000000 -13.000000",
     "precomputedobborigin": "-1050.507935 -6775.453125 107.411743",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -76048,7 +75906,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.511719",
     "brightness": "-0.964844",
@@ -76068,8 +75926,7 @@
     "origin": "-1037.000000 -6707.000000 233.588257",
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "15359",
-    "precomputed_vis_clusters": "323 329 333 334 338 348 356 380 385 389 392 394 397 403 407 417 422 428 430 431 434 435 442 444"
+    "hammerUniqueId": "15359"
   },
   {
     "cpoint7_parent": "0",
@@ -76353,7 +76210,7 @@
     "hammerUniqueId": "15364"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1333603189",
     "precomputedsubfrusta": "6",
@@ -76439,7 +76296,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15365",
-    "precomputed_vis_clusters": "253 323 329 334 338 356 444 445"
+    "precomputed_vis_clusters": "247 292 323 342 343 351 440 441"
   },
   {
     "precomputedsubfrusta": "6",
@@ -77695,7 +77552,7 @@
     "angles": "0.000000 120.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15391",
-    "precomputed_vis_clusters": "253 323 329 333 334 338 348 356 380 383 385 387 389 394 397 407 417 427 428 430 431 434 435 442 443 444"
+    "precomputed_vis_clusters": "247 292 323 329 341 342 343 351 378 381 383 386 389 391 395 403 414 416 418 424 425 428 429 431 433 440"
   },
   {
     "cpoint7_parent": "0",
@@ -78208,7 +78065,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15425",
-    "precomputed_vis_clusters": "24 26 28 32 34 39 43 44 45 49 54 55 61 69 132 183 249 250 251 261 268 269 272 277 290 297 298 299 301 302 305 309 315 323"
+    "precomputed_vis_clusters": "27 34 40 43 46 52 53 55 59 60 62 63 65 66 121 147 243 244 245 254 261 262 265 270 282 291 292 293 295 300 303 305 312 315"
   },
   {
     "cpoint7_parent": "0",
@@ -79437,7 +79294,8 @@
     "hammerUniqueId": "15444"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "217269876",
     "precomputedsubfrusta": "6",
@@ -79464,7 +79322,7 @@
     "precomputedobbextent": "133.367371 458.744873 125.888214",
     "precomputedobbangles": "-0.000000 -5.000000 4.000000",
     "precomputedobborigin": "-1355.188965 -6696.620117 485.442780",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -79502,7 +79360,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.199219",
     "brightness": "-2.320310",
@@ -79522,8 +79380,7 @@
     "origin": "-1353.000000 -6664.000000 571.000000",
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "15445",
-    "precomputed_vis_clusters": "290 331 340 343 381 401 418"
+    "hammerUniqueId": "15445"
   },
   {
     "cpoint7_parent": "0",
@@ -79622,7 +79479,7 @@
     "hammerUniqueId": "15447"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "317177251",
     "precomputedsubfrusta": "6",
@@ -79708,7 +79565,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15448",
-    "precomputed_vis_clusters": "261 268 272 290 299 301 302 305 309 328 331 340 343 381 401"
+    "precomputed_vis_clusters": "254 261 265 291 295 300 303 305 312 322 328 333 336 379 397"
   },
   {
     "precomputedsubfrusta": "6",
@@ -81140,7 +80997,7 @@
     "hammerUniqueId": "15465"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1495874821",
     "precomputedsubfrusta": "6",
@@ -81226,7 +81083,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15466",
-    "precomputed_vis_clusters": "331 381 418 650 651 652 654 655 656 657 658 665"
+    "precomputed_vis_clusters": "333 375 379 641 642 643 645 646 647 648 651"
   },
   {
     "cpoint7_parent": "0",
@@ -81510,7 +81367,7 @@
     "hammerUniqueId": "15471"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-2093969434",
     "precomputedsubfrusta": "6",
@@ -81596,7 +81453,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15472",
-    "precomputed_vis_clusters": "642 644 650 658 660 661 662 663 664 665 666 667"
+    "precomputed_vis_clusters": "633 635 641 648 650 651 652 653 654 655 656 657"
   },
   {
     "cpoint7_parent": "0",
@@ -81695,7 +81552,7 @@
     "hammerUniqueId": "15474"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "921548916",
     "precomputedsubfrusta": "6",
@@ -81781,7 +81638,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15475",
-    "precomputed_vis_clusters": "637 638 642 644 660 661 824 828"
+    "precomputed_vis_clusters": "628 629 633 635 650 654 820 824"
   },
   {
     "cpoint7_parent": "0",
@@ -81880,7 +81737,7 @@
     "hammerUniqueId": "15477"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-642582833",
     "precomputedsubfrusta": "6",
@@ -81966,7 +81823,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15478",
-    "precomputed_vis_clusters": "650 651 652 653 656 659 660 662 663 664 665 666 667 668 669 670 671"
+    "precomputed_vis_clusters": "641 642 643 644 649 650 651 652 653 655 656 657 658 659 660 661"
   },
   {
     "cpoint7_parent": "0",
@@ -82151,7 +82008,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15484",
-    "precomputed_vis_clusters": "418 650 651 652 653 655 656 659 660 663 664 668 669"
+    "precomputed_vis_clusters": "375 641 642 643 644 646 649 650 653 655 658 659"
   },
   {
     "cpoint7_parent": "0",
@@ -82250,7 +82107,7 @@
     "hammerUniqueId": "15494"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1524819536",
     "precomputedsubfrusta": "6",
@@ -82336,7 +82193,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15495",
-    "precomputed_vis_clusters": "634 635 636 637 638 639 640 642 643 644 646 648 821 822 823 824 828 831"
+    "precomputed_vis_clusters": "625 626 627 628 629 630 631 633 634 635 637 639 817 818 819 820 824 827"
   },
   {
     "precomputedsubfrusta": "6",
@@ -84526,7 +84383,7 @@
     "hammerUniqueId": "15560"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1132011562",
     "precomputedsubfrusta": "6",
@@ -84612,7 +84469,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15561",
-    "precomputed_vis_clusters": "635 641 647 826 827 828 830 848 849 850"
+    "precomputed_vis_clusters": "626 632 638 822 823 824 826 846 847 848"
   },
   {
     "cpoint7_parent": "0",
@@ -84711,7 +84568,7 @@
     "hammerUniqueId": "15563"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1943472331",
     "precomputedsubfrusta": "6",
@@ -84797,7 +84654,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15564",
-    "precomputed_vis_clusters": "647 826 827 830 839 848 849 850"
+    "precomputed_vis_clusters": "638 822 823 826 841 846 847 848"
   },
   {
     "cpoint7_parent": "0",
@@ -84896,7 +84753,7 @@
     "hammerUniqueId": "15566"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-359860244",
     "precomputedsubfrusta": "6",
@@ -84982,7 +84839,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15567",
-    "precomputed_vis_clusters": "635 641 647 826 827 828 830 848 849 850"
+    "precomputed_vis_clusters": "626 632 638 822 823 824 826 846 847 848"
   },
   {
     "cpoint7_parent": "0",
@@ -85167,7 +85024,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15570",
-    "precomputed_vis_clusters": "709 713 739 746 748 755 757 768 769 770 771 772 779 794 799"
+    "precomputed_vis_clusters": "698 703 729 730 732 741 745 746 751 760 771 777 787 791"
   },
   {
     "cpoint7_parent": "0",
@@ -88627,7 +88484,7 @@
     "angles": "89.999977 179.999985 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15655",
-    "precomputed_vis_clusters": "471 480 481 508 554 558 559"
+    "precomputed_vis_clusters": "466 475 476 503 548 549 551"
   },
   {
     "cpoint7_parent": "0",
@@ -88745,11 +88602,11 @@
     "precomputedobbextent0": "26.058228 26.060181 12.564423",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "-3285.999023 -3727.675293 -728.501953",
-    "precomputedboundsmaxs": "-2685.978760 -3471.354980 -114.967224",
+    "precomputedboundsmaxs": "-2685.978760 -3474.788574 -114.967224",
     "precomputedboundsmins": "-3476.587891 -4327.648438 -773.334351",
-    "precomputedobbextent": "407.746094 400.070801 317.263916",
-    "precomputedobbangles": "3.000000 6.000000 -1.000000",
-    "precomputedobborigin": "-3059.752930 -3899.960693 -439.440674",
+    "precomputedobbextent": "407.746094 396.742432 319.457703",
+    "precomputedobbangles": "3.000000 6.000000 -2.000000",
+    "precomputedobborigin": "-3059.844971 -3898.353271 -437.987579",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -91251,7 +91108,7 @@
     "angles": "0.000000 0.000000 89.999985",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15744",
-    "precomputed_vis_clusters": "707 709 713 714 715 760 766 771 782 789 790 791 796 803 804 846 853 854 856"
+    "precomputed_vis_clusters": "696 698 699 702 703 743 756 768 777 780 783 784 788 796 798 830 852 854"
   },
   {
     "cpoint7_parent": "0",
@@ -91436,7 +91293,7 @@
     "angles": "0.000000 0.000000 89.999985",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15747",
-    "precomputed_vis_clusters": "760 766 782 789 803 804 846 852 853 854 856"
+    "precomputed_vis_clusters": "743 756 768 780 796 798 830 852 854 855"
   },
   {
     "expand_render_bounds_to_include_cloth": "0",
@@ -92555,7 +92412,7 @@
     "angles": "0.000000 225.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "15990",
-    "precomputed_vis_clusters": "559 560 709 713 739 746 748 755 757 768 769 770 771 794"
+    "precomputed_vis_clusters": "551 553 698 703 729 730 732 741 745 746 751 771 777 787"
   },
   {
     "cpoint7_parent": "0",
@@ -93055,7 +92912,7 @@
     "angles": "0.000000 104.999985 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16004",
-    "precomputed_vis_clusters": "559 560 561 625 631 633 684 696 700 707 709 713 715 723 733 736 739 754 755 762 765 768 771 772 773 777 778 779 781 784 786 842 845"
+    "precomputed_vis_clusters": "551 553 554 613 621 623 672 690 696 698 702 703 711 722 723 726 730 742 745 751 752 755 760 761 762 764 765 766 769 770 776 777 829 842"
   },
   {
     "cpoint7_parent": "0",
@@ -93631,7 +93488,7 @@
     "angles": "0.000000 119.999985 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16014",
-    "precomputed_vis_clusters": "471 480 481 550 554 558 684 685 690 696 700 702 707 709 716 721 722 723 725 732 733 735 736 755"
+    "precomputed_vis_clusters": "466 475 476 543 548 549 672 673 685 689 690 696 698 704 709 710 711 721 722 723 725 726 745"
   },
   {
     "cpoint7_parent": "0",
@@ -94603,7 +94460,7 @@
     "angles": "0.000000 240.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16038",
-    "precomputed_vis_clusters": "471 480 481 508 550 554 555 558 559 684 696 700 702 733"
+    "precomputed_vis_clusters": "466 475 476 503 542 543 548 549 551 672 689 690 722 723"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -97100,7 +96957,7 @@
     "angles": "0.000000 59.999977 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16118",
-    "precomputed_vis_clusters": "743 791 801 803 804 808 812 813 815 817 818 874 881 882 896 898 900"
+    "precomputed_vis_clusters": "734 784 793 796 798 802 804 805 806 807 812 876 883 884 900 901 905"
   },
   {
     "bakedshadowindex": "2",
@@ -97174,7 +97031,7 @@
     "angles": "0.000000 225.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16119",
-    "precomputed_vis_clusters": "743 789 804 808 812 813 817 818 846 852 853 854 856 865 867 868 874 881 882 896 897 898 899 900 934 938 944 965 967 969 976 977 978 980 981"
+    "precomputed_vis_clusters": "734 780 798 802 804 805 807 812 830 852 854 855 866 869 870 876 883 884 900 901 902 905 945 946 949 950 971 973 974 975 976 980 981 984"
   },
   {
     "cpoint7_parent": "0",
@@ -98179,7 +98036,7 @@
     "angles": "0.000000 270.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16139",
-    "precomputed_vis_clusters": "740 741 750 753 758 760 761 763 767 783 785 788 793 797 800 805 844 857"
+    "precomputed_vis_clusters": "733 735 736 743 748 754 757 758 759 767 773 779 786 789 792 797 832 844 850"
   },
   {
     "cpoint7_parent": "0",
@@ -98364,7 +98221,7 @@
     "angles": "0.000000 270.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16142",
-    "precomputed_vis_clusters": "740 741 753 760 763 767 783 785 787 788 793 797 800 805 837 840 841 844 855 857 858"
+    "precomputed_vis_clusters": "733 735 743 748 754 758 759 767 773 775 779 786 789 797 832 838 839 840 844 845 850 856 857"
   },
   {
     "cpoint7_parent": "0",
@@ -102651,9 +102508,9 @@
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-411566725",
     "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "237.463867 185.752136 125.092148",
+    "precomputedobbextent5": "237.463867 184.766663 125.092148",
     "precomputedobbangles5": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin5": "-3888.419678 -904.387939 176.520370",
+    "precomputedobborigin5": "-3887.722900 -905.084717 176.520370",
     "precomputedobbextent4": "181.473755 261.041229 136.554932",
     "precomputedobbangles4": "45.000004 0.000000 0.000000",
     "precomputedobborigin4": "-3557.486816 -863.374878 40.796143",
@@ -104166,7 +104023,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16275",
-    "precomputed_vis_clusters": "873 876 877 879 883 884 885 886 888 890 891 892 893 895 905 906 907 910 911 913 915 919 920 921 923 924 925 926 927 928 930 931 932 936 940 946 947 948 954 3334 3364 3365"
+    "precomputed_vis_clusters": "875 878 879 881 885 887 890 891 892 893 894 896 897 898 907 910 911 914 915 916 919 920 923 924 925 926 927 928 929 931 933 934 935 937 939 944 951 952 958 3327 3357 3358"
   },
   {
     "precomputedsubfrusta": "6",
@@ -104410,7 +104267,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16279",
-    "precomputed_vis_clusters": "873 890 893 894 925 928 930 931 932 960 3334 3364 3365 3366"
+    "precomputed_vis_clusters": "875 892 895 896 927 931 933 934 935 965 3327 3357 3358 3359"
   },
   {
     "precomputedsubfrusta": "6",
@@ -105266,7 +105123,7 @@
     "angles": "89.999969 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16295",
-    "precomputed_vis_clusters": "932 3364 3365"
+    "precomputed_vis_clusters": "934 3357 3358"
   },
   {
     "cpoint7_parent": "0",
@@ -105451,7 +105308,7 @@
     "angles": "89.999969 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16298",
-    "precomputed_vis_clusters": "928 930 932 3364"
+    "precomputed_vis_clusters": "931 933 934 3357"
   },
   {
     "cpoint7_parent": "0",
@@ -105636,7 +105493,7 @@
     "angles": "89.999969 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16301",
-    "precomputed_vis_clusters": "928 930 932 3364"
+    "precomputed_vis_clusters": "931 933 934 3357"
   },
   {
     "cpoint7_parent": "0",
@@ -106006,7 +105863,8 @@
     "hammerUniqueId": "16319"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1417546632",
     "precomputedsubfrusta": "6",
@@ -106033,7 +105891,7 @@
     "precomputedobbextent": "361.368286 295.106201 119.573944",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "-3563.730957 -1445.064575 119.500900",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -106071,7 +105929,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.511719",
     "brightness": "-0.964844",
@@ -106091,8 +105949,7 @@
     "origin": "-3555.822266 -1596.750977 213.588257",
     "angles": "0.000000 270.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16320",
-    "precomputed_vis_clusters": "895 904 905 917 919 925 928 930"
+    "hammerUniqueId": "16320"
   },
   {
     "cpoint7_parent": "0",
@@ -106472,8 +106329,7 @@
     "hammerUniqueId": "16327"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-175225700",
     "precomputedsubfrusta": "6",
@@ -106500,7 +106356,7 @@
     "precomputedobbextent": "301.552490 220.657593 246.740662",
     "precomputedobbangles": "6.000000 25.000000 5.000000",
     "precomputedobborigin": "-3352.111328 -1628.354858 248.146683",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -106538,7 +106394,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.042969",
     "brightness": "-4.539060",
@@ -106558,7 +106414,8 @@
     "origin": "-3277.571777 -1629.186768 87.013847",
     "angles": "89.999962 240.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16328"
+    "hammerUniqueId": "16328",
+    "precomputed_vis_clusters": "897 898 914 915 920 927"
   },
   {
     "cpoint7_parent": "0",
@@ -106743,7 +106600,7 @@
     "angles": "89.999969 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16332",
-    "precomputed_vis_clusters": "3364 3365 3366"
+    "precomputed_vis_clusters": "3357 3358 3359"
   },
   {
     "cpoint7_parent": "0",
@@ -107298,7 +107155,7 @@
     "angles": "0.000000 240.000000 89.999969",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16342",
-    "precomputed_vis_clusters": "893 894 931 3334 3364 3365"
+    "precomputed_vis_clusters": "895 896 935 3327 3357 3358"
   },
   {
     "cpoint7_parent": "0",
@@ -108038,7 +107895,7 @@
     "angles": "29.999996 60.000061 -89.999947",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16354",
-    "precomputed_vis_clusters": "886 887 890 891 893 894 931 940 948 954 956 957 960 963"
+    "precomputed_vis_clusters": "887 889 892 894 895 896 935 939 952 958 961 962 965 968"
   },
   {
     "bakedshadowindex": "-1",
@@ -115050,7 +114907,7 @@
     "angles": "0.000000 270.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16530",
-    "precomputed_vis_clusters": "1027 1032 1089 1095 1097 1103 1120 1121 1122 1123 1124 1127 1131 1134"
+    "precomputed_vis_clusters": "1043 1063 1107 1108 1110 1116 1133 1134 1135 1138 1140 1142 1145"
   },
   {
     "cpoint7_parent": "0",
@@ -115235,7 +115092,7 @@
     "angles": "0.000000 270.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16533",
-    "precomputed_vis_clusters": "1097 1120 1121 1122 1123 1124 1127 1129 1130 1131 1134 1199 1204 1211 1216 1217"
+    "precomputed_vis_clusters": "1107 1110 1133 1134 1135 1138 1140 1141 1142 1145 1205 1211 1216 1221 1222"
   },
   {
     "cpoint7_parent": "0",
@@ -115334,7 +115191,7 @@
     "hammerUniqueId": "16534"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-385048675",
     "precomputedsubfrusta": "6",
@@ -115420,7 +115277,7 @@
     "angles": "0.000000 270.000000 89.999977",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16536",
-    "precomputed_vis_clusters": "1097 1120 1121 1134 1198 1199 1200 1202 1203 1204 1210 1211 1216 1217 1219 1438 1441 1445"
+    "precomputed_vis_clusters": "1110 1133 1145 1204 1205 1206 1208 1209 1211 1216 1221 1222 1224 1442 1445 1449"
   },
   {
     "cpoint7_parent": "0",
@@ -115615,7 +115472,7 @@
     "hammerUniqueId": "16538"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-2014797177",
     "precomputedboundsmaxs": "2671.304443 -3437.746094 914.109558",
@@ -115686,7 +115543,7 @@
     "angles": "0.000000 74.999977 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16540",
-    "precomputed_vis_clusters": "1097 1120 1121 1129 1130 1198 1199 1200 1202 1203 1210 1211 1216 1217 1219 1433 1437 1438 1441 1445 1446 1453 1459 1460 1466 1473 1475"
+    "precomputed_vis_clusters": "1110 1133 1140 1141 1204 1205 1206 1208 1209 1216 1221 1222 1224 1437 1441 1442 1445 1449 1450 1456 1462 1463 1469 1476 1478"
   },
   {
     "lightprobetexture_sh2_l1": "",
@@ -121348,10 +121205,10 @@
   },
   {
     "precomputedboundsmaxs": "3095.472412 -5155.303711 14.062505",
-    "precomputedboundsmins": "2435.854736 -5889.176758 -505.154968",
-    "precomputedobbextent": "260.381470 366.936523 314.223511",
+    "precomputedboundsmins": "2435.854736 -5889.179199 -505.154968",
+    "precomputedobbextent": "260.349915 366.937744 314.223511",
     "precomputedobbangles": "-45.000004 0.000000 0.000000",
-    "precomputedobborigin": "2727.895996 -5522.240234 -376.218140",
+    "precomputedobborigin": "2727.918457 -5522.241211 -376.195801",
     "precomputedfieldsvalid": "1",
     "forceshadowsenabled": "0",
     "light_style_target3": "",
@@ -122961,7 +122818,7 @@
     "hammerUniqueId": "16790"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1620469319",
     "precomputedsubfrusta": "6",
@@ -123047,7 +122904,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16791",
-    "precomputed_vis_clusters": "1526 3335 3384"
+    "precomputed_vis_clusters": "1527 3328 3379"
   },
   {
     "cpoint7_parent": "0",
@@ -123146,7 +123003,8 @@
     "hammerUniqueId": "16793"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-102060066",
     "precomputedsubfrusta": "6",
@@ -123173,7 +123031,7 @@
     "precomputedobbextent": "268.130127 342.009369 150.067307",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "278.937805 -98.854942 194.998978",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -123211,7 +123069,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.199219",
     "brightness": "-2.320310",
@@ -123231,8 +123089,7 @@
     "origin": "319.750977 -234.822266 313.588257",
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16794",
-    "precomputed_vis_clusters": "1017 1526 3384"
+    "hammerUniqueId": "16794"
   },
   {
     "lightprobetexture_sh2_l1": "",
@@ -123273,8 +123130,7 @@
     "light_probe_atlas_Z": "29"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1782038436",
     "precomputedboundsmaxs": "547.069031 231.566910 316.561646",
@@ -123282,7 +123138,7 @@
     "precomputedobbextent": "267.612061 336.295380 135.815430",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "279.456970 -104.728477 180.746216",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "forceshadowsenabled": "0",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -123326,7 +123182,7 @@
     "colortemperature": "7589.000000",
     "color": "228 234 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "1.589840",
     "brightness": "0.667969",
@@ -123344,10 +123200,11 @@
     "origin": "320.000000 -234.000000 316.499146",
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "16799"
+    "hammerUniqueId": "16799",
+    "precomputed_vis_clusters": "1028 1527 3379"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-751512734",
     "precomputedboundsmaxs": "547.069214 370.069275 316.561646",
@@ -123418,7 +123275,7 @@
     "angles": "89.999985 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16800",
-    "precomputed_vis_clusters": "1526 3335 3384"
+    "precomputed_vis_clusters": "1527 3328 3379"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -124540,7 +124397,7 @@
     "orientationtype": "1",
     "velocitytype": "0",
     "speed": "0",
-    "startspeed": "25",
+    "startspeed": "35",
     "target": "[PR#]obj_dt_1",
     "spawnflags": "0",
     "disableshadows": "0",
@@ -127218,7 +127075,7 @@
     "targetname": "[PR#]ex_1",
     "vscripts": "",
     "classname": "env_explosion",
-    "origin": "-2010.500366 -6569.795410 563.000000",
+    "origin": "-1995.500366 -6533.795410 563.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17054"
@@ -127264,7 +127121,7 @@
     "targetname": "[PR#]obj_ex_1",
     "vscripts": "",
     "classname": "func_breakable",
-    "origin": "-2010.500244 -6589.500000 563.500000",
+    "origin": "-1995.500244 -6553.500000 563.500000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17056",
@@ -127303,7 +127160,7 @@
     "targetname": "[PR#]ex1",
     "vscripts": "",
     "classname": "trigger_multiple",
-    "origin": "-2010.000000 -6568.000000 572.000000",
+    "origin": "-1995.000000 -6532.000000 572.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17057",
@@ -127740,7 +127597,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17076",
-    "precomputed_vis_clusters": "559 707 709 713 714 715 760 766 771 782 789"
+    "precomputed_vis_clusters": "551 696 698 699 702 703 743 756 768 777 780"
   },
   {
     "physdamagescale": "1.000000",
@@ -129428,7 +129285,7 @@
     "orientationtype": "1",
     "velocitytype": "0",
     "speed": "0",
-    "startspeed": "20",
+    "startspeed": "25",
     "target": "[PR#]obj_dt_4",
     "spawnflags": "0",
     "disableshadows": "0",
@@ -130180,7 +130037,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17221",
-    "precomputed_vis_clusters": "1379 1381 1382 1383 1385 1386 1387 1388 1390 1391 1393 1395 1399"
+    "precomputed_vis_clusters": "1384 1386 1387 1388 1390 1391 1392 1393 1395 1396 1398 1401 1403"
   },
   {
     "forcenpcexclude": "0",
@@ -134142,7 +133999,7 @@
     "angles": "45.000000 29.999996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17974",
-    "precomputed_vis_clusters": "1810 1813 1814 1821 1826 1830 1833 1837 1846 1848 1849 1850 1854 1859 1860 1861 1862 1864 1865 1871 1873 1874 1877 1878 1880 1881 1885 1889 1890 1982 2002 2003 2006 2013 2014 2018 2024 2026 2029 2037 2039 2044 2045 2047 2051 2052 2058 2060 2061 2063 2064 2066 2067 2069 2071 2076 2078 2084 2087 2088 2092 2094 2097 2100 2102 2103 2106 2109 2110 2112 2114 2116 2117 2120 2121 2123 2124 2133 2140 2143 2154 2155 2157 2164 2178 2183 2188 2232 2247 2256 2261 2262 2280 2281 2282 2284 2339 2607 2611"
+    "precomputed_vis_clusters": "1811 1814 1818 1821 1822 1824 1826 1832 1834 1836 1841 1846 1848 1859 1860 1863 1866 1868 1869 1873 1874 1877 1879 1880 1881 1882 1883 1891 1893 1894 1960 1973 1978 2010 2012 2014 2016 2017 2018 2028 2040 2044 2047 2050 2051 2056 2057 2059 2061 2063 2071 2073 2078 2079 2080 2081 2083 2084 2089 2092 2095 2096 2098 2099 2100 2101 2103 2107 2110 2111 2112 2115 2117 2120 2121 2122 2123 2125 2129 2137 2142 2150 2156 2157 2160 2173 2181 2187 2226 2239 2245 2264 2265 2266 2270 2276 2282 2338 2602 2606"
   },
   {
     "precomputedsubfrusta": "6",
@@ -134330,7 +134187,7 @@
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1402600525",
     "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "31.152344 31.157288 15.114166",
+    "precomputedobbextent5": "31.152344 31.157410 15.114166",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
     "precomputedobborigin5": "5045.011230 -1987.000488 683.954224",
     "precomputedobbextent4": "70.079834 29.087097 54.403503",
@@ -134342,9 +134199,9 @@
     "precomputedobbextent2": "236.141357 136.133545 75.086975",
     "precomputedobbangles2": "-0.000000 45.000004 0.000000",
     "precomputedobborigin2": "5308.165039 -1916.283813 623.991089",
-    "precomputedobbextent1": "139.959229 77.634949 75.082855",
+    "precomputedobbextent1": "139.959229 77.094055 75.082855",
     "precomputedobbangles1": "0.000000 -21.000000 0.000000",
-    "precomputedobborigin1": "4905.858887 -1957.535645 623.990601",
+    "precomputedobborigin1": "4906.052734 -1957.030640 623.990601",
     "precomputedobbextent0": "118.934326 83.041931 59.024872",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "5044.999023 -1980.958496 607.940186",
@@ -134412,7 +134269,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17979",
-    "precomputed_vis_clusters": "2029 2038 2039 2372 2376 2380 2383 2384 2385 2390 2391 2445"
+    "precomputed_vis_clusters": "1960 2016 2036 2368 2369 2373 2376 2378 2379 2380 2385 2386 2458"
   },
   {
     "precomputedsubfrusta": "6",
@@ -134571,7 +134428,7 @@
     "angles": "45.000000 29.999996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "17985",
-    "precomputed_vis_clusters": "2197 2199 2201 2204 2205 2208 2210 2211 2212 2214 2218 2221 2226 2229 2232 2234 2237 2238 2240 2285 2291 2294 2303 2311 2313 2315 2332 2337 2338 2350 2693 2698 2702 2703 2704 2705 2711 2712 2716 2717 2718 2719 2722 2726 2727 2732 2739 2740 2751 2753 2756 2759 2760 2762 2763 2765 2768 2772 2773 2774 2777 2834 2841"
+    "precomputed_vis_clusters": "2191 2192 2199 2200 2201 2205 2206 2207 2210 2213 2214 2219 2220 2226 2227 2228 2232 2234 2237 2289 2292 2295 2301 2308 2310 2314 2330 2336 2337 2348 2686 2691 2695 2696 2697 2702 2706 2707 2709 2710 2711 2712 2715 2716 2719 2726 2728 2729 2743 2746 2748 2750 2751 2753 2755 2756 2757 2758 2759 2760 2763 2767 2823 2829"
   },
   {
     "cpoint7_parent": "0",
@@ -135756,7 +135613,7 @@
     "hammerUniqueId": "18005"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1635269770",
     "precomputedsubfrusta": "6",
@@ -135766,23 +135623,23 @@
     "precomputedobbextent4": "51.054199 25.067627 51.054352",
     "precomputedobbangles4": "-0.000000 0.000000 0.000000",
     "precomputedobborigin4": "6127.027832 -1185.005127 895.899902",
-    "precomputedobbextent3": "128.030518 229.154694 110.294739",
-    "precomputedobbangles3": "-0.000000 -8.000000 -5.000000",
-    "precomputedobborigin3": "6176.181152 -936.827271 851.552979",
-    "precomputedobbextent2": "45.752197 73.035034 147.508362",
-    "precomputedobbangles2": "-0.000000 -45.000004 33.999996",
-    "precomputedobborigin2": "6226.079102 -1124.551025 835.526123",
+    "precomputedobbextent3": "236.801025 139.364746 109.372620",
+    "precomputedobbangles3": "5.000000 45.000004 0.000000",
+    "precomputedobborigin3": "6190.113281 -898.898315 847.661072",
+    "precomputedobbextent2": "46.760498 77.365845 168.645874",
+    "precomputedobbangles2": "-45.000000 -0.000001 29.000002",
+    "precomputedobborigin2": "6255.412109 -1105.473389 833.546021",
     "precomputedobbextent1": "32.078613 58.070129 61.120697",
     "precomputedobbangles1": "-0.000000 0.000000 0.000000",
     "precomputedobborigin1": "6093.998535 -1152.004395 891.952881",
     "precomputedobbextent0": "104.012695 97.024170 71.026886",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "6165.911621 -1113.051758 823.938110",
-    "precomputedboundsmaxs": "6300.167969 -829.918091 953.074219",
-    "precomputedboundsmins": "6061.869141 -1210.074707 752.914429",
-    "precomputedobbextent": "119.149414 190.078308 100.079895",
-    "precomputedobbangles": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin": "6181.018555 -1019.996399 852.994324",
+    "precomputedboundsmaxs": "6361.452148 -732.071777 953.074219",
+    "precomputedboundsmins": "6061.869141 -1210.074707 720.312500",
+    "precomputedobbextent": "157.373535 240.722046 109.227478",
+    "precomputedobbangles": "3.999999 0.000000 -1.000000",
+    "precomputedobborigin": "6212.056152 -971.167908 843.671692",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -135842,7 +135699,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18006",
-    "precomputed_vis_clusters": "2539 2628"
+    "precomputed_vis_clusters": "2538 2620"
   },
   {
     "bakedshadowindex": "1",
@@ -135916,7 +135773,7 @@
     "angles": "45.000000 29.999996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18008",
-    "precomputed_vis_clusters": "2652 2661 2687 3067 3092 3096 3098 3114 3120 3122 3123 3124 3125 3126 3127 3129 3131 3133 3134 3137 3145 3148 3150 3154 3160 3163 3169 3173 3174 3181 3182 3183 3185 3186 3188 3190 3191 3193 3194 3195 3197 3198 3199 3200 3201 3202 3203 3204 3208 3209 3210 3212 3213 3215 3216 3217 3218 3220 3221 3222 3223 3224 3229 3231 3232 3233 3234 3239 3240 3245 3250 3252 3254 3268 3270 3271 3272 3273 3277 3278 3279 3285 3286 3287 3289 3290 3292 3293 3314 3315 3316 3318 3319 3321 3322 3323 3605 3619 3694 3695 3696 3697 3698 3699 3700 3701 3702 3703 3704 3705 3712 3713 3714 3715 3723 3724 3727 3728 3729 3730 3731 3732 3735 3736 3737 3738 3739 3740 3741 3742 3757 3765 3775 3779 3788 3789 3797 3801 3802 3803 3804 3805 3806 3807 3808 3810 3812 3817 3819 3820 3825 3829 3830 3875"
+    "precomputed_vis_clusters": "2639 2656 2679 3073 3074 3087 3089 3103 3105 3126 3127 3128 3132 3133 3135 3146 3147 3150 3151 3159 3160 3161 3162 3163 3164 3165 3166 3167 3169 3171 3172 3173 3175 3176 3178 3179 3181 3183 3184 3185 3188 3190 3191 3192 3193 3194 3195 3196 3197 3198 3199 3202 3204 3205 3208 3209 3210 3212 3213 3214 3215 3217 3219 3224 3225 3226 3227 3228 3229 3233 3237 3239 3241 3243 3262 3263 3264 3265 3269 3274 3275 3276 3278 3279 3281 3282 3283 3284 3286 3287 3308 3310 3311 3312 3314 3315 3316 3608 3610 3690 3691 3692 3693 3694 3695 3696 3697 3698 3700 3701 3708 3710 3711 3712 3721 3723 3725 3726 3727 3728 3729 3730 3733 3734 3735 3736 3737 3738 3739 3740 3753 3755 3770 3775 3785 3786 3791 3794 3799 3800 3801 3802 3803 3804 3805 3807 3809 3813 3815 3816 3823 3825 3828 3869"
   },
   {
     "precomputedsubfrusta": "6",
@@ -136075,7 +135932,7 @@
     "angles": "44.999996 285.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18011",
-    "precomputed_vis_clusters": "2616 2644 2645 2647 2648 2649 2650 2651 2652 2653 2654 2656 2657 2659 2660 2661 2681 2682 2683 2684 2685 2686 2687 2688 2689 3068 3070 3077 3091 3094 3113 3114 3122 3123 3124 3127 3128 3130 3131 3132 3133 3141 3161 3175 3176 3177 3178 3179 3180 3181 3182 3183 3184 3185 3186 3191 3193 3198 3199 3200 3201 3202 3203 3204 3205 3206 3207 3208 3209 3210 3211 3212 3213 3215 3216 3217 3218 3220 3221 3222 3270 3284 3285 3286 3287 3289 3290 3293 3294 3314 3315 3316 3317 3322 3600 3605 3606 3607 3610 3611 3612 3613 3619 3620 3621 3622 3624 3627 3629 3630 3643 3646 3656 3694 3695 3696 3697 3698 3700 3701 3702 3703 3704 3705 3706 3707 3708 3709 3710 3711 3712 3713 3714 3715 3718 3719 3720 3721 3722 3723 3729 3730 3731 3732 3740 3741 3746 3757 3765 3775 3779 3789 3797 3802 3805"
+    "precomputed_vis_clusters": "2611 2638 2639 2640 2641 2642 2643 2644 2645 2650 2652 2653 2654 2655 2656 2674 2675 2676 2677 2678 2679 2680 2682 2683 3069 3071 3075 3077 3079 3098 3103 3114 3136 3148 3154 3155 3156 3157 3158 3159 3160 3161 3163 3165 3166 3168 3169 3170 3171 3173 3174 3175 3176 3178 3183 3190 3191 3192 3193 3194 3195 3196 3197 3198 3199 3200 3201 3202 3204 3205 3206 3207 3208 3209 3210 3212 3213 3214 3215 3263 3278 3279 3280 3281 3282 3283 3284 3286 3290 3308 3309 3310 3311 3595 3597 3600 3602 3603 3606 3607 3608 3609 3610 3614 3615 3618 3619 3620 3623 3624 3638 3646 3650 3690 3691 3692 3693 3694 3696 3697 3698 3699 3700 3701 3702 3703 3704 3705 3706 3707 3708 3709 3710 3711 3712 3713 3717 3718 3719 3720 3723 3727 3728 3729 3730 3736 3739 3747 3753 3755 3770 3775 3786 3794 3799 3801"
   },
   {
     "precomputedsubfrusta": "6",
@@ -136183,10 +136040,10 @@
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "1064.991699 -720.998657 91.552299",
     "precomputedboundsmaxs": "1395.933716 -133.395630 210.341354",
-    "precomputedboundsmins": "626.994202 -1256.833252 45.025223",
-    "precomputedobbextent": "291.777405 600.046204 82.658066",
-    "precomputedobbangles": "0.000000 -28.999998 0.000000",
-    "precomputedobborigin": "1152.954468 -769.736450 127.683289",
+    "precomputedboundsmins": "614.959229 -1256.833252 45.025223",
+    "precomputedobbextent": "294.083618 600.038452 82.658066",
+    "precomputedobbangles": "0.000000 -30.000000 0.000000",
+    "precomputedobborigin": "1151.706055 -771.079102 127.683289",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -136467,7 +136324,7 @@
     "angles": "89.999962 240.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18090",
-    "precomputed_vis_clusters": "893 931 3334 3364 3365"
+    "precomputed_vis_clusters": "896 935 3327 3357 3358"
   },
   {
     "skipPreSettle": "0",
@@ -136549,8 +136406,8 @@
     "parentAttachmentName": "",
     "parentname": "",
     "classname": "prop_physics",
-    "origin": "4901.050293 -998.901855 549.039734",
-    "angles": "0.000000 43.291386 0.000000",
+    "origin": "4901.014160 -998.834717 549.038025",
+    "angles": "0.000000 43.268883 0.003403",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18094"
   },
@@ -140033,7 +139890,7 @@
     "vscripts": "",
     "effect_name": "particles/ztp/ztp_3.vpcf",
     "classname": "info_particle_system",
-    "origin": "-2923.000000 -3049.000000 885.000000",
+    "origin": "-2923.000000 -3034.000000 885.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "18345"
@@ -145273,53 +145130,6 @@
     ]
   },
   {
-    "physdamagescale": "1.000000",
-    "_minlight": "",
-    "overrideBlockLOS": "0",
-    "gamemass": "0",
-    "minhealthdmg": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "pressuredelay": "0.000000",
-    "explodemagnitude": "0",
-    "spawnobject": "0",
-    "nodamageforces": "0",
-    "explosion": "0",
-    "material": "2",
-    "health": "0",
-    "propdata": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "disableshadows": "0",
-    "damagefilter": "",
-    "spawnflags": "0",
-    "globalname": "",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "[PR#]bc_door_1",
-    "vscripts": "",
-    "classname": "func_breakable",
-    "origin": "-3195.760498 -6789.884277 -1193.500732",
-    "angles": "0.000000 349.766846 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18703",
-    "model": "maps/ze_obj_prison/entities/bc_door_1_18703.vmdl"
-  },
-  {
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -147711,8 +147521,7 @@
     "hammerUniqueId": "18865"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1687944009",
     "precomputedsubfrusta": "6",
@@ -147739,7 +147548,7 @@
     "precomputedobbextent": "289.727905 303.520996 81.224808",
     "precomputedobbangles": "1.000000 0.000000 -2.000000",
     "precomputedobborigin": "-2126.678223 -7419.070801 369.541199",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -147777,7 +147586,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.511719",
     "brightness": "-0.964844",
@@ -147797,7 +147606,8 @@
     "origin": "-2034.000000 -7614.000000 417.000000",
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "18866"
+    "hammerUniqueId": "18866",
+    "precomputed_vis_clusters": "27 40 43 46 53 55 60 62 65 121 192 244 245 254 261 262 265 270 282 291 292 295 300 303 312"
   },
   {
     "precomputedsubfrusta": "6",
@@ -149744,7 +149554,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19184",
-    "precomputed_vis_clusters": "1810 1881 1989 2006 2029 2044 2047 2054 2058 2064 2071 2072 2076 2079 2086 2088 2094 2102 2107 2109 2120 2121"
+    "precomputed_vis_clusters": "1811 1874 1960 2018 2026 2044 2050 2052 2059 2071 2073 2076 2078 2083 2084 2089 2093 2098 2104 2110 2111 2118 2122 2125"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -149765,7 +149575,7 @@
     "targetname": "",
     "vscripts": "",
     "classname": "trigger_teleport",
-    "origin": "-2923.500000 -3054.000000 885.500000",
+    "origin": "-2923.500000 -3039.000000 885.500000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19189",
@@ -149967,7 +149777,7 @@
     "hammerUniqueId": "19223"
   },
   {
-    "bakedshadowindex": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1050317560",
     "precomputedsubfrusta": "6",
@@ -149977,23 +149787,23 @@
     "precomputedobbextent4": "58.658447 41.553101 36.124161",
     "precomputedobbangles4": "0.000000 0.000000 -45.000004",
     "precomputedobborigin4": "5021.045898 -846.162109 708.063599",
-    "precomputedobbextent3": "107.126953 249.719910 111.793701",
+    "precomputedobbextent3": "105.317627 249.719910 111.793701",
     "precomputedobbangles3": "-0.000000 0.000000 19.999998",
-    "precomputedobborigin3": "5002.044922 -1141.080688 639.822388",
-    "precomputedobbextent2": "72.466797 94.687836 117.512817",
-    "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "4947.581055 -932.399292 683.570435",
+    "precomputedobborigin3": "5003.854492 -1141.080688 639.822388",
+    "precomputedobbextent2": "86.610718 73.951782 117.512817",
+    "precomputedobbangles2": "-0.000000 45.000004 0.000000",
+    "precomputedobborigin2": "4907.538574 -909.951416 683.570435",
     "precomputedobbextent1": "62.306152 50.293457 88.060883",
     "precomputedobbangles1": "0.000000 -45.000004 0.000000",
     "precomputedobborigin1": "5100.516602 -909.494141 711.898682",
-    "precomputedobbextent0": "117.001953 113.117157 81.027496",
+    "precomputedobbextent0": "117.000244 113.117157 81.027496",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "4992.110840 -950.830322 629.937500",
+    "precomputedobborigin0": "4992.112305 -950.830322 629.937500",
     "precomputedboundsmaxs": "5109.174316 -837.711487 801.083435",
-    "precomputedboundsmins": "4875.111816 -1398.295166 548.911743",
-    "precomputedobbextent": "117.031250 280.291840 126.085846",
+    "precomputedboundsmins": "4875.114746 -1398.295166 548.911743",
+    "precomputedobbextent": "117.029785 280.291840 126.085846",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin": "4992.143066 -1118.003296 674.997559",
+    "precomputedobborigin": "4992.144531 -1118.003296 674.997559",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -150053,7 +149863,7 @@
     "angles": "89.999992 180.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19224",
-    "precomputed_vis_clusters": "2417 2445 2448 2452 2459 2470 2471 2481 2483 2491 2496"
+    "precomputed_vis_clusters": "2422 2430 2433 2437 2458 2470 2477 2483 2485 2492 2497"
   },
   {
     "depth_render_offset": "0.125000",
@@ -151253,11 +151063,11 @@
     "precomputedobbextent1": "179.671875 227.024170 69.446045",
     "precomputedobbangles1": "-45.000004 0.000000 0.000000",
     "precomputedobborigin1": "2513.935303 -5662.112305 -90.941528",
-    "precomputedobbextent0": "241.973572 276.789062 250.030823",
-    "precomputedobbangles0": "-45.000004 0.000000 0.000000",
-    "precomputedobborigin0": "2695.697266 -5612.379395 -360.811523",
+    "precomputedobbextent0": "301.155029 222.170532 250.061157",
+    "precomputedobbangles0": "-0.000000 0.000000 45.000004",
+    "precomputedobborigin0": "2737.019775 -5669.278320 -346.830078",
     "precomputedboundsmaxs": "3034.997803 -5189.016602 42.567741",
-    "precomputedboundsmins": "2435.862061 -5889.167480 -505.076538",
+    "precomputedboundsmins": "2435.862061 -5889.168457 -505.076538",
     "precomputedobbextent": "299.567871 339.906738 279.529663",
     "precomputedobbangles": "0.000000 0.000000 -8.999999",
     "precomputedobborigin": "2735.429932 -5562.557617 -238.296021",
@@ -152339,7 +152149,7 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19292",
-    "precomputed_vis_clusters": "1515 1517 1519 1520 1548 1550 1554 1559 1561 1562 1566 1567 1594 1599 1608 1609 1610 1611 1612 1613 1614 1615 1616 1617 1618 1619"
+    "precomputed_vis_clusters": "1516 1518 1520 1521 1553 1560 1561 1564 1565 1568 1569 1570 1601 1604 1611 1612 1613 1614 1615 1616 1617 1618 1619 1620 1621 1622 1623 1624"
   },
   {
     "cpoint7_parent": "0",
@@ -152438,7 +152248,8 @@
     "hammerUniqueId": "19294"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-2108821439",
     "precomputedsubfrusta": "6",
@@ -152465,7 +152276,7 @@
     "precomputedobbextent": "235.080078 312.329041 100.602509",
     "precomputedobbangles": "-0.000000 0.000000 6.000000",
     "precomputedobborigin": "2107.000244 -75.050583 -382.907990",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -152503,7 +152314,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.101562",
     "brightness": "-3.320310",
@@ -152523,8 +152334,7 @@
     "origin": "2164.660889 2.000000 -323.000000",
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "19295",
-    "precomputed_vis_clusters": "1515 1517 1519 1520 1554 1608 1610 1615 3372 3373 3374 3393"
+    "hammerUniqueId": "19295"
   },
   {
     "cpoint7_parent": "0",
@@ -152623,19 +152433,19 @@
     "hammerUniqueId": "19297"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1488614025",
     "precomputedsubfrusta": "6",
     "precomputedobbextent5": "30.060547 30.060120 14.564323",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
     "precomputedobborigin5": "2164.657715 1.998530 -145.498169",
-    "precomputedobbextent4": "182.357056 122.863464 92.847069",
+    "precomputedobbextent4": "182.357056 122.863464 92.748741",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
-    "precomputedobborigin4": "1948.925537 44.068298 -223.766510",
-    "precomputedobbextent3": "88.246582 156.907867 103.711349",
+    "precomputedobborigin4": "1948.925537 44.068298 -223.668182",
+    "precomputedobbextent3": "88.246582 156.907867 103.644394",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin3": "2253.844971 21.828407 -234.636185",
+    "precomputedobborigin3": "2253.844971 21.828407 -234.569229",
     "precomputedobbextent2": "202.638489 200.325073 73.941963",
     "precomputedobbangles2": "15.000000 -46.000000 14.000002",
     "precomputedobborigin2": "2163.236572 -247.137207 -251.518478",
@@ -152709,7 +152519,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19298",
-    "precomputed_vis_clusters": "1515 1516 1517 1519 1554 1608 1610 1615 1616 3372 3373 3374 3393"
+    "precomputed_vis_clusters": "1516 1517 1518 1520 1560 1611 1614 1617 1618 3366 3367 3368 3389"
   },
   {
     "local.scales": "1.000000 1.000000 1.000000",
@@ -153030,7 +152840,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19311",
-    "precomputed_vis_clusters": "2372 2375 2376 2377 2378 2380 2381 2383 2384 2385 2390 2391 2445"
+    "precomputed_vis_clusters": "2368 2369 2372 2373 2376 2377 2378 2379 2380 2385 2386 2458"
   },
   {
     "cpoint7_parent": "0",
@@ -153129,16 +152939,16 @@
     "hammerUniqueId": "19313"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1310051224",
     "precomputedsubfrusta": "6",
     "precomputedobbextent5": "49.058105 49.057281 24.066956",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
     "precomputedobborigin5": "5015.003418 -937.000610 777.004456",
-    "precomputedobbextent4": "69.472656 94.687897 94.471344",
-    "precomputedobbangles4": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin4": "4944.589844 -932.394287 706.605103",
+    "precomputedobbextent4": "84.560303 71.765991 94.471252",
+    "precomputedobbangles4": "0.000000 -45.000004 0.000000",
+    "precomputedobborigin4": "4904.548340 -927.953003 706.605042",
     "precomputedobbextent3": "46.575195 93.434998 71.567352",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "5062.512695 -937.606995 729.507080",
@@ -153148,14 +152958,14 @@
     "precomputedobbextent1": "66.610107 70.207764 74.124176",
     "precomputedobbangles1": "-0.000000 45.000004 0.000000",
     "precomputedobborigin1": "5012.456055 -840.343750 726.948975",
-    "precomputedobbextent0": "117.009033 151.136841 101.076080",
+    "precomputedobbextent0": "117.008301 151.136841 101.076080",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "4992.111328 -988.847168 649.986450",
+    "precomputedobborigin0": "4992.112305 -988.847168 649.986450",
     "precomputedboundsmaxs": "5109.124512 -837.708008 801.075378",
-    "precomputedboundsmins": "4875.108398 -1286.004395 548.909790",
-    "precomputedobbextent": "117.008057 224.148193 126.082794",
+    "precomputedboundsmins": "4875.108398 -1286.004395 548.910400",
+    "precomputedobbextent": "117.008057 224.148193 126.082489",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin": "4992.116211 -1061.856201 674.992554",
+    "precomputedobborigin": "4992.116211 -1061.856201 674.992920",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -153215,7 +153025,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19314",
-    "precomputed_vis_clusters": "2445 2448 2452 2459 2470 2471 2481 2483 2491"
+    "precomputed_vis_clusters": "2430 2433 2437 2458 2470 2477 2483 2485 2492"
   },
   {
     "cpoint7_parent": "0",
@@ -153400,7 +153210,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19319",
-    "precomputed_vis_clusters": "1962 2003 2026 2029 2038 2039 2047 2068 2110 2115 2123 2372"
+    "precomputed_vis_clusters": "1960 1978 2009 2014 2016 2036 2039 2063 2078 2092 2105 2116 2368"
   },
   {
     "precomputedboundsmaxs": "5508.335938 -2337.599121 611.062500",
@@ -157680,7 +157490,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19477",
-    "precomputed_vis_clusters": "2652 2659 2661 2685 2687 3183 3201 3202 3203"
+    "precomputed_vis_clusters": "2639 2652 2656 2679 2683 3173 3194 3196 3204"
   },
   {
     "cpoint7_parent": "0",
@@ -157779,7 +157589,8 @@
     "hammerUniqueId": "19479"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "990627246",
     "precomputedsubfrusta": "6",
@@ -157806,7 +157617,7 @@
     "precomputedobbextent": "312.508789 441.906494 277.170563",
     "precomputedobbangles": "-3.999999 3.999999 -1.000000",
     "precomputedobborigin": "9810.720703 970.720642 426.110352",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -157844,7 +157655,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.257812",
     "brightness": "-1.953120",
@@ -157864,8 +157675,7 @@
     "origin": "10017.000000 923.014404 217.902527",
     "angles": "89.999977 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "19480",
-    "precomputed_vis_clusters": "3213 3696 3700 3727 3728 3736 3737 3738 3740 3741 3797 3817 3829"
+    "hammerUniqueId": "19480"
   },
   {
     "cpoint7_parent": "0",
@@ -158146,7 +157956,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19485",
-    "precomputed_vis_clusters": "3619 3624 3701 3703 3712 3722"
+    "precomputed_vis_clusters": "3610 3618 3697 3698 3699 3708 3719"
   },
   {
     "cpoint7_parent": "0",
@@ -158331,7 +158141,7 @@
     "angles": "89.999977 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19488",
-    "precomputed_vis_clusters": "3728 3736 3737 3738 3740 3741 3789 3794 3797 3817 3829 3866 3875"
+    "precomputed_vis_clusters": "3726 3733 3735 3736 3738 3739 3775 3793 3794 3816 3825 3853 3869"
   },
   {
     "cpoint7_parent": "0",
@@ -158430,8 +158240,7 @@
     "hammerUniqueId": "19490"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "406335856",
     "precomputedsubfrusta": "6",
@@ -158458,7 +158267,7 @@
     "precomputedobbextent": "289.391113 334.012024 277.799988",
     "precomputedobbangles": "1.000000 -0.000000 1.000000",
     "precomputedobborigin": "10022.205078 1676.474121 440.943268",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -158496,7 +158305,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.257812",
     "brightness": "-1.953120",
@@ -158516,7 +158325,8 @@
     "origin": "10229.000000 1836.014404 217.902527",
     "angles": "89.999977 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "19491"
+    "hammerUniqueId": "19491",
+    "precomputed_vis_clusters": "3739 3784 3785 3793 3794 3796 3825 3853 3857 3869 3873"
   },
   {
     "cpoint7_parent": "0",
@@ -158701,7 +158511,7 @@
     "angles": "89.999977 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19494",
-    "precomputed_vis_clusters": "3188 3193 3198 3200 3216 3218 3220 3270 3286"
+    "precomputed_vis_clusters": "3179 3183 3190 3192 3209 3213 3214 3263 3282"
   },
   {
     "cpoint7_parent": "0",
@@ -158886,7 +158696,7 @@
     "angles": "89.999977 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19497",
-    "precomputed_vis_clusters": "3148 3163 3188 3193 3200 3223 3270"
+    "precomputed_vis_clusters": "3128 3135 3179 3183 3192 3225 3263"
   },
   {
     "cpoint7_parent": "0",
@@ -158985,7 +158795,8 @@
     "hammerUniqueId": "19499"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "439029355",
     "precomputedsubfrusta": "6",
@@ -159012,7 +158823,7 @@
     "precomputedobbextent": "381.035156 449.390625 282.545258",
     "precomputedobbangles": "-5.000000 -18.999998 3.000000",
     "precomputedobborigin": "9574.095703 -258.920074 421.241638",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -159050,7 +158861,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.257812",
     "brightness": "-1.953120",
@@ -159070,8 +158881,7 @@
     "origin": "9724.000000 -244.985596 217.902527",
     "angles": "89.999977 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "19500",
-    "precomputed_vis_clusters": "3198 3200 3213 3216 3218 3220 3696 3700"
+    "hammerUniqueId": "19500"
   },
   {
     "cpoint7_parent": "0",
@@ -159170,8 +158980,7 @@
     "hammerUniqueId": "19502"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1394589317",
     "precomputedsubfrusta": "6",
@@ -159198,7 +159007,7 @@
     "precomputedobbextent": "378.216309 445.733521 288.010864",
     "precomputedobbangles": "-4.000000 18.999998 -1.000000",
     "precomputedobborigin": "9576.324219 385.482086 419.927368",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -159236,7 +159045,7 @@
     "colortemperature": "6600.000000",
     "color": "255 255 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.257812",
     "brightness": "-1.953120",
@@ -159256,7 +159065,8 @@
     "origin": "9724.000000 375.014404 217.902527",
     "angles": "89.999977 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "19503"
+    "hammerUniqueId": "19503",
+    "precomputed_vis_clusters": "3202 3209 3213 3214 3692 3693 3710 3725 3726 3727 3733 3735"
   },
   {
     "bakedshadowindex": "-1",
@@ -159267,21 +159077,21 @@
     "precomputedobbextent5": "29.067383 29.060400 14.067368",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
     "precomputedobborigin5": "9695.003906 61.000664 314.004883",
-    "precomputedobbextent4": "91.574707 50.579659 65.565598",
-    "precomputedobbangles4": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin4": "9684.542969 112.517159 262.507446",
-    "precomputedobbextent3": "89.589844 48.578842 63.557419",
-    "precomputedobbangles3": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin3": "9686.522461 11.483658 264.514587",
-    "precomputedobbextent2": "249.722656 168.765320 99.741791",
+    "precomputedobbextent4": "64.756592 67.600342 65.565598",
+    "precomputedobbangles4": "-0.000000 45.000004 0.000000",
+    "precomputedobborigin4": "9692.989258 154.501953 262.507446",
+    "precomputedobbextent3": "66.186523 63.351074 63.557419",
+    "precomputedobbangles3": "-0.000000 45.000004 0.000000",
+    "precomputedobborigin3": "9692.994141 -30.508789 264.514587",
+    "precomputedobbextent2": "249.722656 168.614075 99.671082",
     "precomputedobbangles2": "-6.000000 -11.999999 1.000000",
-    "precomputedobborigin2": "9439.283203 24.951883 212.740417",
+    "precomputedobborigin2": "9439.258789 24.803728 212.667419",
     "precomputedobbextent1": "57.350342 57.351807 57.553345",
     "precomputedobbangles1": "0.000000 -45.000004 0.000000",
     "precomputedobborigin1": "9776.017578 61.000977 270.522766",
-    "precomputedobbextent0": "96.373047 100.090546 52.578346",
+    "precomputedobbextent0": "96.366211 100.084984 52.578346",
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin0": "9686.284180 62.999939 245.484161",
+    "precomputedobborigin0": "9686.291016 62.998848 245.484161",
     "precomputedboundsmaxs": "9782.707031 240.097443 328.075897",
     "precomputedboundsmins": "9195.580078 -101.771225 112.851883",
     "precomputedobbextent": "292.319336 171.486954 100.161652",
@@ -159842,7 +159652,7 @@
     "angles": "89.999992 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19524",
-    "precomputed_vis_clusters": "2722 2726 2762 2763 2764 2765 2768 2772 2773 2774 2777 2785 2790 2792 2800 2841 3140 3145 3151"
+    "precomputed_vis_clusters": "2715 2716 2753 2755 2756 2757 2758 2759 2760 2763 2767 2771 2776 2783 2789 2829 3124 3127"
   },
   {
     "cpoint7_parent": "0",
@@ -160214,12 +160024,12 @@
     "precomputedobbextent5": "33.065918 33.059967 16.065857",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
     "precomputedobborigin5": "7468.001953 286.998962 297.003357",
-    "precomputedobbextent4": "122.734375 157.747559 121.295670",
-    "precomputedobbangles4": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin4": "7443.242188 485.242188 234.206284",
-    "precomputedobbextent3": "140.601807 168.080032 106.085899",
-    "precomputedobbangles3": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin3": "7471.539062 117.982468 218.985168",
+    "precomputedobbextent4": "157.747314 115.311279 121.295670",
+    "precomputedobbangles4": "0.000000 -45.000004 0.000000",
+    "precomputedobborigin4": "7437.993164 479.992920 234.206284",
+    "precomputedobbextent3": "134.440918 170.087158 106.085899",
+    "precomputedobbangles3": "-0.000000 45.000004 0.000000",
+    "precomputedobborigin3": "7493.205078 71.754395 218.985168",
     "precomputedobbextent2": "249.729492 180.134827 140.630615",
     "precomputedobbangles2": "16.999998 0.000000 0.000000",
     "precomputedobborigin2": "7193.915527 330.008362 239.715576",
@@ -160293,7 +160103,7 @@
     "angles": "89.999985 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19598",
-    "precomputed_vis_clusters": "2677 2678 2679 2680 3599 3600 3602 3603 3605 3607 3612 3619"
+    "precomputed_vis_clusters": "2669 2670 2671 2673 3594 3595 3596 3597 3599 3600 3608 3609 3610"
   },
   {
     "cpoint7_parent": "0",
@@ -160478,7 +160288,7 @@
     "angles": "89.999985 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19601",
-    "precomputed_vis_clusters": "2676 3597 3598 3599 3600 3602 3603"
+    "precomputed_vis_clusters": "2668 3592 3593 3594 3596 3599 3600"
   },
   {
     "cpoint7_parent": "0",
@@ -160663,7 +160473,7 @@
     "angles": "89.999985 180.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19604",
-    "precomputed_vis_clusters": "2675 2676 3597 3598 3599"
+    "precomputed_vis_clusters": "2667 2668 3592 3593 3594"
   },
   {
     "cpoint7_parent": "0",
@@ -160848,7 +160658,7 @@
     "angles": "89.999977 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19607",
-    "precomputed_vis_clusters": "2628 2675 2676 3597 3598"
+    "precomputed_vis_clusters": "2620 2667 2668 3592 3593"
   },
   {
     "cpoint7_parent": "0",
@@ -160947,7 +160757,8 @@
     "hammerUniqueId": "19609"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "272198923",
     "precomputedsubfrusta": "6",
@@ -160957,9 +160768,9 @@
     "precomputedobbextent4": "249.539795 170.012909 100.091736",
     "precomputedobbangles4": "0.000000 -9.999999 0.000000",
     "precomputedobborigin4": "6600.770020 -1051.496460 852.983459",
-    "precomputedobbextent3": "57.335205 150.503448 145.554932",
+    "precomputedobbextent3": "57.335205 157.572388 157.817139",
     "precomputedobbangles3": "45.000004 0.000000 0.000000",
-    "precomputedobborigin3": "6205.623047 -1059.598145 855.619141",
+    "precomputedobborigin3": "6196.953125 -1052.530762 846.948730",
     "precomputedobbextent2": "189.795898 249.897186 130.982071",
     "precomputedobbangles2": "0.000000 0.000000 -31.999998",
     "precomputedobborigin2": "6332.371582 -785.182861 850.533386",
@@ -160970,11 +160781,11 @@
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "6351.046875 -1037.999268 834.984070",
     "precomputedboundsmaxs": "6848.070312 -542.648438 953.074219",
-    "precomputedboundsmins": "6099.123047 -1210.093384 619.443481",
-    "precomputedobbextent": "374.473633 337.785706 140.966507",
+    "precomputedboundsmins": "6063.947754 -1210.100952 619.443481",
+    "precomputedobbextent": "392.061279 337.785706 140.966507",
     "precomputedobbangles": "0.000000 0.000000 -13.000000",
-    "precomputedobborigin": "6473.596680 -893.398682 822.996826",
-    "precomputedfieldsvalid": "1",
+    "precomputedobborigin": "6456.008789 -893.398682 822.996826",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -161012,7 +160823,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.511719",
     "brightness": "-0.964844",
@@ -161032,8 +160843,7 @@
     "origin": "6349.000000 -1038.000000 918.000000",
     "angles": "89.999977 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "19610",
-    "precomputed_vis_clusters": "2539 2628 2630 2632 2676"
+    "hammerUniqueId": "19610"
   },
   {
     "skipPreSettle": "0",
@@ -161358,7 +161168,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19619",
-    "precomputed_vis_clusters": "2379 2381"
+    "precomputed_vis_clusters": "2375 2377"
   },
   {
     "lightprobetexture_sh2_l1": "",
@@ -162898,8 +162708,7 @@
     "hammerUniqueId": "19731"
   },
   {
-    "bakedshadowindex": "-1",
-    "desiredstationary": "1",
+    "bakedshadowindex": "3",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1075841439",
     "precomputedsubfrusta": "6",
@@ -162926,7 +162735,7 @@
     "precomputedobbextent": "422.568359 190.921234 97.569214",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "6671.506836 -1019.189697 850.464478",
-    "precomputedfieldsvalid": "0",
+    "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -162964,7 +162773,7 @@
     "colortemperature": "7016.000000",
     "color": "242 242 255",
     "colormode": "1",
-    "directlight": "1",
+    "directlight": "3",
     "enabled": "1",
     "brightness_legacy": "0.511719",
     "brightness": "-0.964844",
@@ -162984,7 +162793,8 @@
     "origin": "6749.000000 -1049.000000 881.000000",
     "angles": "89.999969 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "19732"
+    "hammerUniqueId": "19732",
+    "precomputed_vis_clusters": "2620 2625 2627"
   },
   {
     "local.scales": "1.000000 1.000000 1.000000",
@@ -165676,9 +165486,9 @@
     "precomputedobbextent1": "85.220215 60.206032 77.854927",
     "precomputedobbangles1": "0.000000 0.000000 -45.000004",
     "precomputedobborigin1": "7515.149902 -37.520874 370.422913",
-    "precomputedobbextent0": "100.126221 67.751282 144.808472",
+    "precomputedobbextent0": "100.061035 67.751282 144.808472",
     "precomputedobbangles0": "0.000000 0.000000 -28.000000",
-    "precomputedobborigin0": "7511.998047 11.467476 244.312210",
+    "precomputedobborigin0": "7512.062988 11.467476 244.312210",
     "precomputedboundsmaxs": "7612.115234 150.089478 463.081421",
     "precomputedboundsmins": "7361.916992 -50.095798 112.908386",
     "precomputedobbextent": "125.099121 100.092636 175.086517",
@@ -165743,7 +165553,7 @@
     "angles": "89.999985 89.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19901",
-    "precomputed_vis_clusters": "2677 2678 2679 2680 3600 3603"
+    "precomputed_vis_clusters": "2669 2670 2671 2673 3600"
   },
   {
     "depth_render_offset": "0.125000",
@@ -166251,7 +166061,7 @@
     "hammerUniqueId": "19982"
   },
   {
-    "bakedshadowindex": "2",
+    "bakedshadowindex": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-230086795",
     "precomputedboundsmaxs": "-1183.907715 -6184.872070 -754.697388",
@@ -166322,7 +166132,7 @@
     "angles": "0.000000 29.999983 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "19988",
-    "precomputed_vis_clusters": "9 27 52 65 185 224 228 233 248 266 267 273 276 279 285 286 288 307 322 330 335 337 341 344 347 363 364 365 366 369 371 373 374 376 378 547 600"
+    "precomputed_vis_clusters": "6 41 51 56 129 219 226 234 242 259 260 266 269 272 278 281 294 299 301 324 325 327 332 334 338 358 359 360 361 364 366 368 369 371 372 374 540 591"
   },
   {
     "cpoint7_parent": "0",
@@ -171383,486 +171193,6 @@
     "vscripts": "",
     "effect_name": "particles/yq/fire3.vpcf",
     "classname": "info_particle_system",
-    "origin": "8662.000000 186.000000 500.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20284"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "0",
-    "start_active": "1",
-    "effect_name": "particles/yq/fire3.vpcf",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "info_particle_system",
-    "origin": "9604.000000 186.000000 518.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20285"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "0",
-    "start_active": "1",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "vscripts": "",
-    "effect_name": "particles/yq/fire3.vpcf",
-    "classname": "info_particle_system",
-    "origin": "6369.000000 -2774.000000 -347.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20286"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "0",
-    "start_active": "1",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "vscripts": "",
-    "effect_name": "particles/yq/fire3.vpcf",
-    "classname": "info_particle_system",
-    "origin": "8613.000000 -2780.000000 -50.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20287"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "0",
-    "start_active": "1",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "vscripts": "",
-    "effect_name": "particles/yq/fire3.vpcf",
-    "classname": "info_particle_system",
-    "origin": "4507.000000 -552.000000 781.000000",
-    "angles": "11.893601 124.065369 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20288"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "0",
-    "start_active": "1",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "vscripts": "",
-    "effect_name": "particles/yq/fire3.vpcf",
-    "classname": "info_particle_system",
     "origin": "-3098.000000 -201.000000 10.000000",
     "angles": "0.161287 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -172959,294 +172289,6 @@
     "angles": "9.837365 92.026711 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20321"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "1",
-    "start_active": "0",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "[PR#]fire4",
-    "vscripts": "",
-    "effect_name": "particles/yq/fire4.vpcf",
-    "classname": "info_particle_system",
-    "origin": "9320.000000 64.000000 300.000000",
-    "angles": "29.981636 180.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20370"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "0",
-    "start_active": "1",
-    "effect_name": "particles/yq/fire3.vpcf",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "info_particle_system",
-    "origin": "3364.000000 -2827.000000 -889.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20372"
-  },
-  {
-    "cpoint7_parent": "0",
-    "cpoint6_parent": "0",
-    "cpoint5_parent": "0",
-    "cpoint4_parent": "0",
-    "cpoint3_parent": "0",
-    "cpoint2_parent": "0",
-    "cpoint1_parent": "0",
-    "cpoint63": "",
-    "cpoint62": "",
-    "cpoint61": "",
-    "cpoint60": "",
-    "cpoint59": "",
-    "cpoint58": "",
-    "cpoint57": "",
-    "cpoint56": "",
-    "cpoint55": "",
-    "cpoint54": "",
-    "cpoint53": "",
-    "cpoint52": "",
-    "cpoint51": "",
-    "cpoint50": "",
-    "cpoint49": "",
-    "cpoint48": "",
-    "cpoint47": "",
-    "cpoint46": "",
-    "cpoint45": "",
-    "cpoint44": "",
-    "cpoint43": "",
-    "cpoint42": "",
-    "cpoint41": "",
-    "cpoint40": "",
-    "cpoint39": "",
-    "cpoint38": "",
-    "cpoint37": "",
-    "cpoint36": "",
-    "cpoint35": "",
-    "cpoint34": "",
-    "cpoint33": "",
-    "cpoint32": "",
-    "cpoint31": "",
-    "cpoint30": "",
-    "cpoint29": "",
-    "cpoint28": "",
-    "cpoint27": "",
-    "cpoint26": "",
-    "cpoint25": "",
-    "cpoint24": "",
-    "cpoint23": "",
-    "cpoint22": "",
-    "cpoint21": "",
-    "cpoint20": "",
-    "cpoint19": "",
-    "cpoint18": "",
-    "cpoint17": "",
-    "cpoint16": "",
-    "cpoint15": "",
-    "cpoint14": "",
-    "cpoint13": "",
-    "cpoint12": "",
-    "cpoint11": "",
-    "cpoint10": "",
-    "cpoint9": "",
-    "cpoint8": "",
-    "cpoint7": "",
-    "cpoint6": "",
-    "cpoint5": "",
-    "cpoint4": "",
-    "cpoint3": "",
-    "cpoint2": "",
-    "cpoint1": "",
-    "cpoint0": "",
-    "tint_cp_color": "255 255 255",
-    "tint_cp": "-1",
-    "data_cp_value": "0.000000 0.000000 0.000000",
-    "data_cp": "-1",
-    "snapshot_mesh": "0",
-    "snapshot_file": "",
-    "no_save": "0",
-    "start_active": "1",
-    "effect_name": "particles/yq/fire3.vpcf",
-    "clientSideEntity": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "info_particle_system",
-    "origin": "2302.000000 -396.000000 -761.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20374"
   },
   {
     "precomputedsubfrusta": "6",
@@ -178545,8 +177587,8 @@
     "parentAttachmentName": "",
     "parentname": "",
     "classname": "prop_physics",
-    "origin": "2349.306641 -1648.542603 178.168579",
-    "angles": "0.036976 314.803772 -0.001896",
+    "origin": "2349.306885 -1648.542236 178.168579",
+    "angles": "0.036432 314.804779 -0.002317",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21468"
   },
@@ -179044,7 +178086,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21512",
-    "precomputed_vis_clusters": "1532 1533 1534 1537 1541 1544 1545 1632 1633"
+    "precomputed_vis_clusters": "1533 1534 1535 1538 1542 1545 1546 1637 1638"
   },
   {
     "cpoint7_parent": "0",
@@ -179315,7 +178357,8 @@
     "hammerUniqueId": "21532"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "-1",
+    "desiredstationary": "1",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "-1527656485",
     "precomputedsubfrusta": "6",
@@ -179342,7 +178385,7 @@
     "precomputedobbextent": "250.702515 106.594727 85.136620",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
     "precomputedobborigin": "2420.619629 -2758.486084 268.619446",
-    "precomputedfieldsvalid": "1",
+    "precomputedfieldsvalid": "0",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -179380,7 +178423,7 @@
     "colortemperature": "5093.000000",
     "color": "255 230 209",
     "colormode": "1",
-    "directlight": "3",
+    "directlight": "1",
     "enabled": "1",
     "brightness_legacy": "0.070312",
     "brightness": "-3.816410",
@@ -179400,8 +178443,7 @@
     "origin": "2307.372314 -2707.000000 321.000000",
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "21533",
-    "precomputed_vis_clusters": "1479 1480 1481 1483 1488"
+    "hammerUniqueId": "21533"
   },
   {
     "cpoint7_parent": "0",
@@ -179586,7 +178628,7 @@
     "angles": "90.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21536",
-    "precomputed_vis_clusters": "1454 1455 1464 1465 1471 1477 1479 1482 1489"
+    "precomputed_vis_clusters": "1457 1458 1467 1468 1474 1480 1482 1485 1491"
   },
   {
     "bakedshadowindex": "2",
@@ -179675,7 +178717,7 @@
     "angles": "89.999992 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21539",
-    "precomputed_vis_clusters": "1487 1493 1507 1508 1510"
+    "precomputed_vis_clusters": "1489 1495 1508 1509 1511"
   },
   {
     "cpoint7_parent": "0",
@@ -183599,7 +182641,7 @@
     "vscripts": "",
     "effect_name": "particles/explosions_fx/explosion_hegrenade_dirt.vpcf",
     "classname": "info_particle_system",
-    "origin": "-2011.000000 -6584.000000 571.000000",
+    "origin": "-1996.000000 -6548.000000 571.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21938"
@@ -183920,7 +182962,7 @@
     "vscripts": "",
     "targetname": "[PR#]ex_bzmusic_1",
     "classname": "ambient_generic",
-    "origin": "-2014.000000 -6585.000000 593.000000",
+    "origin": "-1999.000000 -6549.000000 593.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21942"
@@ -185134,7 +184176,7 @@
     "model": "maps/ze_obj_prison/entities/flcf_1_22122.vmdl"
   },
   {
-    "bakedshadowindex": "3",
+    "bakedshadowindex": "2",
     "light_map_uniqueid": "-1117274903",
     "light_path_uniqueid": "1065321237",
     "precomputedsubfrusta": "6",
@@ -185220,7 +184262,7 @@
     "angles": "89.999992 180.000031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "22147",
-    "precomputed_vis_clusters": "1715 2467 2470 2471 2502 2549 2555 2599"
+    "precomputed_vis_clusters": "1733 2466 2470 2477 2528 2540 2556 2587"
   },
   {
     "cpoint7_parent": "0",
@@ -190005,7 +189047,7 @@
   },
   {
     "precomputedboundsmaxs": "1736.036987 4935.687500 68.399666",
-    "precomputedboundsmins": "-461.838013 2688.555176 -850.132874",
+    "precomputedboundsmins": "-461.838013 2688.681152 -850.132874",
     "precomputedobbextent": "1093.301392 1108.322021 446.952911",
     "precomputedobbangles": "-4.000000 6.000000 9.000000",
     "precomputedobborigin": "644.715027 3835.283203 -381.733826",
@@ -193455,7 +192497,7 @@
     "angles": "0.000000 314.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "22880",
-    "precomputed_vis_clusters": "3437 3438 3439 3443 3445 3447 3448 3449 3450"
+    "precomputed_vis_clusters": "3434 3435 3436 3442 3443 3444 3445 3446 3447"
   },
   {
     "cpoint7_parent": "0",
@@ -193625,7 +192667,7 @@
     "angles": "0.000000 225.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "22884",
-    "precomputed_vis_clusters": "3437 3438 3439 3443 3445 3446 3449 3450 3453 3460"
+    "precomputed_vis_clusters": "3434 3435 3436 3441 3442 3443 3446 3447 3449 3457"
   },
   {
     "cpoint7_parent": "0",
@@ -196751,7 +195793,7 @@
     "angles": "0.000000 134.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "23522",
-    "precomputed_vis_clusters": "3370 3379 3381 3386 3391 3396 3477"
+    "precomputed_vis_clusters": "3363 3364 3373 3380 3382 3387 3394 3473"
   },
   {
     "cpoint7_parent": "0",
@@ -197103,7 +196145,7 @@
     "angles": "89.999977 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "23534",
-    "precomputed_vis_clusters": "3385 3387 3388 3389 3398 3399 3401 3402"
+    "precomputed_vis_clusters": "3381 3383 3384 3385 3393 3395 3397 3398"
   },
   {
     "bakedshadowindex": "2",
@@ -197192,7 +196234,7 @@
     "angles": "89.999977 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "23535",
-    "precomputed_vis_clusters": "3385 3387 3388 3389 3398 3399 3402"
+    "precomputed_vis_clusters": "3381 3383 3384 3385 3393 3395 3398"
   },
   {
     "cpoint7_parent": "0",
@@ -200548,7 +199590,7 @@
     "angles": "89.999977 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "23725",
-    "precomputed_vis_clusters": "3381 3396 3477"
+    "precomputed_vis_clusters": "3382 3394 3473"
   },
   {
     "precomputedboundsmaxs": "3476.150391 1978.591553 183.536377",
@@ -203588,9 +202630,9 @@
     "precomputedobbextent5": "102.731689 71.891602 50.912445",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
     "precomputedobborigin5": "3256.187744 -5075.801758 -363.819061",
-    "precomputedobbextent4": "119.225098 192.474121 99.220207",
+    "precomputedobbextent4": "119.199463 192.343872 99.220207",
     "precomputedobbangles4": "0.000000 -36.999996 0.000000",
-    "precomputedobborigin4": "3212.052490 -5252.905762 -353.885712",
+    "precomputedobborigin4": "3212.110352 -5252.786133 -353.885712",
     "precomputedobbextent3": "41.065430 20.069824 39.230331",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "3256.194092 -5023.993652 -413.841919",
@@ -203604,10 +202646,10 @@
     "precomputedobbangles0": "-0.000000 0.000000 0.000000",
     "precomputedobborigin0": "3256.194336 -5045.000977 -434.838196",
     "precomputedboundsmaxs": "3648.075195 -5003.868652 -255.690475",
-    "precomputedboundsmins": "3102.902588 -5442.958984 -453.103699",
-    "precomputedobbextent": "272.586304 219.545166 98.706612",
+    "precomputedboundsmins": "3102.902588 -5442.750488 -453.103699",
+    "precomputedobbextent": "272.586304 219.440918 98.706612",
     "precomputedobbangles": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin": "3375.488770 -5223.414062 -354.397095",
+    "precomputedobborigin": "3375.488770 -5223.309570 -354.397095",
     "precomputedfieldsvalid": "1",
     "light_style_target3": "",
     "light_style_target2": "",
@@ -204086,9 +203128,9 @@
   {
     "precomputedboundsmaxs": "1312.812134 35.487671 193.929642",
     "precomputedboundsmins": "567.495300 -1322.201050 44.991394",
-    "precomputedobbextent": "181.008667 731.098877 74.469124",
+    "precomputedobbextent": "183.499207 731.098877 74.469124",
     "precomputedobbangles": "0.000000 -30.000000 0.000000",
-    "precomputedobborigin": "1080.616699 -681.809326 119.460518",
+    "precomputedobborigin": "1078.459839 -680.564026 119.460518",
     "precomputedfieldsvalid": "1",
     "forceshadowsenabled": "0",
     "light_style_target3": "",
@@ -206192,5 +205234,704 @@
     "angles": "0.000000 89.999992 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "25748"
+  },
+  {
+    "physdamagescale": "1.000000",
+    "_minlight": "",
+    "overrideBlockLOS": "0",
+    "gamemass": "0",
+    "minhealthdmg": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "pressuredelay": "0.000000",
+    "explodemagnitude": "0",
+    "spawnobject": "0",
+    "nodamageforces": "0",
+    "explosion": "0",
+    "material": "2",
+    "health": "0",
+    "propdata": "0",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "disableshadows": "0",
+    "damagefilter": "",
+    "spawnflags": "0",
+    "globalname": "",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]zdoor_10",
+    "vscripts": "",
+    "classname": "func_breakable",
+    "origin": "-1850.000000 -7235.822754 1122.500000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "25983",
+    "model": "maps/ze_obj_prison/entities/zdoor_10_25983.vmdl"
+  },
+  {
+    "skipPreSettle": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "ItemCount4": "1",
+    "ItemClass4": "",
+    "ItemCount3": "1",
+    "ItemClass3": "",
+    "ItemCount2": "1",
+    "ItemClass2": "",
+    "ItemCount1": "1",
+    "ItemClass1": "",
+    "ammobalancing_removable": "0",
+    "forcenavcut": "0",
+    "updatenavwhenmoving": "0",
+    "auto_convert_back_from_debris": "1",
+    "nonavmeshblocker": "0",
+    "forcenpcexclude": "0",
+    "forcenavignore": "0",
+    "interactAs": "",
+    "addon": "",
+    "puntsound": "",
+    "enableuseoutput": "0",
+    "dynamiccontinuouscontactbehavior": "0",
+    "forcetoenablemotion": "0.000000",
+    "damagetoenablemotion": "0",
+    "buoyancyScale": "1.000000",
+    "massScale": "0.000000",
+    "inertiaScale": "1.000000",
+    "acceptdamagefromheldobjects": "0",
+    "nodamageforces": "0",
+    "Damagetype": "0",
+    "physdamagescale": "0.100000",
+    "shadowcastdist": "0",
+    "minhealthdmg": "0",
+    "steamaudio_geometry_mode": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "1",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "models/props_junk/wood_crate001a.vmdl",
+    "clientSideEntity": "0",
+    "globalname": "",
+    "targetname": "",
+    "vscripts": "",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "classname": "prop_physics",
+    "origin": "-2798.007568 -448.010040 865.034424",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "25988"
+  },
+  {
+    "skipPreSettle": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "ItemCount4": "1",
+    "ItemClass4": "",
+    "ItemCount3": "1",
+    "ItemClass3": "",
+    "ItemCount2": "1",
+    "ItemClass2": "",
+    "ItemCount1": "1",
+    "ItemClass1": "",
+    "ammobalancing_removable": "0",
+    "forcenavcut": "0",
+    "updatenavwhenmoving": "0",
+    "auto_convert_back_from_debris": "1",
+    "nonavmeshblocker": "0",
+    "forcenpcexclude": "0",
+    "forcenavignore": "0",
+    "interactAs": "",
+    "addon": "",
+    "puntsound": "",
+    "enableuseoutput": "0",
+    "dynamiccontinuouscontactbehavior": "0",
+    "forcetoenablemotion": "0.000000",
+    "damagetoenablemotion": "0",
+    "buoyancyScale": "1.000000",
+    "massScale": "0.000000",
+    "inertiaScale": "1.000000",
+    "acceptdamagefromheldobjects": "0",
+    "nodamageforces": "0",
+    "Damagetype": "0",
+    "physdamagescale": "0.100000",
+    "shadowcastdist": "0",
+    "minhealthdmg": "0",
+    "steamaudio_geometry_mode": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "1",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "models/props_junk/wood_pallet001a.vmdl",
+    "clientSideEntity": "0",
+    "globalname": "",
+    "targetname": "",
+    "vscripts": "",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "classname": "prop_physics",
+    "origin": "-2783.999756 -747.000000 849.372375",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "25990"
+  },
+  {
+    "skipPreSettle": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "ItemCount4": "1",
+    "ItemClass4": "",
+    "ItemCount3": "1",
+    "ItemClass3": "",
+    "ItemCount2": "1",
+    "ItemClass2": "",
+    "ItemCount1": "1",
+    "ItemClass1": "",
+    "ammobalancing_removable": "0",
+    "forcenavcut": "0",
+    "updatenavwhenmoving": "0",
+    "auto_convert_back_from_debris": "1",
+    "nonavmeshblocker": "0",
+    "forcenpcexclude": "0",
+    "forcenavignore": "0",
+    "interactAs": "",
+    "addon": "",
+    "puntsound": "",
+    "enableuseoutput": "0",
+    "dynamiccontinuouscontactbehavior": "0",
+    "forcetoenablemotion": "0.000000",
+    "damagetoenablemotion": "0",
+    "buoyancyScale": "1.000000",
+    "massScale": "0.000000",
+    "inertiaScale": "1.000000",
+    "acceptdamagefromheldobjects": "0",
+    "nodamageforces": "0",
+    "Damagetype": "0",
+    "physdamagescale": "0.100000",
+    "shadowcastdist": "0",
+    "minhealthdmg": "0",
+    "steamaudio_geometry_mode": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "1",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "models/props_junk/wood_crate001a.vmdl",
+    "clientSideEntity": "0",
+    "globalname": "",
+    "targetname": "",
+    "vscripts": "",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "classname": "prop_physics",
+    "origin": "-2793.774658 -761.234009 873.152588",
+    "angles": "0.001143 0.003197 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "25991"
+  },
+  {
+    "skipPreSettle": "0",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "ItemCount4": "1",
+    "ItemClass4": "",
+    "ItemCount3": "1",
+    "ItemClass3": "",
+    "ItemCount2": "1",
+    "ItemClass2": "",
+    "ItemCount1": "1",
+    "ItemClass1": "",
+    "ammobalancing_removable": "0",
+    "forcenavcut": "0",
+    "updatenavwhenmoving": "0",
+    "auto_convert_back_from_debris": "1",
+    "nonavmeshblocker": "0",
+    "forcenpcexclude": "0",
+    "forcenavignore": "0",
+    "interactAs": "",
+    "addon": "",
+    "puntsound": "",
+    "enableuseoutput": "0",
+    "dynamiccontinuouscontactbehavior": "0",
+    "forcetoenablemotion": "0.000000",
+    "damagetoenablemotion": "0",
+    "buoyancyScale": "1.000000",
+    "massScale": "0.000000",
+    "inertiaScale": "1.000000",
+    "acceptdamagefromheldobjects": "0",
+    "nodamageforces": "0",
+    "Damagetype": "0",
+    "physdamagescale": "0.100000",
+    "shadowcastdist": "0",
+    "minhealthdmg": "0",
+    "steamaudio_geometry_mode": "0",
+    "glowteam": "-1",
+    "glowcolor": "0 0 0",
+    "glowrangemin": "0",
+    "glowrange": "0",
+    "glowstate": "0",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
+    "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
+    "burstscale": "100.000000",
+    "pressuredelay": "0.000000",
+    "spawnflags": "1",
+    "NoInterpolate": "0",
+    "PerformanceMode": "PM_NORMAL",
+    "ExplodeRadius": "0.000000",
+    "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "animgraph2_identifier": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "bodygroups": "",
+    "skin": "default",
+    "model": "models/props_c17/oildrum001.vmdl",
+    "clientSideEntity": "0",
+    "globalname": "",
+    "targetname": "",
+    "vscripts": "",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "classname": "prop_physics",
+    "origin": "-3159.000732 645.000793 845.095032",
+    "angles": "0.001666 0.000000 0.001817",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "25999"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "30.000000",
+    "world_units_per_pixel": "0.400000",
+    "color": "0 0 0",
+    "fullbright": "0",
+    "enabled": "1",
+    "message": "",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "662.097900 -1051.881226 160.000000",
+    "angles": "0.000000 59.999977 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "26012"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "25.000000",
+    "world_units_per_pixel": "0.500000",
+    "color": "255 255 255",
+    "fullbright": "0",
+    "enabled": "1",
+    "message": "\u89E6\u53D1\u623F\u50F5\u5C38\u4F20\u9001",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "2946.000000 -5882.000000 -407.999969",
+    "angles": "0.000000 179.999969 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "26014"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "25.000000",
+    "world_units_per_pixel": "0.500000",
+    "color": "255 255 255",
+    "fullbright": "0",
+    "enabled": "1",
+    "message": "\u50F5\u5C38\u4FA7\u8DEF\u4F20\u9001",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-1850.997925 -2544.997070 714.999878",
+    "angles": "0.000000 269.999939 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "26015"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "30.000000",
+    "world_units_per_pixel": "0.400000",
+    "color": "255 255 255",
+    "fullbright": "0",
+    "enabled": "1",
+    "message": "\u50F5\u5C38\u4FA7\u8DEF\u4F20\u9001",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "6196.000000 -1208.000000 820.000000",
+    "angles": "0.000000 179.999969 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "26119"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "30.000000",
+    "world_units_per_pixel": "0.400000",
+    "color": "255 255 255",
+    "fullbright": "0",
+    "enabled": "1",
+    "message": "\u50F5\u5C38\u4FA7\u8DEF\u4F20\u9001",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "7373.000000 149.000000 365.000000",
+    "angles": "0.000000 0.000000 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "26120"
+  },
+  {
+    "cpoint7_parent": "0",
+    "cpoint6_parent": "0",
+    "cpoint5_parent": "0",
+    "cpoint4_parent": "0",
+    "cpoint3_parent": "0",
+    "cpoint2_parent": "0",
+    "cpoint1_parent": "0",
+    "cpoint63": "",
+    "cpoint62": "",
+    "cpoint61": "",
+    "cpoint60": "",
+    "cpoint59": "",
+    "cpoint58": "",
+    "cpoint57": "",
+    "cpoint56": "",
+    "cpoint55": "",
+    "cpoint54": "",
+    "cpoint53": "",
+    "cpoint52": "",
+    "cpoint51": "",
+    "cpoint50": "",
+    "cpoint49": "",
+    "cpoint48": "",
+    "cpoint47": "",
+    "cpoint46": "",
+    "cpoint45": "",
+    "cpoint44": "",
+    "cpoint43": "",
+    "cpoint42": "",
+    "cpoint41": "",
+    "cpoint40": "",
+    "cpoint39": "",
+    "cpoint38": "",
+    "cpoint37": "",
+    "cpoint36": "",
+    "cpoint35": "",
+    "cpoint34": "",
+    "cpoint33": "",
+    "cpoint32": "",
+    "cpoint31": "",
+    "cpoint30": "",
+    "cpoint29": "",
+    "cpoint28": "",
+    "cpoint27": "",
+    "cpoint26": "",
+    "cpoint25": "",
+    "cpoint24": "",
+    "cpoint23": "",
+    "cpoint22": "",
+    "cpoint21": "",
+    "cpoint20": "",
+    "cpoint19": "",
+    "cpoint18": "",
+    "cpoint17": "",
+    "cpoint16": "",
+    "cpoint15": "",
+    "cpoint14": "",
+    "cpoint13": "",
+    "cpoint12": "",
+    "cpoint11": "",
+    "cpoint10": "",
+    "cpoint9": "",
+    "cpoint8": "",
+    "cpoint7": "",
+    "cpoint6": "",
+    "cpoint5": "",
+    "cpoint4": "",
+    "cpoint3": "",
+    "cpoint2": "",
+    "cpoint1": "",
+    "cpoint0": "",
+    "tint_cp_color": "255 255 255",
+    "tint_cp": "-1",
+    "data_cp_value": "0.000000 0.000000 0.000000",
+    "data_cp": "-1",
+    "snapshot_mesh": "0",
+    "snapshot_file": "",
+    "no_save": "1",
+    "start_active": "0",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]fire4",
+    "vscripts": "",
+    "effect_name": "particles/yq/fire4.vpcf",
+    "classname": "info_particle_system",
+    "origin": "9320.000000 64.000000 300.000000",
+    "angles": "29.981636 180.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "20370"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "25.000000",
+    "world_units_per_pixel": "0.500000",
+    "color": "255 255 255",
+    "fullbright": "0",
+    "enabled": "1",
+    "message": "\u50F5\u5C38\u4F20\u9001",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-905.564941 -5167.434570 459.000000",
+    "angles": "0.000000 314.999939 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "26235"
   }
 ]
