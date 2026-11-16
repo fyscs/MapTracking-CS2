@@ -49,7 +49,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3:108",
-    "model": "maps/ze_ez_escape_cs2/entities/wood_3_108.vmdl",
+    "model": "maps/ze_ze_ez_escape_cs2/entities/wood_3_108.vmdl",
     "_template_lump_ent_index": "0"
   }
 ]
