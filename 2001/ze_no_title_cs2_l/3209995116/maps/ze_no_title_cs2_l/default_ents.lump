@@ -11780,7 +11780,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]first_wall",
-        "input": "Kill",
+        "input": "Break",
         "param": "",
         "delay": 15,
         "limit": 1
