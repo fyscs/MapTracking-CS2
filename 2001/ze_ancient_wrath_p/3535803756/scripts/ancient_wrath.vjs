@@ -56,6 +56,13 @@ Instance.OnRoundStart(() => {
         }
     }
 });
+Instance.OnPlayerKill(({ player }) => {
+    if (player.GetEntityName() === "player_flame") {
+        EntFire("weapon_flamethrower_mm", "SetMeasureTarget", "weapon_flamethrower_dummy1");
+    }
+    player.SetEntityName("player");
+    EntFireTarget(player, "ClearContext");
+});
 Instance.OnPlayerReset(({ player }) => {
     const playerSlot = player.GetPlayerController()?.GetPlayerSlot();
     if (playerSlot !== undefined)
