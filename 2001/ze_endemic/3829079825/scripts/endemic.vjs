@@ -2426,11 +2426,9 @@ function platformDoorsOpen(index)
 		Fire("sp_doors_top_left*", "Open", "", 1.0);
 		Fire("sp_doors_top_right*", "Open", "", 1.0);
 		// Enable teleports
-		//Fire("tp_spawn_postmz", "KeyValue", "target dest_sp_*"); // CS2 doesn't support multi destination
 		Fire("tp_spawn_postmz", "KeyValue", "target dest_spwait");
 		Fire("tp_sp_bottom", "Disable");
 		Fire("tp_sp_top", "Disable");
-		//Fire("tp_sp_wait", "KeyValue", "target dest_sp_*"); // CS2 doesn't support multi destination
 		Fire("tp_sp_wait", "Enable", "", 0.02);
 		S.sp_end_area = true;
 		if (index === 3)
@@ -2440,11 +2438,9 @@ function platformDoorsOpen(index)
 	{// If not, simulate trains leaving the platform
 		const pos = SP_POSITIONS[index];
 		// Disable teleport at the trains
-		//Fire("tp_spawn_postmz", "KeyValue", "target dest_sp_" + pos); // CS2 doesn't support multi destination
 		Fire("tp_spawn_postmz", "KeyValue", "target dest_spwait");
 		Fire("tp_sp_" + pos, "Disable");
 		// Enable teleport at waiting room
-		//Fire("tp_sp_wait", "KeyValue", "target dest_sp_" + pos);  // CS2 doesn't support multi destination
 		Fire("tp_sp_wait_" + pos, "Enable", "", 0.02);
 		const linear_left = Entities.FindByName("sp_doors_" + pos + "_left" + sp_door_index[0])[0];
 		const linear_right = Entities.FindByName("sp_doors_" + pos + "_right" + sp_door_index[2])[0];
@@ -3696,15 +3692,18 @@ function chooseEnding()
 {
 	Fire("finale_end_linear", "Open");
 	if (S.finale_good_ending)
+	{
 		Later(5.0, endingGood);
+		Fire("finale_tp_good", "Enable", "", 5.5);
+	}
 	else
 	{
 		Later(5.0, endingBad);
 		Fire("map_ending_fade", "Kill", "", 5.0);
+		Fire("finale_tp_bad", "Enable", "", 5.5);
 	}
 	Fire("sprite_end_template", "ForceSpawn", "", 5.0);
 	Fire("nf_sprite", "Kill", "", 5.5);
-	Fire("finale_tp", "Enable", "", 5.5);
 	Later(6.0, endingZMHPRatio);
 	Fire("finale_start_linear", "Open", "", 7.0);
 	Later(7.0, () => { S.finale_in_progress = true; });
@@ -3714,8 +3713,8 @@ function chooseEnding()
 function endingGood()
 {
 	Fire("finale_human_good_tp", "Enable");
-	Fire("finale_tp", "KeyValue", "target dest_f_good");
-	Fire("tp_spawn_postmz", "KeyValue", "target dest_f_good");
+	Fire("tp_spawn_postmz", "Kill");
+	Fire("tp_spawn_postmz_good", "Enable");
 	ServerCmd("sv_disable_radar 1");
 	Later(3.0, endingZMSetGlow);
 }
@@ -3733,8 +3732,8 @@ function endingGoodTP(activator)
 function endingBad()
 {
 	Fire("finale_human_bad_tp", "Enable");
-	Fire("finale_tp", "KeyValue", "target dest_f_bad");
-	Fire("tp_spawn_postmz", "KeyValue", "target dest_f_bad");
+	Fire("tp_spawn_postmz", "Kill");
+	Fire("tp_spawn_postmz_bad", "Enable");
 	if (S.finale_petty_mode)
 		Later(3.0, endingZMSetGlow);
 }
