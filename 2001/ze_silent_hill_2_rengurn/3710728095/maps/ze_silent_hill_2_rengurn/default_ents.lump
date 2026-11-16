@@ -19901,15 +19901,16 @@
         "input": "Enable",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
   {
+    "wait": "1.000000",
     "filtername": "",
     "spawnflags": "4097",
     "globalname": "",
-    "StartDisabled": "0",
+    "StartDisabled": "1",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
@@ -19918,7 +19919,7 @@
     "parentname": "",
     "vscripts": "",
     "targetname": "[PR#]lv1_tptrigger",
-    "classname": "trigger_once",
+    "classname": "trigger_multiple",
     "origin": "-7963.368164 -4636.586914 143.850586",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -19932,6 +19933,14 @@
         "param": "",
         "delay": 6,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u7B2C\u4E00\u5173",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -19979,15 +19988,16 @@
         "input": "Enable",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       }
     ]
   },
   {
+    "wait": "1.000000",
     "filtername": "",
     "spawnflags": "4097",
     "globalname": "",
-    "StartDisabled": "0",
+    "StartDisabled": "1",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
@@ -19996,7 +20006,7 @@
     "parentname": "",
     "vscripts": "",
     "targetname": "[PR#]lv2_tptrigger",
-    "classname": "trigger_once",
+    "classname": "trigger_multiple",
     "origin": "-7921.577148 -4588.531250 157.410828",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -20010,6 +20020,14 @@
         "param": "",
         "delay": 6,
         "limit": 1
+      },
+      {
+        "output": "OnEndTouch",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u7B2C\u4E8C\u5173",
+        "delay": 1,
+        "limit": -1
       }
     ]
   },
@@ -20180,7 +20198,7 @@
   {
     "worldGroupID": "skyboxWorldGroup0",
     "fixupNames": "0",
-    "targetMapName": "maps/ze_silent_hill_2_rengurn_skybox.vmap",
+    "targetMapName": "maps/prefabs/ze_silent_hill_2_rengurn_skybox.vmap",
     "targetname": "",
     "vscripts": "",
     "classname": "skybox_reference",
