@@ -45,7 +45,7 @@ Instance.SetThink(() => {
         }
     }
     scp173.SetMoveType(moveType);
-    Instance.SetNextThink(Instance.GetGameTime() + 1 / 8);
+    Instance.SetNextThink(Instance.GetGameTime() + 1 / 32);
 });
 
 Instance.OnPlayerKill((event) => {
