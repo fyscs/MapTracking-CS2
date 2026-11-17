@@ -3,8 +3,6 @@
 
 [
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",

@@ -10251,8 +10251,6 @@
     "hammerUniqueId": "5146:172"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_ez_escape/nuke_sound.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10276,8 +10274,6 @@
     "hammerUniqueId": "5146:173"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_ez_escape/nuclear missile ready.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10301,8 +10297,6 @@
     "hammerUniqueId": "5146:174"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_ez_escape/nuclear lunch detected.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10326,8 +10320,6 @@
     "hammerUniqueId": "5146:175"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/omg.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10351,8 +10343,6 @@
     "hammerUniqueId": "5146:176"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/wzdhxhna.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10376,8 +10366,6 @@
     "hammerUniqueId": "5146:177"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/bone.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10401,8 +10389,6 @@
     "hammerUniqueId": "5146:178"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/echou1.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10426,8 +10412,6 @@
     "hammerUniqueId": "5146:179"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/sabi.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10451,8 +10435,6 @@
     "hammerUniqueId": "5146:180"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/sabi2.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10476,8 +10458,6 @@
     "hammerUniqueId": "5146:181"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/wssb.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10501,8 +10481,6 @@
     "hammerUniqueId": "5146:182"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/world\u0027s end.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10536,8 +10514,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/heishou.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10561,8 +10537,6 @@
     "hammerUniqueId": "5146:184"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/pendulum - encoder.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10596,8 +10570,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/pendulum - propane nightmares (celldweller remix).vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10631,8 +10603,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/imagesdawn.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10666,8 +10636,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/heishou2.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10691,8 +10659,6 @@
     "hammerUniqueId": "5146:188"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/heishou3.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10716,8 +10682,6 @@
     "hammerUniqueId": "5146:189"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/heishou4.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10741,8 +10705,6 @@
     "hammerUniqueId": "5146:190"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/item_sound/item_sound/sound/fuckyou!.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10766,8 +10728,6 @@
     "hammerUniqueId": "5146:191"
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/pendulum - witchcraft.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10801,8 +10761,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/music1.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10836,8 +10794,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/pendulum - granite.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10871,8 +10827,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/pendulum - hold your colour.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10906,8 +10860,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_sky_city/nirv luce.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10941,8 +10893,6 @@
     ]
   },
   {
-    "spawnflags": "49",
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/insane dream.vsnd",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -10976,8 +10926,6 @@
     ]
   },
   {
-    "message": "sounds/ze_icecap_escape_item_attack/bgm/pendulum - witchcraft.vsnd",
-    "spawnflags": "49",
     "entityIndexSelection": "0",
     "sourceEntityAttachment": "",
     "saveAndRestore": "0",
@@ -11260,7 +11208,6 @@
     ]
   },
   {
-    "filterteam": "2",
     "filterclass": "",
     "Negated": "0",
     "clientSideEntity": "0",
@@ -11566,8 +11513,6 @@
     "hammerUniqueId": "5146:207"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -11615,8 +11560,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_242.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -11664,8 +11607,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_244.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -11713,8 +11654,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_246.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -11762,8 +11701,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_door4_5146_248.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -11811,8 +11748,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_door5_5146_250.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -11860,8 +11795,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_door7_5146_252.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -11909,7 +11842,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_door6_5146_254.vmdl"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -11981,7 +11913,6 @@
     "hammerUniqueId": "5146:256"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12063,8 +11994,6 @@
     ]
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -12112,8 +12041,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_258.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -12161,8 +12088,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/door_5146_260.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -12210,8 +12135,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_down2_5146_262.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -12259,7 +12182,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_down1_5146_271.vmdl"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12331,7 +12253,6 @@
     "hammerUniqueId": "5146:280"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12403,7 +12324,6 @@
     "hammerUniqueId": "5146:281"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12475,7 +12395,6 @@
     "hammerUniqueId": "5146:282"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12547,7 +12466,6 @@
     "hammerUniqueId": "5146:283"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12619,7 +12537,6 @@
     "hammerUniqueId": "5146:284"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12691,7 +12608,6 @@
     "hammerUniqueId": "5146:285"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12763,7 +12679,6 @@
     "hammerUniqueId": "5146:286"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12835,7 +12750,6 @@
     "hammerUniqueId": "5146:287"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12907,7 +12821,6 @@
     "hammerUniqueId": "5146:288"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -12979,7 +12892,6 @@
     "hammerUniqueId": "5146:289"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13051,7 +12963,6 @@
     "hammerUniqueId": "5146:290"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13123,7 +13034,6 @@
     "hammerUniqueId": "5146:291"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13195,7 +13105,6 @@
     "hammerUniqueId": "5146:292"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13267,7 +13176,6 @@
     "hammerUniqueId": "5146:293"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13339,7 +13247,6 @@
     "hammerUniqueId": "5146:294"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13411,7 +13318,6 @@
     "hammerUniqueId": "5146:295"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13483,7 +13389,6 @@
     "hammerUniqueId": "5146:296"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13555,7 +13460,6 @@
     "hammerUniqueId": "5146:297"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13627,7 +13531,6 @@
     "hammerUniqueId": "5146:298"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13699,7 +13602,6 @@
     "hammerUniqueId": "5146:299"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13771,7 +13673,6 @@
     "hammerUniqueId": "5146:300"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13843,7 +13744,6 @@
     "hammerUniqueId": "5146:301"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13915,7 +13815,6 @@
     "hammerUniqueId": "5146:302"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -13987,7 +13886,6 @@
     "hammerUniqueId": "5146:303"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14059,7 +13957,6 @@
     "hammerUniqueId": "5146:304"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14131,7 +14028,6 @@
     "hammerUniqueId": "5146:305"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14203,7 +14099,6 @@
     "hammerUniqueId": "5146:306"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14275,7 +14170,6 @@
     "hammerUniqueId": "5146:307"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14347,7 +14241,6 @@
     "hammerUniqueId": "5146:308"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14419,7 +14312,6 @@
     "hammerUniqueId": "5146:309"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14491,7 +14383,6 @@
     "hammerUniqueId": "5146:310"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14563,7 +14454,6 @@
     "hammerUniqueId": "5146:311"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14635,7 +14525,6 @@
     "hammerUniqueId": "5146:318"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14707,7 +14596,6 @@
     "hammerUniqueId": "5146:319"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14779,7 +14667,6 @@
     "hammerUniqueId": "5146:320"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14851,7 +14738,6 @@
     "hammerUniqueId": "5146:321"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14923,7 +14809,6 @@
     "hammerUniqueId": "5146:322"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -14995,7 +14880,6 @@
     "hammerUniqueId": "5146:323"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15067,7 +14951,6 @@
     "hammerUniqueId": "5146:324"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15139,7 +15022,6 @@
     "hammerUniqueId": "5146:325"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15211,7 +15093,6 @@
     "hammerUniqueId": "5146:326"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15283,7 +15164,6 @@
     "hammerUniqueId": "5146:327"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15355,7 +15235,6 @@
     "hammerUniqueId": "5146:328"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15427,7 +15306,6 @@
     "hammerUniqueId": "5146:329"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15499,8 +15377,6 @@
     "hammerUniqueId": "5146:330"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -15548,8 +15424,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_door3_5146_331.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -15597,8 +15471,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_door2_5146_333.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -15646,7 +15518,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_door1_5146_335.vmdl"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15718,7 +15589,6 @@
     "hammerUniqueId": "5146:337"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -15790,8 +15660,6 @@
     "hammerUniqueId": "5146:338"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -15839,8 +15707,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_339.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -15888,8 +15754,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_341.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -15937,8 +15801,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_343.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -15986,8 +15848,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_345.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -16035,8 +15895,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_347.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -16084,8 +15942,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_349.vmdl"
   },
   {
-    "fadescale": "1",
-    "gibdir": "0 0 0",
     "physdamagescale": "1.000000",
     "_minlight": "",
     "overrideBlockLOS": "0",
@@ -16133,7 +15989,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_351.vmdl"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -16205,7 +16060,6 @@
     "hammerUniqueId": "5146:353"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -16277,7 +16131,6 @@
     "hammerUniqueId": "5146:354"
   },
   {
-    "fadescale": "1",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
     "StartDisabled": "0",
@@ -18097,36 +17950,6 @@
     "hammerUniqueId": "5146:670"
   },
   {
-    "fadetime": "1.000000",
-    "exposurespeeddown": "1.000000",
-    "exposurespeedup": "1.000000",
-    "enableexposure": "1",
-    "maxexposure": "1.250000",
-    "minexposure": "0.500000",
-    "master": "1",
-    "postprocessing": "lighting/postprocessing/ze_ez_escape_cs2/ze_ez_escape_cs2.vpost",
-    "filtername": "",
-    "spawnflags": "4097",
-    "globalname": "",
-    "StartDisabled": "0",
-    "local.scales": "1.000000 1.000000 1.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "",
-    "classname": "post_processing_volume",
-    "origin": "-2332.000000 -299.000000 -376.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5146:671",
-    "model": "maps/ze_ze_ez_escape_cs2/entities/unnamed_5146_671.vmdl"
-  },
-  {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -18152,8 +17975,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_teleport5_5146_673.vmdl"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -18179,8 +18000,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_teleport5_5146_675.vmdl"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -18206,8 +18025,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_teleport5_5146_677.vmdl"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -18233,8 +18050,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_teleport5_5146_679.vmdl"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -18285,8 +18100,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_teleport1_5146_683.vmdl"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -18395,8 +18208,6 @@
     "hammerUniqueId": "5146:700"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -20011,7 +19822,6 @@
     ]
   },
   {
-    "fadescale": "1",
     "MoveSoundMaxTime": "0.000000",
     "MoveSoundMinTime": "0.000000",
     "MoveSoundMaxPitch": "200",
@@ -20120,7 +19930,6 @@
     ]
   },
   {
-    "fadescale": "1",
     "MoveSoundMaxTime": "0.000000",
     "MoveSoundMinTime": "0.000000",
     "MoveSoundMaxPitch": "200",
@@ -20211,7 +20020,6 @@
     "hammerUniqueId": "5146:792"
   },
   {
-    "fadescale": "1",
     "MoveSoundMaxTime": "0.000000",
     "MoveSoundMinTime": "0.000000",
     "MoveSoundMaxPitch": "200",
@@ -20666,9 +20474,6 @@
     ]
   },
   {
-    "alternateticksfix": "0",
-    "FallingSpeedThreshold": "-150",
-    "OnlyFallingPlayers": "0",
     "triggeronstarttouch": "0",
     "speed": "300",
     "pushdir": "0.000000 180.000000 0.000000",
@@ -21000,8 +20805,6 @@
     "hammerUniqueId": "5146:819"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -21027,8 +20830,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_teleport3_5146_820.vmdl"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
@@ -21054,8 +20855,6 @@
     "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_goliath_teleport_5146_822.vmdl"
   },
   {
-    "CheckDestIfClearForPlayer": "0",
-    "UseLandmarkAngles": "0",
     "check_if_dest_clear_for_player": "0",
     "mirror_player": "0",
     "use_landmark_angles": "0",
