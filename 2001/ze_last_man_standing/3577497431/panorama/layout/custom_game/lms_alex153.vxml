@@ -43,5 +43,18 @@
                 <Label id="AlexMorphed" class="Value" text="{s:morphed}" hittest="false" />
             </Panel>
         </Panel>
+        <Panel class="AlmaHudRoot" hittest="false">
+            <Panel id="AlmaInterrupt" hittest="false">
+                <Label class="AlmaHeading AlmaVictimOnly" text="阿尔玛处死判定" hittest="false" />
+                <Label class="AlmaHeading AlmaOwnerOnly" text="阿尔玛正在施放处死" hittest="false" />
+                <Panel class="AlmaCountRow" hittest="false">
+                    <Label class="AlmaKey" text="解除处死所需命中" hittest="false" />
+                    <Label id="AlmaHitCount" text="{s:hits}" hittest="false" />
+                    <Label class="AlmaUnit" text="次" hittest="false" />
+                </Panel>
+                <Label class="AlmaHint AlmaVictimOnly" text="队友命中女鬼可打断处死" hittest="false" />
+                <Label class="AlmaHint AlmaOwnerOnly" text="女鬼受击时，计数减少" hittest="false" />
+            </Panel>
+        </Panel>
     </Panel>
 </root>

@@ -238,7 +238,7 @@
         "target": "!self",
         "input": "Enable",
         "param": "",
-        "delay": 8,
+        "delay": 6,
         "limit": -1
       },
       {
@@ -433,9 +433,9 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]zombie_jumper",
-        "input": "KeyValues",
-        "param": "health 4000",
+        "target": "[PR#]kou_script",
+        "input": "RunScriptInput",
+        "param": "HealJumperHolder242",
         "delay": 0,
         "limit": -1
       },
@@ -445,7 +445,7 @@
         "input": "FireUser1",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnPlayerPickup",

@@ -293,10 +293,10 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValues",
-        "param": "speed 1",
-        "delay": 5,
+        "target": "[PR#]kou_script",
+        "input": "RunScriptInput",
+        "param": "QueueSummonerSpeedRestore244",
+        "delay": 0,
         "limit": -1
       }
     ]

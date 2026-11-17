@@ -80,7 +80,7 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]Zombie_Item_Summoner_Slow_Trigger",
+        "target": "[PR#]Zombie_Item_Summoner_Slow_Trigger*",
         "input": "Kill",
         "param": "",
         "delay": 0,
@@ -532,9 +532,9 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]zombie_summoner",
-        "input": "KeyValues",
-        "param": "health 8000",
+        "target": "[PR#]kou_script",
+        "input": "RunScriptInput",
+        "param": "HealZombieArtifactHolder243",
         "delay": 0,
         "limit": -1
       },
@@ -544,7 +544,7 @@
         "input": "FireUser1",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       }
     ]
   },

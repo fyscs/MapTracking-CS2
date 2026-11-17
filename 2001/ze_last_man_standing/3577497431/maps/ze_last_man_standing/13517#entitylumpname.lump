@@ -151,6 +151,14 @@
         "param": "",
         "delay": 0.10000000149011612,
         "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Spawn_Projectile_Waker\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -460,6 +468,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 8.25,
+        "limit": 1
       }
     ]
   }

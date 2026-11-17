@@ -112,6 +112,24 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "612",
-    "_template_lump_ent_index": "1"
+    "_template_lump_ent_index": "1",
+    "connections": [
+      {
+        "output": "OnDamaged",
+        "target": "!self",
+        "input": "EnableMotion",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnDamaged",
+        "target": "!self",
+        "input": "Wake",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]

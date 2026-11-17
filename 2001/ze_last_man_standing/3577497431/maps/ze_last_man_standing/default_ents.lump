@@ -4469,7 +4469,7 @@
     "damagemodel": "0",
     "damagetype": "8",
     "damagecap": "20",
-    "damage": "500",
+    "damage": "150",
     "master": "",
     "filtername": "[PR#]filter_no_humans",
     "spawnflags": "9",
@@ -4616,7 +4616,7 @@
     "damagemodel": "0",
     "damagetype": "8",
     "damagecap": "20",
-    "damage": "500",
+    "damage": "150",
     "master": "",
     "filtername": "[PR#]filter_no_humans",
     "spawnflags": "9",
@@ -6057,7 +6057,7 @@
     "damagemodel": "0",
     "damagetype": "512",
     "damagecap": "20",
-    "damage": "2000",
+    "damage": "5000",
     "master": "",
     "filtername": "[PR#]team_filter_zombies",
     "spawnflags": "1",
@@ -16264,7 +16264,7 @@
   },
   {
     "clientSideEntity": "0",
-    "filtername": "[PR#]zombie_antlion",
+    "filtername": "[PR#]Zombie_Item_antlion",
     "Negated": "1",
     "vscripts": "",
     "targetname": "[PR#]filter_zombie_not_antlion",
@@ -20010,6 +20010,22 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]lms241_lab_gravity_rearm",
+        "input": "SetValue",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]lms241_lab_freeze_rearm",
+        "input": "SetValue",
+        "param": "1",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -21603,11 +21619,11 @@
     "precomputedobbextent0": "163.729004 170.704102 126.617188",
     "precomputedobbangles0": "0.000000 -45.000004 0.000000",
     "precomputedobborigin0": "-7395.607422 12127.634766 -12321.574219",
-    "precomputedboundsmaxs": "-7290.660156 12464.026367 -12127.860352",
+    "precomputedboundsmaxs": "-7290.660156 12464.026367 -12127.859375",
     "precomputedboundsmins": "-7960.105469 11882.508789 -12448.192383",
-    "precomputedobbextent": "302.546387 318.853027 160.166016",
+    "precomputedobbextent": "302.546387 318.853027 160.166504",
     "precomputedobbangles": "-0.000000 36.000000 0.000000",
-    "precomputedobborigin": "-7610.389648 12158.880859 -12288.026367",
+    "precomputedobborigin": "-7610.389648 12158.880859 -12288.025391",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
@@ -27014,6 +27030,7 @@
     ]
   },
   {
+    "frostenabled": "0",
     "gpucullskybox": "0",
     "envwetnessdryingamount": "0.000000",
     "envwetnesscoverage": "1.000000",
@@ -28553,6 +28570,14 @@
         "output": "OnStartTouch",
         "target": "[PR#]heli_w_ammo_timer",
         "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnEndTouchAll",
+        "target": "[PR#]heli_w_ammo_timer",
+        "input": "Disable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -30609,6 +30634,30 @@
         "param": "hasAmmo",
         "delay": 0.009999999776482582,
         "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "AddContext",
+        "param": "lmsGeneralAmmoChecked236:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "RemoveContext",
+        "param": "lmsGeneralAmmoChecked236",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -30640,7 +30689,7 @@
     "clientSideEntity": "0",
     "Filter10": "",
     "Filter09": "",
-    "Filter08": "",
+    "Filter08": "[PR#]general_ammo_scan_filter236",
     "Filter07": "",
     "Filter06": "[PR#]weap_class_filter4",
     "Filter05": "[PR#]weap_class_filter3",
@@ -30659,7 +30708,7 @@
     "hammerUniqueId": "13538"
   },
   {
-    "max": "128",
+    "max": "16",
     "min": "0",
     "startvalue": "0",
     "StartDisabled": "0",
@@ -30680,35 +30729,11 @@
         "limit": -1
       },
       {
-        "output": "OutValue",
-        "target": "[PR#]give_ammo",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnHitMax",
         "target": "[PR#]give_ammo",
         "input": "Disable",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]ammo_counter",
-        "input": "SetValueNoFire",
-        "param": "0",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]give_ammo",
-        "input": "Enable",
-        "param": "",
-        "delay": 0.019999999552965164,
         "limit": -1
       }
     ]
@@ -30780,10 +30805,194 @@
     "connections": [
       {
         "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
         "target": "[PR#]give_ammo",
         "input": "Trigger",
         "param": "",
-        "delay": 0,
+        "delay": 0.015625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.078125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.140625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.203125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.265625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.328125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.390625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.453125,
         "limit": -1
       }
     ]
@@ -31503,6 +31712,30 @@
         "param": "hasAmmo",
         "delay": 0.009999999776482582,
         "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "AddContext",
+        "param": "lmsHeliAmmoChecked236:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "RemoveContext",
+        "param": "lmsHeliAmmoChecked236",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -31534,7 +31767,7 @@
     "clientSideEntity": "0",
     "Filter10": "",
     "Filter09": "",
-    "Filter08": "",
+    "Filter08": "[PR#]heli_ammo_scan_filter236",
     "Filter07": "[PR#]weap_class_filter5",
     "Filter06": "[PR#]heli_weap_class_filter4",
     "Filter05": "[PR#]heli_weap_class_filter3",
@@ -31553,7 +31786,7 @@
     "hammerUniqueId": "13624"
   },
   {
-    "max": "128",
+    "max": "16",
     "min": "0",
     "startvalue": "0",
     "StartDisabled": "0",
@@ -31574,35 +31807,11 @@
         "limit": -1
       },
       {
-        "output": "OutValue",
-        "target": "[PR#]heli_give_ammo",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnHitMax",
         "target": "[PR#]heli_give_ammo",
         "input": "Disable",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]heli_ammo_counter",
-        "input": "SetValueNoFire",
-        "param": "0",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]heli_give_ammo",
-        "input": "Enable",
-        "param": "",
-        "delay": 0.019999999552965164,
         "limit": -1
       }
     ]
@@ -31674,10 +31883,194 @@
     "connections": [
       {
         "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
         "target": "[PR#]heli_give_ammo",
         "input": "Trigger",
         "param": "",
-        "delay": 0,
+        "delay": 0.015625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.078125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.140625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.203125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.265625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.328125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.390625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]heli_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.453125,
         "limit": -1
       }
     ]
@@ -32013,7 +32406,7 @@
   },
   {
     "clientSideEntity": "0",
-    "ResponseContext": "hasAmmo",
+    "ResponseContext": "lmsCoreAmmoChecked",
     "Negated": "1",
     "vscripts": "",
     "targetname": "[PR#]core_weap_context_filter",
@@ -32058,6 +32451,30 @@
         "param": "hasAmmo",
         "delay": 0.009999999776482582,
         "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "AddContext",
+        "param": "lmsCoreAmmoChecked:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "RemoveContext",
+        "param": "lmsCoreAmmoChecked",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -32089,7 +32506,7 @@
     "clientSideEntity": "0",
     "Filter10": "",
     "Filter09": "",
-    "Filter08": "",
+    "Filter08": "[PR#]weap_context_filter",
     "Filter07": "[PR#]weap_class_filter5",
     "Filter06": "[PR#]core_weap_class_filter4",
     "Filter05": "[PR#]core_weap_class_filter3",
@@ -32108,7 +32525,7 @@
     "hammerUniqueId": "13684"
   },
   {
-    "max": "128",
+    "max": "16",
     "min": "0",
     "startvalue": "0",
     "StartDisabled": "0",
@@ -32129,35 +32546,11 @@
         "limit": -1
       },
       {
-        "output": "OutValue",
-        "target": "[PR#]core_give_ammo",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnHitMax",
         "target": "[PR#]core_give_ammo",
         "input": "Disable",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]core_ammo_counter",
-        "input": "SetValueNoFire",
-        "param": "0",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]core_give_ammo",
-        "input": "Enable",
-        "param": "",
-        "delay": 0.019999999552965164,
         "limit": -1
       }
     ]
@@ -32229,10 +32622,194 @@
     "connections": [
       {
         "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
         "target": "[PR#]core_give_ammo",
         "input": "Trigger",
         "param": "",
-        "delay": 0,
+        "delay": 0.015625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.078125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.140625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.203125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.265625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.328125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.390625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]core_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.453125,
         "limit": -1
       }
     ]
@@ -35482,7 +36059,7 @@
   },
   {
     "clientSideEntity": "0",
-    "ResponseContext": "hasAmmo",
+    "ResponseContext": "lmsBlueEndingAmmoChecked",
     "Negated": "1",
     "vscripts": "",
     "targetname": "[PR#]blueending_weap_context_filter",
@@ -35527,6 +36104,30 @@
         "param": "hasAmmo",
         "delay": 0.009999999776482582,
         "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "AddContext",
+        "param": "lmsBlueEndingAmmoChecked:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "!caller",
+        "input": "RemoveContext",
+        "param": "lmsBlueEndingAmmoChecked",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnFoundEntity",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -35558,7 +36159,7 @@
     "clientSideEntity": "0",
     "Filter10": "",
     "Filter09": "",
-    "Filter08": "",
+    "Filter08": "[PR#]weap_context_filter",
     "Filter07": "[PR#]weap_class_filter5",
     "Filter06": "[PR#]blueending_weap_class_filter4",
     "Filter05": "[PR#]blueending_weap_class_filter3",
@@ -35577,7 +36178,7 @@
     "hammerUniqueId": "13964"
   },
   {
-    "max": "128",
+    "max": "16",
     "min": "0",
     "startvalue": "0",
     "StartDisabled": "0",
@@ -35598,35 +36199,11 @@
         "limit": -1
       },
       {
-        "output": "OutValue",
-        "target": "[PR#]blueending_give_ammo",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
         "output": "OnHitMax",
         "target": "[PR#]blueending_give_ammo",
         "input": "Disable",
         "param": "",
         "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]blueending_ammo_counter",
-        "input": "SetValueNoFire",
-        "param": "0",
-        "delay": 0.019999999552965164,
-        "limit": -1
-      },
-      {
-        "output": "OnHitMax",
-        "target": "[PR#]blueending_give_ammo",
-        "input": "Enable",
-        "param": "",
-        "delay": 0.019999999552965164,
         "limit": -1
       }
     ]
@@ -35698,10 +36275,194 @@
     "connections": [
       {
         "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
         "target": "[PR#]blueending_give_ammo",
         "input": "Trigger",
         "param": "",
-        "delay": 0,
+        "delay": 0.015625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.0625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.078125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.140625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.1875,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.203125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.25,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.265625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.3125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.328125,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.390625,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_ammo_counter",
+        "input": "SetValueNoFire",
+        "param": "0",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.4375,
+        "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "[PR#]blueending_give_ammo",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0.453125,
         "limit": -1
       }
     ]
@@ -46012,7 +46773,7 @@
     "hammerUniqueId": "4120305"
   },
   {
-    "cs_script": "maps/scripts/lms_ac130_161/weapons.vjs",
+    "cs_script": "scripts/weapons.vjs",
     "targetname": "[PR#]LMS_AC130_Weapons161",
     "classname": "point_script",
     "origin": "0.000000 0.000000 0.000000",
@@ -48042,6 +48803,119 @@
     "TemplateFixup": "1"
   },
   {
+    "clientSideEntity": "0",
+    "ResponseContext": "lmsGeneralAmmoChecked236",
+    "Negated": "1",
+    "vscripts": "",
+    "targetname": "[PR#]general_ammo_scan_filter236",
+    "classname": "filter_activator_context",
+    "origin": "-9774.562500 12879.197266 -12256.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "4130008"
+  },
+  {
+    "clientSideEntity": "0",
+    "ResponseContext": "lmsHeliAmmoChecked236",
+    "Negated": "1",
+    "vscripts": "",
+    "targetname": "[PR#]heli_ammo_scan_filter236",
+    "classname": "filter_activator_context",
+    "origin": "-9122.000000 10875.000000 -11853.941406",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "4130009"
+  },
+  {
+    "Template64": "",
+    "Template63": "",
+    "Template62": "",
+    "Template61": "",
+    "Template60": "",
+    "Template59": "",
+    "Template58": "",
+    "Template57": "",
+    "Template56": "",
+    "Template55": "",
+    "Template54": "",
+    "Template53": "",
+    "Template52": "",
+    "Template51": "",
+    "Template50": "",
+    "Template49": "",
+    "Template48": "",
+    "Template47": "",
+    "Template46": "",
+    "Template45": "",
+    "Template44": "",
+    "Template43": "",
+    "Template42": "",
+    "Template41": "",
+    "Template40": "",
+    "Template39": "",
+    "Template38": "",
+    "Template37": "",
+    "Template36": "",
+    "Template35": "",
+    "Template34": "",
+    "Template33": "",
+    "Template32": "",
+    "Template31": "",
+    "Template30": "",
+    "Template29": "",
+    "Template28": "",
+    "Template27": "",
+    "Template26": "",
+    "Template25": "",
+    "Template24": "",
+    "Template23": "",
+    "Template22": "",
+    "Template21": "",
+    "Template20": "",
+    "Template19": "",
+    "Template18": "",
+    "Template17": "",
+    "Template16": "",
+    "Template15": "",
+    "Template14": "",
+    "Template13": "",
+    "Template12": "",
+    "Template11": "",
+    "Template10": "",
+    "Template09": "",
+    "Template08": "",
+    "Template07": "",
+    "Template06": "",
+    "Template05": "",
+    "Template04": "",
+    "Template03": "",
+    "Template02": "",
+    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
+    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
+    "entityFilterName": "",
+    "timeoutInterval": "0.000000",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "asynchronous": "0",
+    "spawnflags": "0",
+    "Template01": "[PR#]LMS247_TankDefenseImpact",
+    "targetname": "[PR#]LMS247_TankDefenseImpact_Template",
+    "classname": "point_template",
+    "origin": "0.000000 0.000000 0.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "3990248",
+    "worldName": "maps\\ze_last_man_standing",
+    "entityLumpName": "3990248#entityLumpName",
+    "TemplateFixup": "1"
+  },
+  {
     "precomputedsubfrusta": "5",
     "precomputedobbextent4": "192.400391 265.962891 188.029297",
     "precomputedobbangles4": "-0.000000 45.000004 0.000000",
@@ -48132,9 +49006,9 @@
     "precomputedobbextent3": "163.836182 187.586914 4.751465",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "-6413.534180 11622.178711 -12068.560547",
-    "precomputedobbextent2": "694.657227 382.291016 22.993652",
+    "precomputedobbextent2": "694.658203 382.291016 22.993652",
     "precomputedobbangles2": "-0.000000 45.000004 0.000000",
-    "precomputedobborigin2": "-5702.571289 12031.578125 -12050.318359",
+    "precomputedobborigin2": "-5702.570312 12031.578125 -12050.318359",
     "precomputedobbextent1": "56.199951 111.855469 3.049805",
     "precomputedobbangles1": "-0.000000 0.000000 0.000000",
     "precomputedobborigin1": "-6521.137695 11810.495117 -12070.262695",
@@ -51251,9 +52125,9 @@
   },
   {
     "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "179.719482 162.393555 29.496094",
+    "precomputedobbextent5": "179.719482 162.393066 29.496094",
     "precomputedobbangles5": "37.999996 9.999998 6.000000",
-    "precomputedobborigin5": "-5364.217773 12275.525391 -12562.168945",
+    "precomputedobborigin5": "-5364.217773 12275.526367 -12562.168945",
     "precomputedobbextent4": "243.651367 328.083496 316.200195",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
     "precomputedobborigin4": "-5575.452148 11972.793945 -12324.232422",
@@ -52902,9 +53776,9 @@
   },
   {
     "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "256.038574 127.646973 160.226074",
+    "precomputedobbextent5": "256.038574 127.647461 160.226074",
     "precomputedobbangles5": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin5": "-7464.027832 12395.287109 -12287.982422",
+    "precomputedobborigin5": "-7464.027832 12395.288086 -12287.982422",
     "precomputedobbextent4": "203.657715 226.409424 160.279785",
     "precomputedobbangles4": "0.000000 -45.000004 0.000000",
     "precomputedobborigin4": "-7768.014648 12250.614258 -12287.996094",
@@ -53092,9 +53966,9 @@
     "precomputedobbextent2": "308.696045 62.907227 218.582275",
     "precomputedobbangles2": "0.000000 0.000000 -45.000004",
     "precomputedobborigin2": "-6007.755859 11593.077148 -12174.044922",
-    "precomputedobbextent1": "267.293213 191.642578 93.140686",
+    "precomputedobbextent1": "267.293457 191.642578 93.140686",
     "precomputedobbangles1": "-10.999998 7.999999 -36.999992",
-    "precomputedobborigin1": "-6009.380371 11575.341797 -12554.841797",
+    "precomputedobborigin1": "-6009.380859 11575.341797 -12554.841797",
     "precomputedobbextent0": "328.061523 328.083984 336.378418",
     "precomputedobbangles0": "-0.000000 45.000004 0.000000",
     "precomputedobborigin0": "-6008.015625 11946.875000 -12304.015625",
@@ -53449,9 +54323,9 @@
     "precomputedobbextent3": "253.502930 390.997070 129.571777",
     "precomputedobbangles3": "-1.000000 0.000000 0.000000",
     "precomputedobborigin3": "-5283.155273 12579.934570 -12199.801758",
-    "precomputedobbextent2": "94.635254 190.082520 95.009277",
+    "precomputedobbextent2": "94.635010 190.082520 95.009277",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "-5126.427246 12188.017578 -12166.947266",
+    "precomputedobborigin2": "-5126.427734 12188.017578 -12166.947266",
     "precomputedobbextent1": "84.625000 170.123047 85.093262",
     "precomputedobbangles1": "-0.000000 0.000000 0.000000",
     "precomputedobborigin1": "-5307.562500 12188.007812 -12157.031250",
@@ -53807,10 +54681,10 @@
     "precomputedobbextent3": "180.223877 135.000977 124.153320",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "-5212.007812 12835.938477 -12196.091797",
-    "precomputedobbextent2": "94.635254 190.082520 95.009277",
+    "precomputedobbextent2": "94.635010 190.082520 95.009277",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "-5126.427246 12700.017578 -12166.947266",
-    "precomputedobbextent1": "640.700928 319.437500 116.069092",
+    "precomputedobborigin2": "-5126.427734 12700.017578 -12166.947266",
+    "precomputedobbextent1": "640.700928 319.437500 116.068848",
     "precomputedobbangles1": "-29.999996 20.999994 -10.999998",
     "precomputedobborigin1": "-5780.701172 12693.687500 -12446.939453",
     "precomputedobbextent0": "164.107910 247.952148 154.912598",
@@ -54165,9 +55039,9 @@
     "precomputedobbextent3": "205.768555 646.981445 124.401855",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "-5237.325195 12323.918945 -12196.339844",
-    "precomputedobbextent2": "94.635254 190.082520 95.009277",
+    "precomputedobbextent2": "94.635010 190.082520 95.009277",
     "precomputedobbangles2": "-0.000000 0.000000 0.000000",
-    "precomputedobborigin2": "-5126.427246 11676.017578 -12166.947266",
+    "precomputedobborigin2": "-5126.427734 11676.017578 -12166.947266",
     "precomputedobbextent1": "644.111328 316.993164 116.047119",
     "precomputedobbangles1": "-29.999996 -20.999994 10.999998",
     "precomputedobborigin1": "-5780.053711 11696.366211 -12446.078125",

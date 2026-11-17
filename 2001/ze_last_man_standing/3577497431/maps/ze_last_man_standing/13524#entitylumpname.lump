@@ -163,6 +163,14 @@
         "param": "!caller",
         "delay": 0.019999999552965164,
         "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Spawn_Missile_Waker\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -389,6 +397,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTimer",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 5.25,
+        "limit": 1
       }
     ]
   }

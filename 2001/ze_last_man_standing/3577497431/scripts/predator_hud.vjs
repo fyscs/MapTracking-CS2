@@ -63,6 +63,36 @@ function bind(model){
   hook(r,weapon,'OnUser4',()=>{if(r.state.suicideAt===null)r.state.retired=true;});
   fire(r.energy,'GetValue');
 }
+function setJobAnimation(r,animation){
+  if(!valid(r.model)||r.job.animation===animation)return;
+  r.job.animation=animation;
+  fire(r.model,'SetDefaultAnimation',animation);
+  fire(r.model,'SetAnimation',animation);
+}
+function setOperatorAlpha(owner,alpha){
+  if(!valid(owner))return;
+  const color=owner.GetColor();
+  if(color.a!==alpha)owner.SetColor({...color,a:alpha});
+}
+function showOperator(j){
+  if(!j?.hiddenOperator)return;
+  j.hiddenOperator=false;
+  setOperatorAlpha(j.owner,255);
+}
+function updateFollowPresentation(r){
+  const {owner,animation}=r.job;
+  const {x,y}=owner.GetAbsVelocity();
+  const threshold=animation==='sprint_all'?8:15;
+  setJobAnimation(r,x*x+y*y>=threshold*threshold?'sprint_all':'lookoutidle');
+  setOperatorAlpha(owner,0);
+}
+function resetOperator246({caller,activator}){
+  // The shared relay queues Alpha 255 after five seconds. Active Predator has a local reset.
+  for(const r of records.values()){
+    if(r.ui===caller&&r.job?.owner===activator&&r.job.hiddenOperator)return;
+  }
+  Instance.EntFireAtName({name:'ResetActivator',input:'Trigger',caller,activator});
+}
 function arm(r,cause){
   if(paused)return;
   if(r.job){if(cause==='destroyed'){r.state.setHealth(0);anchorJob(r,true);killOperator(r.job);}return;}
@@ -73,17 +103,26 @@ function arm(r,cause){
   const blastAngles=valid(r.maker)?{...r.maker.GetAbsAngles()}:angles;
   r.owner=(valid(r.weapon)?r.weapon.GetOwner():null)??r.owner;
   const follow=cause==='manual'&&valid(r.owner)&&r.owner.IsAlive()&&r.owner!==r.blockedOwner;
-  r.job={id:++serial,cause,position,angles,blastPosition,blastAngles,due:time+RULES151.suicideDelay,nextTry:0,done:false,owner:r.owner,slot:valid(r.owner)?r.owner.GetPlayerController()?.GetPlayerSlot():undefined,ownerLifeEnded:!valid(r.owner)||!r.owner.IsAlive(),follow};
+  r.job={id:++serial,cause,position,angles,blastPosition,blastAngles,due:time+RULES151.suicideDelay,nextTry:0,done:false,owner:r.owner,slot:valid(r.owner)?r.owner.GetPlayerController()?.GetPlayerSlot():undefined,ownerLifeEnded:!valid(r.owner)||!r.owner.IsAlive(),follow,animation:null,hiddenOperator:follow};
   r.state.suicide(time);
   if(cause==='destroyed')r.state.setHealth(0);else if(valid(r.health))r.state.setHealth(r.health.GetHealth(),r.health.GetMaxHealth());
   // Bind to the original pawn so a dropped or holstered knife cannot take the statue away.
   r.model.SetParent(follow?r.owner:undefined);r.model.SetEntityName('LMS_Predator_Armed151_'+r.job.id);
   r.model.SetMoveType(CSMoveType.NONE);r.model.Teleport({position,angles,velocity:zero(),angularVelocity:zero()});
   r.model.SetColor({r:255,g:255,b:255,a:255});
-  fire(r.model,'SetDefaultAnimation','roofidle2');fire(r.model,'SetAnimation','roofidle2');
+  if(follow){
+    // Apply the shared reset locally, withholding its delayed player reveal.
+    fire(r.owner,'KeyValues','targetname nada');
+    fire(r.owner,'KeyValues','speed 1');
+    fire(r.owner,'KeyValues','gravity 1');
+    fire(r.owner,'SetDamageFilter','');
+    fire(r.owner,'ClearContext');
+    updateFollowPresentation(r);
+  }else{
+    setJobAnimation(r,'roofidle2');
+    if(valid(r.owner))r.owner.SetColor({r:255,g:255,b:255,a:255});
+  }
   if(valid(r.laugh)){r.laugh.SetParent(r.model);fire(r.laugh,'StartSound');}
-  // Original armed branch reveals the player and deactivates the artifact's input bridge.
-  if(valid(r.owner))r.owner.SetColor({r:255,g:255,b:255,a:255});
   fire(r.ui,'Deactivate');
   fire(r.weapon,'ToggleCanBePickedUp'); // Original template starts with CanBePickedUp = 1.
   // Preserve the knife during countdown; destroy only the captured artifact after detonation.
@@ -104,6 +143,7 @@ function armInput({caller},cause){
   if(r)arm(r,cause);else Instance.Msg('[PRED151] Arm input has no matching artifact');
 }
 function cleanup(r){
+  showOperator(r.job);
   disconnect(r);
   for(const e of r.parts)if(valid(e))e.Remove();
   // Do not confiscate a knife from a different/new life that picked up the spent artifact.
@@ -122,9 +162,11 @@ function anchorJob(r,sample){
   if(!j?.follow)return;
   if(sample)capturePose(r);
   j.follow=false;
+  showOperator(j);
   if(valid(r.model)){
     r.model.SetParent(undefined);
     r.model.Teleport({position:j.position,angles:j.angles,velocity:zero(),angularVelocity:zero()});
+    setJobAnimation(r,'roofidle2');
   }
 }
 function updateJob(r,time){
@@ -132,7 +174,7 @@ function updateJob(r,time){
   if(j.follow){
     if(!valid(j.owner)||!j.owner.IsAlive()||j.owner.GetPlayerController()?.GetPlayerPawn()!==j.owner){
       anchorJob(r,false);j.ownerLifeEnded=true;
-    }else capturePose(r);
+    }else{capturePose(r);updateFollowPresentation(r);}
   }
   if(time<j.due||time<j.nextTry)return;
   const template=unique('Spawn_Nuke_Template');
@@ -140,6 +182,7 @@ function updateJob(r,time){
   const made=valid(template)?template.ForceSpawn(j.blastPosition,j.blastAngles):undefined;
   if(!made?.length){j.nextTry=time+1;Instance.Msg('[PRED151] Nuke spawn failed; latched countdown retained for retry');return;}
   j.done=true;blasts.add({entities:made,until:time+3});
+  showOperator(j);
   // Never kill a respawned player or a new holder. The old graph targeted an unrelated relay.
   killOperator(j);
   Instance.Msg('[PRED151] Detonated '+JSON.stringify({id:j.id,cause:j.cause,time,position:j.blastPosition,spawned:made.length}));
@@ -193,6 +236,7 @@ function tick(){
 function resetPlayer(player,endLife=true,sample=false){for(const r of records.values())if(r.owner===player){r.blockedOwner=player;if(r.job&&endLife){anchorJob(r,sample);r.job.ownerLifeEnded=true;}}const slot=player?.GetPlayerController()?.GetPlayerSlot();if(slot!==undefined)hide(slot);}
 Instance.OnActivate(()=>{hud=unique('LMS_Predator_Hud151');if(valid(hud))hud.Reset();paused=false;ending=false;nextScan=0;Instance.SetNextThink(now());});
 Instance.SetThink(tick);Instance.OnScriptInput('Scan',()=>{nextScan=0;scan();});
+Instance.OnScriptInput('ResetOperator246',resetOperator246);
 Instance.OnScriptInput('ArmManual',input=>armInput(input,'manual'));
 Instance.OnScriptInput('ArmDestroyed',input=>armInput(input,'destroyed'));
 Instance.OnWeaponPickup(({weapon})=>{scan();const r=records.get(weapon);if(r)r.blockedOwner=null;});

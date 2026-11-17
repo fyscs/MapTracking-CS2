@@ -480,9 +480,9 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]ResetActivator",
-        "input": "Trigger",
-        "param": "",
+        "target": "[PR#]LMS_Predator_Hud_Manager151",
+        "input": "RunScriptInput",
+        "param": "ResetOperator246",
         "delay": 0,
         "limit": -1
       }
@@ -890,13 +890,13 @@
         "input": "FireUser1",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]zombie_predator",
-        "input": "KeyValues",
-        "param": "health 5000",
+        "target": "[PR#]kou_script",
+        "input": "RunScriptInput",
+        "param": "HealZombieArtifactHolder243",
         "delay": 0,
         "limit": -1
       },

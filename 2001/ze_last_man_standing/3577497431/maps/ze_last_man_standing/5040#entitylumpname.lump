@@ -534,9 +534,9 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]zombie_antlion",
-        "input": "KeyValues",
-        "param": "health 4500",
+        "target": "[PR#]kou_script",
+        "input": "RunScriptInput",
+        "param": "HealZombieArtifactHolder243",
         "delay": 0,
         "limit": -1
       },
@@ -546,7 +546,7 @@
         "input": "FireUser1",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       }
     ]
   },

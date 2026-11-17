@@ -46,7 +46,7 @@
         "input": "ForceSpawn",
         "param": "",
         "delay": 0,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnPlayerPickup",

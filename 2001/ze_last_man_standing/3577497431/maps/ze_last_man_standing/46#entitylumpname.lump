@@ -166,10 +166,26 @@
     "connections": [
       {
         "output": "OnTrigger",
+        "target": "[PR#]Zombie_Item_Alma_Block_Attack",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Zombie_Item_Alma_Block_Attack",
+        "input": "SetValue",
+        "param": "1",
+        "delay": 0.02500000037252903,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
         "target": "[PR#]Zombie_Item_Alma_Attack_Maker",
         "input": "ForceSpawn",
         "param": "",
-        "delay": 0,
+        "delay": 0.05000000074505806,
         "limit": -1
       },
       {
@@ -388,7 +404,7 @@
       },
       {
         "output": "OnBreak",
-        "target": "[PR#]zombie_alma",
+        "target": "[PR#]Zombie_Item_alma",
         "input": "SetHealth",
         "param": "-1",
         "delay": 0.009999999776482582,
@@ -500,7 +516,7 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]zombie_alma",
+        "target": "[PR#]Zombie_Item_alma",
         "input": "KeyValues",
         "param": "health 3000",
         "delay": 0,
@@ -595,7 +611,7 @@
     "connections": [
       {
         "output": "OnUser1",
-        "target": "[PR#]zombie_alma",
+        "target": "[PR#]Zombie_Item_alma",
         "input": "SetHealth",
         "param": "-1",
         "delay": 0,

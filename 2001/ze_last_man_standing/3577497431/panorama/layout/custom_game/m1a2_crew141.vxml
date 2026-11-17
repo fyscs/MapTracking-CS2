@@ -39,6 +39,10 @@
                 <Label class="CrewKey" text="主炮装填" hittest="false" />
                 <Label id="ReloadValue" class="CrewValue" text="{s:loading}" hittest="false" />
             </Panel>
+            <Panel id="GrenadeRow" class="CrewRow" hittest="false">
+                <Label class="CrewKey" text="防御榴弹" hittest="false" />
+                <Label id="GrenadeValue" class="CrewValue" text="{s:defensecooldown}" hittest="false" />
+            </Panel>
             <Panel id="RepairRow" class="CrewRow" hittest="false">
                 <Label class="CrewKey" text="维修人数" hittest="false" />
                 <Label id="RepairCount" class="CrewValue" text="{s:repaircount}" hittest="false" />
@@ -48,6 +52,19 @@
                 <Label id="RepairState" class="CrewValue" text="{s:repairstate}" hittest="false" />
             </Panel>
             <Label id="AutoRepairHint" text="启用自动维修" hittest="false" />
+        </Panel>
+        <Panel id="CTRepairBroadcast" hittest="false">
+            <Label class="CTRepairTitle" text="人类坦克受损 · 等待维修" hittest="false" />
+            <Label class="CTRepairDetail" text="耐久 0 / 12 · 修复至 1 HP 后可驾驶" hittest="false" />
+            <Panel class="CTRepairRow" hittest="false">
+                <Label class="CTRepairKey" text="车外维修人数" hittest="false" />
+                <Label id="CTRepairCount" text="{s:repaircount200}" hittest="false" />
+            </Panel>
+            <Panel id="CTRepairTrack" hittest="false">
+                <Panel id="CTRepairFill" hittest="false" />
+            </Panel>
+            <Label id="CTRepairState" text="{s:repairstate200}" hittest="false" />
+            <Label id="CTRepairAuto" text="启用自动维修" hittest="false" />
         </Panel>
     </Panel>
 </root>

@@ -126,3 +126,71 @@
 .HUD_SCOREBOARD_VISIBLE #AlexOwner,.HUD_BUYMENU_VISIBLE #AlexOwner,.HUD_TEAMMENU_VISIBLE #AlexOwner,.HUD_ENDOFMATCH_VISIBLE #AlexOwner,.HUD_TEAMINTRO_VISIBLE #AlexOwner,.HUD_SCOREBOARD_VISIBLE #AlexGlobal,.HUD_BUYMENU_VISIBLE #AlexGlobal,.HUD_TEAMMENU_VISIBLE #AlexGlobal,.HUD_ENDOFMATCH_VISIBLE #AlexGlobal,.HUD_TEAMINTRO_VISIBLE #AlexGlobal {
     visibility:collapse;
 }
+.AlmaHudRoot {
+    width:100%;
+    height:100%;
+}
+#AlmaInterrupt {
+    horizontal-align:center;
+    vertical-align:top;
+    margin-top:63%;
+    width:340px;
+    padding:10px 14px;
+    flow-children:down;
+    background-color:#20171ef2;
+    border-left:3px solid #e76f81;
+    visibility:collapse;
+}
+#AlmaInterrupt.Visible {
+    visibility:visible;
+}
+#AlmaInterrupt.Owner {
+    border-left:3px solid #dfac7a;
+}
+.AlmaHeading {
+    color:#f6acb7;
+    font-size:17px;
+    font-weight:bold;
+}
+.Owner .AlmaHeading {
+    color:#f4c59b;
+}
+.AlmaCountRow {
+    width:100%;
+    height:44px;
+}
+.AlmaKey {
+    vertical-align:center;
+    font-size:19px;
+    color:#f6e8eb;
+}
+#AlmaHitCount {
+    horizontal-align:right;
+    vertical-align:center;
+    margin-right:26px;
+    font-size:31px;
+    font-weight:bold;
+    color:#ffb0b7;
+}
+.Owner #AlmaHitCount {
+    color:#ffd0a1;
+}
+.AlmaUnit {
+    horizontal-align:right;
+    vertical-align:center;
+    font-size:16px;
+    color:#e5d2d6;
+}
+.AlmaHint {
+    color:#d5c5cb;
+    font-size:15px;
+}
+.AlmaOwnerOnly,.Owner .AlmaVictimOnly {
+    visibility:collapse;
+}
+.Owner .AlmaOwnerOnly {
+    visibility:visible;
+}
+.HUD_SCOREBOARD_VISIBLE #AlmaInterrupt,.HUD_BUYMENU_VISIBLE #AlmaInterrupt,.HUD_TEAMMENU_VISIBLE #AlmaInterrupt,.HUD_ENDOFMATCH_VISIBLE #AlmaInterrupt,.HUD_TEAMINTRO_VISIBLE #AlmaInterrupt {
+    visibility:collapse;
+}

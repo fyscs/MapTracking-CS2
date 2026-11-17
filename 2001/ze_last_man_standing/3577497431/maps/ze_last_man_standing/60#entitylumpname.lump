@@ -25,22 +25,6 @@
         "limit": -1
       },
       {
-        "output": "OnSpawn",
-        "target": "[PR#]Zombie_Item_Alma_Block_Attack",
-        "input": "Enable",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]Zombie_Item_Alma_Block_Attack",
-        "input": "SetValue",
-        "param": "1",
-        "delay": 0.009999999776482582,
-        "limit": -1
-      },
-      {
         "output": "OnUser1",
         "target": "[PR#]Zombie_Item_Alma_Attack_Hurt",
         "input": "Kill",

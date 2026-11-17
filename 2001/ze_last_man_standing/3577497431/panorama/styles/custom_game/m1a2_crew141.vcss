@@ -732,16 +732,16 @@
     font-size: 19px;
     font-weight: bold;
 }
-#ReloadRow {
+#GrenadeRow,#ReloadRow {
     visibility: collapse;
 }
-#ReloadRow.Gunner {
+#GrenadeRow.Driver,#ReloadRow.Gunner {
     visibility: visible;
 }
-#ReloadValue {
+#GrenadeValue,#ReloadValue {
     color: #ffca77;
 }
-#ReloadValue.Ready {
+#GrenadeValue.Ready,#ReloadValue.Ready {
     color: #a3e78f;
 }
 .HUD_SCOREBOARD_VISIBLE #CrewStatus,.HUD_BUYMENU_VISIBLE #CrewStatus,.HUD_TEAMMENU_VISIBLE #CrewStatus,.HUD_ENDOFMATCH_VISIBLE #CrewStatus,.HUD_TEAMINTRO_VISIBLE #CrewStatus {
@@ -762,4 +762,135 @@
 }
 #CrewStatus.Human #AutoRepairHint.Shown {
     visibility: visible;
+}
+#CTRepairBroadcast {
+    horizontal-align: left;
+    vertical-align: center;
+    margin-left: 36px;
+    width: 352px;
+    padding: 12px 16px;
+    flow-children: down;
+    background-color: #101922ed;
+    border-left: 3px solid #e4b568;
+    visibility: collapse;
+}
+#CTRepairBroadcast.Visible {
+    visibility: visible;
+}
+.CTRepairTitle {
+    color: #ffca77;
+    font-size: 20px;
+    font-weight: bold;
+}
+.CTRepairDetail {
+    color: #c6d2da;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.CTRepairRow {
+    width: 100%;
+    height: 30px;
+    margin-top: 8px;
+}
+.CTRepairKey {
+    color: #c6d2da;
+    font-size: 17px;
+    vertical-align: center;
+}
+#CTRepairCount {
+    color: #ffffff;
+    font-size: 18px;
+    horizontal-align: right;
+    vertical-align: center;
+}
+#CTRepairTrack {
+    width: 100%;
+    height: 7px;
+    background-color: #35414c;
+    margin-top: 3px;
+}
+#CTRepairFill {
+    width: 0%;
+    height: 100%;
+    background-color: #a3e78f;
+}
+#CTRepairState {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 8px;
+}
+#CTRepairAuto {
+    color: #a3e78f;
+    font-size: 17px;
+    margin-top: 4px;
+    visibility: collapse;
+}
+#CTRepairAuto.Shown {
+    visibility: visible;
+}
+.HUD_SCOREBOARD_VISIBLE #CTRepairBroadcast,.HUD_BUYMENU_VISIBLE #CTRepairBroadcast,.HUD_TEAMMENU_VISIBLE #CTRepairBroadcast,.HUD_ENDOFMATCH_VISIBLE #CTRepairBroadcast,.HUD_TEAMINTRO_VISIBLE #CTRepairBroadcast {
+    visibility: collapse;
+}
+#CTRepairFill.P0 {
+    width: 0%;
+}
+#CTRepairFill.P1 {
+    width: 5%;
+}
+#CTRepairFill.P2 {
+    width: 10%;
+}
+#CTRepairFill.P3 {
+    width: 15%;
+}
+#CTRepairFill.P4 {
+    width: 20%;
+}
+#CTRepairFill.P5 {
+    width: 25%;
+}
+#CTRepairFill.P6 {
+    width: 30%;
+}
+#CTRepairFill.P7 {
+    width: 35%;
+}
+#CTRepairFill.P8 {
+    width: 40%;
+}
+#CTRepairFill.P9 {
+    width: 45%;
+}
+#CTRepairFill.P10 {
+    width: 50%;
+}
+#CTRepairFill.P11 {
+    width: 55%;
+}
+#CTRepairFill.P12 {
+    width: 60%;
+}
+#CTRepairFill.P13 {
+    width: 65%;
+}
+#CTRepairFill.P14 {
+    width: 70%;
+}
+#CTRepairFill.P15 {
+    width: 75%;
+}
+#CTRepairFill.P16 {
+    width: 80%;
+}
+#CTRepairFill.P17 {
+    width: 85%;
+}
+#CTRepairFill.P18 {
+    width: 90%;
+}
+#CTRepairFill.P19 {
+    width: 95%;
+}
+#CTRepairFill.P20 {
+    width: 100%;
 }

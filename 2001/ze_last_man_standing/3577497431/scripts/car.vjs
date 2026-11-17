@@ -755,6 +755,27 @@ let guardReloadBlocked=false;
 // A single allocator survives round/reset/rebind. Script reload is deliberately blocked.
 const guardSequence=new GuardSequence();
 const driverGuard={state:null};
+// R197: a released human_mech pawn cannot be sucked back into its trigger.
+// Keep the original OnStartTouch admission; do not disable the whole entrance
+// or invent a distance-based auto-pickup outside its actual trigger volume.
+class MechReboardCooldown197 {
+    constructor(){this.deadlines=new Map();this.lastTime=undefined;}
+    sync(time){
+        if(!Number.isFinite(time))return false;
+        if(this.lastTime!==undefined&&time<this.lastTime)this.deadlines.clear();
+        this.lastTime=time;
+        for(const [player,until] of this.deadlines)if(time>=until)this.deadlines.delete(player);
+        return true;
+    }
+    left(player,time){if(this.sync(time))this.deadlines.set(player,time+3);}
+    remaining(player,time){
+        if(!this.sync(time))return Infinity;
+        return Math.max(0,(this.deadlines.get(player)??time)-time);
+    }
+    forget(player){this.deadlines.delete(player);}
+    clear(){this.deadlines.clear();this.lastTime=undefined;}
+}
+const mechReboard197=new MechReboardCooldown197();
 const saved = new Map();
 const pendingExits = new Map();
 // Pawn and independent camera share the physical hull's transform. Never
@@ -831,12 +852,14 @@ function restoreOccupiedPose146(seat,p) {
     if(!state||state.parent!==body||!target)return;
     followOccupiedSeat(p,body,state,target,Instance.GetGameTime(),CSMoveType.NONE);
 }
-function queueOccupiedPose90() {
+function queueOccupiedPose90(syncImmediately=true) {
     const token=generation;
     for(const [seat,p] of [...controller.seats]) {
-        restoreOccupiedPose146(seat,p);
+        // Main Think already repaired each seat before validating ownership. Event
+        // callers (stage relocation, aircraft recovery) retain immediate repair.
+        if(syncImmediately)restoreOccupiedPose146(seat,p);
         Instance.QueueAfterThinks(()=>{
-            if(token===generation){
+            if(token===generation&&!ac195VehiclePause.paused()){
                 restoreOccupiedPose146(seat,p);
                 if(seat==='Driver')syncPickupCamera191(p);
             }
@@ -853,7 +876,7 @@ function driverAnchor89() {
     return {x:p.x+u.x,y:p.y+u.y,z:p.z+u.z};
 }
 function seatEyeTarget90(seat) {
-    const marker=find('Entrance_Position_'+seat);
+    const marker=cachedPickupPart236('Entrance_Position_'+seat);
     if(!body?.IsValid()||!marker?.IsValid())return undefined;
     const anchor=marker.GetAbsOrigin(),u=seatUp89(64+(seat==='Driver'?driverSeatLift89:0));
     return {x:anchor.x+u.x,y:anchor.y+u.y,z:anchor.z+u.z};
@@ -904,6 +927,31 @@ function bindEngineGuid(name, value) {
     Instance.EntFireAtTarget({target,input:'SetFloatValue',value:engineVolumes.get(name)});
 }
 const find = suffix => Instance.FindEntityByName(PREFIX + suffix);
+// R236: hot-path handles only. Root discovery and unique assembly validation
+// still query the map, so a newly spawned vehicle cannot inherit an old root.
+let pickupCacheRoot236=null,pickupCacheGeneration236=-1;
+const pickupPartCache236=new Map();
+function resetPickupCache236(){
+    pickupPartCache236.clear();pickupCacheRoot236=null;pickupCacheGeneration236=-1;
+}
+function cachedPickupPart236(suffix){
+    if(pickupCacheRoot236!==body||pickupCacheGeneration236!==generation){
+        pickupPartCache236.clear();pickupCacheRoot236=body;pickupCacheGeneration236=generation;
+    }
+    const previous=pickupPartCache236.get(suffix);
+    if(previous?.IsValid()&&previous.GetEntityName()===PREFIX+suffix)return previous;
+    pickupPartCache236.delete(suffix);
+    const entity=find(suffix);
+    // Do not cache absence: a delayed vehicle template must be visible immediately.
+    if(entity?.IsValid())pickupPartCache236.set(suffix,entity);
+    return entity;
+}
+function pickupBodies236(){
+    const parts=physics164.bodies;
+    if(physics164.ready&&physics164.body===body&&parts.length===PHYSICS_BODIES.length&&
+        parts.every(entity=>entity?.IsValid()))return parts;
+    return PHYSICS_BODIES.map(find);
+}
 const emit = (suffix, input, value, activator) =>
     Instance.EntFireAtName({name:PREFIX + suffix, input, value, activator});
 const alive = player => player instanceof CSPlayerPawn && player.IsValid() && player.IsAlive();
@@ -1070,7 +1118,7 @@ const adapter = {
     guardFault(error) {Instance.Msg('LMS pickup driver admission failed; driving disabled for this request.');},
     eligible(player, seat) {
         if (!ready || !physics164.ready || !backend164alive() || !body?.IsValid() || !alive(player) || ![2,3].includes(player.GetTeamNumber())) return false;
-        if (seat === 'Mech' && player.GetEntityName() !== 'human_mech') return false;
+        if (seat === 'Mech' && (player.GetEntityName() !== 'human_mech' || mechReboard197.remaining(player,Instance.GetGameTime())>0)) return false;
         const marker = find('Entrance_Position_' + seat);
         // 160 is a provisional sample admission distance, not a recovered p2 parameter.
         return marker?.IsValid() && distanceSquared(player.GetAbsOrigin(), marker.GetAbsOrigin()) <= 160**2;
@@ -1148,6 +1196,10 @@ const adapter = {
         }
         if(previous?.stockName181!==undefined&&player.GetEntityName()==='lms_pickup_driver186')player.SetEntityName(previous.stockName181);
         saved.delete(player);
+        // Successful actual detach only, before seatChanged enables OnStartTouch.
+        // Failed admissions, invalid handles and another mechanic's ownership
+        // never start or extend this player's three-second gate.
+        if(seat==='Mech'&&previous&&alive(player))mechReboard197.left(player,Instance.GetGameTime());
         return true;
     },
     valid(player) { return alive(player) && [2,3].includes(player.GetTeamNumber()) && player.GetParent()===saved.get(player)?.parent; },
@@ -1256,6 +1308,10 @@ const adapter = {
 };
 class OfficialPickupController181 extends PickupController {
     pendingDisconnected(){}
+    destroy(reason='destroyed'){
+        super.destroy(reason);
+        mechReboard197.clear(); // reset/rebind/round/reload never inherit old gates
+    }
     tick(){
         for(const [seat,p] of [...this.seats])if(seat==='Driver'&&!stockGuard181.valid(p))this.leave(p,'guard_lost');
         super.tick();
@@ -1271,6 +1327,7 @@ for (const seat of SEATS) Instance.OnScriptInput('Enter_'+seat,({activator})=>{
     const admission={destroyed:controller.destroyed,pending:!!controller.pending,occupied:controller.seats.has(seat),
         available:backend164alive(),eligible:isPlayer&&adapter.eligible(activator,seat),pendingValid:isPlayer&&adapter.pendingValid(activator),
         alive:isPlayer&&activator.IsAlive(),team:isPlayer?activator.GetTeamNumber():undefined,
+        mechReboardSeconds197:isPlayer&&seat==='Mech'?mechReboard197.remaining(activator,Instance.GetGameTime()):undefined,
         playerPosition:isPlayer?activator.GetAbsOrigin():undefined,markerPosition:marker?.IsValid()?marker.GetAbsOrigin():undefined,
         distance:isPlayer&&marker?.IsValid()?Math.sqrt(distanceSquared(activator.GetAbsOrigin(),marker.GetAbsOrigin())):undefined};
     const accepted=isPlayer?controller.board(seat,activator):false;
@@ -1440,6 +1497,7 @@ Instance.OnScriptInput('VehicleDestroyed',onHullBreak);
 Instance.OnScriptInput('ResetController',()=>{pendingExits.clear();stopEffects();controller.reset();managedBrake82(3);lastDrive=undefined;});
 
 function bind() {
+    resetPickupCache236();
     resetBackend164();
     // A P2 template intentionally has no vehicle until the stage's +2 second output.
     // Keep the controller and transport counters outside the vehicle template.
@@ -1595,18 +1653,24 @@ function settleSteering189(){
     steerRelease190.travel+=Math.abs(step);steerRelease190.yaw=angles.yaw;
     const remaining=Math.max(0,PICKUP_COAST_TARGET190-steerRelease190.travel);
     const delta=pickupYawDelta189(omega.z,dt,remaining);
-    const entities=PHYSICS_BODIES.map(find);
+    const entities=pickupBodies236();
     if(entities.some(e=>!e?.IsValid())||new Set(entities).size!==9){skip('assembly_missing');return;}
-    const ignore=[...entities,find('Model')].filter(e=>e?.IsValid());
+    const ignore=[...entities,cachedPickupPart236('Model')].filter(e=>e?.IsValid());
     let front=false,rear=false;
     for(const axle of AXLES164){
-        const wheel=find(axle.name+'Wheel'),p=wheel.GetAbsOrigin();
+        const wheel=entities[1+AXLES164.indexOf(axle)],p=wheel.GetAbsOrigin();
         const ray=Instance.TraceLine({start:p,end:{...p,z:p.z-36},ignoreEntity:ignore,ignorePlayers:true});
         if(ray.didHit&&!ray.startedInSolid&&ray.normal.z>=.55){
             if(axle.name[0]==='F')front=true;else rear=true;
         }
     }
     if(!front||!rear){skip('unsupported');return;}
+    // Preserve the original support checks, including their airborne coast-budget
+    // reset. Only a supported, exact-zero correction skips the nine no-op writes.
+    if(delta===0){
+        steerState189={active:true,reason:'neutral_damping',rate:omega.z,delta,targetDegrees:PICKUP_COAST_TARGET190,coastedDegrees:steerRelease190.travel,remainingDegrees:remaining};
+        return;
+    }
     const parts=entities.map((e,i)=>({mass:PICKUP_MASSES164[i][1],pos:e.GetAbsOrigin(),vel:e.GetAbsVelocity(),omega:e.GetAbsAngularVelocity()}));
     const plan=pickupYawPlan189(parts,delta);
     for(let i=0;i<entities.length;i++)entities[i].Move(plan[i]);
@@ -1739,7 +1803,149 @@ for(const [input,target] of [['PickupStage1Extreme146','LMS_Pickup_Stage1_Anchor
     Instance.OnScriptInput(input,()=>{const t=Instance.GetGameTime();stageMove171={input,target,next:t,until:t+10,body:ready?body:null};tryStageMove171();});
 }
 Instance.OnActivate(bind);
+// BEGIN AC195 VEHICLE CINEMA PATCH
+// Embedded unchanged in the two CURRENT R194 vehicle scripts. Native map-only
+// cooperation; no server plugin change and no alteration of normal seat rules.
+function createVehicleCinemaPause195(api){
+  let saved=null;
+  const copy=v=>({...v}),valid=e=>!!e?.IsValid();
+  function paused(){
+    const markers=api.FindEntitiesByName('AC188_CinemaActive').filter(valid);
+    return markers.length===1&&markers[0].GetHealth()===1;
+  }
+  return {
+    paused,reset(){saved=null;},
+    yield(bodies,stop,resume=()=>{}){
+      const live=[...new Set(bodies)].filter(valid);
+      if(!live.length){saved=null;return false;}
+      if(paused()){
+        if(!saved||saved.root!==live[0])saved={root:live[0],parts:live.map(entity=>({entity,
+          position:copy(entity.GetAbsOrigin()),angles:copy(entity.GetAbsAngles()),
+          velocity:copy(entity.GetAbsVelocity()),angularVelocity:copy(entity.GetAbsAngularVelocity())}))};
+        stop();
+        // Freeze every constrained physical body. Freezing only the root lets
+        // gravity displace wheels/supports and strains their surviving joints.
+        for(const p of saved.parts)if(valid(p.entity))p.entity.Teleport({position:p.position,angles:p.angles,
+          velocity:{x:0,y:0,z:0},angularVelocity:{x:0,y:0,z:0}});
+        api.SetNextThink(api.GetGameTime()+1/64);return true;
+      }
+      if(saved){
+        const previous=saved;saved=null;
+        if(previous.root===live[0]){
+          for(const p of previous.parts)if(valid(p.entity)&&live.includes(p.entity))
+            p.entity.Teleport({velocity:p.velocity,angularVelocity:p.angularVelocity});
+          resume();
+        }
+      }
+      return false;
+    }
+  };
+}
+
+const ac195VehiclePause=createVehicleCinemaPause195(Instance);
+// END AC195 VEHICLE CINEMA PATCH
+
+// The visual C-130 is non-solid. The Stage 4 tracktrain has the rideable floor.
+const stage4CarrierName227 = 'stage_x_part_4_plane_tracktrain';
+let stage4Carrier227 = null;
+let stage4CarrierScan227 = 0;
+let stage4Ground227 = null;
+let stage4GroundScan227 = 0;
+
+function resetStage4Pickup227() {
+    stage4Carrier227 = null;
+    stage4CarrierScan227 = 0;
+    stage4Ground227 = null;
+    stage4GroundScan227 = 0;
+}
+
+function nearStage4Carrier227(position, carrier) {
+    const origin = carrier.GetAbsOrigin();
+    // The tracktrain has fixed orientation. Use its current yaw for the horizontal envelope.
+    const yaw = carrier.GetAbsAngles().yaw * Math.PI / 180;
+    const dx = position.x - origin.x;
+    const dy = position.y - origin.y;
+    const x = Math.cos(yaw) * dx + Math.sin(yaw) * dy;
+    const y = -Math.sin(yaw) * dx + Math.cos(yaw) * dy;
+    return x >= -200 && x <= 1136 && Math.abs(y) <= 280 && Math.abs(position.z - origin.z) <= 300;
+}
+
+function stage4SupportTrace227(position, depth, ignore) {
+    return Instance.TraceLine({ start: { ...position, z: position.z + 4 },
+        end: { ...position, z: position.z - depth }, ignoreEntity: ignore, ignorePlayers: true });
+}
+
+function protectStage4Pickup227() {
+    const now = Instance.GetGameTime();
+    if (now >= stage4CarrierScan227) {
+        const entity = Instance.FindEntityByName(stage4CarrierName227);
+        stage4Carrier227 = entity?.IsValid() && entity.GetClassName() === 'func_tracktrain' ? entity : null;
+        stage4CarrierScan227 = now + .25;
+    }
+    if (!stage4Carrier227?.IsValid() || !ready || controller.destroyed || !body?.IsValid() || !physics164.ready) {
+        stage4Ground227 = null;
+        return;
+    }
+    const position = body.GetAbsOrigin();
+    const angles = body.GetAbsAngles();
+    const near = nearStage4Carrier227(position, stage4Carrier227);
+    const sampleGround = now >= stage4GroundScan227;
+    if (!near && !sampleGround) return;
+
+    const parts = physics164.bodies;
+    if (parts.length !== 9 || parts.some(part => !part.IsValid())) return;
+    const model = cachedPickupPart236('Model');
+    const ignore = model?.IsValid() ? [...parts, model] : parts;
+    // PickupPhysics164 stores Body, the four wheels, then their four holders.
+    const wheels = parts.slice(1, 5);
+    const supports = wheels.map(wheel => stage4SupportTrace227(wheel.GetAbsOrigin(), 30, ignore));
+    if (sampleGround) {
+        stage4GroundScan227 = now + .15;
+        if (Math.abs(angles.pitch) < 20 && Math.abs(angles.roll) < 20 &&
+            supports.every(hit => hit.didHit && !hit.startedInSolid && hit.hitEntity?.IsWorld() && hit.normal.z > .7)) {
+            stage4Ground227 = { root: body, time: now, position, angles };
+        }
+    }
+    if (!near) return;
+
+    // The underbody can also rest on the cargo floor if a wheel is off the edge.
+    const onCarrier = hit => hit.didHit && !hit.startedInSolid && hit.hitEntity === stage4Carrier227 && hit.normal.z > .5;
+    if (!supports.some(onCarrier) && ![-112, 0, 112].some(x => {
+        const underside = sum164(position, rotate164({ x, y: 0, z: -34 }, angles));
+        return onCarrier(stage4SupportTrace227(underside, 12, ignore));
+    })) return;
+
+    const recent = stage4Ground227;
+    let destination = null;
+    if (recent?.root === body && now - recent.time <= 12 && distanceSquared(position, recent.position) <= 1600 ** 2 &&
+        !nearStage4Carrier227(recent.position, stage4Carrier227)) {
+        const landing = { ...recent.position, z: recent.position.z + 8 };
+        const space = Instance.TraceBox({ start: landing, end: landing, mins: { x: -148, y: -54, z: -32 },
+            maxs: { x: 148, y: 54, z: 36 }, ignoreEntity: ignore, ignorePlayers: true });
+        if (!space.startedInSolid && !space.didHit) destination = { position: landing, angles: recent.angles };
+    }
+    const usedStageSpawn = !destination;
+    if (!destination) {
+        const anchor = Instance.FindEntityByName('Stage_4_Spawn_Tank_Teleport_1');
+        if (!anchor?.IsValid() || anchor.GetClassName() !== 'point_teleport') return;
+        destination = { position: anchor.GetAbsOrigin(), angles: anchor.GetAbsAngles() };
+    }
+    physics164.stop();
+    lastDrive = undefined;
+    steerTime189 = null;
+    steerRelease190 = null;
+    stall188 = null;
+    stage4Ground227 = null;
+    relocateAssembly(parts, body, destination);
+    rememberHullPose();
+    queueOccupiedPose90();
+    Instance.Msg('[LMS_PICKUP_STAGE4] ' + JSON.stringify({ event: 'aircraft_support', from: position,
+        to: destination.position, occupants: controller.seats.size, usedStageSpawn }));
+}
+
+
 Instance.SetThink(()=>{
+    if(ac195VehiclePause.yield(ready&&!controller.destroyed&&body?.IsValid()?pickupBodies236():[],()=>{physics164.stop();lastDrive=undefined;},()=>{steerTime189=null;steerRelease190=null;stall188=null;}))return;
     tryStageMove171();
     if(airSaved92.length&&Instance.GetGameTime()>=airUntil92)restoreAir92();
     if (body&&!body.IsValid()&&retiredRoot189!==body) {retirePickupPhysics189();if(ready){lostActiveHull=true;physicsProbe.stop('body_invalid',Instance.GetGameTime());controller.destroy();ready=false;}}
@@ -1752,11 +1958,12 @@ Instance.SetThink(()=>{
         if(!backend164alive())physics164.stop();
         rememberHullPose();
     }
+    protectStage4Pickup227();
     if (ready) {
         // Recover an accidentally detached seated pawn before the guard validates ownership.
         measureHull174(Instance.GetGameTime());
         for(const [seat,p] of controller.seats)restoreOccupiedPose146(seat,p);
-        controller.tick();settleSteering189();checkPickupTravel188();queueOccupiedPose90();
+        controller.tick();settleSteering189();checkPickupTravel188();queueOccupiedPose90(false);
         const driver187=controller.seats.get('Driver');
         if(driver187 && stockGuard181.valid(driver187))stockGuard181.move(driver187,driverEyeTarget89());
     }
@@ -1768,19 +1975,21 @@ Instance.SetThink(()=>{
     physicsProbe.tick(Instance.GetGameTime());
     Instance.SetNextThink(Instance.GetGameTime());
 });
-Instance.OnPlayerKill(({player})=>{exitPoseTokens97.delete(player);pendingExits.delete(player);controller.leave(player,'death');});
-Instance.OnPlayerReset(({player})=>{exitPoseTokens97.delete(player);pendingExits.delete(player);controller.leave(player,'reset');});
+Instance.OnPlayerKill(({player})=>{exitPoseTokens97.delete(player);pendingExits.delete(player);controller.leave(player,'death');mechReboard197.forget(player);});
+Instance.OnPlayerReset(({player})=>{exitPoseTokens97.delete(player);pendingExits.delete(player);controller.leave(player,'reset');mechReboard197.forget(player);});
 Instance.OnPlayerTeamChanged(({player})=>controller.teamChanged(player));
 Instance.OnPlayerDisconnect(({playerSlot})=>{
     for(const player of exitPoseTokens97.keys())if(!player.IsValid()||player.GetPlayerController()?.GetPlayerSlot()===playerSlot)exitPoseTokens97.delete(player);
     controller.pendingDisconnected(playerSlot);
     for(const [player,state] of [...pendingExits]) if(state.slot===playerSlot) pendingExits.delete(player);
     for(const [player,state] of [...saved]) if(state.slot===playerSlot) controller.leave(player,'disconnect');
+    for(const player of mechReboard197.deadlines.keys())if(!player.IsValid()||player.GetPlayerController()?.GetPlayerSlot()===playerSlot)mechReboard197.forget(player);
 });
-Instance.OnBeginRoundRestart(()=>{steerAssist189=true;steerTime189=null;steerRelease190=null;spawnConfirmed188=false;spawnPendingUntil188=0;stall188=null;stageMove171=null;pendingExits.clear();stopEffects();controller.destroy('round_restart');managedBrake82(3);guardTransport?.close();guardTransport=undefined;ready=false;});
-Instance.OnRoundStart(()=>{controller.reset();bind();});
-Instance.OnRoundEnd(()=>{stageMove171=null;pendingExits.clear();stopEffects();controller.destroy('round_end');managedBrake82(3);guardTransport?.close();guardTransport=undefined;ready=false;});
+Instance.OnBeginRoundRestart(()=>{resetStage4Pickup227();ac195VehiclePause.reset();steerAssist189=true;steerTime189=null;steerRelease190=null;spawnConfirmed188=false;spawnPendingUntil188=0;stall188=null;stageMove171=null;pendingExits.clear();stopEffects();controller.destroy('round_restart');managedBrake82(3);guardTransport?.close();guardTransport=undefined;ready=false;});
+Instance.OnRoundStart(()=>{ac195VehiclePause.reset();controller.reset();bind();});
+Instance.OnRoundEnd(()=>{resetStage4Pickup227();ac195VehiclePause.reset();stageMove171=null;pendingExits.clear();stopEffects();controller.destroy('round_end');managedBrake82(3);guardTransport?.close();guardTransport=undefined;ready=false;});
 Instance.OnScriptReload({before:()=>{
+resetStage4Pickup227();    ac195VehiclePause.reset();
     stageMove171=null;
     pendingExits.clear();stopEffects();controller.destroy('reload');
     managedBrake82(3);
@@ -1892,6 +2101,6 @@ Console.RegisterCheatCommand('lms174_contact',args=>{
     Instance.Msg('[LMS174_CONTACT] '+JSON.stringify(snapshot()));
 });
 
-Console.RegisterCheatCommand('lms181_pickup_version',()=>Instance.Msg('[LMS181_VERSION] '+JSON.stringify({vehicle:'pickup',revision:'191',ready,physicsReady:physics164.ready,guard:stockGuard181.status()})));
+Console.RegisterCheatCommand('lms181_pickup_version',()=>Instance.Msg('[LMS181_VERSION] '+JSON.stringify({vehicle:'pickup',revision:'197',mechReboardSeconds:3,ready,physicsReady:physics164.ready,guard:stockGuard181.status()})));
 
 Instance.Msg("[LMS181_PICKUP] official-backend compatibility candidate; human protection test pending");

@@ -8507,9 +8507,9 @@
       {
         "output": "OnPass",
         "target": "[PR#]zombie_boss",
-        "input": "AddOutput",
-        "param": "OnUser4\u003E!activator\u003EKeyValues\u003E1.7\u003E16.02\u003E1",
-        "delay": 0,
+        "input": "KeyValues",
+        "param": "speed 1.7",
+        "delay": 16.1200008392334,
         "limit": -1
       },
       {
@@ -8626,7 +8626,7 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]Zombie_Item_Summoner_Slow_Trigger",
+        "target": "[PR#]Zombie_Item_Summoner_Slow_Trigger*",
         "input": "Kill",
         "param": "",
         "delay": 0,
@@ -8639,6 +8639,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]kou_script",
+        "input": "RunScriptInput",
+        "param": "AlexEncounterRescueArrived237",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -12609,8 +12617,8 @@
       },
       {
         "output": "OnTrigger",
-        "target": "!self",
-        "input": "Enable",
+        "target": "[PR#]lms241_lab_gravity_rearm",
+        "input": "Test",
         "param": "",
         "delay": 22.5,
         "limit": -1
@@ -13105,8 +13113,8 @@
       },
       {
         "output": "OnTrigger",
-        "target": "!self",
-        "input": "Enable",
+        "target": "[PR#]lms241_lab_freeze_rearm",
+        "input": "Test",
         "param": "",
         "delay": 27,
         "limit": -1
@@ -24870,17 +24878,9 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]zombie_alma",
+        "target": "[PR#]Zombie_Item_alma",
         "input": "KeyValues",
         "param": "origin 580 1860 1440",
-        "delay": 0.5,
-        "limit": 1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]zombie_predator",
-        "input": "KeyValues",
-        "param": "origin 580 1960 1440",
         "delay": 0.5,
         "limit": 1
       }
@@ -25763,6 +25763,62 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      }
+    ]
+  },
+  {
+    "vscripts": "",
+    "InitialValue": "0",
+    "targetname": "[PR#]lms241_lab_gravity_rearm",
+    "classname": "logic_branch",
+    "origin": "3836.000000 4448.000000 816.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "3469",
+    "connections": [
+      {
+        "output": "OnFalse",
+        "target": "[PR#]stage_3_tests_relay_2",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]stage_3_tests_relay_2",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "vscripts": "",
+    "InitialValue": "0",
+    "targetname": "[PR#]lms241_lab_freeze_rearm",
+    "classname": "logic_branch",
+    "origin": "3836.620117 6049.810059 816.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "3470",
+    "connections": [
+      {
+        "output": "OnFalse",
+        "target": "[PR#]stage_3_tests_relay_5",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrue",
+        "target": "[PR#]stage_3_tests_relay_5",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
