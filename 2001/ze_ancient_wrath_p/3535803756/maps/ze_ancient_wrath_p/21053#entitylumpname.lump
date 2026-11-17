@@ -152,6 +152,14 @@
         "param": "player_flame",
         "delay": 0.009999999776482582,
         "limit": -1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]script",
+        "input": "RunScriptInput",
+        "param": "ResetFlamethrower",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
