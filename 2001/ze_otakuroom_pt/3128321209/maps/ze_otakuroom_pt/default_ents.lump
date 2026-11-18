@@ -4156,7 +4156,7 @@
         "input": "FireUser1",
         "param": "",
         "delay": 1,
-        "limit": -1
+        "limit": 1
       },
       {
         "output": "OnTrigger",
@@ -11516,7 +11516,7 @@
         "input": "FireUser1",
         "param": "",
         "delay": 10.5,
-        "limit": 1
+        "limit": -1
       }
     ]
   },
