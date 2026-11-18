@@ -20336,7 +20336,7 @@
     "triggeronstarttouch": "0",
     "speed": "300",
     "pushdir": "0.000000 180.000000 0.000000",
-    "filtername": "[PR#]5974_5146_zombies",
+    "filtername": "[PR#]5974_zombie",
     "spawnflags": "1",
     "globalname": "",
     "StartDisabled": "1",
@@ -20668,7 +20668,7 @@
         "target": "[PR#]5974_zr_toggle_respawn",
         "input": "disable",
         "param": "",
-        "delay": 89.5,
+        "delay": 88,
         "limit": -1
       }
     ]
