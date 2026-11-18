@@ -20,6 +20,20 @@ function findConnectedPlayerByName(name) {
 // ===== 表情系統 (由 emoji.js 掛在 map_emoji 實體上，冷卻 20 秒由 emoji.js 控制) =====
 const EMOJI_SCRIPT_ENTITY = "map_emoji";
 
+// ===== 更换模型 (admin / vip)：聊天輸入 @更换模型lily =====
+// 模型必須已在地圖中預載 (例如地圖裡放一個用此模型的 prop_dynamic)，否則會變成透明/錯誤模型
+const PLAYER_MODELS = {
+    "lily": "models/lily/lily.vmdl",
+};
+
+function handleModelChat(text, pawn) {
+    const m = text.trim().match(/^@更换模型\s*(\S+)$/);
+    if (!m) return;
+    const model = PLAYER_MODELS[m[1].toLowerCase()];
+    if (!model || !pawn || !pawn.IsValid()) return;
+    pawn.SetModel(model);
+}
+
 // @表情1 ~ @表情9 -> use1 ~ use9；@gif / @gif1 -> usegif1
 function handleEmojiChat(text) {
     const t = text.trim();
@@ -201,9 +215,10 @@ Instance.OnPlayerChat((event) => {
             }
         }
     }
-    //表情：admin 與 vip 分組都可以使用 (只觸發一次，避免同時是兩組時重複觸發)
+    //表情 / 更换模型：admin 與 vip 分組都可以使用 (只觸發一次，避免同時是兩組時重複觸發)
     if (event.player && event.player.IsValid() && (admins.has(event.player) || vip.has(event.player))) {
         handleEmojiChat(event.text);
+        handleModelChat(event.text, event.player.GetPlayerPawn());
     }
     //player
     if (event.player && event.player.IsValid()) {
