@@ -41,13 +41,13 @@
     "disableshadows": "0",
     "damagefilter": "",
     "vscripts": "",
-    "targetname": "[PR#]5146_4308_wood",
+    "targetname": "[PR#]5974_5146_wood",
     "classname": "func_breakable",
     "origin": "2122.000000 -705.500000 -119.500000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "5146:312",
-    "model": "maps/ze_ze_ez_escape_cs2/entities/5146_4308_wood_5146_312.vmdl",
+    "hammerUniqueId": "5974:312",
+    "model": "maps/ze_ze_ez_escape_cs2/entities/5974_5146_wood_5974_312.vmdl",
     "_template_lump_ent_index": "0"
   }
 ]
