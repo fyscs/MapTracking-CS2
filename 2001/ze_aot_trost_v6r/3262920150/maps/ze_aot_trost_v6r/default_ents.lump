@@ -14912,7 +14912,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]round_counter",
-        "input": "add",
+        "input": "Subtract",
         "param": "1",
         "delay": 0,
         "limit": 1
@@ -15306,7 +15306,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]timeleft_script",
         "input": "RunScriptInput",
-        "param": "CountDownDisplayStart(50)",
+        "param": "CountDownDisplayStart(45)",
         "delay": 0,
         "limit": 1
       },
@@ -15315,7 +15315,7 @@
         "target": "[PR#]lv5_door3",
         "input": "Break",
         "param": "",
-        "delay": 50,
+        "delay": 45,
         "limit": 1
       },
       {
@@ -15323,7 +15323,7 @@
         "target": "[PR#]lv2_tp3",
         "input": "Enable",
         "param": "",
-        "delay": 48,
+        "delay": 43,
         "limit": 1
       },
       {
@@ -15331,7 +15331,7 @@
         "target": "[PR#]fail_wall19",
         "input": "Kill",
         "param": "",
-        "delay": 50,
+        "delay": 45,
         "limit": 1
       },
       {
@@ -15339,7 +15339,7 @@
         "target": "[PR#]lv1_tp1",
         "input": "Disable",
         "param": "",
-        "delay": 49.900001525878906,
+        "delay": 44.900001525878906,
         "limit": 1
       },
       {
@@ -15347,7 +15347,7 @@
         "target": "[PR#]lv1_tp2",
         "input": "Disable",
         "param": "",
-        "delay": 49.900001525878906,
+        "delay": 44.900001525878906,
         "limit": 1
       },
       {
@@ -15355,7 +15355,7 @@
         "target": "[PR#]start_tp1",
         "input": "KeyValue",
         "param": "target lv5_dest1",
-        "delay": 48,
+        "delay": 43,
         "limit": 1
       },
       {
@@ -15363,7 +15363,7 @@
         "target": "[PR#]maindoor_tp",
         "input": "Disable",
         "param": "",
-        "delay": 51,
+        "delay": 46,
         "limit": 1
       },
       {
@@ -15371,7 +15371,7 @@
         "target": "[PR#]maindoor_zombie_tp",
         "input": "Disable",
         "param": "",
-        "delay": 51,
+        "delay": 46,
         "limit": 1
       },
       {
@@ -15379,7 +15379,7 @@
         "target": "[PR#]ending_case",
         "input": "PickRandom",
         "param": "",
-        "delay": 50,
+        "delay": 45,
         "limit": 1
       }
     ]
@@ -15729,8 +15729,8 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]round_counter",
-        "input": "Subtract",
-        "param": "5",
+        "input": "add",
+        "param": "3",
         "delay": 74,
         "limit": 1
       }
@@ -16818,7 +16818,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]round_counter",
-        "input": "add",
+        "input": "Subtract",
         "param": "1",
         "delay": 0,
         "limit": 1
@@ -17603,7 +17603,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]round_counter",
-        "input": "add",
+        "input": "Subtract",
         "param": "1",
         "delay": 0,
         "limit": 1
@@ -20358,7 +20358,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]round_counter",
-        "input": "add",
+        "input": "Subtract",
         "param": "1",
         "delay": 0,
         "limit": 1
@@ -25118,7 +25118,7 @@
         "output": "OnMapSpawn",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "sv_airaccelerate 150",
+        "param": "sv_airaccelerate 20",
         "delay": 0,
         "limit": -1
       },
@@ -25310,6 +25310,14 @@
         "output": "OnMapSpawn",
         "target": "[PR#]lightgun_sq_maker2",
         "input": "ForceSpawn",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]round_counter",
+        "input": "getvalue",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -34788,7 +34796,7 @@
     "color": "236 236 236",
     "fullbright": "1",
     "enabled": "1",
-    "message": "version:2026.11.17",
+    "message": "version:2026.11.19",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -34808,7 +34816,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-481.000000 572.000000 -12542.000000",
+    "origin": "-481.000000 572.000000 -12553.000000",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3035"
@@ -34824,7 +34832,7 @@
     "color": "236 236 236",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u56DE\u5408\u6570\u9650\u5236\uFF1A???\n\u4E8C\u5468\u76EE\u5F00\u542F\u5168\u795E\u5668\u6A21\u5F0F",
+    "message": "\u5269\u4F59\u56DE\u5408\u6570\uFF1A",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -34844,7 +34852,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-481.000000 203.000000 -12406.000000",
+    "origin": "-481.000000 203.000000 -12394.000000",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3036"
@@ -35049,7 +35057,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-481.000000 311.000000 -12352.000000",
+    "origin": "-481.000000 308.000000 -12351.000000",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3042"
@@ -40391,7 +40399,7 @@
     "color": "255 0 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u5E73\u8861\u65E5\u5FD7\uFF1A\n\u9AD8\u8DF32CD\u51CF\u5C11\u4E3A4\u79D2\n\u96F7\u67AA\u51CF\u901F\u500D\u7387\u589E\u5F3A\u4E3A\u81F30.2\n\u8D85\u5DE8CD\u51CF\u5C11\u4E3A60S\n\u706B\u6301\u7EED\u65F6\u95F4\u51CF\u5C11\u4E3A8\u79D2\n\u51B0\u65B0\u589E\u673A\u5236\uFF1A\u7981\u7528\u9AD8\u63111\u79D2\n\u4F18\u5316\u98CEpush\u673A\u5236\nlv3lv4\u6709\u6781\u4F4E\u6982\u7387\u80FD\u62FE\u53D6\u8D85\u5927\u578B\u5DE8\u4EBA",
+    "message": "\u5E73\u8861\u65E5\u5FD7\uFF1A\n\u9AD8\u8DF32CD\u51CF\u5C11\u4E3A4\u79D2\n\u96F7\u67AA\u51CF\u901F\u500D\u7387\u589E\u5F3A\u4E3A\u81F30.2\n\u8D85\u5DE8CD\u51CF\u5C11\u4E3A60S\n\u706B\u6301\u7EED\u65F6\u95F4\u51CF\u5C11\u4E3A8\u79D2\n\u51B0\u65B0\u589E\u673A\u5236\uFF1A\u7981\u7528\u9AD8\u63111\u79D2\n\u5730\u56FE\u7A7A\u4E2D\u52A0\u901F\u6570\u503C\u56DE\u8C03\u4E3A20\nlv3lv4\u670925%\u6982\u7387\u80FD\u62FE\u53D6\u8D85\u5927\u578B\u5DE8\u4EBA",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -40610,14 +40618,6 @@
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnCase05",
-        "target": "[PR#]lv3lv4_item_none_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": 1
       }
     ]
   },
@@ -40722,5 +40722,77 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12686"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "100.000000",
+    "world_units_per_pixel": "0.250000",
+    "color": "255 0 0",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]txt_score",
+    "classname": "point_worldtext",
+    "origin": "-481.000000 325.000000 -12394.000000",
+    "angles": "0.000000 90.000000 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12689"
+  },
+  {
+    "depth_render_offset": "0.125000",
+    "reorient_mode": "0",
+    "justify_vertical": "0",
+    "justify_horizontal": "0",
+    "font_name": "Arial Black",
+    "font_size": "100.000000",
+    "world_units_per_pixel": "0.250000",
+    "color": "236 236 236",
+    "fullbright": "1",
+    "enabled": "1",
+    "message": "\u56DE\u5408",
+    "lightmapstatic": "0",
+    "rendertocubemaps": "0",
+    "object_culling": "0",
+    "fademaxdist": "0.000000",
+    "fademindist": "-1.000000",
+    "disablereceiveshadows": "0",
+    "rendercolor": "255 255 255",
+    "renderamt": "255",
+    "rendermode": "kRenderNormal",
+    "renderfx": "kRenderFxNone",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "",
+    "classname": "point_worldtext",
+    "origin": "-481.000000 349.000000 -12394.000000",
+    "angles": "0.000000 90.000000 90.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12690"
   }
 ]
