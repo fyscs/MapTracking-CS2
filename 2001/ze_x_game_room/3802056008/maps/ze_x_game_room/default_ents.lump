@@ -27019,7 +27019,7 @@
     "parentname": "[PR#]lv4_wall7_door",
     "targetname": "[PR#]lv4_mdl4",
     "classname": "prop_physics_override",
-    "origin": "-2371.000000 -7533.538574 -14604.418945",
+    "origin": "-2384.000000 -7533.538574 -14604.418945",
     "angles": "-0.260057 208.212570 -1.086386",
     "scales": "64.276276 64.276268 64.276268",
     "hammerUniqueId": "425"
