@@ -32,7 +32,7 @@ const SCREEN_FLASH_EFFECTS = {
         flashDuration: 0.30,
 
         // 画像の表示時間
-        displayDuration: 1.5,
+        displayDuration: 15.0,
 
         // 画像のフェードアウト時間
         fadeDuration: 1.0,
