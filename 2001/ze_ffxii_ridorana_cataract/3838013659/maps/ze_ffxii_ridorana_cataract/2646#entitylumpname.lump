@@ -597,118 +597,6 @@
     "_template_lump_ent_index": "5"
   },
   {
-    "solidbsp": "0",
-    "MoveWithoutPushingBlockers": "0",
-    "NoInterpolate": "0",
-    "dmg": "0",
-    "_minlight": "",
-    "spawnflags": "577",
-    "volume": "10",
-    "message": "",
-    "fanfriction": "20",
-    "maxspeed": "600",
-    "disableshadows": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "useLocalOffset": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "vscripts": "",
-    "targetname": "[PR#]Hashmel_Rotate",
-    "classname": "func_rotating",
-    "origin": "8.000000 193.000000 261.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "2662",
-    "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_rotate_2662.vmdl",
-    "_template_lump_ent_index": "6",
-    "connections": [
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Rot_Trigger",
-        "input": "Enable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Rot_Trigger",
-        "input": "Enable",
-        "param": "",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Rot_Trigger",
-        "input": "Enable",
-        "param": "",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Rot_Trigger",
-        "input": "Enable",
-        "param": "",
-        "delay": 3,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Superattack_Effect",
-        "input": "Start",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Superattack_Effect",
-        "input": "Stop",
-        "param": "",
-        "delay": 7,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Rot_Trigger",
-        "input": "Enable",
-        "param": "",
-        "delay": 4,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Model",
-        "input": "SetAnimationNotLooping",
-        "param": "cast",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "[PR#]Hashmel_Model",
-        "input": "SetAnimationLooping",
-        "param": "idle",
-        "delay": 4,
-        "limit": -1
-      }
-    ]
-  },
-  {
     "spawnflags": "0",
     "add_modifier": "",
     "add_attribute": "",
@@ -752,7 +640,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2104",
-    "_template_lump_ent_index": "7",
+    "_template_lump_ent_index": "6",
     "connections": [
       {
         "output": "OnCase01",
@@ -1065,6 +953,54 @@
         "param": "",
         "delay": 1.5,
         "limit": -1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]Hashmel_Meteor_Attack",
+        "input": "Enable",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]Hashmel_Meteor_Attack",
+        "input": "Disable",
+        "param": "",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]Hashmel_Superattack_Effect",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]Hashmel_Superattack_Effect",
+        "input": "Stop",
+        "param": "",
+        "delay": 7,
+        "limit": -1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]Hashmel_Model",
+        "input": "SetAnimationNotLooping",
+        "param": "cast",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase06",
+        "target": "[PR#]Hashmel_Model",
+        "input": "SetAnimationLooping",
+        "param": "idle",
+        "delay": 5,
+        "limit": -1
       }
     ]
   },
@@ -1139,7 +1075,7 @@
     "angles": "-0.000000 51.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2137",
-    "_template_lump_ent_index": "8"
+    "_template_lump_ent_index": "7"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -1212,7 +1148,7 @@
     "angles": "-0.000000 66.999992 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2138",
-    "_template_lump_ent_index": "9"
+    "_template_lump_ent_index": "8"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -1285,7 +1221,7 @@
     "angles": "-0.000000 61.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2139",
-    "_template_lump_ent_index": "10"
+    "_template_lump_ent_index": "9"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -1358,7 +1294,7 @@
     "angles": "-0.000000 -63.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2140",
-    "_template_lump_ent_index": "11"
+    "_template_lump_ent_index": "10"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -1431,7 +1367,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2141",
-    "_template_lump_ent_index": "12"
+    "_template_lump_ent_index": "11"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -1504,7 +1440,7 @@
     "angles": "-0.000000 -40.500004 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2142",
-    "_template_lump_ent_index": "13"
+    "_template_lump_ent_index": "12"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -1577,7 +1513,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2143",
-    "_template_lump_ent_index": "14"
+    "_template_lump_ent_index": "13"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -1650,7 +1586,7 @@
     "angles": "-0.000000 39.999996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2144",
-    "_template_lump_ent_index": "15"
+    "_template_lump_ent_index": "14"
   },
   {
     "ResponseContext": "",
@@ -1723,7 +1659,7 @@
     "angles": "-0.000000 51.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20088",
-    "_template_lump_ent_index": "16"
+    "_template_lump_ent_index": "15"
   },
   {
     "ResponseContext": "",
@@ -1796,7 +1732,7 @@
     "angles": "-0.000000 66.999992 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20089",
-    "_template_lump_ent_index": "17"
+    "_template_lump_ent_index": "16"
   },
   {
     "ResponseContext": "",
@@ -1869,7 +1805,7 @@
     "angles": "-0.000000 61.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20090",
-    "_template_lump_ent_index": "18"
+    "_template_lump_ent_index": "17"
   },
   {
     "ResponseContext": "",
@@ -1942,7 +1878,7 @@
     "angles": "-0.000000 -63.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20091",
-    "_template_lump_ent_index": "19"
+    "_template_lump_ent_index": "18"
   },
   {
     "ResponseContext": "",
@@ -2015,7 +1951,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20092",
-    "_template_lump_ent_index": "20"
+    "_template_lump_ent_index": "19"
   },
   {
     "ResponseContext": "",
@@ -2088,7 +2024,7 @@
     "angles": "-0.000000 -40.500004 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20093",
-    "_template_lump_ent_index": "21"
+    "_template_lump_ent_index": "20"
   },
   {
     "ResponseContext": "",
@@ -2161,7 +2097,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20094",
-    "_template_lump_ent_index": "22"
+    "_template_lump_ent_index": "21"
   },
   {
     "ResponseContext": "",
@@ -2234,7 +2170,7 @@
     "angles": "-0.000000 39.999996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20095",
-    "_template_lump_ent_index": "23"
+    "_template_lump_ent_index": "22"
   },
   {
     "triggeronstarttouch": "0",
@@ -2258,7 +2194,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2116",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_wind_push_2116.vmdl",
-    "_template_lump_ent_index": "24"
+    "_template_lump_ent_index": "23"
   },
   {
     "triggeronstarttouch": "0",
@@ -2282,7 +2218,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2118",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_wind_push_2118.vmdl",
-    "_template_lump_ent_index": "25"
+    "_template_lump_ent_index": "24"
   },
   {
     "triggeronstarttouch": "0",
@@ -2306,7 +2242,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2120",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_wind_push_2120.vmdl",
-    "_template_lump_ent_index": "26"
+    "_template_lump_ent_index": "25"
   },
   {
     "triggeronstarttouch": "0",
@@ -2330,7 +2266,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20019",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_wind_push_20019.vmdl",
-    "_template_lump_ent_index": "27"
+    "_template_lump_ent_index": "26"
   },
   {
     "triggeronstarttouch": "0",
@@ -2354,7 +2290,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20021",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_wind_push_20021.vmdl",
-    "_template_lump_ent_index": "28"
+    "_template_lump_ent_index": "27"
   },
   {
     "triggeronstarttouch": "0",
@@ -2378,7 +2314,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20023",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_wind_push_20023.vmdl",
-    "_template_lump_ent_index": "29"
+    "_template_lump_ent_index": "28"
   },
   {
     "add_modifier": "",
@@ -2429,7 +2365,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2170",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_zm_cage_2170.vmdl",
-    "_template_lump_ent_index": "30"
+    "_template_lump_ent_index": "29"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -2502,7 +2438,7 @@
     "angles": "-0.000000 56.813595 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2157",
-    "_template_lump_ent_index": "31"
+    "_template_lump_ent_index": "30"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -2575,7 +2511,7 @@
     "angles": "-0.000000 46.223400 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2158",
-    "_template_lump_ent_index": "32"
+    "_template_lump_ent_index": "31"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -2648,7 +2584,7 @@
     "angles": "-0.000000 62.918396 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2159",
-    "_template_lump_ent_index": "33"
+    "_template_lump_ent_index": "32"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -2721,7 +2657,7 @@
     "angles": "-0.000000 -58.459984 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2160",
-    "_template_lump_ent_index": "34"
+    "_template_lump_ent_index": "33"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -2794,7 +2730,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2161",
-    "_template_lump_ent_index": "35"
+    "_template_lump_ent_index": "34"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -2867,7 +2803,7 @@
     "angles": "-0.000000 -35.337009 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2162",
-    "_template_lump_ent_index": "36"
+    "_template_lump_ent_index": "35"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -2940,7 +2876,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2163",
-    "_template_lump_ent_index": "37"
+    "_template_lump_ent_index": "36"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -3013,7 +2949,7 @@
     "angles": "-0.000000 34.860298 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2164",
-    "_template_lump_ent_index": "38"
+    "_template_lump_ent_index": "37"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -3086,7 +3022,7 @@
     "angles": "-0.000000 -12.686001 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2165",
-    "_template_lump_ent_index": "39"
+    "_template_lump_ent_index": "38"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -3159,7 +3095,7 @@
     "angles": "-0.000000 38.313995 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2166",
-    "_template_lump_ent_index": "40"
+    "_template_lump_ent_index": "39"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -3232,7 +3168,7 @@
     "angles": "0.000000 -107.500008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2167",
-    "_template_lump_ent_index": "41"
+    "_template_lump_ent_index": "40"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -3305,7 +3241,7 @@
     "angles": "0.000000 -97.140007 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2168",
-    "_template_lump_ent_index": "42"
+    "_template_lump_ent_index": "41"
   },
   {
     "ResponseContext": "",
@@ -3378,7 +3314,7 @@
     "angles": "-0.000000 56.813595 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20066",
-    "_template_lump_ent_index": "43"
+    "_template_lump_ent_index": "42"
   },
   {
     "ResponseContext": "",
@@ -3451,7 +3387,7 @@
     "angles": "-0.000000 46.223400 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20067",
-    "_template_lump_ent_index": "44"
+    "_template_lump_ent_index": "43"
   },
   {
     "ResponseContext": "",
@@ -3524,7 +3460,7 @@
     "angles": "-0.000000 62.918396 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20068",
-    "_template_lump_ent_index": "45"
+    "_template_lump_ent_index": "44"
   },
   {
     "ResponseContext": "",
@@ -3597,7 +3533,7 @@
     "angles": "-0.000000 -58.459984 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20069",
-    "_template_lump_ent_index": "46"
+    "_template_lump_ent_index": "45"
   },
   {
     "ResponseContext": "",
@@ -3670,7 +3606,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20070",
-    "_template_lump_ent_index": "47"
+    "_template_lump_ent_index": "46"
   },
   {
     "ResponseContext": "",
@@ -3743,7 +3679,7 @@
     "angles": "-0.000000 -35.337009 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20071",
-    "_template_lump_ent_index": "48"
+    "_template_lump_ent_index": "47"
   },
   {
     "ResponseContext": "",
@@ -3816,7 +3752,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20072",
-    "_template_lump_ent_index": "49"
+    "_template_lump_ent_index": "48"
   },
   {
     "ResponseContext": "",
@@ -3889,7 +3825,7 @@
     "angles": "-0.000000 34.860298 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20073",
-    "_template_lump_ent_index": "50"
+    "_template_lump_ent_index": "49"
   },
   {
     "ResponseContext": "",
@@ -3962,7 +3898,7 @@
     "angles": "-0.000000 -12.686001 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20074",
-    "_template_lump_ent_index": "51"
+    "_template_lump_ent_index": "50"
   },
   {
     "ResponseContext": "",
@@ -4035,7 +3971,7 @@
     "angles": "-0.000000 38.313995 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20075",
-    "_template_lump_ent_index": "52"
+    "_template_lump_ent_index": "51"
   },
   {
     "ResponseContext": "",
@@ -4108,7 +4044,7 @@
     "angles": "0.000000 -107.500008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20076",
-    "_template_lump_ent_index": "53"
+    "_template_lump_ent_index": "52"
   },
   {
     "ResponseContext": "",
@@ -4181,7 +4117,7 @@
     "angles": "0.000000 -97.140007 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20077",
-    "_template_lump_ent_index": "54"
+    "_template_lump_ent_index": "53"
   },
   {
     "add_modifier": "",
@@ -4281,7 +4217,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2108",
-    "_template_lump_ent_index": "55"
+    "_template_lump_ent_index": "54"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4353,7 +4289,7 @@
     "angles": "-0.000000 170.500000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1998",
-    "_template_lump_ent_index": "56"
+    "_template_lump_ent_index": "55"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4426,7 +4362,7 @@
     "angles": "-0.000000 39.999996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2147",
-    "_template_lump_ent_index": "57"
+    "_template_lump_ent_index": "56"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4499,7 +4435,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2148",
-    "_template_lump_ent_index": "58"
+    "_template_lump_ent_index": "57"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4572,7 +4508,7 @@
     "angles": "-0.000000 -40.500004 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2149",
-    "_template_lump_ent_index": "59"
+    "_template_lump_ent_index": "58"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4645,7 +4581,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2150",
-    "_template_lump_ent_index": "60"
+    "_template_lump_ent_index": "59"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4718,7 +4654,7 @@
     "angles": "-0.000000 -63.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2151",
-    "_template_lump_ent_index": "61"
+    "_template_lump_ent_index": "60"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4791,7 +4727,7 @@
     "angles": "-0.000000 61.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2152",
-    "_template_lump_ent_index": "62"
+    "_template_lump_ent_index": "61"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4864,7 +4800,7 @@
     "angles": "-0.000000 66.999992 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2153",
-    "_template_lump_ent_index": "63"
+    "_template_lump_ent_index": "62"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -4937,7 +4873,7 @@
     "angles": "-0.000000 51.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2154",
-    "_template_lump_ent_index": "64"
+    "_template_lump_ent_index": "63"
   },
   {
     "ResponseContext": "",
@@ -5010,7 +4946,7 @@
     "angles": "-0.000000 39.999996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20078",
-    "_template_lump_ent_index": "65"
+    "_template_lump_ent_index": "64"
   },
   {
     "ResponseContext": "",
@@ -5083,7 +5019,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20079",
-    "_template_lump_ent_index": "66"
+    "_template_lump_ent_index": "65"
   },
   {
     "ResponseContext": "",
@@ -5156,7 +5092,7 @@
     "angles": "-0.000000 -40.500004 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20080",
-    "_template_lump_ent_index": "67"
+    "_template_lump_ent_index": "66"
   },
   {
     "ResponseContext": "",
@@ -5229,7 +5165,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20081",
-    "_template_lump_ent_index": "68"
+    "_template_lump_ent_index": "67"
   },
   {
     "ResponseContext": "",
@@ -5302,7 +5238,7 @@
     "angles": "-0.000000 -63.000015 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20082",
-    "_template_lump_ent_index": "69"
+    "_template_lump_ent_index": "68"
   },
   {
     "ResponseContext": "",
@@ -5375,7 +5311,7 @@
     "angles": "-0.000000 61.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20083",
-    "_template_lump_ent_index": "70"
+    "_template_lump_ent_index": "69"
   },
   {
     "ResponseContext": "",
@@ -5448,7 +5384,7 @@
     "angles": "-0.000000 66.999992 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20084",
-    "_template_lump_ent_index": "71"
+    "_template_lump_ent_index": "70"
   },
   {
     "ResponseContext": "",
@@ -5521,7 +5457,7 @@
     "angles": "-0.000000 51.499996 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20085",
-    "_template_lump_ent_index": "72"
+    "_template_lump_ent_index": "71"
   },
   {
     "ResponseContext": "",
@@ -5594,7 +5530,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20086",
-    "_template_lump_ent_index": "73"
+    "_template_lump_ent_index": "72"
   },
   {
     "add_modifier": "",
@@ -5694,7 +5630,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2122",
-    "_template_lump_ent_index": "74"
+    "_template_lump_ent_index": "73"
   },
   {
     "add_modifier": "",
@@ -5724,7 +5660,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2100",
-    "_template_lump_ent_index": "75"
+    "_template_lump_ent_index": "74"
   },
   {
     "triggeronstarttouch": "0",
@@ -5748,7 +5684,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2096",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_push_2096.vmdl",
-    "_template_lump_ent_index": "76",
+    "_template_lump_ent_index": "75",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -5953,9 +5889,6 @@
     ]
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
     "cpoint7_parent": "0",
     "cpoint6_parent": "0",
     "cpoint5_parent": "0",
@@ -6046,11 +5979,11 @@
     "vscripts": "",
     "targetname": "[PR#]Hashmel_Superattack_Effect",
     "classname": "info_particle_system",
-    "origin": "-6.000000 -44.890137 83.000000",
+    "origin": "-6.000000 13.000000 83.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2664",
-    "_template_lump_ent_index": "77"
+    "_template_lump_ent_index": "76"
   },
   {
     "triggeronstarttouch": "0",
@@ -6074,7 +6007,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2110",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_gravity_push_2110.vmdl",
-    "_template_lump_ent_index": "78"
+    "_template_lump_ent_index": "77"
   },
   {
     "triggeronstarttouch": "0",
@@ -6098,7 +6031,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2112",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_gravity_push_2112.vmdl",
-    "_template_lump_ent_index": "79"
+    "_template_lump_ent_index": "78"
   },
   {
     "triggeronstarttouch": "0",
@@ -6122,7 +6055,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2114",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_gravity_push_2114.vmdl",
-    "_template_lump_ent_index": "80"
+    "_template_lump_ent_index": "79"
   },
   {
     "triggeronstarttouch": "0",
@@ -6146,7 +6079,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20013",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_gravity_push_20013.vmdl",
-    "_template_lump_ent_index": "81"
+    "_template_lump_ent_index": "80"
   },
   {
     "triggeronstarttouch": "0",
@@ -6170,7 +6103,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20015",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_gravity_push_20015.vmdl",
-    "_template_lump_ent_index": "82"
+    "_template_lump_ent_index": "81"
   },
   {
     "triggeronstarttouch": "0",
@@ -6194,7 +6127,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20017",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_gravity_push_20017.vmdl",
-    "_template_lump_ent_index": "83"
+    "_template_lump_ent_index": "82"
   },
   {
     "PassthroughCaller": "0",
@@ -6208,7 +6141,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2101",
-    "_template_lump_ent_index": "84",
+    "_template_lump_ent_index": "83",
     "connections": [
       {
         "output": "OnTrigger",
@@ -6406,7 +6339,7 @@
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2107",
-    "_template_lump_ent_index": "85"
+    "_template_lump_ent_index": "84"
   },
   {
     "AllowMovableNavMeshDockingOnEntireEntity": "0",
@@ -6450,7 +6383,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2155",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_move_3_2155.vmdl",
-    "_template_lump_ent_index": "86"
+    "_template_lump_ent_index": "85"
   },
   {
     "add_modifier": "",
@@ -6483,7 +6416,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2130",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_hurt_3_2130.vmdl",
-    "_template_lump_ent_index": "87"
+    "_template_lump_ent_index": "86"
   },
   {
     "thinkalways": "0",
@@ -6513,7 +6446,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20047",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_hurt_3_20047.vmdl",
-    "_template_lump_ent_index": "88"
+    "_template_lump_ent_index": "87"
   },
   {
     "AllowMovableNavMeshDockingOnEntireEntity": "0",
@@ -6554,7 +6487,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2145",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_move_2_2145.vmdl",
-    "_template_lump_ent_index": "89"
+    "_template_lump_ent_index": "88"
   },
   {
     "add_modifier": "",
@@ -6587,7 +6520,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2128",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_hurt_2_2128.vmdl",
-    "_template_lump_ent_index": "90"
+    "_template_lump_ent_index": "89"
   },
   {
     "ResponseContext": "",
@@ -6620,7 +6553,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20049",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_hurt_2_20049.vmdl",
-    "_template_lump_ent_index": "91"
+    "_template_lump_ent_index": "90"
   },
   {
     "thinkalways": "0",
@@ -6629,8 +6562,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "16384",
-    "damagecap": "35",
-    "damage": "35",
+    "damagecap": "23",
+    "damage": "23",
     "master": "",
     "filtername": "[PR#]Humans_Filter",
     "spawnflags": "1",
@@ -6650,7 +6583,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2123",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_hurt_2123.vmdl",
-    "_template_lump_ent_index": "92"
+    "_template_lump_ent_index": "91"
   },
   {
     "thinkalways": "0",
@@ -6659,8 +6592,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "16384",
-    "damagecap": "35",
-    "damage": "35",
+    "damagecap": "23",
+    "damage": "23",
     "master": "",
     "filtername": "[PR#]Humans_Filter",
     "spawnflags": "1",
@@ -6680,7 +6613,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20098",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_hurt_20098.vmdl",
-    "_template_lump_ent_index": "93"
+    "_template_lump_ent_index": "92"
   },
   {
     "thinkalways": "0",
@@ -6710,7 +6643,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2105",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_holy_hurt_2105.vmdl",
-    "_template_lump_ent_index": "94"
+    "_template_lump_ent_index": "93"
   },
   {
     "AllowMovableNavMeshDockingOnEntireEntity": "0",
@@ -6751,7 +6684,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2135",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_move_1_2135.vmdl",
-    "_template_lump_ent_index": "95"
+    "_template_lump_ent_index": "94"
   },
   {
     "thinkalways": "0",
@@ -6781,7 +6714,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2094",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_hp_add_2094.vmdl",
-    "_template_lump_ent_index": "96",
+    "_template_lump_ent_index": "95",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -6832,7 +6765,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2126",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_hurt_1_2126.vmdl",
-    "_template_lump_ent_index": "97"
+    "_template_lump_ent_index": "96"
   },
   {
     "ResponseContext": "",
@@ -6865,38 +6798,30 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20045",
     "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_earth_hurt_1_20045.vmdl",
-    "_template_lump_ent_index": "98"
+    "_template_lump_ent_index": "97"
   },
   {
-    "wait": "0.500000",
+    "wait": "1.000000",
     "filtername": "[PR#]Humans_Filter",
     "spawnflags": "1",
     "globalname": "",
     "StartDisabled": "1",
-    "useLocalOffset": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
+    "local.scales": "1.000000 1.000000 1.000000",
     "local.angles": "0.000000 0.000000 0.000000",
     "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]Hashmel_Rotate",
+    "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]Hashmel_Rot_Trigger",
+    "targetname": "[PR#]Hashmel_Meteor_Attack",
     "classname": "trigger_multiple",
-    "origin": "8.000000 193.000000 261.000000",
+    "origin": "-8.125000 66.500000 260.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "2660",
-    "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_rot_trigger_2660.vmdl",
-    "_template_lump_ent_index": "99",
+    "hammerUniqueId": "22429",
+    "model": "maps/ze_ffxii_ridorana_cataract/entities/hashmel_meteor_attack_22429.vmdl",
+    "_template_lump_ent_index": "98",
     "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
       {
         "output": "OnTrigger",
         "target": "[PR#]Meteor_Spawn",

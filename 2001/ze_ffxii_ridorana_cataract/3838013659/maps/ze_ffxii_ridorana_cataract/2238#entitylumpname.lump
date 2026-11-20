@@ -157,5 +157,45 @@
         "limit": -1
       }
     ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "vscripts": "",
+    "targetname": "[PR#]Fire_Relay_lvl3",
+    "classname": "logic_relay",
+    "origin": "2.000000 0.000000 40.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "13240",
+    "_template_lump_ent_index": "2",
+    "connections": [
+      {
+        "output": "OnSpawn",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Item_Fire_Effect_lvl3",
+        "input": "Kill",
+        "param": "",
+        "delay": 9,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]Item_Fire_Trigger_lvl3",
+        "input": "Kill",
+        "param": "",
+        "delay": 9,
+        "limit": -1
+      }
+    ]
   }
 ]

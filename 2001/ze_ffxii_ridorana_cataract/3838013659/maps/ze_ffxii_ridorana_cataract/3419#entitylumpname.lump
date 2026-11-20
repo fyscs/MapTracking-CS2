@@ -154,14 +154,6 @@
       },
       {
         "output": "OnPressed",
-        "target": "[PR#]Sidequest_Cactus",
-        "input": "Kill",
-        "param": "",
-        "delay": 1.25,
-        "limit": 1
-      },
-      {
-        "output": "OnPressed",
         "target": "[PR#]Sidequest_Cactus_Case",
         "input": "Kill",
         "param": "",
@@ -199,6 +191,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnPressed",
+        "target": "[PR#]Sidequest_Cactus",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.019999999552965164,
+        "limit": -1
       }
     ]
   }

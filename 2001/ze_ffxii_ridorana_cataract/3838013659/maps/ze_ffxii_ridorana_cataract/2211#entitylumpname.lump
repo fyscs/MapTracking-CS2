@@ -170,16 +170,10 @@
     ]
   },
   {
-    "spawnflags": "0",
-    "health": "0",
-    "target": "",
     "PassthroughCaller": "0",
     "FastRetrigger": "0",
     "TriggerOnce": "0",
     "StartDisabled": "0",
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
     "vscripts": "",
     "targetname": "[PR#]Heal_Relay_lvl3\u00260000",
     "classname": "logic_relay",

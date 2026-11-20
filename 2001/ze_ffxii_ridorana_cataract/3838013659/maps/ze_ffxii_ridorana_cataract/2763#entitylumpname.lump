@@ -373,7 +373,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Stage_4_End_Guard_Counter",
         "input": "Add",
-        "param": "90",
+        "param": "75",
         "delay": 0,
         "limit": -1
       }

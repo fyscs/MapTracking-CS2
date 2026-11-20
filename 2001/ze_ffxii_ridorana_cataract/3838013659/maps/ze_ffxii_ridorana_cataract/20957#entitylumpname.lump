@@ -311,7 +311,7 @@
     "PostSpawnDirectionVariance": "0.150000",
     "PostSpawnDirection": "0.000000 0.000000 0.000000",
     "PostSpawnSpeed": "0.000000",
-    "EntityTemplate": "[PR#]Item_Holy_Temp_lvl1",
+    "EntityTemplate": "[PR#]SlayerdragonGetOutOfMyMap",
     "spawnflags": "0",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
