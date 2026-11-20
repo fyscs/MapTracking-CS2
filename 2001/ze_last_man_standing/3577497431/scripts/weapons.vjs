@@ -6,10 +6,10 @@ const SETTINGS = Object.freeze({maxProjectiles:48, range:16384, enemyTeam:2, ope
 const WEAPONS = Object.freeze({
   '25':Object.freeze({name:'25mm 机炮',damage:200,damageMode:'mech_volume',hurtInterval:0.5,beamRadius:40,radius:0,cooldown:0.1,speed:76000,magazineSize:null,reloadSeconds:0,slowMultiplier:0.85,slowSeconds:1,
     muzzleFx:'particles/lms_ac130_195/tracer25_endpoint195.vpcf',trailFx:null,impactFx:null,model:null,fxSeconds:0.15}),
-  '40':Object.freeze({name:'40mm 机关炮',damage:750,damageMode:'fixed_blast',radius:400,cooldown:0.8,speed:4096,magazineSize:5,reloadSeconds:3,slowMultiplier:0.60,slowSeconds:2,
+  '40':Object.freeze({name:'40mm 机关炮',damage:500,damageMode:'fixed_blast',radius:400,cooldown:1,speed:4096,magazineSize:4,reloadSeconds:6,slowMultiplier:0.60,slowSeconds:2,
     muzzleFx:null,trailFx:'particles/lms_ac130_161/shell40_flight195.vpcf',impactFx:'particles/lms_particles_new/custom_particle_054.vpcf',
     model:'models/lms_ac130_161/projectile_40mm.vmdl',fxSeconds:4.5}),
-  '105':Object.freeze({name:'105mm 榴弹炮',damage:3000,damageMode:'fixed_blast',radius:1200,cooldown:0,speed:3072,magazineSize:1,reloadSeconds:6,slowMultiplier:0.30,slowSeconds:4,
+  '105':Object.freeze({name:'105mm 榴弹炮',damage:1500,damageMode:'fixed_blast',radius:1200,cooldown:0,speed:3072,magazineSize:1,reloadSeconds:10,slowMultiplier:0.30,slowSeconds:4,
     muzzleFx:null,trailFx:'particles/lms_ac130_161/he105_jet.vpcf',trailOffset:-9,impactFx:'particles/lms_ac130_161/he105_impact.vpcf',model:'models/lms_ac130_161/projectile_105mm.vmdl',fxSeconds:8})
 });
 const AUDIO186 = {

@@ -298,6 +298,14 @@
         "param": "QueueSummonerSpeedRestore244",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "!activator",
+        "input": "KeyValues",
+        "param": "speed 1",
+        "delay": 8,
+        "limit": -1
       }
     ]
   },

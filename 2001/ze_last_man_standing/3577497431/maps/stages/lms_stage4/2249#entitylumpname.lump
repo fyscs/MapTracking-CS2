@@ -80,17 +80,17 @@
       },
       {
         "output": "OnDamaged",
-        "target": "[PR#]gametext_countdowntext",
-        "input": "Stop",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "CaptionHide",
         "delay": 1,
         "limit": 1
       },
       {
         "output": "OnDamaged",
-        "target": "[PR#]gametext_countdowntext",
-        "input": "setscale",
-        "param": "1",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "CaptionHide",
         "delay": 0,
         "limit": 1
       },
@@ -104,17 +104,17 @@
       },
       {
         "output": "OnDamaged",
-        "target": "[PR#]gametext_countdown*",
-        "input": "DestroyImmediately",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "TimerCancel",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnDamaged",
-        "target": "[PR#]gametext_countdown*",
-        "input": "CancelPending",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "TimerCancel",
         "delay": 0,
         "limit": -1
       },

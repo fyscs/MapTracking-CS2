@@ -298,14 +298,6 @@
         "param": "stripzombie",
         "delay": 0,
         "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]rename",
-        "input": "RunScriptInput",
-        "param": "rename02",
-        "delay": 1,
-        "limit": -1
       }
     ]
   },

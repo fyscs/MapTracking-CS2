@@ -1524,7 +1524,7 @@ class BossHpSystem extends BaseSystem {
         
         utils.EntFire("BossSpriteHP", "DestroyImmediately", "");
         utils.EntFire("Zombie_Item_Boss_Super_Health", "Break");
-        utils.EntFire("gametext_objectives", "FireUser4");
+        utils.EntFire("LMS_PublicManager", "RunScriptInput", "GoalHide");
         utils.EntFire("Zombie_Item_Boss_Normal_Transformation", "Trigger");
     }
 

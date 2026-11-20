@@ -964,14 +964,6 @@
         "param": "striphuman",
         "delay": 0,
         "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
-        "target": "[PR#]rename",
-        "input": "RunScriptInput",
-        "param": "rename01",
-        "delay": 1,
-        "limit": -1
       }
     ]
   },

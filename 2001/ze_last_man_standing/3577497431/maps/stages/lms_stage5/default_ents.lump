@@ -1844,9 +1844,9 @@
       },
       {
         "output": "OnUser4",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "synchronizenorthgenerator",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_synchronizenorthgenerator",
         "delay": 0,
         "limit": 1
       },
@@ -2874,9 +2874,9 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]gametext_core_case",
-        "input": "InValue",
-        "param": "getout",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Core_getout",
         "delay": 0.10000000149011612,
         "limit": -1
       }
@@ -3112,25 +3112,25 @@
       },
       {
         "output": "OnHitMin",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       },
       {
         "output": "OnHitMin",
-        "target": "[PR#]gametext_objective*",
-        "input": "Kill",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalKill",
         "delay": 0.019999999552965164,
         "limit": 1
       },
       {
         "output": "OnHitMin",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       },
@@ -3583,9 +3583,9 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       }
@@ -4602,9 +4602,9 @@
       },
       {
         "output": "OnUser4",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "synchronizewestgenerator",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_synchronizewestgenerator",
         "delay": 0,
         "limit": 1
       },
@@ -4840,9 +4840,9 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       }
@@ -5455,9 +5455,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "Start",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "ChargeShow",
         "delay": 0,
         "limit": -1
       }
@@ -5678,9 +5678,9 @@
       },
       {
         "output": "OnHitMax",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "coregenerator",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_coregenerator",
         "delay": 0,
         "limit": 1
       },
@@ -5933,9 +5933,9 @@
       },
       {
         "output": "OnUser4",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "synchronizeeastgenerator",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_synchronizeeastgenerator",
         "delay": 0,
         "limit": 1
       },
@@ -6261,9 +6261,9 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       }
@@ -6315,9 +6315,9 @@
     "connections": [
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametext_core_case",
-        "input": "InValue",
-        "param": "sacrifice",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Core_sacrifice",
         "delay": 0.25,
         "limit": -1
       },
@@ -6355,9 +6355,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Global_Message_Top_Countdown",
-        "input": "FireUser1",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Timer20",
         "delay": 0,
         "limit": -1
       },
@@ -6558,9 +6558,9 @@
       },
       {
         "output": "OnUser4",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "synchronizesouthgenerator",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_synchronizesouthgenerator",
         "delay": 0,
         "limit": 1
       },
@@ -6712,9 +6712,9 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]gametext_core_case",
-        "input": "InValue",
-        "param": "overloading",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Core_overloading",
         "delay": 0,
         "limit": -1
       },
@@ -7622,9 +7622,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       },
@@ -7662,9 +7662,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "DestroyImmediately",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "ChargeHide",
         "delay": 5,
         "limit": -1
       },
@@ -8693,9 +8693,9 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       },
@@ -8852,9 +8852,9 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       }
@@ -9231,9 +9231,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Global_Message_Top_Countdown",
-        "input": "FireUser2",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Timer40",
         "delay": 15,
         "limit": -1
       },
@@ -9311,9 +9311,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Glocal_Message_Selector",
-        "input": "InValue",
-        "param": "stage5_end",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Event_stage5_end",
         "delay": 15,
         "limit": 1
       },
@@ -9375,9 +9375,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametext_core_case",
-        "input": "InValue",
-        "param": "survive",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Core_survive",
         "delay": 15,
         "limit": -1
       },
@@ -9739,9 +9739,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametext_core_case",
-        "input": "InValue",
-        "param": "coredamaged",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Core_coredamaged",
         "delay": 0,
         "limit": -1
       },
@@ -10355,9 +10355,9 @@
       },
       {
         "output": "OnPressed",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": -1
       }
@@ -10426,9 +10426,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       }
@@ -10489,9 +10489,9 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "reinforcementswest",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_reinforcementswest",
         "delay": 0,
         "limit": -1
       },
@@ -10921,9 +10921,9 @@
       },
       {
         "output": "OnPressed",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": -1
       }
@@ -11000,9 +11000,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       }
@@ -11063,9 +11063,9 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "reinforcementseast",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_reinforcementseast",
         "delay": 0,
         "limit": -1
       },
@@ -11346,9 +11346,9 @@
       },
       {
         "output": "OnPressed",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": -1
       }
@@ -11425,9 +11425,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]gametext_objectives",
-        "input": "FireUser4",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "GoalHide",
         "delay": 0,
         "limit": 1
       }
@@ -11488,9 +11488,9 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]gametext_objective_case",
-        "input": "InValue",
-        "param": "reinforcementssouth",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Goal_reinforcementssouth",
         "delay": 0,
         "limit": -1
       },
@@ -20686,9 +20686,9 @@
     "connections": [
       {
         "output": "OnUser1",
-        "target": "[PR#]gametext_core_case",
-        "input": "InValue",
-        "param": "savetheworld",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Core_savetheworld",
         "delay": 0,
         "limit": -1
       },
@@ -20918,7 +20918,7 @@
       },
       {
         "output": "OnUser1",
-        "target": "[PR#]anti_Potral_bug",
+        "target": "[PR#]anti_portal_bug",
         "input": "Disable",
         "param": "",
         "delay": 0,
@@ -21308,9 +21308,9 @@
       },
       {
         "output": "OnHitMax",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "DestroyImmediately",
-        "param": "",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "ChargeHide",
         "delay": 5,
         "limit": -1
       },
@@ -21367,81 +21367,81 @@
     "connections": [
       {
         "output": "OnCase01",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "0",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge10",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "1",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge20",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "2",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge30",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "3",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge40",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase05",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "4",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge50",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase06",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "5",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge60",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase07",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "6",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge70",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase08",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "7",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge80",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase09",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "8",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge90",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase10",
-        "target": "[PR#]stage_5_core_charge_particle",
-        "input": "setalphascale",
-        "param": "9",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Charge100",
         "delay": 0,
         "limit": -1
       }

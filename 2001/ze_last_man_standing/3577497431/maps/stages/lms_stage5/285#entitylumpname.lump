@@ -1116,9 +1116,9 @@
     "connections": [
       {
         "output": "OnOpen",
-        "target": "[PR#]gametext_core_case",
-        "input": "InValue",
-        "param": "destiny",
+        "target": "[PR#]LMS_PublicManager",
+        "input": "RunScriptInput",
+        "param": "Core_destiny",
         "delay": 0,
         "limit": 1
       },
