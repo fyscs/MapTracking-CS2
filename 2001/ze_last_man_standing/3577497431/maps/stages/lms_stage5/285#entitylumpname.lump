@@ -1172,7 +1172,7 @@
       },
       {
         "output": "OnFullyOpen",
-        "target": "[PR#]anti_Potral_bug",
+        "target": "[PR#]anti_portal_bug",
         "input": "Disable",
         "param": "",
         "delay": 20,
