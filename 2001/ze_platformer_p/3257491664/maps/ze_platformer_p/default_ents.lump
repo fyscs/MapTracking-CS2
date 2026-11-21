@@ -8324,8 +8324,8 @@
     "Template08": "",
     "Template07": "",
     "Template06": "",
-    "Template05": "[PR#]meteor_trigger",
-    "Template04": "[PR#]meteor_t",
+    "Template05": "",
+    "Template04": "[PR#]meteor_trigger",
     "Template03": "[PR#]meteor_timer",
     "Template02": "[PR#]meteor_p",
     "Template01": "[PR#]meteor_phys",
@@ -10067,7 +10067,6 @@
   },
   {
     "clientSideEntity": "0",
-    "TriggerOnce": "1",
     "Filter10": "",
     "Filter09": "",
     "Filter08": "",

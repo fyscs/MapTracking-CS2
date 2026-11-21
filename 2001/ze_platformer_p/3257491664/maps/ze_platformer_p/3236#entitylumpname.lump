@@ -22,8 +22,6 @@
     "NoInterpolate": "0",
     "animgraph2_identifier": "",
     "expand_render_bounds_to_include_cloth": "0",
-    "SilentToZombies": "0",
-    "ExploitableByPlayer": "0",
     "skipPreSettle": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -93,14 +91,6 @@
       {
         "output": "OnBreak",
         "target": "[PR#]meteor_timer\u00260000",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnBreak",
-        "target": "[PR#]meteor_t\u00260000",
         "input": "Kill",
         "param": "",
         "delay": 0,
@@ -234,30 +224,8 @@
         "param": "",
         "delay": 0,
         "limit": 1
-      },
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]meteor_t\u00260000",
-        "input": "Activate",
-        "param": "",
-        "delay": 0.009999999776482582,
-        "limit": 1
       }
     ]
-  },
-  {
-    "force": "2000000",
-    "forcetime": "5",
-    "attach1": "[PR#]meteor_phys\u00260000",
-    "spawnflags": "31",
-    "vscripts": "",
-    "targetname": "[PR#]meteor_t\u00260000",
-    "classname": "phys_thruster",
-    "origin": "0.000000 0.000000 0.000000",
-    "angles": "89.999985 -0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "3230",
-    "_template_lump_ent_index": "3"
   },
   {
     "thinkalways": "0",
@@ -287,6 +255,6 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3232",
     "model": "maps/ze_platformer_p/entities/meteor_trigger_3232.vmdl",
-    "_template_lump_ent_index": "4"
+    "_template_lump_ent_index": "3"
   }
 ]

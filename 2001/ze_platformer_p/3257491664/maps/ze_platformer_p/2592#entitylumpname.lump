@@ -161,6 +161,19 @@
     "_template_lump_ent_index": "3"
   },
   {
+    "filtername": "[PR#]filter_meteor",
+    "StartDisabled": "0",
+    "targetname": "[PR#]volcano",
+    "vscripts": "",
+    "classname": "func_clip_vphysics",
+    "origin": "385.824951 -556.500000 135.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "3985",
+    "model": "maps/ze_platformer_p/entities/volcano_3985.vmdl",
+    "_template_lump_ent_index": "4"
+  },
+  {
     "thinkalways": "0",
     "damageforce": "0.000000 0.000000 0.000000",
     "nodmgforce": "0",
@@ -188,7 +201,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2349",
     "model": "maps/ze_platformer_p/entities/volcano_hurt_2349.vmdl",
-    "_template_lump_ent_index": "4"
+    "_template_lump_ent_index": "5"
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -214,7 +227,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2403",
     "model": "maps/ze_platformer_p/entities/volcano_teleport_2403.vmdl",
-    "_template_lump_ent_index": "5"
+    "_template_lump_ent_index": "6"
   },
   {
     "NoInterpolate": "0",
@@ -262,6 +275,6 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3192",
     "model": "maps/ze_platformer_p/entities/lava_3192.vmdl",
-    "_template_lump_ent_index": "6"
+    "_template_lump_ent_index": "7"
   }
 ]
