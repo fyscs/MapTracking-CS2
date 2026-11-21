@@ -37,10 +37,10 @@
     "targetname": "[PR#]laser_high-mid1",
     "classname": "func_movelinear",
     "origin": "213.077148 15.728252 -52.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110240",
-    "model": "maps/ze_trepang/entities/laser_high-mid1_110240.vmdl",
+    "hammerUniqueId": "345075",
+    "model": "maps/ze_trepang/entities/laser_high-mid1_345075.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -78,10 +78,10 @@
     "targetname": "[PR#]laser_high-mid2",
     "classname": "func_movelinear",
     "origin": "-372.922852 15.727946 -24.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110238",
-    "model": "maps/ze_trepang/entities/laser_high-mid2_110238.vmdl",
+    "hammerUniqueId": "345065",
+    "model": "maps/ze_trepang/entities/laser_high-mid2_345065.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -108,10 +108,10 @@
     "targetname": "[PR#]laser_high-mid1_hurt",
     "classname": "trigger_hurt",
     "origin": "223.077148 303.728271 -68.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000014 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110236",
-    "model": "maps/ze_trepang/entities/laser_high-mid1_hurt_110236.vmdl",
+    "hammerUniqueId": "330706",
+    "model": "maps/ze_trepang/entities/laser_high-mid1_hurt_330706.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -138,10 +138,10 @@
     "targetname": "[PR#]laser_high-mid2_hurt",
     "classname": "trigger_hurt",
     "origin": "-362.922852 303.727966 -40.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000014 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110234",
-    "model": "maps/ze_trepang/entities/laser_high-mid2_hurt_110234.vmdl",
+    "hammerUniqueId": "330696",
+    "model": "maps/ze_trepang/entities/laser_high-mid2_hurt_330696.vmdl",
     "_template_lump_ent_index": "3"
   }
 ]

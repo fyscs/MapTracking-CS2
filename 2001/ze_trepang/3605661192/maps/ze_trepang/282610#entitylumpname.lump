@@ -3,8 +3,6 @@
 
 [
   {
-    "steamaudio_geometry_mode": "0",
-    "expand_render_bounds_to_include_cloth": "0",
     "skipPreSettle": "0",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -47,6 +45,7 @@
     "physdamagescale": "0.100000",
     "shadowcastdist": "0",
     "minhealthdmg": "0",
+    "steamaudio_geometry_mode": "0",
     "glowteam": "-1",
     "glowcolor": "255 0 0",
     "glowrangemin": "0",
@@ -68,6 +67,7 @@
     "add_modifier": "",
     "add_attribute": "",
     "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
     "model": "weapons/models/grenade/hegrenade/weapon_hegrenade.vmdl",
@@ -80,12 +80,12 @@
     "useLocalOffset": "0",
     "parentAttachmentName": "",
     "parentname": "",
-    "targetname": "[PR#]hegrenadex",
+    "targetname": "[PR#]hegrenadex\u00260000",
     "classname": "prop_physics",
     "origin": "0.000000 0.000000 -10.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "282611",
+    "hammerUniqueId": "350180",
     "_template_lump_ent_index": "0"
   },
   {
@@ -175,9 +175,9 @@
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]hegrenadex",
+    "parentname": "[PR#]hegrenadex\u00260000",
     "vscripts": "",
-    "targetname": "[PR#]hegrenadex_eff",
+    "targetname": "[PR#]hegrenadex_eff\u00260000",
     "classname": "info_particle_system",
     "origin": "0.000000 0.000000 -10.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -209,9 +209,9 @@
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]hegrenadex",
+    "parentname": "[PR#]hegrenadex\u00260000",
     "vscripts": "",
-    "targetname": "[PR#]hegrenadex_snd",
+    "targetname": "[PR#]hegrenadex_snd\u00260000",
     "classname": "ambient_generic",
     "origin": "0.000000 0.000000 -10.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -295,9 +295,9 @@
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]hegrenadex",
+    "parentname": "[PR#]hegrenadex\u00260000",
     "vscripts": "",
-    "targetname": "[PR#]hegrenadex_light",
+    "targetname": "[PR#]hegrenadex_light\u00260000",
     "classname": "light_omni2",
     "origin": "0.000000 0.000000 -6.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -313,7 +313,7 @@
     "damagemodel": "0",
     "damagetype": "0",
     "damagecap": "20",
-    "damage": "2000",
+    "damage": "10000",
     "master": "",
     "filtername": "[PR#]filter_only_t",
     "spawnflags": "1",
@@ -324,15 +324,15 @@
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]hegrenadex",
+    "parentname": "[PR#]hegrenadex\u00260000",
     "vscripts": "",
-    "targetname": "[PR#]hegrenadex_ignite",
+    "targetname": "[PR#]hegrenadex_ignite\u00260000",
     "classname": "trigger_hurt",
     "origin": "-1.000000 0.000000 -10.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "322111",
-    "model": "maps/ze_trepang/entities/hegrenadex_ignite_322111.vmdl",
+    "hammerUniqueId": "331099",
+    "model": "maps/ze_trepang/entities/hegrenadex_ignite_331099.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -341,6 +341,158 @@
         "input": "IgniteLifetime",
         "param": "5",
         "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "vscripts": "",
+    "targetname": "[PR#]hegrenadex_relay\u00260000",
+    "classname": "logic_relay",
+    "origin": "-7.000000 -35.000000 1.000000",
+    "angles": "-0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "328672",
+    "_template_lump_ent_index": "5",
+    "connections": [
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_snd\u00260000",
+        "input": "StopSound",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_eff\u00260000",
+        "input": "Stop",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_light\u00260000",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_ignite\u00260000",
+        "input": "ClearParent",
+        "param": "",
+        "delay": 2.490000009536743,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_eff\u00260000",
+        "input": "ClearParent",
+        "param": "",
+        "delay": 2.490000009536743,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex\u00260000",
+        "input": "Break",
+        "param": "",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_snd\u00260000",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_eff\u00260000",
+        "input": "Start",
+        "param": "",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_light\u00260000",
+        "input": "Disable",
+        "param": "",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_ignite\u00260000",
+        "input": "Enable",
+        "param": "",
+        "delay": 2.5,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_ignite\u00260000",
+        "input": "Disable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 3.049999952316284,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_ignite\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 3.049999952316284,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_light\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 3.049999952316284,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_snd\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 3.049999952316284,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "[PR#]hegrenadex_eff\u00260000",
+        "input": "Kill",
+        "param": "",
+        "delay": 3.049999952316284,
+        "limit": -1
+      },
+      {
+        "output": "OnSpawn",
+        "target": "!self",
+        "input": "Kill",
+        "param": "",
+        "delay": 0.05000000074505806,
         "limit": -1
       }
     ]

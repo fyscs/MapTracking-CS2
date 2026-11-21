@@ -37,10 +37,10 @@
     "targetname": "[PR#]laser_mid",
     "classname": "func_movelinear",
     "origin": "-372.922852 15.727946 50.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110244",
-    "model": "maps/ze_trepang/entities/laser_mid_110244.vmdl",
+    "hammerUniqueId": "345069",
+    "model": "maps/ze_trepang/entities/laser_mid_345069.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -67,10 +67,10 @@
     "targetname": "[PR#]laser_mid_hurt",
     "classname": "trigger_hurt",
     "origin": "-362.922852 303.727966 34.591797",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000014 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110242",
-    "model": "maps/ze_trepang/entities/laser_mid_hurt_110242.vmdl",
+    "hammerUniqueId": "330702",
+    "model": "maps/ze_trepang/entities/laser_mid_hurt_330702.vmdl",
     "_template_lump_ent_index": "1"
   }
 ]

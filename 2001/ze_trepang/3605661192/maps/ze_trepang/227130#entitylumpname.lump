@@ -3,13 +3,13 @@
 
 [
   {
-    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "ScriptedMovement": "0",
     "solidbsp": "0",
     "interactExclude": "",
     "interactWith": "",
     "interactAs": "",
+    "AlwaysSolidIgnoreNav": "0",
     "invert_exclusion": "0",
     "excludednpc": "",
     "Solidity": "1",
@@ -40,20 +40,20 @@
     "targetname": "[PR#]atk_horizon_one_rocket_launcher_laser02",
     "classname": "func_brush",
     "origin": "-2611.625000 -1056.500000 -723.750000",
-    "angles": "-75.000000 -179.999969 -179.999969",
+    "angles": "-74.999985 -179.999939 -179.999939",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "227015",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser02_227015.vmdl",
+    "hammerUniqueId": "344014",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser02_344014.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
-    "AlwaysSolidIgnoreNav": "0",
     "NoInterpolate": "0",
     "ScriptedMovement": "0",
     "solidbsp": "0",
     "interactExclude": "",
     "interactWith": "",
     "interactAs": "",
+    "AlwaysSolidIgnoreNav": "0",
     "invert_exclusion": "0",
     "excludednpc": "",
     "Solidity": "1",
@@ -84,10 +84,10 @@
     "targetname": "[PR#]atk_horizon_one_rocket_launcher_laser01",
     "classname": "func_brush",
     "origin": "-2611.625000 -855.500000 -723.750000",
-    "angles": "-75.000000 -179.999969 -179.999969",
+    "angles": "-74.999985 -179.999939 -179.999939",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "227017",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser01_227017.vmdl",
+    "hammerUniqueId": "344016",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser01_344016.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -479,10 +479,8 @@
     "_template_lump_ent_index": "5"
   },
   {
-    "steamaudio_geometry_mode": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "animgraph2_identifier": "",
     "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
     "StartDisabled": "1",
     "forcenpcexclude": "0",
     "CreateNavObstacle": "0",
@@ -528,9 +526,11 @@
     "ExplodeDamage": "750.000000",
     "damagefilter": "",
     "vscripts": "",
+    "animgraph2_identifier": "",
     "add_modifier": "",
     "add_attribute": "",
     "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
     "model": "models/horizon_missile.vmdl",
@@ -545,16 +545,14 @@
     "targetname": "[PR#]atk_horizon_one_rocket_launcher01",
     "classname": "prop_dynamic",
     "origin": "4.059570 -856.000000 -24.339844",
-    "angles": "14.147825 -179.999939 0.000000",
+    "angles": "14.147823 -179.999908 0.000000",
     "scales": "1.206400 1.206400 1.206400",
-    "hammerUniqueId": "227020",
+    "hammerUniqueId": "348149",
     "_template_lump_ent_index": "6"
   },
   {
-    "steamaudio_geometry_mode": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "animgraph2_identifier": "",
     "clothScale": "1.000000",
+    "steamaudio_geometry_mode": "0",
     "StartDisabled": "1",
     "forcenpcexclude": "0",
     "CreateNavObstacle": "0",
@@ -600,9 +598,11 @@
     "ExplodeDamage": "750.000000",
     "damagefilter": "",
     "vscripts": "",
+    "animgraph2_identifier": "",
     "add_modifier": "",
     "add_attribute": "",
     "disableshadows": "0",
+    "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
     "model": "models/horizon_missile.vmdl",
@@ -617,9 +617,9 @@
     "targetname": "[PR#]atk_horizon_one_rocket_launcher02",
     "classname": "prop_dynamic",
     "origin": "4.059570 -1056.000000 -24.339844",
-    "angles": "14.147825 -179.999939 0.000000",
+    "angles": "14.147823 -179.999908 0.000000",
     "scales": "1.206400 1.206400 1.206400",
-    "hammerUniqueId": "227014",
+    "hammerUniqueId": "348148",
     "_template_lump_ent_index": "7"
   },
   {
@@ -659,8 +659,8 @@
     "origin": "-3.101562 -856.000000 -24.828125",
     "angles": "-15.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "227021",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov01_227021.vmdl",
+    "hammerUniqueId": "345091",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov01_345091.vmdl",
     "_template_lump_ent_index": "8"
   },
   {
@@ -700,8 +700,8 @@
     "origin": "-3.101562 -1056.000000 -24.828125",
     "angles": "-15.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "227011",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov02_227011.vmdl",
+    "hammerUniqueId": "345089",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov02_345089.vmdl",
     "_template_lump_ent_index": "9"
   }
 ]

@@ -209,3 +209,41 @@
     height: 64px;
     width: 144px;
 }
+.AK47Tooltip,.FAMASTooltip,.M4A4Tooltip,.M4A1Tooltip,.GALILTooltip,.AUGTooltip,.SG556Tooltip,.MAC10Tooltip,.MP9Tooltip,.MP7Tooltip,.MP5Tooltip,.UMP45Tooltip,.BIZONTooltip,.P90Tooltip,.NOVATooltip,.MAG7Tooltip,.SAWEDOFFTooltip,.XM1014Tooltip,.NEGEVTooltip,.M249Tooltip,.SSG08Tooltip,.AWPTooltip,.SCAR20Tooltip,.G3SG1Tooltip,.USPTooltip,.P250Tooltip,.P2000Tooltip,.GLOCKTooltip,.FIVESEVENTooltip,.TEC9Tooltip,.CZ75ATooltip,.DEAGLETooltip,.REVOLVERTooltip,.ELITETooltip {
+    visibility: collapse;
+    horizontal-align: center;
+    vertical-align: bottom;
+    margin-bottom: 0px;
+    padding: 4px 6px;
+    background-color: #000000;
+    border: 1px solid red;
+    border-radius: 4px;
+    width: 120%;
+}
+.WeaponButton:hover .AK47Tooltip,.WeaponButton:hover .FAMASTooltip,.WeaponButton:hover .M4A4Tooltip,.WeaponButton:hover .M4A1Tooltip,.WeaponButton:hover .GALILTooltip,.WeaponButton:hover .AUGTooltip,.WeaponButton:hover .SG556Tooltip,.WeaponButton:hover .MAC10Tooltip,.WeaponButton:hover .MP9Tooltip,.WeaponButton:hover .MP7Tooltip,.WeaponButton:hover .MP5Tooltip,.WeaponButton:hover .UMP45Tooltip,.WeaponButton:hover .BIZONTooltip,.WeaponButton:hover .P90Tooltip,.WeaponButton:hover .NOVATooltip,.WeaponButton:hover .MAG7Tooltip,.WeaponButton:hover .SAWEDOFFTooltip,.WeaponButton:hover .XM1014Tooltip,.WeaponButton:hover .NEGEVTooltip,.WeaponButton:hover .M249Tooltip,.WeaponButton:hover .SSG08Tooltip,.WeaponButton:hover .AWPTooltip,.WeaponButton:hover .SCAR20Tooltip,.WeaponButton:hover .G3SG1Tooltip,.WeaponButton:hover .USPTooltip,.WeaponButton:hover .P250Tooltip,.WeaponButton:hover .P2000Tooltip,.WeaponButton:hover .GLOCKTooltip,.WeaponButton:hover .FIVESEVENTooltip,.WeaponButton:hover .TEC9Tooltip,.WeaponButton:hover .CZ75ATooltip,.WeaponButton:hover .DEAGLETooltip,.WeaponButton:hover .REVOLVERTooltip,.WeaponButton:hover .ELITETooltip {
+    visibility: visible;
+}
+.TooltipText {
+    color: white;
+    font-size: 14px;
+}
+.TooltipText2 {
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.TooltipText3 {
+    color: white;
+    font-size: 14px;
+    margin-top: 40px;
+}
+.TooltipText4 {
+    color: white;
+    font-size: 14px;
+    margin-top: 60px;
+}
+.TooltipText5 {
+    color: gold;
+    font-size: 12px;
+    margin-top: 80px;
+}

@@ -37,10 +37,10 @@
     "targetname": "[PR#]laser_double_easy1",
     "classname": "func_movelinear",
     "origin": "-338.922852 15.727968 -61.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110272",
-    "model": "maps/ze_trepang/entities/laser_double_easy1_110272.vmdl",
+    "hammerUniqueId": "345083",
+    "model": "maps/ze_trepang/entities/laser_double_easy1_345083.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -78,10 +78,10 @@
     "targetname": "[PR#]laser_double_easy2",
     "classname": "func_movelinear",
     "origin": "-373.204102 15.727945 -70.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110270",
-    "model": "maps/ze_trepang/entities/laser_double_easy2_110270.vmdl",
+    "hammerUniqueId": "345079",
+    "model": "maps/ze_trepang/entities/laser_double_easy2_345079.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -108,10 +108,10 @@
     "targetname": "[PR#]laser_double_easy1_hurt",
     "classname": "trigger_hurt",
     "origin": "-330.346680 303.727997 -77.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000014 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110264",
-    "model": "maps/ze_trepang/entities/laser_double_easy1_hurt_110264.vmdl",
+    "hammerUniqueId": "330716",
+    "model": "maps/ze_trepang/entities/laser_double_easy1_hurt_330716.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -138,10 +138,10 @@
     "targetname": "[PR#]laser_double_easy2_hurt",
     "classname": "trigger_hurt",
     "origin": "-362.204102 303.727966 -86.000000",
-    "angles": "-0.000000 0.000000 0.000000",
+    "angles": "-0.000000 -0.000014 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110262",
-    "model": "maps/ze_trepang/entities/laser_double_easy2_hurt_110262.vmdl",
+    "hammerUniqueId": "330714",
+    "model": "maps/ze_trepang/entities/laser_double_easy2_hurt_330714.vmdl",
     "_template_lump_ent_index": "3"
   }
 ]

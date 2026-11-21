@@ -26,10 +26,10 @@
     "targetname": "[PR#]atk_horizon_vtol_minigun_hurt_left01",
     "classname": "trigger_hurt",
     "origin": "-1089.908203 -904.514160 -203.916992",
-    "angles": "74.999977 -4.300004 0.000000",
+    "angles": "74.999977 -4.300031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "295395",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left01_295395.vmdl",
+    "hammerUniqueId": "331003",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left01_331003.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -56,10 +56,10 @@
     "targetname": "[PR#]atk_horizon_vtol_minigun_hurt_left02",
     "classname": "trigger_hurt",
     "origin": "-1081.810547 -796.817871 -203.916992",
-    "angles": "74.999977 -4.300004 0.000000",
+    "angles": "74.999977 -4.300031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "295393",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left02_295393.vmdl",
+    "hammerUniqueId": "331007",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left02_331007.vmdl",
     "_template_lump_ent_index": "1"
   },
   {

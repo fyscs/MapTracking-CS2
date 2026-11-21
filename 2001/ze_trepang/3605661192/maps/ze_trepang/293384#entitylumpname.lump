@@ -3,6 +3,8 @@
 
 [
   {
+    "spawnflags": "512",
+    "forcenpcexclude": "0",
     "override_anticipation_name": "",
     "master": "",
     "lip": "0",
@@ -15,8 +17,6 @@
     "locked_sound": "",
     "use_sound": "",
     "displaytext": "",
-    "spawnflags": "512",
-    "forcenpcexclude": "0",
     "damagefilter": "",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
@@ -38,10 +38,10 @@
     "targetname": "[PR#]ee_button05c",
     "classname": "func_button",
     "origin": "-80.846680 -136.645508 392.641602",
-    "angles": "-0.000000 3.999999 0.000000",
+    "angles": "-0.000000 3.999998 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "293332",
-    "model": "maps/ze_trepang/entities/ee_button05c_293332.vmdl",
+    "hammerUniqueId": "344737",
+    "model": "maps/ze_trepang/entities/ee_button05c_344737.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {

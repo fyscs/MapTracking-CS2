@@ -37,10 +37,10 @@
     "targetname": "[PR#]laser_X1",
     "classname": "func_movelinear",
     "origin": "-370.922852 12.412762 -20.960449",
-    "angles": "-0.000000 0.000000 4.107934",
+    "angles": "-0.000000 -0.000027 4.107934",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110216",
-    "model": "maps/ze_trepang/entities/laser_x1_110216.vmdl",
+    "hammerUniqueId": "345071",
+    "model": "maps/ze_trepang/entities/laser_x1_345071.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -78,10 +78,10 @@
     "targetname": "[PR#]laser_X2",
     "classname": "func_movelinear",
     "origin": "-370.922852 -4.960712 -20.935791",
-    "angles": "-0.000000 0.000000 -4.103024",
+    "angles": "-0.000000 -0.000027 -4.103024",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110210",
-    "model": "maps/ze_trepang/entities/laser_x2_110210.vmdl",
+    "hammerUniqueId": "345063",
+    "model": "maps/ze_trepang/entities/laser_x2_345063.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -108,10 +108,10 @@
     "targetname": "[PR#]laser_X1_hurt",
     "classname": "trigger_hurt",
     "origin": "-361.488281 298.727966 -66.000000",
-    "angles": "-0.000000 0.000000 -4.586594",
+    "angles": "-0.000000 -0.000014 -4.586594",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110214",
-    "model": "maps/ze_trepang/entities/laser_x1_hurt_110214.vmdl",
+    "hammerUniqueId": "330700",
+    "model": "maps/ze_trepang/entities/laser_x1_hurt_330700.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -138,10 +138,10 @@
     "targetname": "[PR#]laser_X2_hurt",
     "classname": "trigger_hurt",
     "origin": "-361.488281 -291.272034 -66.000000",
-    "angles": "-0.000000 0.000000 4.591505",
+    "angles": "-0.000000 -0.000014 4.591505",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "110212",
-    "model": "maps/ze_trepang/entities/laser_x2_hurt_110212.vmdl",
+    "hammerUniqueId": "330694",
+    "model": "maps/ze_trepang/entities/laser_x2_hurt_330694.vmdl",
     "_template_lump_ent_index": "3"
   }
 ]
