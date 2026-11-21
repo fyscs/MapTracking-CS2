@@ -5,7 +5,46 @@ import { Entity, Instance, Entities } from "cs_script/point_script";
 
 const LAYOUT_NAME = "game_text_hud_layout";
 const MAX_SLOTS = 2;
+const MESSAGE_SLOT_COUNT = 1;
+const DAMAGE_HUD_PANEL = "g1";
 const VAR_TEXT = "gt_text";
+
+const DAMAGE_HUD_X = 23;
+const DAMAGE_HUD_Y = 96;
+const DAMAGE_HUD_SIZE = 20;
+const DAMAGE_HUD_BRIGHTNESS = 1.5;
+const TEAM_T = 2;
+const TEAM_CT = 3;
+const DAMAGE_HUD_TEXT = {
+	en: {
+		damage: "Total Damage",
+		rank: "Rank",
+	},
+	zh: {
+		damage: "累计伤害",
+		rank: "排名",
+	},
+	ko: {
+		damage: "누적 대미지",
+		rank: "순위",
+	},
+	ja: {
+		damage: "累積ダメージ",
+		rank: "順位",
+	},
+	ru: {
+		damage: "Общий урон",
+		rank: "Место",
+	},
+	vi: {
+		damage: "Tổng sát thương",
+		rank: "Thứ hạng",
+	},
+	th: {
+		damage: "ความเสียหายสะสม",
+		rank: "อันดับ",
+	}
+};
 
 const X_MIN = 0, X_MAX = 100;
 const Y_MIN = 0, Y_MAX = 100;
@@ -73,6 +112,7 @@ function SetGlobalColor(key) {
 			const e = cellEnv[i];
 			if (!e || !e.lit || e.color !== old)
 				continue;
+
 			SwapClass(l, CellId(i), old, next);
 			e.color = next;
 		}
@@ -321,7 +361,6 @@ function PickPoolText() {
 	const pick = avail[Math.floor(Math.random() * avail.length)];
 	cdPoolUsed.push(pick);
 
-
 	return COUNTDOWN_TEXT_POOL[pick];
 }
 
@@ -357,9 +396,15 @@ function MakeCountdownConfig(src) {
 }
 
 function CellTextFor(cfg, i) {
-	if (i >= cfg.count) return "";
-	if (cfg.chars) return i < cfg.chars.length ? cfg.chars.charAt(i) : "";
-	if (cfg.texts) return i < cfg.texts.length ? String(cfg.texts[i]) : "";
+	if (i >= cfg.count)
+		return "";
+
+	if (cfg.chars)
+		return i < cfg.chars.length ? cfg.chars.charAt(i) : "";
+
+	if (cfg.texts)
+		return i < cfg.texts.length ? String(cfg.texts[i]) : "";
+
 	return cfg.symbol;
 }
 
@@ -388,7 +433,8 @@ function ResetCountdown(l) {
 
 function StartCountdown(src) {
 	const l = GetLayout();
-	if (!l) return null;
+	if (!l)
+		return null;
 
 	const cfg = MakeCountdownConfig(src);
 
@@ -427,7 +473,9 @@ function StartCountdown(src) {
 	Instance.SetNextThink(cdStartTime + 0.05);
 
 	Instance.Delay(cfg.duration + cfg.holdAfter).then(() => {
-		if (cdGen !== gen) return;
+		if (cdGen !== gen)
+			return;
+
 		StartFinish(cfg, cfg.fadeOutMs);
 	});
 
@@ -480,7 +528,8 @@ function StartFinish(cfg, fadeOutMs) {
 	cdFadeOutSec = fadeOutMs / 1000;
 
 	const l = GetLayout(true);
-	if (!l) return;
+	if (!l)
+		return;
 
 	ApplyFade(l, cd, null, OutClass(fadeOutMs));
 
@@ -490,6 +539,7 @@ function StartFinish(cfg, fadeOutMs) {
 function CompleteFinish() {
 	if (cdState !== "finishing")
 		return;
+
 	cdState = "idle";
 
 	const l = GetLayout(true);
@@ -513,8 +563,12 @@ function StopCountdown() {
 }
 
 function Clamp(v, lo, hi) {
-	if (v < lo) return lo;
-	if (v > hi) return hi;
+	if (v < lo)
+		return lo;
+
+	if (v > hi)
+		return hi;
+
 	return v;
 }
 
@@ -611,6 +665,7 @@ function GetLayout(quiet) {
 function SwapClass(l, panelId, oldClass, newClass) {
 	if (oldClass === newClass)
 		return;
+
 	if (newClass) l.SetHasClass(panelId, newClass, true);
 	if (oldClass) l.SetHasClass(panelId, oldClass, false);
 }
@@ -722,7 +777,8 @@ function ClearKnownFadeClasses(l) {
 
 function StartupCleanup() {
 	const l = GetLayout(true);
-	if (!l) return false;
+	if (!l)
+		return false;
 
 	for (const slot of slots) ResetSlot(l, slot);
 
@@ -775,7 +831,8 @@ function FadeOutSlot(l, slot, fadeSec) {
 
 function AcquireSlot(l, channel) {
 	if (channel) {
-		for (const s of slots) {
+		for (let i = 0; i < MESSAGE_SLOT_COUNT; i++) {
+			const s = slots[i];
 			if (s.state === "busy" && s.channel === channel) {
 				ClearSlotInstant(l, s);
 				return s;
@@ -783,15 +840,16 @@ function AcquireSlot(l, channel) {
 		}
 	}
 
-	for (const s of slots) {
+	for (let i = 0; i < MESSAGE_SLOT_COUNT; i++) {
+		const s = slots[i];
 		if (s.state === "idle") {
 			return s;
 		}
 	}
 
 	let oldest = slots[0];
-	for (const s of slots) {
-		if (s.startedAt < oldest.startedAt) oldest = s;
+	for (let i = 1; i < MESSAGE_SLOT_COUNT; i++) {
+		if (slots[i].startedAt < oldest.startedAt) oldest = slots[i];
 	}
 
 	ClearSlotInstant(l, oldest);
@@ -823,7 +881,8 @@ function MakeConfig(src) {
 
 function ShowGameText(src) {
 	const l = GetLayout();
-	if (!l) return null;
+	if (!l)
+		return null;
 
 	const cfg = MakeConfig(src);
 
@@ -850,13 +909,15 @@ function ShowGameText(src) {
 			return;
 
 		const l2 = GetLayout(true);
-		if (!l2) return;
+		if (!l2)
+			return;
 
 		ApplyFade(l2, slot, null, OutClass(cfg.fadeOutMs));
 
 		Instance.Delay(fadeOutSec + 0.2).then(() => {
 			if (slot.state !== "busy" || slot.gen !== gen)
 				return;
+
 			ReleaseSlot(slot);
 		});
 	});
@@ -866,49 +927,55 @@ function ShowGameText(src) {
 
 function ClearAll(fadeSec) {
 	const l = GetLayout(true);
-	if (!l) return;
+	if (!l)
+		return;
 
 	const sec = typeof fadeSec === "number" ? fadeSec : 0.2;
 
-	for (const slot of slots) {
+	for (let i = 0; i < MESSAGE_SLOT_COUNT; i++) {
+		const slot = slots[i];
 		if (slot.state === "busy") FadeOutSlot(l, slot, sec);
 	}
 }
 
 function ClearAllInstant() {
 	const l = GetLayout(true);
-	if (!l) return;
+	if (!l)
+		return;
 
-	for (const slot of slots) {
+	for (let i = 0; i < MESSAGE_SLOT_COUNT; i++) {
+		const slot = slots[i];
 		if (slot.state === "busy") ClearSlotInstant(l, slot);
 	}
 }
 
 function ClearChannel(channel, fadeSec) {
 	const l = GetLayout(true);
-	if (!l) return;
+	if (!l)
+		return;
 
 	const sec = typeof fadeSec === "number" ? fadeSec : 0.2;
 
-	for (const slot of slots) {
+	for (let i = 0; i < MESSAGE_SLOT_COUNT; i++) {
+		const slot = slots[i];
 		if (slot.state === "busy" && slot.channel === channel) FadeOutSlot(l, slot, sec);
 	}
 }
 
 function ResetHud() {
-	const l = GetLayout(true);
-	if (!l) return;
+    StopLyrics(true);
 
-	ClearAllInstant();
+    const l = GetLayout(true);
+    if (!l)
+		return;
 
-	cdGen++;
-	cdState = "idle";
-	ResetCountdown(l);
+    ClearAllInstant();
 
-	cdPoolUsed.length = 0;
+    cdGen++;
+    cdState = "idle";
+    ResetCountdown(l);
 
-	StopLyrics(true);
-
+    cdPoolUsed.length = 0;
 }
 
 const MAX_LYRIC_CELLS = 16;
@@ -939,7 +1006,7 @@ const LyricBaseId = (i) => "lybs" + i;
 
 const LYRIC_DEFAULTS = {
 	x: 50,
-	y: 78,
+	y: 79,
 	size: 44,
 	sub: 0,
 	brightness: 1.5,
@@ -954,7 +1021,7 @@ const LYRIC_DEFAULTS = {
 const LYRICS = {
 	JP: {
 		style: {
-			x: 50, y: 78, size: 44, sub: 0,
+			x: 50, y: 79, size: 44, sub: 0,
 			color: COLOR.RED,
 			brightness: 1.5, font: FONT.STRATUM_MONO_BOLD,
 			fadeIn: 0.5, fadeOut: 0.25, ruby: 50, gap: 0,
@@ -970,7 +1037,7 @@ const LYRICS = {
 			        vi: "Câu chuyện cổ tích",
 			        th: "นิทานเรื่องหนึ่ง"
 			    },
-			    d: 28.8
+			    d: 28.6
 			},
 			{
 			    t: "Sakki shinda mitai\nさっき死(し)んだみたい",
@@ -978,11 +1045,11 @@ const LYRICS = {
 			        en: "Seemed to have died just now",
 			        zh: "好像刚才死去了",
 			        ko: "방금 전에 죽은 것 같아",
-			        ru: "Кажется, кто-то только что умер",
+			        ru: "Кажется кто-то только что умер",
 			        vi: "Có vẻ như vừa mới chết",
 			        th: "ดูเหมือนว่าเพิ่งตายไปเมื่อครู่นี้"
 			    },
-			    d: 34.0
+			    d: 33.8
 			},
 			{
 			    t: "Renga no byoutou de\n煉瓦(れんが)の病棟(びょうとう)で",
@@ -994,7 +1061,7 @@ const LYRICS = {
 			        vi: "Trong khu phòng bệnh xây bằng gạch",
 			        th: "ณ หอผู้ป่วยที่ก่อด้วยอิฐ"
 			    },
-			    d: 39.4
+			    d: 39.2
 			},
 			{
 			    t: "Umaku utaenakute\n上手(うま)く歌(うた)えなくて",
@@ -1006,7 +1073,7 @@ const LYRICS = {
 			        vi: "Chẳng thể hát thật hay",
 			        th: "ร้องเพลงได้ไม่ดีเลย"
 			    },
-			    d: 44.7
+			    d: 44.5
 			},
 			{
 			    t: "Kiri ni kemuru yoru\n霧(きり)に煙(けむ)る夜(よる)",
@@ -1018,7 +1085,7 @@ const LYRICS = {
 			        vi: "Trong đêm mờ sương",
 			        th: "ในคืนที่ปกคลุมด้วยหมอก"
 			    },
-			    d: 50.1
+			    d: 49.9
 			},
 			{
 			    t: "Ukabe akai tsuki\n浮(う)かべ赤(あか)い月(つき)",
@@ -1026,23 +1093,23 @@ const LYRICS = {
 			        en: "A red moon floats",
 			        zh: "浮现红色的月亮",
 			        ko: "떠올라라 붉은 달이여",
-			        ru: "Взойди, красная луна",
-			        vi: "Hãy mọc lên, vầng trăng đỏ",
+			        ru: "Взойди красная луна",
+			        vi: "Hãy mọc lên vầng trăng đỏ",
 			        th: "จงลอยขึ้นมา ดวงจันทร์สีแดง"
 			    },
-			    d: 55.3
+			    d: 55.1
 			},
 			{
 			    t: "Hora mite watashi wo\nほら見(み)て私(わたし)を",
 			    tr: {
-			        en: "Here, look at me",
+			        en: "Here look at me",
 			        zh: "看着我啊",
-			        ko: "자, 날 바라봐줘",
-			        ru: "Ну же, посмотри на меня",
-			        vi: "Nào, hãy nhìn tôi đi",
+			        ko: "나를 바라봐줘",
+			        ru: "Ну же посмотри на меня",
+			        vi: "Nào hãy nhìn tôi đi",
 			        th: "นี่ มองฉันสิ"
 			    },
-			    d: 60.6
+			    d: 60.4
 			},
 			{
 			    t: "Me wo sorasanaide\n目(め)を逸(そ)らさないで",
@@ -1054,7 +1121,7 @@ const LYRICS = {
 			        vi: "Đừng rời mắt khỏi tôi",
 			        th: "อย่าละสายตาไปจากฉัน"
 			    },
-			    d: 66.1
+			    d: 65.9
 			},
 			{
 			    t: "Kuroi tetsu goushi no naka de\n黒(くろ)い鉄格子(てつごうし)の中(なか)で",
@@ -1066,7 +1133,7 @@ const LYRICS = {
 			        vi: "Bên trong song sắt đen",
 			        th: "ภายในลูกกรงเหล็กสีดำ"
 			    },
-			    d: 72.0
+			    d: 71.8
 			},
 			{
 			    t: "Watashi wa umarete kitanda\n私(わたし)は生(う)まれてきたんだ",
@@ -1078,7 +1145,7 @@ const LYRICS = {
 			        vi: "Tôi đã được sinh ra",
 			        th: "ฉันได้ถือกำเนิดมาแล้ว"
 			    },
-			    d: 74.6
+			    d: 74.4
 			},
 			{
 			    t: "Akui no daishou wo negae\n悪意(あくい)の代(だい)償(しょう)を願(ねが)え",
@@ -1090,7 +1157,7 @@ const LYRICS = {
 			        vi: "Hãy mong cho cái ác phải trả giá",
 			        th: "จงปรารถนาให้ความชั่วร้ายต้องชดใช้"
 			    },
-			    d: 77.2
+			    d: 77.0
 			},
 			{
 			    t: "Nozomu ga mama ni omae ni\n望(のぞ)むがままにお前(まえ)に",
@@ -1098,23 +1165,23 @@ const LYRICS = {
 			        en: "Just as you desire",
 			        zh: "随你所愿",
 			        ko: "원하는 대로 너에게",
-			        ru: "Тебе — всё, как я пожелаю",
-			        vi: "Theo đúng những gì ta mong muốn, dành cho ngươi",
+			        ru: "Тебе — всё как я пожелаю",
+			        vi: "Theo đúng những gì ta mong muốn dành cho ngươi",
 			        th: "แด่เจ้า ตามที่ปรารถนา"
 			    },
-			    d: 79.5
+			    d: 79.3
 			},
 			{
 			    t: "Saa ataeyou seigi wo\nさぁ与(あた)えよう正義(せいぎ)を",
 			    tr: {
-			        en: "Come, let me grant justice",
-			        zh: "来吧, 让我赐予你正义",
-			        ko: "자, 정의를 부여하자",
+			        en: "Come Let me grant justice",
+			        zh: "来吧 让我赐予你正义",
+			        ko: "자 정의를 부여하자",
 			        ru: "Дарую тебе справедливость",
-			        vi: "Nào, ta sẽ ban tặng công lý",
+			        vi: "Nào ta sẽ ban tặng công lý",
 			        th: "มาเถิด ข้าจะมอบความยุติธรรมให้"
 			    },
-			    d: 82.7
+			    d: 82.5
 			},
 			{
 			    t: "Kowashite kowasareru mae ni\n壊(こわ)して壊(こわ)される前(まえ)に",
@@ -1122,11 +1189,11 @@ const LYRICS = {
 			        en: "Before destroying and being destroyede",
 			        zh: "在被摧毀之前先摧毀一切",
 			        ko: "부숴버려 부서지기 전에",
-			        ru: "Разрушь, прежде чем разрушат тебя",
+			        ru: "Разрушь прежде чем разрушат тебя",
 			        vi: "Hãy phá hủy trước khi bị phá hủy",
 			        th: "จงทำลายเสีย ก่อนที่จะถูกทำลาย"
 			    },
-			    d: 85.3
+			    d: 85.1
 			},
 			{
 			    t: "Inga no daishou wo harai\n因果(いんが)の代(だい)償(しょう)を払(はら)い",
@@ -1138,16 +1205,16 @@ const LYRICS = {
 			        vi: "Trả giá cho nghiệp quả",
 			        th: "ชดใช้ผลแห่งกรรม"
 			    },
-			    d: 87.9
+			    d: 87.7
 			},
 			{
 			    t: "Tomo ni yukou  na mo naki kaibutsu\n共(とも)に行(ゆ)こう 名(な)もなき怪物(かいぶつ)",
 			    tr: {
-			        en: "Go together, nameless monster",
-			        zh: "一起前行吧, 没有名字的怪物",
+			        en: "Go together Nameless monster",
+			        zh: "一起前行吧 没有名字的怪物",
 			        ko: "함께 나아가자 이름 없는 괴물이여",
-			        ru: "Пойдём вместе, безымянное чудовище",
-			        vi: "Hãy cùng đi, hỡi quái vật vô danh",
+			        ru: "Пойдём вместе безымянное чудовище",
+			        vi: "Hãy cùng đi hỡi quái vật vô danh",
 			        th: "ไปด้วยกันเถอะ เจ้าสัตว์ประหลาดไร้นาม"
 			    },
 			    d: 89.7
@@ -1162,7 +1229,7 @@ const LYRICS = {
 			        vi: "Hãy trút cơn mưa đen xuống bầu trời này",
 			        th: "จงทำให้ฝนสีดำโปรยปรายลงมาจากฟากฟ้านี้"
 			    },
-			    d: 93.5
+			    d: 92.9
 			},
 			{
 			    t: "Watashi wa nozomarenai mono\n私(わたし)は望(のぞ)まれないもの",
@@ -1174,7 +1241,7 @@ const LYRICS = {
 			        vi: "Tôi là một tồn tại không được mong đợi",
 			        th: "ฉันคือสิ่งมีชีวิตที่ไม่มีใครปรารถนา"
 			    },
-			    d: 96.2
+			    d: 95.8
 			},
 			{
 			    t: "Hibi wareta noirooze\nひび割(わ)れたノイローゼ",
@@ -1186,7 +1253,7 @@ const LYRICS = {
 			        vi: "Chứng loạn thần kinh rạn vỡ",
 			        th: "โรคประสาทที่แตกร้าว"
 			    },
-			    d: 99.0
+			    d: 98.4
 			},
 			{
 			    t: "Aisu douzai no boukansha tachi ni\n愛(あい)す同罪(どうざい)の傍観者達(ぼうかんしゃたち)に",
@@ -1194,23 +1261,23 @@ const LYRICS = {
 			        en: "Beloved bystanders with the same sins",
 			        zh: "与爱同罪的旁观者们",
 			        ko: "같은 죄를 지은 사랑하는 방관자들에게",
-			        ru: "Любящим наблюдателям, разделяющим ту же вину",
-			        vi: "Gửi đến những kẻ bàng quan yêu thương, cùng chung tội lỗi",
+			        ru: "Любящим наблюдателям разделяющим ту же вину",
+			        vi: "Gửi đến những kẻ bàng quan yêu thương cùng chung tội lỗi",
 			        th: "แด่เหล่าผู้เฝ้ามอง ผู้มีความผิดร่วมกันในความรัก"
 			    },
-			    d: 100.7
+			    d: 100.4
 			},
 			{
 			    t: "Saa ima furue seigi wo\nさぁ今(いま)震(ふる)え正義(せいぎ)を",
 			    tr: {
-			        en: "Now, trembling justice",
-			        zh: "来吧, 现在让正义颤抖",
-			        ko: "자, 지금 휘둘러 정의를",
+			        en: "Now Trembling justice",
+			        zh: "来吧 现在让正义颤抖",
+			        ko: "자 지금 휘둘러 정의를",
 			        ru: "Взмахни же справедливостью",
-			        vi: "Nào, hãy vung công lý lên",
+			        vi: "Nào hãy vung công lý lên",
 			        th: "มาเถิด จงกวัดแกว่งความยุติธรรม"
 			    },
-			    d: 104.5
+			    d: 103.9
 			},
 			{
 			    t: "Kesenai kizu wo dakishimete\n消(け)せない傷(きず)を抱(だ)きしめて",
@@ -1222,7 +1289,7 @@ const LYRICS = {
 			        vi: "Ôm lấy những vết thương không thể xóa nhòa",
 			        th: "โอบกอดบาดแผลที่ไม่อาจลบเลือน"
 			    },
-			    d: 107.0
+			    d: 106.6
 			},
 			{
 			    t: "Kono karada wo uke ire\nこの身体(からだ)を受(う)け入(い)れ",
@@ -1234,55 +1301,320 @@ const LYRICS = {
 			        vi: "Đón nhận thân thể này",
 			        th: "ยอมรับร่างกายนี้"
 			    },
-			    d: 109.4
+			    d: 109.2
 			},
 			{
-			    t: "Tomo ni yukou  namae no nai...\n共(とも)に行(ゆ)こう 名(な)前(まえ)のない...",
+			    t: "Tomo ni yukou  namae no nai\n共(とも)に行(ゆ)こう 名(な)前(まえ)のない",
 			    tr: {
-			        en: "We’ll go together, nameless...",
-			        zh: "一起前行吧, 没有名字的...",
+			        en: "We’ll go together Nameless...",
+			        zh: "一起前行吧 没有名字的...",
 			        ko: "함께 나아가자 이름 없는...",
-			        ru: "Пойдём вместе, безымянное...",
-			        vi: "Hãy cùng đi, kẻ không tên...",
+			        ru: "Пойдём вместе безымянное...",
+			        vi: "Hãy cùng đi kẻ không tên...",
 			        th: "ไปด้วยกันเถอะ ผู้ไร้นาม..."
 			    },
-			    d: 111.9
-			},
-		],
+			    d: 111.5
+			}
+		]
 	},
 	EN: {
 		style: {
-			x: 50, y: 78, size: 40,
+			x: 50, y: 82, size: 44, sub: 0,
+			color: COLOR.RED,
 			brightness: 1.5, font: FONT.STRATUM_MONO_BOLD,
-			fadeIn: 0.5, fadeOut: 0.25,
+			fadeIn: 0.5, fadeOut: 0.25, ruby: 50, gap: 0,
 		},
 		lines: [
-			{ t: "A dying fairy tale", d: 27.8 },
-			{ t: "Just took its last breath", d: 33.0 },
-			{ t: "It once sung through these halls", d: 38.4 },
-			{ t: "Though blocked by brick hospital walls", d: 43.7 },
-			{ t: "Fog is covering the night", d: 49.1 },
-			{ t: "The blood red moon floating up high", d: 54.3 },
-			{ t: "Hey, can you keep your eyes on me", d: 59.6 },
-			{ t: "And make it everything you see", d: 65.1 },
-			{ t: "Behind these bars behind this world of iron", d: 71.0 },
-			{ t: "My soul was born and now at last it's my turn", d: 73.6 },
-			{ t: "So in exchange for my complete revenge", d: 76.2 },
-			{ t: "I'll grant you any wish spoken from your lips", d: 78.8 },
-			{ t: "We'll bring forth the mercy and the justice", d: 81.7 },
-			{ t: "Destroy them all before they even touch us", d: 84.3 },
-			{ t: "We'll pay the price a karma paradise", d: 86.9 },
-			{ t: "And walk ahead as one becoming, We've done", d: 89.5 },
-			{ t: "Let the rain continue falling on this", d: 92.3 },
-			{ t: "Unwanted soul in case you haven't noticed", d: 95.0 },
-			{ t: "The guilty sin of my neurotic mind", d: 97.9 },
-			{ t: "I share it with the strangers passing me by", d: 100.0 },
-			{ t: "So bring forth the mercy and the justice", d: 103.3 },
-			{ t: "Embrace these scars I know will never vanish", d: 105.8 },
-			{ t: "My whole body accepting all of me", d: 108.4 },
-			{ t: "We'll walk ahead as one becoming a monster", d: 110.9 },
-		],
-	},
+			{
+			    t: "A dying fairy tale",
+			    tr: {
+			        ja: "フェアリーテイルは",
+			        zh: "童话故事",
+			        ko: "옛날 이야기는",
+			        ru: "Сказка",
+			        vi: "Câu chuyện cổ tích",
+			        th: "นิทานเรื่องหนึ่ง"
+			    },
+			    d: 27.2
+			},
+			{
+			    t: "Just took its last breath",
+			    tr: {
+			        ja: "さっき死んだみたい",
+			        zh: "好像刚才死去了",
+			        ko: "방금 전에 죽은 것 같아",
+			        ru: "Кажется кто-то только что умер",
+			        vi: "Có vẻ như vừa mới chết",
+			        th: "ดูเหมือนว่าเพิ่งตายไปเมื่อครู่นี้"
+			    },
+			    d: 32.5
+			},
+			{
+			    t: "It once sung through these halls",
+			    tr: {
+			        ja: "かつてこの廊下に歌声を響かせていた",
+			        zh: "它曾经在这些走廊里歌唱",
+			        ko: "한때 이 복도에 노래를 울려 퍼뜨렸지",
+			        ru: "Когда-то его песня звучала в этих коридорах",
+			        vi: "Nó từng cất tiếng hát khắp những hành lang này",
+			        th: "ครั้งหนึ่งมันเคยขับขานไปทั่วโถงทางเดินเหล่านี้"
+			    },
+			    d: 37.9
+			},
+			{
+			    t: "Though blocked by brick hospital walls",
+			    tr: {
+			        ja: "煉瓦の病棟に阻まれても",
+			        zh: "尽管被砖砌的病房所阻隔",
+			        ko: "벽돌로 된 병동에 가로막혀도",
+			        ru: "Хоть и скрытый за кирпичными стенами больницы",
+			        vi: "Dù bị ngăn cách bởi những bức tường gạch bệnh viện",
+			        th: "แม้จะถูกกั้นไว้ด้วยกำแพงอิฐของโรงพยาบาล"
+			    },
+			    d: 43.2
+			},
+			{
+			    t: "Fog is covering the night",
+			    tr: {
+			        ja: "霧に煙る夜",
+			        zh: "在雾气缭绕的夜晚",
+			        ko: "안개가 자욱한 밤",
+			        ru: "В туманной ночи",
+			        vi: "Trong đêm mờ sương",
+			        th: "ในคืนที่ปกคลุมด้วยหมอก"
+			    },
+			    d: 48.6
+			},
+			{
+			    t: "The blood red moon floating up high",
+			    tr: {
+			        ja: "浮かべ赤い月",
+			        zh: "浮现红色的月亮",
+			        ko: "떠올라라 붉은 달이여",
+			        ru: "Взойди красная луна",
+			        vi: "Hãy mọc lên vầng trăng đỏ",
+			        th: "จงลอยขึ้นมา ดวงจันทร์สีแดง"
+			    },
+			    d: 53.8
+			},
+			{
+			    t: "Hey, can you keep your eyes on me",
+			    tr: {
+			        ja: "ほら見て私を",
+			        zh: "看着我啊",
+                    ko: "자 날 바라봐줘",
+                    ru: "Ну же посмотри на меня",
+                    vi: "Nào hãy nhìn tôi đi",
+                    th: "นี่ มองฉันสิ"
+			    },
+			    d: 59.2
+			},
+			{
+			    t: "And make it everything you see",
+			    tr: {
+			        ja: "目を逸らさないで",
+			        zh: "别将视线从我身上移开",
+                    ko: "눈을 돌리지 말아 줘",
+                    ru: "не отводи взгляд",
+                    vi: "Đừng rời mắt khỏi tôi",
+                    th: "อย่าละสายตาไปจากฉัน"
+			    },
+			    d: 64.6
+			},
+			{
+			    t: "Behind these bars behind this world of iron",
+			    tr: {
+			        ja: "黒い鉄格子の中で",
+			        zh: "在黑色的铁栅栏中",
+                    ko: "검은 쇠창살 속에서",
+                    ru: "За чёрной железной решёткой",
+                    vi: "Bên trong song sắt đen",
+                    th: "ภายในลูกกรงเหล็กสีดำ"
+			    },
+			    d: 70.5
+			},
+			{
+			    t: "My soul was born and now at last it's my turn",
+			    tr: {
+			        ja: "私は生まれてきたんだ",
+			        zh: "我诞生了",
+                    ko: "나는 태어난 거야",
+                    ru: "Ведь я родилась",
+                    vi: "Tôi đã được sinh ra",
+                    th: "ฉันได้ถือกำเนิดมาแล้ว"
+			    },
+			    d: 73.1
+			},
+			{
+			    t: "So in exchange for my complete revenge",
+			    tr: {
+			        ja: "悪意の代償を願え",
+			        zh: "祈求恶意的代价",
+                    ko: "악의의 대가를 바라고",
+                    ru: "Желай расплаты за зло",
+                    vi: "Hãy mong cho cái ác phải trả giá",
+                    th: "จงปรารถนาให้ความชั่วร้ายต้องชดใช้"
+			    },
+			    d: 75.7
+			},
+			{
+			    t: "I'll grant you any wish spoken from your lips",
+			    tr: {
+			        ja: "望むがままにお前に",
+			        zh: "随你所愿",
+                    ko: "원하는 대로 너에게",
+                    ru: "Тебе — всё как я пожелаю",
+                    vi: "Theo đúng những gì ta mong muốn dành cho ngươi",
+                    th: "แด่เจ้า ตามที่ปรารถนา"
+			    },
+			    d: 78.3
+			},
+			{
+			    t: "We'll bring forth the mercy and the justice",
+			    tr: {
+			        ja: "さぁ与えよう正義を",
+			        zh: "来吧 让我赐予你正义",
+                    ko: "자 정의를 부여하자",
+                    ru: "Дарую тебе справедливость",
+                    vi: "Nào ta sẽ ban tặng công lý",
+                    th: "มาเถิด ข้าจะมอบความยุติธรรมให้"
+			    },
+			    d: 81.2
+			},
+			{
+			    t: "Destroy them all before they even touch us",
+			    tr: {
+			        ja: "壊して壊される前に",
+			        zh: "在被摧毀之前先摧毀一切",
+                    ko: "부숴버려 부서지기 전에",
+                    ru: "Разрушь прежде чем разрушат тебя",
+                    vi: "Hãy phá hủy trước khi bị phá hủy",
+                    th: "จงทำลายเสีย ก่อนที่จะถูกทำลาย"
+			    },
+			    d: 83.8
+			},
+			{
+			    t: "We'll pay the price a karma paradise",
+			    tr: {
+			        ja: "因果の代償を払い",
+			        zh: "偿还因果的代价",
+                    ko: "인과의 대가를 지불하고",
+                    ru: "Заплатив цену за карму",
+                    vi: "Trả giá cho nghiệp quả",
+                    th: "ชดใช้ผลแห่งกรรม"
+			    },
+			    d: 86.4
+			},
+			{
+			    t: "And walk ahead as one becoming, We've done",
+			    tr: {
+			        ja: "共に行こう 名もなき怪物",
+			        zh: "一起前行吧 没有名字的怪物",
+                    ko: "함께 나아가자 이름 없는 괴물이여",
+                    ru: "Пойдём вместе безымянное чудовище",
+                    vi: "Hãy cùng đi hỡi quái vật vô danh",
+                    th: "ไปด้วยกันเถอะ เจ้าสัตว์ประหลาดไร้นาม"
+			    },
+			    d: 89.0
+			},
+			{
+			    t: "Let the rain continue falling on this",
+			    tr: {
+			        ja: "黒い雨 降らせこの空",
+			        zh: "让黑雨降临这片天空",
+                    ko: "검은 빗줄기를 내려라 하늘이여",
+                    ru: "Пусть чёрный дождь прольётся с этого неба",
+                    vi: "Hãy trút cơn mưa đen xuống bầu trời này",
+                    th: "จงทำให้ฝนสีดำโปรยปรายลงมาจากฟากฟ้านี้"
+			    },
+			    d: 91.8
+			},
+			{
+			    t: "Unwanted soul in case you haven't noticed",
+			    tr: {
+			        ja: "私は望まれないもの",
+			        zh: "我是个不被期望的存在",
+                    ko: "나는 버림받은 존재",
+                    ru: "Я — нежеланное существо",
+                    vi: "Tôi là một tồn tại không được mong đợi",
+                    th: "ฉันคือสิ่งมีชีวิตที่ไม่มีใครปรารถนา"
+			    },
+			    d: 94.5
+			},
+			{
+			    t: "The guilty sin of my neurotic mind",
+			    tr: {
+			        ja: "ひび割れたノイローゼ",
+			        zh: "破碎支离的神经官能症",
+                    ko: "금이 가버린 노이로제",
+                    ru: "Потрескавшийся невроз",
+                    vi: "Chứng loạn thần kinh rạn vỡ",
+                    th: "โรคประสาทที่แตกร้าว"
+			    },
+			    d: 97.4
+			},
+			{
+			    t: "I share it with the strangers passing me by",
+			    tr: {
+			        ja: "愛す同罪の傍観者達に",
+			        zh: "与爱同罪的旁观者们",
+                    ko: "같은 죄를 지은 사랑하는 방관자들에게",
+                    ru: "Любящим наблюдателям разделяющим ту же вину",
+                    vi: "Gửi đến những kẻ bàng quan yêu thương cùng chung tội lỗi",
+                    th: "แด่เหล่าผู้เฝ้ามอง ผู้มีความผิดร่วมกันในความรัก"
+			    },
+			    d: 99.3
+			},
+			{
+			    t: "So bring forth the mercy and the justice",
+			    tr: {
+			        ja: "さぁ今震え正義を",
+			        zh: "来吧 现在让正义颤抖",
+                    ko: "자 지금 휘둘러 정의를",
+                    ru: "Взмахни же справедливостью",
+                    vi: "Nào hãy vung công lý lên",
+                    th: "มาเถิด จงกวัดแกว่งความยุติธรรม"
+			    },
+			    d: 102.8
+			},
+			{
+			    t: "Embrace these scars I know will never vanish",
+			    tr: {
+			        ja: "消せない傷を抱きしめて",
+			        zh: "拥抱无法抹去的伤痕",
+                    ko: "지울 수 없는 상처를 끌어안고서",
+                    ru: "Обнимая неизгладимые раны",
+                    vi: "Ôm lấy những vết thương không thể xóa nhòa",
+                    th: "โอบกอดบาดแผลที่ไม่อาจลบเลือน"
+			    },
+			    d: 105.3
+			},
+			{
+			    t: "My whole body accepting all of me",
+			    tr: {
+			        ja: "この身体を受け入れ",
+			        zh: "接受这个身躯",
+                    ko: "이 육체를 받아들이고",
+                    ru: "Приняв это тело",
+                    vi: "Đón nhận thân thể này",
+                    th: "ยอมรับร่างกายนี้"
+			    },
+			    d: 107.9
+			},
+			{
+			    t: "We'll walk ahead as one becoming a monster",
+			    tr: {
+			        ja: "共に行こう 名前のない怪物",
+			        zh: "一起前行吧 没有名字的怪物",
+                    ko: "함께 나아가자 이름 없는 괴물이여",
+			        ru: "Пойдём вместе безымянное чудовище",
+                    vi: "Hãy cùng đi hỡi quái vật vô danh",
+                    th: "ไปด้วยกันเถอะ เจ้าสัตว์ประหลาดไร้นาม"
+			    },
+			    d: 110.4
+			}
+		]
+	}
 };
 
 const lyricEnv = {
@@ -1306,6 +1638,7 @@ function MergeObj() {
 		const src = arguments[i];
 		if (!src)
 			continue;
+
 		for (const k in src) out[k] = src[k];
 	}
 	return out;
@@ -1314,6 +1647,7 @@ function MergeObj() {
 function SetClassRec(l, panelId, env, key, next) {
 	if (env[key] === next)
 		return;
+
 	SwapClass(l, panelId, env[key], next);
 	env[key] = next;
 }
@@ -1375,10 +1709,19 @@ function ParseLyric(text) {
 			const kana = ReadKana(body, end);
 
 			if (kana) {
-				const split = SplitReading(kana.read, run.length);
-				for (let k = 0; k < run.length; k++) cells.push({ c: run.charAt(k), r: split[k] });
-				i = kana.next;
-				continue;
+			    if (
+			        (run === "身体" && kana.read === "からだ") ||
+			        (run === "上手" && kana.read === "うま")
+			    ) {
+			        cells.push({ c: run, r: kana.read, wide: true });
+			    } else {
+			        const split = SplitReading(kana.read, run.length);
+			        for (let k = 0; k < run.length; k++)
+			            cells.push({ c: run.charAt(k), r: split[k] });
+			    }
+			
+			    i = kana.next;
+			    continue;
 			}
 
 			for (let k = 0; k < run.length; k++) cells.push({ c: run.charAt(k), r: "" });
@@ -1453,11 +1796,20 @@ function SetPlayerLyricTranslation(playerSlot, language) {
 	const translations = activeLyricLine.tr || {};
 	let translation = "";
 
-	if (language !== "ja") {
-		translation = translations[language];
+	const originalLanguage = activeLyricLine.translationMode;
 
-		if (typeof translation !== "string" || !translation.length)
-			translation = translations.en || "";
+	if (originalLanguage === "ja" || originalLanguage === "en") {
+	    if (language !== originalLanguage) {
+	        translation = translations[language] || "";
+
+	        if (!translation.length)
+	            translation = translations.en || "";
+	    }
+	} else if (language !== "ja") {
+	    translation = translations[language];
+
+	    if (typeof translation !== "string" || !translation.length)
+	        translation = translations.en || "";
 	}
 
 	l.SetDialogVariableStringForPlayer(
@@ -1516,7 +1868,8 @@ function ClearAllPlayerLyricTranslations() {
 
 function ShowLyric(src) {
 	const l = GetLayout(true);
-	if (!l) return null;
+	if (!l)
+		return null;
 
 	src = src || {};
 	activeLyricLine = src;
@@ -1550,7 +1903,6 @@ function ShowLyric(src) {
 
 	const capPx = Math.max(RUBY_MIN_PX, Math.min(RUBY_MAX_PX, Math.floor((cfg.size * cfg.ruby) / 100)));
 	const gapCls = RubyGapClass(RubyGapPx(cfg.size, cfg.gap));
-	const cellWCls = RubyCellWidthClass(cfg.size);
 
 	l.SetDialogVariableString(LYRIC_TOP_ID, VAR_TEXT, top);
 
@@ -1563,11 +1915,20 @@ function ShowLyric(src) {
 		l.SetDialogVariableString(LyricBaseId(i), VAR_CHAR, ch);
 		l.SetDialogVariableString(LyricRubyId(i), VAR_RUBY, read);
 
-		const pct = read ? RubyScalePct(cfg.size, capPx, read.length) : 100;
+		const rubyWidth = cell && cell.wide
+    		? cfg.size * 2
+    		: cfg.size;
+
+		const pct = read
+    		? RubyScalePct(rubyWidth, capPx, read.length)
+    		: 100;
 
 		SetClassRec(l, LyricRubyId(i), e, "font", read ? RubyFontClass(capPx) : null);
 		SetClassRec(l, LyricRubyId(i), e, "scale", read && pct < 100 ? RubyScaleClass(pct) : null);
 		SetClassRec(l, LyricRubyId(i), e, "gap", read ? gapCls : null);
+		const cellWidth = cell && cell.wide ? cfg.size * 2 : cfg.size;
+		const cellWCls = RubyCellWidthClass(cellWidth);
+
 		SetClassRec(l, LyricCellId(i), e, "w", ch ? cellWCls : null);
 		SetClassRec(l, LyricCellId(i), e, "gone", ch ? null : LYRIC_GONE_CLASS);
 
@@ -1588,7 +1949,8 @@ function ShowLyric(src) {
 			return;
 
 		const l2 = GetLayout(true);
-		if (!l2) return;
+		if (!l2)
+			return;
 
 		SetClassRec(l2, LYRIC_BOX_ID, lyricEnv, "inCls", null);
 		SetClassRec(l2, LYRIC_BOX_ID, lyricEnv, "outCls", OutClass(cfg.fadeOutMs));
@@ -1612,7 +1974,8 @@ function ClearLyric(instant) {
 	ClearAllPlayerLyricTranslations();
 
 	const l = GetLayout(true);
-	if (!l) return;
+	if (!l)
+		return;
 
 	lyricEnv.gen++;
 	lyricEnv.busy = false;
@@ -1653,7 +2016,7 @@ function PlayLyrics(name) {
 		return false;
 	}
 
-	StopLyrics(false);
+	StopLyrics(true);
 
 	const gen = lyricPlayGen;
 	const lines = set.lines || [];
@@ -1676,10 +2039,12 @@ function PlayLyrics(name) {
 			const hold = Math.max(0, next - at - fadeIn - fadeOut);
 
 			ShowLyric(MergeObj(style, line, {
-				fadeIn: fadeIn,
-				fadeOut: fadeOut,
-				hold: hold,
-				text: line.t
+			    fadeIn: fadeIn,
+			    fadeOut: fadeOut,
+			    hold: hold,
+			    text: line.t,
+			    translationMode: key === "JP" ? "ja" :
+			                     key === "EN" ? "en" : undefined
 			}));
 		});
 	}
@@ -1693,7 +2058,8 @@ const playerLanguages = {};
 
 function ClearPlayerLanguageOverride(playerSlot) {
 	const l = GetLayout(true);
-	if (!l) return;
+	if (!l)
+		return;
 
 	for (const slot of slots) {
 		l.SetDialogVariableStringForPlayer(playerSlot, slot.label, VAR_TEXT, undefined);
@@ -1722,14 +2088,16 @@ function ApplyLocalizedTextForPlayer(l, slot, playerSlot, def, language) {
 
 function RefreshPlayerLocalizedMessages(playerSlot, language) {
 	const l = GetLayout(true);
-	if (!l) return;
+	if (!l)
+		return;
 
 	for (const slot of slots) {
 		if (slot.state !== "busy" || !slot.messageKey)
 			continue;
 
 		const def = MESSAGES[slot.messageKey];
-		if (!def) continue;
+		if (!def)
+			continue;
 
 		ApplyLocalizedTextForPlayer(l, slot, playerSlot, def, language);
 	}
@@ -1737,18 +2105,22 @@ function RefreshPlayerLocalizedMessages(playerSlot, language) {
 
 function ShowLocalizedMessage(key) {
 	const def = MESSAGES[key];
-	if (!def) return null;
+	if (!def)
+		return null;
 
 	const slot = ShowGameText({
 		...def,
 		text: typeof def.en === "string" ? def.en : (def.text || ""),
 		font: FONT.STRATUM_MONO_BOLD
 	});
-	if (!slot) return null;
+	if (!slot)
+		return null;
+
 	slot.messageKey = key;
 
 	const l = GetLayout(true);
-	if (!l) return slot;
+	if (!l)
+		return slot;
 
 	for (const player of Instance.GetAllPlayerControllers()) {
 		if (!player || !player.IsConnected())
@@ -1762,14 +2134,281 @@ function ShowLocalizedMessage(key) {
 	return slot;
 }
 
+const damageByPlayerSlot = Object.create(null);
+const damageHudFlashColors = Object.create(null);
+const damageHudFlashTokens = Object.create(null);
+let damageHudReady = false;
+
+const DAMAGE_HUD_DEFAULT_COLOR_CLASS = "gt-damage-default";
+const DAMAGE_HUD_FLASH_COLORS = [
+	"#FF4040",
+	"#F04B66",
+	"#D75D8B",
+	"#B66EAD",
+	"#9680CE",
+	"#7ACCFF",
+];
+const DAMAGE_HUD_FLASH_CLASSES = [
+	"gt-damage-flash-0",
+	"gt-damage-flash-1",
+	"gt-damage-flash-2",
+	"gt-damage-flash-3",
+	"gt-damage-flash-4",
+	"gt-damage-flash-5",
+];
+const damageHudPlayerColorClasses = Object.create(null);
+
+function ClearDamageHudPlayerColor(playerSlot) {
+	const l = GetLayout(true);
+	if (!l)
+		return;
+
+	const classes = [
+		DAMAGE_HUD_DEFAULT_COLOR_CLASS,
+		...DAMAGE_HUD_FLASH_CLASSES,
+	];
+
+	for (const className of classes)
+		l.SetHasClassForPlayer(playerSlot, DAMAGE_HUD_PANEL, className);
+
+	delete damageHudPlayerColorClasses[playerSlot];
+}
+
+function ApplyDamageHudColor(l, playerSlot) {
+	const oldClass = damageHudPlayerColorClasses[playerSlot];
+	const flashColor = damageHudFlashColors[playerSlot];
+	let newClass = DAMAGE_HUD_DEFAULT_COLOR_CLASS;
+
+	if (flashColor) {
+		const index = DAMAGE_HUD_FLASH_COLORS.indexOf(flashColor);
+		if (index !== -1)
+			newClass = DAMAGE_HUD_FLASH_CLASSES[index];
+	}
+
+	if (oldClass === newClass)
+		return;
+
+	if (oldClass) {
+		l.SetHasClassForPlayer(
+			playerSlot,
+			DAMAGE_HUD_PANEL,
+			oldClass,
+			false
+		);
+	}
+
+	l.SetHasClassForPlayer(
+		playerSlot,
+		DAMAGE_HUD_PANEL,
+		newClass,
+		true
+	);
+
+	damageHudPlayerColorClasses[playerSlot] = newClass;
+}
+
+function ClearDamageHudFlash(playerSlot) {
+	damageHudFlashTokens[playerSlot] = (damageHudFlashTokens[playerSlot] || 0) + 1;
+	delete damageHudFlashColors[playerSlot];
+}
+
+function StartDamageHudFlash(playerSlot) {
+	const token = (damageHudFlashTokens[playerSlot] || 0) + 1;
+	damageHudFlashTokens[playerSlot] = token;
+	damageHudFlashColors[playerSlot] = DAMAGE_HUD_FLASH_COLORS[0];
+	UpdateDamageHud();
+
+	for (let i = 1; i < DAMAGE_HUD_FLASH_COLORS.length; i++) {
+		Instance.Delay(i * 0.07).then(() => {
+			if (damageHudFlashTokens[playerSlot] !== token)
+				return;
+
+			damageHudFlashColors[playerSlot] = DAMAGE_HUD_FLASH_COLORS[i];
+
+			if (i === DAMAGE_HUD_FLASH_COLORS.length - 1)
+				delete damageHudFlashColors[playerSlot];
+
+			UpdateDamageHud();
+		});
+	}
+}
+
+function GetDamageAttackerController(attacker) {
+	if (!attacker || !attacker.IsValid())
+		return null;
+
+	let controller = null;
+
+	if (typeof attacker.GetOriginalPlayerController === "function")
+		controller = attacker.GetOriginalPlayerController();
+	else if (typeof attacker.GetPlayerController === "function")
+		controller = attacker.GetPlayerController();
+	else if (typeof attacker.GetPlayerSlot === "function")
+		controller = attacker;
+
+	if (!controller || !controller.IsValid || !controller.IsValid())
+		return null;
+
+	return controller;
+}
+
+function GetConnectedCTPlayers() {
+	const result = [];
+
+	for (const controller of Instance.GetAllPlayerControllers()) {
+		if (!controller || !controller.IsValid() || !controller.IsConnected())
+			continue;
+		if (controller.GetTeamNumber() !== TEAM_CT)
+			continue;
+
+		result.push({
+			controller: controller,
+			slot: controller.GetPlayerSlot(),
+			damage: damageByPlayerSlot[controller.GetPlayerSlot()] || 0,
+		});
+	}
+
+	return result;
+}
+
+function SetupDamageHud() {
+	const l = GetLayout(true);
+	if (!l)
+		return false;
+
+	const slot = slots[1];
+	ApplyPos(l, slot, XClass(DAMAGE_HUD_X), YClass(DAMAGE_HUD_Y));
+	ApplyText(
+		l,
+		slot,
+		SizeClass(DAMAGE_HUD_SIZE),
+		RgbClass(COLOR.WHITE),
+		BrightClass(SnapBrightness(DAMAGE_HUD_BRIGHTNESS)),
+		FONT.STRATUM_MONO_BOLD,
+		true
+	);
+	ApplyFade(l, slot, "gt-in50", null);
+	l.SetHasClass(DAMAGE_HUD_PANEL, DAMAGE_HUD_DEFAULT_COLOR_CLASS, true);
+	l.SetDialogVariableString(DAMAGE_HUD_PANEL, VAR_TEXT, "");
+
+	damageHudReady = true;
+	return true;
+}
+
+function UpdateDamageHud() {
+	const l = GetLayout(true);
+	if (!l)
+		return;
+
+	if (!damageHudReady && !SetupDamageHud())
+		return;
+
+	const ctPlayers = GetConnectedCTPlayers();
+	const total = ctPlayers.length;
+
+	for (const player of Instance.GetAllPlayerControllers()) {
+		if (!player || !player.IsValid() || !player.IsConnected())
+			continue;
+
+		const playerSlot = player.GetPlayerSlot();
+
+		ApplyDamageHudColor(l, playerSlot);
+
+		if (player.GetTeamNumber() !== TEAM_CT) {
+			l.SetDialogVariableStringForPlayer(playerSlot, DAMAGE_HUD_PANEL, VAR_TEXT, "");
+			continue;
+		}
+
+		const ownDamage = damageByPlayerSlot[playerSlot] || 0;
+		let rank = total;
+
+		if (ownDamage > 0) {
+		    rank = 1;
+		
+		    for (const other of ctPlayers) {
+		        if (other.damage > ownDamage)
+		            rank++;
+		    }
+		}
+
+		const lang = playerLanguages[playerSlot] || "en";
+		const tr = DAMAGE_HUD_TEXT[lang] || DAMAGE_HUD_TEXT.en;
+
+		const text =
+			tr.damage + " : " +
+    		Math.round(ownDamage) +
+    		"\n" + tr.rank + " : " + rank + " / " + total;
+
+		l.SetDialogVariableStringForPlayer(playerSlot, DAMAGE_HUD_PANEL, VAR_TEXT, text);
+	}
+}
+
+function ResetDamageStats() {
+	for (const key in damageByPlayerSlot)
+		delete damageByPlayerSlot[key];
+	for (const key in damageHudFlashTokens)
+		ClearDamageHudFlash(key);
+	UpdateDamageHud();
+}
+
+Instance.OnPlayerDamage((event) => {
+	if (!event || !event.player || !event.player.IsValid())
+		return;
+
+	if (event.player.GetTeamNumber() !== TEAM_T)
+		return;
+
+	const damage = Number(event.damage);
+	if (!Number.isFinite(damage) || damage <= 0)
+		return;
+
+	const attacker = GetDamageAttackerController(event.attacker);
+	if (!attacker || !attacker.IsConnected() || attacker.GetTeamNumber() !== TEAM_CT)
+		return;
+
+	const playerSlot = attacker.GetPlayerSlot();
+	damageByPlayerSlot[playerSlot] = (damageByPlayerSlot[playerSlot] || 0) + damage;
+	StartDamageHudFlash(playerSlot);
+});
+
+Instance.OnPlayerTeamChanged((event) => {
+	if (event && event.player && event.player.IsValid() &&
+		event.player.GetTeamNumber() !== TEAM_CT) {
+		const controller = event.player.GetOriginalPlayerController();
+		if (controller && controller.IsValid()) {
+			const playerSlot = controller.GetPlayerSlot();
+			delete damageByPlayerSlot[playerSlot];
+			ClearDamageHudFlash(playerSlot);
+		}
+	}
+	Instance.Delay(0.01).then(() => UpdateDamageHud());
+});
+
+Instance.OnPlayerDisconnect((event) => {
+	if (event && event.playerSlot !== undefined) {
+		delete damageByPlayerSlot[event.playerSlot];
+		ClearDamageHudFlash(event.playerSlot);
+		ClearDamageHudPlayerColor(event.playerSlot);
+	}
+	Instance.Delay(0.01).then(() => UpdateDamageHud());
+});
+
+Instance.Delay(0.1).then(() => UpdateDamageHud());
+
 Instance.OnPlayerConnect((event) => {
 	const playerSlot = event.player.GetPlayerSlot();
+	ClearDamageHudFlash(playerSlot);
+	ClearDamageHudPlayerColor(playerSlot);
+	delete damageByPlayerSlot[playerSlot];
 	delete playerLanguages[playerSlot];
 	ClearPlayerLanguageOverride(playerSlot);
 	ClearPlayerLyricTranslation(playerSlot);
+	RefreshPlayerLocalizedMessages(playerSlot, "en");
 
 	if (activeLyricLine)
 		RefreshPlayerLyricTranslation(playerSlot, "en");
+	
+	Instance.Delay(0.1).then(() => UpdateDamageHud());
 });
 
 Instance.OnPlayerDisconnect((event) => {
@@ -1816,6 +2455,7 @@ Instance.OnPlayerChat((event) => {
 	playerLanguages[playerSlot] = language;
 	RefreshPlayerLocalizedMessages(playerSlot, language);
 	RefreshPlayerLyricTranslation(playerSlot, language);
+	UpdateDamageHud();
 });
 
 for (const key in MESSAGES) {
@@ -1865,21 +2505,34 @@ for (const cname in COLOR) {
 	Instance.OnScriptInput(input, () => SetGlobalColor(key));
 }
 
-GameText.hud_reset = () => ResetHud();
+GameText.hud_reset = () => {
+    ResetHud();
+    ResetDamageStats();
+};
+
+Instance.OnScriptInput("hud_reset", () => {
+    ResetHud();
+    ResetDamageStats();
+});
+
 Instance.OnRoundStart(() => {
     ResetHud();
+    ResetDamageStats();
 });
 
 Instance.OnScriptReload({
 	before: () => {
+		damageHudReady = false;
 		const l = GetLayout(true);
-		if (!l) return;
-		
+		if (!l)
+			return;
+
 		for (const slot of slots) ResetSlot(l, slot);
 		ResetCountdown(l);
 		StopLyrics(true);
 	},
 	after: () => {
 		TryStartup(0);
+		Instance.Delay(0.1).then(() => UpdateDamageHud());
 	},
 });

@@ -4977,3 +4977,27 @@ to {
     text-overflow: shrink;
     margin-top: 5px;
 }
+.gt-damage-align {
+    text-align: left;
+}
+.gt-damage-default {
+    color: #ffffffff;
+}
+.gt-damage-flash-0 {
+    color: #ff4040ff;
+}
+.gt-damage-flash-1 {
+    color: #f04b66ff;
+}
+.gt-damage-flash-2 {
+    color: #d75d8bff;
+}
+.gt-damage-flash-3 {
+    color: #b66eadff;
+}
+.gt-damage-flash-4 {
+    color: #9680ceff;
+}
+.gt-damage-flash-5 {
+    color: #7accffff;
+}

@@ -10,7 +10,7 @@
             <Label id="g0" class="gt-text" text="{s:gt_text}" />
         </Panel>
         <Panel id="w1" class="gt-pos">
-            <Label id="g1" class="gt-text" text="{s:gt_text}" />
+            <Label id="g1" class="gt-text gt-damage-align" text="{s:gt_text}" />
         </Panel>
         <Panel id="cd_wrap" class="gt-pos">
             <Panel id="cd_row" class="gt-cd-row">

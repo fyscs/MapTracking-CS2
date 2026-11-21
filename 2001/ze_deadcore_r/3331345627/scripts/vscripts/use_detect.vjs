@@ -2,7 +2,7 @@
 // https://github.com/Kxnrl
 
 
-import { Instance, CSPlayerPawn, CSInputs, Entity, Entities } from "cs_script/point_script";
+import { Instance, CSInputs, Entities } from "cs_script/point_script";
 
 const itemButtonName = [
     "cannon1_button", 
@@ -27,7 +27,7 @@ Instance.SetThink(() => {
 });
 
 function CheckPressingButton(button) {
-    const player = /** @type {CSPlayerPawn|undefined} */ (button.GetParent()?.GetOwner());
+    const player = (button.GetParent()?.GetOwner());
     if (!player || !player.IsValid()) return;
     if (player.WasInputJustPressed(CSInputs.USE)) {
         button.FireInput({
