@@ -16064,6 +16064,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]map_emoji",
+        "input": "RunScriptInput",
+        "param": "enable",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -28929,6 +28937,14 @@
         "param": "",
         "delay": 44,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]map_emoji",
+        "input": "RunScriptInput",
+        "param": "disable",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -29127,6 +29143,14 @@
         "input": "Kill",
         "param": "",
         "delay": 30,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]map_emoji",
+        "input": "RunScriptInput",
+        "param": "disable",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -80008,6 +80032,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]map_emoji",
+        "input": "RunScriptInput",
+        "param": "disable",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -80347,6 +80379,14 @@
         "target": "[PR#]temp_end_block_zombie",
         "input": "ForceSpawn",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]map_emoji",
+        "input": "RunScriptInput",
+        "param": "disable",
         "delay": 0,
         "limit": -1
       }
@@ -93461,6 +93501,30 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnPlayerOutZone",
+        "target": "[PR#]filter_moran",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPlayerOutZone",
+        "target": "[PR#]filter_6o6",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPlayerOutZone",
+        "target": "[PR#]filter_cianyin",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 0,
+        "limit": -1
       }
     ]
   },
@@ -93560,7 +93624,7 @@
         "output": "OnPass",
         "target": "[PR#]chat",
         "input": "RunScriptInput",
-        "param": "Vip",
+        "param": "SVip",
         "delay": 0,
         "limit": -1
       }
@@ -93586,7 +93650,7 @@
         "output": "OnPass",
         "target": "[PR#]chat",
         "input": "RunScriptInput",
-        "param": "Vip",
+        "param": "SVip",
         "delay": 0,
         "limit": -1
       }
@@ -94281,8 +94345,11 @@
     "hammerUniqueId": "28485"
   },
   {
+    "IsMaster": "0",
+    "PawnSubclass": "",
     "clothScale": "1.000000",
     "steamaudio_geometry_mode": "0",
+    "StartDisabled": "0",
     "forcenpcexclude": "0",
     "CreateNavObstacle": "0",
     "lightingorigin": "",
@@ -94326,6 +94393,7 @@
     "ExplodeRadius": "0.000000",
     "ExplodeDamage": "0.000000",
     "damagefilter": "",
+    "vscripts": "",
     "animgraph2_identifier": "worldmodel",
     "add_modifier": "",
     "add_attribute": "",
@@ -94333,7 +94401,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "models/lily/lily.vmdl",
+    "model": "models/wuwa_lily/wuwa_lily.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -94342,15 +94410,211 @@
     "useLocalOffset": "0",
     "parentAttachmentName": "",
     "parentname": "",
-    "PawnSubclass": "",
-    "IsMaster": "0",
-    "StartDisabled": "0",
-    "targetname": "[PR#]wuwa_lily",
-    "vscripts": "",
+    "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-405.000000 -481.000000 283.000000",
+    "origin": "-410.000000 -481.000000 283.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "28486"
+    "hammerUniqueId": "28487"
+  },
+  {
+    "note": "\u5343\u97F3\u661F\u7483",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "filterattribute": "76561198207277937",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "targetname": "[PR#]filter_cianyin",
+    "classname": "filter_activator_attribute_int",
+    "origin": "-42.000000 -184.000000 296.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "28488",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "keyvalue",
+        "param": "origin -423 -372 278",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "note": "moran",
+    "filterattribute": "76561198258687176",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "targetname": "[PR#]filter_moran",
+    "classname": "filter_activator_attribute_int",
+    "origin": "-105.000000 -220.000000 296.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "28489",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]chat",
+        "input": "RunScriptInput",
+        "param": "Vip",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "note": "6o6",
+    "filterattribute": "76561199397278296",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "targetname": "[PR#]filter_6o6",
+    "classname": "filter_activator_attribute_int",
+    "origin": "-87.000000 -220.000000 296.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "28490",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]chat",
+        "input": "RunScriptInput",
+        "param": "Vip",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "cs_script": "scripts/yan/yarn_mount.vjs",
+    "targetname": "",
+    "classname": "point_script",
+    "origin": "11294.000000 13766.000000 -16099.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "28495"
+  },
+  {
+    "Template64": "",
+    "Template63": "",
+    "Template62": "",
+    "Template61": "",
+    "Template60": "",
+    "Template59": "",
+    "Template58": "",
+    "Template57": "",
+    "Template56": "",
+    "Template55": "",
+    "Template54": "",
+    "Template53": "",
+    "Template52": "",
+    "Template51": "",
+    "Template50": "",
+    "Template49": "",
+    "Template48": "",
+    "Template47": "",
+    "Template46": "",
+    "Template45": "",
+    "Template44": "",
+    "Template43": "",
+    "Template42": "",
+    "Template41": "",
+    "Template40": "",
+    "Template39": "",
+    "Template38": "",
+    "Template37": "",
+    "Template36": "",
+    "Template35": "",
+    "Template34": "",
+    "Template33": "",
+    "Template32": "",
+    "Template31": "",
+    "Template30": "",
+    "Template29": "",
+    "Template28": "",
+    "Template27": "",
+    "Template26": "",
+    "Template25": "",
+    "Template24": "",
+    "Template23": "",
+    "Template22": "",
+    "Template21": "",
+    "Template20": "",
+    "Template19": "",
+    "Template18": "",
+    "Template17": "",
+    "Template16": "",
+    "Template15": "",
+    "Template14": "",
+    "Template13": "",
+    "Template12": "",
+    "Template11": "",
+    "Template10": "",
+    "Template09": "",
+    "Template08": "",
+    "Template07": "",
+    "Template06": "[PR#]yarn_sheep",
+    "Template05": "[PR#]yan_once",
+    "Template04": "[PR#]yan_knife",
+    "Template03": "[PR#]yan_filter_multi",
+    "Template02": "[PR#]yan_multiple",
+    "Template01": "",
+    "clientOnlyEntityBehavior": "CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY",
+    "spawnGroupType": "INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP",
+    "entityFilterName": "",
+    "timeoutInterval": "0.000000",
+    "asynchronous": "0",
+    "spawnflags": "2",
+    "clientSideEntity": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "targetname": "[PR#]temp_yan",
+    "vscripts": "",
+    "classname": "point_template",
+    "origin": "11293.000000 13704.000000 -16061.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "28504",
+    "worldName": "maps\\ze_neron",
+    "entityLumpName": "28504#entityLumpName"
+  },
+  {
+    "PostSpawnInheritAngles": "0",
+    "PostSpawnDirectionVariance": "0.150000",
+    "PostSpawnDirection": "0.000000 0.000000 0.000000",
+    "PostSpawnSpeed": "0.000000",
+    "EntityTemplate": "[PR#]temp_yan",
+    "spawnflags": "0",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "vscripts": "",
+    "targetname": "[PR#]map_maker_yan",
+    "classname": "env_entity_maker",
+    "origin": "11293.000000 13704.000000 -16061.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "28505",
+    "connections": [
+      {
+        "output": "OnEntitySpawned",
+        "target": "[PR#]yan_once",
+        "input": "Enable",
+        "param": "",
+        "delay": 3,
+        "limit": -1
+      }
+    ]
   }
 ]

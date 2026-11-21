@@ -45,6 +45,7 @@ const EMOJIS = {
 let cooldownLeft = 0;   // 剩餘冷卻秒數，0 = 可以使用
 let generation = 0;     // 回合重置時 +1，讓舊的計時器失效
 let showRequestId = 0;  // 讓舊的「隱藏圖片」計時器失效
+let enabled = true;     // 發送圖片功能總開關 (ent_fire map_emoji RunScriptInput enable / disable / toggle)
 
 function getHud() {
     return Instance.FindEntityByName(HUD_ENTITY_NAME);
@@ -94,9 +95,15 @@ async function runCooldown(startGeneration) {
     }
 }
 
-async function useEmoji(panelId) {
+// noCooldown = true：不檢查、也不觸發冷卻 (admin 用)
+async function useEmoji(panelId, noCooldown = false) {
+    // 功能關閉 -> 拒絕
+    if (!enabled) {
+        Console.ServerCommand(`say "Emoji is disabled"`);
+        return;
+    }
     // 冷卻中 -> 拒絕
-    if (cooldownLeft > 0) {
+    if (!noCooldown && cooldownLeft > 0) {
         Console.ServerCommand(`say "Emoji is on cooldown (${cooldownLeft}s left)"`);
         return;
     }
@@ -113,9 +120,11 @@ async function useEmoji(panelId) {
     if (GIF_CONFIG[panelId])
         void playGif(panelId, startGeneration, requestId);
 
-    // 進入冷卻
-    cooldownLeft = COOLDOWN_SEC;
-    void runCooldown(startGeneration);
+    // 進入冷卻 (admin 不觸發冷卻，也不影響 svip / vip 的冷卻)
+    if (!noCooldown) {
+        cooldownLeft = COOLDOWN_SEC;
+        void runCooldown(startGeneration);
+    }
 
     // 顯示一段時間後隱藏
     await Instance.Delay(SHOW_SEC_BY_PANEL[panelId] ?? SHOW_SEC);
@@ -126,11 +135,28 @@ async function useEmoji(panelId) {
 }
 
 // ===================== 指令 =====================
+//   use1 ~ use9 / usegif1 ...            -> 有 20 秒共用冷卻 (svip / vip)
+//   use1_nocd ~ use9_nocd / usegif1_nocd -> 沒有冷卻 (admin)
 for (const [inputName, panelId] of Object.entries(EMOJIS)) {
     Instance.OnScriptInput(inputName, () => {
         void useEmoji(panelId);
     });
+    Instance.OnScriptInput(`${inputName}_nocd`, () => {
+        void useEmoji(panelId, true);
+    });
 }
+
+// 總開關 (控制台)：
+//   ent_fire map_emoji RunScriptInput enable
+//   ent_fire map_emoji RunScriptInput disable
+//   ent_fire map_emoji RunScriptInput toggle
+function setEnabled(on) {
+    enabled = on;
+    if (!on) hideAll();
+}
+Instance.OnScriptInput('enable', () => setEnabled(true));
+Instance.OnScriptInput('disable', () => setEnabled(false));
+Instance.OnScriptInput('toggle', () => setEnabled(!enabled));
 
 // 新回合：隱藏圖片並重置冷卻
 Instance.OnRoundStart(() => {

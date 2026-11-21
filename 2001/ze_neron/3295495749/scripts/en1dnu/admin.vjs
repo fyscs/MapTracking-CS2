@@ -5,6 +5,7 @@ import { Instance, CSPlayerPawn } from "cs_script/point_script";
 
 const admins = new Set();
 const statsis = new Set();
+const svip = new Set();
 const vip = new Set();
 
 function findConnectedPlayerByName(name) {
@@ -20,28 +21,34 @@ function findConnectedPlayerByName(name) {
 // ===== 表情系統 (由 emoji.js 掛在 map_emoji 實體上，冷卻 20 秒由 emoji.js 控制) =====
 const EMOJI_SCRIPT_ENTITY = "map_emoji";
 
-// ===== 更换模型 (admin / vip)：聊天輸入 @更换模型lily =====
+// ===== 更换模型 (admin / svip / vip，且必須是 CT)：聊天輸入 @更换模型lily =====
 // 模型必須已在地圖中預載 (例如地圖裡放一個用此模型的 prop_dynamic)，否則會變成透明/錯誤模型
 const PLAYER_MODELS = {
-    "lily": "models/lily/lily.vmdl",
+    "lily": "models/wuwa_lily/wuwa_lily.vmdl",
 };
+const TEAM_CT = 3;   // 2 = T, 3 = CT
 
 function handleModelChat(text, pawn) {
     const m = text.trim().match(/^@更换模型\s*(\S+)$/);
     if (!m) return;
     const model = PLAYER_MODELS[m[1].toLowerCase()];
     if (!model || !pawn || !pawn.IsValid()) return;
+    if (pawn.GetTeamNumber() !== TEAM_CT) return;   // 非 CT 方不得更換
     pawn.SetModel(model);
+    // 換模型後把透明度設回完全不透明 (alpha 255)
+    Instance.EntFireAtTarget({ target: pawn, input: "Alpha", value: "255" });
 }
 
 // @表情1 ~ @表情9 -> use1 ~ use9；@gif / @gif1 -> usegif1
-function handleEmojiChat(text) {
+// noCooldown = true (admin)：送 use1_nocd 等，不受也不觸發冷卻；svip / vip 共用 emoji.js 的 20 秒冷卻
+function handleEmojiChat(text, noCooldown = false) {
     const t = text.trim();
     let input = null;
     const m = t.match(/^@表情([1-9])$/);
     if (m) input = `use${m[1]}`;
     else if (/^@gif([12])?$/i.test(t)) input = `usegif${t.match(/^@gif([12])?$/i)[1] ?? 1}`;
     if (!input) return;
+    if (noCooldown) input += "_nocd";
 
     Instance.EntFireAtName({
         name: EMOJI_SCRIPT_ENTITY,
@@ -58,6 +65,11 @@ Instance.OnScriptInput("Admin", (inputData) => {
 Instance.OnScriptInput("Statsis", (inputData) => {
     const playerController = /** @type {CSPlayerPawn|undefined} */ (inputData.activator)?.GetPlayerController();
     if (playerController && playerController.IsValid()) statsis.add(playerController);
+});
+
+Instance.OnScriptInput("SVip", (inputData) => {
+    const playerController = /** @type {CSPlayerPawn|undefined} */ (inputData.activator)?.GetPlayerController();
+    if (playerController && playerController.IsValid()) svip.add(playerController);
 });
 
 Instance.OnScriptInput("Vip", (inputData) => {
@@ -101,6 +113,21 @@ Instance.OnPlayerChat((event) => {
                         {name: "admin_health_zone",
                         input: "CountPlayersInZone"});
                     break;
+                case "@特殊道具": {
+                    const MAKER_HEIGHT = 36;   // 距離腳底的高度（玩家站高約 72，36 約在腰部）
+                    // 把 map_maker_yan 传送到输入指令的人腰部（朝向跟玩家一样），再 ForceSpawn
+                    const maker = Instance.FindEntityByName("map_maker_yan");
+                    if (maker && maker.IsValid()) {
+                        const feet = player.GetAbsOrigin();
+                        const yaw = player.GetEyeAngles().yaw;
+                        maker.Teleport({
+                            position: { x: feet.x, y: feet.y, z: feet.z + MAKER_HEIGHT },
+                            angles: { pitch: 0, yaw: yaw, roll: 0 }
+                        });
+                        Instance.EntFireAtTarget({ target: maker, input: "ForceSpawn" });
+                    }
+                    break;
+                }
                 case "@5000hp":
                     player.SetMaxHealth(5000);
                     player.SetHealth(5000);
@@ -136,6 +163,12 @@ Instance.OnPlayerChat((event) => {
                     value: "say System cptp Disable",
                     delay: 0.5
                     });
+                    break;
+                case "@emoji_off":   // 關閉發送表情包 (所有人)
+                    Instance.EntFireAtName({ name: EMOJI_SCRIPT_ENTITY, input: "RunScriptInput", value: "disable" });
+                    break;
+                case "@emoji_on":    // 開啟發送表情包
+                    Instance.EntFireAtName({ name: EMOJI_SCRIPT_ENTITY, input: "RunScriptInput", value: "enable" });
                     break;
                 case "egg":
                     Instance.EntFireAtName(
@@ -179,8 +212,8 @@ Instance.OnPlayerChat((event) => {
             }
         }
     }
-    //vip
-    if (event.player && event.player.IsValid() && vip.has(event.player)) {
+    //svip
+    if (event.player && event.player.IsValid() && svip.has(event.player)) {
         const player = event.player.GetPlayerPawn();
         const pos = Instance.FindEntityByName("kiki_pistol_maker").GetAbsOrigin();
         if (player && player.IsValid()) {
@@ -215,9 +248,9 @@ Instance.OnPlayerChat((event) => {
             }
         }
     }
-    //表情 / 更换模型：admin 與 vip 分組都可以使用 (只觸發一次，避免同時是兩組時重複觸發)
-    if (event.player && event.player.IsValid() && (admins.has(event.player) || vip.has(event.player))) {
-        handleEmojiChat(event.text);
+    //表情 / 更换模型：admin、svip、vip 分組都可以使用 (只觸發一次，避免同時屬於多組時重複觸發)
+    if (event.player && event.player.IsValid() && (admins.has(event.player) || svip.has(event.player) || vip.has(event.player))) {
+        handleEmojiChat(event.text, admins.has(event.player));   // admin 沒有冷卻
         handleModelChat(event.text, event.player.GetPlayerPawn());
     }
     //player
