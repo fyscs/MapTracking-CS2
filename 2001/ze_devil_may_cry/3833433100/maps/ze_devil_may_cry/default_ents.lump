@@ -71532,7 +71532,7 @@
         "target": "[PR#]Item_Zombie_Empusa_Hurt",
         "input": "Enable",
         "param": "",
-        "delay": 1.1399999856948853,
+        "delay": 0.5,
         "limit": -1
       },
       {
@@ -71540,7 +71540,7 @@
         "target": "[PR#]Item_Zombie_Empusa_Hurt",
         "input": "Disable",
         "param": "",
-        "delay": 1.440000057220459,
+        "delay": 0.800000011920929,
         "limit": -1
       },
       {
@@ -71572,7 +71572,7 @@
         "target": "[PR#]Item_Zombie_Empusa_Explo",
         "input": "Explode",
         "param": "",
-        "delay": 1.1399999856948853,
+        "delay": 0.5,
         "limit": -1
       },
       {
@@ -71580,7 +71580,7 @@
         "target": "[PR#]Item_Zombie_Empusa_RG",
         "input": "FireUser1",
         "param": "",
-        "delay": 1.0299999713897705,
+        "delay": 0.38999998569488525,
         "limit": -1
       }
     ]
@@ -73283,7 +73283,7 @@
         "target": "[PR#]Item_Zombie_Antenora_Hurt",
         "input": "Enable",
         "param": "",
-        "delay": 1.1699999570846558,
+        "delay": 0.699999988079071,
         "limit": -1
       },
       {
@@ -73291,7 +73291,7 @@
         "target": "[PR#]Item_Zombie_Antenora_Hurt",
         "input": "Disable",
         "param": "",
-        "delay": 1.4700000286102295,
+        "delay": 1,
         "limit": -1
       },
       {
@@ -73315,7 +73315,7 @@
         "target": "[PR#]Item_Zombie_Antenora_Explo",
         "input": "Explode",
         "param": "",
-        "delay": 1.1699999570846558,
+        "delay": 0.699999988079071,
         "limit": -1
       },
       {
@@ -73323,7 +73323,7 @@
         "target": "[PR#]Item_Zombie_Antenora_RG",
         "input": "FireUser1",
         "param": "",
-        "delay": 1.059999942779541,
+        "delay": 0.5899999737739563,
         "limit": -1
       }
     ]
@@ -74879,7 +74879,7 @@
         "target": "[PR#]Item_Zombie_Queen_Hurt",
         "input": "Enable",
         "param": "",
-        "delay": 2.5,
+        "delay": 1.2000000476837158,
         "limit": -1
       },
       {
@@ -74887,7 +74887,7 @@
         "target": "[PR#]Item_Zombie_Queen_Hurt",
         "input": "Disable",
         "param": "",
-        "delay": 2.799999952316284,
+        "delay": 1.5,
         "limit": -1
       },
       {
@@ -74919,7 +74919,7 @@
         "target": "[PR#]Item_Zombie_Queen_Explo",
         "input": "Explode",
         "param": "",
-        "delay": 2.5,
+        "delay": 1.2000000476837158,
         "limit": -1
       },
       {
@@ -74927,7 +74927,7 @@
         "target": "[PR#]Item_Zombie_Queen_RG",
         "input": "FireUser1",
         "param": "",
-        "delay": 2.390000104904175,
+        "delay": 1.090000033378601,
         "limit": -1
       }
     ]
@@ -328239,7 +328239,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]Lobby_ZmItem_Case_Act45",
+        "target": "[PR#]Lobby_ZmItem_Case_Act5u",
         "input": "FireUser4",
         "param": "",
         "delay": 0,
@@ -345561,6 +345561,22 @@
         "param": "targetname Filter_Vergil_Hit_Hard",
         "delay": 1,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "SetDamageFilter",
+        "param": "[PR#]Filter_No_Human",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "SetDamageFilter",
+        "param": "",
+        "delay": 0.550000011920929,
+        "limit": -1
       }
     ]
   },
@@ -352198,7 +352214,7 @@
         "target": "[PR#]Item_Zombie_Juddeca_Hurt",
         "input": "Enable",
         "param": "",
-        "delay": 1.899999976158142,
+        "delay": 0.8999999761581421,
         "limit": -1
       },
       {
@@ -352206,7 +352222,7 @@
         "target": "[PR#]Item_Zombie_Juddeca_Hurt",
         "input": "Disable",
         "param": "",
-        "delay": 2.0999999046325684,
+        "delay": 1.100000023841858,
         "limit": -1
       },
       {
@@ -352230,7 +352246,7 @@
         "target": "[PR#]Item_Zombie_Juddeca_Explo",
         "input": "Explode",
         "param": "",
-        "delay": 1.899999976158142,
+        "delay": 0.8999999761581421,
         "limit": -1
       },
       {
@@ -352238,7 +352254,7 @@
         "target": "[PR#]Item_Zombie_Juddeca_RG",
         "input": "FireUser1",
         "param": "",
-        "delay": 1.7899999618530273,
+        "delay": 0.7900000214576721,
         "limit": -1
       }
     ]
@@ -360441,6 +360457,70 @@
         "target": "[PR#]Item_Zombie_Hellbat_Water",
         "input": "Kill",
         "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_Empusa",
+        "input": "Keyvalue",
+        "param": "health 20000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_GEmpusa",
+        "input": "Keyvalue",
+        "param": "health 20000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_Antenora",
+        "input": "Keyvalue",
+        "param": "health 20000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_Caina",
+        "input": "Keyvalue",
+        "param": "health 20000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_Queen",
+        "input": "Keyvalue",
+        "param": "health 20000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_Juddeca",
+        "input": "Keyvalue",
+        "param": "health 20000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_Hellbat",
+        "input": "Keyvalue",
+        "param": "health 20000",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]ZombieSkin_Fury",
+        "input": "Keyvalue",
+        "param": "health 20000",
         "delay": 0,
         "limit": -1
       }
@@ -404138,5 +404218,284 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21939",
     "model": "maps/ze_devil_may_cry/entities/act0_defend_wall_hurt_21939.vmdl"
+  },
+  {
+    "Case32": "",
+    "Case31": "",
+    "Case30": "",
+    "Case29": "",
+    "Case28": "UnpressedDuck",
+    "Case27": "UnpressedSpeed",
+    "Case26": "UnpressedAttack2",
+    "Case25": "UnpressedAttack",
+    "Case24": "UnpressedMoveRight",
+    "Case23": "UnpressedBack",
+    "Case22": "UnpressedMoveLeft",
+    "Case21": "UnpressedForward",
+    "Case20": "",
+    "Case19": "",
+    "Case18": "PressedDuck",
+    "Case17": "PressedSpeed",
+    "Case16": "PressedAttack2",
+    "Case15": "PressedAttack",
+    "Case14": "PressedMoveRight",
+    "Case13": "PressedBack",
+    "Case12": "PressedMoveLeft",
+    "Case11": "PressedForward",
+    "Case10": "",
+    "Case09": "",
+    "Case08": "",
+    "Case07": "",
+    "Case06": "",
+    "Case05": "",
+    "Case04": "",
+    "Case03": "",
+    "Case02": "PlayerOff",
+    "Case01": "PlayerOn",
+    "spawnflags": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Lobby_ZmItem_Case_Act5u",
+    "classname": "logic_case",
+    "origin": "12105.000000 -11692.000000 5494.750000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21940",
+    "connections": [
+      {
+        "output": "OnCase01",
+        "target": "[PR#]Lobby_ZmItem_Model_Antenora",
+        "input": "Color",
+        "param": "255 255 255",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]Lobby_ZmItem_Model_Antenora2",
+        "input": "Color",
+        "param": "255 255 255",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]Lobby_ZmItem_Tri_Antenora",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]Lobby_ZmItem_Model_Caina2",
+        "input": "Color",
+        "param": "255 255 255",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]Lobby_ZmItem_Model_Caina",
+        "input": "Color",
+        "param": "255 255 255",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]Lobby_ZmItem_Tri_Caina",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]Lobby_ZmItem_Model_Queen",
+        "input": "Color",
+        "param": "255 255 255",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]Lobby_ZmItem_Tri_Queen",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]Lobby_ZmItem_Model_Antenora",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]Lobby_ZmItem_Model_Caina",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]Lobby_ZmItem_Model_Queen",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "!self",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 0.15000000596046448,
+        "limit": -1
+      },
+      {
+        "output": "OnUser4",
+        "target": "!self",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 0.05000000074505806,
+        "limit": -1
+      },
+      {
+        "output": "4",
+        "target": "!self",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 0.10000000149011612,
+        "limit": -1
+      },
+      {
+        "output": "4",
+        "target": "!self",
+        "input": "PickRandomShuffle",
+        "param": "",
+        "delay": 0.20000000298023224,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]Lobby_ZmItem_Model_Caina2",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]Lobby_ZmItem_Model_Antenora2",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Tri_Empusa",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Model_Empusa",
+        "input": "StopGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Model_Empusa",
+        "input": "Color",
+        "param": "0 0 0",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Model_Juddeca",
+        "input": "Color",
+        "param": "255 255 255",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Tri_Juddeca",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Model_Juddeca",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Model_Fury",
+        "input": "Color",
+        "param": "255 255 255",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Tri_Fury",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnUser4",
+        "target": "[PR#]Lobby_ZmItem_Model_Fury",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]Lobby_ZmItem_Model_Hellbat",
+        "input": "Skin",
+        "param": "0",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]Lobby_ZmItem_Tri_Hellbat",
+        "input": "Enable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]Lobby_ZmItem_Model_Hellbat",
+        "input": "StartGlowing",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
   }
 ]

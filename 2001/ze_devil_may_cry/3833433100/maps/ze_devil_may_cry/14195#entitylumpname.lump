@@ -92,7 +92,7 @@
         "output": "OnDamaged",
         "target": "[PR#]Item_Skin_Dante_Counter_SDT",
         "input": "Add",
-        "param": "0.5",
+        "param": "2.5",
         "delay": 0,
         "limit": -1
       },

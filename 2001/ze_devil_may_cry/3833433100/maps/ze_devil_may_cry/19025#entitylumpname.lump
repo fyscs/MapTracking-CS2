@@ -74,7 +74,7 @@
         "output": "OnFullyOpen",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
         "input": "SetSpeed",
-        "param": "2000",
+        "param": "2700",
         "delay": 0.6100000143051147,
         "limit": 1
       },
@@ -967,7 +967,7 @@
         "limit": 1
       },
       {
-        "output": "OnTrigger",
+        "output": "X",
         "target": "[PR#]Boss_Vergil_SFX_WalkerDC_MoverU\u00260000",
         "input": "ClearParent",
         "param": "",
