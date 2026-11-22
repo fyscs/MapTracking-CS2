@@ -92,8 +92,7 @@ Instance.OnScriptInput("c2m4", () => { currentStageIndex = 3; Console.ServerComm
 Instance.OnScriptInput("c2m5", () => { currentStageIndex = 4; Console.ServerCommand("mp_restartgame 1"); });
 
 Instance.OnScriptInput("Next", () => {
-    // if (currentStageIndex < stageList.length - 1) currentStageIndex++;
-    if (currentStageIndex < 2) currentStageIndex++;
+    if (currentStageIndex < stageList.length - 1) currentStageIndex++;
     else currentStageIndex = 0;
 });
 

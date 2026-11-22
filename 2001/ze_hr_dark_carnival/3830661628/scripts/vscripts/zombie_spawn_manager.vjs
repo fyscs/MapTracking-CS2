@@ -23,9 +23,14 @@ let isZombatInfinity = false;
 let zombatDelayTaskId = 0;
 
 Instance.OnScriptInput("Activate", () => {
-    allPtps = Entities.FindByName("m*_zombie_spawn_ptp_cs2_ze");
+    allPtps = Entities.FindByName("m*_zombie_spawn*ptp_cs2_ze");
     CancelDelay(mainTaskId);
     mainTaskId = Delay(0, Main);
+});
+
+Instance.OnScriptInput("Refresh", () => {
+    allPtps = Entities.FindByName("m*_zombie_spawn*ptp_cs2_ze");
+    GetActivatePtps();
 });
 
 Instance.OnScriptInput("Spawn", (inputData) => {
@@ -33,6 +38,7 @@ Instance.OnScriptInput("Spawn", (inputData) => {
     if (!player || !player.IsValid()) return;
     if (activatePtps.length === 0) throw "暂无可用ptp";
     const ptp = activatePtps[Math.floor(Math.random() * activatePtps.length)];
+    if (!ptp.IsValid()) return;
     ptp.FireInput({ input: "Teleport", activator: player });
 });
 

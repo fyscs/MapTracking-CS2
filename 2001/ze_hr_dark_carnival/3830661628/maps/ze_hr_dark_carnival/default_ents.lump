@@ -115,7 +115,7 @@
         "output": "OnTrigger",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say **\u300A\u9ED1\u8272\u72C2\u6B22\u8282\u300B\u8BD5\u73A9\u7248**",
+        "param": "say **\u300A\u9ED1\u8272\u72C2\u6B22\u8282\u300B**",
         "delay": 0,
         "limit": -1
       },
@@ -123,7 +123,7 @@
         "output": "OnTrigger",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "say **\u90E8\u5206\u6218\u5F79\u4ECD\u5728\u5236\u4F5C\u4E2D**",
+        "param": "say **\u90E8\u5206\u529F\u80FD\u4ECD\u5728\u5236\u4F5C\u4E2D**",
         "delay": 1,
         "limit": -1
       },
@@ -1206,7 +1206,15 @@
     "hammerUniqueId": "133"
   },
   {
-    "wait": "1.000000",
+    "thinkalways": "0",
+    "damageforce": "0.000000 0.000000 0.000000",
+    "nodmgforce": "0",
+    "forgivedelay": "3.000000",
+    "damagemodel": "0",
+    "damagetype": "0",
+    "damagecap": "20",
+    "damage": "0",
+    "master": "",
     "filtername": "[PR#]zombie",
     "spawnflags": "4097",
     "globalname": "",
@@ -1219,7 +1227,7 @@
     "parentname": "",
     "targetname": "[PR#]start_zombie_tp",
     "vscripts": "",
-    "classname": "trigger_multiple",
+    "classname": "trigger_hurt",
     "origin": "0.000000 -0.000031 -3511.372070",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
@@ -1227,44 +1235,12 @@
     "model": "maps/ze_hr_dark_carnival/entities/start_zombie_tp_135.vmdl",
     "connections": [
       {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Enable",
-        "param": "",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "Disable",
-        "param": "",
-        "delay": 0.8999999761581421,
-        "limit": -1
-      },
-      {
-        "output": "OnUser1",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnStartTouch",
+        "output": "OnHurtPlayer",
         "target": "[PR#]zombie_spawn_manager_script",
         "input": "RunScriptInput",
         "param": "Spawn",
         "delay": 0,
         "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "!self",
-        "input": "FireUser1",
-        "param": "",
-        "delay": 0,
-        "limit": 1
       }
     ]
   },
@@ -2781,6 +2757,46 @@
         "input": "FireUser1",
         "param": "",
         "delay": 30,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_tank",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_zombat_intro",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_zombat_main",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_zombat_mall",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]bgm_zombat_fadeout",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
         "limit": -1
       }
     ]

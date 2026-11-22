@@ -30,14 +30,14 @@ Instance.OnScriptInput("DetectWin", () => {
     if (!target2 || !target2) throw "错误：目标点丢失";
     const pos1 = target1.GetAbsOrigin();
     const pos2 = target2.GetAbsOrigin();
+    const angle = target1.GetAbsAngles().yaw;
     const players = Entities.FindByClass("player");
     let zombies = [];
     let notCheckpointHumans = [];
-    let checkpointHumans = [];
     for (const player of players) {
         if (!player.IsValid() || !player.IsAlive()) continue;
         if (player.GetTeamNumber() === 3) {
-            if (IsPointInBox(player.GetAbsOrigin(), pos1, pos2)) checkpointHumans.push(player);
+            if (IsPointInOBB(player.GetAbsOrigin(), pos1, pos2, angle)) Entities.FireInput({ name: "glow_script", input: "RunScriptInput", value: "Unglow", activator: player });
             else notCheckpointHumans.push(player);
         } else if (player.GetTeamNumber() === 2) {
             zombies.push(player);
@@ -48,14 +48,11 @@ Instance.OnScriptInput("DetectWin", () => {
             for (const player of notCheckpointHumans) {
                 Entities.FireInput({ name: "glow_script", input: "RunScriptInput", value: "Glow(0, 0, 0)", activator: player });
             }
-            for (const player of checkpointHumans) {
-                Entities.FireInput({ name: "glow_script", input: "RunScriptInput", value: "Unglow", activator: player });
-            }
         }
         return;
     }
     for (const player of zombies) {
-        if (IsPointInBox(player.GetAbsOrigin(), pos1, pos2)) {
+        if (IsPointInOBB(player.GetAbsOrigin(), pos1, pos2, angle)) {
             Console.ServerCommand("say **有僵尸进入了安全屋，清理掉他们才能关闭安全屋**");
             return;
         }
@@ -69,6 +66,34 @@ Instance.OnScriptInput("DetectWin", () => {
     Entities.FireInput({ name: "checkpoint_door_cs2", input: "Close" });
     Entities.FireInput({ name: "bgm_checkpoint", input: "StartSound" });
     Entities.FireInput({ name: "stage_manager_script", input: "RunScriptInput", value: "Next" });
+    Entities.FireInput({ name: "zombie_spawn_manager_script", input: "RunScriptInput", value: "ZombatOff" });
+});
+
+Instance.OnScriptInput("DetectM5RightWin", () => {
+    DetectM5Win("right");
+});
+
+Instance.OnScriptInput("DetectM5LeftWin", () => {
+    DetectM5Win("left");
+});
+
+Instance.OnScriptInput("DetectM5Escape", () => {
+    const target1 = Entities.FindByName("m5_escape_detect_target1_cs2_ze")[0];
+    if (!target1 || !target1) throw "错误：目标点丢失";
+    const target2 = Entities.FindByName("m5_escape_detect_target2_cs2_ze")[0];
+    if (!target2 || !target2) throw "错误：目标点丢失";
+    const pos1 = target1.GetAbsOrigin();
+    const pos2 = target2.GetAbsOrigin();
+    const angle = target1.GetAbsAngles().yaw;
+    const players = Entities.FindByClass("player");
+    for (const player of players) {
+        if (!player.IsValid() || !player.IsAlive()) continue;
+        if (player.GetTeamNumber() === 3 && !IsPointInOBB(player.GetAbsOrigin(), pos1, pos2, angle)) {
+            Console.ServerCommand("say **请等待全体人类前往舞台**");
+            return;
+        }
+    }
+    Entities.FireInput({ name: "stage_escape_button", input: "FireUser1" });
 });
 
 Instance.OnScriptInput("EnterCheckpointZone", (inputData) => {
@@ -113,6 +138,50 @@ Instance.SetThink(() => {
 });
 
 /**
+ * 救援关获胜检测
+ * @param {string} dirction 方位（right/left）
+ */
+function DetectM5Win(dirction) {
+    detectWinTimes++;
+    const target1 = Entities.FindByName("m5_" + dirction + "_win_detect_target1_cs2_ze")[0];
+    if (!target1 || !target1) throw "错误：目标点丢失";
+    const target2 = Entities.FindByName("m5_" + dirction + "_win_detect_target2_cs2_ze")[0];
+    if (!target2 || !target2) throw "错误：目标点丢失";
+    const pos1 = target1.GetAbsOrigin();
+    const pos2 = target2.GetAbsOrigin();
+    const angle = target1.GetAbsAngles().yaw;
+    const players = Entities.FindByClass("player");
+    let humans = [];
+    let zombies = [];
+    let notCheckpointHumans = [];
+    for (const player of players) {
+        if (!player.IsValid() || !player.IsAlive()) continue;
+        if (player.GetTeamNumber() === 3) {
+            if (IsPointInOBB(player.GetAbsOrigin(), pos1, pos2, angle)) Entities.FireInput({ name: "glow_script", input: "RunScriptInput", value: "Unglow", activator: player });
+            else notCheckpointHumans.push(player);
+            humans.push(player);
+        } else if (player.GetTeamNumber() === 2) {
+            zombies.push(player);
+        }
+    }
+    if (notCheckpointHumans.length > 0) {
+        if (detectWinTimes >= CONFIG.CHECKPOINT_FORCE_GLOW_TIMES) {
+            for (const player of notCheckpointHumans) {
+                Entities.FireInput({ name: "glow_script", input: "RunScriptInput", value: "Glow(0, 0, 0)", activator: player });
+            }
+        }
+        return;
+    }
+    Entities.FireInput({ name: "start_human_tp", input: "Disable" });
+    Entities.FireInput({ name: "escape_" + dirction + "_relay", input: "Trigger" });
+    Entities.FireInput({ name: "stadium_exit_" + dirction + "_escape_trigger", input: "Disable" });
+    Entities.FireInput({ name: "m5_win_relay_cs2_ze", input: "Trigger" });
+    for (const player of humans) {
+        player.Teleport({ position: { x: 0, y: 0, z: -3848 } });
+    }
+}
+
+/**
  * 判断一个点是否在由两个对角点定义的轴对齐正六面体（AABB）内（含边界）
  * @param {import("cs_script/point_script").Vector} point 待检测的点
  * @param {import("cs_script/point_script").Vector} a 第一个对角点
@@ -127,6 +196,58 @@ function IsPointInBox(point, a, b) {
     return point.x >= minX && point.x <= maxX &&
            point.y >= minY && point.y <= maxY &&
            point.z >= minZ && point.z <= maxZ;
+}
+
+/**
+ * 判断点是否在由两个世界空间对角顶点 + 绕 Z 轴旋转角定义的 OBB 内（含边界）
+ *
+ * 约定：
+ * - a, b：盒子在世界空间中的两个对角顶点（顺序任意，坐标为旋转后的世界坐标）
+ * - angleDeg：盒子绕自身中心、绕世界 Z 轴（yaw）旋转的角度（度）
+ * - epsilon：容差，>0 时盒子向外扩 epsilon（浮点判定更稳；默认 1 个单位，避免玩家
+ *   恰好站在安全屋地板/边界上时因浮点误差被判到盒外）
+ *
+ * @param {import("cs_script/point_script").Vector} point
+ * @param {import("cs_script/point_script").Vector} a
+ * @param {import("cs_script/point_script").Vector} b
+ * @param {number} angleDeg
+ * @param {number} [epsilon=1]
+ * @returns {boolean}
+ */
+function IsPointInOBB(point, a, b, angleDeg, epsilon = 1) {
+    // 1. 盒中心
+    const cx = (a.x + b.x) * 0.5;
+    const cy = (a.y + b.y) * 0.5;
+    const cz = (a.z + b.z) * 0.5;
+
+    // 2. 绕 Z 轴的旋转量
+    //    正向旋转： W = R(θ)·L  =>  Wx = Lx·cosθ - Ly·sinθ
+    //                                Wy = Lx·sinθ + Ly·cosθ
+    //    逆旋转：   L = R(-θ)·W =>  Lx = Wx·cosθ + Wy·sinθ
+    //                                Ly = -Wx·sinθ + Wy·cosθ
+    const rad = angleDeg * Math.PI / 180;
+    const cos = Math.cos(rad);
+    const sin = Math.sin(rad);
+
+    // 3. 世界空间对角线逆旋转到本地空间，得到本地半尺寸
+    const rx = b.x - a.x;
+    const ry = b.y - a.y;
+    const hx = Math.abs(rx * cos + ry * sin) * 0.5;
+    const hy = Math.abs(-rx * sin + ry * cos) * 0.5;
+    const hz = Math.abs(b.z - a.z) * 0.5;
+
+    // 4. 测试点相对盒中心的偏移，并逆旋转到本地空间
+    const dx = point.x - cx;
+    const dy = point.y - cy;
+    const dz = point.z - cz;
+    const lx =  dx * cos + dy * sin;
+    const ly = -dx * sin + dy * cos;
+    // lz = dz（绕 Z 轴旋转，Z 分量不变）
+
+    // 5. 本地空间 AABB 判定
+    return Math.abs(lx) <= hx + epsilon &&
+           Math.abs(ly) <= hy + epsilon &&
+           Math.abs(dz) <= hz + epsilon;
 }
 
 /**
