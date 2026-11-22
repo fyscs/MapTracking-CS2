@@ -204,8 +204,8 @@
     "DefaultAnim": "flag",
     "targetname": "[PR#]location_mdl",
     "classname": "prop_dynamic",
-    "origin": "27.999512 -21.000000 -39.000000",
-    "angles": "-0.000000 -90.000000 0.000000",
+    "origin": "28.000000 -21.000000 -39.000000",
+    "angles": "-0.000000 0.000000 0.000000",
     "scales": "0.800000 0.800000 0.800000",
     "hammerUniqueId": "697",
     "_template_lump_ent_index": "2"

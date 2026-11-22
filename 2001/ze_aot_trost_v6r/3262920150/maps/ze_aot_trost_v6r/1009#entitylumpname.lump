@@ -197,7 +197,7 @@
     "targetname": "[PR#]wall_mdl",
     "classname": "prop_dynamic",
     "origin": "32.000000 -23.000000 -39.000000",
-    "angles": "-0.000000 90.000000 0.000000",
+    "angles": "-0.000000 0.000000 0.000000",
     "scales": "0.800000 0.800000 0.800000",
     "hammerUniqueId": "12694",
     "_template_lump_ent_index": "2"

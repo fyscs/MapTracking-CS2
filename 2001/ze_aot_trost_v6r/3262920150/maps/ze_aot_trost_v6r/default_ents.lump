@@ -12725,6 +12725,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 2,
+        "limit": 1
       }
     ]
   },
@@ -15733,6 +15741,14 @@
         "param": "3",
         "delay": 74,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 74.0999984741211,
+        "limit": 1
       }
     ]
   },
@@ -17997,6 +18013,14 @@
         "param": "",
         "delay": 55,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 59,
+        "limit": 1
       }
     ]
   },
@@ -18452,6 +18476,14 @@
         "input": "Trigger",
         "param": "",
         "delay": 50,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 54,
         "limit": 1
       }
     ]
@@ -25216,14 +25248,6 @@
         "input": "Stop",
         "param": "",
         "delay": 13,
-        "limit": -1
-      },
-      {
-        "output": "OnMapSpawn",
-        "target": "[PR#]round_relay",
-        "input": "Trigger",
-        "param": "",
-        "delay": 0.5,
         "limit": -1
       },
       {
@@ -33691,6 +33715,14 @@
         "input": "Trigger",
         "param": "",
         "delay": 45,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]round_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 49,
         "limit": 1
       }
     ]

@@ -197,7 +197,7 @@
     "targetname": "[PR#]ice_mdl",
     "classname": "prop_dynamic",
     "origin": "28.000000 -21.000000 -39.000000",
-    "angles": "-0.000000 -90.000000 0.000000",
+    "angles": "-0.000000 0.000000 0.000000",
     "scales": "0.800000 0.800000 0.800000",
     "hammerUniqueId": "719",
     "_template_lump_ent_index": "2"

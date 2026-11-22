@@ -470,7 +470,7 @@
     "glowteam": "-1",
     "glowrangemin": "0",
     "glowrange": "500",
-    "glowstate": "1",
+    "glowstate": "3",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
