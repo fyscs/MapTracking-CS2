@@ -8536,7 +8536,7 @@
         "output": "OnPass",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 3.2",
+        "param": "speed 3.5",
         "delay": 1.0499999523162842,
         "limit": -1
       },
@@ -8980,7 +8980,7 @@
         "output": "OnPass",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 2.5",
+        "param": "speed 3",
         "delay": 0,
         "limit": -1
       },
@@ -25150,7 +25150,7 @@
         "output": "OnMapSpawn",
         "target": "[PR#]cmd",
         "input": "Command",
-        "param": "sv_airaccelerate 20",
+        "param": "sv_airaccelerate 60",
         "delay": 0,
         "limit": -1
       },
