@@ -493,7 +493,7 @@
         "target": "[PR#]skybox_night",
         "input": "Enable",
         "param": "",
-        "delay": 1,
+        "delay": 1.0099999904632568,
         "limit": -1
       },
       {
@@ -509,7 +509,7 @@
         "target": "[PR#]light_night",
         "input": "Enable",
         "param": "",
-        "delay": 1,
+        "delay": 1.0099999904632568,
         "limit": -1
       },
       {
@@ -1327,7 +1327,7 @@
         "target": "[PR#]skybox_day",
         "input": "Enable",
         "param": "",
-        "delay": 1,
+        "delay": 1.0099999904632568,
         "limit": -1
       },
       {
@@ -1343,7 +1343,7 @@
         "target": "[PR#]light_day",
         "input": "Enable",
         "param": "",
-        "delay": 1,
+        "delay": 1.0099999904632568,
         "limit": -1
       },
       {
@@ -15379,7 +15379,7 @@
       },
       {
         "output": "OnPass",
-        "target": "[PR#]Nodoro_trigger",
+        "target": "[PR#]Nodoro_trigger_*",
         "input": "Disable",
         "param": "",
         "delay": 0,
@@ -22430,7 +22430,7 @@
         "target": "[PR#]tp_start",
         "input": "Enable",
         "param": "",
-        "delay": 0,
+        "delay": 5,
         "limit": 1
       },
       {
@@ -22438,7 +22438,7 @@
         "target": "[PR#]ob",
         "input": "Break",
         "param": "",
-        "delay": 15,
+        "delay": 20,
         "limit": 1
       },
       {
@@ -22469,6 +22469,14 @@
         "output": "OnTrigger",
         "target": "[PR#]orange",
         "input": "Break",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]skybox_to_night",
+        "input": "Trigger",
         "param": "",
         "delay": 0,
         "limit": -1
