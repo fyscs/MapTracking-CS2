@@ -42,8 +42,8 @@
     "origin": "-16.499023 -316.867432 244.000000",
     "angles": "-0.000000 -179.999939 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "343865",
-    "model": "maps/ze_trepang/entities/object83_attack_crouch_343865.vmdl",
+    "hammerUniqueId": "370064",
+    "model": "maps/ze_trepang/entities/object83_attack_crouch_370064.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -72,8 +72,8 @@
     "origin": "-16.499023 -316.867432 244.000000",
     "angles": "-0.000000 -179.999939 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330641",
-    "model": "maps/ze_trepang/entities/object83_attack_crouch_hurt_330641.vmdl",
+    "hammerUniqueId": "358658",
+    "model": "maps/ze_trepang/entities/object83_attack_crouch_hurt_358658.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {

@@ -40,10 +40,10 @@
     "targetname": "[PR#]atk_horizon_vtol_rocket_launcher_laser02",
     "classname": "func_brush",
     "origin": "-2760.112305 -1139.000000 -634.196289",
-    "angles": "-74.999985 -179.999939 -179.999939",
+    "angles": "-74.999977 -179.999924 -179.999924",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344026",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launcher_laser02_344026.vmdl",
+    "hammerUniqueId": "370225",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launcher_laser02_370225.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -84,10 +84,10 @@
     "targetname": "[PR#]atk_horizon_vtol_rocket_launcher_laser01",
     "classname": "func_brush",
     "origin": "-2759.112305 -759.500000 -633.196289",
-    "angles": "-74.999985 -179.999939 -179.999939",
+    "angles": "-74.999977 -179.999924 -179.999924",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344022",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launcher_laser01_344022.vmdl",
+    "hammerUniqueId": "370221",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launcher_laser01_370221.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -545,9 +545,9 @@
     "targetname": "[PR#]atk_horizon_vtol_rocket_launcher01",
     "classname": "prop_dynamic",
     "origin": "-143.427734 -760.000000 66.213867",
-    "angles": "14.147823 -179.999908 0.000000",
+    "angles": "14.147822 -179.999893 0.000000",
     "scales": "1.206400 1.206400 1.206400",
-    "hammerUniqueId": "348153",
+    "hammerUniqueId": "367206",
     "_template_lump_ent_index": "6"
   },
   {
@@ -617,9 +617,9 @@
     "targetname": "[PR#]atk_horizon_vtol_rocket_launcher02",
     "classname": "prop_dynamic",
     "origin": "-144.427734 -1138.468262 65.213867",
-    "angles": "14.147823 -179.999908 0.000000",
+    "angles": "14.147822 -179.999893 0.000000",
     "scales": "1.206400 1.206400 1.206400",
-    "hammerUniqueId": "348155",
+    "hammerUniqueId": "367208",
     "_template_lump_ent_index": "7"
   },
   {
@@ -659,8 +659,8 @@
     "origin": "-150.612305 -760.000000 65.678711",
     "angles": "-15.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345097",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launchermov01_345097.vmdl",
+    "hammerUniqueId": "369755",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launchermov01_369755.vmdl",
     "_template_lump_ent_index": "8"
   },
   {
@@ -700,8 +700,8 @@
     "origin": "-151.612305 -1138.500000 64.678711",
     "angles": "-15.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345103",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launchermov02_345103.vmdl",
+    "hammerUniqueId": "369761",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_rocket_launchermov02_369761.vmdl",
     "_template_lump_ent_index": "9"
   }
 ]

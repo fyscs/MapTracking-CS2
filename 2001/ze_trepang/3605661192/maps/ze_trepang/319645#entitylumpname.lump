@@ -62,8 +62,8 @@
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344144",
-    "model": "maps/ze_trepang/entities/hmv_excelsus_344144.vmdl",
+    "hammerUniqueId": "369509",
+    "model": "maps/ze_trepang/entities/hmv_excelsus_369509.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {

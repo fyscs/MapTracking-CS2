@@ -94,8 +94,8 @@
     "origin": "-2.079834 0.000000 -2.001953",
     "angles": "-0.000000 0.000000 0.000007",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344156",
-    "model": "maps/ze_trepang/entities/item_dmr05_detect_344156.vmdl",
+    "hammerUniqueId": "369521",
+    "model": "maps/ze_trepang/entities/item_dmr05_detect_369521.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -125,8 +125,8 @@
     "origin": "-2.079834 0.000000 -2.001953",
     "angles": "-0.000000 0.000000 0.000007",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330455",
-    "model": "maps/ze_trepang/entities/item_dmr05_hurt_330455.vmdl",
+    "hammerUniqueId": "358472",
+    "model": "maps/ze_trepang/entities/item_dmr05_hurt_358472.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -238,10 +238,10 @@
     "targetname": "[PR#]item_DMR05_Move",
     "classname": "func_tracktrain",
     "origin": "-11.136719 -0.694336 -3.567383",
-    "angles": "-0.000048 90.000000 0.000107",
+    "angles": "-0.000055 90.000000 0.000120",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344379",
-    "model": "maps/ze_trepang/entities/item_dmr05_move_344379.vmdl",
+    "hammerUniqueId": "369295",
+    "model": "maps/ze_trepang/entities/item_dmr05_move_369295.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -271,8 +271,8 @@
     "origin": "-2.079834 0.000000 -2.001953",
     "angles": "-0.000000 0.000000 0.000007",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330457",
-    "model": "maps/ze_trepang/entities/item_dmr05_npchurt_330457.vmdl",
+    "hammerUniqueId": "358474",
+    "model": "maps/ze_trepang/entities/item_dmr05_npchurt_358474.vmdl",
     "_template_lump_ent_index": "5",
     "connections": [
       {

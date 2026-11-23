@@ -69,9 +69,9 @@
     "targetname": "[PR#]aa_missile_green",
     "classname": "prop_dynamic",
     "origin": "30.997070 17.249725 1100.182617",
-    "angles": "89.999947 -0.000014 0.000000",
+    "angles": "89.999947 -0.000027 0.000000",
     "scales": "1.690000 1.690000 1.690000",
-    "hammerUniqueId": "345845",
+    "hammerUniqueId": "364898",
     "_template_lump_ent_index": "0"
   },
   {
@@ -129,7 +129,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/aa_missile_green_details_345810.vmdl",
+    "model": "maps/ze_trepang/entities/aa_missile_green_details_364863.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -143,7 +143,7 @@
     "origin": "24.366211 17.873383 1094.349609",
     "angles": "-89.999947 -5.501813 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345810",
+    "hammerUniqueId": "364863",
     "_template_lump_ent_index": "1"
   },
   {
@@ -278,10 +278,10 @@
     "targetname": "[PR#]aa_missile_green_backbone",
     "classname": "func_movelinear",
     "origin": "32.366211 19.361816 1061.659180",
-    "angles": "-0.000000 -0.000014 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344913",
-    "model": "maps/ze_trepang/entities/aa_missile_green_backbone_344913.vmdl",
+    "hammerUniqueId": "369571",
+    "model": "maps/ze_trepang/entities/aa_missile_green_backbone_369571.vmdl",
     "_template_lump_ent_index": "3"
   },
   {
@@ -425,7 +425,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/aa_missile_green_details02_345882.vmdl",
+    "model": "maps/ze_trepang/entities/aa_missile_green_details02_364935.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -439,7 +439,7 @@
     "origin": "37.756836 17.873291 1094.349609",
     "angles": "-89.999947 -179.535263 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345882",
+    "hammerUniqueId": "364935",
     "_template_lump_ent_index": "5"
   }
 ]

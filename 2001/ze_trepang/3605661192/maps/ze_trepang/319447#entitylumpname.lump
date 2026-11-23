@@ -92,10 +92,10 @@
     "targetname": "[PR#]item_DMR03_Detect",
     "classname": "func_physbox",
     "origin": "-2.080078 0.000000 -2.000000",
-    "angles": "-0.000027 -0.000000 0.000000",
+    "angles": "-0.000041 -0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344152",
-    "model": "maps/ze_trepang/entities/item_dmr03_detect_344152.vmdl",
+    "hammerUniqueId": "369517",
+    "model": "maps/ze_trepang/entities/item_dmr03_detect_369517.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -123,10 +123,10 @@
     "targetname": "[PR#]item_DMR03_Hurt",
     "classname": "trigger_once",
     "origin": "-2.080078 0.000000 -2.000000",
-    "angles": "-0.000014 -0.000000 0.000000",
+    "angles": "-0.000027 -0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330447",
-    "model": "maps/ze_trepang/entities/item_dmr03_hurt_330447.vmdl",
+    "hammerUniqueId": "358464",
+    "model": "maps/ze_trepang/entities/item_dmr03_hurt_358464.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -238,10 +238,10 @@
     "targetname": "[PR#]item_DMR03_Move",
     "classname": "func_tracktrain",
     "origin": "-19.137207 -0.694824 -3.566406",
-    "angles": "-0.000027 90.000000 0.000004",
+    "angles": "-0.000034 90.000000 0.000004",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344375",
-    "model": "maps/ze_trepang/entities/item_dmr03_move_344375.vmdl",
+    "hammerUniqueId": "369291",
+    "model": "maps/ze_trepang/entities/item_dmr03_move_369291.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -269,10 +269,10 @@
     "targetname": "[PR#]item_DMR03_NPCHurt",
     "classname": "trigger_once",
     "origin": "-2.080078 0.000000 -2.000000",
-    "angles": "-0.000014 -0.000000 0.000000",
+    "angles": "-0.000027 -0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330449",
-    "model": "maps/ze_trepang/entities/item_dmr03_npchurt_330449.vmdl",
+    "hammerUniqueId": "358466",
+    "model": "maps/ze_trepang/entities/item_dmr03_npchurt_358466.vmdl",
     "_template_lump_ent_index": "5",
     "connections": [
       {

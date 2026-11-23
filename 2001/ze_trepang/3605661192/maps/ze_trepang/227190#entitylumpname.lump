@@ -71,7 +71,7 @@
     "origin": "46.585938 -924.693359 -68.623047",
     "angles": "15.000000 179.999893 0.000000",
     "scales": "0.392496 0.392496 0.392496",
-    "hammerUniqueId": "348147",
+    "hammerUniqueId": "367200",
     "_template_lump_ent_index": "0"
   },
   {
@@ -129,7 +129,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/horizon_one_mods_348070.vmdl",
+    "model": "maps/ze_trepang/entities/horizon_one_mods_367123.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -143,7 +143,7 @@
     "origin": "30.000000 -893.466797 28.000000",
     "angles": "75.000031 0.000000 176.277344",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348070",
+    "hammerUniqueId": "367123",
     "_template_lump_ent_index": "1"
   },
   {
@@ -620,8 +620,8 @@
     "origin": "26.695312 -924.000000 27.747070",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344191",
-    "model": "maps/ze_trepang/entities/horizon_one_rotation_x_344191.vmdl",
+    "hammerUniqueId": "369319",
+    "model": "maps/ze_trepang/entities/horizon_one_rotation_x_369319.vmdl",
     "_template_lump_ent_index": "8"
   },
   {
@@ -706,8 +706,8 @@
     "origin": "26.695312 -924.000000 27.747070",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344193",
-    "model": "maps/ze_trepang/entities/horizon_one_rotation_x2_344193.vmdl",
+    "hammerUniqueId": "369321",
+    "model": "maps/ze_trepang/entities/horizon_one_rotation_x2_369321.vmdl",
     "_template_lump_ent_index": "11"
   },
   {
@@ -736,8 +736,8 @@
     "origin": "-870.494141 -973.138062 -269.908203",
     "angles": "74.999977 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330993",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_hurt_330993.vmdl",
+    "hammerUniqueId": "359010",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_hurt_359010.vmdl",
     "_template_lump_ent_index": "12"
   },
   {
@@ -2584,8 +2584,8 @@
     "origin": "-870.494141 -865.138062 -269.908203",
     "angles": "74.999977 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330995",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_hurt02_330995.vmdl",
+    "hammerUniqueId": "359012",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_hurt02_359012.vmdl",
     "_template_lump_ent_index": "34"
   },
   {
@@ -2622,8 +2622,8 @@
     "origin": "27.000000 -924.000000 28.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344189",
-    "model": "maps/ze_trepang/entities/horizon_one_rotation_y1_344189.vmdl",
+    "hammerUniqueId": "369317",
+    "model": "maps/ze_trepang/entities/horizon_one_rotation_y1_369317.vmdl",
     "_template_lump_ent_index": "35"
   },
   {
@@ -2684,8 +2684,8 @@
     "origin": "26.695312 -924.000000 -87.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344181",
-    "model": "maps/ze_trepang/entities/horizon_one_rotation_z_344181.vmdl",
+    "hammerUniqueId": "369309",
+    "model": "maps/ze_trepang/entities/horizon_one_rotation_z_369309.vmdl",
     "_template_lump_ent_index": "37"
   },
   {
@@ -3789,8 +3789,8 @@
     "origin": "32.000000 -924.000000 -20.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344185",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_rotation_y02_344185.vmdl",
+    "hammerUniqueId": "369313",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_rotation_y02_369313.vmdl",
     "_template_lump_ent_index": "49"
   },
   {
@@ -3827,8 +3827,8 @@
     "origin": "32.000000 -924.000000 -20.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344187",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_rotation_y_344187.vmdl",
+    "hammerUniqueId": "369315",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_minigun_rotation_y_369315.vmdl",
     "_template_lump_ent_index": "50"
   },
   {

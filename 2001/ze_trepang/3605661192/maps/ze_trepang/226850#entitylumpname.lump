@@ -42,8 +42,8 @@
     "origin": "-1427.875000 -1055.500000 -355.875000",
     "angles": "-77.666176 -179.999893 -179.999893",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344020",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser02b_344020.vmdl",
+    "hammerUniqueId": "370219",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser02b_370219.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -86,8 +86,8 @@
     "origin": "-1427.875000 -855.500000 -355.875000",
     "angles": "-77.666176 -179.999893 -179.999893",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344018",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser01b_344018.vmdl",
+    "hammerUniqueId": "370217",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launcher_laser01b_370217.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -547,7 +547,7 @@
     "origin": "3.954102 -856.000000 -43.914062",
     "angles": "13.185977 -179.999893 0.000000",
     "scales": "1.206400 1.206400 1.206400",
-    "hammerUniqueId": "348150",
+    "hammerUniqueId": "367203",
     "_template_lump_ent_index": "6"
   },
   {
@@ -619,7 +619,7 @@
     "origin": "3.954102 -1056.000000 -43.914062",
     "angles": "13.185977 -179.999893 0.000000",
     "scales": "1.206400 1.206400 1.206400",
-    "hammerUniqueId": "348151",
+    "hammerUniqueId": "367204",
     "_template_lump_ent_index": "7"
   },
   {
@@ -659,8 +659,8 @@
     "origin": "-3.118164 -856.000000 -44.749023",
     "angles": "-12.333805 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345093",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov01b_345093.vmdl",
+    "hammerUniqueId": "369751",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov01b_369751.vmdl",
     "_template_lump_ent_index": "8"
   },
   {
@@ -700,8 +700,8 @@
     "origin": "-3.118164 -1056.000000 -44.749023",
     "angles": "-12.333805 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345095",
-    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov02b_345095.vmdl",
+    "hammerUniqueId": "369753",
+    "model": "maps/ze_trepang/entities/atk_horizon_one_rocket_launchermov02b_369753.vmdl",
     "_template_lump_ent_index": "9"
   }
 ]

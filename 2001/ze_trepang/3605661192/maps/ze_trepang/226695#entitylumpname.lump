@@ -39,8 +39,8 @@
     "origin": "115.114258 52.453613 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344999",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile01_backbone_344999.vmdl",
+    "hammerUniqueId": "369657",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile01_backbone_369657.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -80,8 +80,8 @@
     "origin": "127.614258 74.104004 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344997",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile02_backbone_344997.vmdl",
+    "hammerUniqueId": "369655",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile02_backbone_369655.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -121,8 +121,8 @@
     "origin": "89.133789 67.453613 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345003",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile03_backbone_345003.vmdl",
+    "hammerUniqueId": "369661",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile03_backbone_369661.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -162,8 +162,8 @@
     "origin": "101.633789 89.104004 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345001",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile04_backbone_345001.vmdl",
+    "hammerUniqueId": "369659",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile04_backbone_369659.vmdl",
     "_template_lump_ent_index": "3"
   },
   {
@@ -203,8 +203,8 @@
     "origin": "71.813477 77.453613 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345005",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile05_backbone_345005.vmdl",
+    "hammerUniqueId": "369663",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile05_backbone_369663.vmdl",
     "_template_lump_ent_index": "4"
   },
   {
@@ -244,8 +244,8 @@
     "origin": "84.313477 99.104004 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345007",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile06_backbone_345007.vmdl",
+    "hammerUniqueId": "369665",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile06_backbone_369665.vmdl",
     "_template_lump_ent_index": "5"
   },
   {
@@ -285,8 +285,8 @@
     "origin": "45.833008 92.453613 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345011",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile07_backbone_345011.vmdl",
+    "hammerUniqueId": "369669",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile07_backbone_369669.vmdl",
     "_template_lump_ent_index": "6"
   },
   {
@@ -326,8 +326,8 @@
     "origin": "58.333008 114.104004 -0.500000",
     "angles": "-0.000000 60.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345009",
-    "model": "maps/ze_trepang/entities/aa_vehicle04_missile08_backbone_345009.vmdl",
+    "hammerUniqueId": "369667",
+    "model": "maps/ze_trepang/entities/aa_vehicle04_missile08_backbone_369667.vmdl",
     "_template_lump_ent_index": "7"
   },
   {
@@ -399,7 +399,7 @@
     "origin": "115.114258 52.453613 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346029",
+    "hammerUniqueId": "365082",
     "_template_lump_ent_index": "8"
   },
   {
@@ -471,7 +471,7 @@
     "origin": "127.614258 74.104004 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346028",
+    "hammerUniqueId": "365081",
     "_template_lump_ent_index": "9"
   },
   {
@@ -543,7 +543,7 @@
     "origin": "89.133789 67.453613 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346031",
+    "hammerUniqueId": "365084",
     "_template_lump_ent_index": "10"
   },
   {
@@ -615,7 +615,7 @@
     "origin": "101.633789 89.104004 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346030",
+    "hammerUniqueId": "365083",
     "_template_lump_ent_index": "11"
   },
   {
@@ -687,7 +687,7 @@
     "origin": "71.813477 77.453613 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346032",
+    "hammerUniqueId": "365085",
     "_template_lump_ent_index": "12"
   },
   {
@@ -759,7 +759,7 @@
     "origin": "84.313477 99.104004 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346033",
+    "hammerUniqueId": "365086",
     "_template_lump_ent_index": "13"
   },
   {
@@ -831,7 +831,7 @@
     "origin": "45.833008 92.453613 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346035",
+    "hammerUniqueId": "365088",
     "_template_lump_ent_index": "14"
   },
   {
@@ -903,7 +903,7 @@
     "origin": "58.333008 114.104004 -8.000000",
     "angles": "-89.999939 60.000000 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "346034",
+    "hammerUniqueId": "365087",
     "_template_lump_ent_index": "15"
   },
   {

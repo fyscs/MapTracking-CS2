@@ -19,8 +19,8 @@
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330335",
-    "model": "maps/ze_trepang/entities/aa_missile_green_tp_trg03_330335.vmdl",
+    "hammerUniqueId": "358352",
+    "model": "maps/ze_trepang/entities/aa_missile_green_tp_trg03_358352.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {

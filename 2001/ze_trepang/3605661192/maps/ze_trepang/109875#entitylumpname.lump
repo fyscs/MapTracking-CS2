@@ -71,7 +71,7 @@
     "origin": "-595.000000 -731.112366 740.000000",
     "angles": "74.999977 89.999893 89.999878",
     "scales": "1.690000 1.690000 1.690000",
-    "hammerUniqueId": "345773",
+    "hammerUniqueId": "364826",
     "_template_lump_ent_index": "0"
   },
   {
@@ -129,7 +129,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/missile_details03_345738.vmdl",
+    "model": "maps/ze_trepang/entities/missile_details03_364791.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -143,7 +143,7 @@
     "origin": "-601.630859 -729.000305 734.526855",
     "angles": "-74.999977 -89.999878 84.498024",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345738",
+    "hammerUniqueId": "364791",
     "_template_lump_ent_index": "1"
   },
   {
@@ -278,10 +278,10 @@
     "targetname": "[PR#]missile03_backbone",
     "classname": "func_movelinear",
     "origin": "-596.000000 -723.000305 701.477051",
-    "angles": "-0.000000 -0.000027 0.000000",
+    "angles": "-0.000000 -0.000041 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344905",
-    "model": "maps/ze_trepang/entities/missile03_backbone_344905.vmdl",
+    "hammerUniqueId": "369563",
+    "model": "maps/ze_trepang/entities/missile03_backbone_369563.vmdl",
     "_template_lump_ent_index": "3"
   },
   {

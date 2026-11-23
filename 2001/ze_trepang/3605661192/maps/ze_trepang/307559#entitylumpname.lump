@@ -69,9 +69,9 @@
     "targetname": "[PR#]excelsus_missile01",
     "classname": "prop_dynamic",
     "origin": "-25.460938 72.998779 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348471",
+    "hammerUniqueId": "367524",
     "_template_lump_ent_index": "0"
   },
   {
@@ -141,9 +141,9 @@
     "targetname": "[PR#]excelsus_missile02",
     "classname": "prop_dynamic",
     "origin": "-50.460938 72.998779 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348472",
+    "hammerUniqueId": "367525",
     "_template_lump_ent_index": "1"
   },
   {
@@ -213,9 +213,9 @@
     "targetname": "[PR#]excelsus_missile03",
     "classname": "prop_dynamic",
     "origin": "-25.461914 42.999756 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348470",
+    "hammerUniqueId": "367523",
     "_template_lump_ent_index": "2"
   },
   {
@@ -285,9 +285,9 @@
     "targetname": "[PR#]excelsus_missile04",
     "classname": "prop_dynamic",
     "origin": "-50.460938 42.999756 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348473",
+    "hammerUniqueId": "367526",
     "_template_lump_ent_index": "3"
   },
   {
@@ -357,9 +357,9 @@
     "targetname": "[PR#]excelsus_missile05",
     "classname": "prop_dynamic",
     "origin": "-25.461914 22.999756 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348469",
+    "hammerUniqueId": "367522",
     "_template_lump_ent_index": "4"
   },
   {
@@ -429,9 +429,9 @@
     "targetname": "[PR#]excelsus_missile06",
     "classname": "prop_dynamic",
     "origin": "-50.460938 22.999756 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348474",
+    "hammerUniqueId": "367527",
     "_template_lump_ent_index": "5"
   },
   {
@@ -501,9 +501,9 @@
     "targetname": "[PR#]excelsus_missile07",
     "classname": "prop_dynamic",
     "origin": "-25.461914 -7.000244 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348467",
+    "hammerUniqueId": "367520",
     "_template_lump_ent_index": "6"
   },
   {
@@ -573,9 +573,9 @@
     "targetname": "[PR#]excelsus_missile08",
     "classname": "prop_dynamic",
     "origin": "-50.461914 -7.000244 -35.000000",
-    "angles": "-89.999939 -179.999939 0.000000",
+    "angles": "-89.999939 -179.999924 0.000000",
     "scales": "0.743600 0.743600 0.743600",
-    "hammerUniqueId": "348468",
+    "hammerUniqueId": "367521",
     "_template_lump_ent_index": "7"
   },
   {
@@ -613,10 +613,10 @@
     "targetname": "[PR#]excelsus_missile01_backbone",
     "classname": "func_movelinear",
     "origin": "-25.460938 72.998779 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345113",
-    "model": "maps/ze_trepang/entities/excelsus_missile01_backbone_345113.vmdl",
+    "hammerUniqueId": "369771",
+    "model": "maps/ze_trepang/entities/excelsus_missile01_backbone_369771.vmdl",
     "_template_lump_ent_index": "8"
   },
   {
@@ -654,10 +654,10 @@
     "targetname": "[PR#]excelsus_missile02_backbone",
     "classname": "func_movelinear",
     "origin": "-50.460938 72.998779 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345115",
-    "model": "maps/ze_trepang/entities/excelsus_missile02_backbone_345115.vmdl",
+    "hammerUniqueId": "369773",
+    "model": "maps/ze_trepang/entities/excelsus_missile02_backbone_369773.vmdl",
     "_template_lump_ent_index": "9"
   },
   {
@@ -695,10 +695,10 @@
     "targetname": "[PR#]excelsus_missile03_backbone",
     "classname": "func_movelinear",
     "origin": "-25.461914 42.999756 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345111",
-    "model": "maps/ze_trepang/entities/excelsus_missile03_backbone_345111.vmdl",
+    "hammerUniqueId": "369769",
+    "model": "maps/ze_trepang/entities/excelsus_missile03_backbone_369769.vmdl",
     "_template_lump_ent_index": "10"
   },
   {
@@ -736,10 +736,10 @@
     "targetname": "[PR#]excelsus_missile04_backbone",
     "classname": "func_movelinear",
     "origin": "-50.460938 42.999756 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345117",
-    "model": "maps/ze_trepang/entities/excelsus_missile04_backbone_345117.vmdl",
+    "hammerUniqueId": "369775",
+    "model": "maps/ze_trepang/entities/excelsus_missile04_backbone_369775.vmdl",
     "_template_lump_ent_index": "11"
   },
   {
@@ -777,10 +777,10 @@
     "targetname": "[PR#]excelsus_missile05_backbone",
     "classname": "func_movelinear",
     "origin": "-25.461914 22.999756 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345109",
-    "model": "maps/ze_trepang/entities/excelsus_missile05_backbone_345109.vmdl",
+    "hammerUniqueId": "369767",
+    "model": "maps/ze_trepang/entities/excelsus_missile05_backbone_369767.vmdl",
     "_template_lump_ent_index": "12"
   },
   {
@@ -818,10 +818,10 @@
     "targetname": "[PR#]excelsus_missile06_backbone",
     "classname": "func_movelinear",
     "origin": "-50.460938 22.999756 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345119",
-    "model": "maps/ze_trepang/entities/excelsus_missile06_backbone_345119.vmdl",
+    "hammerUniqueId": "369777",
+    "model": "maps/ze_trepang/entities/excelsus_missile06_backbone_369777.vmdl",
     "_template_lump_ent_index": "13"
   },
   {
@@ -859,10 +859,10 @@
     "targetname": "[PR#]excelsus_missile07_backbone",
     "classname": "func_movelinear",
     "origin": "-25.461914 -7.000244 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345105",
-    "model": "maps/ze_trepang/entities/excelsus_missile07_backbone_345105.vmdl",
+    "hammerUniqueId": "369763",
+    "model": "maps/ze_trepang/entities/excelsus_missile07_backbone_369763.vmdl",
     "_template_lump_ent_index": "14"
   },
   {
@@ -900,10 +900,10 @@
     "targetname": "[PR#]excelsus_missile08_backbone",
     "classname": "func_movelinear",
     "origin": "-50.461914 -7.000244 -27.500000",
-    "angles": "-0.000000 -179.999939 0.000000",
+    "angles": "-0.000000 -179.999924 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345107",
-    "model": "maps/ze_trepang/entities/excelsus_missile08_backbone_345107.vmdl",
+    "hammerUniqueId": "369765",
+    "model": "maps/ze_trepang/entities/excelsus_missile08_backbone_369765.vmdl",
     "_template_lump_ent_index": "15"
   },
   {

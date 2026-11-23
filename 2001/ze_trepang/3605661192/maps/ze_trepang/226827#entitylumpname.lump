@@ -71,7 +71,7 @@
     "origin": "30.997070 20.269257 988.504883",
     "angles": "74.999977 -89.999840 -89.999878",
     "scales": "1.690000 1.690000 1.690000",
-    "hammerUniqueId": "345846",
+    "hammerUniqueId": "364899",
     "_template_lump_ent_index": "0"
   },
   {
@@ -129,7 +129,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/aa_missile_blue_details_345847.vmdl",
+    "model": "maps/ze_trepang/entities/aa_missile_blue_details_364900.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -143,7 +143,7 @@
     "origin": "24.366211 19.361786 982.709961",
     "angles": "-74.999977 89.999939 -95.501724",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345847",
+    "hammerUniqueId": "364900",
     "_template_lump_ent_index": "1"
   },
   {
@@ -201,7 +201,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/aa_missile_blue_details02_345952.vmdl",
+    "model": "maps/ze_trepang/entities/aa_missile_blue_details02_365005.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -213,9 +213,9 @@
     "targetname": "[PR#]aa_missile_blue_details02",
     "classname": "prop_dynamic",
     "origin": "37.745117 18.309509 982.710938",
-    "angles": "-74.999985 90.000153 84.498093",
+    "angles": "-74.999977 90.000153 84.498093",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345952",
+    "hammerUniqueId": "365005",
     "_template_lump_ent_index": "2"
   },
   {
@@ -253,10 +253,10 @@
     "targetname": "[PR#]aa_missile_blue_backbone",
     "classname": "func_movelinear",
     "origin": "34.366211 17.361816 949.659180",
-    "angles": "-0.000000 -0.000014 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344911",
-    "model": "maps/ze_trepang/entities/aa_missile_blue_backbone_344911.vmdl",
+    "hammerUniqueId": "369569",
+    "model": "maps/ze_trepang/entities/aa_missile_blue_backbone_369569.vmdl",
     "_template_lump_ent_index": "3"
   },
   {
@@ -565,8 +565,8 @@
     "origin": "36.973633 12.412476 946.659180",
     "angles": "-0.000000 -179.999908 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330635",
-    "model": "maps/ze_trepang/entities/aa_missile_blue_hurt_330635.vmdl",
+    "hammerUniqueId": "358652",
+    "model": "maps/ze_trepang/entities/aa_missile_blue_hurt_358652.vmdl",
     "_template_lump_ent_index": "7"
   }
 ]

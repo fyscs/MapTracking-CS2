@@ -57,7 +57,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/turret_attack_middle_warning_final_348059.vmdl",
+    "model": "maps/ze_trepang/entities/turret_attack_middle_warning_final_367112.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -71,7 +71,7 @@
     "origin": "-1649.423828 -108.354118 -70.500000",
     "angles": "-0.000000 -179.999954 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348059",
+    "hammerUniqueId": "367112",
     "_template_lump_ent_index": "0"
   }
 ]

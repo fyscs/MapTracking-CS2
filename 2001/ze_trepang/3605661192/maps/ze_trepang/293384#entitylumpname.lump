@@ -38,10 +38,10 @@
     "targetname": "[PR#]ee_button05c",
     "classname": "func_button",
     "origin": "-80.846680 -136.645508 392.641602",
-    "angles": "-0.000000 3.999998 0.000000",
+    "angles": "-0.000000 3.999997 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344737",
-    "model": "maps/ze_trepang/entities/ee_button05c_344737.vmdl",
+    "hammerUniqueId": "369911",
+    "model": "maps/ze_trepang/entities/ee_button05c_369911.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {

@@ -37,10 +37,10 @@
     "targetname": "[PR#]laser_double1",
     "classname": "func_movelinear",
     "origin": "-287.026367 15.728001 -81.000000",
-    "angles": "-0.000000 -0.000027 0.000000",
+    "angles": "-0.000000 -0.000041 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345085",
-    "model": "maps/ze_trepang/entities/laser_double1_345085.vmdl",
+    "hammerUniqueId": "369743",
+    "model": "maps/ze_trepang/entities/laser_double1_369743.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -78,10 +78,10 @@
     "targetname": "[PR#]laser_double2",
     "classname": "func_movelinear",
     "origin": "-371.026367 15.727947 -84.000000",
-    "angles": "-0.000000 -0.000027 0.000000",
+    "angles": "-0.000000 -0.000041 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "345061",
-    "model": "maps/ze_trepang/entities/laser_double2_345061.vmdl",
+    "hammerUniqueId": "369719",
+    "model": "maps/ze_trepang/entities/laser_double2_369719.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -108,10 +108,10 @@
     "targetname": "[PR#]laser_double1_hurt",
     "classname": "trigger_hurt",
     "origin": "-278.346680 303.728027 -97.000000",
-    "angles": "-0.000000 -0.000014 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330708",
-    "model": "maps/ze_trepang/entities/laser_double1_hurt_330708.vmdl",
+    "hammerUniqueId": "358725",
+    "model": "maps/ze_trepang/entities/laser_double1_hurt_358725.vmdl",
     "_template_lump_ent_index": "2"
   },
   {
@@ -138,10 +138,10 @@
     "targetname": "[PR#]laser_double2_hurt",
     "classname": "trigger_hurt",
     "origin": "-360.026367 303.727966 -100.000000",
-    "angles": "-0.000000 -0.000014 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330692",
-    "model": "maps/ze_trepang/entities/laser_double2_hurt_330692.vmdl",
+    "hammerUniqueId": "358709",
+    "model": "maps/ze_trepang/entities/laser_double2_hurt_358709.vmdl",
     "_template_lump_ent_index": "3"
   }
 ]

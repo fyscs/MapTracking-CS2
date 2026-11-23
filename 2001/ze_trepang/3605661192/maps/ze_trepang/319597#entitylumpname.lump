@@ -62,8 +62,8 @@
     "origin": "0.000000 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344162",
-    "model": "maps/ze_trepang/entities/vtol_shield_344162.vmdl",
+    "hammerUniqueId": "369527",
+    "model": "maps/ze_trepang/entities/vtol_shield_369527.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {

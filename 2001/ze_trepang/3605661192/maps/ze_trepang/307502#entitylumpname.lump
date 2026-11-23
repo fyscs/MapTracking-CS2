@@ -62,8 +62,8 @@
     "origin": "204.000000 -645.364014 456.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344142",
-    "model": "maps/ze_trepang/entities/kinetic_block_bullets_344142.vmdl",
+    "hammerUniqueId": "369507",
+    "model": "maps/ze_trepang/entities/kinetic_block_bullets_369507.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {

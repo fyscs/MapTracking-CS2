@@ -28,8 +28,8 @@
     "origin": "-1089.908203 -904.514160 -203.916992",
     "angles": "74.999977 -4.300031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "331003",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left01_331003.vmdl",
+    "hammerUniqueId": "359020",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left01_359020.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -58,8 +58,8 @@
     "origin": "-1081.810547 -796.817871 -203.916992",
     "angles": "74.999977 -4.300031 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "331007",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left02_331007.vmdl",
+    "hammerUniqueId": "359024",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_left02_359024.vmdl",
     "_template_lump_ent_index": "1"
   },
   {

@@ -94,8 +94,8 @@
     "origin": "-2.080078 0.000000 -2.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344148",
-    "model": "maps/ze_trepang/entities/item_dmr01_detect_344148.vmdl",
+    "hammerUniqueId": "369513",
+    "model": "maps/ze_trepang/entities/item_dmr01_detect_369513.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -125,8 +125,8 @@
     "origin": "-2.080078 0.000000 -2.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330441",
-    "model": "maps/ze_trepang/entities/item_dmr01_hurt_330441.vmdl",
+    "hammerUniqueId": "358458",
+    "model": "maps/ze_trepang/entities/item_dmr01_hurt_358458.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -240,8 +240,8 @@
     "origin": "-19.137329 -0.694824 -11.566406",
     "angles": "-0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344371",
-    "model": "maps/ze_trepang/entities/item_dmr01_move_344371.vmdl",
+    "hammerUniqueId": "369287",
+    "model": "maps/ze_trepang/entities/item_dmr01_move_369287.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -271,8 +271,8 @@
     "origin": "-2.080078 0.000000 -2.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330439",
-    "model": "maps/ze_trepang/entities/item_dmr01_npchurt_330439.vmdl",
+    "hammerUniqueId": "358456",
+    "model": "maps/ze_trepang/entities/item_dmr01_npchurt_358456.vmdl",
     "_template_lump_ent_index": "5",
     "connections": [
       {

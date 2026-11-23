@@ -125,8 +125,8 @@
     "origin": "-3296.000000 -1225.000000 -822.437500",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "331065",
-    "model": "maps/ze_trepang/entities/horizon_vtol_main_turret_hurt25_331065.vmdl",
+    "hammerUniqueId": "359082",
+    "model": "maps/ze_trepang/entities/horizon_vtol_main_turret_hurt25_359082.vmdl",
     "_template_lump_ent_index": "1"
   },
   {

@@ -26,10 +26,10 @@
     "targetname": "[PR#]turret_attack_middle_hurt",
     "classname": "trigger_hurt",
     "origin": "-362.922852 103.727951 19.768799",
-    "angles": "-0.000000 -0.000014 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330578",
-    "model": "maps/ze_trepang/entities/turret_attack_middle_hurt_330578.vmdl",
+    "hammerUniqueId": "358595",
+    "model": "maps/ze_trepang/entities/turret_attack_middle_hurt_358595.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -67,10 +67,10 @@
     "targetname": "[PR#]turret_attack_middle_backbone",
     "classname": "func_movelinear",
     "origin": "-510.922852 103.727859 19.768799",
-    "angles": "-0.000000 -0.000027 0.000000",
+    "angles": "-0.000000 -0.000041 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344881",
-    "model": "maps/ze_trepang/entities/turret_attack_middle_backbone_344881.vmdl",
+    "hammerUniqueId": "369539",
+    "model": "maps/ze_trepang/entities/turret_attack_middle_backbone_369539.vmdl",
     "_template_lump_ent_index": "1"
   },
   {
@@ -128,7 +128,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/turret_attack_middle_warning_348044.vmdl",
+    "model": "maps/ze_trepang/entities/turret_attack_middle_warning_367097.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -140,9 +140,9 @@
     "targetname": "[PR#]turret_attack_middle_warning",
     "classname": "prop_dynamic",
     "origin": "-1714.922852 101.727219 -71.500000",
-    "angles": "-0.000000 -0.000041 0.000000",
+    "angles": "-0.000000 -0.000055 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348044",
+    "hammerUniqueId": "367097",
     "_template_lump_ent_index": "2"
   },
   {
@@ -408,7 +408,7 @@
     "origin": "-402.922852 131.727737 24.000000",
     "angles": "-0.000000 -179.999954 -179.999893",
     "scales": "2.080000 2.080000 2.080000",
-    "hammerUniqueId": "345544",
+    "hammerUniqueId": "364597",
     "_template_lump_ent_index": "5"
   },
   {
@@ -480,7 +480,7 @@
     "origin": "-402.922852 67.727737 24.000000",
     "angles": "-0.000000 -179.999954 -179.999893",
     "scales": "2.080000 2.080000 2.080000",
-    "hammerUniqueId": "345700",
+    "hammerUniqueId": "364753",
     "_template_lump_ent_index": "6"
   },
   {
@@ -507,10 +507,10 @@
     "targetname": "[PR#]turret_attack_middle_hurt02",
     "classname": "trigger_hurt",
     "origin": "-362.922852 -280.272034 19.768799",
-    "angles": "-0.000000 -0.000014 0.000000",
+    "angles": "-0.000000 -0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330576",
-    "model": "maps/ze_trepang/entities/turret_attack_middle_hurt02_330576.vmdl",
+    "hammerUniqueId": "358593",
+    "model": "maps/ze_trepang/entities/turret_attack_middle_hurt02_358593.vmdl",
     "_template_lump_ent_index": "7"
   },
   {
@@ -548,10 +548,10 @@
     "targetname": "[PR#]turret_attack_middle_backbone02",
     "classname": "func_movelinear",
     "origin": "-510.922852 -280.272156 19.768799",
-    "angles": "-0.000000 -0.000027 0.000000",
+    "angles": "-0.000000 -0.000041 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344879",
-    "model": "maps/ze_trepang/entities/turret_attack_middle_backbone02_344879.vmdl",
+    "hammerUniqueId": "369537",
+    "model": "maps/ze_trepang/entities/turret_attack_middle_backbone02_369537.vmdl",
     "_template_lump_ent_index": "8"
   },
   {
@@ -609,7 +609,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/turret_attack_middle_warning02_348049.vmdl",
+    "model": "maps/ze_trepang/entities/turret_attack_middle_warning02_367102.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -621,9 +621,9 @@
     "targetname": "[PR#]turret_attack_middle_warning02",
     "classname": "prop_dynamic",
     "origin": "-1714.922852 -160.272781 -71.500000",
-    "angles": "-0.000000 -0.000027 0.000000",
+    "angles": "-0.000000 -0.000041 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348049",
+    "hammerUniqueId": "367102",
     "_template_lump_ent_index": "9"
   },
   {
@@ -889,7 +889,7 @@
     "origin": "-402.922852 -252.272263 24.000000",
     "angles": "-0.000000 -179.999954 -179.999893",
     "scales": "2.080000 2.080000 2.080000",
-    "hammerUniqueId": "345543",
+    "hammerUniqueId": "364596",
     "_template_lump_ent_index": "12"
   },
   {
@@ -961,7 +961,7 @@
     "origin": "-402.922852 -316.272278 24.000000",
     "angles": "-0.000000 -179.999954 -179.999893",
     "scales": "2.080000 2.080000 2.080000",
-    "hammerUniqueId": "345542",
+    "hammerUniqueId": "364595",
     "_template_lump_ent_index": "13"
   }
 ]

@@ -62,8 +62,8 @@
     "origin": "-153.397461 -924.000000 -1.727539",
     "angles": "15.000000 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344146",
-    "model": "maps/ze_trepang/entities/horizon_vtol_344146.vmdl",
+    "hammerUniqueId": "369511",
+    "model": "maps/ze_trepang/entities/horizon_vtol_369511.vmdl",
     "_template_lump_ent_index": "0",
     "connections": [
       {
@@ -211,7 +211,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/horizon_vtol_addons_348174.vmdl",
+    "model": "maps/ze_trepang/entities/horizon_vtol_addons_367227.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -225,7 +225,7 @@
     "origin": "-160.397461 -1051.000000 86.272461",
     "angles": "30.000000 179.999878 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348174",
+    "hammerUniqueId": "367227",
     "_template_lump_ent_index": "1"
   },
   {
@@ -705,8 +705,8 @@
     "origin": "-191.304688 -924.000000 107.747070",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344207",
-    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_x_344207.vmdl",
+    "hammerUniqueId": "369335",
+    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_x_369335.vmdl",
     "_template_lump_ent_index": "8"
   },
   {
@@ -864,8 +864,8 @@
     "origin": "-191.304688 -924.000000 107.747070",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344205",
-    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_x2_344205.vmdl",
+    "hammerUniqueId": "369333",
+    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_x2_369333.vmdl",
     "_template_lump_ent_index": "11"
   },
   {
@@ -894,8 +894,8 @@
     "origin": "-1088.548828 -973.138062 -189.916992",
     "angles": "74.999977 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "331011",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_331011.vmdl",
+    "hammerUniqueId": "359028",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt_359028.vmdl",
     "_template_lump_ent_index": "12"
   },
   {
@@ -2742,8 +2742,8 @@
     "origin": "-1088.548828 -865.138062 -189.916992",
     "angles": "74.999977 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "331009",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt02_331009.vmdl",
+    "hammerUniqueId": "359026",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_hurt02_359026.vmdl",
     "_template_lump_ent_index": "34"
   },
   {
@@ -2780,8 +2780,8 @@
     "origin": "-191.000000 -924.000000 108.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344203",
-    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_y1_344203.vmdl",
+    "hammerUniqueId": "369331",
+    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_y1_369331.vmdl",
     "_template_lump_ent_index": "35"
   },
   {
@@ -2863,7 +2863,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/horizon_vtol_rotor_l_348156.vmdl",
+    "model": "maps/ze_trepang/entities/horizon_vtol_rotor_l_367209.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -2875,9 +2875,9 @@
     "targetname": "[PR#]horizon_vtol_rotor_l",
     "classname": "prop_dynamic",
     "origin": "-252.081055 -594.125000 168.458984",
-    "angles": "34.999992 -179.999908 0.000000",
+    "angles": "34.999992 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348156",
+    "hammerUniqueId": "367209",
     "_template_lump_ent_index": "37"
   },
   {
@@ -2935,7 +2935,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/horizon_vtol_rotor_r_348165.vmdl",
+    "model": "maps/ze_trepang/entities/horizon_vtol_rotor_r_367218.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -2947,9 +2947,9 @@
     "targetname": "[PR#]horizon_vtol_rotor_r",
     "classname": "prop_dynamic",
     "origin": "-252.081055 -1243.000000 168.458984",
-    "angles": "34.999992 -179.999908 0.000000",
+    "angles": "34.999992 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348165",
+    "hammerUniqueId": "367218",
     "_template_lump_ent_index": "38"
   },
   {
@@ -3007,7 +3007,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/blade_l_rotor_348172.vmdl",
+    "model": "maps/ze_trepang/entities/blade_l_rotor_367225.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -3019,9 +3019,9 @@
     "targetname": "[PR#]blade_l_rotor",
     "classname": "prop_dynamic",
     "origin": "-239.660156 -594.125000 158.329102",
-    "angles": "15.000000 -179.999908 0.000000",
+    "angles": "15.000000 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348172",
+    "hammerUniqueId": "367225",
     "_template_lump_ent_index": "39"
   },
   {
@@ -3079,7 +3079,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/blade_r_rotor_348163.vmdl",
+    "model": "maps/ze_trepang/entities/blade_r_rotor_367216.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -3091,9 +3091,9 @@
     "targetname": "[PR#]blade_r_rotor",
     "classname": "prop_dynamic",
     "origin": "-240.231445 -1242.625000 158.045898",
-    "angles": "15.000000 -179.999908 0.000000",
+    "angles": "15.000000 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348163",
+    "hammerUniqueId": "367216",
     "_template_lump_ent_index": "40"
   },
   {
@@ -3332,8 +3332,8 @@
     "origin": "-145.397461 -924.000000 -1.727539",
     "angles": "15.000000 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344104",
-    "model": "maps/ze_trepang/entities/horizon_vtol_prop_344104.vmdl",
+    "hammerUniqueId": "370303",
+    "model": "maps/ze_trepang/entities/horizon_vtol_prop_370303.vmdl",
     "_template_lump_ent_index": "44"
   },
   {
@@ -3409,8 +3409,8 @@
     "origin": "-186.054688 -924.000000 59.991211",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344197",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_rotation_y02_344197.vmdl",
+    "hammerUniqueId": "369325",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_rotation_y02_369325.vmdl",
     "_template_lump_ent_index": "46"
   },
   {
@@ -3447,8 +3447,8 @@
     "origin": "-186.054688 -924.000000 59.991211",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344195",
-    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_rotation_y_344195.vmdl",
+    "hammerUniqueId": "369323",
+    "model": "maps/ze_trepang/entities/atk_horizon_vtol_minigun_rotation_y_369323.vmdl",
     "_template_lump_ent_index": "47"
   },
   {
@@ -3871,10 +3871,10 @@
     "targetname": "[PR#]blade_l_rotation",
     "classname": "func_rotating",
     "origin": "-239.660156 -594.125000 158.329102",
-    "angles": "34.999996 -179.999908 0.000000",
+    "angles": "34.999996 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344201",
-    "model": "maps/ze_trepang/entities/blade_l_rotation_344201.vmdl",
+    "hammerUniqueId": "369329",
+    "model": "maps/ze_trepang/entities/blade_l_rotation_369329.vmdl",
     "_template_lump_ent_index": "52"
   },
   {
@@ -3909,10 +3909,10 @@
     "targetname": "[PR#]blade_r_rotation",
     "classname": "func_rotating",
     "origin": "-240.231445 -1242.625000 158.045898",
-    "angles": "34.999996 -179.999908 0.000000",
+    "angles": "34.999996 -179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344199",
-    "model": "maps/ze_trepang/entities/blade_r_rotation_344199.vmdl",
+    "hammerUniqueId": "369327",
+    "model": "maps/ze_trepang/entities/blade_r_rotation_369327.vmdl",
     "_template_lump_ent_index": "53"
   },
   {
@@ -3949,8 +3949,8 @@
     "origin": "-167.304688 -924.000000 -87.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344183",
-    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_z_344183.vmdl",
+    "hammerUniqueId": "369311",
+    "model": "maps/ze_trepang/entities/horizon_vtol_rotation_z_369311.vmdl",
     "_template_lump_ent_index": "54"
   },
   {

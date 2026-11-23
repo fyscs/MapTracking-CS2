@@ -46,8 +46,8 @@
     "origin": "13.698242 0.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344389",
-    "model": "maps/ze_trepang/entities/excelsus_wreckage1_344389.vmdl",
+    "hammerUniqueId": "370309",
+    "model": "maps/ze_trepang/entities/excelsus_wreckage1_370309.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -92,10 +92,10 @@
     "targetname": "[PR#]excelsus_wreckage2",
     "classname": "func_breakable",
     "origin": "4.593750 9.272949 102.761963",
-    "angles": "-0.000000 179.999908 0.000000",
+    "angles": "-0.000000 179.999893 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344391",
-    "model": "maps/ze_trepang/entities/excelsus_wreckage2_344391.vmdl",
+    "hammerUniqueId": "370311",
+    "model": "maps/ze_trepang/entities/excelsus_wreckage2_370311.vmdl",
     "_template_lump_ent_index": "1"
   }
 ]

@@ -42,8 +42,8 @@
     "origin": "-47.999023 -244.246002 -238.000000",
     "angles": "-0.000000 -179.999939 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "343867",
-    "model": "maps/ze_trepang/entities/object83_attack_jump_343867.vmdl",
+    "hammerUniqueId": "370066",
+    "model": "maps/ze_trepang/entities/object83_attack_jump_370066.vmdl",
     "_template_lump_ent_index": "0"
   },
   {
@@ -72,8 +72,8 @@
     "origin": "-47.999023 -244.246002 -238.000000",
     "angles": "-0.000000 -179.999939 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330639",
-    "model": "maps/ze_trepang/entities/object83_attack_jump_hurt_330639.vmdl",
+    "hammerUniqueId": "358656",
+    "model": "maps/ze_trepang/entities/object83_attack_jump_hurt_358656.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {

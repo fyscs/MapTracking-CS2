@@ -60,6 +60,9 @@
     "mapUsageType": "skybox"
   },
   {
+    "bakedshadowindex": "0",
+    "light_map_uniqueid": "-1685008104",
+    "light_path_uniqueid": "1351499617",
     "brightness_legacy": "-nan(ind)",
     "brightness_lumens": "0",
     "ambient_occlusion_proxy_ambient_strength": "1.000000",
@@ -89,7 +92,7 @@
     "skyintensity": "0.000000",
     "skycolor": "87 99 119",
     "bouncescale": "1.600000",
-    "directlight": "2",
+    "directlight": "1",
     "fademaxdist": "",
     "fademindist": "",
     "nearclipplane": "0.000000",

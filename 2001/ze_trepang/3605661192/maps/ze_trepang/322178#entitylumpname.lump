@@ -112,8 +112,8 @@
     "origin": "26.000000 1.385742 10.000000",
     "angles": "-0.000000 -90.000038 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344707",
-    "model": "maps/ze_trepang/entities/zmitem_smoke03_button_344707.vmdl",
+    "hammerUniqueId": "369881",
+    "model": "maps/ze_trepang/entities/zmitem_smoke03_button_369881.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -321,9 +321,9 @@
     "targetname": "[PR#]smokegrenade03_dummy",
     "classname": "prop_dynamic",
     "origin": "27.791992 1.400391 8.010742",
-    "angles": "-0.000000 0.000014 0.000000",
+    "angles": "-0.000000 0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348526",
+    "hammerUniqueId": "367578",
     "_template_lump_ent_index": "4"
   },
   {
@@ -393,9 +393,9 @@
     "targetname": "[PR#]smokegrenade03_axis",
     "classname": "prop_dynamic",
     "origin": "27.791992 1.400391 8.010742",
-    "angles": "-0.000000 0.000014 0.000000",
+    "angles": "-0.000000 0.000027 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "348525",
+    "hammerUniqueId": "367577",
     "_template_lump_ent_index": "5"
   },
   {

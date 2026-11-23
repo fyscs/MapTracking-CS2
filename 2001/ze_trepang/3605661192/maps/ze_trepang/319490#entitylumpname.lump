@@ -92,10 +92,10 @@
     "targetname": "[PR#]item_DMR04_Detect",
     "classname": "func_physbox",
     "origin": "-2.080078 0.000000 -2.000000",
-    "angles": "-0.000007 0.000000 -0.000027",
+    "angles": "-0.000007 0.000000 -0.000041",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344154",
-    "model": "maps/ze_trepang/entities/item_dmr04_detect_344154.vmdl",
+    "hammerUniqueId": "369519",
+    "model": "maps/ze_trepang/entities/item_dmr04_detect_369519.vmdl",
     "_template_lump_ent_index": "1",
     "connections": [
       {
@@ -123,10 +123,10 @@
     "targetname": "[PR#]item_DMR04_Hurt",
     "classname": "trigger_once",
     "origin": "-2.080078 0.000000 -2.000000",
-    "angles": "-0.000007 0.000000 -0.000014",
+    "angles": "-0.000007 0.000000 -0.000027",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330451",
-    "model": "maps/ze_trepang/entities/item_dmr04_hurt_330451.vmdl",
+    "hammerUniqueId": "358468",
+    "model": "maps/ze_trepang/entities/item_dmr04_hurt_358468.vmdl",
     "_template_lump_ent_index": "2",
     "connections": [
       {
@@ -240,8 +240,8 @@
     "origin": "-11.136719 -0.694336 -3.566406",
     "angles": "-0.000004 90.000000 0.000048",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "344377",
-    "model": "maps/ze_trepang/entities/item_dmr04_move_344377.vmdl",
+    "hammerUniqueId": "369293",
+    "model": "maps/ze_trepang/entities/item_dmr04_move_369293.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {
@@ -269,10 +269,10 @@
     "targetname": "[PR#]item_DMR04_NPCHurt",
     "classname": "trigger_once",
     "origin": "-2.080078 0.000000 -2.000000",
-    "angles": "-0.000007 0.000000 -0.000014",
+    "angles": "-0.000007 0.000000 -0.000027",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "330453",
-    "model": "maps/ze_trepang/entities/item_dmr04_npchurt_330453.vmdl",
+    "hammerUniqueId": "358470",
+    "model": "maps/ze_trepang/entities/item_dmr04_npchurt_358470.vmdl",
     "_template_lump_ent_index": "5",
     "connections": [
       {

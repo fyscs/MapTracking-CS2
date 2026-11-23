@@ -85,7 +85,7 @@
     "origin": "0.000000 0.000000 -10.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "350184",
+    "hammerUniqueId": "364165",
     "_template_lump_ent_index": "0"
   },
   {
@@ -331,8 +331,8 @@
     "origin": "0.000000 0.000000 -10.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "331095",
-    "model": "maps/ze_trepang/entities/hegrenade04_ignite_331095.vmdl",
+    "hammerUniqueId": "359112",
+    "model": "maps/ze_trepang/entities/hegrenade04_ignite_359112.vmdl",
     "_template_lump_ent_index": "4",
     "connections": [
       {

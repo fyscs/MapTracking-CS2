@@ -57,7 +57,7 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "maps/ze_trepang/entities/object83_shield_346122.vmdl",
+    "model": "maps/ze_trepang/entities/object83_shield_365175.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
     "local.scales": "0.000000 0.000000 0.000000",
@@ -71,7 +71,7 @@
     "origin": "-49.070312 -216.867493 217.809570",
     "angles": "-0.000000 -89.999947 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "346122",
+    "hammerUniqueId": "365175",
     "_template_lump_ent_index": "0",
     "connections": [
       {
