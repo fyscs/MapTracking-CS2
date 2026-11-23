@@ -105328,6 +105328,22 @@
         "param": "disableinf",
         "delay": 10,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Act3_AfkTp_H2_tpfix",
+        "input": "Enable",
+        "param": "",
+        "delay": 13,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Act3_AfkTp_H2_tpfix",
+        "input": "Disable",
+        "param": "",
+        "delay": 15,
+        "limit": 1
       }
     ]
   },
@@ -220386,7 +220402,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Item_Skin_Dante_Counter_SDT",
         "input": "Add",
-        "param": "0.05",
+        "param": "0.04",
         "delay": 0,
         "limit": -1
       },
@@ -328270,7 +328286,7 @@
         "limit": -1
       },
       {
-        "output": "OnTrigger",
+        "output": "X",
         "target": "[PR#]Item_Skin_Nero_Physbox",
         "input": "SetHealth",
         "param": "420",
@@ -328278,7 +328294,7 @@
         "limit": 1
       },
       {
-        "output": "OnTrigger",
+        "output": "X",
         "target": "[PR#]Item_Skin_Dante_Physbox",
         "input": "SetHealth",
         "param": "550",
@@ -404497,5 +404513,51 @@
         "limit": 1
       }
     ]
+  },
+  {
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "targetname": "[PR#]Act3_AfkTp_H2_fix",
+    "vscripts": "",
+    "classname": "info_teleport_destination",
+    "origin": "-7066.000000 -9096.000000 6305.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21941"
+  },
+  {
+    "check_if_dest_clear_for_player": "0",
+    "mirror_player": "0",
+    "use_landmark_angles": "0",
+    "landmark": "",
+    "target": "[PR#]Act3_AfkTp_H2_fix",
+    "filtername": "[PR#]Filter_Human",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Act3_AfkTp_H2_tpfix",
+    "classname": "trigger_teleport",
+    "origin": "-11355.404297 -3011.842285 6468.750000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21944",
+    "model": "maps/ze_devil_may_cry/entities/act3_afktp_h2_tpfix_21944.vmdl"
   }
 ]

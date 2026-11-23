@@ -139,7 +139,7 @@
         "target": "[PR#]Item_Skin_Dante_Sfx_RG_Box",
         "input": "Kill",
         "param": "",
-        "delay": 0.4000000059604645,
+        "delay": 0.15000000596046448,
         "limit": 1
       },
       {
@@ -155,7 +155,7 @@
         "target": "[PR#]Item_Skin_Dante_Sfx_RG_Box",
         "input": "SetParent",
         "param": "[PR#]Item_Skin_Dante_Knife",
-        "delay": 0,
+        "delay": 0.009999999776482582,
         "limit": 1
       }
     ]
