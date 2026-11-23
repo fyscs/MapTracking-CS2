@@ -45827,8 +45827,8 @@
     "parentAttachmentName": "",
     "parentname": "",
     "classname": "prop_physics",
-    "origin": "-6684.011719 -4124.002441 5316.498535",
-    "angles": "0.848426 0.006016 -0.002099",
+    "origin": "-6684.010742 -4124.002441 5316.498535",
+    "angles": "0.848474 0.006044 -0.001903",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14293"
   },
@@ -45913,8 +45913,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-6776.297852 -4124.003418 5326.940430",
-    "angles": "23.359100 0.004476 -0.001449",
+    "origin": "-6776.297852 -4124.003418 5326.940918",
+    "angles": "23.360043 0.004884 -0.001249",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "14294"
   },
@@ -343355,22 +343355,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]soundtrack_3",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]zmtp5",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]zm_tp1all",
         "input": "Enable",
         "param": "",
@@ -343388,9 +343372,9 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]road_button",
-        "input": "Disable",
+        "input": "Kill",
         "param": "",
-        "delay": 0.05000000074505806,
+        "delay": 0,
         "limit": 1
       },
       {
@@ -343435,8 +343419,8 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]road_button",
-        "input": "Press",
+        "target": "[PR#]buttonlight_hell_relay_debug",
+        "input": "Trigger",
         "param": "",
         "delay": 0,
         "limit": 1
@@ -343716,6 +343700,157 @@
         "input": "Enable",
         "param": "",
         "delay": 0.05000000074505806,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "PassthroughCaller": "0",
+    "FastRetrigger": "0",
+    "TriggerOnce": "0",
+    "StartDisabled": "0",
+    "vscripts": "",
+    "targetname": "[PR#]buttonlight_hell_relay_debug",
+    "classname": "logic_relay",
+    "origin": "-3194.000000 845.500000 7312.000488",
+    "angles": "0.000000 270.000031 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "64153",
+    "connections": [
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]buttonlight_exchange",
+        "input": "DestroyImmediately",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]buttonlight_hell",
+        "input": "DestroyImmediately",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]buttonlight_hell_combine",
+        "input": "DestroyImmediately",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]buttonlight1",
+        "input": "DestroyImmediately",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]game_money1",
+        "input": "AddTeamMoneyCT",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]road_button_hell",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]road_button_hell_combine",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]road_buttonchange",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]road_combined",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]road_sign1",
+        "input": "Skin",
+        "param": "3",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]road_sign2",
+        "input": "Skin",
+        "param": "4",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]soundtrack_hellsoundfinal",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]soundtrack_pd2",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]text_hellroad",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]text_hellroad_1",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]text_roadexchange",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]zm_tp1all",
+        "input": "Enable",
+        "param": "",
+        "delay": 5,
         "limit": 1
       }
     ]
