@@ -132,11 +132,11 @@
       },
       {
         "output": "OnBreak",
-        "target": "[PR#]EXHP06",
+        "target": "[PR#]EXHP*",
         "input": "DestroyImmediately",
         "param": "",
         "delay": 0,
-        "limit": 1
+        "limit": -1
       }
     ]
   }

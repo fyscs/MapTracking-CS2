@@ -245,8 +245,6 @@
     "precomputedobbangles": "9.000000 2.000000 4.000000",
     "precomputedobborigin": "14952.973633 15436.987305 -3441.942871",
     "precomputedfieldsvalid": "1",
-    "transmit_always": "0",
-    "bakespeculartocubemaps_scale": "1.000000",
     "light_style_target3": "",
     "light_style_target2": "",
     "light_style_target1": "",
@@ -256,6 +254,7 @@
     "light_style_output_event1": "",
     "light_style_output_event0": "",
     "light_style": "fast_strobe",
+    "transmit_always": "0",
     "fade_size_end": "0.025000",
     "fade_size_start": "0.050000",
     "showlight": "0",
@@ -268,6 +267,7 @@
     "shadowmapsize": "-1",
     "castshadows": "2",
     "minroughness": "0.000000",
+    "bakespeculartocubemaps_scale": "1.000000",
     "bakespeculartocubemaps": "0",
     "lightcookie": "",
     "inner_angle": "180.000000",
@@ -302,7 +302,7 @@
     "origin": "0.000000 0.000000 -6.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "283147",
+    "hammerUniqueId": "373526",
     "_template_lump_ent_index": "3"
   },
   {
