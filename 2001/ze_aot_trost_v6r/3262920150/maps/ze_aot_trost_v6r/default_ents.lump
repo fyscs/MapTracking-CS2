@@ -8980,7 +8980,7 @@
         "output": "OnPass",
         "target": "!activator",
         "input": "KeyValue",
-        "param": "speed 3",
+        "param": "speed 2",
         "delay": 0,
         "limit": -1
       },
@@ -8997,7 +8997,7 @@
         "target": "[PR#]qxz1_button",
         "input": "Unlock",
         "param": "",
-        "delay": 30,
+        "delay": 20,
         "limit": -1
       },
       {
@@ -15745,9 +15745,17 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]round_relay",
-        "input": "Trigger",
+        "input": "disable",
         "param": "",
         "delay": 74.0999984741211,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]lv2_final_door",
+        "input": "Open",
+        "param": "",
+        "delay": 37,
         "limit": 1
       }
     ]
@@ -18016,10 +18024,10 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]round_relay",
-        "input": "Trigger",
+        "target": "[PR#]lv1_final_door",
+        "input": "Open",
         "param": "",
-        "delay": 59,
+        "delay": 22,
         "limit": 1
       }
     ]
@@ -18480,10 +18488,10 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]round_relay",
-        "input": "Trigger",
+        "target": "[PR#]lv2_final_door",
+        "input": "Open",
         "param": "",
-        "delay": 54,
+        "delay": 17,
         "limit": 1
       }
     ]
@@ -18496,14 +18504,14 @@
     "loopmovesound": "0",
     "_minlight": "",
     "spawnflags": "4096",
-    "spawnpos": "1",
+    "spawnpos": "0",
     "unlocked_sound": "",
     "locked_sound": "",
     "health": "0",
     "message": "",
     "ignoredebris": "0",
     "forceclosed": "0",
-    "dmg": "99999",
+    "dmg": "999999999",
     "lip": "0",
     "wait": "-1",
     "closesound": "",
@@ -22738,7 +22746,7 @@
     "loopmovesound": "0",
     "_minlight": "",
     "spawnflags": "4096",
-    "spawnpos": "1",
+    "spawnpos": "0",
     "unlocked_sound": "",
     "locked_sound": "",
     "health": "0",
@@ -25344,6 +25352,14 @@
         "input": "getvalue",
         "param": "",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnMapSpawn",
+        "target": "[PR#]round_relay",
+        "input": "trigger",
+        "param": "",
+        "delay": 0.5,
         "limit": -1
       }
     ]
@@ -33719,10 +33735,10 @@
       },
       {
         "output": "OnStartTouch",
-        "target": "[PR#]round_relay",
-        "input": "Trigger",
+        "target": "[PR#]lv1_final_door",
+        "input": "Open",
         "param": "",
-        "delay": 49,
+        "delay": 12,
         "limit": 1
       }
     ]
@@ -34828,7 +34844,7 @@
     "color": "236 236 236",
     "fullbright": "1",
     "enabled": "1",
-    "message": "version:2026.11.19",
+    "message": "version:2026.11.23",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -40431,7 +40447,7 @@
     "color": "255 0 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u5E73\u8861\u65E5\u5FD7\uFF1A\n\u9AD8\u8DF32CD\u51CF\u5C11\u4E3A4\u79D2\n\u96F7\u67AA\u51CF\u901F\u500D\u7387\u589E\u5F3A\u4E3A\u81F30.2\n\u8D85\u5DE8CD\u51CF\u5C11\u4E3A60S\n\u706B\u6301\u7EED\u65F6\u95F4\u51CF\u5C11\u4E3A8\u79D2\n\u51B0\u65B0\u589E\u673A\u5236\uFF1A\u7981\u7528\u9AD8\u63111\u79D2\n\u5730\u56FE\u7A7A\u4E2D\u52A0\u901F\u6570\u503C\u56DE\u8C03\u4E3A20\nlv3lv4\u670925%\u6982\u7387\u80FD\u62FE\u53D6\u8D85\u5927\u578B\u5DE8\u4EBA",
+    "message": "\u5E73\u8861\u65E5\u5FD7\uFF1A\n\u9AD8\u8DF32CD\u51CF\u5C11\u4E3A4\u79D2\n\u96F7\u67AA\u51CF\u901F\u500D\u7387\u589E\u5F3A\u4E3A\u81F30.2\n\u8D85\u5DE8CD\u51CF\u5C11\u4E3A60S\n\u706B\u6301\u7EED\u65F6\u95F4\u51CF\u5C11\u4E3A8\u79D2\n\u51B0\u65B0\u589E\u673A\u5236\uFF1A\u7981\u7528\u9AD8\u63111\u79D2\n\u5730\u56FE\u7A7A\u4E2D\u52A0\u901F\u6570\u503C\u56DE\u8C03\u4E3A60\nlv3lv4\u670925%\u6982\u7387\u80FD\u62FE\u53D6\u8D85\u5927\u578B\u5DE8\u4EBA",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
