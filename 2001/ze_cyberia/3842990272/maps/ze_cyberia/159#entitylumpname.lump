@@ -421,7 +421,7 @@
     "damage": "-50",
     "master": "",
     "filtername": "[PR#]filter_humans",
-    "spawnflags": "1",
+    "spawnflags": "268435457",
     "globalname": "",
     "StartDisabled": "1",
     "local.scales": "0.000000 0.000000 0.000000",
