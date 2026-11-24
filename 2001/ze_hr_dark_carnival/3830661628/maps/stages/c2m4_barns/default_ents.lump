@@ -1584,7 +1584,7 @@
     "hammerUniqueId": "5329"
   },
   {
-    "fadetime": "1.000000",
+    "fadetime": "15.000000",
     "exposurespeeddown": "1.000000",
     "exposurespeedup": "1.000000",
     "enableexposure": "1",
@@ -4704,6 +4704,14 @@
         "input": "RunScriptInput",
         "param": "Refresh",
         "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]m4_zombie_spawn_ptp_cs2_ze",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
         "limit": -1
       }
     ]
@@ -25381,8 +25389,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-98.863441 1117.334595 -191.900146",
-    "angles": "0.003568 30.000536 0.011614",
+    "origin": "-98.863419 1117.334595 -191.900177",
+    "angles": "0.003565 30.000536 0.011553",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6907"
   },
@@ -26602,8 +26610,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-113.623283 1102.330200 -150.206375",
-    "angles": "-0.005758 75.000175 0.010703",
+    "origin": "-113.623283 1102.330200 -150.206406",
+    "angles": "-0.005728 75.000175 0.010686",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6921"
   },
@@ -26950,8 +26958,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-75.418800 1108.019653 -149.144760",
-    "angles": "44.964035 129.509109 82.223061",
+    "origin": "-75.420212 1108.021118 -149.144791",
+    "angles": "45.008064 129.505249 82.217178",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "6925"
   },
@@ -34902,8 +34910,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-302.001556 644.623413 -136.149551",
-    "angles": "-0.939299 95.710472 -69.095940",
+    "origin": "-301.940796 644.303955 -136.182724",
+    "angles": "1.643398 90.127472 -68.777771",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7016"
   },
@@ -37690,8 +37698,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-302.623047 674.121826 -177.823746",
-    "angles": "-27.372578 189.704147 167.245621",
+    "origin": "-302.620117 673.938171 -177.808105",
+    "angles": "-27.014669 189.342072 167.297531",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7048"
   },
@@ -37778,8 +37786,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-262.587097 695.581604 -178.075897",
-    "angles": "0.001318 207.433487 166.224945",
+    "origin": "-263.223572 695.241150 -178.078354",
+    "angles": "-0.004701 207.370438 166.207489",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7049"
   },
@@ -38042,8 +38050,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-295.812042 625.361877 -177.991547",
-    "angles": "-36.313858 357.150665 169.277237",
+    "origin": "-294.496429 625.665771 -177.977921",
+    "angles": "-36.727608 357.035706 169.637650",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7052"
   },
@@ -38130,8 +38138,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-281.351532 618.250488 -178.001114",
-    "angles": "-3.359183 159.379562 166.028305",
+    "origin": "-280.121185 616.648438 -177.987823",
+    "angles": "-36.268711 147.371552 169.303726",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "7053"
   },
@@ -51921,7 +51929,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]m4_zombie_spawn_ptp_cs2_ze",
+    "targetname": "[PR#]m4_zombie_spawn_gate_ptp_cs2_ze",
     "classname": "point_teleport",
     "origin": "-3028.000000 1216.000000 -248.000000",
     "angles": "0.000000 0.000000 0.000000",
@@ -51940,7 +51948,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]m4_zombie_spawn_ptp_cs2_ze",
+    "targetname": "[PR#]m4_zombie_spawn_gate_ptp_cs2_ze",
     "classname": "point_teleport",
     "origin": "-3080.000244 1672.000000 -249.000000",
     "angles": "0.000000 270.000000 0.000000",
@@ -52396,7 +52404,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]m4_zombie_spawn_ptp_cs2_ze",
+    "targetname": "[PR#]m4_zombie_spawn_gate_ptp_cs2_ze",
     "classname": "point_teleport",
     "origin": "-2416.000000 1072.000000 -248.000000",
     "angles": "0.000000 180.000061 0.000000",
