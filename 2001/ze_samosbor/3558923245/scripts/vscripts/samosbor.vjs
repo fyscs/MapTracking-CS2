@@ -650,7 +650,7 @@ const HUD_ALL_PANELS = [
     "knife_frenzy_banner",
 ];
 
-const VERSION = "25/10/26";
+const VERSION = "24/11/26";
 
 
 
@@ -2356,7 +2356,7 @@ Instance.OnRoundStart(() => {
     Instance.Delay(1.20).then(() => { Instance.ServerCommand(`say < Map Version: ${VERSION} >`) });
 
     recursive_fix = Instance.FindEntityByName("recursive_fix");
-    HUD_ENT = Instance.FindEntityByName("Map_Hud");
+    HUD_ENT = Instance.FindEntityByName(is_fys ? "Map_Hud_Fys" : "Map_Hud");
 
     if(isSurvivalMode)
     {
@@ -3372,7 +3372,9 @@ Instance.OnScriptInput("FloorElevatorInsideTeleport", ({ caller, activator }) =>
 });
 
 Instance.OnScriptInput("SetFysSkins", ({ caller, activator }) => {
+    CloseAllHud();
     is_fys = true;
+    HUD_ENT = Instance.FindEntityByName("Map_Hud_Fys");
 });
 
 Instance.OnScriptInput("PressElevatorOutsideButton", ({ caller, activator }) => {
@@ -5473,7 +5475,7 @@ function ResetMusicList()
 
 function ResetScript()
 {
-    HUD_ENT = Instance.FindEntityByName("Map_Hud");
+    HUD_ENT = Instance.FindEntityByName(is_fys ? "Map_Hud_Fys" : "Map_Hud");
 
     CHUNKS = {
     NORMAL_CHUNKS: [],
