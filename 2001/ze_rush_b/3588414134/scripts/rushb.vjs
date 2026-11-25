@@ -397,11 +397,11 @@ function formatTimer(seconds)
 
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    const millis = Math.floor((seconds % 1) * 100);
+//    const millis = Math.floor((seconds % 1) * 100);
 
     const pad = (n) => n.toString().padStart(2, '0');
 
-    return `${pad(minutes)}:${pad(secs)}:${pad(millis)}`;
+    return `${pad(minutes)}:${pad(secs)}`;
 }
 
 function isPlayerInRadius(playerPos, centerPos, radius) {
