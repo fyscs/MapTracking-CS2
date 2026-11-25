@@ -183,7 +183,7 @@
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]nuts",
+    "parentname": "[PR#]nuts_elite",
     "vscripts": "",
     "targetname": "[PR#]nuts_maker",
     "classname": "env_entity_maker",
@@ -204,7 +204,6 @@
     ]
   },
   {
-    "modelscale": "0.600000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -270,12 +269,12 @@
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]nuts",
+    "parentname": "[PR#]nuts_elite",
     "targetname": "[PR#]nuts_model",
     "classname": "prop_dynamic",
     "origin": "60.000000 -2.899902 -16.900024",
     "angles": "-0.000000 164.999985 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "0.600000 0.600000 0.600000",
     "hammerUniqueId": "5033",
     "_template_lump_ent_index": "4"
   }

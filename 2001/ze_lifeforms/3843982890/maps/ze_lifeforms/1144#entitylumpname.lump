@@ -355,14 +355,6 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_sprite_main",
-        "input": "Kill",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnTrigger",
         "target": "[PR#]x_boss_fade_ boss_die",
         "input": "Fade",
         "param": "",
@@ -404,7 +396,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]s2_toggle_platform_end_a",
-        "input": "Kill",
+        "input": "Disable",
         "param": "",
         "delay": 0.30000001192092896,
         "limit": 1
@@ -538,7 +530,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "40",
     "damage": "100",
     "master": "",
@@ -629,7 +621,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]s2_toggle_platform_end_a",
-        "input": "Toggle",
+        "input": "Disable",
         "param": "",
         "delay": 0.4000000059604645,
         "limit": 1
@@ -653,7 +645,7 @@
       {
         "output": "OnTrigger",
         "target": "[PR#]s2_toggle_platform_end_a",
-        "input": "Toggle",
+        "input": "Enable",
         "param": "",
         "delay": 40,
         "limit": 1
@@ -2122,7 +2114,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2203,7 +2194,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2284,7 +2274,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2365,7 +2354,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2446,7 +2434,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2527,7 +2514,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2608,7 +2594,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2689,7 +2674,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2770,7 +2754,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2851,7 +2834,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -2932,7 +2914,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3013,7 +2994,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3094,7 +3074,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3175,7 +3154,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3256,7 +3234,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3337,7 +3314,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3418,7 +3394,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3499,7 +3474,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3580,7 +3554,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3661,7 +3634,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3742,7 +3714,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3823,7 +3794,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3904,7 +3874,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3985,7 +3954,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4066,7 +4034,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4147,7 +4114,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4228,7 +4194,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4309,7 +4274,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4390,7 +4354,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4471,7 +4434,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4552,7 +4514,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4633,7 +4594,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4714,7 +4674,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4795,7 +4754,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4876,7 +4834,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4957,7 +4914,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5038,7 +4994,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5119,7 +5074,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5200,7 +5154,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5281,7 +5234,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5362,7 +5314,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5443,7 +5394,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5524,7 +5474,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -5605,7 +5554,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -6942,7 +6890,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]s2_toggle_before_water",
-        "input": "Toggle",
+        "input": "Enable",
         "param": "",
         "delay": 70,
         "limit": 1
@@ -7070,7 +7018,7 @@
       {
         "output": "OnStartTouch",
         "target": "[PR#]s2_toggle_before_water",
-        "input": "Toggle",
+        "input": "Disable",
         "param": "",
         "delay": 77,
         "limit": 1

@@ -109,7 +109,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "40",
     "damage": "100",
     "master": "",
@@ -134,7 +134,6 @@
     "_template_lump_ent_index": "1"
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",

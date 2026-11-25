@@ -30,7 +30,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "0.750000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -87,7 +86,7 @@
     "disableshadows": "0",
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
-    "skin": "1",
+    "skin": "2",
     "model": "models/m4dara/gonarch_bomb.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
@@ -101,7 +100,7 @@
     "classname": "prop_dynamic_override",
     "origin": "0.000000 0.000000 0.380005",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "0.750000 0.750000 0.750000",
     "hammerUniqueId": "680",
     "_template_lump_ent_index": "1"
   },

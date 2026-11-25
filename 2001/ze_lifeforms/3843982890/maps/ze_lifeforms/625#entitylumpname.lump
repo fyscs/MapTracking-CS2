@@ -285,7 +285,6 @@
     ]
   },
   {
-    "modelscale": "1.200000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -356,7 +355,7 @@
     "classname": "prop_dynamic",
     "origin": "0.000000 0.000000 -0.900024",
     "angles": "-0.000000 164.999985 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "1.200000 1.200000 1.200000",
     "hammerUniqueId": "5034",
     "_template_lump_ent_index": "4"
   },

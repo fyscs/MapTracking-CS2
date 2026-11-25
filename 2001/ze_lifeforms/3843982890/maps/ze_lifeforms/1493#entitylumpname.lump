@@ -84,7 +84,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "25",
     "damage": "50",
     "master": "",
@@ -140,7 +140,7 @@
     "fademindist": "-1.000000",
     "disablereceiveshadows": "1",
     "rendercolor": "246 255 0",
-    "renderamt": "25",
+    "renderamt": "75",
     "rendermode": "kRenderNormal",
     "renderfx": "kRenderFxNone",
     "local.scales": "1.000000 1.000000 1.000000",
@@ -160,7 +160,6 @@
     "_template_lump_ent_index": "2"
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",

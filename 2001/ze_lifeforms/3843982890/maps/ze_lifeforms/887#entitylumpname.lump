@@ -27,7 +27,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]st3_cipher_health_counter",
         "input": "Add",
-        "param": "360",
+        "param": "306",
         "delay": 0,
         "limit": -1
       }
@@ -1232,6 +1232,14 @@
         "param": "",
         "delay": 85,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "EnableZombieItems",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -1661,7 +1669,7 @@
     "_template_lump_ent_index": "17"
   },
   {
-    "max": "99999999",
+    "max": "999999",
     "min": "0",
     "startvalue": "0",
     "StartDisabled": "0",
@@ -1765,7 +1773,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "20",
     "damage": "80",
     "master": "",
@@ -1813,7 +1821,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.300000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -1886,7 +1893,7 @@
     "classname": "prop_dynamic",
     "origin": "168.000000 -560.000000 -8.069824",
     "angles": "-0.000000 -90.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "1.300000 1.300000 1.300000",
     "hammerUniqueId": "5133",
     "_template_lump_ent_index": "22"
   },
@@ -1994,6 +2001,14 @@
         "input": "SetDamageFilter",
         "param": "",
         "delay": 0.03999999910593033,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Map_Script",
+        "input": "RunScriptInput",
+        "param": "DisableZombieItems",
+        "delay": 0,
         "limit": 1
       }
     ]

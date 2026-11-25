@@ -91,7 +91,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_p_exp_pull\u00260000",
+    "targetname": "[PR#]8_p_exp_pull",
     "classname": "info_particle_system",
     "origin": "0.000000 -8.000000 728.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -188,7 +188,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_p_exp_push\u00260000",
+    "targetname": "[PR#]8_p_exp_push",
     "classname": "info_particle_system",
     "origin": "0.000000 -8.000000 728.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -285,7 +285,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_p_start_pull_to_pull\u00260000",
+    "targetname": "[PR#]8_p_start_pull_to_pull",
     "classname": "info_particle_system",
     "origin": "0.000000 0.000000 256.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -382,7 +382,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_p_start_pull_to_push\u00260000",
+    "targetname": "[PR#]8_p_start_pull_to_push",
     "classname": "info_particle_system",
     "origin": "0.000000 0.000000 256.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -479,7 +479,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_p_start_push_to_pull\u00260000",
+    "targetname": "[PR#]8_p_start_push_to_pull",
     "classname": "info_particle_system",
     "origin": "0.000000 0.000000 256.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -576,7 +576,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_p_start_push_to_push\u00260000",
+    "targetname": "[PR#]8_p_start_push_to_push",
     "classname": "info_particle_system",
     "origin": "0.000000 0.000000 256.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -602,7 +602,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_a\u00260000",
+    "targetname": "[PR#]8_pull_a",
     "classname": "trigger_push",
     "origin": "8.919922 1095.030029 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -627,7 +627,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_b\u00260000",
+    "targetname": "[PR#]8_pull_b",
     "classname": "trigger_push",
     "origin": "-1077.200195 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -654,7 +654,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_c\u00260000",
+    "targetname": "[PR#]8_pull_c",
     "classname": "trigger_push",
     "origin": "8.919922 -1077.199951 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -681,7 +681,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_d\u00260000",
+    "targetname": "[PR#]8_pull_d",
     "classname": "trigger_push",
     "origin": "1095.000000 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -703,7 +703,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_up_a\u00260000",
+    "targetname": "[PR#]8_pull_up_a",
     "classname": "trigger_multiple",
     "origin": "8.919922 1095.030029 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -735,7 +735,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_up_b\u00260000",
+    "targetname": "[PR#]8_pull_up_b",
     "classname": "trigger_multiple",
     "origin": "-1077.200195 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -767,7 +767,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_up_c\u00260000",
+    "targetname": "[PR#]8_pull_up_c",
     "classname": "trigger_multiple",
     "origin": "8.919922 -1077.199951 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -799,7 +799,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_pull_up_d\u00260000",
+    "targetname": "[PR#]8_pull_up_d",
     "classname": "trigger_multiple",
     "origin": "1095.000000 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -836,7 +836,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_a\u00260000",
+    "targetname": "[PR#]8_push_a",
     "classname": "trigger_push",
     "origin": "8.919922 1095.030029 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -861,7 +861,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_b\u00260000",
+    "targetname": "[PR#]8_push_b",
     "classname": "trigger_push",
     "origin": "-1077.200195 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -898,7 +898,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_c\u00260000",
+    "targetname": "[PR#]8_push_c",
     "classname": "trigger_push",
     "origin": "8.919922 -1077.199951 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -925,7 +925,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_d\u00260000",
+    "targetname": "[PR#]8_push_d",
     "classname": "trigger_push",
     "origin": "1095.000000 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -947,7 +947,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_up_a\u00260000",
+    "targetname": "[PR#]8_push_up_a",
     "classname": "trigger_multiple",
     "origin": "8.919922 1095.030029 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -979,7 +979,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_up_b\u00260000",
+    "targetname": "[PR#]8_push_up_b",
     "classname": "trigger_multiple",
     "origin": "-1077.200195 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -1011,7 +1011,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_up_c\u00260000",
+    "targetname": "[PR#]8_push_up_c",
     "classname": "trigger_multiple",
     "origin": "8.919922 -1077.199951 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -1043,7 +1043,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_push_up_d\u00260000",
+    "targetname": "[PR#]8_push_up_d",
     "classname": "trigger_multiple",
     "origin": "1095.000000 8.919998 472.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -1068,7 +1068,7 @@
     "TriggerOnce": "0",
     "StartDisabled": "0",
     "vscripts": "",
-    "targetname": "[PR#]8_relay_pull_then_pull\u00260000",
+    "targetname": "[PR#]8_relay_pull_then_pull",
     "classname": "logic_relay",
     "origin": "-8.000000 0.000000 232.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -1086,7 +1086,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_pull\u00260000",
+        "target": "[PR#]8_p_start_pull_to_pull",
         "input": "Start",
         "param": "",
         "delay": 0,
@@ -1094,7 +1094,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_a\u00260000",
+        "target": "[PR#]8_pull_a",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1102,7 +1102,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_b\u00260000",
+        "target": "[PR#]8_pull_b",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1110,7 +1110,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_c\u00260000",
+        "target": "[PR#]8_pull_c",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1118,7 +1118,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_d\u00260000",
+        "target": "[PR#]8_pull_d",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1126,7 +1126,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_pull\u00260000",
+        "target": "[PR#]8_p_exp_pull",
         "input": "Start",
         "param": "",
         "delay": 5.800000190734863,
@@ -1134,7 +1134,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_d\u00260000",
+        "target": "[PR#]8_pull_d",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1142,7 +1142,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_c\u00260000",
+        "target": "[PR#]8_pull_c",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1150,7 +1150,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_b\u00260000",
+        "target": "[PR#]8_pull_b",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1158,7 +1158,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_a\u00260000",
+        "target": "[PR#]8_pull_a",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1166,7 +1166,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1174,7 +1174,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1182,7 +1182,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1190,7 +1190,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1198,7 +1198,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1206,7 +1206,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1214,7 +1214,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1222,7 +1222,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1230,7 +1230,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1238,7 +1238,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_push\u00260000",
+        "target": "[PR#]8_p_exp_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1246,7 +1246,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_pull\u00260000",
+        "target": "[PR#]8_p_start_pull_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1254,7 +1254,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_pull\u00260000",
+        "target": "[PR#]8_p_exp_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1262,7 +1262,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1270,7 +1270,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1278,7 +1278,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1286,7 +1286,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1294,7 +1294,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_d\u00260000",
+        "target": "[PR#]8_push_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1302,7 +1302,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_c\u00260000",
+        "target": "[PR#]8_push_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1310,7 +1310,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_b\u00260000",
+        "target": "[PR#]8_push_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1318,7 +1318,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_a\u00260000",
+        "target": "[PR#]8_push_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1326,7 +1326,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1334,7 +1334,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_push\u00260000",
+        "target": "[PR#]8_p_start_pull_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1342,7 +1342,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "StartSound",
         "param": "",
         "delay": 1,
@@ -1350,7 +1350,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "StartSound",
         "param": "",
         "delay": 5.800000190734863,
@@ -1358,7 +1358,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1366,7 +1366,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1374,7 +1374,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_push\u00260000",
+        "target": "[PR#]8_p_start_push_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1382,7 +1382,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_c\u00260000",
+        "target": "[PR#]8_push_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1390,7 +1390,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_b\u00260000",
+        "target": "[PR#]8_push_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1398,7 +1398,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_a\u00260000",
+        "target": "[PR#]8_push_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1406,7 +1406,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_d\u00260000",
+        "target": "[PR#]8_push_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1420,7 +1420,7 @@
     "TriggerOnce": "0",
     "StartDisabled": "0",
     "vscripts": "",
-    "targetname": "[PR#]8_relay_pull_then_push\u00260000",
+    "targetname": "[PR#]8_relay_pull_then_push",
     "classname": "logic_relay",
     "origin": "-24.000000 0.000000 232.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -1438,7 +1438,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_push\u00260000",
+        "target": "[PR#]8_p_start_pull_to_push",
         "input": "Start",
         "param": "",
         "delay": 0,
@@ -1446,7 +1446,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_a\u00260000",
+        "target": "[PR#]8_pull_a",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1454,7 +1454,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_b\u00260000",
+        "target": "[PR#]8_pull_b",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1462,7 +1462,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_c\u00260000",
+        "target": "[PR#]8_pull_c",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1470,7 +1470,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_d\u00260000",
+        "target": "[PR#]8_pull_d",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1478,7 +1478,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_push\u00260000",
+        "target": "[PR#]8_p_exp_push",
         "input": "Start",
         "param": "",
         "delay": 5.800000190734863,
@@ -1486,7 +1486,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_d\u00260000",
+        "target": "[PR#]8_pull_d",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1494,7 +1494,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_c\u00260000",
+        "target": "[PR#]8_pull_c",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1502,7 +1502,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_b\u00260000",
+        "target": "[PR#]8_pull_b",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1510,7 +1510,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_a\u00260000",
+        "target": "[PR#]8_pull_a",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1518,7 +1518,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_a\u00260000",
+        "target": "[PR#]8_push_up_a",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1526,7 +1526,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_b\u00260000",
+        "target": "[PR#]8_push_up_b",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1534,7 +1534,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_c\u00260000",
+        "target": "[PR#]8_push_up_c",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1542,7 +1542,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_d\u00260000",
+        "target": "[PR#]8_push_up_d",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1550,7 +1550,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_d\u00260000",
+        "target": "[PR#]8_push_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1558,7 +1558,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_c\u00260000",
+        "target": "[PR#]8_push_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1566,7 +1566,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_b\u00260000",
+        "target": "[PR#]8_push_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1574,7 +1574,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_a\u00260000",
+        "target": "[PR#]8_push_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1582,7 +1582,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1590,7 +1590,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_push\u00260000",
+        "target": "[PR#]8_p_exp_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1598,7 +1598,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_pull\u00260000",
+        "target": "[PR#]8_p_start_pull_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1606,7 +1606,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_pull\u00260000",
+        "target": "[PR#]8_p_exp_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1614,7 +1614,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1622,7 +1622,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1630,7 +1630,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1638,7 +1638,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1646,7 +1646,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_d\u00260000",
+        "target": "[PR#]8_push_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1654,7 +1654,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_c\u00260000",
+        "target": "[PR#]8_push_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1662,7 +1662,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_b\u00260000",
+        "target": "[PR#]8_push_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1670,7 +1670,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_a\u00260000",
+        "target": "[PR#]8_push_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1678,7 +1678,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1686,7 +1686,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_push\u00260000",
+        "target": "[PR#]8_p_start_pull_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1694,7 +1694,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "StartSound",
         "param": "",
         "delay": 1,
@@ -1702,7 +1702,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "StartSound",
         "param": "",
         "delay": 5.800000190734863,
@@ -1710,7 +1710,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1718,7 +1718,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1726,7 +1726,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_push\u00260000",
+        "target": "[PR#]8_p_start_push_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1734,7 +1734,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_c\u00260000",
+        "target": "[PR#]8_push_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1742,7 +1742,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_b\u00260000",
+        "target": "[PR#]8_push_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1750,7 +1750,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_a\u00260000",
+        "target": "[PR#]8_push_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1758,7 +1758,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_d\u00260000",
+        "target": "[PR#]8_push_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1772,7 +1772,7 @@
     "TriggerOnce": "0",
     "StartDisabled": "0",
     "vscripts": "",
-    "targetname": "[PR#]8_relay_push_then_pull\u00260000",
+    "targetname": "[PR#]8_relay_push_then_pull",
     "classname": "logic_relay",
     "origin": "8.000000 0.000000 232.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -1790,7 +1790,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Start",
         "param": "",
         "delay": 0,
@@ -1798,7 +1798,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_a\u00260000",
+        "target": "[PR#]8_push_a",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1806,7 +1806,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_b\u00260000",
+        "target": "[PR#]8_push_b",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1814,7 +1814,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_c\u00260000",
+        "target": "[PR#]8_push_c",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1822,7 +1822,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_d\u00260000",
+        "target": "[PR#]8_push_d",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -1830,7 +1830,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_pull\u00260000",
+        "target": "[PR#]8_p_exp_pull",
         "input": "Start",
         "param": "",
         "delay": 5.800000190734863,
@@ -1838,7 +1838,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_d\u00260000",
+        "target": "[PR#]8_push_d",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1846,7 +1846,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_c\u00260000",
+        "target": "[PR#]8_push_c",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1854,7 +1854,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_b\u00260000",
+        "target": "[PR#]8_push_b",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1862,7 +1862,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_a\u00260000",
+        "target": "[PR#]8_push_a",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -1870,7 +1870,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1878,7 +1878,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1886,7 +1886,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1894,7 +1894,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -1902,7 +1902,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1910,7 +1910,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1918,7 +1918,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1926,7 +1926,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -1934,7 +1934,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1942,7 +1942,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_push\u00260000",
+        "target": "[PR#]8_p_exp_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1950,7 +1950,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_pull\u00260000",
+        "target": "[PR#]8_p_start_pull_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1958,7 +1958,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_pull\u00260000",
+        "target": "[PR#]8_p_exp_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1966,7 +1966,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1974,7 +1974,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1982,7 +1982,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1990,7 +1990,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -1998,7 +1998,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_d\u00260000",
+        "target": "[PR#]8_pull_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2006,7 +2006,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_c\u00260000",
+        "target": "[PR#]8_pull_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2014,7 +2014,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_b\u00260000",
+        "target": "[PR#]8_pull_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2022,7 +2022,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_a\u00260000",
+        "target": "[PR#]8_pull_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2030,7 +2030,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2038,7 +2038,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_push\u00260000",
+        "target": "[PR#]8_p_start_pull_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2046,7 +2046,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "StartSound",
         "param": "",
         "delay": 1,
@@ -2054,7 +2054,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "StartSound",
         "param": "",
         "delay": 5.800000190734863,
@@ -2062,7 +2062,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2070,7 +2070,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2078,7 +2078,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_push\u00260000",
+        "target": "[PR#]8_p_start_push_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2086,7 +2086,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_c\u00260000",
+        "target": "[PR#]8_push_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2094,7 +2094,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_b\u00260000",
+        "target": "[PR#]8_push_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2102,7 +2102,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_a\u00260000",
+        "target": "[PR#]8_push_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2110,7 +2110,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_d\u00260000",
+        "target": "[PR#]8_push_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2124,7 +2124,7 @@
     "TriggerOnce": "0",
     "StartDisabled": "0",
     "vscripts": "",
-    "targetname": "[PR#]8_relay_push_then_push\u00260000",
+    "targetname": "[PR#]8_relay_push_then_push",
     "classname": "logic_relay",
     "origin": "24.000000 0.000000 232.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -2142,7 +2142,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_push\u00260000",
+        "target": "[PR#]8_p_start_push_to_push",
         "input": "Start",
         "param": "",
         "delay": 0,
@@ -2150,7 +2150,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_a\u00260000",
+        "target": "[PR#]8_push_a",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -2158,7 +2158,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_b\u00260000",
+        "target": "[PR#]8_push_b",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -2166,7 +2166,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_c\u00260000",
+        "target": "[PR#]8_push_c",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -2174,7 +2174,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_d\u00260000",
+        "target": "[PR#]8_push_d",
         "input": "Enable",
         "param": "",
         "delay": 1,
@@ -2182,7 +2182,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_push\u00260000",
+        "target": "[PR#]8_p_exp_push",
         "input": "Start",
         "param": "",
         "delay": 5.800000190734863,
@@ -2190,7 +2190,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_d\u00260000",
+        "target": "[PR#]8_push_d",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -2198,7 +2198,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_c\u00260000",
+        "target": "[PR#]8_push_c",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -2206,7 +2206,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_b\u00260000",
+        "target": "[PR#]8_push_b",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -2214,7 +2214,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_a\u00260000",
+        "target": "[PR#]8_push_a",
         "input": "Kill",
         "param": "",
         "delay": 5.78000020980835,
@@ -2222,7 +2222,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_a\u00260000",
+        "target": "[PR#]8_push_up_a",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -2230,7 +2230,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_b\u00260000",
+        "target": "[PR#]8_push_up_b",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -2238,7 +2238,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_c\u00260000",
+        "target": "[PR#]8_push_up_c",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -2246,7 +2246,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_d\u00260000",
+        "target": "[PR#]8_push_up_d",
         "input": "Enable",
         "param": "",
         "delay": 5.800000190734863,
@@ -2254,7 +2254,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_d\u00260000",
+        "target": "[PR#]8_push_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -2262,7 +2262,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_c\u00260000",
+        "target": "[PR#]8_push_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -2270,7 +2270,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_b\u00260000",
+        "target": "[PR#]8_push_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -2278,7 +2278,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_push_up_a\u00260000",
+        "target": "[PR#]8_push_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6,
@@ -2286,7 +2286,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_push\u00260000",
+        "target": "[PR#]8_p_start_push_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2294,7 +2294,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_push\u00260000",
+        "target": "[PR#]8_p_exp_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2302,7 +2302,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_pull\u00260000",
+        "target": "[PR#]8_p_start_pull_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2310,7 +2310,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_pull\u00260000",
+        "target": "[PR#]8_p_exp_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2318,7 +2318,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_a\u00260000",
+        "target": "[PR#]8_pull_up_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2326,7 +2326,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_b\u00260000",
+        "target": "[PR#]8_pull_up_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2334,7 +2334,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_c\u00260000",
+        "target": "[PR#]8_pull_up_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2342,7 +2342,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_up_d\u00260000",
+        "target": "[PR#]8_pull_up_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2350,7 +2350,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_d\u00260000",
+        "target": "[PR#]8_pull_d",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2358,7 +2358,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_c\u00260000",
+        "target": "[PR#]8_pull_c",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2366,7 +2366,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_b\u00260000",
+        "target": "[PR#]8_pull_b",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2374,7 +2374,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_pull_a\u00260000",
+        "target": "[PR#]8_pull_a",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2382,7 +2382,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_push_to_pull\u00260000",
+        "target": "[PR#]8_p_start_push_to_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2390,7 +2390,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_start_pull_to_push\u00260000",
+        "target": "[PR#]8_p_start_pull_to_push",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2398,7 +2398,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "StartSound",
         "param": "",
         "delay": 1,
@@ -2406,7 +2406,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "StartSound",
         "param": "",
         "delay": 5.800000190734863,
@@ -2414,7 +2414,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_start_sound\u00260000",
+        "target": "[PR#]8_start_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2422,7 +2422,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_shockwave_sound\u00260000",
+        "target": "[PR#]8_shockwave_sound",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2430,7 +2430,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]8_p_exp_pull\u00260000",
+        "target": "[PR#]8_p_exp_pull",
         "input": "Kill",
         "param": "",
         "delay": 6.5,
@@ -2459,7 +2459,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_shockwave_sound\u00260000",
+    "targetname": "[PR#]8_shockwave_sound",
     "classname": "point_soundevent",
     "origin": "8.000000 0.000000 216.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -2488,7 +2488,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_shockwave_sound\u00260000",
+    "targetname": "[PR#]8_shockwave_sound",
     "classname": "point_soundevent",
     "origin": "8.000000 0.000000 216.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -2517,7 +2517,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_start_sound\u00260000",
+    "targetname": "[PR#]8_start_sound",
     "classname": "point_soundevent",
     "origin": "-8.000000 0.000000 216.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -2546,7 +2546,7 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]8_start_sound\u00260000",
+    "targetname": "[PR#]8_start_sound",
     "classname": "point_soundevent",
     "origin": "-8.000000 0.000000 216.000000",
     "angles": "-0.000000 0.000000 0.000000",

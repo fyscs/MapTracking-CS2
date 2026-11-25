@@ -594,7 +594,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "20",
     "damage": "110",
     "master": "",
@@ -985,7 +985,6 @@
     "_template_lump_ent_index": "24"
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -1099,8 +1098,8 @@
     "forgivedelay": "3.000000",
     "damagemodel": "0",
     "damagetype": "0",
-    "damagecap": "9999999",
-    "damage": "9999999",
+    "damagecap": "999999",
+    "damage": "999999",
     "master": "",
     "filtername": "[PR#]filter_humans",
     "spawnflags": "1",

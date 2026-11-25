@@ -28,7 +28,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]lifeform_health",
         "input": "Add",
-        "param": "70",
+        "param": "60",
         "delay": 0,
         "limit": -1
       }
@@ -4705,7 +4705,7 @@
     "local.origin": "0.000000 0.000000 0.000000",
     "useLocalOffset": "0",
     "parentAttachmentName": "",
-    "parentname": "[PR#]lifeform_move_model_d",
+    "parentname": "",
     "vscripts": "",
     "targetname": "[PR#]lifeform_rot_tentacles",
     "classname": "func_rotating",

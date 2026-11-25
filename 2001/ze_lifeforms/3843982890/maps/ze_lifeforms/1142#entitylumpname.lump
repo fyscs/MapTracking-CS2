@@ -1325,7 +1325,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "20",
     "damage": "110",
     "master": "",
@@ -2647,7 +2647,6 @@
     ]
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -2723,7 +2722,6 @@
     "_template_lump_ent_index": "40"
   },
   {
-    "modelscale": "1.000000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -2799,7 +2797,6 @@
     "_template_lump_ent_index": "41"
   },
   {
-    "modelscale": "1.000000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -2875,7 +2872,6 @@
     "_template_lump_ent_index": "42"
   },
   {
-    "modelscale": "1.000000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -2951,7 +2947,6 @@
     "_template_lump_ent_index": "43"
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -4420,7 +4415,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4499,7 +4493,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.000000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",

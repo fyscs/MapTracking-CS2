@@ -3,7 +3,7 @@
 
 [
   {
-    "max": "99999999",
+    "max": "999999",
     "min": "0",
     "startvalue": "0",
     "StartDisabled": "0",
@@ -359,7 +359,6 @@
     "_template_lump_ent_index": "5"
   },
   {
-    "modelscale": "0.700000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -430,7 +429,7 @@
     "classname": "prop_dynamic",
     "origin": "-372.000000 102.000000 12.000000",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "0.700000 0.700000 0.700000",
     "hammerUniqueId": "5325",
     "_template_lump_ent_index": "6"
   },

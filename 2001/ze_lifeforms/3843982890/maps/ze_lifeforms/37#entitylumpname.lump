@@ -2530,7 +2530,7 @@
   {
     "alternateticksfix": "0",
     "triggeronstarttouch": "0",
-    "speed": "500",
+    "speed": "350",
     "pushdir": "0.000000 90.000000 0.000000",
     "filtername": "",
     "spawnflags": "1",
@@ -2555,7 +2555,7 @@
   {
     "alternateticksfix": "0",
     "triggeronstarttouch": "0",
-    "speed": "500",
+    "speed": "350",
     "pushdir": "0.000000 270.000000 0.000000",
     "filtername": "",
     "spawnflags": "1",
@@ -3781,7 +3781,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "50",
     "damage": "60",
     "master": "",

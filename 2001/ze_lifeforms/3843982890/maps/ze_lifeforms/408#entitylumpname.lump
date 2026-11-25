@@ -110,7 +110,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "20",
     "damage": "40",
     "master": "",
@@ -135,7 +135,6 @@
     "_template_lump_ent_index": "2"
   },
   {
-    "modelscale": "1.150000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -206,7 +205,7 @@
     "classname": "prop_dynamic",
     "origin": "0.000000 0.000000 1.460083",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "1.150000 1.150000 1.150000",
     "hammerUniqueId": "4943",
     "_template_lump_ent_index": "3"
   },

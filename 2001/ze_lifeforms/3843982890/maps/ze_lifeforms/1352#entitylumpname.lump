@@ -226,7 +226,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "20",
     "damage": "42",
     "master": "",
@@ -243,7 +243,7 @@
     "vscripts": "",
     "targetname": "[PR#]r_t_x_hurt\u00260000",
     "classname": "trigger_hurt",
-    "origin": "0.000000 0.000000 0.000000",
+    "origin": "0.000000 4.000000 0.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1350",
@@ -251,7 +251,6 @@
     "_template_lump_ent_index": "3"
   },
   {
-    "modelscale": "1.600000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -322,7 +321,7 @@
     "classname": "prop_dynamic",
     "origin": "-2.600098 3.229980 0.900391",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "1.600000 1.600000 1.600000",
     "hammerUniqueId": "5183",
     "_template_lump_ent_index": "4"
   },

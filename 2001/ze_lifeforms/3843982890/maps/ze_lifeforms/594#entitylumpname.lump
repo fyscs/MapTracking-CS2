@@ -58,7 +58,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]x_boss_s2_health",
         "input": "Add",
-        "param": "40",
+        "param": "34",
         "delay": 0,
         "limit": -1
       }
@@ -232,7 +232,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "Start",
         "param": "",
         "delay": 0.019999999552965164,
@@ -256,7 +256,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "DestroyImmediately",
         "param": "",
         "delay": 2,
@@ -264,7 +264,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "Start",
         "param": "",
         "delay": 2.119999885559082,
@@ -280,7 +280,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "Start",
         "param": "",
         "delay": 4.21999979019165,
@@ -288,7 +288,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "DestroyImmediately",
         "param": "",
         "delay": 4.099999904632568,
@@ -296,7 +296,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "DestroyImmediately",
         "param": "",
         "delay": 6.199999809265137,
@@ -312,7 +312,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "Start",
         "param": "",
         "delay": 6.320000171661377,
@@ -320,7 +320,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]x_boss_s2_beam_a",
+        "target": "[PR#]x_boss_s2_exp_beam",
         "input": "DestroyImmediately",
         "param": "",
         "delay": 8.300000190734863,
@@ -2162,7 +2162,7 @@
     "decalname": "Bigshot",
     "damage": "0",
     "BoltWidth": "32",
-    "targetname": "[PR#]x_boss_s2_beam_a",
+    "targetname": "[PR#]x_boss_s2_exp_beam",
     "classname": "info_particle_system",
     "origin": "-1196.000000 -173.650391 222.000000",
     "angles": "-0.000000 0.000000 0.000000",
@@ -2215,7 +2215,7 @@
     "nodmgforce": "0",
     "forgivedelay": "3.000000",
     "damagemodel": "0",
-    "damagetype": "1024",
+    "damagetype": "0",
     "damagecap": "20",
     "damage": "35",
     "master": "",
@@ -3659,7 +3659,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.300000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -3732,7 +3731,7 @@
     "classname": "prop_dynamic",
     "origin": "-1288.000000 -168.000000 -8.000000",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "1.300000 1.300000 1.300000",
     "hammerUniqueId": "4911",
     "_template_lump_ent_index": "56"
   },

@@ -162,7 +162,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "0.750000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -233,7 +232,7 @@
     "classname": "prop_dynamic_override",
     "origin": "35.600586 0.279785 2.000000",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "0.750000 0.750000 0.750000",
     "hammerUniqueId": "687",
     "_template_lump_ent_index": "3"
   },

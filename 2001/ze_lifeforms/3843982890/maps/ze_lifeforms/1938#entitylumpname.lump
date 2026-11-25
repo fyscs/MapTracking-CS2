@@ -144,7 +144,6 @@
     ]
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -220,7 +219,6 @@
     "_template_lump_ent_index": "2"
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",

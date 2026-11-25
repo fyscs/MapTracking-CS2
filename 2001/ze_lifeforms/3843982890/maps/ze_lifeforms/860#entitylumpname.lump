@@ -697,7 +697,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.300000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -770,7 +769,7 @@
     "classname": "prop_dynamic",
     "origin": "628.000000 160.000000 4.000000",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "1.300000 1.300000 1.300000",
     "hammerUniqueId": "5106",
     "_template_lump_ent_index": "6"
   },

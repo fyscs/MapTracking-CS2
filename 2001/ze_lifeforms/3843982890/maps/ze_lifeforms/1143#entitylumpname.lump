@@ -27,7 +27,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]s3_cipher_laser_boss_health",
         "input": "Add",
-        "param": "80",
+        "param": "68",
         "delay": 0,
         "limit": -1
       }
@@ -226,7 +226,6 @@
     ]
   },
   {
-    "modelscale": "0.750000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -297,12 +296,11 @@
     "classname": "prop_dynamic",
     "origin": "-8000.000000 13332.000000 -6490.240234",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "0.750000 0.750000 0.750000",
     "hammerUniqueId": "4845",
     "_template_lump_ent_index": "5"
   },
   {
-    "modelscale": "0.750000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -373,12 +371,11 @@
     "classname": "prop_dynamic",
     "origin": "-7808.000000 12660.000000 -6264.000000",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "0.750000 0.750000 0.750000",
     "hammerUniqueId": "4863",
     "_template_lump_ent_index": "6"
   },
   {
-    "modelscale": "0.750000",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -449,12 +446,11 @@
     "classname": "prop_dynamic",
     "origin": "-6496.000000 12788.000000 -5815.430176",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "0.750000 0.750000 0.750000",
     "hammerUniqueId": "4876",
     "_template_lump_ent_index": "7"
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -530,7 +526,6 @@
     "_template_lump_ent_index": "8"
   },
   {
-    "modelscale": "1",
     "MinAnimTime": "5",
     "MaxAnimTime": "10",
     "fadescale": "1",
@@ -3967,7 +3962,6 @@
   },
   {
     "RandomAnimation": "0",
-    "modelscale": "1.300000",
     "mindxlevel": "0",
     "MinAnimTime": "5",
     "maxdxlevel": "0",
@@ -4040,7 +4034,7 @@
     "classname": "prop_dynamic",
     "origin": "-9536.000000 10696.000000 -3960.000000",
     "angles": "-0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
+    "scales": "1.300000 1.300000 1.300000",
     "hammerUniqueId": "5319",
     "_template_lump_ent_index": "51"
   },
