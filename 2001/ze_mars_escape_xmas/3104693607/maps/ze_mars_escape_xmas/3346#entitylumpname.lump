@@ -3,15 +3,27 @@
 
 [
   {
+    "steamaudio_geometry_mode": "0",
+    "expand_render_bounds_to_include_cloth": "0",
+    "animgraph2_identifier": "",
+    "interactExclude": "",
+    "interactWith": "",
+    "interactAs": "",
+    "BreakableContentsParticleOverride": "",
+    "BreakableContentsPropGroupOverride": "",
     "BreakableContentsType": "BC_DEFAULT",
+    "burstlocation": "",
     "burstscale": "100.000000",
     "NoInterpolate": "0",
     "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "IdleAnim": "",
     "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
+    "StartingAnim": "",
     "clothScale": "1.000000",
     "StartDisabled": "0",
     "forcenpcexclude": "0",
     "CreateNavObstacle": "0",
+    "lightingorigin": "",
     "AnimateOnServer": "0",
     "LagCompensate": "0",
     "randomizecycle": "0",
@@ -38,11 +50,22 @@
     "PerformanceMode": "PM_NORMAL",
     "ExplodeRadius": "0.000000",
     "ExplodeDamage": "0.000000",
+    "damagefilter": "",
+    "vscripts": "",
+    "add_modifier": "",
+    "add_attribute": "",
     "disableshadows": "0",
+    "bodygroups": "",
     "skin": "default",
     "model": "models/mars_escape/xmas/nitori_fumo.vmdl",
+    "globalname": "",
     "clientSideEntity": "0",
     "useLocalOffset": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "parentAttachmentName": "",
+    "parentname": "",
     "targetname": "[PR#]fumo_nitori\u00260000",
     "classname": "prop_dynamic",
     "origin": "0.000000 0.000000 0.000000",
@@ -52,66 +75,25 @@
     "_template_lump_ent_index": "0"
   },
   {
+    "wait": "0.000000",
+    "filtername": "",
     "spawnflags": "4097",
+    "globalname": "",
     "StartDisabled": "0",
     "useLocalOffset": "0",
+    "local.scales": "0.000000 0.000000 0.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "parentAttachmentName": "",
     "parentname": "[PR#]fumo_nitori\u00260000",
+    "vscripts": "",
     "targetname": "[PR#]fumo_nitori_trigger\u00260000",
-    "classname": "trigger_once",
+    "classname": "trigger_multiple",
     "origin": "0.000000 0.000000 46.000000",
     "angles": "-0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3342",
     "model": "maps/ze_mars_escape_xmas/entities/fumo_nitori_trigger_3342.vmdl",
-    "_template_lump_ent_index": "1",
-    "connections": [
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]fumo_nitori\u00260000",
-        "input": "SetParent",
-        "param": "!activator",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]fumo_nitori\u00260000",
-        "input": "SetParentAttachment",
-        "param": "grenade3",
-        "delay": 0.029999999329447746,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]maker_fumo_sfx",
-        "input": "ForceSpawnAtEntityOrigin",
-        "param": "!activator",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
-  },
-  {
-    "PassthroughCaller": "0",
-    "FastRetrigger": "0",
-    "TriggerOnce": "1",
-    "StartDisabled": "0",
-    "targetname": "[PR#]fumo_nitori_relay\u00260000",
-    "classname": "logic_relay",
-    "origin": "0.000000 0.000000 32.000000",
-    "angles": "-0.000000 0.000000 0.000000",
-    "scales": "2.000000 2.000000 2.000000",
-    "hammerUniqueId": "71856",
-    "_template_lump_ent_index": "2",
-    "connections": [
-      {
-        "output": "OnSpawn",
-        "target": "[PR#]fumo_nitori\u00260000",
-        "input": "KeyValues",
-        "param": "angles 0 0 0",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "1"
   }
 ]
