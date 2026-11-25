@@ -380561,6 +380561,14 @@
         "param": "",
         "delay": 1,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]ZGN",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 1,
+        "limit": -1
       }
     ]
   },

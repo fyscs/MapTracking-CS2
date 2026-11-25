@@ -23,6 +23,7 @@ const SUPPORTERS = {
     supporter_wpyz: { text: ">传奇恶魔猎人 顽皮柚稚 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
     supporter_zq: { text: ">传奇恶魔猎人 梓喵 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
     supporter_asada: { text: ">传奇恶魔猎人 Asada ShinoQWQ 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
+    supporter_zgn: { text: ">传奇恶魔猎人 知更奶龙 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
     supporter3: { text: "test", duration: 2.0, styleClass: "style_red" },
 };
 
