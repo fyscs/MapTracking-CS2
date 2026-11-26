@@ -40133,9 +40133,9 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]m5_nuke_hurt_cs2_ze",
-        "input": "Enable",
-        "param": "",
+        "target": "[PR#]human_win_detect_script",
+        "input": "RunScriptInput",
+        "param": "Nuke",
         "delay": 20,
         "limit": -1
       },

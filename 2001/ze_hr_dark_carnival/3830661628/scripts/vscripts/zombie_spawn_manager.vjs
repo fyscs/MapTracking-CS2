@@ -4,8 +4,8 @@
 import { Console, Entity, Instance, Entities, CSPlayerPawn } from "cs_script/point_script";
 
 const CONFIG = {
-    MAX_PTP_ACTIVATE_DISTANCE: 1500,
-    MIN_PTP_ACTIVATE_DISTANCE: 400,
+    MAX_PTP_ACTIVATE_DISTANCE: 2000,
+    MIN_PTP_ACTIVATE_DISTANCE: 800,
     MIN_ZOMBIE_COUNT: 5,
     RESPAWN_DELAY_ADDITION_PER_RATE: 5,
     RESPAWN_DELAY_ADDITION_PER_ZOMBIE: 0.3,
@@ -36,7 +36,7 @@ Instance.OnScriptInput("Refresh", () => {
 Instance.OnScriptInput("Spawn", (inputData) => {
     const player = inputData.activator;
     if (!player || !player.IsValid()) return;
-    if (activatePtps.length === 0) throw "暂无可用ptp";
+    if (activatePtps.length === 0) throw "警告：暂无可用ptp";
     const ptp = activatePtps[Math.floor(Math.random() * activatePtps.length)];
     if (!ptp.IsValid()) return;
     ptp.FireInput({ input: "Teleport", activator: player });
@@ -60,7 +60,10 @@ function Zombat(duration) {
         Entities.FireInput({ name: "sound_control_script", input: "RunScriptInput", value: "StartSoundZombat", delay: 1 });
     }
     for (const player of /** @type {CSPlayerPawn[]} */ (Entities.FindByClass("player"))) {
-        if (player.IsValid() && player.GetTeamNumber() === 2 && !player.IsAlive()) player.Reset();
+        if (player.IsValid() && player.GetTeamNumber() === 2 && !player.IsAlive()) {
+            player.Reset();
+            player.Teleport({ position: { x: 0, y: 0, z: -3568 } });
+        }
     }
     zombatDelayTaskId = Delay(duration, () => {
         isZombat = false;
@@ -75,7 +78,10 @@ Instance.OnScriptInput("ZombatOn", () => {
         Entities.FireInput({ name: "sound_control_script", input: "RunScriptInput", value: "StartSoundZombat", delay: 1 });
     }
     for (const player of /** @type {CSPlayerPawn[]} */ (Entities.FindByClass("player"))) {
-        if (player.IsValid() && player.GetTeamNumber() === 2 && !player.IsAlive()) player.Reset();
+        if (player.IsValid() && player.GetTeamNumber() === 2 && !player.IsAlive()) {
+            player.Reset();
+            player.Teleport({ position: { x: 0, y: 0, z: -3568 } });
+        }
     }
 });
 
@@ -101,8 +107,18 @@ Instance.OnRoundStart(() => {
 });
 
 function Main() {
-    GetActivatePtps();
-    ApplyRespawnDelay();
+    try {
+        GetActivatePtps();
+    } catch {
+        allPtps = Entities.FindByName("m*_zombie_spawn*ptp_cs2_ze");
+        Console.Log("警告：部分Ptp已不可用，已自动刷新Ptp");
+    }
+
+    try {
+        ApplyRespawnDelay();
+    } catch (e) {
+        Console.Log("未知错误：" + e);
+    }
     mainTaskId = Delay(1 / 2, Main);
 }
 

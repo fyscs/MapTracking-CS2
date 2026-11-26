@@ -5532,8 +5532,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-1632.212891 -2555.419434 -1082.702515",
-    "angles": "88.346474 10.383345 -18.475330",
+    "origin": "-1632.212769 -2555.419189 -1082.703369",
+    "angles": "88.350792 10.378525 -18.480474",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8709"
   },
@@ -5620,8 +5620,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "-1626.446045 -2555.405273 -1070.602051",
-    "angles": "77.556686 0.011229 -74.983604",
+    "origin": "-1626.446167 -2555.405273 -1070.602173",
+    "angles": "77.555954 0.011094 -74.984306",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8710"
   },
@@ -9373,7 +9373,7 @@
     "burstlocation": "",
     "burstscale": "100.000000",
     "NoInterpolate": "0",
-    "damagefilter": "",
+    "damagefilter": "[PR#]human",
     "vscripts": "",
     "animgraph2_identifier": "",
     "add_modifier": "",
@@ -12108,7 +12108,7 @@
     "burstlocation": "",
     "burstscale": "100.000000",
     "NoInterpolate": "0",
-    "damagefilter": "",
+    "damagefilter": "[PR#]human",
     "vscripts": "",
     "animgraph2_identifier": "",
     "add_modifier": "",
@@ -12327,7 +12327,7 @@
     "burstlocation": "",
     "burstscale": "100.000000",
     "NoInterpolate": "0",
-    "damagefilter": "",
+    "damagefilter": "[PR#]human",
     "vscripts": "",
     "animgraph2_identifier": "",
     "add_modifier": "",
@@ -29655,8 +29655,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "5123.458008 7779.998047 -699.389954",
-    "angles": "89.994255 0.000000 0.000000",
+    "origin": "5123.458496 7779.991699 -699.391357",
+    "angles": "89.982132 359.994934 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8535"
   },
@@ -29743,8 +29743,8 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_physics",
-    "origin": "5122.995117 7779.992188 -690.286682",
-    "angles": "89.988815 0.000000 0.000000",
+    "origin": "5122.998535 7779.975098 -690.291565",
+    "angles": "89.964020 359.996826 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "8534"
   },
@@ -64485,7 +64485,7 @@
     ]
   },
   {
-    "filtername": "",
+    "filtername": "[PR#]human",
     "spawnflags": "4097",
     "globalname": "",
     "StartDisabled": "0",
@@ -64655,7 +64655,7 @@
     ]
   },
   {
-    "filtername": "",
+    "filtername": "[PR#]human",
     "spawnflags": "4097",
     "globalname": "",
     "StartDisabled": "0",
@@ -64825,7 +64825,7 @@
     ]
   },
   {
-    "filtername": "",
+    "filtername": "[PR#]human",
     "spawnflags": "4097",
     "globalname": "",
     "StartDisabled": "0",

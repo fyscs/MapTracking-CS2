@@ -79,8 +79,8 @@ function CheckGlow(player, isExplode = false) {
     if (IsBlocked(boomerPosition, playerEyePosition) && IsBlocked(boomerPosition, playerPosition)) return;
     if (isExplode) {
         const health = player.GetHealth();
-        if (health <= 40) player.Kill();
-        else player.SetHealth(health - 40);
+        if (health <= CONFIG.damage) player.Kill();
+        else player.SetHealth(health - CONFIG.damage);
     }
     // @ts-ignore
     const post = Entities.FindByName("boomer_post_temp")[0].ForceSpawn(playerPosition)[0];

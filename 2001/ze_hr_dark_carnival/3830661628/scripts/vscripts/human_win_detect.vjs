@@ -96,6 +96,31 @@ Instance.OnScriptInput("DetectM5Escape", () => {
     Entities.FireInput({ name: "stage_escape_button", input: "FireUser1" });
 });
 
+Instance.OnScriptInput("ForceM5Escape", () => {
+    const target1 = Entities.FindByName("m5_escape_detect_target1_cs2_ze")[0];
+    if (!target1 || !target1) throw "错误：目标点丢失";
+    const target2 = Entities.FindByName("m5_escape_detect_target2_cs2_ze")[0];
+    if (!target2 || !target2) throw "错误：目标点丢失";
+    const pos1 = target1.GetAbsOrigin();
+    const pos2 = target2.GetAbsOrigin();
+    const angle = target1.GetAbsAngles().yaw;
+    const players = Entities.FindByClass("player");
+    for (const player of players) {
+        if (!player.IsValid() || !player.IsAlive()) continue;
+        if (player.GetTeamNumber() === 3 && !IsPointInOBB(player.GetAbsOrigin(), pos1, pos2, angle)) {
+            player.Teleport({ position: { x: -2304, y: 3328, z: -168 } });
+        }
+    }
+    Entities.FireInput({ name: "stage_escape_button", input: "FireUser1" });
+});
+
+Instance.OnScriptInput("Nuke", () => {
+    for (const player of Entities.FindByClass("player")) {
+        if (!player.IsValid() || player.GetTeamNumber() !== 2 || !player.IsAlive()) continue;
+        player.Kill();
+    }
+});
+
 Instance.OnScriptInput("EnterCheckpointZone", (inputData) => {
     const player = inputData.activator;
     if (!player || !player.IsValid()) return;
