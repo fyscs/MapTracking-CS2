@@ -1184,7 +1184,7 @@
   {
     "wait": "1.000000",
     "filtername": "[PR#]filter_zombies",
-    "spawnflags": "1",
+    "spawnflags": "4097",
     "globalname": "",
     "StartDisabled": "1",
     "local.scales": "1.000000 1.000000 1.000000",

@@ -51,7 +51,7 @@
     "StartingAnim": "",
     "use_animgraph": "1",
     "disablelowviolence": "0",
-    "solid": "6",
+    "solid": "0",
     "glowteam": "-1",
     "glowcolor": "0 0 0",
     "glowrangemin": "0",

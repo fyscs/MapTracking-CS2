@@ -194,16 +194,6 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "731",
     "model": "maps/ze_lifeforms/entities/item_shield_trigger_731.vmdl",
-    "_template_lump_ent_index": "2",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "max_health 7500",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "2"
   }
 ]

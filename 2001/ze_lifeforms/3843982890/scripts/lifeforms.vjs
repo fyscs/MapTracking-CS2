@@ -258,6 +258,20 @@ function ResetScript() {
 	DISABLE_ZM_ITEM = false;
 }
 
+// Fix players getting crushed by zombie bomb
+Instance.OnModifyPlayerDamage((event) => {
+	const player = event.player;
+	const inflictor = event.inflictor;
+
+	if (!player?.IsValid())
+		return;
+
+	if (inflictor?.GetClassName() == "func_physbox") {
+		let damage = 0;
+		return { damage };
+	}
+});
+
 /*
  * GAME TEXT HUD USAGE
  *

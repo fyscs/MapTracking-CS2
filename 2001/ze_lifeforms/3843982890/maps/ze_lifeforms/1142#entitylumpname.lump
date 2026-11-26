@@ -959,7 +959,7 @@
         "target": "[PR#]s4_tp_zm_sides",
         "input": "Kill",
         "param": "",
-        "delay": 1,
+        "delay": 9,
         "limit": 1
       },
       {
@@ -998,6 +998,14 @@
         "output": "OnTrigger",
         "target": "[PR#]j_x_z_zm_att_*",
         "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]lifeform_plat_zm*",
+        "input": "Open",
         "param": "",
         "delay": 0,
         "limit": 1

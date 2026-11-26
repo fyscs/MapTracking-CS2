@@ -868,17 +868,7 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1501",
     "model": "maps/ze_lifeforms/entities/8_push_b_1501.vmdl",
-    "_template_lump_ent_index": "15",
-    "connections": [
-      {
-        "output": "OnStartTouch",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "basevelocity 1300 0 1300",
-        "delay": 0,
-        "limit": -1
-      }
-    ]
+    "_template_lump_ent_index": "15"
   },
   {
     "OnlyFallingPlayers": "0",

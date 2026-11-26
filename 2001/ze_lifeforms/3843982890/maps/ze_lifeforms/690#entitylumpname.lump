@@ -161,12 +161,6 @@
     "_template_lump_ent_index": "2"
   },
   {
-    "RandomAnimation": "0",
-    "mindxlevel": "0",
-    "MinAnimTime": "5",
-    "maxdxlevel": "0",
-    "MaxAnimTime": "10",
-    "fadescale": "1",
     "health": "0",
     "forcenpcexclude": "0",
     "CreateNavObstacle": "0",
@@ -183,7 +177,7 @@
     "StartingAnim": "",
     "use_animgraph": "1",
     "disablelowviolence": "0",
-    "solid": "6",
+    "solid": "0",
     "glowteam": "-1",
     "glowcolor": "0 0 0",
     "glowrangemin": "0",
