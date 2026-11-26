@@ -6810,18 +6810,22 @@ const DDR_HUD_NAME = "hud_ddr";
 const DDR_HUD_PANEL = "DDR"; // panel that takes Show / banner classes and holds the dialog variables
 const DDR_MUSIC_ENT = "ddr_music";
 const DDR_SONG_TITLE = "PARANOiA Revolution";
-const DDR_START_DELAY = 15; // seconds after the modifier rolls before the song starts
+const DDR_SLAY_DELAY = 3; // seconds the FAILED / CLEARED banners show before the losers are slain
+const DDR_START_DELAY = 20; // seconds after round start (modifier rolls there) - after the ~15s infection timer
 // No mother zombies on DDR: cs2fixes won't pick any while there are fewer players than this (reset at round end).
 // (mz_ratio 0 doesn't do it: zr_infect_spawn_mz_min_count still forces one)
 const DDR_NO_MZ_MIN_COUNT = 999;
 const DDR_MZ_MIN_COUNT_DEFAULT = 2; // zr_infect_min_count_req from cs2fixes.cfg
+// Scroll speed. Notes always travel the same 960px, so slower = arrows closer together. Base (1.0) = 0.65s / 0.7651s.
+// Changing this means changing BOTH transition-durations in hud_ddr.css to 0.7651 * DDR_SCROLL_SLOWDOWN.
+// Pool needed per lane for this chart: 1.0 -> 9, 1.25 -> 11, 1.5 -> 13, 1.75 -> 14, 2.0 -> 15.
+const DDR_SCROLL_SLOWDOWN = 1.5;
 // Seconds from spawn until a note reaches the receptor. MUST match hud_ddr.css (.Note.Fly).
-const DDR_NOTE_REACH_TIME = 0.65;
-const DDR_NOTE_FLY_TIME = 0.7651; // full .Note.Fly transition (keeps scrolling past the receptor)
-const DDR_POOL = 12; // note panels per lane in the layout
+const DDR_NOTE_REACH_TIME = 0.65 * DDR_SCROLL_SLOWDOWN;
+const DDR_NOTE_FLY_TIME = 0.7651 * DDR_SCROLL_SLOWDOWN; // full .Note.Fly transition (keeps scrolling past the receptor)
+const DDR_POOL = 16; // note panels per lane in the layout (n0_0 .. n3_15)
 const DDR_AUDIO_LEAD = 0.0; // + = every note later vs. the music
 const DDR_JUDGE_LATENCY = 0.06; // server sees a press ~ping+interp after it happened
-const DDR_FAIL_HUD_TIME = 3; // FAILED banner stays this long before the hud hides
 const DDR_WIN = { perfect: 0.045, great: 0.090, good: 0.135, boo: 0.180 };
 const DDR_LIFE = { start: 60, perfect: 2, great: 1, good: 0, boo: -2, miss: -5, ng: -4 };
 const DDR_SCORE = { perfect: 1000, great: 500, good: 100, boo: 0, miss: 0 };
@@ -6959,6 +6963,7 @@ function ddr_controller(slot) {
 const DDR_TP = "ddr_tp"; // trigger: humans -> ddr_dest_ct, zombies -> ddr_dest_zm
 const DDR_DEST_CT = "ddr_dest_ct";
 const DDR_DEST_ZM = "ddr_dest_zm";
+const DDR_TP_SPREAD = 384; // random +/- x/y offset from the destination so people don't stack
 const DDR_RESPAWN_TOGGLE = "input_zr_toggle_respawn"; // FireUser2 when the song ends
 let ddr_tp_output;
 /** ddr_tp touch: send the player to their team's destination (position + facing, no leftover speed). */
@@ -6972,7 +6977,9 @@ function ddr_teleport(player) {
         Console.Log("ddr: missing teleport destination for team " + team);
         return;
     }
-    player.Teleport({ position: dest.GetAbsOrigin(), angles: dest.GetAbsAngles(), velocity: { x: 0, y: 0, z: 0 } });
+    const o = dest.GetAbsOrigin();
+    const spread = () => (Math.random() * 2 - 1) * DDR_TP_SPREAD;
+    player.Teleport({ position: { x: o.x + spread(), y: o.y + spread(), z: o.z }, angles: dest.GetAbsAngles(), velocity: { x: 0, y: 0, z: 0 } });
 }
 /** DDR modifier: no mother zombies this round, hook + enable ddr_tp, song starts after DDR_START_DELAY. */
 function ddr_mode_start() {
@@ -7189,28 +7196,7 @@ function ddr_judge(song, p, j, n, t) {
             p.holds.push({ note: n, lastHeld: t });
         }
     }
-    if (p.life <= 0 && !p.failed) {
-        ddr_fail(p);
-    }
-}
-/** Life ran out: FAILED banner, kill them, hide their hud a moment later. */
-function ddr_fail(p) {
-    p.failed = true;
-    p.holds = [];
-    ddr_set_for(p.slot, DDR_HUD_PANEL, "ShowFailed", true);
-    ddr_set_for(p.slot, DDR_HUD_PANEL, "ShowDanger", false);
-    const pawn = ddr_controller(p.slot)?.GetPlayerPawn();
-    if (pawn?.IsValid() && pawn.IsAlive()) {
-        ent_fire_target({ target: pawn, input: "SetHealth", value: 0 });
-    }
-    const song = ddr_song;
-    setTimeout(() => {
-        if (!song || ddr_song !== song) {
-            return;
-        } // song already stopped = hud already hidden
-        song.players.delete(p.slot);
-        ddr_hide_for(p.slot);
-    }, DDR_FAIL_HUD_TIME * 1000);
+    if (p.life <= 0 && !p.failed) ;
 }
 function ddr_grade(diff) {
     const a = Math.abs(diff);
@@ -7275,9 +7261,7 @@ function ddr_tick_player(song, p, pawn, songT) {
                 p.counts.ng++;
                 p.life = Math.max(0, p.life + DDR_LIFE.ng);
                 ddr_set_life_class(p, false);
-                if (p.life <= 0 && !p.failed) {
-                    ddr_fail(p);
-                }
+                if (p.life <= 0 && !p.failed) ;
                 return false;
             }
             return true;
@@ -7348,25 +7332,53 @@ function ddr_tick() {
     // end of song: one summary line instead of one per player
     if (!song.ended && songT > song.last + 1.0) {
         song.ended = true;
-        ent_fire_name({ name: DDR_RESPAWN_TOGGLE, input: "FireUser2" });
-        FunctionDelay(kill_all, 1, 2);
-        let cleared = 0;
+        {
+            // top score (ties included) survives, everyone else fails
+            let top = -1;
+            for (const p of song.players.values()) {
+                top = Math.max(top, p.score);
+            }
+            for (const p of song.players.values()) {
+                p.failed = p.score < top;
+            }
+        }
+        // banners first; the slay waits DDR_SLAY_DELAY so people can see them (the round ending hides the hud instantly)
+        let failed = 0;
         let best;
+        const winners = [];
+        const losers = [];
         for (const p of song.players.values()) {
             if (p.failed) {
+                ddr_set_for(p.slot, DDR_HUD_PANEL, "ShowFailed", true);
+                losers.push(p.slot);
+                failed++;
                 continue;
             }
-            cleared++;
             ddr_set_for(p.slot, DDR_HUD_PANEL, "ShowCleared", true);
+            winners.push(ddr_controller(p.slot)?.GetPlayerName() ?? "?");
             if (!best || p.score > best.score) {
                 best = p;
             }
         }
-        const best_name = best ? (ddr_controller(best.slot)?.GetPlayerName() ?? "?") : "";
-        ent_fire_name({ name: "command", input: "Command", value: "say [DDR] " + cleared + " cleared" +
-                (best ? " - top score: " + best_name + " " + best.score + " (max combo " + best.maxCombo + ")" : "") });
+        // everyone who failed drops at once, then respawn comes back on, then the zombies die
+        setTimeout(() => {
+            for (const slot of losers) {
+                const pawn = ddr_controller(slot)?.GetPlayerPawn();
+                if (pawn?.IsValid() && pawn.IsAlive()) {
+                    ent_fire_target({ target: pawn, input: "SetHealth", value: 0 });
+                }
+            }
+            ent_fire_name({ name: DDR_RESPAWN_TOGGLE, input: "FireUser2", delay: ONE_TICK * 2 });
+            FunctionDelay(kill_all, 1, 2);
+        }, DDR_SLAY_DELAY * 1000);
+        let msg;
+        {
+            msg = best ? "top score " + best.score + ": " + winners.join(", ") + " survive" + (winners.length == 1 ? "s" : "") + ", " + failed + " failed"
+                : "nobody played";
+        }
+        ent_fire_name({ name: "command", input: "Command", value: "say [DDR] " + msg });
     }
-    if (song.ended && songT > song.last + 6.0) {
+    if (song.ended && songT > song.last + 1.0 + DDR_SLAY_DELAY + 5.0) {
         ddr_stop_song();
     }
 }

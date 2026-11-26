@@ -79,6 +79,26 @@
                         <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_blue_png.vtex" />
                         <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_yellow_png.vtex" />
                     </Panel>
+                    <Panel id="n0_12" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n0_13" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n0_14" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n0_15" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_left_yellow_png.vtex" />
+                    </Panel>
                 </Panel>
                 <Panel class="Lane Lane1" hittest="false">
                     <Panel id="r1" class="Receptor" hittest="false">
@@ -142,6 +162,26 @@
                         <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_yellow_png.vtex" />
                     </Panel>
                     <Panel id="n1_11" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n1_12" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n1_13" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n1_14" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n1_15" class="Note" hittest="false">
                         <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_red_png.vtex" />
                         <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_blue_png.vtex" />
                         <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_down_yellow_png.vtex" />
@@ -213,6 +253,26 @@
                         <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_blue_png.vtex" />
                         <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_yellow_png.vtex" />
                     </Panel>
+                    <Panel id="n2_12" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n2_13" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n2_14" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n2_15" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_up_yellow_png.vtex" />
+                    </Panel>
                 </Panel>
                 <Panel class="Lane Lane3" hittest="false">
                     <Panel id="r3" class="Receptor" hittest="false">
@@ -276,6 +336,26 @@
                         <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_yellow_png.vtex" />
                     </Panel>
                     <Panel id="n3_11" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n3_12" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n3_13" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n3_14" class="Note" hittest="false">
+                        <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_red_png.vtex" />
+                        <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_blue_png.vtex" />
+                        <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_yellow_png.vtex" />
+                    </Panel>
+                    <Panel id="n3_15" class="Note" hittest="false">
                         <Image class="NoteImg N4" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_red_png.vtex" />
                         <Image class="NoteImg N8" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_blue_png.vtex" />
                         <Image class="NoteImg N16" hittest="false" src="s2r://panorama/images/custom_game/ddr/note_right_yellow_png.vtex" />
