@@ -7,11 +7,13 @@
     </styles>
     <Panel class="Root">
         <Panel id="cinematic_container" class="CinematicContainer Hidden">
-            <Image id="cinematic_image_01" class="CinematicImage CinematicImageVisible" src="s2r://panorama/images/custom_game/animation/scenario_animation_000_png.vtex" />
-            <Image id="cinematic_image_02" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_001_png.vtex" />
-            <Image id="cinematic_image_03" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_002_png.vtex" />
-            <Image id="cinematic_image_04" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_003_png.vtex" />
-            <Image id="cinematic_image_05" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_004_png.vtex" />
+            <Panel id="cinematic_image_layer" class="CinematicImageLayer">
+                <Image id="cinematic_image_01" class="CinematicImage CinematicImageVisible" src="s2r://panorama/images/custom_game/animation/scenario_animation_000_png.vtex" />
+                <Image id="cinematic_image_02" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_001_png.vtex" />
+                <Image id="cinematic_image_03" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_002_png.vtex" />
+                <Image id="cinematic_image_04" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_003_png.vtex" />
+                <Image id="cinematic_image_05" class="CinematicImage" src="s2r://panorama/images/custom_game/animation/scenario_animation_004_png.vtex" />
+            </Panel>
             <Panel id="cinematic_flash" class="CinematicFlash Hidden" />
             <Panel id="cinematic_letterbox_top" class="CinematicLetterbox CinematicLetterboxTop" />
             <Panel id="cinematic_letterbox_bottom" class="CinematicLetterbox CinematicLetterboxBottom" />

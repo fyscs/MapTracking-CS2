@@ -22,14 +22,10 @@ const CINEMATIC_IMAGE_IDS = [
 // セリフの文字送り間隔
 const TYPEWRITER_INTERVAL = 0.03;
 
-// =========================================================
-// シネマティック画像の揺れ設定
-// =========================================================
-
-// 揺れの間隔
+// 揺れの更新間隔
 const CINEMATIC_SHAKE_INTERVAL = 0.04;
 
-// 揺れ方向
+// 揺れ方向クラス
 const CINEMATIC_SHAKE_CLASSES = [
     "ShakeLeft",
     "ShakeRight",
@@ -43,6 +39,9 @@ const CINEMATIC_SHAKE_CLASSES = [
 
 // 揺れ処理のセッション管理
 let cinematicShakeSession = 0;
+
+// 現在適用中の揺れクラス
+let currentCinematicShakeClass = null;
 
 /* =========================================================
    シネマティック：ホワイトフラッシュ設定
@@ -171,6 +170,8 @@ function SetCinematicImage(imageId) {
     Instance.Msg(`Cinematic: ${imageId}`);
 }
 
+
+
 /* =========================================================
    シネマティック画像：揺れ制御
    ========================================================= */
@@ -187,33 +188,30 @@ function SetCinematicShakeClass(shakeClass) {
 
     ForEachPlayer((playerSlot) => {
 
-        // すべての画像に同じ揺れ状態を適用
-        // 画像切り替え時にも位置を一致させる
-        for (const imageId of CINEMATIC_IMAGE_IDS) {
+        // 前回の揺れ方向を解除
+        if (currentCinematicShakeClass !== null) {
 
-            // 以前の揺れ方向を解除
-            for (const className of CINEMATIC_SHAKE_CLASSES) {
+            hud.SetHasClassForPlayer(
+                playerSlot,
+                "cinematic_image_layer",
+                currentCinematicShakeClass,
+                false
+            );
+        }
 
-                hud.SetHasClassForPlayer(
-                    playerSlot,
-                    imageId,
-                    className,
-                    false
-                );
-            }
+        // 新しい揺れ方向を適用
+        if (shakeClass !== null) {
 
-            // 新しい揺れ方向を設定
-            if (shakeClass !== null) {
-
-                hud.SetHasClassForPlayer(
-                    playerSlot,
-                    imageId,
-                    shakeClass,
-                    true
-                );
-            }
+            hud.SetHasClassForPlayer(
+                playerSlot,
+                "cinematic_image_layer",
+                shakeClass,
+                true
+            );
         }
     });
+
+    currentCinematicShakeClass = shakeClass;
 }
 
 // ---------------------------------------------------------
@@ -227,9 +225,7 @@ async function ShakeCinematic() {
 
     const mySession = cinematicShakeSession;
 
-    Instance.Msg("Cinematic: Shake Start");
-
-    // ランダムな方向へ揺らし続ける
+    // 揺れ開始
     while (mySession === cinematicShakeSession) {
 
         const randomIndex = Math.floor(
@@ -251,14 +247,15 @@ async function ShakeCinematic() {
 
 function ShakeStopCinematic() {
 
-    // 実行中の揺れ処理を無効化
+    // 揺れ処理を停止
     cinematicShakeSession++;
 
-    // 揺れクラスをすべて解除
+    // 現在の揺れ方向を解除
     SetCinematicShakeClass(null);
 
     Instance.Msg("Cinematic: Shake Stop");
 }
+
 
 /* =========================================================
    シネマティック：ホワイトフラッシュ制御

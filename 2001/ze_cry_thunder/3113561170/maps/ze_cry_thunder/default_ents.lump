@@ -21279,7 +21279,7 @@
         "target": "[PR#]hmn_cinematic_script",
         "input": "RunScriptInput",
         "param": "ShakeStopCinematic",
-        "delay": 9,
+        "delay": 1,
         "limit": -1
       },
       {
@@ -21369,6 +21369,38 @@
         "param": "",
         "delay": 3,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]hmn_cinematic_script",
+        "input": "RunScriptInput",
+        "param": "ShakeStopCinematic",
+        "delay": 9,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]hmn_cinematic_script",
+        "input": "RunScriptInput",
+        "param": "ShakeCinematic",
+        "delay": 5.5,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]hmn_cinematic_script",
+        "input": "RunScriptInput",
+        "param": "ShakeStopCinematic",
+        "delay": 6,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]hmn_cinematic_script",
+        "input": "RunScriptInput",
+        "param": "ShakeCinematic",
+        "delay": 8.5,
+        "limit": -1
       }
     ]
   },

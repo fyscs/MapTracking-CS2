@@ -19,42 +19,51 @@
 .CinematicContainer.Hidden {
     opacity: 0.0;
 }
+.CinematicImageLayer {
+    width: 100%;
+    height: 100%;
+    horizontal-align: center;
+    vertical-align: center;
+    transform: translate3d(0px, 0px, 0px);
+    transition-property: transform;
+    transition-duration: 0.04s;
+    transition-timing-function: linear;
+}
 .CinematicImage {
     width: 100%;
     height: 100%;
     horizontal-align: center;
     vertical-align: center;
     opacity: 0.0;
-    transform: translate3d(0px, 0px, 0px);
-    transition-property: opacity, transform;
-    transition-duration: 0.5s, 0.04s;
-    transition-timing-function: ease-out, linear;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 #cinematic_image_01.CinematicImageVisible,#cinematic_image_02.CinematicImageVisible,#cinematic_image_03.CinematicImageVisible,#cinematic_image_04.CinematicImageVisible,#cinematic_image_05.CinematicImageVisible {
     opacity: 1.0;
 }
-.CinematicImage.ShakeLeft {
+.CinematicImageLayer.ShakeLeft {
     transform: translate3d(-8px, 0px, 0px);
 }
-.CinematicImage.ShakeRight {
+.CinematicImageLayer.ShakeRight {
     transform: translate3d(8px, 0px, 0px);
 }
-.CinematicImage.ShakeUp {
+.CinematicImageLayer.ShakeUp {
     transform: translate3d(0px, -8px, 0px);
 }
-.CinematicImage.ShakeDown {
+.CinematicImageLayer.ShakeDown {
     transform: translate3d(0px, 8px, 0px);
 }
-.CinematicImage.ShakeUpLeft {
+.CinematicImageLayer.ShakeUpLeft {
     transform: translate3d(-8px, -8px, 0px);
 }
-.CinematicImage.ShakeUpRight {
+.CinematicImageLayer.ShakeUpRight {
     transform: translate3d(8px, -8px, 0px);
 }
-.CinematicImage.ShakeDownLeft {
+.CinematicImageLayer.ShakeDownLeft {
     transform: translate3d(-8px, 8px, 0px);
 }
-.CinematicImage.ShakeDownRight {
+.CinematicImageLayer.ShakeDownRight {
     transform: translate3d(8px, 8px, 0px);
 }
 .CinematicLetterbox {

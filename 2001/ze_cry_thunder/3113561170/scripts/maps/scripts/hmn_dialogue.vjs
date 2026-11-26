@@ -114,7 +114,7 @@ const CHARACTERS_EN =
 
     C:
     {
-        name: "Teacher",
+        name: "Mr.S",
         portrait: "C"
     },
 
@@ -144,9 +144,6 @@ const CHARACTERS_EN =
 
 const SCENARIOS =
 {
-    // -----------------------------------------------------
-    // Scenario01：夜の橋へ向かう二人
-    // -----------------------------------------------------
     Scenario01:
     [
         {
@@ -185,10 +182,6 @@ const SCENARIOS =
         }
     ],
 
-
-    // -----------------------------------------------------
-    // Scenario02：二人の帰り道
-    // -----------------------------------------------------
     Scenario02:
     [
         {
@@ -227,10 +220,6 @@ const SCENARIOS =
         }
     ],
 
-
-    // -----------------------------------------------------
-    // Scenario03：ファントムとの遭遇
-    // -----------------------------------------------------
     Scenario03:
     [
         {
@@ -259,10 +248,6 @@ const SCENARIOS =
         }
     ],
 
-
-    // -----------------------------------------------------
-    // Scenario04：先生からの激励
-    // -----------------------------------------------------
     Scenario04:
     [
         {
@@ -281,10 +266,6 @@ const SCENARIOS =
         }
     ],
 
-
-    // -----------------------------------------------------
-    // Scenario05：橋で出会った妖精
-    // -----------------------------------------------------
     Scenario05:
     [
         {
@@ -396,6 +377,80 @@ Scenario02:
             message: "You're seriously so oblivious.\nWell, as long as nothing happens, I guess that's fine."
         }
     ],
+
+    Scenario03:
+    [
+        {
+            character: "B",
+            message: "Aaaaaagh!!\nWhat the hell is THAT thing?! It's disgusting!!"
+        },
+
+        {
+            character: "A",
+            message: "Is that... a mass of Phantoms...?\nThat's one hell of a huge one..."
+        },
+
+        {
+            character: "B",
+            message: "H-Hey! How can you stay so calm?!\nKYAAH!? It's throwing something at us!!"
+        },
+
+        {
+            character: "A",
+            message: "Either way, we're no match for it with our current equipment!\nWe should fall back for now!"
+        },
+
+        {
+            character: "B",
+            message: "Hey!! Wait for me!!\nAre you seriously going to leave your childhood friend behind and run off again!?"
+        }
+    ],
+
+    Scenario04:
+    [
+        {
+            character: "C",
+            message: "Our opponent this time is on a whole different level from anything we've faced before..."
+        },
+
+        {
+            character: "C",
+            message: "You won't achieve victory unless you keep a close eye on the battlefield and act accordingly!"
+        },
+
+        {
+            character: "C",
+            message: "This will put each and every one of your skills to the test...\nGood luck!"
+        }
+    ],
+
+    Scenario05:
+    [
+        {
+            character: "A",
+            message: "These fairies... They're Naiads, aren't they?\nHow rare..."
+        },
+
+        {
+            character: "B",
+            message: "Yeah.\nAren't they supposed to be lucky fairies that appear near water?"
+        },
+
+        {
+            character: "A",
+            message: "To think we'd actually get to see fairies like these...\nMaybe this bridge isn't so bad after all."
+        },
+
+        {
+            character: "A",
+            message: "Maybe something good will happen the next time we come here..."
+        },
+
+        {
+            character: "B",
+            message: "Yeah, right."
+        }
+    ]
 };
 
 
