@@ -9676,6 +9676,14 @@
         "param": "",
         "delay": 10,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]lv4_bridge_case",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -9841,6 +9849,14 @@
         "input": "Kill",
         "param": "",
         "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]lv2_celu_case",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -15111,6 +15127,14 @@
         "param": "",
         "delay": 60,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]lv4_bridge_case",
+        "input": "PickRandom",
+        "param": "",
+        "delay": 45,
+        "limit": 1
       }
     ]
   },
@@ -16980,6 +17004,14 @@
         "input": "Enable",
         "param": "",
         "delay": 50,
+        "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]lv4_bridge_case",
+        "input": "PickRandom",
+        "param": "",
+        "delay": 35,
         "limit": 1
       }
     ]
@@ -20151,6 +20183,14 @@
         "input": "PlaySound",
         "param": "",
         "delay": 70,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]lv2_celu_case",
+        "input": "PickRandom",
+        "param": "",
+        "delay": 10,
         "limit": 1
       }
     ]
@@ -41239,6 +41279,254 @@
         "input": "Trigger",
         "param": "",
         "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "StartDisabled": "1",
+    "Case32": "",
+    "Case31": "",
+    "Case30": "",
+    "Case29": "",
+    "Case28": "",
+    "Case27": "",
+    "Case26": "",
+    "Case25": "",
+    "Case24": "",
+    "Case23": "",
+    "Case22": "",
+    "Case21": "",
+    "Case20": "",
+    "Case19": "",
+    "Case18": "",
+    "Case17": "",
+    "Case16": "",
+    "Case15": "",
+    "Case14": "",
+    "Case13": "",
+    "Case12": "",
+    "Case11": "",
+    "Case10": "",
+    "Case09": "",
+    "Case08": "",
+    "Case07": "",
+    "Case06": "",
+    "Case05": "",
+    "Case04": "",
+    "Case03": "",
+    "Case02": "",
+    "Case01": "",
+    "vscripts": "",
+    "targetname": "[PR#]lv4_bridge_case",
+    "classname": "logic_case",
+    "origin": "-259.310547 13428.478516 -5983.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12736",
+    "connections": [
+      {
+        "output": "OnCase02",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shake_explode",
+        "input": "StartShake",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger2_particle",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]explosion_sound",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]qiao",
+        "input": "Break",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shake_explode",
+        "input": "StopShake",
+        "param": "",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger2_particle",
+        "input": "Kill",
+        "param": "",
+        "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger2",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "StartDisabled": "1",
+    "Case32": "",
+    "Case31": "",
+    "Case30": "",
+    "Case29": "",
+    "Case28": "",
+    "Case27": "",
+    "Case26": "",
+    "Case25": "",
+    "Case24": "",
+    "Case23": "",
+    "Case22": "",
+    "Case21": "",
+    "Case20": "",
+    "Case19": "",
+    "Case18": "",
+    "Case17": "",
+    "Case16": "",
+    "Case15": "",
+    "Case14": "",
+    "Case13": "",
+    "Case12": "",
+    "Case11": "",
+    "Case10": "",
+    "Case09": "",
+    "Case08": "",
+    "Case07": "",
+    "Case06": "",
+    "Case05": "",
+    "Case04": "",
+    "Case03": "",
+    "Case02": "",
+    "Case01": "",
+    "vscripts": "",
+    "targetname": "[PR#]lv2_celu_case",
+    "classname": "logic_case",
+    "origin": "1482.372070 8389.692383 -5167.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12738",
+    "connections": [
+      {
+        "output": "OnCase02",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger3",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]explosion_sound",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shake_explode",
+        "input": "StartShake",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shake_explode",
+        "input": "StopShake",
+        "param": "",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]lv2_celu",
+        "input": "Break",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger3_particle",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger3_particle",
+        "input": "Kill",
+        "param": "",
+        "delay": 10,
         "limit": 1
       }
     ]
