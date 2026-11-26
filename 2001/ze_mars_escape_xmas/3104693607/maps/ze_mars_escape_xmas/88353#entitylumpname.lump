@@ -672,7 +672,7 @@
     "_template_lump_ent_index": "14",
     "connections": [
       {
-        "output": "OnHurtPlayer",
+        "output": "OnHurtPlayerx",
         "target": "[PR#]filter_triggerhurt_no",
         "input": "FireUser1",
         "param": "",

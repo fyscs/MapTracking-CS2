@@ -870,7 +870,7 @@
         "limit": -1
       },
       {
-        "output": "OnHurtPlayer",
+        "output": "OnHurtPlayerx",
         "target": "[PR#]filter_triggerhurt_no",
         "input": "FireUser1",
         "param": "",

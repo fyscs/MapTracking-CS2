@@ -68,9 +68,9 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-12064.000000 -12432.000000 -15664.000000",
+    "origin": "-12064.000000 -12432.000000 -15648.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "88526"
+    "hammerUniqueId": "89024"
   }
 ]

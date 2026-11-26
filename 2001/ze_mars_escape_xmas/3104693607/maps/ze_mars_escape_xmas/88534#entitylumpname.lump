@@ -1426,6 +1426,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Truth_3",
+        "input": "ShowWorldLayer",
+        "param": "",
+        "delay": 30,
+        "limit": 1
       }
     ]
   },
@@ -1641,6 +1649,14 @@
         "input": "Command",
         "param": "say ***SOCRATES DOES NOT EXIST***",
         "delay": 30,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Truth_1",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 40,
         "limit": 1
       }
     ]
@@ -1929,6 +1945,14 @@
         "input": "FireUser2",
         "param": "",
         "delay": 100,
+        "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]LevelLayer_Truth_2",
+        "input": "HideWorldLayer",
+        "param": "",
+        "delay": 15,
         "limit": 1
       }
     ]
@@ -3905,7 +3929,7 @@
         "output": "OnUser1",
         "target": "[PR#]fog_truth",
         "input": "SetFogEndDistance",
-        "param": "1500",
+        "param": "5120",
         "delay": 0,
         "limit": -1
       },
@@ -4089,7 +4113,7 @@
         "output": "OnUser1",
         "target": "[PR#]fog_truth",
         "input": "SetFarZ",
-        "param": "1500",
+        "param": "5120",
         "delay": 10,
         "limit": -1
       },
@@ -4603,7 +4627,7 @@
         "output": "OnBreak",
         "target": "[PR#]fog_truth",
         "input": "SetFogEndDistance",
-        "param": "5000",
+        "param": "5120",
         "delay": 0,
         "limit": -1
       },
@@ -4683,7 +4707,7 @@
         "output": "OnBreak",
         "target": "[PR#]fog_truth",
         "input": "SetFarZ",
-        "param": "5000",
+        "param": "5120",
         "delay": 10,
         "limit": -1
       },
@@ -4736,7 +4760,7 @@
     "_template_lump_ent_index": "85",
     "connections": [
       {
-        "output": "OnHurtPlayer",
+        "output": "OnHurtPlayerx",
         "target": "[PR#]filter_triggerhurt_no",
         "input": "FireUser1",
         "param": "",
@@ -4945,7 +4969,7 @@
     "_template_lump_ent_index": "88",
     "connections": [
       {
-        "output": "OnHurtPlayer",
+        "output": "OnHurtPlayerx",
         "target": "[PR#]filter_triggerhurt_no",
         "input": "FireUser1",
         "param": "",

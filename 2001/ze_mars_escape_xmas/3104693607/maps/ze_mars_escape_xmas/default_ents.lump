@@ -12019,9 +12019,9 @@
     "vscripts": "",
     "targetname": "[PR#]raggy",
     "classname": "prop_ragdoll",
-    "boneTransforms": "pelvis: 0.622070 -0.286377 42.045898 -0.578586 -0.376084 -0.382729 0.614262;spine_2: 5.165764 -0.595215 50.393677 -0.613822 -0.314226 -0.315237 0.652005;head_0: 18.517426 -0.633057 63.035400 -0.602656 -0.441210 -0.396388 0.533870;arm_upper_l: 11.700844 6.914551 58.595581 -0.488867 -0.736031 0.409677 0.226788;arm_lower_l: 6.760307 17.586426 57.809937 -0.625584 -0.623392 0.447686 0.140014;hand_l: 4.987297 29.792480 53.167114 -0.292540 0.158649 0.923100 -0.192713;arm_upper_r: 11.587929 -8.240967 57.130981 0.554170 0.093493 0.472371 0.678984;arm_lower_r: 5.183220 -17.051758 52.551392 0.558459 -0.056239 0.636290 0.529241;hand_r: 2.035645 -22.851562 43.259399 0.508957 0.699470 0.444907 0.231867;jiggle_primary: 36.501343 46.151123 6.429321 -0.165214 -0.983434 0.074405 -0.005023;leg_upper_l: -1.939995 3.694336 39.053223 -0.556484 0.416009 0.565425 0.444473;leg_lower_l: -1.542412 4.379883 22.871948 -0.098572 0.687765 0.714012 -0.086310;ankle_l: -17.898651 -0.002441 22.499756 0.312362 0.633532 -0.522903 0.477115;leg_upper_r: 1.413208 -3.776855 36.031982 -0.749784 -0.184895 -0.223349 0.594772;leg_lower_r: -12.862343 -4.017822 26.297241 -0.697943 0.330533 0.202748 0.602093;ankle_r: -25.265274 -0.301514 37.688843 0.568567 -0.304873 0.258705 0.718927;",
-    "origin": "-296.133942 2832.611084 201.431061",
-    "angles": "-34.334534 186.675827 137.418137",
+    "boneTransforms": "pelvis: 0.636841 -0.350098 42.036011 -0.580267 -0.371359 -0.386146 0.613412;spine_2: 5.177902 -0.736572 50.341553 -0.624203 -0.289945 -0.298416 0.661249;head_0: 19.320694 -0.910156 62.089233 -0.626884 -0.419621 -0.379649 0.535538;arm_upper_l: 12.373749 6.714355 58.215088 -0.484728 -0.726561 0.405758 0.269273;arm_lower_l: 7.835190 17.591553 58.191162 -0.619893 -0.614830 0.451971 0.182864;hand_l: 6.278488 30.048340 54.179688 -0.262560 0.138750 0.939134 -0.172737;arm_upper_r: 11.995209 -8.495605 56.671143 0.561923 0.122032 0.456823 0.678722;arm_lower_r: 5.378464 -17.459961 52.699829 0.572891 -0.040630 0.630332 0.522328;hand_r: 1.799728 -23.270020 43.307861 0.448438 0.746854 0.424116 0.247462;jiggle_primary: 36.393555 45.193848 5.336548 -0.176871 -0.981156 0.076608 0.013470;leg_upper_l: -1.940125 3.694336 39.053223 -0.556484 0.416009 0.565425 0.444473;leg_lower_l: -1.528809 4.383057 22.885498 -0.093359 0.688492 0.713337 -0.091718;ankle_l: -17.885895 -0.009766 22.769287 0.307295 0.636117 -0.526192 0.473336;leg_upper_r: 1.440536 -3.812988 35.853271 -0.755499 -0.169122 -0.210022 0.597084;leg_lower_r: -13.242599 -3.934570 26.731934 -0.695267 0.340643 0.209572 0.597198;ankle_r: -25.353836 -0.110352 38.413330 0.565991 -0.303765 0.258859 0.721369;",
+    "origin": "-297.336487 2832.406494 202.353622",
+    "angles": "-33.834560 183.681580 139.007217",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "246"
   },
@@ -12101,8 +12101,8 @@
     "parentname": "",
     "targetname": "[PR#]prop_before_tp1",
     "classname": "prop_physics_override",
-    "origin": "-285.802246 2873.649902 171.846786",
-    "angles": "-53.131367 295.882172 75.457214",
+    "origin": "-286.285248 2873.836426 172.023270",
+    "angles": "-54.310410 296.679077 75.313660",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "247"
   },
@@ -12182,8 +12182,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-60.939728 2714.348145 160.091400",
-    "angles": "0.003544 0.000000 -0.002008",
+    "origin": "-60.941708 2714.349609 160.091354",
+    "angles": "0.003854 0.000000 -0.001879",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "261"
   },
@@ -12263,8 +12263,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-41.032494 2718.023438 192.491013",
-    "angles": "-0.001309 0.000000 -0.003889",
+    "origin": "-41.045769 2718.029541 192.490921",
+    "angles": "-0.001268 0.009648 -0.003765",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "262"
   },
@@ -12344,8 +12344,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-14.999506 2715.592529 160.091919",
-    "angles": "-0.004459 0.000000 -0.001724",
+    "origin": "-15.003889 2715.600342 160.091843",
+    "angles": "-0.004494 0.000000 -0.001594",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "263"
   },
@@ -22970,9 +22970,9 @@
     "vscripts": "",
     "targetname": "[PR#]raggy",
     "classname": "prop_ragdoll",
-    "boneTransforms": "pelvis: -0.514771 0.346558 42.476440 -0.567593 -0.440401 -0.404148 0.566171;spine_2: 2.779404 0.768433 51.535461 -0.561071 -0.448575 -0.414534 0.558696;head_0: 12.007172 1.339600 66.569702 -0.577006 -0.204981 -0.250931 0.749720;arm_upper_l: 5.438644 7.958130 59.642456 -0.496562 -0.641641 0.559028 -0.170909;arm_lower_l: 0.037109 13.226562 50.608948 -0.788305 -0.193730 0.330605 -0.481398;hand_l: 9.299973 13.864746 41.917664 -0.628730 0.628530 0.454708 -0.053754;arm_upper_r: 5.883591 -5.594482 60.102234 0.561585 -0.139505 0.511900 0.634917;arm_lower_r: 0.406860 -11.524170 51.339478 0.465167 -0.345656 0.716830 0.387682;hand_r: 3.363144 -14.119141 40.979248 0.636886 0.226123 0.733724 -0.069951;jiggle_primary: -58.639771 -26.054321 73.428467 0.822164 -0.368463 -0.344122 -0.264311;leg_upper_l: -1.940063 3.694214 39.053284 -0.556484 0.416009 0.565425 0.444473;leg_lower_l: -1.927063 4.309204 21.960693 -0.354515 0.597543 0.692610 0.193786;ankle_l: -13.336349 1.682129 9.720520 0.538166 0.456986 -0.310703 0.636400;leg_upper_r: -1.063354 -3.380737 39.030334 -0.609769 -0.437433 -0.485534 0.448432;leg_lower_r: -3.664246 -5.104858 21.654785 -0.709526 -0.244414 -0.336717 0.568732;ankle_r: -14.739365 -4.493774 8.852112 0.297423 -0.605427 0.589974 0.443765;",
-    "origin": "-633.402710 1114.551392 10.667757",
-    "angles": "68.762192 189.782516 17.108042",
+    "boneTransforms": "pelvis: 0.442017 0.382812 42.123352 -0.607193 -0.396178 -0.376745 0.576561;spine_2: 4.840202 0.817993 50.713745 -0.597366 -0.410563 -0.392749 0.565986;head_0: 15.526894 0.828491 64.678955 -0.650632 -0.101334 -0.286979 0.695739;arm_upper_l: 8.588913 7.821777 58.224365 -0.461848 -0.612999 0.620744 -0.160021;arm_lower_l: 2.322144 12.176270 49.259888 -0.746971 -0.174949 0.373342 -0.521578;hand_l: 10.687180 11.415527 40.406982 -0.702256 0.551556 0.447865 -0.045163;arm_upper_r: 8.529221 -5.397217 58.950012 0.595805 -0.139256 0.462267 0.641821;arm_lower_r: 2.093811 -10.472656 50.422302 0.531534 -0.305309 0.626548 0.481348;hand_r: 1.780457 -13.559082 39.784058 0.745673 0.186631 0.638005 -0.045717;jiggle_primary: -59.701172 -15.739014 78.624634 0.733035 -0.459137 -0.354118 -0.355604;leg_upper_l: -1.940117 3.694336 39.053406 -0.556484 0.416009 0.565425 0.444473;leg_lower_l: -1.909843 4.306885 22.149475 -0.309845 0.621878 0.704935 0.142583;ankle_l: -14.906952 1.185791 11.747131 0.501231 0.496330 -0.354661 0.613710;leg_upper_r: -0.420715 -3.385254 38.709167 -0.668724 -0.383719 -0.431790 0.468109;leg_lower_r: -6.338486 -5.305786 22.133728 -0.741789 -0.210191 -0.305454 0.558808;ankle_r: -18.617096 -4.804932 10.477905 0.305377 -0.575068 0.578918 0.490811;",
+    "origin": "-629.071289 1119.023193 8.029394",
+    "angles": "58.599571 218.427246 34.752052",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "881"
   },
@@ -24154,8 +24154,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "1116.151489 2910.590088 176.092789",
-    "angles": "-0.017546 315.000519 0.006248",
+    "origin": "1116.154419 2910.588135 176.086548",
+    "angles": "-0.042372 315.000488 0.015071",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "906"
   },
@@ -28461,8 +28461,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-278.019806 1886.974487 930.095520",
-    "angles": "0.008530 0.000000 -0.001801",
+    "origin": "-278.015320 1886.971680 930.095520",
+    "angles": "0.008414 0.001069 -0.001705",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1007"
   },
@@ -28542,8 +28542,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "544.787231 1788.947388 930.094055",
-    "angles": "-0.004684 0.000000 0.000000",
+    "origin": "544.792236 1788.950684 930.094055",
+    "angles": "-0.004581 0.000000 0.001023",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1008"
   },
@@ -28623,8 +28623,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "516.875854 1784.010986 962.493042",
-    "angles": "-0.004226 0.002857 0.000000",
+    "origin": "516.880981 1783.981323 962.493164",
+    "angles": "-0.004013 0.012895 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1009"
   },
@@ -28704,7 +28704,7 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "504.966766 1781.592529 930.092773",
+    "origin": "504.952087 1781.581055 930.092712",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1010"
@@ -30405,8 +30405,8 @@
     "parentname": "",
     "targetname": "[PR#]prop_before_tp1",
     "classname": "prop_physics_override",
-    "origin": "-640.651550 1159.619629 27.866079",
-    "angles": "-53.112194 284.738434 75.466583",
+    "origin": "-640.600586 1159.486450 27.862341",
+    "angles": "-53.139874 284.713196 75.459557",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1146"
   },
@@ -38357,8 +38357,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "1105.773926 2958.198242 176.093353",
-    "angles": "0.000000 224.093948 0.001370",
+    "origin": "1105.777466 2958.208496 176.090408",
+    "angles": "-0.003654 224.120880 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3224"
   },
@@ -38438,8 +38438,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "1099.228149 3002.918213 176.093781",
-    "angles": "0.002848 359.998840 0.002133",
+    "origin": "1099.231689 3002.896240 176.091339",
+    "angles": "0.013358 359.998962 0.006122",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3225"
   },
@@ -38519,8 +38519,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "1108.234741 2956.224854 208.495468",
-    "angles": "-0.001452 0.010852 0.000000",
+    "origin": "1108.235352 2956.224609 208.488434",
+    "angles": "0.014359 359.983673 -0.005654",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3226"
   },
@@ -38600,8 +38600,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "1108.530029 2996.418213 208.505356",
-    "angles": "-0.068800 134.930161 0.061829",
+    "origin": "1108.438354 2996.395264 208.503769",
+    "angles": "-0.137164 134.928375 0.121563",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3227"
   },
@@ -38681,8 +38681,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "1108.324829 2916.177490 208.491440",
-    "angles": "-0.014793 44.090397 -0.086896",
+    "origin": "1108.329224 2916.174805 208.467712",
+    "angles": "-0.034495 44.110859 -0.171439",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "3228"
   },
@@ -40840,8 +40840,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-233.917847 1886.892212 930.092651",
-    "angles": "-0.001002 329.553375 0.000000",
+    "origin": "-233.908844 1886.887573 930.092712",
+    "angles": "0.000000 329.592804 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12452"
   },
@@ -40921,8 +40921,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-260.053925 1886.931030 962.493042",
-    "angles": "0.006014 29.974430 -0.003746",
+    "origin": "-260.032349 1886.877075 962.493225",
+    "angles": "0.005371 30.014345 -0.003853",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12454"
   },
@@ -45742,8 +45742,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-905.937195 750.999939 16.098486",
-    "angles": "-0.011345 33.129200 0.008820",
+    "origin": "-905.931274 751.005005 16.100435",
+    "angles": "-0.015152 33.135693 0.012387",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2744"
   },
@@ -46054,8 +46054,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-383.028320 2921.476074 160.093567",
-    "angles": "-0.001157 0.000000 0.000000",
+    "origin": "-383.026855 2921.477539 160.093643",
+    "angles": "-0.001361 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2751"
   },
@@ -46135,8 +46135,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-409.052917 2923.889648 192.495285",
-    "angles": "0.000000 0.005176 -0.001073",
+    "origin": "-409.057892 2923.902100 192.495285",
+    "angles": "0.000000 0.000000 -0.001234",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2752"
   },
@@ -46216,7 +46216,7 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-428.966827 2920.222900 160.093277",
+    "origin": "-428.964355 2920.229004 160.093246",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2753"
@@ -50305,9 +50305,9 @@
   },
   {
     "precomputedsubfrusta": "6",
-    "precomputedobbextent5": "174.567688 77.354248 89.119446",
+    "precomputedobbextent5": "174.567688 76.329834 74.558411",
     "precomputedobbangles5": "0.000000 -1.000000 0.000000",
-    "precomputedobborigin5": "-449.261322 2434.366943 1018.074646",
+    "precomputedobborigin5": "-449.279205 2433.342529 1003.513611",
     "precomputedobbextent4": "65.939819 175.061523 74.075928",
     "precomputedobbangles4": "-0.000000 45.000004 0.000000",
     "precomputedobborigin4": "-195.839355 2306.836426 1004.004150",
@@ -55388,20 +55388,20 @@
     "precomputedobbextent3": "40.484039 81.892578 54.727295",
     "precomputedobbangles3": "-0.000000 0.000000 0.000000",
     "precomputedobborigin3": "-727.586792 2274.126221 1023.341919",
-    "precomputedobbextent2": "280.026855 338.499878 122.139099",
-    "precomputedobbangles2": "13.000000 0.000000 0.000000",
-    "precomputedobborigin2": "-510.530701 2613.573242 948.595032",
+    "precomputedobbextent2": "155.916321 338.499878 97.106750",
+    "precomputedobbangles2": "-0.000000 0.000000 0.000000",
+    "precomputedobborigin2": "-612.171692 2613.573242 980.996399",
     "precomputedobbextent1": "158.888824 383.559753 97.110016",
     "precomputedobbangles1": "-0.000000 0.000000 0.000000",
     "precomputedobborigin1": "-609.198364 1889.638672 980.993530",
     "precomputedobbextent0": "86.561096 166.543701 87.858551",
     "precomputedobbangles0": "45.000004 0.000000 0.000000",
     "precomputedobborigin0": "-687.082703 2274.152588 927.254028",
-    "precomputedboundsmaxs": "-278.931488 2952.070557 1078.095947",
-    "precomputedboundsmins": "-768.088135 1506.157715 812.921570",
-    "precomputedobbextent": "257.173828 722.956421 114.391937",
-    "precomputedobbangles": "8.000000 0.000000 0.000000",
-    "precomputedobborigin": "-524.667236 2229.114258 961.961609",
+    "precomputedboundsmaxs": "-351.906158 2952.070557 1078.095947",
+    "precomputedboundsmins": "-768.088135 1506.157715 883.879028",
+    "precomputedobbextent": "208.090988 722.956421 97.108459",
+    "precomputedobbangles": "-0.000000 0.000000 0.000000",
+    "precomputedobborigin": "-559.997131 2229.114258 980.987488",
     "precomputedfieldsvalid": "1",
     "transmit_always": "0",
     "bakespeculartocubemaps_scale": "1.000000",
@@ -65752,8 +65752,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "4319.431641 -1214.702759 752.787354",
-    "angles": "89.341064 5.455860 -179.997803",
+    "origin": "4319.437500 -1214.395508 752.636047",
+    "angles": "89.610153 5.464970 179.960464",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "50625"
   },
@@ -65914,8 +65914,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "4386.894043 -1206.873657 751.628540",
-    "angles": "0.026610 322.748413 -88.576759",
+    "origin": "4386.668945 -1205.941650 751.631531",
+    "angles": "0.000000 322.351166 -88.568367",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "50627"
   },
@@ -65995,8 +65995,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "4372.136230 -1234.104126 736.094299",
-    "angles": "-0.001221 254.983185 0.000000",
+    "origin": "4372.144531 -1234.092041 736.094299",
+    "angles": "-0.001227 254.982300 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "50628"
   },
@@ -66157,8 +66157,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "4339.510742 -1205.734863 736.109924",
-    "angles": "-0.061996 165.240463 0.001764",
+    "origin": "4339.473145 -1205.769287 736.155518",
+    "angles": "-0.233367 165.537354 0.004221",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "50630"
   },
@@ -66238,8 +66238,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "4290.854980 -1177.525269 736.097473",
-    "angles": "0.002203 136.675354 -0.011432",
+    "origin": "4290.869141 -1177.512573 736.108826",
+    "angles": "0.000000 136.695740 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "50631"
   },
@@ -72125,106 +72125,6 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "51182",
     "model": "maps/ze_mars_escape_xmas/entities/elevatorceilingbreak_51182.vmdl"
-  },
-  {
-    "strippered": "1",
-    "Case32": "",
-    "Case31": "",
-    "Case30": "",
-    "Case29": "",
-    "Case28": "",
-    "Case27": "",
-    "Case26": "",
-    "Case25": "",
-    "Case24": "",
-    "Case23": "",
-    "Case22": "",
-    "Case21": "",
-    "Case20": "",
-    "Case19": "",
-    "Case18": "",
-    "Case17": "",
-    "Case16": "",
-    "Case15": "",
-    "Case14": "",
-    "Case13": "",
-    "Case12": "",
-    "Case11": "",
-    "Case10": "",
-    "Case09": "",
-    "Case08": "",
-    "Case07": "",
-    "Case06": "",
-    "Case05": "",
-    "Case04": "",
-    "Case03": "",
-    "Case02": "2",
-    "Case01": "1",
-    "vscripts": "",
-    "targetname": "[PR#]ex2tracker_case",
-    "classname": "logic_case",
-    "origin": "3977.000000 1706.999268 1108.000000",
-    "angles": "0.000000 179.999939 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "51675",
-    "connections": [
-      {
-        "output": "OnCase01",
-        "target": "[PR#]EX2LaserStartRelay",
-        "input": "AddOutput",
-        "param": "OnTrigger Item_Ultima_Button:Lock::0:1",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase01",
-        "target": "[PR#]EX2LaserStartRelay",
-        "input": "AddOutput",
-        "param": "OnTrigger Item_Ultima_Shake*:StopShake::0:1",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase01",
-        "target": "[PR#]EX2LaserStartRelay",
-        "input": "AddOutput",
-        "param": "OnTrigger Item_Ultima_*:Kill::0.02:1",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]ex2tracker_brush",
-        "input": "AddOutput",
-        "param": "OnUser1 ex2tracker_counter:SetValue:2:0:1",
-        "delay": 0.019999999552965164,
-        "limit": 1
-      }
-    ]
-  },
-  {
-    "strippered": "1",
-    "max": "2",
-    "min": "1",
-    "startvalue": "1",
-    "StartDisabled": "0",
-    "vscripts": "",
-    "targetname": "[PR#]ex2tracker_counter",
-    "classname": "math_counter",
-    "origin": "3977.000000 1706.999268 1108.000000",
-    "angles": "0.000000 179.999939 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "51676",
-    "connections": [
-      {
-        "output": "OnGetValue",
-        "target": "[PR#]ex2tracker_case",
-        "input": "InValue",
-        "param": "",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
   },
   {
     "FallingSpeedThreshold": "-150",
@@ -79803,6 +79703,14 @@
         "param": "",
         "delay": 0.5,
         "limit": 1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]command",
+        "input": "Command",
+        "param": "say ** YOU ARE THE MASTERS OF MAKO REACTOR! **",
+        "delay": 0.5,
+        "limit": 1
       }
     ]
   },
@@ -84142,114 +84050,6 @@
     "hammerUniqueId": "57749"
   },
   {
-    "strippered": "1",
-    "Case32": "",
-    "Case31": "",
-    "Case30": "",
-    "Case29": "",
-    "Case28": "",
-    "Case27": "",
-    "Case26": "",
-    "Case25": "",
-    "Case24": "",
-    "Case23": "",
-    "Case22": "",
-    "Case21": "",
-    "Case20": "",
-    "Case19": "",
-    "Case18": "",
-    "Case17": "",
-    "Case16": "",
-    "Case15": "",
-    "Case14": "",
-    "Case13": "",
-    "Case12": "",
-    "Case11": "",
-    "Case10": "",
-    "Case09": "",
-    "Case08": "",
-    "Case07": "",
-    "Case06": "",
-    "Case05": "",
-    "Case04": "Extreme2",
-    "Case03": "Extreme",
-    "Case02": "Hard",
-    "Case01": "Normal",
-    "vscripts": "",
-    "targetname": "[PR#]Level_Win_Case",
-    "classname": "logic_case",
-    "origin": "5632.000000 2115.998535 644.000000",
-    "angles": "0.000000 179.999939 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "52351",
-    "connections": [
-      {
-        "output": "OnCase04",
-        "target": "!self",
-        "input": "RunScriptCode",
-        "param": "foreach(players in WinnerArray)EntFire(_.Score1000,_.ApplyScore,__,0.00,players);",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnCase04",
-        "target": "!self",
-        "input": "RunScriptCode",
-        "param": "foreach(players in WinnerArray){players.ValidateScriptScope();foreach(userid in EX2Winners){if(players.GetScriptScope().myUserID==userid\u0026\u0026EX2Winners.len()!=0)return;}EX2Winners.push(players.GetScriptScope().myUserID);};",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnCase04",
-        "target": "[PR#]command",
-        "input": "Command",
-        "param": "say ** YOU ARE THE MASTERS OF MAKO REACTOR! **",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase03",
-        "target": "!self",
-        "input": "RunScriptCode",
-        "param": "foreach(players in WinnerArray)EntFire(_.Score100,_.ApplyScore,__,0.00,players);",
-        "delay": 1,
-        "limit": 1
-      },
-      {
-        "output": "OnCase03",
-        "target": "[PR#]command",
-        "input": "Command",
-        "param": "say ** YOU DID IT! YOU WON EXTREME ! YOU OWN! **",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase02",
-        "target": "[PR#]command",
-        "input": "Command",
-        "param": "say ** You did it ! You won at the HARDEST difficult ** Time to EXTREME mode ** Good luck ! **",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase01",
-        "target": "[PR#]command",
-        "input": "Command",
-        "param": "say **Congratulations ! You beat NORMAL mode ! The challenge begins at HARD mode ! **",
-        "delay": 0,
-        "limit": 1
-      },
-      {
-        "output": "OnCase04",
-        "target": "[PR#]ex2tracker_brush",
-        "input": "AddOutput",
-        "param": "OnUser1 ex2tracker_counter:SetValue:2:0:1",
-        "delay": 0,
-        "limit": 1
-      }
-    ]
-  },
-  {
     "wait": "0.000000",
     "filtername": "[PR#]filter_t",
     "spawnflags": "4097",
@@ -84617,9 +84417,9 @@
     "Case06": "",
     "Case05": "",
     "Case04": "",
-    "Case03": "85",
-    "Case02": "60",
-    "Case01": "25",
+    "Case03": "85.0",
+    "Case02": "60.0",
+    "Case01": "25.0",
     "RefireTime": "1",
     "StartDisabled": "1",
     "vscripts": "",
@@ -100467,6 +100267,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Elevator_Fix",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -100521,6 +100329,14 @@
         "input": "Trigger",
         "param": "",
         "delay": 3,
+        "limit": 1
+      },
+      {
+        "output": "OnPass",
+        "target": "[PR#]Elevator_Fix",
+        "input": "FireUser1",
+        "param": "",
+        "delay": 0,
         "limit": 1
       }
     ]
@@ -101021,8 +100837,8 @@
     "parentname": "",
     "targetname": "[PR#]xmas_present",
     "classname": "prop_physics_override",
-    "origin": "-896.026306 789.175781 16.113209",
-    "angles": "0.000000 165.274231 0.073199",
+    "origin": "-896.025208 789.179199 16.113068",
+    "angles": "0.000000 165.274872 0.072783",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "58344"
   },
@@ -119836,6 +119652,22 @@
         "param": "!activator",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.019999999552965164,
+        "limit": -1
       }
     ]
   },
@@ -127448,16 +127280,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "10",
-    "Case09": "9",
-    "Case08": "8",
-    "Case07": "7",
-    "Case06": "6",
-    "Case05": "5",
-    "Case04": "4",
-    "Case03": "3",
-    "Case02": "2",
-    "Case01": "1",
+    "Case10": "10.0",
+    "Case09": "9.0",
+    "Case08": "8.0",
+    "Case07": "7.0",
+    "Case06": "6.0",
+    "Case05": "5.0",
+    "Case04": "4.0",
+    "Case03": "3.0",
+    "Case02": "2.0",
+    "Case01": "1.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan_back",
     "classname": "logic_case",
@@ -127571,16 +127403,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "10",
-    "Case09": "9",
-    "Case08": "8",
-    "Case07": "7",
-    "Case06": "6",
-    "Case05": "5",
-    "Case04": "4",
-    "Case03": "3",
-    "Case02": "2",
-    "Case01": "1",
+    "Case10": "10.0",
+    "Case09": "9.0",
+    "Case08": "8.0",
+    "Case07": "7.0",
+    "Case06": "6.0",
+    "Case05": "5.0",
+    "Case04": "4.0",
+    "Case03": "3.0",
+    "Case02": "2.0",
+    "Case01": "1.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan_back_2",
     "classname": "logic_case",
@@ -127694,16 +127526,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "10",
-    "Case09": "9",
-    "Case08": "8",
-    "Case07": "7",
-    "Case06": "6",
-    "Case05": "5",
-    "Case04": "4",
-    "Case03": "3",
-    "Case02": "2",
-    "Case01": "1",
+    "Case10": "10.0",
+    "Case09": "9.0",
+    "Case08": "8.0",
+    "Case07": "7.0",
+    "Case06": "6.0",
+    "Case05": "5.0",
+    "Case04": "4.0",
+    "Case03": "3.0",
+    "Case02": "2.0",
+    "Case01": "1.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan_back_3",
     "classname": "logic_case",
@@ -127817,16 +127649,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "10",
-    "Case09": "9",
-    "Case08": "8",
-    "Case07": "7",
-    "Case06": "6",
-    "Case05": "5",
-    "Case04": "4",
-    "Case03": "3",
-    "Case02": "2",
-    "Case01": "1",
+    "Case10": "10.0",
+    "Case09": "9.0",
+    "Case08": "8.0",
+    "Case07": "7.0",
+    "Case06": "6.0",
+    "Case05": "5.0",
+    "Case04": "4.0",
+    "Case03": "3.0",
+    "Case02": "2.0",
+    "Case01": "1.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan_back4",
     "classname": "logic_case",
@@ -129337,16 +129169,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "1",
-    "Case09": "2",
-    "Case08": "3",
-    "Case07": "4",
-    "Case06": "5",
-    "Case05": "6",
-    "Case04": "7",
-    "Case03": "8",
-    "Case02": "9",
-    "Case01": "10",
+    "Case10": "1.0",
+    "Case09": "2.0",
+    "Case08": "3.0",
+    "Case07": "4.0",
+    "Case06": "5.0",
+    "Case05": "6.0",
+    "Case04": "7.0",
+    "Case03": "8.0",
+    "Case02": "9.0",
+    "Case01": "10.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan_2",
     "classname": "logic_case",
@@ -129460,16 +129292,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "1",
-    "Case09": "2",
-    "Case08": "3",
-    "Case07": "4",
-    "Case06": "5",
-    "Case05": "6",
-    "Case04": "7",
-    "Case03": "8",
-    "Case02": "9",
-    "Case01": "10",
+    "Case10": "1.0",
+    "Case09": "2.0",
+    "Case08": "3.0",
+    "Case07": "4.0",
+    "Case06": "5.0",
+    "Case05": "6.0",
+    "Case04": "7.0",
+    "Case03": "8.0",
+    "Case02": "9.0",
+    "Case01": "10.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan_3",
     "classname": "logic_case",
@@ -129583,16 +129415,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "1",
-    "Case09": "2",
-    "Case08": "3",
-    "Case07": "4",
-    "Case06": "5",
-    "Case05": "6",
-    "Case04": "7",
-    "Case03": "8",
-    "Case02": "9",
-    "Case01": "10",
+    "Case10": "1.0",
+    "Case09": "2.0",
+    "Case08": "3.0",
+    "Case07": "4.0",
+    "Case06": "5.0",
+    "Case05": "6.0",
+    "Case04": "7.0",
+    "Case03": "8.0",
+    "Case02": "9.0",
+    "Case01": "10.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan_4",
     "classname": "logic_case",
@@ -130381,16 +130213,16 @@
     "Case13": "",
     "Case12": "",
     "Case11": "",
-    "Case10": "1",
-    "Case09": "2",
-    "Case08": "3",
-    "Case07": "4",
-    "Case06": "5",
-    "Case05": "6",
-    "Case04": "7",
-    "Case03": "8",
-    "Case02": "9",
-    "Case01": "10",
+    "Case10": "1.0",
+    "Case09": "2.0",
+    "Case08": "3.0",
+    "Case07": "4.0",
+    "Case06": "5.0",
+    "Case05": "6.0",
+    "Case04": "7.0",
+    "Case03": "8.0",
+    "Case02": "9.0",
+    "Case01": "10.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_asimoto_dokkan",
     "classname": "logic_case",
@@ -131939,8 +131771,8 @@
     "Case05": "",
     "Case04": "",
     "Case03": "",
-    "Case02": "1",
-    "Case01": "2",
+    "Case02": "1.0",
+    "Case01": "2.0",
     "vscripts": "",
     "targetname": "[PR#]case_st4_boss_vida_up",
     "classname": "logic_case",
@@ -134780,7 +134612,7 @@
       },
       {
         "output": "OnTrigger",
-        "target": "[PR#]zm_toggle_respawn",
+        "target": "[PR#]zr_toggle_respawn",
         "input": "Disable",
         "param": "",
         "delay": 182.5,
@@ -168706,7 +168538,7 @@
     "vscripts": "",
     "targetname": "[PR#]GrisDoor5",
     "classname": "func_door",
-    "origin": "464.000000 6354.000000 30.000000",
+    "origin": "464.000000 6362.000000 30.000000",
     "angles": "0.000000 90.000008 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "76398",
@@ -177004,13 +176836,13 @@
     "Case10": "",
     "Case09": "",
     "Case08": "",
-    "Case07": "60",
-    "Case06": "10",
-    "Case05": "70",
-    "Case04": "20",
-    "Case03": "40",
-    "Case02": "30",
-    "Case01": "25",
+    "Case07": "60.0",
+    "Case06": "10.0",
+    "Case05": "70.0",
+    "Case04": "20.0",
+    "Case03": "40.0",
+    "Case02": "30.0",
+    "Case01": "25.0",
     "vscripts": "",
     "targetname": "[PR#]case_text",
     "classname": "logic_case",
@@ -178503,148 +178335,6 @@
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "76988"
-  },
-  {
-    "steamaudio_geometry_mode": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "animgraph2_identifier": "",
-    "clothScale": "1.000000",
-    "StartDisabled": "1",
-    "forcenpcexclude": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "0",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "vscripts": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "bodygroups": "",
-    "skin": "default",
-    "model": "agents/models/lazlo/kof15/leona_heidern/leona_heidern.vmdl",
-    "globalname": "",
-    "clientSideEntity": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "classname": "prop_dynamic",
-    "origin": "-13632.000000 -12320.000000 -16000.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "76989"
-  },
-  {
-    "steamaudio_geometry_mode": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "animgraph2_identifier": "",
-    "clothScale": "1.000000",
-    "StartDisabled": "1",
-    "forcenpcexclude": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "0",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "vscripts": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "bodygroups": "",
-    "skin": "default",
-    "model": "agents/models/lazlo/guts/guts.vmdl",
-    "globalname": "",
-    "clientSideEntity": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "classname": "prop_dynamic",
-    "origin": "-13664.000000 -12320.000000 -16000.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "76990"
   },
   {
     "steamaudio_geometry_mode": "0",
@@ -182687,7 +182377,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13408.000000 -12320.000000 -16000.000000",
+    "origin": "-13600.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81751"
@@ -182846,7 +182536,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13376.000000 -12320.000000 -16000.000000",
+    "origin": "-13568.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81753"
@@ -182917,7 +182607,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13344.000000 -12320.000000 -16000.000000",
+    "origin": "-13536.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81754"
@@ -182988,7 +182678,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13312.000000 -12320.000000 -16000.000000",
+    "origin": "-13504.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81755"
@@ -183059,7 +182749,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13280.000000 -12320.000000 -16000.000000",
+    "origin": "-13472.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81756"
@@ -183130,7 +182820,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13248.000000 -12320.000000 -16000.000000",
+    "origin": "-13440.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81757"
@@ -183201,7 +182891,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13216.000000 -12320.000000 -16000.000000",
+    "origin": "-13408.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81758"
@@ -183272,7 +182962,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13184.000000 -12320.000000 -16000.000000",
+    "origin": "-13376.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "81759"
@@ -193168,116 +192858,6 @@
     "hammerUniqueId": "83132"
   },
   {
-    "ResponseContext": "enemy3_slowed",
-    "Negated": "1",
-    "clientSideEntity": "0",
-    "vscripts": "",
-    "targetname": "[PR#]filter_enemy3",
-    "classname": "filter_activator_context",
-    "origin": "865.689026 2925.719971 184.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "83133",
-    "connections": [
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.2",
-        "delay": 1,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.3",
-        "delay": 1.2000000476837158,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.4",
-        "delay": 1.399999976158142,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.5",
-        "delay": 1.600000023841858,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.6",
-        "delay": 1.7999999523162842,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.7",
-        "delay": 2,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.8",
-        "delay": 2.200000047683716,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 0.9",
-        "delay": 2.4000000953674316,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "KeyValue",
-        "param": "speed 1",
-        "delay": 2.5999999046325684,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "AddContext",
-        "param": "enemy3_slowed:1",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnPass",
-        "target": "!activator",
-        "input": "RemoveContext",
-        "param": "enemy3_slowed",
-        "delay": 2.619999885559082,
-        "limit": -1
-      }
-    ]
-  },
-  {
     "ResponseContext": "enemy1_target",
     "Negated": "0",
     "clientSideEntity": "0",
@@ -202505,9 +202085,9 @@
   {
     "childSpawnGroup": "0",
     "vscripts": "",
-    "layerName": "world_layer_LevelLayer_Truth",
+    "layerName": "world_layer_LevelLayer_Truth_1",
     "spawnflags": "1",
-    "targetname": "[PR#]LevelLayer_Truth",
+    "targetname": "[PR#]LevelLayer_Truth_1",
     "classname": "info_world_layer",
     "origin": "-12048.000000 -12432.000000 -15664.000000",
     "angles": "0.000000 0.000000 0.000000",
@@ -204264,8 +203844,8 @@
     "origin": "-992.000488 896.000000 17.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89965",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_89965.vmdl"
+    "hammerUniqueId": "94054",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94054.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204285,8 +203865,8 @@
     "origin": "-992.000488 896.000000 17.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89967",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_89967.vmdl",
+    "hammerUniqueId": "94056",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94056.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204339,8 +203919,8 @@
     "origin": "-271.997070 95.967285 17.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89970",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_89970.vmdl"
+    "hammerUniqueId": "94059",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94059.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204360,8 +203940,8 @@
     "origin": "-271.997070 95.967285 17.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89972",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_89972.vmdl",
+    "hammerUniqueId": "94061",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94061.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204414,8 +203994,8 @@
     "origin": "-330.000000 622.000000 17.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89975",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_89975.vmdl"
+    "hammerUniqueId": "94064",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94064.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204435,8 +204015,8 @@
     "origin": "-330.000000 622.000000 17.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89977",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_89977.vmdl",
+    "hammerUniqueId": "94066",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94066.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204489,8 +204069,8 @@
     "origin": "-1507.105713 1722.231689 160.999969",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89980",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_89980.vmdl"
+    "hammerUniqueId": "94069",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94069.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204510,8 +204090,8 @@
     "origin": "-1507.105713 1722.231689 160.999969",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89982",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_89982.vmdl",
+    "hammerUniqueId": "94071",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94071.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204564,8 +204144,8 @@
     "origin": "-814.000000 2370.000000 161.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89985",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_89985.vmdl"
+    "hammerUniqueId": "94074",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94074.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204585,8 +204165,8 @@
     "origin": "-814.000000 2370.000000 161.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89987",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_89987.vmdl",
+    "hammerUniqueId": "94076",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94076.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204639,8 +204219,8 @@
     "origin": "-410.000000 2730.000000 161.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89990",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_89990.vmdl"
+    "hammerUniqueId": "94079",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94079.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204660,8 +204240,8 @@
     "origin": "-410.000000 2730.000000 161.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89992",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_89992.vmdl",
+    "hammerUniqueId": "94081",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94081.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204714,8 +204294,8 @@
     "origin": "46.000000 2600.000000 161.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89995",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_89995.vmdl"
+    "hammerUniqueId": "94084",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94084.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204735,8 +204315,8 @@
     "origin": "46.000000 2600.000000 161.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "89997",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_89997.vmdl",
+    "hammerUniqueId": "94086",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94086.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204789,8 +204369,8 @@
     "origin": "337.398438 3119.901611 177.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90000",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90000.vmdl"
+    "hammerUniqueId": "94089",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94089.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204810,8 +204390,8 @@
     "origin": "337.398438 3119.901611 177.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90002",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90002.vmdl",
+    "hammerUniqueId": "94091",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94091.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204864,8 +204444,8 @@
     "origin": "950.000000 2909.999756 177.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90005",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90005.vmdl"
+    "hammerUniqueId": "94094",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94094.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204885,8 +204465,8 @@
     "origin": "950.000000 2909.999756 177.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90007",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90007.vmdl",
+    "hammerUniqueId": "94096",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94096.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -204939,8 +204519,8 @@
     "origin": "788.000000 3355.999756 1193.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90010",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90010.vmdl"
+    "hammerUniqueId": "94099",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94099.vmdl"
   },
   {
     "wait": "1.000000",
@@ -204960,8 +204540,8 @@
     "origin": "788.000000 3355.999756 1193.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90012",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90012.vmdl",
+    "hammerUniqueId": "94101",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94101.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205014,8 +204594,8 @@
     "origin": "892.000000 2941.999756 1193.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90015",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90015.vmdl"
+    "hammerUniqueId": "94104",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94104.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205035,8 +204615,8 @@
     "origin": "892.000000 2941.999756 1193.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90017",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90017.vmdl",
+    "hammerUniqueId": "94106",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94106.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205089,8 +204669,8 @@
     "origin": "240.000000 3385.999756 1201.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90020",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90020.vmdl"
+    "hammerUniqueId": "94109",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94109.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205110,8 +204690,8 @@
     "origin": "240.000000 3385.999756 1201.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90022",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90022.vmdl",
+    "hammerUniqueId": "94111",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94111.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205164,8 +204744,8 @@
     "origin": "-160.000031 3060.000000 945.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90025",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90025.vmdl"
+    "hammerUniqueId": "94114",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94114.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205185,8 +204765,8 @@
     "origin": "-160.000031 3060.000000 945.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90027",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90027.vmdl",
+    "hammerUniqueId": "94116",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94116.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205239,8 +204819,8 @@
     "origin": "-378.000000 2838.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90030",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90030.vmdl"
+    "hammerUniqueId": "94119",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94119.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205260,8 +204840,8 @@
     "origin": "-378.000000 2838.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90032",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90032.vmdl",
+    "hammerUniqueId": "94121",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94121.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205314,8 +204894,8 @@
     "origin": "-576.000000 2430.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90035",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90035.vmdl"
+    "hammerUniqueId": "94124",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94124.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205335,8 +204915,8 @@
     "origin": "-576.000000 2430.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90037",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90037.vmdl",
+    "hammerUniqueId": "94126",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94126.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205389,8 +204969,8 @@
     "origin": "-570.000000 746.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90040",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90040.vmdl"
+    "hammerUniqueId": "94129",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94129.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205410,8 +204990,8 @@
     "origin": "-570.000000 746.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90042",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90042.vmdl",
+    "hammerUniqueId": "94131",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94131.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205464,8 +205044,8 @@
     "origin": "-274.000000 912.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90045",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90045.vmdl"
+    "hammerUniqueId": "94134",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94134.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205485,8 +205065,8 @@
     "origin": "-274.000000 912.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90047",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90047.vmdl",
+    "hammerUniqueId": "94136",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94136.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205539,8 +205119,8 @@
     "origin": "-336.000000 1660.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90050",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90050.vmdl"
+    "hammerUniqueId": "94139",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94139.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205560,8 +205140,8 @@
     "origin": "-336.000000 1660.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90052",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90052.vmdl",
+    "hammerUniqueId": "94141",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94141.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205614,8 +205194,8 @@
     "origin": "352.000000 1798.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90055",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90055.vmdl"
+    "hammerUniqueId": "94144",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94144.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205635,8 +205215,8 @@
     "origin": "352.000000 1798.000000 931.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90057",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90057.vmdl",
+    "hammerUniqueId": "94146",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94146.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205689,8 +205269,8 @@
     "origin": "4.000000 1640.000000 1059.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90060",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90060.vmdl"
+    "hammerUniqueId": "94149",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94149.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205710,8 +205290,8 @@
     "origin": "4.000000 1640.000000 1059.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90062",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90062.vmdl",
+    "hammerUniqueId": "94151",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94151.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205764,8 +205344,8 @@
     "origin": "868.000000 2214.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90065",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90065.vmdl"
+    "hammerUniqueId": "94154",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94154.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205785,8 +205365,8 @@
     "origin": "868.000000 2214.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90067",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90067.vmdl",
+    "hammerUniqueId": "94156",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94156.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205839,8 +205419,8 @@
     "origin": "744.000000 1934.000000 105.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90070",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90070.vmdl"
+    "hammerUniqueId": "94159",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94159.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205860,8 +205440,8 @@
     "origin": "744.000000 1934.000000 105.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90072",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90072.vmdl",
+    "hammerUniqueId": "94161",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94161.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205914,8 +205494,8 @@
     "origin": "698.000000 1944.000000 233.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90075",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90075.vmdl"
+    "hammerUniqueId": "94164",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94164.vmdl"
   },
   {
     "wait": "1.000000",
@@ -205935,8 +205515,8 @@
     "origin": "698.000000 1944.000000 233.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90077",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90077.vmdl",
+    "hammerUniqueId": "94166",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94166.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -205989,8 +205569,8 @@
     "origin": "596.000000 2548.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90080",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90080.vmdl"
+    "hammerUniqueId": "94169",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94169.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206010,8 +205590,8 @@
     "origin": "596.000000 2548.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90082",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90082.vmdl",
+    "hammerUniqueId": "94171",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94171.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206064,8 +205644,8 @@
     "origin": "432.000000 3184.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90085",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90085.vmdl"
+    "hammerUniqueId": "94174",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94174.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206085,8 +205665,8 @@
     "origin": "432.000000 3184.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90087",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90087.vmdl",
+    "hammerUniqueId": "94176",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94176.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206139,8 +205719,8 @@
     "origin": "490.000000 3862.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90090",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90090.vmdl"
+    "hammerUniqueId": "94179",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94179.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206160,8 +205740,8 @@
     "origin": "490.000000 3862.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90092",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90092.vmdl",
+    "hammerUniqueId": "94181",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94181.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206214,8 +205794,8 @@
     "origin": "132.000000 5264.000488 185.000015",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90095",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90095.vmdl"
+    "hammerUniqueId": "94184",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94184.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206235,8 +205815,8 @@
     "origin": "132.000000 5264.000488 185.000015",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90097",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90097.vmdl",
+    "hammerUniqueId": "94186",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94186.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206289,8 +205869,8 @@
     "origin": "-0.000002 5612.002930 192.999832",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90100",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90100.vmdl"
+    "hammerUniqueId": "94189",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94189.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206310,8 +205890,8 @@
     "origin": "-0.000002 5612.002930 192.999832",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90102",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90102.vmdl",
+    "hammerUniqueId": "94191",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94191.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206364,8 +205944,8 @@
     "origin": "464.000061 3948.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90105",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90105.vmdl"
+    "hammerUniqueId": "94194",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94194.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206385,8 +205965,8 @@
     "origin": "464.000061 3948.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90107",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90107.vmdl",
+    "hammerUniqueId": "94196",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94196.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206439,8 +206019,8 @@
     "origin": "258.000031 4538.000000 57.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90110",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90110.vmdl"
+    "hammerUniqueId": "94199",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94199.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206460,8 +206040,8 @@
     "origin": "258.000031 4538.000000 57.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90112",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90112.vmdl",
+    "hammerUniqueId": "94201",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94201.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206514,8 +206094,8 @@
     "origin": "814.000061 5540.000000 57.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90115",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90115.vmdl"
+    "hammerUniqueId": "94204",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94204.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206535,8 +206115,8 @@
     "origin": "814.000061 5540.000000 57.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90117",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90117.vmdl",
+    "hammerUniqueId": "94206",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94206.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206589,8 +206169,8 @@
     "origin": "414.000061 6250.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90120",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90120.vmdl"
+    "hammerUniqueId": "94209",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94209.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206610,8 +206190,8 @@
     "origin": "414.000061 6250.000000 -7.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90122",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90122.vmdl",
+    "hammerUniqueId": "94211",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94211.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206664,8 +206244,8 @@
     "origin": "83.999992 5778.001465 192.999832",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90125",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90125.vmdl"
+    "hammerUniqueId": "94214",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94214.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206685,8 +206265,8 @@
     "origin": "83.999992 5778.001465 192.999832",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90127",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90127.vmdl",
+    "hammerUniqueId": "94216",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94216.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206739,8 +206319,8 @@
     "origin": "14704.000000 3690.000000 65.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90130",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90130.vmdl"
+    "hammerUniqueId": "94219",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94219.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206760,8 +206340,8 @@
     "origin": "14704.000000 3690.000000 65.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90132",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90132.vmdl",
+    "hammerUniqueId": "94221",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94221.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206814,8 +206394,8 @@
     "origin": "15060.000000 3628.000000 65.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90135",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90135.vmdl"
+    "hammerUniqueId": "94224",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94224.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206835,8 +206415,8 @@
     "origin": "15060.000000 3628.000000 65.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90137",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90137.vmdl",
+    "hammerUniqueId": "94226",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94226.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206889,8 +206469,8 @@
     "origin": "15400.000000 5538.000000 65.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90140",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90140.vmdl"
+    "hammerUniqueId": "94229",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94229.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206910,8 +206490,8 @@
     "origin": "15400.000000 5538.000000 65.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90142",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90142.vmdl",
+    "hammerUniqueId": "94231",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94231.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -206964,8 +206544,8 @@
     "origin": "-12690.000000 5476.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90145",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90145.vmdl"
+    "hammerUniqueId": "94234",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94234.vmdl"
   },
   {
     "wait": "1.000000",
@@ -206985,8 +206565,8 @@
     "origin": "-12690.000000 5476.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90147",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90147.vmdl",
+    "hammerUniqueId": "94236",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94236.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207039,8 +206619,8 @@
     "origin": "-12180.000000 5704.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90150",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90150.vmdl"
+    "hammerUniqueId": "94239",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94239.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207060,8 +206640,8 @@
     "origin": "-12180.000000 5704.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90152",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90152.vmdl",
+    "hammerUniqueId": "94241",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94241.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207114,8 +206694,8 @@
     "origin": "-12366.000000 6230.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90155",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90155.vmdl"
+    "hammerUniqueId": "94244",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94244.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207135,8 +206715,8 @@
     "origin": "-12366.000000 6230.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90157",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90157.vmdl",
+    "hammerUniqueId": "94246",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94246.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207189,8 +206769,8 @@
     "origin": "-12644.000000 6482.000488 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90160",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90160.vmdl"
+    "hammerUniqueId": "94249",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94249.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207210,8 +206790,8 @@
     "origin": "-12644.000000 6482.000488 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90162",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90162.vmdl",
+    "hammerUniqueId": "94251",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94251.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207264,8 +206844,8 @@
     "origin": "-13134.000000 6650.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90165",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90165.vmdl"
+    "hammerUniqueId": "94254",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94254.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207285,8 +206865,8 @@
     "origin": "-13134.000000 6650.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90167",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90167.vmdl",
+    "hammerUniqueId": "94256",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94256.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207339,8 +206919,8 @@
     "origin": "-13620.000000 6144.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90170",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90170.vmdl"
+    "hammerUniqueId": "94259",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94259.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207360,8 +206940,8 @@
     "origin": "-13620.000000 6144.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90172",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90172.vmdl",
+    "hammerUniqueId": "94261",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94261.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207414,8 +206994,8 @@
     "origin": "-13730.000000 5696.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90175",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90175.vmdl"
+    "hammerUniqueId": "94264",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94264.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207435,8 +207015,8 @@
     "origin": "-13730.000000 5696.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90177",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90177.vmdl",
+    "hammerUniqueId": "94266",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94266.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207489,8 +207069,8 @@
     "origin": "-13120.000000 5460.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90180",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90180.vmdl"
+    "hammerUniqueId": "94269",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94269.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207510,8 +207090,8 @@
     "origin": "-13120.000000 5460.000000 12545.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90182",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90182.vmdl",
+    "hammerUniqueId": "94271",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94271.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207564,8 +207144,8 @@
     "origin": "-10826.000000 9056.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90185",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90185.vmdl"
+    "hammerUniqueId": "94274",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94274.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207585,8 +207165,8 @@
     "origin": "-10826.000000 9056.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90187",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90187.vmdl",
+    "hammerUniqueId": "94276",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94276.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207639,8 +207219,8 @@
     "origin": "-10324.000000 8914.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90190",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90190.vmdl"
+    "hammerUniqueId": "94279",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94279.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207660,8 +207240,8 @@
     "origin": "-10324.000000 8914.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90192",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90192.vmdl",
+    "hammerUniqueId": "94281",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94281.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207714,8 +207294,8 @@
     "origin": "-10146.000000 9198.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90195",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90195.vmdl"
+    "hammerUniqueId": "94284",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94284.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207735,8 +207315,8 @@
     "origin": "-10146.000000 9198.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90197",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90197.vmdl",
+    "hammerUniqueId": "94286",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94286.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207789,8 +207369,8 @@
     "origin": "-10260.000000 9418.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90200",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90200.vmdl"
+    "hammerUniqueId": "94289",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94289.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207810,8 +207390,8 @@
     "origin": "-10260.000000 9418.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90202",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90202.vmdl",
+    "hammerUniqueId": "94291",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94291.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207864,8 +207444,8 @@
     "origin": "-10418.000000 9558.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90205",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90205.vmdl"
+    "hammerUniqueId": "94294",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94294.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207885,8 +207465,8 @@
     "origin": "-10418.000000 9558.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90207",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90207.vmdl",
+    "hammerUniqueId": "94296",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94296.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -207939,8 +207519,8 @@
     "origin": "-10706.000000 9390.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90210",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90210.vmdl"
+    "hammerUniqueId": "94299",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94299.vmdl"
   },
   {
     "wait": "1.000000",
@@ -207960,8 +207540,8 @@
     "origin": "-10706.000000 9390.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90212",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90212.vmdl",
+    "hammerUniqueId": "94301",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94301.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208014,8 +207594,8 @@
     "origin": "-10502.000000 8992.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90215",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90215.vmdl"
+    "hammerUniqueId": "94304",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94304.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208035,8 +207615,8 @@
     "origin": "-10502.000000 8992.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90217",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90217.vmdl",
+    "hammerUniqueId": "94306",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94306.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208089,8 +207669,8 @@
     "origin": "-10148.000000 8926.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90220",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90220.vmdl"
+    "hammerUniqueId": "94309",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94309.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208110,8 +207690,8 @@
     "origin": "-10148.000000 8926.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90222",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90222.vmdl",
+    "hammerUniqueId": "94311",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94311.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208164,8 +207744,8 @@
     "origin": "-10430.000000 8790.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90225",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90225.vmdl"
+    "hammerUniqueId": "94314",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94314.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208185,8 +207765,8 @@
     "origin": "-10430.000000 8790.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90227",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90227.vmdl",
+    "hammerUniqueId": "94316",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94316.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208239,8 +207819,8 @@
     "origin": "-10690.000000 8842.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90230",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90230.vmdl"
+    "hammerUniqueId": "94319",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94319.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208260,8 +207840,8 @@
     "origin": "-10690.000000 8842.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90232",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90232.vmdl",
+    "hammerUniqueId": "94321",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94321.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208314,8 +207894,8 @@
     "origin": "-10316.000000 9170.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90235",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90235.vmdl"
+    "hammerUniqueId": "94324",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94324.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208335,8 +207915,8 @@
     "origin": "-10316.000000 9170.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90237",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90237.vmdl",
+    "hammerUniqueId": "94326",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94326.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208389,8 +207969,8 @@
     "origin": "-10032.000000 9268.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90240",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90240.vmdl"
+    "hammerUniqueId": "94329",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94329.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208410,8 +207990,8 @@
     "origin": "-10032.000000 9268.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90242",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90242.vmdl",
+    "hammerUniqueId": "94331",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94331.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208464,8 +208044,8 @@
     "origin": "-10198.000000 9552.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90245",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90245.vmdl"
+    "hammerUniqueId": "94334",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94334.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208485,8 +208065,8 @@
     "origin": "-10198.000000 9552.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90247",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90247.vmdl",
+    "hammerUniqueId": "94336",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94336.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208539,8 +208119,8 @@
     "origin": "-10056.000000 9022.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90250",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90250.vmdl"
+    "hammerUniqueId": "94339",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94339.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208560,8 +208140,8 @@
     "origin": "-10056.000000 9022.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90252",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90252.vmdl",
+    "hammerUniqueId": "94341",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94341.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208614,8 +208194,8 @@
     "origin": "-10848.000000 9310.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90255",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90255.vmdl"
+    "hammerUniqueId": "94344",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94344.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208635,8 +208215,8 @@
     "origin": "-10848.000000 9310.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90257",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90257.vmdl",
+    "hammerUniqueId": "94346",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94346.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208689,8 +208269,8 @@
     "origin": "-10600.000000 9654.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90260",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90260.vmdl"
+    "hammerUniqueId": "94349",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94349.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208710,8 +208290,8 @@
     "origin": "-10600.000000 9654.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90262",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90262.vmdl",
+    "hammerUniqueId": "94351",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94351.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208764,8 +208344,8 @@
     "origin": "-10680.000000 9180.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90265",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90265.vmdl"
+    "hammerUniqueId": "94354",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94354.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208785,8 +208365,8 @@
     "origin": "-10680.000000 9180.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90267",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90267.vmdl",
+    "hammerUniqueId": "94356",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94356.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208839,8 +208419,8 @@
     "origin": "-10936.000000 9162.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90270",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90270.vmdl"
+    "hammerUniqueId": "94359",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94359.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208860,8 +208440,8 @@
     "origin": "-10936.000000 9162.000000 -523.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90272",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90272.vmdl",
+    "hammerUniqueId": "94361",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94361.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -208914,8 +208494,8 @@
     "origin": "1167.997070 3611.999268 1193.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90275",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_90275.vmdl"
+    "hammerUniqueId": "94364",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_visual_94364.vmdl"
   },
   {
     "wait": "1.000000",
@@ -208935,8 +208515,8 @@
     "origin": "1167.997070 3611.999268 1193.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "90277",
-    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_90277.vmdl",
+    "hammerUniqueId": "94366",
+    "model": "maps/ze_mars_escape_xmas/entities/pizza_trig_94366.vmdl",
     "connections": [
       {
         "output": "OnStartTouch",
@@ -215341,7 +214921,7 @@
         "limit": -1
       },
       {
-        "output": "OnTrigger",
+        "output": "OnTriggerx",
         "target": "[PR#]present_timer",
         "input": "Enable",
         "param": "",
@@ -215437,7 +215017,7 @@
         "limit": -1
       },
       {
-        "output": "OnTrigger",
+        "output": "OnTriggerx",
         "target": "[PR#]xmas_present",
         "input": "Kill",
         "param": "",
@@ -215733,9 +215313,9 @@
     "Template16": "",
     "Template15": "",
     "Template14": "",
-    "Template13": "[PR#]santa_collision_p2",
-    "Template12": "[PR#]santa_collision_p1",
-    "Template11": "[PR#]santa_collision_tt",
+    "Template13": "",
+    "Template12": "",
+    "Template11": "",
     "Template10": "[PR#]santa_sound_start",
     "Template09": "[PR#]santa_impact_particle",
     "Template08": "[PR#]santa_shake",
@@ -215818,219 +215398,6 @@
     "expand_render_bounds_to_include_cloth": "0",
     "bodygroups": "",
     "skin": "default",
-    "model": "agents/models/lazlo/kof15/angel/angel.vmdl",
-    "globalname": "",
-    "clientSideEntity": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "classname": "prop_dynamic",
-    "origin": "-13600.000000 -12320.000000 -16000.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "88876"
-  },
-  {
-    "clothScale": "1.000000",
-    "steamaudio_geometry_mode": "0",
-    "StartDisabled": "1",
-    "forcenpcexclude": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "0",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "vscripts": "",
-    "animgraph2_identifier": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "bodygroups": "",
-    "skin": "default",
-    "model": "agents/models/lazlo/persona_3_reload/yukari_takeba/yukari_takeba.vmdl",
-    "globalname": "",
-    "clientSideEntity": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "classname": "prop_dynamic",
-    "origin": "-13568.000000 -12320.000000 -16000.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "88877"
-  },
-  {
-    "clothScale": "1.000000",
-    "steamaudio_geometry_mode": "0",
-    "StartDisabled": "1",
-    "forcenpcexclude": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "0",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "vscripts": "",
-    "animgraph2_identifier": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "bodygroups": "",
-    "skin": "default",
-    "model": "agents/models/lazlo/silent_hill_2/james_sunderland/james_sunderland.vmdl",
-    "globalname": "",
-    "clientSideEntity": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "classname": "prop_dynamic",
-    "origin": "-13504.000000 -12320.000000 -16000.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "88878"
-  },
-  {
-    "clothScale": "1.000000",
-    "steamaudio_geometry_mode": "0",
-    "StartDisabled": "1",
-    "forcenpcexclude": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "0",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "vscripts": "",
-    "animgraph2_identifier": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "bodygroups": "",
-    "skin": "default",
     "model": "agents/models/lazlo/deadly_premonition/york/york.vmdl",
     "globalname": "",
     "clientSideEntity": "0",
@@ -216042,7 +215409,7 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13536.000000 -12320.000000 -16000.000000",
+    "origin": "-13664.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "88879"
@@ -216113,81 +215480,10 @@
     "parentname": "",
     "targetname": "",
     "classname": "prop_dynamic",
-    "origin": "-13440.000000 -12320.000000 -16000.000000",
+    "origin": "-13632.000000 -12320.000000 -16000.000000",
     "angles": "0.000000 270.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "88880"
-  },
-  {
-    "clothScale": "1.000000",
-    "steamaudio_geometry_mode": "0",
-    "StartDisabled": "1",
-    "forcenpcexclude": "0",
-    "CreateNavObstacle": "0",
-    "lightingorigin": "",
-    "interactExclude": "",
-    "interactWith": "",
-    "interactAs": "",
-    "AnimateOnServer": "0",
-    "LagCompensate": "0",
-    "randomizecycle": "0",
-    "IdleAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "IdleAnim": "",
-    "StartingAnimationLoopMode": "ANIM_LOOP_MODE_NOT_LOOPING",
-    "StartingAnim": "",
-    "use_animgraph": "0",
-    "disablelowviolence": "0",
-    "solid": "6",
-    "glowteam": "-1",
-    "glowcolor": "0 0 0",
-    "glowrangemin": "0",
-    "glowrange": "0",
-    "glowstate": "0",
-    "lightmapstatic": "0",
-    "rendertocubemaps": "0",
-    "object_culling": "0",
-    "fademaxdist": "0.000000",
-    "fademindist": "-1.000000",
-    "disablereceiveshadows": "0",
-    "rendercolor": "255 255 255",
-    "renderamt": "255",
-    "rendermode": "kRenderNormal",
-    "renderfx": "kRenderFxNone",
-    "BreakableContentsParticleOverride": "",
-    "BreakableContentsPropGroupOverride": "",
-    "BreakableContentsType": "BC_DEFAULT",
-    "burstlocation": "",
-    "burstscale": "100.000000",
-    "pressuredelay": "0.000000",
-    "spawnflags": "0",
-    "NoInterpolate": "0",
-    "PerformanceMode": "PM_NORMAL",
-    "ExplodeRadius": "0.000000",
-    "ExplodeDamage": "0.000000",
-    "damagefilter": "",
-    "vscripts": "",
-    "animgraph2_identifier": "",
-    "add_modifier": "",
-    "add_attribute": "",
-    "disableshadows": "0",
-    "expand_render_bounds_to_include_cloth": "0",
-    "bodygroups": "",
-    "skin": "default",
-    "model": "agents/models/lazlo/devil_may_cry_3/dante/dante.vmdl",
-    "globalname": "",
-    "clientSideEntity": "0",
-    "local.scales": "0.000000 0.000000 0.000000",
-    "local.angles": "0.000000 0.000000 0.000000",
-    "local.origin": "0.000000 0.000000 0.000000",
-    "useLocalOffset": "0",
-    "parentAttachmentName": "",
-    "parentname": "",
-    "targetname": "",
-    "classname": "prop_dynamic",
-    "origin": "-13472.000000 -12320.000000 -16000.000000",
-    "angles": "0.000000 270.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "88881"
   },
   {
     "clothScale": "1.000000",
@@ -216513,5 +215809,197 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "87974"
+  },
+  {
+    "filterattribute": "76561198722034887",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "targetname": "[PR#]vip_filter",
+    "classname": "filter_activator_attribute_int",
+    "origin": "-12912.000000 -12314.631836 -15997.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "89016",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "[PR#]xmas_magic",
+        "input": "RunScriptInput",
+        "param": "input_vip",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "spawnflags": "1",
+    "layerName": "world_layer_LevelLayer_Truth_2",
+    "vscripts": "",
+    "childSpawnGroup": "0",
+    "targetname": "[PR#]LevelLayer_Truth_2",
+    "classname": "info_world_layer",
+    "origin": "-12048.000000 -12432.000000 -15648.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "89019",
+    "worldname": "ze_mars_escape_xmas"
+  },
+  {
+    "ResponseContext": "enemy3_slowed",
+    "Negated": "1",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "targetname": "[PR#]filter_enemy3",
+    "classname": "filter_activator_context",
+    "origin": "-11752.000000 -14216.000000 -15902.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "89027",
+    "connections": [
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.2",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.3",
+        "delay": 1.2000000476837158,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.4",
+        "delay": 1.399999976158142,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.5",
+        "delay": 1.600000023841858,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.6",
+        "delay": 1.7999999523162842,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.7",
+        "delay": 2,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.8",
+        "delay": 2.200000047683716,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 0.9",
+        "delay": 2.4000000953674316,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "KeyValue",
+        "param": "speed 1",
+        "delay": 2.5999999046325684,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "enemy3_slowed:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnPass",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "enemy3_slowed",
+        "delay": 2.619999885559082,
+        "limit": -1
+      }
+    ]
+  },
+  {
+    "wait": "0.000000",
+    "filtername": "",
+    "spawnflags": "4097",
+    "globalname": "",
+    "StartDisabled": "1",
+    "local.scales": "1.000000 1.000000 1.000000",
+    "local.angles": "0.000000 0.000000 0.000000",
+    "local.origin": "0.000000 0.000000 0.000000",
+    "useLocalOffset": "0",
+    "parentAttachmentName": "",
+    "parentname": "[PR#]Elevator",
+    "targetname": "[PR#]Elevator_Fix",
+    "vscripts": "",
+    "classname": "trigger_multiple",
+    "origin": "4528.000000 -2568.000000 852.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "93124",
+    "model": "maps/ze_mars_escape_xmas/entities/elevator_fix_93124.vmdl",
+    "connections": [
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Enable",
+        "param": "",
+        "delay": 0.5,
+        "limit": -1
+      },
+      {
+        "output": "OnUser1",
+        "target": "!self",
+        "input": "Disable",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]xmas_magic",
+        "input": "RunScriptInput",
+        "param": "input_mako_elevator_fix",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   }
 ]

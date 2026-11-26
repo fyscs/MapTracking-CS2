@@ -4700,7 +4700,7 @@
         "output": "OnUser4",
         "target": "[PR#]xmas_magic",
         "input": "RunScriptInput",
-        "param": "input_deadcore_enemy_scale",
+        "param": "input_connect_deadcore_npc",
         "delay": 0,
         "limit": -1
       }

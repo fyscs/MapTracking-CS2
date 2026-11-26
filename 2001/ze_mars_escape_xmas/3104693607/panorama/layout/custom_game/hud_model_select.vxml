@@ -22,6 +22,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/militiasanta_t_png.vtex" />
                             <Label class="CardName" hittest="false" text="Militia Santa" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -29,6 +30,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/militiaepstein_png.vtex" />
                             <Label class="CardName" hittest="false" text="Militia Epstein" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -36,6 +38,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/natalie_santagirl_png.vtex" />
                             <Label class="CardName" hittest="false" text="Natalie" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -43,34 +46,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/santa_png.vtex" />
                             <Label class="CardName" hittest="false" text="Santa" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
-                            <Label class="CardLock" hittest="false" text="LOCKED" />
-                            <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
-                        </Button>
-                        <Button id="pick_guts" class="Card">
-                            <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/guts_png.vtex" />
-                            <Label class="CardName" hittest="false" text="Guts" />
-                            <Label class="CardBadge" hittest="false" text="SELECTED" />
-                            <Label class="CardLock" hittest="false" text="LOCKED" />
-                            <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
-                        </Button>
-                        <Button id="pick_leona_heidern" class="Card">
-                            <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/leona_heidern_png.vtex" />
-                            <Label class="CardName" hittest="false" text="Leona" />
-                            <Label class="CardBadge" hittest="false" text="SELECTED" />
-                            <Label class="CardLock" hittest="false" text="LOCKED" />
-                            <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
-                        </Button>
-                        <Button id="pick_angel" class="Card">
-                            <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/angel_png.vtex" />
-                            <Label class="CardName" hittest="false" text="Angel" />
-                            <Label class="CardBadge" hittest="false" text="SELECTED" />
-                            <Label class="CardLock" hittest="false" text="LOCKED" />
-                            <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
-                        </Button>
-                        <Button id="pick_yukari_takeba" class="Card">
-                            <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/yukari_takeba_png.vtex" />
-                            <Label class="CardName" hittest="false" text="Yukari" />
-                            <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -78,22 +54,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/york_png.vtex" />
                             <Label class="CardName" hittest="false" text="York" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
-                            <Label class="CardLock" hittest="false" text="LOCKED" />
-                            <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
-                        </Button>
-                        <Button id="pick_james_sunderland" class="Card">
-                            <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/james_sunderland_png.vtex" />
-                            <Label class="CardName" hittest="false" text="James" />
-                            <Label class="CardBadge" hittest="false" text="SELECTED" />
-                            <Label class="CardLock" hittest="false" text="LOCKED" />
-                            <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
-                        </Button>
-                    </Panel>
-                    <Panel class="CardRow">
-                        <Button id="pick_dante" class="Card">
-                            <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/dante_png.vtex" />
-                            <Label class="CardName" hittest="false" text="Dante" />
-                            <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -101,6 +62,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/eve_christmas_png.vtex" />
                             <Label class="CardName" hittest="false" text="Eve" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -108,13 +70,17 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_yukino_noel_aux_fraises_png.vtex" />
                             <Label class="CardName" hittest="false" text="Yukino" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
+                    </Panel>
+                    <Panel class="CardRow">
                         <Button id="pick_meg_soiree_doree" class="Card">
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_meg_soiree_doree_png.vtex" />
                             <Label class="CardName" hittest="false" text="Meg" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -122,6 +88,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_nagisa_santa_xvv_png.vtex" />
                             <Label class="CardName" hittest="false" text="Nagisa" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -129,6 +96,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_patty_reindeer_gift_png.vtex" />
                             <Label class="CardName" hittest="false" text="Patty" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -136,6 +104,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_reika_sweet_merry_night_png.vtex" />
                             <Label class="CardName" hittest="false" text="Reika" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -143,6 +112,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_shandy_merry_christmas_starlight_png.vtex" />
                             <Label class="CardName" hittest="false" text="Shandy" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -150,6 +120,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_tamaki_luminous_bell_png.vtex" />
                             <Label class="CardName" hittest="false" text="Tamaki" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
@@ -157,6 +128,7 @@
                             <Image class="CardImg" hittest="false" src="s2r://panorama/images/custom_game/doaxvv_shizuku_noel_charmant_png.vtex" />
                             <Label class="CardName" hittest="false" text="Shizuku" />
                             <Label class="CardBadge" hittest="false" text="SELECTED" />
+                            <Label class="CardAvail" hittest="false" text="{s:avail}" />
                             <Label class="CardLock" hittest="false" text="LOCKED" />
                             <Label class="CardFull" hittest="false" text="UNAVAILABLE" />
                         </Button>
