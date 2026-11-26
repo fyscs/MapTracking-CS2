@@ -3315,7 +3315,6 @@ to {
     vertical-align: center;
     flow-children: right;
     overflow: noclip;
-    perspective: 1100;
 }
 .buff_card {
     width: 280px;
