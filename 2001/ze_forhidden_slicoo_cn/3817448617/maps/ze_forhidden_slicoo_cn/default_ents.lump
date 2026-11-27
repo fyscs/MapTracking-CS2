@@ -84792,64 +84792,64 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase05",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase06",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase07",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase08",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase09",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_case2",
+        "input": "PickRandom",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -84919,32 +84919,64 @@
       },
       {
         "output": "OnCase02",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_button",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase02",
+        "target": "[PR#]mapper_filter",
+        "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase03",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_button",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]mapper_filter",
+        "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase04",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_button",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]mapper_filter",
+        "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": -1
       },
       {
         "output": "OnCase05",
-        "target": "[PR#]mapper_relay",
-        "input": "Trigger",
+        "target": "[PR#]mapper_button",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnCase05",
+        "target": "[PR#]mapper_filter",
+        "input": "Kill",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -92064,6 +92096,30 @@
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "16875"
+  },
+  {
+    "filterattribute": "76561199112213530",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "targetname": "[PR#]__slicoo_js_identity_76561199112213530",
+    "classname": "filter_activator_attribute_int",
+    "origin": "1790.000000 1137.849487 -8568.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "16950"
+  },
+  {
+    "filterattribute": "76561199086300902",
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "vscripts": "",
+    "targetname": "[PR#]__slicoo_js_identity_76561199086300902",
+    "classname": "filter_activator_attribute_int",
+    "origin": "1822.000000 1137.849487 -8568.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "16951"
   },
   {
     "cs_script": "scripts/ze_forhidden_slicoo_split/_compat/bridge.vjs",

@@ -516,6 +516,22 @@ var identities_default = [
     sponsor: 29,
     swordsman: false,
   },
+  {
+    // 嚎哭：赞助者通道权限；sponsor 为头衔/额外权限编号。
+    id: "76561199112213530",
+    mapper: false,
+    author: true,
+    sponsor: 0,
+    swordsman: false,
+  },
+  {
+    // 腐草为萤丶：赞助者通道权限；sponsor 为头衔/额外权限编号。
+    id: "76561199086300902",
+    mapper: false,
+    author: true,
+    sponsor: 0,
+    swordsman: false,
+  },
 ];
 
 // native_fix_20261016_r2/src/listen.js

@@ -28,7 +28,7 @@
     "nodamageforces": "1",
     "explosion": "0",
     "material": "8",
-    "health": "300",
+    "health": "225",
     "propdata": "0",
     "spawnflags": "0",
     "globalname": "",
