@@ -24,6 +24,9 @@ const SUPPORTERS = {
     supporter_zq: { text: ">传奇恶魔猎人 梓喵 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
     supporter_asada: { text: ">传奇恶魔猎人 Asada ShinoQWQ 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
     supporter_zgn: { text: ">传奇恶魔猎人 知更奶龙 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
+    supporter_cx: { text: ">传奇恶魔猎人 抽象的死法不变 加入了魔界小队.<", duration: 4.0, styleClass: "sper_vergil" },
+    supporter_star: { text: ">传奇恶魔猎人 starsomnium 加入了魔界小队.<", duration: 4.0, styleClass: "sper_vergil" },
+    supporter_liyuu: { text: ">传奇恶魔猎人 Liyuu~ 加入了狩魔小队.<", duration: 4.0, styleClass: "sper_dante" },
     supporter3: { text: "test", duration: 2.0, styleClass: "style_red" },
 };
 

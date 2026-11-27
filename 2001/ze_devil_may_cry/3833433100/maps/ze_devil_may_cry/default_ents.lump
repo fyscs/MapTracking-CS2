@@ -380569,6 +380569,30 @@
         "param": "",
         "delay": 1,
         "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]CX",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]STAR",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 1,
+        "limit": -1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]LIYUU",
+        "input": "TestActivator",
+        "param": "",
+        "delay": 1,
+        "limit": -1
       }
     ]
   },
@@ -403799,7 +403823,7 @@
   },
   {
     "wait": "0.100000",
-    "filtername": "[PR#]Filter_Human",
+    "filtername": "[PR#]Filter_Multi_NotTargetYouNow_Vworld",
     "spawnflags": "4097",
     "globalname": "",
     "StartDisabled": "1",
@@ -403827,6 +403851,22 @@
         "input": "ForceSpawnAtEntityOrigin",
         "param": "!activator",
         "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "AddContext",
+        "param": "NoTargetUVworld:1",
+        "delay": 0,
+        "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "!activator",
+        "input": "RemoveContext",
+        "param": "NoTargetUVworld",
+        "delay": 5,
         "limit": -1
       }
     ]
@@ -404567,5 +404607,44 @@
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "21944",
     "model": "maps/ze_devil_may_cry/entities/act3_afktp_h2_tpfix_21944.vmdl"
+  },
+  {
+    "Filter10": "",
+    "Filter09": "",
+    "Filter08": "",
+    "Filter07": "",
+    "Filter06": "",
+    "Filter05": "",
+    "Filter04": "",
+    "Filter03": "",
+    "Filter02": "[PR#]Filter_NotTargetYouNow_Vworld",
+    "Filter01": "[PR#]Filter_Zombie",
+    "filtertype": "1",
+    "Negated": "1",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "",
+    "vscripts": "",
+    "targetname": "[PR#]Filter_Multi_NotTargetYouNow_Vworld",
+    "classname": "filter_multi",
+    "origin": "9088.734375 -5453.553711 -11408.277344",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21946"
+  },
+  {
+    "Negated": "0",
+    "clientSideEntity": "0",
+    "add_modifier": "",
+    "add_attribute": "",
+    "ResponseContext": "NoTargetUVworld",
+    "vscripts": "",
+    "targetname": "[PR#]Filter_NotTargetYouNow_Vworld",
+    "classname": "filter_activator_context",
+    "origin": "9088.734375 -5453.553711 -11425.277344",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "21947"
   }
 ]
