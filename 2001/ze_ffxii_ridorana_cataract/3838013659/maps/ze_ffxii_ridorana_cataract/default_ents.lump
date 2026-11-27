@@ -7709,6 +7709,14 @@
         "param": "",
         "delay": 0,
         "limit": -1
+      },
+      {
+        "output": "OnTrigger",
+        "target": "[PR#]Stage_24_TP_6_1",
+        "input": "Enable",
+        "param": "",
+        "delay": 28,
+        "limit": -1
       }
     ]
   },
@@ -9493,7 +9501,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]Famfrit_Summon_Counter",
         "input": "Add",
-        "param": "59",
+        "param": "65",
         "delay": 0,
         "limit": -1
       }
@@ -10793,14 +10801,6 @@
         "output": "OnTrigger",
         "target": "[PR#]Stage_2_Sword_Kill",
         "input": "Trigger",
-        "param": "",
-        "delay": 0,
-        "limit": -1
-      },
-      {
-        "output": "OnTrigger",
-        "target": "[PR#]Stage_24_TP_6_1",
-        "input": "Enable",
         "param": "",
         "delay": 0,
         "limit": -1
@@ -15299,7 +15299,7 @@
   {
     "max": "9999999",
     "min": "0",
-    "startvalue": "200",
+    "startvalue": "150",
     "StartDisabled": "1",
     "vscripts": "",
     "targetname": "[PR#]Stage_4_End_Guard_Counter",
@@ -18366,9 +18366,10 @@
     "hammerUniqueId": "2881"
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
+    "teleport_use_current_angle": "0",
+    "teleport_parented_entities": "0",
+    "spawnflags": "0",
+    "target": "!activator",
     "useLocalOffset": "0",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -18377,16 +18378,17 @@
     "parentname": "",
     "vscripts": "",
     "targetname": "[PR#]Stage_24_TD_6",
-    "classname": "info_teleport_destination",
-    "origin": "-6912.000000 8496.000000 3040.000000",
-    "angles": "0.000000 90.000000 0.000000",
+    "classname": "point_teleport",
+    "origin": "-6956.000000 8642.000000 3073.000000",
+    "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2882"
   },
   {
-    "add_modifier": "",
-    "add_attribute": "",
-    "ResponseContext": "",
+    "teleport_use_current_angle": "0",
+    "teleport_parented_entities": "0",
+    "spawnflags": "0",
+    "target": "!activator",
     "useLocalOffset": "0",
     "local.scales": "0.000000 0.000000 0.000000",
     "local.angles": "0.000000 0.000000 0.000000",
@@ -18395,8 +18397,8 @@
     "parentname": "",
     "vscripts": "",
     "targetname": "[PR#]Stage_24_TD_6_1",
-    "classname": "info_teleport_destination",
-    "origin": "-4320.000000 8496.000000 3040.000000",
+    "classname": "point_teleport",
+    "origin": "-4294.000000 8640.000000 3084.000000",
     "angles": "0.000000 90.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2883"
@@ -18868,11 +18870,7 @@
     "model": "maps/ze_ffxii_ridorana_cataract/entities/stage_24_tp_6_1_2929.vmdl"
   },
   {
-    "check_if_dest_clear_for_player": "0",
-    "mirror_player": "0",
-    "use_landmark_angles": "0",
-    "landmark": "",
-    "target": "[PR#]Stage_24_TD_6",
+    "wait": "1.000000",
     "filtername": "",
     "spawnflags": "1",
     "globalname": "",
@@ -18884,20 +18882,26 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]Stage_24_ZM_Cage_TP",
-    "classname": "trigger_teleport",
-    "origin": "-4616.000000 8832.000000 3085.000000",
+    "targetname": "[PR#]Stage_24_ZM_Cage_TP_1",
+    "classname": "trigger_multiple",
+    "origin": "-4320.000000 8305.000000 3085.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2931",
-    "model": "maps/ze_ffxii_ridorana_cataract/entities/stage_24_zm_cage_tp_2931.vmdl"
+    "model": "maps/ze_ffxii_ridorana_cataract/entities/stage_24_zm_cage_tp_1_2931.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Stage_24_TD_6",
+        "input": "Teleport",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
-    "check_if_dest_clear_for_player": "0",
-    "mirror_player": "0",
-    "use_landmark_angles": "0",
-    "landmark": "",
-    "target": "[PR#]Stage_24_TD_6_1",
+    "wait": "1.000000",
     "filtername": "",
     "spawnflags": "1",
     "globalname": "",
@@ -18909,13 +18913,23 @@
     "parentAttachmentName": "",
     "parentname": "",
     "vscripts": "",
-    "targetname": "[PR#]Stage_24_ZM_Cage_TP",
-    "classname": "trigger_teleport",
-    "origin": "-6616.000000 8832.000000 3085.000000",
+    "targetname": "[PR#]Stage_24_ZM_Cage_TP_2",
+    "classname": "trigger_multiple",
+    "origin": "-6912.000000 8305.000000 3085.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "2933",
-    "model": "maps/ze_ffxii_ridorana_cataract/entities/stage_24_zm_cage_tp_2933.vmdl"
+    "model": "maps/ze_ffxii_ridorana_cataract/entities/stage_24_zm_cage_tp_2_2933.vmdl",
+    "connections": [
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]Stage_24_TD_6_1",
+        "input": "Teleport",
+        "param": "",
+        "delay": 0,
+        "limit": -1
+      }
+    ]
   },
   {
     "check_if_dest_clear_for_player": "0",
@@ -118442,15 +118456,6 @@
     "angles": "0.000000 179.999969 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "20733"
-  },
-  {
-    "cs_script": "scripts/vscripts/katchene.vjs",
-    "targetname": "[PR#]camera_script",
-    "classname": "point_script",
-    "origin": "-5728.000000 8448.000000 3072.000000",
-    "angles": "0.000000 0.000000 0.000000",
-    "scales": "1.000000 1.000000 1.000000",
-    "hammerUniqueId": "20815"
   },
   {
     "rendercolor": "0 0 0",
