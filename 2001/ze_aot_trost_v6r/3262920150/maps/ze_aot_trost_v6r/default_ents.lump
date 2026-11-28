@@ -9510,6 +9510,14 @@
         "param": "",
         "delay": 10,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]lv5_door1_case",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -15026,6 +15034,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnStartTouch",
+        "target": "[PR#]lv5_door1_case",
+        "input": "PickRandom",
+        "param": "",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -15479,7 +15495,7 @@
         "output": "OnStartTouch",
         "target": "[PR#]timeleft_script",
         "input": "RunScriptInput",
-        "param": "CountDownDisplayStart(30)",
+        "param": "CountDownDisplayStart(25)",
         "delay": 0,
         "limit": 1
       },
@@ -15488,7 +15504,7 @@
         "target": "[PR#]lv4_door2",
         "input": "Break",
         "param": "",
-        "delay": 30,
+        "delay": 25,
         "limit": 1
       },
       {
@@ -15496,7 +15512,7 @@
         "target": "[PR#]fail_wall17",
         "input": "Kill",
         "param": "",
-        "delay": 30,
+        "delay": 25,
         "limit": 1
       },
       {
@@ -15512,7 +15528,7 @@
         "target": "[PR#]lv2_tp3",
         "input": "Enable",
         "param": "",
-        "delay": 50,
+        "delay": 40,
         "limit": 1
       },
       {
@@ -15520,7 +15536,7 @@
         "target": "[PR#]lv2_door5",
         "input": "Break",
         "param": "",
-        "delay": 40,
+        "delay": 30,
         "limit": 1
       },
       {
@@ -15528,7 +15544,7 @@
         "target": "[PR#]city_wall9",
         "input": "Kill",
         "param": "",
-        "delay": 40,
+        "delay": 30,
         "limit": 1
       }
     ]
@@ -15637,7 +15653,7 @@
         "target": "[PR#]lv4_final_box_case",
         "input": "PickRandom",
         "param": "",
-        "delay": 0,
+        "delay": 40,
         "limit": 1
       }
     ]
@@ -18411,7 +18427,7 @@
     "vscripts": "",
     "targetname": "[PR#]lv2_dest3",
     "classname": "info_teleport_destination",
-    "origin": "8731.000000 5995.000000 -5907.000000",
+    "origin": "8421.000000 6017.000000 -5594.000000",
     "angles": "0.000000 0.000000 0.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "1323"
@@ -34908,7 +34924,7 @@
     "color": "236 236 236",
     "fullbright": "1",
     "enabled": "1",
-    "message": "version:2026.11.25",
+    "message": "version:2026.11.28",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -40585,7 +40601,7 @@
     "color": "255 0 0",
     "fullbright": "1",
     "enabled": "1",
-    "message": "\u5E73\u8861\u65E5\u5FD7\uFF1A\n\u9AD8\u8DF32CD\u51CF\u5C11\u4E3A4\u79D2\n\u96F7\u67AA\u51CF\u901F\u500D\u7387\u589E\u5F3A\u4E3A\u81F30.2\n\u8D85\u5DE8CD\u51CF\u5C11\u4E3A60S\n\u706B\u6301\u7EED\u65F6\u95F4\u51CF\u5C11\u4E3A8\u79D2\n\u51B0\u65B0\u589E\u673A\u5236\uFF1A\u7981\u7528\u9AD8\u63111\u79D2\n\u5730\u56FE\u7A7A\u4E2D\u52A0\u901F\u6570\u503C\u56DE\u8C03\u4E3A60\nlv3lv4\u670925%\u6982\u7387\u80FD\u62FE\u53D6\u8D85\u5927\u578B\u5DE8\u4EBA",
+    "message": "\u5E73\u8861\u65E5\u5FD7\uFF1A\nLV4LV5\u65B0\u589E\u4E94\u4E2A\u70B9\u4F4D\u7684\u968F\u673A\u4E8B\u4EF6\nLV4\u5BAB\u6BBF\u5012\u8BA1\u65F6\u51CF\u5C11\u4E3A25\u79D2\n\u4F20\u9001\u65F6\u95F4\u51CF\u5C11\u81F315\u79D2\n\u5916\u573A\u5F00\u653E\u65F6\u95F4\u51CF\u5C11\u81F35\u79D2",
     "lightmapstatic": "0",
     "rendertocubemaps": "0",
     "object_culling": "0",
@@ -40605,7 +40621,7 @@
     "vscripts": "",
     "targetname": "",
     "classname": "point_worldtext",
-    "origin": "-481.000000 202.000000 -12556.000000",
+    "origin": "-481.000000 202.000000 -12545.000000",
     "angles": "0.000000 90.000000 90.000000",
     "scales": "1.000000 1.000000 1.000000",
     "hammerUniqueId": "12656"
@@ -41204,6 +41220,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u968F\u673A\u4E8B\u4EF6:\u4FA7\u8DEF\u94C1\u95E8\u5DF2\u5F00\u653E",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -41278,6 +41302,14 @@
         "target": "[PR#]lv3lv4_item_none_relay",
         "input": "Trigger",
         "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u968F\u673A\u4E8B\u4EF6:\u6697\u9053\u5DF2\u5F00\u653E",
         "delay": 0,
         "limit": 1
       }
@@ -41404,6 +41436,14 @@
         "param": "",
         "delay": 0,
         "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u968F\u673A\u4E8B\u4EF6:\u5854\u697C\u5DF2\u7206\u7834",
+        "delay": 0,
+        "limit": 1
       }
     ]
   },
@@ -41527,6 +41567,146 @@
         "input": "Kill",
         "param": "",
         "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u968F\u673A\u4E8B\u4EF6:\u4FA7\u8DEF\u5899\u58C1\u5DF2\u7206\u7834",
+        "delay": 0,
+        "limit": 1
+      }
+    ]
+  },
+  {
+    "StartDisabled": "1",
+    "Case32": "",
+    "Case31": "",
+    "Case30": "",
+    "Case29": "",
+    "Case28": "",
+    "Case27": "",
+    "Case26": "",
+    "Case25": "",
+    "Case24": "",
+    "Case23": "",
+    "Case22": "",
+    "Case21": "",
+    "Case20": "",
+    "Case19": "",
+    "Case18": "",
+    "Case17": "",
+    "Case16": "",
+    "Case15": "",
+    "Case14": "",
+    "Case13": "",
+    "Case12": "",
+    "Case11": "",
+    "Case10": "",
+    "Case09": "",
+    "Case08": "",
+    "Case07": "",
+    "Case06": "",
+    "Case05": "",
+    "Case04": "",
+    "Case03": "",
+    "Case02": "",
+    "Case01": "",
+    "vscripts": "",
+    "targetname": "[PR#]lv5_door1_case",
+    "classname": "logic_case",
+    "origin": "-9743.821289 14051.178711 -6028.000000",
+    "angles": "0.000000 0.000000 0.000000",
+    "scales": "1.000000 1.000000 1.000000",
+    "hammerUniqueId": "12739",
+    "connections": [
+      {
+        "output": "OnCase02",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase03",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase04",
+        "target": "[PR#]lv3lv4_item_none_relay",
+        "input": "Trigger",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shake_explode",
+        "input": "StartShake",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]shake_explode",
+        "input": "StopShake",
+        "param": "",
+        "delay": 2,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]lv2_door1",
+        "input": "Break",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]explosion_sound",
+        "input": "PlaySound",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger1_particle",
+        "input": "Start",
+        "param": "",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger1_particle",
+        "input": "Kill",
+        "param": "",
+        "delay": 10,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]cmd",
+        "input": "Command",
+        "param": "say \u968F\u673A\u4E8B\u4EF6:\u94C1\u95E8\u5DF2\u7206\u7834",
+        "delay": 0,
+        "limit": 1
+      },
+      {
+        "output": "OnCase01",
+        "target": "[PR#]armor_trigger1",
+        "input": "Kill",
+        "param": "",
+        "delay": 0,
         "limit": 1
       }
     ]
