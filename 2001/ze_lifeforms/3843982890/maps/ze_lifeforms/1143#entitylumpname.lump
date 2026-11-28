@@ -3642,7 +3642,7 @@
     "nodamageforces": "1",
     "explosion": "0",
     "material": "0",
-    "health": "1000000",
+    "health": "99999999",
     "propdata": "0",
     "spawnflags": "8442880",
     "globalname": "",

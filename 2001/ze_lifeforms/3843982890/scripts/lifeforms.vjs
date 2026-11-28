@@ -116,6 +116,9 @@ Instance.OnScriptInput("SetPractice", () => {
 
 Instance.OnScriptInput("ResetStage", () => {
 	ADMIN = false;
+	WON_STAGE1 = false;
+	WON_STAGE2 = false;
+	WON_STAGE3 = false;
 });
 
 Instance.OnScriptInput("ApplyScore200", ({ caller, activator }) => {
